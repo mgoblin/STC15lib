@@ -1,0 +1,26 @@
+{
+    "name": "STC15 hardware",
+    "version": "0.1.0",
+    "description": "Library for STC15 MCU series",
+    "keywords": "8051, STC15, intel_mcs51",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/mgoblin/STC15lib.git"
+    },
+    "authors":
+    [
+      {
+        "name": "Michael Golovanov",
+        "email": "mike.golovanov@gmail.com",
+        "url": "https://github.com/mgoblin",
+        "maintainer": true
+      }
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/mgoblin/STC15lib",
+    "dependencies": {
+    },
+    "frameworks": "*",
+    "platforms": "intel_mcs51"
+  }
