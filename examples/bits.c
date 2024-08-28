@@ -13,7 +13,7 @@ void main()
 
     unsigned char bit_mask_2 = bit_mask(2);
 
-    uart_init();
+    uart_init(9600);
     printf("original_byte = %i\n", original_byte);
     printf("bit_shift_left(original_byte, 1) = %i\n", shifted_left_byte);
     printf("bit_shift_right(original_byte, 1) = %i\n", shifted_right_byte);
