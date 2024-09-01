@@ -11,4 +11,7 @@
 //#define MAIN_Fosc 5529600L    //Define the clock
 //#define MAIN_Fosc 24000000L   //Define the clock
 
+#define MAIN_FoscH 11059
+#define MAIN_FoscL 200
+
 #endif 
