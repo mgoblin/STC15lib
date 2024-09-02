@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['stc15w408as_20library_0',['STC15W408AS library',['../index.html',1,'']]],
-  ['sys_2eh_1',['sys.h',['../sys_8h.html',1,'']]]
+  ['putchar_0',['putchar',['../group__uart.html#ga07036e93939040c563e862a6a31b65bc',1,'putchar(int ch):&#160;uart.c'],['../group__uart.html#ga07036e93939040c563e862a6a31b65bc',1,'putchar(int ch):&#160;uart.c']]]
 ];
