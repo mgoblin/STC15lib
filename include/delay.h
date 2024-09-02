@@ -7,7 +7,8 @@
  * @details Functions and data structures related to delaying program flow
  * @author Michael Golovanov
  */
-#include<sys/sys.h>
+#include<sys.h>
+#include <stdint.h>
 
 /** 
 *  @brief Delays program flow using CPU nop
@@ -17,6 +18,6 @@
 *  
 *  @ingroup delays 
 */
-void delay_ms(unsigned short ms);
+void delay_ms(uint16_t ms);
 
 #endif

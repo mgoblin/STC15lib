@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>STC15W408AS library: Delays</title>
+<title>STC15W408AS library: include/uart.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,7 +46,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,49 +60,49 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">Delays</div></div>
+  <div class="headertitle"><div class="title">uart.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for uart.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="uart_8h__incl.png" border="0" usemap="#ainclude_2uart_8h" alt=""/></div>
+<map name="ainclude_2uart_8h" id="ainclude_2uart_8h">
+<area shape="rect" title=" " alt="" coords="5,5,116,32"/>
+<area shape="rect" title=" " alt="" coords="25,80,96,107"/>
+</map>
+</div>
+</div>
+<p><a href="uart_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaa0dce6d249d81fb85b082273270ba710"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__delays.html#gaa0dce6d249d81fb85b082273270ba710">delay_ms</a> (uint16_t ms)</td></tr>
-<tr class="memdesc:gaa0dce6d249d81fb85b082273270ba710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delays program flow using CPU nop.  <a href="group__delays.html#gaa0dce6d249d81fb85b082273270ba710">More...</a><br /></td></tr>
-<tr class="separator:gaa0dce6d249d81fb85b082273270ba710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf8803da40d227f3da866bfe760011f0"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>uart_init</b> (uint32_t uart_baudrate)</td></tr>
+<tr class="memdesc:gaaf8803da40d227f3da866bfe760011f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiazlize UART. <br /></td></tr>
+<tr class="separator:gaaf8803da40d227f3da866bfe760011f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c06afe2f1e393776650ebe7f0b336f2"><td class="memItemLeft" align="right" valign="top"><a id="a8c06afe2f1e393776650ebe7f0b336f2" name="a8c06afe2f1e393776650ebe7f0b336f2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>uart_send_byte</b> (uint8_t data)</td></tr>
+<tr class="separator:a8c06afe2f1e393776650ebe7f0b336f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa51e1ff0032e597db706ea1cdbb41bf4"><td class="memItemLeft" align="right" valign="top"><a id="aa51e1ff0032e597db706ea1cdbb41bf4" name="aa51e1ff0032e597db706ea1cdbb41bf4"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>uart_receive_byte</b> ()</td></tr>
+<tr class="separator:aa51e1ff0032e597db706ea1cdbb41bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07036e93939040c563e862a6a31b65bc"><td class="memItemLeft" align="right" valign="top"><a id="a07036e93939040c563e862a6a31b65bc" name="a07036e93939040c563e862a6a31b65bc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>putchar</b> (int ch)</td></tr>
+<tr class="separator:a07036e93939040c563e862a6a31b65bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e29caa20f7cffe18f410f01278905a8"><td class="memItemLeft" align="right" valign="top"><a id="a3e29caa20f7cffe18f410f01278905a8" name="a3e29caa20f7cffe18f410f01278905a8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getchar</b> (void)</td></tr>
+<tr class="separator:a3e29caa20f7cffe18f410f01278905a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p >Functions and data structures related to delaying program flow </p><dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="gaa0dce6d249d81fb85b082273270ba710" name="gaa0dce6d249d81fb85b082273270ba710"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa0dce6d249d81fb85b082273270ba710">&#9670;&nbsp;</a></span>delay_ms()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void delay_ms </td>
-          <td>(</td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>ms</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Delays program flow using CPU nop. </p>
-<p >Using NOP CPU cycles to delay. Use delay_ms with care.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ms</td><td>delay value </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

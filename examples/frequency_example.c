@@ -1,6 +1,6 @@
-#include <sys/sys.h>
-#include <frequency/frequency.h>
-#include <uart/uart.h>
+#include <sys.h>
+#include <frequency.h>
+#include <uart.h>
 
 #include <stdio.h>
 

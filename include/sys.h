@@ -1,7 +1,7 @@
 #ifndef STC15_SYSH
 #define STC15_SYSH
 
-#include <sys/STC15Fxx.h>
+#include <STC15Fxx.h>
 #include <stdint.h>
 #include <stdbool.h>
 

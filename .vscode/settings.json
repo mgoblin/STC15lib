@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "sys.h": "c"
+        "sys.h": "c",
+        "stc15fxx.h": "c"
     }
 }

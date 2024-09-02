@@ -1,5 +1,5 @@
-#include <sys/sys.h>
-#include <delay/delay.h>
+#include <sys.h>
+#include <delay.h>
 
 #define LED P10
 

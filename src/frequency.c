@@ -1,5 +1,5 @@
-#include <sys/sys.h>
-#include <frequency/frequency.h>
+#include <sys.h>
+#include <frequency.h>
 
 const unsigned long get_cpu_frequency()
 {

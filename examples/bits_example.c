@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-#include <sys/sys.h>
-#include <sys/bits.h>
-#include <uart/uart.h>
-#include <delay/delay.h>
+#include <sys.h>
+#include <bits.h>
+#include <uart.h>
+#include <delay.h>
 
 void main()
 {

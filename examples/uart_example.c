@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-#include<sys/sys.h>
-#include <delay/delay.h>
-#include<uart/uart.h>
+#include<sys.h>
+#include <delay.h>
+#include<uart.h>
 
 void main()
 {

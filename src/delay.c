@@ -1,8 +1,8 @@
-#include <delay/delay.h>
+#include <delay.h>
 
 #define CYCLE MAIN_Fosc / 13000
 
-void delay_ms(unsigned short ms)
+void delay_ms(uint16_t ms)
 {
     unsigned int i;
     do
