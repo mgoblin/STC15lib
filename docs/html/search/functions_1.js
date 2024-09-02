@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['uart_5finit_0',['uart_init',['../group__uart.html#gaaf8803da40d227f3da866bfe760011f0',1,'uart_init(uint32_t uart_baudrate):&#160;uart.c'],['../group__uart.html#gaaf8803da40d227f3da866bfe760011f0',1,'uart_init(uint32_t uart_baudrate):&#160;uart.c']]]
+  ['getchar_0',['getchar',['../group__uart.html#ga3e29caa20f7cffe18f410f01278905a8',1,'getchar(void):&#160;uart.c'],['../group__uart.html#ga3e29caa20f7cffe18f410f01278905a8',1,'getchar(void):&#160;uart.c']]]
 ];
