@@ -1,6 +1,12 @@
 #ifndef STC15_SYSH
 #define STC15_SYSH
 
+/**
+ * @file sys.h
+ * @details System constants. 
+ * @author Michael Golovanov
+ */
+
 #include <STC15Fxx.h>
 #include <stdint.h>
 #include <stdbool.h>

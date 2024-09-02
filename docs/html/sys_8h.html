@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>STC15W408AS library: include/delay.h File Reference</title>
+<title>STC15W408AS library: include/sys.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -67,35 +67,52 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">delay.h File Reference</div></div>
+<a href="#define-members">Macros</a>  </div>
+  <div class="headertitle"><div class="title">sys.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="sys_8h_source.html">sys.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;STC15Fxx.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for delay.h:</div>
+Include dependency graph for sys.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="delay_8h__incl.png" border="0" usemap="#ainclude_2delay_8h" alt=""/></div>
-<map name="ainclude_2delay_8h" id="ainclude_2delay_8h">
-<area shape="rect" title=" " alt="" coords="159,5,278,32"/>
-<area shape="rect" href="sys_8h.html" title=" " alt="" coords="159,80,215,107"/>
-<area shape="rect" title=" " alt="" coords="235,155,306,181"/>
-<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="5,155,104,181"/>
-<area shape="rect" title=" " alt="" coords="128,155,211,181"/>
-<area shape="rect" title=" " alt="" coords="9,229,100,256"/>
+<div class="center"><img src="sys_8h__incl.png" border="0" usemap="#ainclude_2sys_8h" alt=""/></div>
+<map name="ainclude_2sys_8h" id="ainclude_2sys_8h">
+<area shape="rect" title=" " alt="" coords="111,5,217,32"/>
+<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="5,80,104,107"/>
+<area shape="rect" title=" " alt="" coords="129,80,199,107"/>
+<area shape="rect" title=" " alt="" coords="224,80,307,107"/>
+<area shape="rect" title=" " alt="" coords="9,155,100,181"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="sys_8h__dep__incl.png" border="0" usemap="#ainclude_2sys_8hdep" alt=""/></div>
+<map name="ainclude_2sys_8hdep" id="ainclude_2sys_8hdep">
+<area shape="rect" title=" " alt="" coords="11,5,118,32"/>
+<area shape="rect" href="delay_8h.html" title=" " alt="" coords="5,80,124,107"/>
 </map>
 </div>
 </div>
-<p><a href="delay_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="sys_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:gaa0dce6d249d81fb85b082273270ba710"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__delays.html#gaa0dce6d249d81fb85b082273270ba710">delay_ms</a> (uint16_t ms)</td></tr>
-<tr class="memdesc:gaa0dce6d249d81fb85b082273270ba710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delays program flow using CPU nop.  <a href="group__delays.html#gaa0dce6d249d81fb85b082273270ba710">More...</a><br /></td></tr>
-<tr class="separator:gaa0dce6d249d81fb85b082273270ba710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:aa52cf4efd75d43c7917d9eec3becd2fa"><td class="memItemLeft" align="right" valign="top"><a id="aa52cf4efd75d43c7917d9eec3becd2fa" name="aa52cf4efd75d43c7917d9eec3becd2fa"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAIN_Fosc</b>&#160;&#160;&#160;11059200L</td></tr>
+<tr class="separator:aa52cf4efd75d43c7917d9eec3becd2fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1b9b7f30c88b5491fd35d286418f6d6"><td class="memItemLeft" align="right" valign="top"><a id="ae1b9b7f30c88b5491fd35d286418f6d6" name="ae1b9b7f30c88b5491fd35d286418f6d6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAIN_FoscH</b>&#160;&#160;&#160;11059</td></tr>
+<tr class="separator:ae1b9b7f30c88b5491fd35d286418f6d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab42e14bee431f5da3ecef889588cc728"><td class="memItemLeft" align="right" valign="top"><a id="ab42e14bee431f5da3ecef889588cc728" name="ab42e14bee431f5da3ecef889588cc728"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAIN_FoscL</b>&#160;&#160;&#160;200</td></tr>
+<tr class="separator:ab42e14bee431f5da3ecef889588cc728"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >System constants. </p><dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
