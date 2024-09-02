@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['uart_2eh_0',['uart.h',['../uart_8h.html',1,'']]]
+  ['frequency_2eh_0',['frequency.h',['../frequency_8h.html',1,'']]]
 ];
