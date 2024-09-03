@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['putchar_0',['putchar',['../group__uart.html#ga07036e93939040c563e862a6a31b65bc',1,'putchar(int ch):&#160;uart.c'],['../group__uart.html#ga07036e93939040c563e862a6a31b65bc',1,'putchar(int ch):&#160;uart.c']]]
+  ['id_5fsize_0',['ID_SIZE',['../chip__id_8h.html#a57375ea0ee50482e9db7de35d1b9e781',1,'chip_id.h']]]
 ];

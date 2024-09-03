@@ -1,10 +1,10 @@
 var indexSectionsWithContent =
 {
-  0: "dfgmpsu",
-  1: "dfsu",
+  0: "cdfgimpsu",
+  1: "cdfsu",
   2: "dgpu",
-  3: "m",
-  4: "dfu",
+  3: "im",
+  4: "cdfu",
   5: "s"
 };
 

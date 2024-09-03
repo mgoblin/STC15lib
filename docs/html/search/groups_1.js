@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['frequency_0',['Frequency',['../group__freq.html',1,'']]]
+  ['delays_0',['Delays',['../group__delays.html',1,'']]]
 ];
