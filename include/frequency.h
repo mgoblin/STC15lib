@@ -36,4 +36,13 @@ inline const int get_master_clock_frequency_high_part();
  */
 inline const int get_master_clock_frequency_low_part();
 
+/**
+ * Get master clock frequency divider (CLK_DIV bits [0..2])
+ * 
+ * @return master clock frequency divider. Divider values range is from 1 to 128.
+ * 
+ * @ingroup freq
+ */
+inline uint8_t get_frequency_divider(); 
+
 #endif 
