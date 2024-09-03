@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "sys.h": "c",
-        "stc15fxx.h": "c"
+        "stc15fxx.h": "c",
+        "frequency.h": "c"
     }
 }

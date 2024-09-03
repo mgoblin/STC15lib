@@ -16,7 +16,7 @@
  * 
  * @ingroup freq
  */
-const unsigned long get_cpu_frequency();
+inline const unsigned long get_master_clock_frequency();
 
 /**
  * Get high part of MAIN_Fosc defined as MAIN_FoscH in sys.h
@@ -25,7 +25,7 @@ const unsigned long get_cpu_frequency();
  * 
  * @ingroup freq
  */
-const int get_cpu_frequency_high_part();
+const int get_master_clock_frequency_high_part();
 
 /**
  * Get low part of MAIN_Fosc defined as MAIN_FoscL in sys.h
@@ -34,6 +34,6 @@ const int get_cpu_frequency_high_part();
  * 
  * @ingroup freq
  */
-const int get_cpu_frequency_low_part();
+const int get_master_clock_frequency_low_part();
 
 #endif 
