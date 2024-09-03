@@ -9,5 +9,5 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 
 0.2.0
 * flat headers structure
-* add frequency getting functions
+* add master clock and divider frequency functions
 * add doxygen documentation
