@@ -8,8 +8,6 @@
  */
 
 #include <STC15Fxx.h>
-#include <stdint.h>
-#include <stdbool.h>
 
 /**
  * CPU frequency

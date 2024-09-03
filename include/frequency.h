@@ -9,6 +9,8 @@
  * @author Michael Golovanov
  */
 
+#include <stdint.h>
+
 /**
  * Get MAIN_Fosc value
  * 

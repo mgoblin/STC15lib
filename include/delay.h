@@ -7,7 +7,6 @@
  * @details Functions and data structures related to delaying program flow
  * @author Michael Golovanov
  */
-#include<sys.h>
 #include <stdint.h>
 
 /** 
