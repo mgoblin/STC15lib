@@ -25,7 +25,7 @@ inline const unsigned long get_master_clock_frequency();
  * 
  * @ingroup freq
  */
-const int get_master_clock_frequency_high_part();
+inline const int get_master_clock_frequency_high_part();
 
 /**
  * Get low part of MAIN_Fosc defined as MAIN_FoscL in sys.h
@@ -34,6 +34,6 @@ const int get_master_clock_frequency_high_part();
  * 
  * @ingroup freq
  */
-const int get_master_clock_frequency_low_part();
+inline const int get_master_clock_frequency_low_part();
 
 #endif 
