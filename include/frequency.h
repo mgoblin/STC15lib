@@ -43,6 +43,18 @@ inline const int get_master_clock_frequency_low_part();
  * 
  * @ingroup freq
  */
-inline uint8_t get_frequency_divider(); 
+inline uint8_t get_frequency_divider();
+
+/**
+ * @brief Update and get master clock frequency divider (CLK_DIV bits [0..2])
+ * @details Before setting divider value validate if divider scale is out of range 0..7. 
+ * 
+ * @param divider_scale scale from 0 to 7 corresponds dividers 1, 2, 4, ...128
+ * 
+ * @return master clock frequency divider value/
+ * 
+ * @ingroup freq
+ */
+inline uint8_t update_and_get_frequency_divider(uint8_t divider_scale);
 
 #endif 

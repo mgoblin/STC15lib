@@ -12,7 +12,7 @@ void main()
 {
     uart_init(9600);
 
-    CLK_DIV |= 0b00000111;
+    update_and_get_frequency_divider(7); // set system clock value to master clock / 128
 
     while (1)
     {

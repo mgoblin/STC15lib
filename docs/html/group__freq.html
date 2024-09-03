@@ -78,6 +78,9 @@ Functions</h2></td></tr>
 <tr class="separator:ga97ddd3236e0082c4c5b55d8c97cc0164"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad5ec46c6d75722d1b8ae9731f0f03ccb"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#gad5ec46c6d75722d1b8ae9731f0f03ccb">get_frequency_divider</a> ()</td></tr>
 <tr class="separator:gad5ec46c6d75722d1b8ae9731f0f03ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga430f8c4ccae1431b64ff0f2af0480a98"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#ga430f8c4ccae1431b64ff0f2af0480a98">update_and_get_frequency_divider</a> (uint8_t divider_scale)</td></tr>
+<tr class="memdesc:ga430f8c4ccae1431b64ff0f2af0480a98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update and get master clock frequency divider (CLK_DIV bits [0..2])  <a href="group__freq.html#ga430f8c4ccae1431b64ff0f2af0480a98">More...</a><br /></td></tr>
+<tr class="separator:ga430f8c4ccae1431b64ff0f2af0480a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for get chip CPU frequency. Chip CPU frequency defined in <a class="el" href="sys_8h.html">sys.h</a> as a MAIN_Fosc constant. </p><dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
@@ -187,6 +190,42 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Get low part of MAIN_Fosc defined as MAIN_FoscL in <a class="el" href="sys_8h.html">sys.h</a></p>
 <dl class="section return"><dt>Returns</dt><dd>MAIN_FoscL </dd></dl>
+
+</div>
+</div>
+<a id="ga430f8c4ccae1431b64ff0f2af0480a98" name="ga430f8c4ccae1431b64ff0f2af0480a98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga430f8c4ccae1431b64ff0f2af0480a98">&#9670;&nbsp;</a></span>update_and_get_frequency_divider()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t update_and_get_frequency_divider </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>divider_scale</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update and get master clock frequency divider (CLK_DIV bits [0..2]) </p>
+<p >Before setting divider value validate if divider scale is out of range 0..7.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">divider_scale</td><td>scale from 0 to 7 corresponds dividers 1, 2, 4, ...128</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>master clock frequency divider value/ </dd></dl>
 
 </div>
 </div>
