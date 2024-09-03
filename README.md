@@ -8,8 +8,8 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 * uart support
 
 0.2.0
-* flat headers structure
-* add doxygen documentation
+* headers flat structure
+* doxygen documentation
 * add get chip id function (value F51FC47E1D0B52)
 * add master clock and divider frequency functions
 * adapt delay_ms to clock divider, uart not adapted yet
