@@ -13,3 +13,6 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 * add get chip id function (value F51FC47E1D0B52)
 * add master clock and divider frequency functions
 * adapt delay_ms to clock divider, uart not adapted yet
+
+0.3.0
+
