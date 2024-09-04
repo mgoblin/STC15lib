@@ -2,5 +2,5 @@
 
 void main()
 {
-    init_timer();
+    init_timer(TIMER0, COUNTER, MODE0);
 }
