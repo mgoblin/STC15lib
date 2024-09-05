@@ -1,33 +1,20 @@
 #include <sys.h>
+#include <timer.h>
 
 #include <stdint.h>
 
 #define LED P10
 
-void reload_timer() 
-{
-    TMOD = 0x00;
-    TL0 = 0x1f;
-    TH0 = 0xff;
-}
-
-void run_timer()
-{
-    TF0 = 0;
-    TR0 = 1;
-
-    while(!TF0)
-    {
-    }
-}
-
 void main()
 {
-    LED = !LED;
+    timer_mode0_init(TIMER1);
     
-    for(uint16_t i = 0; i < 128 * 10; i++)
+    while(1)
     {
-        reload_timer();
-        run_timer();
+        for(uint16_t i = 0; i < 2000; i++)
+        {
+            timer_mode0_run_and_wait(TIMER0, 0x1f, 0xff);
+        }
+        LED = !LED;
     }
 }
