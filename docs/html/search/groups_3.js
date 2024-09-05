@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['uart_20serial_20interface_0',['UART serial interface',['../group__uart.html',1,'']]]
+  ['timer_0',['Timer',['../group__timer.html',1,'']]]
 ];

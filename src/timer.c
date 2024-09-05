@@ -2,8 +2,8 @@
 #include <bits.h>
 #include <timer.h>
 
-//TODO doxygen docs 
 //TODO implements interrupt version 
+//TODO implements mode1-3
 
 void timer_mode0_init(const timer_id timerid)
 { 
