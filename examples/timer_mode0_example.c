@@ -11,10 +11,7 @@ void main()
     
     while(1)
     {
-        for(uint16_t i = 0; i < 2000; i++)
-        {
-            timer_mode0_run_and_wait(TIMER0, 0x1f, 0xff);
-        }
+        timer_mode0_run_and_wait(TIMER0, 0x00, 0x00);
         LED = !LED;
     }
 }

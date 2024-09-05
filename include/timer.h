@@ -50,11 +50,11 @@ void timer_mode0_init(const timer_id timerid);
  * until timer does not finished.
  * 
  * @param timerid TIMER0 or TIMER1
- * @param tl_value timer interval prescaler (high 5 bits)
- * @param th_value timer interval prescaler (low 8 bits)
+ * @param th_value timer interval prescaler (high 8 bits)
+ * @param tl_value timer interval prescaler (low 5 bits)
  * 
  * @ingroup timer 
  */
-void timer_mode0_run_and_wait(const timer_id timerid, uint8_t tl_value, uint8_t th_value);
+void timer_mode0_run_and_wait(const timer_id timerid, uint8_t th_value, uint8_t tl_value);
 
 #endif
