@@ -3,6 +3,8 @@
         "sys.h": "c",
         "stc15fxx.h": "c",
         "frequency.h": "c",
-        "chip_id.h": "c"
+        "chip_id.h": "c",
+        "stdio.h": "c",
+        "uart.h": "c"
     }
 }
