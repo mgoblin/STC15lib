@@ -21,8 +21,8 @@
  * 
  * CPU frequency change biased timer delays.
  *  
- * This module version supports only mode0 12T for timer. 
- * Other timer modes and counter mode does not implements yet.
+ * This module version supports only mode0 12T and 1T for timer0. 
+ * Other timers, modes and counter mode does not implements yet.
  *    
  * @author Michael Golovanov
  */
