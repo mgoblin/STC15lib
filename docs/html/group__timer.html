@@ -83,10 +83,13 @@ Functions</h2></td></tr>
 <tr class="memitem:gaacaa3d2da5da2456041d39da0cb2d3c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gaacaa3d2da5da2456041d39da0cb2d3c0">timer0_mode0_stop</a> ()</td></tr>
 <tr class="memdesc:gaacaa3d2da5da2456041d39da0cb2d3c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop timer0 with interrupt support.  <a href="group__timer.html#gaacaa3d2da5da2456041d39da0cb2d3c0">More...</a><br /></td></tr>
 <tr class="separator:gaacaa3d2da5da2456041d39da0cb2d3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe56c22feca0e373507d08c4fe9aa3d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gabe56c22feca0e373507d08c4fe9aa3d4">timer2_mode0_12T_init</a> ()</td></tr>
+<tr class="memdesc:gabe56c22feca0e373507d08c4fe9aa3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize mode0 12T for timer2. Set AUXR bits.  <a href="group__timer.html#gabe56c22feca0e373507d08c4fe9aa3d4">More...</a><br /></td></tr>
+<tr class="separator:gabe56c22feca0e373507d08c4fe9aa3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for timers.</p>
-<p >This module supports general purpose timer Timer0. Timer can work as COUNTER or TIMER.</p>
+<p >This module supports general purpose timer Timer0 and Timer2. Eqch timer can work as COUNTER or TIMER.</p>
 <p >Counter increments on external singnal (like pin 1/0 change state).</p>
 <p >8051 chips timer has 4 modes</p><ul>
 <li>mode0 - 16-Bit Auto-Reload Timer/Counter</li>
@@ -96,8 +99,11 @@ Functions</h2></td></tr>
 <li>By default timer input is 12T mode. Timer increments by sysClock/12.</li>
 <li>Timer input can be switched to 1T mode. In this mode timer increments by sysClock/1.</li>
 </ul>
+<p >Timer0 mode0 can be used in sync (main prorgam flow blocked until timer overloaded) and interrupt (call interrupt handler on timer overloaded) modes.</p>
+<p >Timer2 mode0 can be used only in interrupt mode.</p>
+<p >If Timer2 using as general purpose timer then UART can not be used.</p>
 <p >CPU frequency change biased timer delays.</p>
-<p >This module version supports only mode0 12T and 1T for timer0. Other timers, modes and counter mode does not implements yet.</p>
+<p >This module version supports only timer0, timer2 mode0 12T and 1T for timer0. Other timers, modes and counter mode does not implements yet.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="gafc1922d4d4dacedb83fe63a73984bcc6" name="gafc1922d4d4dacedb83fe63a73984bcc6"></a>
@@ -230,6 +236,26 @@ Functions</h2></td></tr>
 
 <p>Stop timer0 with interrupt support. </p>
 <p >Before stop timer0_mode0_start should be called. Dont mix timer0_mode0_stop call with void <a class="el" href="group__timer.html#ga376560fc8232925561d041328af2e198" title="Run timer0 mode0 and wait timer not finished.">timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value)</a> call </p>
+
+</div>
+</div>
+<a id="gabe56c22feca0e373507d08c4fe9aa3d4" name="gabe56c22feca0e373507d08c4fe9aa3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe56c22feca0e373507d08c4fe9aa3d4">&#9670;&nbsp;</a></span>timer2_mode0_12T_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void timer2_mode0_12T_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize mode0 12T for timer2. Set AUXR bits. </p>
+<p >Timer2 could be used for UART. This method init timer2 as general purpose timer in mode0 with input from sysClk/12. Using timer2 in this mode disable UART capability. </p>
 
 </div>
 </div>

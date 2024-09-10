@@ -6,8 +6,8 @@
  * @defgroup timer Timer
  * @details Functions and data structures for timers.
  * 
- * This module supports general purpose timer Timer0.
- * Timer can work as COUNTER or TIMER. 
+ * This module supports general purpose timer Timer0 and Timer2.
+ * Eqch timer can work as COUNTER or TIMER. 
  * 
  * Counter increments on external singnal (like pin 1/0 change state). 
  * 
@@ -19,9 +19,16 @@
  * * By default timer input is 12T mode. Timer increments by sysClock/12.
  * * Timer input can be switched to 1T mode. In this mode timer increments by sysClock/1. 
  * 
+ * Timer0 mode0 can be used in sync (main prorgam flow blocked until timer overloaded) 
+ * and interrupt (call interrupt handler on timer overloaded) modes.
+ * 
+ * Timer2 mode0 can be used only in interrupt mode. 
+ * 
+ * If Timer2 using as general purpose timer then UART can not be used.
+ * 
  * CPU frequency change biased timer delays.
  *  
- * This module version supports only mode0 12T and 1T for timer0. 
+ * This module version supports only timer0, timer2 mode0 12T and 1T for timer0. 
  * Other timers, modes and counter mode does not implements yet.
  *    
  * @author Michael Golovanov
@@ -89,8 +96,15 @@ void timer0_mode0_stop();
 
 
 //============================== Timer2 mode0 declarations begin ==========================
-
-
+/**
+ * @brief Initialize mode0 12T for timer2. Set AUXR bits.
+ * @details Timer2 could be used for UART. 
+ * This method init timer2 as general purpose timer in mode0 with input from sysClk/12.
+ * Using timer2 in this mode disable UART capability.
+ * 
+ * @ingroup timer
+ */
+void timer2_mode0_12T_init();
 
 //============================== Timer2 mode0 declarations end ============================
 
