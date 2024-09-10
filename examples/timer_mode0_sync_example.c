@@ -7,7 +7,7 @@
 
 void main()
 {
-    timer0_mode0_init();
+    timer0_mode0_12T_init();
 
     while(1)
     {

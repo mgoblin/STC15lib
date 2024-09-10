@@ -70,8 +70,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gab2d17e9897bf517c81e5eb59b024b5d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gab2d17e9897bf517c81e5eb59b024b5d6">timer0_mode0_init</a> ()</td></tr>
-<tr class="separator:gab2d17e9897bf517c81e5eb59b024b5d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc1922d4d4dacedb83fe63a73984bcc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gafc1922d4d4dacedb83fe63a73984bcc6">timer0_mode0_12T_init</a> ()</td></tr>
+<tr class="separator:gafc1922d4d4dacedb83fe63a73984bcc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga376560fc8232925561d041328af2e198"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga376560fc8232925561d041328af2e198">timer0_mode0_run_once_and_wait</a> (uint8_t th_value, uint8_t tl_value)</td></tr>
 <tr class="memdesc:ga376560fc8232925561d041328af2e198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0 and wait timer not finished.  <a href="group__timer.html#ga376560fc8232925561d041328af2e198">More...</a><br /></td></tr>
 <tr class="separator:ga376560fc8232925561d041328af2e198"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -93,14 +93,14 @@ Functions</h2></td></tr>
 <p >This module version supports only mode0 12T for timer. Other timer modes and counter mode does not implements yet.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gab2d17e9897bf517c81e5eb59b024b5d6" name="gab2d17e9897bf517c81e5eb59b024b5d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab2d17e9897bf517c81e5eb59b024b5d6">&#9670;&nbsp;</a></span>timer0_mode0_init()</h2>
+<a id="gafc1922d4d4dacedb83fe63a73984bcc6" name="gafc1922d4d4dacedb83fe63a73984bcc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafc1922d4d4dacedb83fe63a73984bcc6">&#9670;&nbsp;</a></span>timer0_mode0_12T_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void timer0_mode0_init </td>
+          <td class="memname">void timer0_mode0_12T_init </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -138,7 +138,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Run timer0 and wait timer not finished. </p>
-<p >Before run timer0_mode0_init should be called. After run program flow blocked until timer does not finished.</p>
+<p >Before run timer0_mode0_12T_init should be called. After run program flow blocked until timer does not finished.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">th_value</td><td>timer interval prescaler (high 8 bits) </td></tr>
@@ -176,7 +176,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Run timer0 with interrupt support. </p>
-<p >Before run timer0_mode0_init should be called. After run program flow not blocked and interrupt will generated when timer is finished. Interrupt handler void timer0ISR(void) __interrupt(1) should be defined. Timer rerun after finished. Dont mix timer0_mode0_start call with void <a class="el" href="group__timer.html#ga376560fc8232925561d041328af2e198" title="Run timer0 and wait timer not finished.">timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value)</a> call</p>
+<p >Before run timer0_mode0_12T_init should be called. After run program flow not blocked and interrupt will generated when timer is finished. Interrupt handler void timer0ISR(void) __interrupt(1) should be defined. Timer rerun after finished. Dont mix timer0_mode0_start call with void <a class="el" href="group__timer.html#ga376560fc8232925561d041328af2e198" title="Run timer0 and wait timer not finished.">timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value)</a> call</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">th_value</td><td>timer interval prescaler (high 8 bits) </td></tr>

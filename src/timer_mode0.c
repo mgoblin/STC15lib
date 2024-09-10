@@ -2,7 +2,7 @@
 #include <timer.h>
 #include <bits.h>
 
-void timer0_mode0_init()
+void timer0_mode0_12T_init()
 { 
     EA = 1; // set global interrupts enabled flag
     TMOD = 0x00;
