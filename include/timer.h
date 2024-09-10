@@ -11,10 +11,15 @@
  * 
  * Counter increments on external singnal (like pin 1/0 change state). 
  * 
- * Input of timer is system clock.CPU frequency change biased timer delays.
- * 
  * 8051 chips timer has 4 modes
  * * mode0 - 16-Bit Auto-Reload Timer/Counter
+ * 
+ * For mode0:
+ * * Input of timer is system clock.
+ * * By default timer input is 12T mode. Timer increments by sysClock/12.
+ * * Timer input can be switched to 1T mode. In this mode timer increments by sysClock/1. 
+ * 
+ * CPU frequency change biased timer delays.
  *  
  * This module version supports only mode0 12T for timer. 
  * Other timer modes and counter mode does not implements yet.
