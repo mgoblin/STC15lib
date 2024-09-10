@@ -14,9 +14,9 @@
  * Input of timer is system clock.CPU frequency change biased timer delays.
  * 
  * 8051 chips timer has 4 modes
- * * mode0 - 16-Bit Auto-Relaod Timer/Counter
+ * * mode0 - 16-Bit Auto-Reload Timer/Counter
  *  
- * This module version supports only mode0 for timer. 
+ * This module version supports only mode0 12T for timer. 
  * Other timer modes and counter mode does not implements yet.
  *    
  * @author Michael Golovanov
@@ -25,7 +25,7 @@
 #include <stdint.h>
 
 /**
- * Initialize mode0 for timer0. Set TMOD bits.
+ * Initialize mode0 12T for timer0. Set TMOD bits.
  * 
  * @ingroup timer
  */

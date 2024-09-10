@@ -1,10 +1,12 @@
 #include <sys.h>
 #include <timer.h>
+#include <bits.h>
 
 void timer0_mode0_init()
 { 
     EA = 1; // set global interrupts enabled flag
     TMOD = 0x00;
+    bit_clr(AUXR, 7); // 12T input clock mode
 }
 
 void timer0_mode0_run_once_and_wait(uint8_t tl_value, uint8_t th_value)
@@ -19,6 +21,7 @@ void timer0_mode0_run_once_and_wait(uint8_t tl_value, uint8_t th_value)
     {
     }
 
+    TR0 = 0;
     TF1 = 0;
 }
 
