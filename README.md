@@ -16,4 +16,5 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 
 0.3.0
 * timer0 mode0 12T and 1T support implementation
+* timer2 as general purpose timer mode0 12T and 1T support implementation
 
