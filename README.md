@@ -10,7 +10,7 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 0.2.0
 * headers flat structure
 * doxygen documentation
-* add get chip id function (value F51FC47E1D0B52)
+* add get chip id function (value F51FC47E1D0B52 for STC15W408AS)
 * add master clock and divider frequency functions
 * adapt delay_ms to clock divider, uart not adapted yet
 
