@@ -1,8 +1,6 @@
 #include <sys.h>
 #include <timer.h>
 
-//TODO implements interrupt version 
-
 void timer0_mode0_init()
 { 
     EA = 1; // set global interrupts enabled flag

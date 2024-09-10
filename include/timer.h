@@ -36,7 +36,7 @@
 void timer0_mode0_init();
 
 /**
- * @brief Run timer and wait  timer not finished.
+ * @brief Run timer0 and wait timer not finished.
  * @details Before run timer0_mode0_init should be called. After run program flow blocked 
  * until timer does not finished.
  * 
@@ -47,8 +47,30 @@ void timer0_mode0_init();
  */
 void timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value);
 
+/**
+ * @brief Run timer0 with interrupt support.
+ * @details Before run timer0_mode0_init should be called. 
+ * After run program flow not blocked and interrupt will generated when timer is finished.
+ * Interrupt handler void timer0ISR(void) __interrupt(1) should be defined.
+ * Timer rerun after finished. 
+ * Dont mix timer0_mode0_start call with 
+ * void timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value) call
+ * 
+ * @param th_value timer interval prescaler (high 8 bits)
+ * @param tl_value timer interval prescaler (low 5 bits)
+ * 
+ * @ingroup timer
+ */
 void timer0_mode0_start(uint8_t th_value, uint8_t tl_value);
 
+/**
+ * @brief Stop timer0 with interrupt support.
+ * @details Before stop timer0_mode0_start should be called. 
+ * Dont mix timer0_mode0_stop call with
+ * void timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value) call 
+ * 
+ * @ingroup timer
+ */
 void timer0_mode0_stop();
 
 #endif

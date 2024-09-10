@@ -73,8 +73,14 @@ Functions</h2></td></tr>
 <tr class="memitem:gab2d17e9897bf517c81e5eb59b024b5d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gab2d17e9897bf517c81e5eb59b024b5d6">timer0_mode0_init</a> ()</td></tr>
 <tr class="separator:gab2d17e9897bf517c81e5eb59b024b5d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga376560fc8232925561d041328af2e198"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga376560fc8232925561d041328af2e198">timer0_mode0_run_once_and_wait</a> (uint8_t th_value, uint8_t tl_value)</td></tr>
-<tr class="memdesc:ga376560fc8232925561d041328af2e198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer and wait timer not finished.  <a href="group__timer.html#ga376560fc8232925561d041328af2e198">More...</a><br /></td></tr>
+<tr class="memdesc:ga376560fc8232925561d041328af2e198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0 and wait timer not finished.  <a href="group__timer.html#ga376560fc8232925561d041328af2e198">More...</a><br /></td></tr>
 <tr class="separator:ga376560fc8232925561d041328af2e198"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga66eaee5c6001af11ff2a5a2366e4653a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga66eaee5c6001af11ff2a5a2366e4653a">timer0_mode0_start</a> (uint8_t th_value, uint8_t tl_value)</td></tr>
+<tr class="memdesc:ga66eaee5c6001af11ff2a5a2366e4653a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0 with interrupt support.  <a href="group__timer.html#ga66eaee5c6001af11ff2a5a2366e4653a">More...</a><br /></td></tr>
+<tr class="separator:ga66eaee5c6001af11ff2a5a2366e4653a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaacaa3d2da5da2456041d39da0cb2d3c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gaacaa3d2da5da2456041d39da0cb2d3c0">timer0_mode0_stop</a> ()</td></tr>
+<tr class="memdesc:gaacaa3d2da5da2456041d39da0cb2d3c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop timer0 with interrupt support.  <a href="group__timer.html#gaacaa3d2da5da2456041d39da0cb2d3c0">More...</a><br /></td></tr>
+<tr class="separator:gaacaa3d2da5da2456041d39da0cb2d3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for timers.</p>
@@ -135,7 +141,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Run timer and wait timer not finished. </p>
+<p>Run timer0 and wait timer not finished. </p>
 <p >Before run timer0_mode0_init should be called. After run program flow blocked until timer does not finished.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -144,6 +150,64 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ga66eaee5c6001af11ff2a5a2366e4653a" name="ga66eaee5c6001af11ff2a5a2366e4653a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga66eaee5c6001af11ff2a5a2366e4653a">&#9670;&nbsp;</a></span>timer0_mode0_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void timer0_mode0_start </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>th_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>tl_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Run timer0 with interrupt support. </p>
+<p >Before run timer0_mode0_init should be called. After run program flow not blocked and interrupt will generated when timer is finished. Interrupt handler void timer0ISR(void) __interrupt(1) should be defined. Timer rerun after finished. Dont mix timer0_mode0_start call with void <a class="el" href="group__timer.html#ga376560fc8232925561d041328af2e198" title="Run timer0 and wait timer not finished.">timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value)</a> call</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">th_value</td><td>timer interval prescaler (high 8 bits) </td></tr>
+    <tr><td class="paramname">tl_value</td><td>timer interval prescaler (low 5 bits) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaacaa3d2da5da2456041d39da0cb2d3c0" name="gaacaa3d2da5da2456041d39da0cb2d3c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaacaa3d2da5da2456041d39da0cb2d3c0">&#9670;&nbsp;</a></span>timer0_mode0_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void timer0_mode0_stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stop timer0 with interrupt support. </p>
+<p >Before stop timer0_mode0_start should be called. Dont mix timer0_mode0_stop call with void <a class="el" href="group__timer.html#ga376560fc8232925561d041328af2e198" title="Run timer0 and wait timer not finished.">timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value)</a> call </p>
 
 </div>
 </div>
