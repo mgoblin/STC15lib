@@ -1,5 +1,4 @@
 #include <sys.h>
-#include <bits.h>
 #include <delay.h>
 #include <timer.h>
 
@@ -14,10 +13,7 @@ void main(void)
 {
     timer2_mode0_12T_init();
 
-    T2L = 0;
-    T2H = 0;
-
-    bit_set(AUXR, 4); // set T2 run flag
+    timer2_mode0_start(0x00, 0x00);
 
     delay_ms(2000);
 }

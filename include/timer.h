@@ -106,6 +106,20 @@ void timer0_mode0_stop();
  */
 void timer2_mode0_12T_init();
 
+/**
+ * @brief Run timer2 mode0 with interrupt support.
+ * @details Before run timer2_mode0_12T_init or timer2_mode0_1T_init should be called. 
+ * After run program flow not blocked and interrupt will generated when timer is overloaded.
+ * Interrupt handler void timer2ISR(void) __interrupt(12) should be defined in user code.
+ * Timer rerun after overloaded and interuppt handler called. 
+ * 
+ * @param th_value timer interval prescaler (high 8 bits)
+ * @param tl_value timer interval prescaler (low 5 bits)
+ * 
+ * @ingroup timer
+ */
+void timer2_mode0_start(uint8_t th_value, uint8_t tl_value);
+
 //============================== Timer2 mode0 declarations end ============================
 
 #endif

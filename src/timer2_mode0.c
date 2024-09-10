@@ -1,5 +1,6 @@
 #include <sys.h>
 #include <time.h>
+#include <stdint.h>
 
 void timer2_mode0_12T_init()
 {
@@ -10,4 +11,14 @@ void timer2_mode0_12T_init()
     AUXR &= 0xE3;//0b11100011;
 
     IE2 |= 0x04; // enable timer2 interrupt
+}
+
+void timer2_mode0_start(uint8_t th_value, uint8_t tl_value)
+{
+    // Load high and low timer value bytes
+    T2L = tl_value;
+    T2H = th_value;
+
+    //bit_set(AUXR, 4); // set T2 run flag
+    AUXR |= 0x10; //0b00010000;
 }
