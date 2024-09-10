@@ -15,5 +15,5 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 * adapt delay_ms to clock divider, uart not adapted yet
 
 0.3.0
-* timer0 mode0 12T support implementation
+* timer0 mode0 12T and 1T support implementation
 
