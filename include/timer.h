@@ -47,4 +47,8 @@ void timer0_mode0_init();
  */
 void timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value);
 
+void timer0_mode0_start(uint8_t th_value, uint8_t tl_value);
+
+void timer0_mode0_stop();
+
 #endif
