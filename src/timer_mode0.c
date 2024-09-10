@@ -4,7 +4,7 @@
 void timer0_mode0_init()
 { 
     EA = 1; // set global interrupts enabled flag
-    TMOD = 0x08;
+    TMOD = 0x00;
 }
 
 void timer0_mode0_run_once_and_wait(uint8_t tl_value, uint8_t th_value)
