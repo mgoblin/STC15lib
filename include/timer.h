@@ -106,6 +106,14 @@ void timer0_mode0_stop();
  */
 void timer2_mode0_12T_init();
 
+/**
+ * @brief Initialize mode0 1T for timer2. Set AUXR bits.
+ * @details Timer2 could be used for UART. 
+ * This method init timer2 as general purpose timer in mode0 with input from sysClk/1.
+ * Using timer2 in this mode disable UART capability.
+ * 
+ * @ingroup timer
+ */
 void timer2_mode0_1T_init();
 
 /**

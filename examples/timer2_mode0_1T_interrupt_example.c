@@ -4,9 +4,16 @@
 
 #define LED P10
 
+uint8_t interrupt_counter = 0;
+
 void timer2ISR() __interrupt(12)
 {
-    LED = !LED;
+    interrupt_counter++;
+    if (interrupt_counter == 2)
+    {
+        interrupt_counter = 0;
+        LED = !LED;
+    }
 }
 
 void main(void)
