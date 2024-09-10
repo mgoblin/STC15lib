@@ -37,8 +37,16 @@
 void timer0_mode0_12T_init();
 
 /**
+ * Initialize mode0 1T for timer0. Set TMOD bits.
+ * 
+ * @ingroup timer
+ */
+void timer0_mode0_1T_init();
+
+/**
  * @brief Run timer0 and wait timer not finished.
- * @details Before run timer0_mode0_12T_init should be called. After run program flow blocked 
+ * @details Before run timer0_mode0_12T_init or timer0_mode0_1T_init   
+ * should be called. After run program flow blocked 
  * until timer does not finished.
  * 
  * @param th_value timer interval prescaler (high 8 bits)
@@ -50,7 +58,7 @@ void timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value);
 
 /**
  * @brief Run timer0 with interrupt support.
- * @details Before run timer0_mode0_12T_init should be called. 
+ * @details Before run timer0_mode0_12T_init or timer0_mode0_1T_init should be called. 
  * After run program flow not blocked and interrupt will generated when timer is finished.
  * Interrupt handler void timer0ISR(void) __interrupt(1) should be defined.
  * Timer rerun after finished. 

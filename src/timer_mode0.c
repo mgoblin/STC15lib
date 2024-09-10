@@ -9,6 +9,13 @@ void timer0_mode0_12T_init()
     bit_clr(AUXR, 7); // 12T input clock mode
 }
 
+void timer0_mode0_1T_init()
+{
+    EA = 1; // set global interrupts enabled flag
+    TMOD = 0x00;
+    bit_set(AUXR, 7); // 11T input clock mode
+}
+
 void timer0_mode0_run_once_and_wait(uint8_t tl_value, uint8_t th_value)
 {
     TL0 = tl_value;
