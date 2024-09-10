@@ -6,9 +6,12 @@
  * @defgroup timer Timer
  * @details Functions and data structures for timers.
  * 
- * This module supports two generar purpose timers Timer0 and Timer1.
- * Each timer can work as COUNTER or TIMER. Counter increments on external singnal 
- * (like pin 1/0 change state). Input of timer is system clock.
+ * This module supports general purpose timer Timer0.
+ * Timer can work as COUNTER or TIMER. 
+ * 
+ * Counter increments on external singnal (like pin 1/0 change state). 
+ * 
+ * Input of timer is system clock.CPU frequency change biased timer delays.
  * 
  * 8051 chips timer has 4 modes
  * * mode0 - 8-bit timer/counter with 5-bit prescaler (13 bit timer)
@@ -26,35 +29,22 @@
 #include <stdint.h>
 
 /**
- * Timers enum
- */
-typedef enum {
-    /// Timer0
-    TIMER0,
-    /// Timer1
-    TIMER1
-} timer_id;
-
-/**
- * Initialize mode0 for timer. Set TMOD bits.
- * 
- * @param timerid TIMER0 or TIMER1
+ * Initialize mode0 for timer0. Set TMOD bits.
  * 
  * @ingroup timer
  */
-void timer_mode0_init(const timer_id timerid);
+void timer0_mode0_init();
 
 /**
  * @brief Run timer and wait  timer not finished.
- * @details Before run timer_mode0_init should be called. After run program flow blocked 
+ * @details Before run timer0_mode0_init should be called. After run program flow blocked 
  * until timer does not finished.
  * 
- * @param timerid TIMER0 or TIMER1
  * @param th_value timer interval prescaler (high 8 bits)
  * @param tl_value timer interval prescaler (low 5 bits)
  * 
  * @ingroup timer 
  */
-void timer_mode0_run_and_wait(const timer_id timerid, uint8_t th_value, uint8_t tl_value);
+void timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value);
 
 #endif

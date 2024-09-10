@@ -7,11 +7,11 @@
 
 void main()
 {
-    timer_mode0_init(TIMER1);
-    
+    timer0_mode0_init();
+
     while(1)
     {
-        timer_mode0_run_and_wait(TIMER0, 0x00, 0x00);
+        timer0_mode0_run_once_and_wait(0x00, 0x00);
         LED = !LED;
     }
 }

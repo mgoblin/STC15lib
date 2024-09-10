@@ -70,11 +70,11 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga8e991ca0a1ab37c828c5611ab7caa66d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga8e991ca0a1ab37c828c5611ab7caa66d">timer_mode0_init</a> (const <a class="el" href="timer_8h.html#a9aa38602a48854ccff0dbc3f9dd8be00">timer_id</a> timerid)</td></tr>
-<tr class="separator:ga8e991ca0a1ab37c828c5611ab7caa66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab79cfe9f2d85c05d770ee564007832e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gab79cfe9f2d85c05d770ee564007832e5">timer_mode0_run_and_wait</a> (const <a class="el" href="timer_8h.html#a9aa38602a48854ccff0dbc3f9dd8be00">timer_id</a> timerid, uint8_t tl_value, uint8_t th_value)</td></tr>
-<tr class="memdesc:gab79cfe9f2d85c05d770ee564007832e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer and wait timer not finished.  <a href="group__timer.html#gab79cfe9f2d85c05d770ee564007832e5">More...</a><br /></td></tr>
-<tr class="separator:gab79cfe9f2d85c05d770ee564007832e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab2d17e9897bf517c81e5eb59b024b5d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gab2d17e9897bf517c81e5eb59b024b5d6">timer0_mode0_init</a> ()</td></tr>
+<tr class="separator:gab2d17e9897bf517c81e5eb59b024b5d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga376560fc8232925561d041328af2e198"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga376560fc8232925561d041328af2e198">timer0_mode0_run_once_and_wait</a> (uint8_t th_value, uint8_t tl_value)</td></tr>
+<tr class="memdesc:ga376560fc8232925561d041328af2e198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer and wait timer not finished.  <a href="group__timer.html#ga376560fc8232925561d041328af2e198">More...</a><br /></td></tr>
+<tr class="separator:ga376560fc8232925561d041328af2e198"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for timers.</p>
@@ -89,54 +89,41 @@ Functions</h2></td></tr>
 </p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga8e991ca0a1ab37c828c5611ab7caa66d" name="ga8e991ca0a1ab37c828c5611ab7caa66d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8e991ca0a1ab37c828c5611ab7caa66d">&#9670;&nbsp;</a></span>timer_mode0_init()</h2>
+<a id="gab2d17e9897bf517c81e5eb59b024b5d6" name="gab2d17e9897bf517c81e5eb59b024b5d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab2d17e9897bf517c81e5eb59b024b5d6">&#9670;&nbsp;</a></span>timer0_mode0_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void timer_mode0_init </td>
+          <td class="memname">void timer0_mode0_init </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="timer_8h.html#a9aa38602a48854ccff0dbc3f9dd8be00">timer_id</a>&#160;</td>
-          <td class="paramname"><em>timerid</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Initialize mode0 for timer. Set TMOD bits.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">timerid</td><td>TIMER0 or TIMER1 </td></tr>
-  </table>
-  </dd>
-</dl>
+<p >Initialize mode0 for timer0. Set TMOD bits. </p>
 
 </div>
 </div>
-<a id="gab79cfe9f2d85c05d770ee564007832e5" name="gab79cfe9f2d85c05d770ee564007832e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab79cfe9f2d85c05d770ee564007832e5">&#9670;&nbsp;</a></span>timer_mode0_run_and_wait()</h2>
+<a id="ga376560fc8232925561d041328af2e198" name="ga376560fc8232925561d041328af2e198"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga376560fc8232925561d041328af2e198">&#9670;&nbsp;</a></span>timer0_mode0_run_once_and_wait()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void timer_mode0_run_and_wait </td>
+          <td class="memname">void timer0_mode0_run_once_and_wait </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="timer_8h.html#a9aa38602a48854ccff0dbc3f9dd8be00">timer_id</a>&#160;</td>
-          <td class="paramname"><em>timerid</em>, </td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>th_value</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>tl_value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>th_value</em>&#160;</td>
+          <td class="paramname"><em>tl_value</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -147,12 +134,11 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Run timer and wait timer not finished. </p>
-<p >Before run timer_mode0_init should be called. After run program flow blocked until timer does not finished.</p>
+<p >Before run timer0_mode0_init should be called. After run program flow blocked until timer does not finished.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">timerid</td><td>TIMER0 or TIMER1 </td></tr>
-    <tr><td class="paramname">tl_value</td><td>timer interval prescaler (low 5 bits) </td></tr>
     <tr><td class="paramname">th_value</td><td>timer interval prescaler (high 8 bits) </td></tr>
+    <tr><td class="paramname">tl_value</td><td>timer interval prescaler (low 5 bits) </td></tr>
   </table>
   </dd>
 </dl>
