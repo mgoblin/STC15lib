@@ -13,6 +13,11 @@ void timer2_mode0_12T_init()
     IE2 |= 0x04; // enable timer2 interrupt
 }
 
+void timer2_mode0_1T_init()
+{
+    
+}
+
 void timer2_mode0_start(uint8_t th_value, uint8_t tl_value)
 {
     // Load high and low timer value bytes
@@ -21,4 +26,10 @@ void timer2_mode0_start(uint8_t th_value, uint8_t tl_value)
 
     //bit_set(AUXR, 4); // set T2 run flag
     AUXR |= 0x10; //0b00010000;
+}
+
+void timer2_mode0_stop()
+{
+    //bit_clr(AUXR, 4); // clear T2 run flag
+    AUXR &= 0xef; //0b11101111;
 }

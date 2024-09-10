@@ -83,7 +83,7 @@ void timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value);
 void timer0_mode0_start(uint8_t th_value, uint8_t tl_value);
 
 /**
- * @brief Stop timer0 with interrupt support.
+ * @brief Stop timer0 mode0 with interrupt support.
  * @details Before stop timer0_mode0_start should be called. 
  * Dont mix timer0_mode0_stop call with
  * void timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value) call 
@@ -106,6 +106,8 @@ void timer0_mode0_stop();
  */
 void timer2_mode0_12T_init();
 
+void timer2_mode0_1T_init();
+
 /**
  * @brief Run timer2 mode0 with interrupt support.
  * @details Before run timer2_mode0_12T_init or timer2_mode0_1T_init should be called. 
@@ -119,6 +121,14 @@ void timer2_mode0_12T_init();
  * @ingroup timer
  */
 void timer2_mode0_start(uint8_t th_value, uint8_t tl_value);
+
+/**
+ * @brief Stop timer2 mode0 with interrupt support.
+ * @details Before stop timer2_mode0_start should be called. 
+ * 
+ * @ingroup timer
+ */
+void timer2_mode0_stop();
 
 //============================== Timer2 mode0 declarations end ============================
 
