@@ -5,8 +5,7 @@
 
 void main()
 {
-    //CLK_DIV = 0xC0;
-    enable_master_clock_output_div1();
+    enable_master_clock_output_div2();
 
     while (1);
     

@@ -34,3 +34,8 @@ inline void enable_master_clock_output_div1()
 {
     bit_set(CLK_DIV, 6);
 }
+
+inline void enable_master_clock_output_div2()
+{
+    bit_set(CLK_DIV, 7);
+}
