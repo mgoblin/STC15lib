@@ -73,4 +73,11 @@ inline void enable_master_clock_output_div1();
  */
 inline void enable_master_clock_output_div2();
 
+/**
+ * Enable (master clock output)/4 to P5.4 pin
+ * 
+ * @ingroup freq
+ */
+inline void enable_master_clock_output_div4();
+
 #endif 

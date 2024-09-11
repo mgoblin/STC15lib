@@ -5,7 +5,7 @@
 
 void main()
 {
-    enable_master_clock_output_div2();
+    enable_master_clock_output_div4();
 
     while (1);
     
