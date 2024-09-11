@@ -42,6 +42,20 @@ inline void enable_master_clock_output_div2()
 
 inline void enable_master_clock_output_div4()
 {
-    bit_set(CLK_DIV, 7);
-    bit_set(CLK_DIV, 6);
+    CLK_DIV |= 0xC0; // set bits 6 and 7 
+}
+
+inline void disable_master_clock_output()
+{
+    CLK_DIV &= 0x3f; // clear bits 6 and 7 
+}
+
+inline master_clock_output_pin get_master_clock_output_pin()
+{
+    if ((CLK_DIV & 0xC0) == 0)
+    {
+        return NONE;
+    }
+    
+    return (CLK_DIV & 0x04) == 0 ? P5_4 : P1_6;
 }

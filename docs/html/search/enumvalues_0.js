@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['timer0_0',['TIMER0',['../timer_8h.html#a9aa38602a48854ccff0dbc3f9dd8be00aa73b8bf071cada8f26f46555396534e0',1,'timer.h']]],
-  ['timer1_1',['TIMER1',['../timer_8h.html#a9aa38602a48854ccff0dbc3f9dd8be00a78900d10bb4d349f1403fbd090e66cd6',1,'timer.h']]]
+  ['p1_5f6_0',['P1_6',['../frequency_8h.html#a4de903b9320a994227a4f380782228dfa1c09e634fa0f157f766022d25ea2860d',1,'frequency.h']]],
+  ['p5_5f4_1',['P5_4',['../frequency_8h.html#a4de903b9320a994227a4f380782228dfa3f2896cca74b9552337ba66e54412050',1,'frequency.h']]]
 ];

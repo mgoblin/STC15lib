@@ -3,9 +3,12 @@ var indexSectionsWithContent =
   0: "cdefgimpstu",
   1: "cdfstu",
   2: "degptu",
-  3: "im",
-  4: "cdftu",
-  5: "s"
+  3: "m",
+  4: "m",
+  5: "p",
+  6: "im",
+  7: "cdftu",
+  8: "s"
 };
 
 var indexSectionNames =
@@ -13,9 +16,12 @@ var indexSectionNames =
   0: "all",
   1: "files",
   2: "functions",
-  3: "defines",
-  4: "groups",
-  5: "pages"
+  3: "typedefs",
+  4: "enums",
+  5: "enumvalues",
+  6: "defines",
+  7: "groups",
+  8: "pages"
 };
 
 var indexSectionLabels =
@@ -23,8 +29,11 @@ var indexSectionLabels =
   0: "All",
   1: "Files",
   2: "Functions",
-  3: "Macros",
-  4: "Modules",
-  5: "Pages"
+  3: "Typedefs",
+  4: "Enumerations",
+  5: "Enumerator",
+  6: "Macros",
+  7: "Modules",
+  8: "Pages"
 };
 

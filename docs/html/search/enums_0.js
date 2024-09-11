@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['timer_5fid_0',['timer_id',['../timer_8h.html#a9aa38602a48854ccff0dbc3f9dd8be00',1,'timer.h']]]
+  ['masterclockoutputpin_0',['MasterClockOutputPin',['../frequency_8h.html#a4de903b9320a994227a4f380782228df',1,'frequency.h']]]
 ];

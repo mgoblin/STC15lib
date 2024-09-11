@@ -80,4 +80,30 @@ inline void enable_master_clock_output_div2();
  */
 inline void enable_master_clock_output_div4();
 
+/**
+ * Disable master clock output
+ * 
+ * @ingroup freq
+ */
+inline void disable_master_clock_output();
+
+/**
+ * Master clock output enumeration
+ */
+typedef enum MasterClockOutputPin
+{
+    NONE, /// output disabled
+    P5_4, /// output to pin 5.4
+    P1_6  /// output to pin 1.6
+} master_clock_output_pin;
+
+/**
+ * Get master clock output
+ * 
+ * @return info about current master clock output
+ * 
+ * @ingroup freq
+ */
+inline master_clock_output_pin get_master_clock_output_pin();
+
 #endif 
