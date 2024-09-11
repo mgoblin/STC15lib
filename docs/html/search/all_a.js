@@ -1,9 +1,14 @@
 var searchData=
 [
-  ['uart_20serial_20interface_0',['UART serial interface',['../group__uart.html',1,'']]],
-  ['uart_2eh_1',['uart.h',['../uart_8h.html',1,'']]],
-  ['uart_5finit_2',['uart_init',['../group__uart.html#gaaf8803da40d227f3da866bfe760011f0',1,'uart_init(uint32_t uart_baudrate):&#160;uart.c'],['../group__uart.html#gaaf8803da40d227f3da866bfe760011f0',1,'uart_init(uint32_t uart_baudrate):&#160;uart.c']]],
-  ['uart_5freceive_5fbyte_3',['uart_receive_byte',['../group__uart.html#gaa51e1ff0032e597db706ea1cdbb41bf4',1,'uart_receive_byte():&#160;uart.c'],['../group__uart.html#gaa51e1ff0032e597db706ea1cdbb41bf4',1,'uart_receive_byte():&#160;uart.c']]],
-  ['uart_5fsend_5fbyte_4',['uart_send_byte',['../group__uart.html#ga8c06afe2f1e393776650ebe7f0b336f2',1,'uart_send_byte(uint8_t data):&#160;uart.c'],['../group__uart.html#ga8c06afe2f1e393776650ebe7f0b336f2',1,'uart_send_byte(uint8_t data):&#160;uart.c']]],
-  ['update_5fand_5fget_5ffrequency_5fdivider_5',['update_and_get_frequency_divider',['../group__freq.html#ga430f8c4ccae1431b64ff0f2af0480a98',1,'update_and_get_frequency_divider(uint8_t divider_scale):&#160;frequency.c'],['../group__freq.html#ga430f8c4ccae1431b64ff0f2af0480a98',1,'update_and_get_frequency_divider(uint8_t divider_scale):&#160;frequency.c']]]
+  ['timer_0',['Timer',['../group__timer.html',1,'']]],
+  ['timer_2eh_1',['timer.h',['../timer_8h.html',1,'']]],
+  ['timer0_5fmode0_5f12t_5finit_2',['timer0_mode0_12T_init',['../group__timer.html#gafc1922d4d4dacedb83fe63a73984bcc6',1,'timer0_mode0_12T_init():&#160;timer0_mode0.c'],['../group__timer.html#gafc1922d4d4dacedb83fe63a73984bcc6',1,'timer0_mode0_12T_init():&#160;timer0_mode0.c']]],
+  ['timer0_5fmode0_5f1t_5finit_3',['timer0_mode0_1T_init',['../group__timer.html#ga88c5a7d6624d367693e1373e7640345c',1,'timer0_mode0_1T_init():&#160;timer0_mode0.c'],['../group__timer.html#ga88c5a7d6624d367693e1373e7640345c',1,'timer0_mode0_1T_init():&#160;timer0_mode0.c']]],
+  ['timer0_5fmode0_5frun_5fonce_5fand_5fwait_4',['timer0_mode0_run_once_and_wait',['../group__timer.html#ga376560fc8232925561d041328af2e198',1,'timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value):&#160;timer0_mode0.c'],['../group__timer.html#ga376560fc8232925561d041328af2e198',1,'timer0_mode0_run_once_and_wait(uint8_t tl_value, uint8_t th_value):&#160;timer0_mode0.c']]],
+  ['timer0_5fmode0_5fstart_5',['timer0_mode0_start',['../group__timer.html#ga66eaee5c6001af11ff2a5a2366e4653a',1,'timer0_mode0_start(uint8_t th_value, uint8_t tl_value):&#160;timer0_mode0.c'],['../group__timer.html#ga66eaee5c6001af11ff2a5a2366e4653a',1,'timer0_mode0_start(uint8_t th_value, uint8_t tl_value):&#160;timer0_mode0.c']]],
+  ['timer0_5fmode0_5fstop_6',['timer0_mode0_stop',['../group__timer.html#gaacaa3d2da5da2456041d39da0cb2d3c0',1,'timer0_mode0_stop():&#160;timer0_mode0.c'],['../group__timer.html#gaacaa3d2da5da2456041d39da0cb2d3c0',1,'timer0_mode0_stop():&#160;timer0_mode0.c']]],
+  ['timer2_5fmode0_5f12t_5finit_7',['timer2_mode0_12T_init',['../group__timer.html#gabe56c22feca0e373507d08c4fe9aa3d4',1,'timer2_mode0_12T_init():&#160;timer2_mode0.c'],['../group__timer.html#gabe56c22feca0e373507d08c4fe9aa3d4',1,'timer2_mode0_12T_init():&#160;timer2_mode0.c']]],
+  ['timer2_5fmode0_5f1t_5finit_8',['timer2_mode0_1T_init',['../group__timer.html#ga828c06ed1eddfd6e11f9a6aa848a0cf2',1,'timer2_mode0_1T_init():&#160;timer2_mode0.c'],['../group__timer.html#ga828c06ed1eddfd6e11f9a6aa848a0cf2',1,'timer2_mode0_1T_init():&#160;timer2_mode0.c']]],
+  ['timer2_5fmode0_5fstart_9',['timer2_mode0_start',['../group__timer.html#ga86e7135b9a2f52f8f1730888cc311ee9',1,'timer2_mode0_start(uint8_t th_value, uint8_t tl_value):&#160;timer2_mode0.c'],['../group__timer.html#ga86e7135b9a2f52f8f1730888cc311ee9',1,'timer2_mode0_start(uint8_t th_value, uint8_t tl_value):&#160;timer2_mode0.c']]],
+  ['timer2_5fmode0_5fstop_10',['timer2_mode0_stop',['../group__timer.html#ga9244653a9105cb70db08d02584dcde35',1,'timer2_mode0_stop():&#160;timer2_mode0.c'],['../group__timer.html#ga9244653a9105cb70db08d02584dcde35',1,'timer2_mode0_stop():&#160;timer2_mode0.c']]]
 ];

@@ -29,10 +29,17 @@ void main()
     uart_init(9600);
     
     enable_master_clock_output_div4();
+    set_master_clock_output_pin(P5_4);
     print_master_clock_output();
     delay_ms(100);
 
     disable_master_clock_output();
     print_master_clock_output();
     delay_ms(100);
+
+    enable_master_clock_output_div4();
+    set_master_clock_output_pin(P1_6);
+    print_master_clock_output();
+    delay_ms(100);
+
 }

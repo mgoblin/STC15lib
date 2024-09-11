@@ -1,5 +1,4 @@
 #include <sys.h>
-#include <bits.h>
 #include <frequency.h>
 
 inline const unsigned long get_master_clock_frequency()
@@ -25,20 +24,19 @@ inline uint8_t update_and_get_frequency_divider(uint8_t divider_scale)
 {
     if (divider_scale < 8)
     {
-        uint8_t divider_mask = 0xf8;
-        CLK_DIV &= (divider_mask | divider_scale);
+        CLK_DIV &= (0xf8 | divider_scale);
     }
     return get_frequency_divider();
 }
 
 inline void enable_master_clock_output_div1()
 {
-    bit_set(CLK_DIV, 6);
+    CLK_DIV |= 0x40; //set bit 6 of CLK_DIV
 }
 
 inline void enable_master_clock_output_div2()
 {
-    bit_set(CLK_DIV, 7);
+    CLK_DIV |= 0x80; //set bit 7 of CLK_DIV
 }
 
 inline void enable_master_clock_output_div4()
@@ -58,5 +56,21 @@ inline master_clock_output_pin get_master_clock_output_pin()
         return NONE;
     }
     
-    return (CLK_DIV & 0x04) == 0 ? P5_4 : P1_6;
+    return (CLK_DIV & 0x08) == 0 ? P5_4 : P1_6;
+}
+
+inline void set_master_clock_output_pin(master_clock_output_pin pin)
+{
+    if (pin == NONE)
+    {
+        disable_master_clock_output();
+    } 
+    else if (pin == P5_4) 
+    {
+        CLK_DIV &= 0xf7; // clear bit 3 of CLK_DIV
+    }
+    else if (pin == P1_6) 
+    {
+        CLK_DIV |= 0x08; // set bit 3 of CLK_DIV
+    }
 }

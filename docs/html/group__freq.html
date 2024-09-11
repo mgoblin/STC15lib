@@ -91,6 +91,8 @@ Functions</h2></td></tr>
 <tr class="separator:gabcb57c85f9e19bca183abd36774eca37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac8ded783055685f76fbedb2c75c9a3bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="frequency_8h.html#ae4de59124a4f4ccd36353601d60b8e28">master_clock_output_pin</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#gac8ded783055685f76fbedb2c75c9a3bc">get_master_clock_output_pin</a> ()</td></tr>
 <tr class="separator:gac8ded783055685f76fbedb2c75c9a3bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65b3ff5d3b69d0382fcacab2e977277c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#ga65b3ff5d3b69d0382fcacab2e977277c">set_master_clock_output_pin</a> (<a class="el" href="frequency_8h.html#ae4de59124a4f4ccd36353601d60b8e28">master_clock_output_pin</a> pin)</td></tr>
+<tr class="separator:ga65b3ff5d3b69d0382fcacab2e977277c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for get chip CPU frequency. Chip CPU frequency defined in <a class="el" href="sys_8h.html">sys.h</a> as a MAIN_Fosc constant. </p><dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
@@ -143,7 +145,11 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Enable master clock output to P5.4 pin </p>
+<p >Enable master clock output. By default output set to P5.4 pin.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__freq.html#gabcb57c85f9e19bca183abd36774eca37">disable_master_clock_output()</a> </dd>
+<dd>
+<a class="el" href="group__freq.html#ga65b3ff5d3b69d0382fcacab2e977277c">set_master_clock_output_pin(master_clock_output_pin pin)</a> <br  />
+ </dd></dl>
 
 </div>
 </div>
@@ -169,7 +175,11 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Enable (master clock output)/2 to P5.4 pin </p>
+<p >Enable (master clock output)/2. By default output set to P5.4 pin.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__freq.html#gabcb57c85f9e19bca183abd36774eca37">disable_master_clock_output()</a> </dd>
+<dd>
+<a class="el" href="group__freq.html#ga65b3ff5d3b69d0382fcacab2e977277c">set_master_clock_output_pin(master_clock_output_pin pin)</a> <br  />
+ </dd></dl>
 
 </div>
 </div>
@@ -195,7 +205,11 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Enable (master clock output)/4 to P5.4 pin </p>
+<p >Enable (master clock output)/4. By default output set to P5.4 pin.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__freq.html#gabcb57c85f9e19bca183abd36774eca37">disable_master_clock_output()</a> </dd>
+<dd>
+<a class="el" href="group__freq.html#ga65b3ff5d3b69d0382fcacab2e977277c">set_master_clock_output_pin(master_clock_output_pin pin)</a> <br  />
+ </dd></dl>
 
 </div>
 </div>
@@ -222,7 +236,8 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p >Get master clock frequency divider (CLK_DIV bits [0..2])</p>
-<dl class="section return"><dt>Returns</dt><dd>master clock frequency divider. Divider values range is from 1 to 128. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>master clock frequency divider. Divider values range is from 1 to 128.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__freq.html#ga430f8c4ccae1431b64ff0f2af0480a98" title="Update and get master clock frequency divider (CLK_DIV bits [0..2])">update_and_get_frequency_divider(uint8_t divider_scale)</a> </dd></dl>
 
 </div>
 </div>
@@ -334,6 +349,39 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga65b3ff5d3b69d0382fcacab2e977277c" name="ga65b3ff5d3b69d0382fcacab2e977277c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga65b3ff5d3b69d0382fcacab2e977277c">&#9670;&nbsp;</a></span>set_master_clock_output_pin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_master_clock_output_pin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="frequency_8h.html#ae4de59124a4f4ccd36353601d60b8e28">master_clock_output_pin</a>&#160;</td>
+          <td class="paramname"><em>pin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Set master clock output pin</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin</td><td>pin to set output </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ga430f8c4ccae1431b64ff0f2af0480a98" name="ga430f8c4ccae1431b64ff0f2af0480a98"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga430f8c4ccae1431b64ff0f2af0480a98">&#9670;&nbsp;</a></span>update_and_get_frequency_divider()</h2>
 
@@ -366,7 +414,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>master clock frequency divider value </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>master clock frequency divider value</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__freq.html#gad5ec46c6d75722d1b8ae9731f0f03ccb">get_frequency_divider()</a> </dd></dl>
 
 </div>
 </div>
