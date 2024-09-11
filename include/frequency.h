@@ -53,10 +53,17 @@ inline uint8_t get_frequency_divider();
  * 
  * @param divider_scale scale from 0 to 7 corresponds dividers 1, 2, 4, ...128
  * 
- * @return master clock frequency divider value/
+ * @return master clock frequency divider value
  * 
  * @ingroup freq
  */
 inline uint8_t update_and_get_frequency_divider(uint8_t divider_scale);
+
+/**
+ * Enable master clock output to P5.4 pin
+ * 
+ * @ingroup freq
+ */
+inline void enable_master_clock_output_div1();
 
 #endif 

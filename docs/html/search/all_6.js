@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['putchar_0',['putchar',['../group__uart.html#ga07036e93939040c563e862a6a31b65bc',1,'putchar(int ch):&#160;uart.c'],['../group__uart.html#ga07036e93939040c563e862a6a31b65bc',1,'putchar(int ch):&#160;uart.c']]]
+  ['main_5ffosc_0',['MAIN_Fosc',['../sys_8h.html#aa52cf4efd75d43c7917d9eec3becd2fa',1,'sys.h']]],
+  ['main_5ffosch_1',['MAIN_FoscH',['../sys_8h.html#ae1b9b7f30c88b5491fd35d286418f6d6',1,'sys.h']]],
+  ['main_5ffoscl_2',['MAIN_FoscL',['../sys_8h.html#ab42e14bee431f5da3ecef889588cc728',1,'sys.h']]]
 ];

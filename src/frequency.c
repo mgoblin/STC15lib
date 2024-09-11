@@ -29,3 +29,8 @@ inline uint8_t update_and_get_frequency_divider(uint8_t divider_scale)
     }
     return get_frequency_divider();
 }
+
+inline void enable_master_clock_output_div1()
+{
+    bit_set(CLK_DIV, 6);
+}

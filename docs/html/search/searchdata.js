@@ -1,8 +1,8 @@
 var indexSectionsWithContent =
 {
-  0: "cdfgimpstu",
+  0: "cdefgimpstu",
   1: "cdfstu",
-  2: "dgptu",
+  2: "degptu",
   3: "im",
   4: "cdftu",
   5: "s"
