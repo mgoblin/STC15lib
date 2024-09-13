@@ -36,6 +36,23 @@
 
 #include <stdint.h>
 
+/**
+ * Get timer0 mode
+ * 
+ * @return timer0 mode in range from 0 to 3
+ * 
+ * @ingroup timer
+ */
+uint8_t get_timer0_mode();
+
+typedef enum Timer0ClockDivider
+{
+    T1,
+    T12 
+} timer0_clock_divider;
+
+timer0_clock_divider get_timer0_clock_divider();
+
 //============================== Timer0 mode0 declarations begin ==========================
 /**
  * Initialize mode0 12T for timer0. Set TMOD bits.
