@@ -14,7 +14,7 @@ void timer0_mode0_1T_init()
     EA = 1; // set global interrupts enabled flag
     //TODO dont set T1 bits
     TMOD &= 0xf0; // clear all T0 flags
-    bit_set(AUXR, 7); // 11T input clock mode
+    bit_set(AUXR, 7); // 1T input clock mode
 }
 
 void timer0_mode0_run_once_and_wait(uint8_t tl_value, uint8_t th_value)

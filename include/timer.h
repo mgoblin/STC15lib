@@ -7,7 +7,7 @@
  * @details Functions and data structures for timers.
  * 
  * This module supports general purpose timer Timer0 and Timer2.
- * Eqch timer can work as COUNTER or TIMER. 
+ * Each timer can work as COUNTER or TIMER. 
  * 
  * Counter increments on external singnal (like pin 1/0 change state). 
  * 
@@ -47,8 +47,8 @@ uint8_t get_timer0_mode();
 
 typedef enum Timer0ClockDivider
 {
-    T1,
-    T12 
+    T1 = 1,
+    T12 = 12
 } timer0_clock_divider;
 
 timer0_clock_divider get_timer0_clock_divider();

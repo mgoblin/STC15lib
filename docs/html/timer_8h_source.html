@@ -78,8 +78,8 @@ $(function() {
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">typedef</span> <span class="keyword">enum</span> Timer0ClockDivider</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>{</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    T1,</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    T12 </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    T1 = 1,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    T12 = 12</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>} timer0_clock_divider;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>timer0_clock_divider get_timer0_clock_divider();</div>
@@ -122,7 +122,7 @@ $(function() {
 <div class="ttc" id="agroup__timer_html_ga88c5a7d6624d367693e1373e7640345c"><div class="ttname"><a href="group__timer.html#ga88c5a7d6624d367693e1373e7640345c">timer0_mode0_1T_init</a></div><div class="ttdeci">void timer0_mode0_1T_init()</div><div class="ttdef"><b>Definition:</b> timer0_mode0.c:12</div></div>
 <div class="ttc" id="agroup__timer_html_ga9244653a9105cb70db08d02584dcde35"><div class="ttname"><a href="group__timer.html#ga9244653a9105cb70db08d02584dcde35">timer2_mode0_stop</a></div><div class="ttdeci">void timer2_mode0_stop()</div><div class="ttdoc">Stop timer2 mode0 with interrupt support.</div><div class="ttdef"><b>Definition:</b> timer2_mode0.c:37</div></div>
 <div class="ttc" id="agroup__timer_html_gaacaa3d2da5da2456041d39da0cb2d3c0"><div class="ttname"><a href="group__timer.html#gaacaa3d2da5da2456041d39da0cb2d3c0">timer0_mode0_stop</a></div><div class="ttdeci">void timer0_mode0_stop()</div><div class="ttdoc">Stop timer0 mode0 with interrupt support.</div><div class="ttdef"><b>Definition:</b> timer0_mode0.c:53</div></div>
-<div class="ttc" id="agroup__timer_html_gab49ff79da082a2790379f648f3477a22"><div class="ttname"><a href="group__timer.html#gab49ff79da082a2790379f648f3477a22">get_timer0_mode</a></div><div class="ttdeci">uint8_t get_timer0_mode()</div><div class="ttdef"><b>Definition:</b> timer0_common.c:4</div></div>
+<div class="ttc" id="agroup__timer_html_gab49ff79da082a2790379f648f3477a22"><div class="ttname"><a href="group__timer.html#gab49ff79da082a2790379f648f3477a22">get_timer0_mode</a></div><div class="ttdeci">uint8_t get_timer0_mode()</div><div class="ttdef"><b>Definition:</b> timer0_common.c:5</div></div>
 <div class="ttc" id="agroup__timer_html_gabe56c22feca0e373507d08c4fe9aa3d4"><div class="ttname"><a href="group__timer.html#gabe56c22feca0e373507d08c4fe9aa3d4">timer2_mode0_12T_init</a></div><div class="ttdeci">void timer2_mode0_12T_init()</div><div class="ttdoc">Initialize mode0 12T for timer2. Set AUXR bits.</div><div class="ttdef"><b>Definition:</b> timer2_mode0.c:5</div></div>
 <div class="ttc" id="agroup__timer_html_gafc1922d4d4dacedb83fe63a73984bcc6"><div class="ttname"><a href="group__timer.html#gafc1922d4d4dacedb83fe63a73984bcc6">timer0_mode0_12T_init</a></div><div class="ttdeci">void timer0_mode0_12T_init()</div><div class="ttdef"><b>Definition:</b> timer0_mode0.c:5</div></div>
 </div><!-- fragment --></div><!-- contents -->

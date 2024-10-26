@@ -1,5 +1,6 @@
 #include <sys.h>
 #include <timer.h>
+#include <bits.h>
 
 uint8_t get_timer0_mode()
 {
@@ -8,5 +9,5 @@ uint8_t get_timer0_mode()
 
 timer0_clock_divider get_timer0_clock_divider()
 {
-    return T12;
+    return get_bit(AUXR, 7) == 0 ? T12 : T1;
 }
