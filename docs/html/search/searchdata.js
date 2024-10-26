@@ -3,9 +3,9 @@ var indexSectionsWithContent =
   0: "cdefgimnpstu",
   1: "cdfstu",
   2: "degpstu",
-  3: "m",
-  4: "m",
-  5: "np",
+  3: "mt",
+  4: "mt",
+  5: "npt",
   6: "im",
   7: "cdftu",
   8: "s"

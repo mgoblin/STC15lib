@@ -76,55 +76,60 @@ $(function() {
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>uint8_t <a class="code hl_function" href="group__timer.html#gab49ff79da082a2790379f648f3477a22">get_timer0_mode</a>();</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">typedef</span> <span class="keyword">enum</span> Timer0ClockDivider</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>{</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    T1 = 1,</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    T12 = 12</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>} timer0_clock_divider;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>timer0_clock_divider get_timer0_clock_divider();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">//============================== Timer0 mode0 declarations begin ==========================</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment"></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#gafc1922d4d4dacedb83fe63a73984bcc6">timer0_mode0_12T_init</a>();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#ga88c5a7d6624d367693e1373e7640345c">timer0_mode0_1T_init</a>();</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#ga376560fc8232925561d041328af2e198">timer0_mode0_run_once_and_wait</a>(uint8_t th_value, uint8_t tl_value);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#ga66eaee5c6001af11ff2a5a2366e4653a">timer0_mode0_start</a>(uint8_t th_value, uint8_t tl_value);</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#gaacaa3d2da5da2456041d39da0cb2d3c0">timer0_mode0_stop</a>();</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">//============================== Timer0 mode0 declarations end ============================</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">//============================== Timer2 mode0 declarations begin ==========================</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment"></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#gabe56c22feca0e373507d08c4fe9aa3d4">timer2_mode0_12T_init</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="group__timer.html#ga232e419723481a659238d7a0363afabb">   53</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="group__timer.html#ga232e419723481a659238d7a0363afabb">Timer0ClockDivider</a></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="group__timer.html#gga232e419723481a659238d7a0363afabba623238751deb7764bdebf4799fe30f07">   56</a></span>    <a class="code hl_enumvalue" href="group__timer.html#gga232e419723481a659238d7a0363afabba623238751deb7764bdebf4799fe30f07">T1</a> = 1, </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_enumvalue" href="group__timer.html#gga232e419723481a659238d7a0363afabba5c3a2baea537d57bba309aa892a7926c">T12</a> = 12</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="group__timer.html#gga232e419723481a659238d7a0363afabba5c3a2baea537d57bba309aa892a7926c">   59</a></span>} <a class="code hl_typedef" href="group__timer.html#gac5232c2479063cb4c9bbbf1c2fe9b098">timer0_clock_divider</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><a class="code hl_typedef" href="group__timer.html#gac5232c2479063cb4c9bbbf1c2fe9b098">timer0_clock_divider</a> <a class="code hl_function" href="group__timer.html#ga95cbac9837a2c6990b606552b1099447">get_timer0_clock_divider</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">//============================== Timer0 mode0 declarations begin ==========================</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment"></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#gafc1922d4d4dacedb83fe63a73984bcc6">timer0_mode0_12T_init</a>();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#ga88c5a7d6624d367693e1373e7640345c">timer0_mode0_1T_init</a>();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#ga376560fc8232925561d041328af2e198">timer0_mode0_run_once_and_wait</a>(uint8_t th_value, uint8_t tl_value);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#ga66eaee5c6001af11ff2a5a2366e4653a">timer0_mode0_start</a>(uint8_t th_value, uint8_t tl_value);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#gaacaa3d2da5da2456041d39da0cb2d3c0">timer0_mode0_stop</a>();</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#ga828c06ed1eddfd6e11f9a6aa848a0cf2">timer2_mode0_1T_init</a>();</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#ga86e7135b9a2f52f8f1730888cc311ee9">timer2_mode0_start</a>(uint8_t th_value, uint8_t tl_value);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">//============================== Timer0 mode0 declarations end ============================</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="comment">//============================== Timer2 mode0 declarations begin ==========================</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment"></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#gabe56c22feca0e373507d08c4fe9aa3d4">timer2_mode0_12T_init</a>();</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#ga828c06ed1eddfd6e11f9a6aa848a0cf2">timer2_mode0_1T_init</a>();</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#ga9244653a9105cb70db08d02584dcde35">timer2_mode0_stop</a>();</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="comment">//============================== Timer2 mode0 declarations end ============================</span></div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="comment">//============================== Timer0 mode0 declarations begin ==========================</span></div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="keywordtype">void</span> timer0_mode1_12T_init();</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#ga86e7135b9a2f52f8f1730888cc311ee9">timer2_mode0_start</a>(uint8_t th_value, uint8_t tl_value);</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="comment">//============================== Timer0 mode0 declarations end ============================</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#ga9244653a9105cb70db08d02584dcde35">timer2_mode0_stop</a>();</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="comment">//============================== Timer2 mode0 declarations end ============================</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="comment">//============================== Timer0 mode0 declarations begin ==========================</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="keywordtype">void</span> timer0_mode1_12T_init();</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="comment">//============================== Timer0 mode0 declarations end ============================</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__timer_html_ga232e419723481a659238d7a0363afabb"><div class="ttname"><a href="group__timer.html#ga232e419723481a659238d7a0363afabb">Timer0ClockDivider</a></div><div class="ttdeci">Timer0ClockDivider</div><div class="ttdef"><b>Definition:</b> timer.h:54</div></div>
 <div class="ttc" id="agroup__timer_html_ga376560fc8232925561d041328af2e198"><div class="ttname"><a href="group__timer.html#ga376560fc8232925561d041328af2e198">timer0_mode0_run_once_and_wait</a></div><div class="ttdeci">void timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value)</div><div class="ttdoc">Run timer0 mode0 and wait timer not finished.</div><div class="ttdef"><b>Definition:</b> timer0_mode0.c:20</div></div>
 <div class="ttc" id="agroup__timer_html_ga66eaee5c6001af11ff2a5a2366e4653a"><div class="ttname"><a href="group__timer.html#ga66eaee5c6001af11ff2a5a2366e4653a">timer0_mode0_start</a></div><div class="ttdeci">void timer0_mode0_start(uint8_t th_value, uint8_t tl_value)</div><div class="ttdoc">Run timer0 mode0 with interrupt support.</div><div class="ttdef"><b>Definition:</b> timer0_mode0.c:38</div></div>
 <div class="ttc" id="agroup__timer_html_ga828c06ed1eddfd6e11f9a6aa848a0cf2"><div class="ttname"><a href="group__timer.html#ga828c06ed1eddfd6e11f9a6aa848a0cf2">timer2_mode0_1T_init</a></div><div class="ttdeci">void timer2_mode0_1T_init()</div><div class="ttdoc">Initialize mode0 1T for timer2. Set AUXR bits.</div><div class="ttdef"><b>Definition:</b> timer2_mode0.c:16</div></div>
 <div class="ttc" id="agroup__timer_html_ga86e7135b9a2f52f8f1730888cc311ee9"><div class="ttname"><a href="group__timer.html#ga86e7135b9a2f52f8f1730888cc311ee9">timer2_mode0_start</a></div><div class="ttdeci">void timer2_mode0_start(uint8_t th_value, uint8_t tl_value)</div><div class="ttdoc">Run timer2 mode0 with interrupt support.</div><div class="ttdef"><b>Definition:</b> timer2_mode0.c:27</div></div>
 <div class="ttc" id="agroup__timer_html_ga88c5a7d6624d367693e1373e7640345c"><div class="ttname"><a href="group__timer.html#ga88c5a7d6624d367693e1373e7640345c">timer0_mode0_1T_init</a></div><div class="ttdeci">void timer0_mode0_1T_init()</div><div class="ttdef"><b>Definition:</b> timer0_mode0.c:12</div></div>
 <div class="ttc" id="agroup__timer_html_ga9244653a9105cb70db08d02584dcde35"><div class="ttname"><a href="group__timer.html#ga9244653a9105cb70db08d02584dcde35">timer2_mode0_stop</a></div><div class="ttdeci">void timer2_mode0_stop()</div><div class="ttdoc">Stop timer2 mode0 with interrupt support.</div><div class="ttdef"><b>Definition:</b> timer2_mode0.c:37</div></div>
+<div class="ttc" id="agroup__timer_html_ga95cbac9837a2c6990b606552b1099447"><div class="ttname"><a href="group__timer.html#ga95cbac9837a2c6990b606552b1099447">get_timer0_clock_divider</a></div><div class="ttdeci">timer0_clock_divider get_timer0_clock_divider()</div><div class="ttdef"><b>Definition:</b> timer0_common.c:10</div></div>
 <div class="ttc" id="agroup__timer_html_gaacaa3d2da5da2456041d39da0cb2d3c0"><div class="ttname"><a href="group__timer.html#gaacaa3d2da5da2456041d39da0cb2d3c0">timer0_mode0_stop</a></div><div class="ttdeci">void timer0_mode0_stop()</div><div class="ttdoc">Stop timer0 mode0 with interrupt support.</div><div class="ttdef"><b>Definition:</b> timer0_mode0.c:53</div></div>
 <div class="ttc" id="agroup__timer_html_gab49ff79da082a2790379f648f3477a22"><div class="ttname"><a href="group__timer.html#gab49ff79da082a2790379f648f3477a22">get_timer0_mode</a></div><div class="ttdeci">uint8_t get_timer0_mode()</div><div class="ttdef"><b>Definition:</b> timer0_common.c:5</div></div>
 <div class="ttc" id="agroup__timer_html_gabe56c22feca0e373507d08c4fe9aa3d4"><div class="ttname"><a href="group__timer.html#gabe56c22feca0e373507d08c4fe9aa3d4">timer2_mode0_12T_init</a></div><div class="ttdeci">void timer2_mode0_12T_init()</div><div class="ttdoc">Initialize mode0 12T for timer2. Set AUXR bits.</div><div class="ttdef"><b>Definition:</b> timer2_mode0.c:5</div></div>
+<div class="ttc" id="agroup__timer_html_gac5232c2479063cb4c9bbbf1c2fe9b098"><div class="ttname"><a href="group__timer.html#gac5232c2479063cb4c9bbbf1c2fe9b098">timer0_clock_divider</a></div><div class="ttdeci">enum Timer0ClockDivider timer0_clock_divider</div></div>
 <div class="ttc" id="agroup__timer_html_gafc1922d4d4dacedb83fe63a73984bcc6"><div class="ttname"><a href="group__timer.html#gafc1922d4d4dacedb83fe63a73984bcc6">timer0_mode0_12T_init</a></div><div class="ttdeci">void timer0_mode0_12T_init()</div><div class="ttdef"><b>Definition:</b> timer0_mode0.c:5</div></div>
+<div class="ttc" id="agroup__timer_html_gga232e419723481a659238d7a0363afabba5c3a2baea537d57bba309aa892a7926c"><div class="ttname"><a href="group__timer.html#gga232e419723481a659238d7a0363afabba5c3a2baea537d57bba309aa892a7926c">T12</a></div><div class="ttdeci">@ T12</div><div class="ttdoc">Sysclk/12.</div><div class="ttdef"><b>Definition:</b> timer.h:58</div></div>
+<div class="ttc" id="agroup__timer_html_gga232e419723481a659238d7a0363afabba623238751deb7764bdebf4799fe30f07"><div class="ttname"><a href="group__timer.html#gga232e419723481a659238d7a0363afabba623238751deb7764bdebf4799fe30f07">T1</a></div><div class="ttdeci">@ T1</div><div class="ttdoc">Sysclk/1.</div><div class="ttdef"><b>Definition:</b> timer.h:56</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

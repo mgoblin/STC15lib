@@ -45,12 +45,26 @@
  */
 uint8_t get_timer0_mode();
 
+/**
+ * Timer clock divider
+ * 
+ * @ingroup timer
+ */
 typedef enum Timer0ClockDivider
 {
-    T1 = 1,
+    /// Sysclk/1
+    T1 = 1, 
+    /// Sysclk/12
     T12 = 12
 } timer0_clock_divider;
 
+/**
+ * Get timer0 clock divider
+ * 
+ * @return timer0 clock divider
+ * 
+ * @ingroup timer
+ */
 timer0_clock_divider get_timer0_clock_divider();
 
 //============================== Timer0 mode0 declarations begin ==========================
