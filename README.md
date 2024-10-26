@@ -21,3 +21,6 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 * timer0 mode0/12T and mode0/1T implementation with sync and interrupt (async) support. No GATE and INT0 support for timer0 running, only TR0 used for start and stop timer . No P3.5 output.  
 * timer2 mode0/12T and mode0/1T implementation with interrupt (async) support. No P3.0 output.
 
+0.4.0
+* Enable and disable timer0 mode0 output to P3.5 pin supported now
+

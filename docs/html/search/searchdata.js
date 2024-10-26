@@ -2,7 +2,7 @@ var indexSectionsWithContent =
 {
   0: "cdefgimnpstu",
   1: "cdfstu",
-  2: "degpstu",
+  2: "degipstu",
   3: "mt",
   4: "mt",
   5: "npt",

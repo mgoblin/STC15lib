@@ -87,6 +87,14 @@ timer_clock_divider get_timer0_clock_divider();
  */
 timer_clock_divider get_timer2_clock_divider();
 
+/**
+ * Get output to pin P3.5 output flag enabled value
+ * 
+ * @return true if output enabled oterwise false
+ * 
+ * @ingroup timer
+ */
+bool is_timer0_P35_output_enabled();
 
 //============================== Timer0 mode0 declarations begin ==========================
 /**
