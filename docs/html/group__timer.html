@@ -105,6 +105,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gaacaa3d2da5da2456041d39da0cb2d3c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gaacaa3d2da5da2456041d39da0cb2d3c0">timer0_mode0_stop</a> ()</td></tr>
 <tr class="memdesc:gaacaa3d2da5da2456041d39da0cb2d3c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop timer0 mode0 with interrupt support.  <a href="group__timer.html#gaacaa3d2da5da2456041d39da0cb2d3c0">More...</a><br /></td></tr>
 <tr class="separator:gaacaa3d2da5da2456041d39da0cb2d3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga46cf16f89446f74dc7f3938388ccef68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">timer0_mode0_enableP35_output</a> (bool enable)</td></tr>
+<tr class="memdesc:ga46cf16f89446f74dc7f3938388ccef68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable output of meandr with timer times on P3.5 pin.  <a href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">More...</a><br /></td></tr>
+<tr class="separator:ga46cf16f89446f74dc7f3938388ccef68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabe56c22feca0e373507d08c4fe9aa3d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gabe56c22feca0e373507d08c4fe9aa3d4">timer2_mode0_12T_init</a> ()</td></tr>
 <tr class="memdesc:gabe56c22feca0e373507d08c4fe9aa3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize mode0 12T for timer2. Set AUXR bits.  <a href="group__timer.html#gabe56c22feca0e373507d08c4fe9aa3d4">More...</a><br /></td></tr>
 <tr class="separator:gabe56c22feca0e373507d08c4fe9aa3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -284,6 +287,33 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >Initialize mode0 1T for timer0. Set TMOD bits. </p>
+
+</div>
+</div>
+<a id="ga46cf16f89446f74dc7f3938388ccef68" name="ga46cf16f89446f74dc7f3938388ccef68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga46cf16f89446f74dc7f3938388ccef68">&#9670;&nbsp;</a></span>timer0_mode0_enableP35_output()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void timer0_mode0_enableP35_output </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable output of meandr with timer times on P3.5 pin. </p>
+<p >By default output is disabled</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>if true output is enabled otherwise output is disabled </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

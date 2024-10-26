@@ -1,6 +1,8 @@
 #ifndef STC15_TIMERH
 #define STC15_TIMERH
 
+#include <stdbool.h>
+
 /**
  * @file timer.h
  * @defgroup timer Timer
@@ -141,6 +143,16 @@ void timer0_mode0_start(uint8_t th_value, uint8_t tl_value);
  * @ingroup timer
  */
 void timer0_mode0_stop();
+
+/**
+ * @brief Enable output of meandr with timer times on P3.5 pin.
+ * @details By default output is disabled
+ * 
+ * @param enable if true output is enabled otherwise output is disabled 
+ * 
+ * @ingroup timer
+ */
+void timer0_mode0_enableP35_output(bool enable);
 
 //============================== Timer0 mode0 declarations end ============================
 
