@@ -31,8 +31,8 @@ void timer0_mode0_run_once_and_wait(uint8_t tl_value, uint8_t th_value)
     {
     }
 
-    TR0 = 0; // clear timer overload flag
-    TF1 = 0; // clear run timer flag
+    TR0 = 0; // clear run timer flag
+    TF0 = 0; // clear timer overload flag
 }
 
 void timer0_mode0_start(uint8_t th_value, uint8_t tl_value)
