@@ -16,6 +16,8 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 
 0.3.0
 * add master clock output to pin P5.4 or P1.6 with dividers 1, 2, 4
-* timer0 mode0 12T and 1T support implementation
-* timer2 as general purpose timer with mode0 12T and 1T support implementation
+* get mode functions for timer0 and timer2
+* get clock divider functions for timer0 and timer2
+* timer0 mode0/12T and mode0/1T implementation with sync and interrupt (async) support 
+* timer2 mode0/12T and mode0/1T implementation with interrupt (async) support 
 
