@@ -23,4 +23,5 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 
 0.4.0
 * Enable and disable timer0 mode0 output to P3.5 pin supported now
+* Enable and disable timer2 mode0 output to P3.0 pin supported now
 
