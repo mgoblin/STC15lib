@@ -8,5 +8,6 @@ var searchData=
   ['get_5fmaster_5fclock_5foutput_5fpin_5',['get_master_clock_output_pin',['../group__freq.html#gac8ded783055685f76fbedb2c75c9a3bc',1,'get_master_clock_output_pin():&#160;frequency.c'],['../group__freq.html#gac8ded783055685f76fbedb2c75c9a3bc',1,'get_master_clock_output_pin():&#160;frequency.c']]],
   ['get_5ftimer0_5fclock_5fdivider_6',['get_timer0_clock_divider',['../group__timer.html#ga95cbac9837a2c6990b606552b1099447',1,'get_timer0_clock_divider():&#160;timer0_common.c'],['../group__timer.html#ga95cbac9837a2c6990b606552b1099447',1,'get_timer0_clock_divider():&#160;timer0_common.c']]],
   ['get_5ftimer0_5fmode_7',['get_timer0_mode',['../group__timer.html#gab49ff79da082a2790379f648f3477a22',1,'get_timer0_mode():&#160;timer0_common.c'],['../group__timer.html#gab49ff79da082a2790379f648f3477a22',1,'get_timer0_mode():&#160;timer0_common.c']]],
-  ['getchar_8',['getchar',['../group__uart.html#ga3e29caa20f7cffe18f410f01278905a8',1,'getchar(void):&#160;uart.c'],['../group__uart.html#ga3e29caa20f7cffe18f410f01278905a8',1,'getchar(void):&#160;uart.c']]]
+  ['get_5ftimer2_5fmode_8',['get_timer2_mode',['../group__timer.html#ga36baa6e822a053b8f5b159eafff19075',1,'get_timer2_mode():&#160;timer2_common.c'],['../group__timer.html#ga36baa6e822a053b8f5b159eafff19075',1,'get_timer2_mode():&#160;timer2_common.c']]],
+  ['getchar_9',['getchar',['../group__uart.html#ga3e29caa20f7cffe18f410f01278905a8',1,'getchar(void):&#160;uart.c'],['../group__uart.html#ga3e29caa20f7cffe18f410f01278905a8',1,'getchar(void):&#160;uart.c']]]
 ];

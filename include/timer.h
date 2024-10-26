@@ -46,6 +46,15 @@
 uint8_t get_timer0_mode();
 
 /**
+ * Get timer2 mode
+ * 
+ * @return timer0 mode. Timer2 have only mode0.
+ * 
+ * @ingroup timer
+ */
+uint8_t get_timer2_mode();
+
+/**
  * Timer clock divider
  * 
  * @ingroup timer
