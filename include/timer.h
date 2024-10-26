@@ -96,6 +96,15 @@ timer_clock_divider get_timer2_clock_divider();
  */
 bool is_timer0_P35_output_enabled();
 
+/**
+ * Get output to pin P3.0 output flag enabled value
+ * 
+ * @return true if output enabled oterwise false
+ * 
+ * @ingroup timer
+ */
+bool is_timer2_P30_output_enabled();
+
 //============================== Timer0 mode0 declarations begin ==========================
 /**
  * Initialize mode0 12T for timer0. Set TMOD bits.
