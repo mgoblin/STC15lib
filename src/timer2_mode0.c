@@ -1,6 +1,8 @@
 #include <sys.h>
 #include <time.h>
 #include <stdint.h>
+#include <stdbool.h>
+#include <bits.h>
 
 void timer2_mode0_12T_init()
 {
@@ -38,4 +40,9 @@ void timer2_mode0_stop()
 {
     //bit_clr(AUXR, 4); // clear T2 run flag
     AUXR &= 0xef; //0b11101111;
+}
+
+void timer2_mode0_enableP30_output(bool enable)
+{
+    enable ? bit_set(INT_CLKO, 2) : bit_clr(INT_CLKO, 2);
 }

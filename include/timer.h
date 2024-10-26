@@ -208,6 +208,17 @@ void timer2_mode0_start(uint8_t th_value, uint8_t tl_value);
  */
 void timer2_mode0_stop();
 
+/**
+ * @brief Enable output of meandr with timer times on P3.0 pin.
+ * @details By default output is disabled
+ * 
+ * @param enable if true output is enabled otherwise output is disabled 
+ * 
+ * @ingroup timer
+ */
+
+void timer2_mode0_enableP30_output(bool enable);
+
 //============================== Timer2 mode0 declarations end ============================
 
 //============================== Timer0 mode0 declarations begin ==========================
