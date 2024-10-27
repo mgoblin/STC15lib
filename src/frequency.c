@@ -1,4 +1,3 @@
-#include <sys.h>
 #include <frequency.h>
 
 inline const unsigned long get_master_clock_frequency()
