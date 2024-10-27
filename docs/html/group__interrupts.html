@@ -62,11 +62,86 @@ $(function() {
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Interrupts</div></div>
 </div><!--header-->
 <div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gac56cdd8fe975b9f241c796e18210f2da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gac56cdd8fe975b9f241c796e18210f2da">enabled_all_interrupts</a> ()</td></tr>
+<tr class="memdesc:gac56cdd8fe975b9f241c796e18210f2da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable interrupts support of MCU.  <a href="group__interrupts.html#gac56cdd8fe975b9f241c796e18210f2da">More...</a><br /></td></tr>
+<tr class="separator:gac56cdd8fe975b9f241c796e18210f2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga322679645885409ca365d55f8db6ab74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga322679645885409ca365d55f8db6ab74">disable_all_interrupts</a> ()</td></tr>
+<tr class="memdesc:ga322679645885409ca365d55f8db6ab74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable interrupts support of MCU.  <a href="group__interrupts.html#ga322679645885409ca365d55f8db6ab74">More...</a><br /></td></tr>
+<tr class="separator:ga322679645885409ca365d55f8db6ab74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga20172f8dcfdcd86506a47c9bae347042"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga20172f8dcfdcd86506a47c9bae347042">is_interrupts_enabled</a> ()</td></tr>
+<tr class="separator:ga20172f8dcfdcd86506a47c9bae347042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for interrupts.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga322679645885409ca365d55f8db6ab74" name="ga322679645885409ca365d55f8db6ab74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga322679645885409ca365d55f8db6ab74">&#9670;&nbsp;</a></span>disable_all_interrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void disable_all_interrupts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable interrupts support of MCU. </p>
+<p >Set EA to 0 to disable interrupt support. By default interrupts support are disabled Each interrupt should be enabled implicitly by setting its own flag </p>
+
+</div>
+</div>
+<a id="gac56cdd8fe975b9f241c796e18210f2da" name="gac56cdd8fe975b9f241c796e18210f2da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac56cdd8fe975b9f241c796e18210f2da">&#9670;&nbsp;</a></span>enabled_all_interrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void enabled_all_interrupts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable interrupts support of MCU. </p>
+<p >Set EA to 1 to enable interrupt support. By default interrupts support are disabled Each interrupt should be enabled implicitly by setting its own flag </p>
+
+</div>
+</div>
+<a id="ga20172f8dcfdcd86506a47c9bae347042" name="ga20172f8dcfdcd86506a47c9bae347042"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga20172f8dcfdcd86506a47c9bae347042">&#9670;&nbsp;</a></span>is_interrupts_enabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_interrupts_enabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Get MCU interrupts support state</p>
+<dl class="section return"><dt>Returns</dt><dd>if enabled returns true otherwise returns false </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

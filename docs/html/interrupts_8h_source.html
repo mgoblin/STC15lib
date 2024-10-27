@@ -72,7 +72,18 @@ $(function() {
 <a href="interrupts_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef STC15_INTERRUPTSH</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define STC15_INTERRUPTSH</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include&lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__interrupts.html#gac56cdd8fe975b9f241c796e18210f2da">enabled_all_interrupts</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__interrupts.html#ga322679645885409ca365d55f8db6ab74">disable_all_interrupts</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">bool</span> <a class="code hl_function" href="group__interrupts.html#ga20172f8dcfdcd86506a47c9bae347042">is_interrupts_enabled</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__interrupts_html_ga20172f8dcfdcd86506a47c9bae347042"><div class="ttname"><a href="group__interrupts.html#ga20172f8dcfdcd86506a47c9bae347042">is_interrupts_enabled</a></div><div class="ttdeci">bool is_interrupts_enabled()</div><div class="ttdef"><b>Definition:</b> interrupts.c:14</div></div>
+<div class="ttc" id="agroup__interrupts_html_ga322679645885409ca365d55f8db6ab74"><div class="ttname"><a href="group__interrupts.html#ga322679645885409ca365d55f8db6ab74">disable_all_interrupts</a></div><div class="ttdeci">void disable_all_interrupts()</div><div class="ttdoc">Disable interrupts support of MCU.</div><div class="ttdef"><b>Definition:</b> interrupts.c:9</div></div>
+<div class="ttc" id="agroup__interrupts_html_gac56cdd8fe975b9f241c796e18210f2da"><div class="ttname"><a href="group__interrupts.html#gac56cdd8fe975b9f241c796e18210f2da">enabled_all_interrupts</a></div><div class="ttdeci">void enabled_all_interrupts()</div><div class="ttdoc">Enable interrupts support of MCU.</div><div class="ttdef"><b>Definition:</b> interrupts.c:4</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
