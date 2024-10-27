@@ -9,6 +9,7 @@
  */
 
 #include <stdint.h>
+#include <sys.h>
 
 /**
  * Size of chip id array  

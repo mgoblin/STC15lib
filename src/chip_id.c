@@ -1,8 +1,4 @@
-#include <sys.h>
-#include <bits.h>
 #include <chip_id.h>
-#include <uart.h>
-#include <stdio.h>
 
 #define ID_ADDR_RAM 0x1ff9
 

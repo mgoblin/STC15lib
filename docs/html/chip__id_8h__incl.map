@@ -1,4 +1,7 @@
 <map id="include/chip_id.h" name="include/chip_id.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,136,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="35,80,106,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="19,5,150,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,76,107"/>
+<area shape="rect" id="node3" href="$sys_8h.html" title=" " alt="" coords="101,80,157,107"/>
+<area shape="rect" id="node4" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="79,155,178,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="83,229,174,256"/>
 </map>
