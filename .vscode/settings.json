@@ -6,6 +6,7 @@
         "chip_id.h": "c",
         "stdio.h": "c",
         "uart.h": "c",
-        "bits.h": "c"
+        "bits.h": "c",
+        "time.h": "c"
     }
 }

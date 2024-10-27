@@ -171,6 +171,9 @@ void timer0_mode0_stop();
  */
 void timer0_mode0_enableP35_output(bool enable);
 
+void timer0_enable_on_pinINT0_high();
+void timer0_enable_always();
+
 //============================== Timer0 mode0 declarations end ============================
 
 
