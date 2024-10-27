@@ -1,6 +1,4 @@
-#include <bits.h>
 #include <delay.h>
-#include <frequency.h>
 
 void delay_ms(uint16_t ms)
 {

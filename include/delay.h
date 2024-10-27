@@ -7,7 +7,9 @@
  * @details Functions and data structures related to delaying program flow
  * @author Michael Golovanov
  */
+
 #include <stdint.h>
+#include <frequency.h>
 
 /** 
 *  @brief Delays program flow using CPU nop
