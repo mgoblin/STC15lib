@@ -1,4 +1,3 @@
-#include<sys.h>
 #include<interrupts.h>
 
 void enabled_all_interrupts()

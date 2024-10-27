@@ -2,6 +2,7 @@
 #define STC15_INTERRUPTSH
 
 #include<stdbool.h>
+#include<sys.h>
 
 /**
  * @file interrupts.h
