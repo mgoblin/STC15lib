@@ -21,8 +21,3 @@ void timer0_enable_on_pinINT0_high()
 {
     bit_set(TMOD, 3);
 }
-
-void timer0_enable_always()
-{
-    bit_clr(TMOD, 3);
-}
