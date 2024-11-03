@@ -26,8 +26,10 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 * Enable and disable timer2 mode0 output to P3.0 pin supported now
 * timer0_enable_on_pinINT0_high implemented for timer0 work only on INT0/P3.0 pin is high
 * Implements interrupts module.
-* TODO Timers should be use iterrupts.h
+* TODO Timers should be use interrupts module
 * TODO Timer aux - set timers in terms of output signal freq and timings
 * TODO Timers aux should not biased from CPU frequency dividers
+
+Next releases
 * TODO Timers mode1,2,3 should be implemented and documented 
 

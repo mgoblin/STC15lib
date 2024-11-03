@@ -7,6 +7,7 @@
         "stdio.h": "c",
         "uart.h": "c",
         "bits.h": "c",
-        "time.h": "c"
+        "time.h": "c",
+        "unity_config.h": "c"
     }
 }
