@@ -122,3 +122,20 @@ bool is_timer2_interrupt_enabled()
 {
     return test_if_bit_set(IE2, 2) && is_mcu_interrupts_enabled();
 }
+
+void enable_spi_interrupt()
+{
+    //ESPI = 1;
+    bit_set(IE2, 1);
+}
+
+void disable_spi_interrupt()
+{
+    //ESPI = 0;
+    bit_clr(IE2, 1);
+}
+
+bool is_spi_interrupt_enabled()
+{
+    return test_if_bit_set(IE2, 1) && is_mcu_interrupts_enabled();
+}

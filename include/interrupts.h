@@ -253,4 +253,33 @@ void disable_timer2_interrupt();
  * @ingroup interrupts
  */
 bool is_timer2_interrupt_enabled();
+
+/**
+ * @brief Enable SPI interrupt
+ * @details Before call this method mcu interrupt support should be enabled 
+ * by calling enable_mcu_interrupts()
+ * 
+ * @ingroup interrupts
+ */
+void enable_spi_interrupt();
+
+/**
+ * @brief Disable SPI interrupt
+ * @details Before call this method mcu interrupt support should be enabled 
+ * by calling enable_mcu_interrupts()
+ * 
+ * @ingroup interrupts
+ */
+void disable_spi_interrupt();
+
+/**
+ * @brief Get SPI interrupt enable status
+ * @details Get mcu interrupt and SPI interrupt support status
+ * 
+ * @return true if mcu and SPI interrupt enabled, otherwise false 
+ * 
+ * @ingroup interrupts
+ */
+bool is_spi_interrupt_enabled();
+
 #endif
