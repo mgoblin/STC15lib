@@ -61,13 +61,13 @@
  * 
  * @ingroup interrupts
  */
-enum interrupt_priority
+typedef enum
 {
     /// @brief Low priority
     LOW = 0, 
     /// @brief High priority
     HIGH = 1
-};
+} interrupt_priority_t;
 
 /**
  * @brief Enable interrupts support of MCU
@@ -407,5 +407,23 @@ void disable_spi_interrupt();
  * @ingroup interrupts
  */
 bool is_spi_interrupt_enabled();
+
+/**
+ * Set PPCA interrupt priority
+ * 
+ * @param priority interrupt priority
+ * 
+ * @ingroup interrupts
+ */
+void set_ppca_interrupt_priority(interrupt_priority_t priority);
+
+/**
+ * Get PPCA interrupt priority
+ * 
+ * @return PPCA interrupt priority
+ * 
+ * @ingroup interrupts
+ */
+interrupt_priority_t get_ppca_interrupt_priority();
 
 #endif

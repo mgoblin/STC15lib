@@ -71,10 +71,10 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:gae19e7ad54d6f20fdd374f6dc0e1d1f16"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gae19e7ad54d6f20fdd374f6dc0e1d1f16">interrupt_priority</a> { <a class="el" href="group__interrupts.html#ggae19e7ad54d6f20fdd374f6dc0e1d1f16a6a226f4143ca3b18999551694cdb72a8">LOW</a> = 0
-, <a class="el" href="group__interrupts.html#ggae19e7ad54d6f20fdd374f6dc0e1d1f16a0c3a1dacf94061154b3ee354359c5893">HIGH</a> = 1
+<tr class="memitem:ga9ebbbf91c4e6fa77cced0ac0daefd964"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> { <a class="el" href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a6a226f4143ca3b18999551694cdb72a8">LOW</a> = 0
+, <a class="el" href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893">HIGH</a> = 1
  }</td></tr>
-<tr class="separator:gae19e7ad54d6f20fdd374f6dc0e1d1f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ga9ebbbf91c4e6fa77cced0ac0daefd964"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -185,6 +185,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga230d7a3ba3a1ffc06155194eea02c531"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga230d7a3ba3a1ffc06155194eea02c531">is_spi_interrupt_enabled</a> ()</td></tr>
 <tr class="memdesc:ga230d7a3ba3a1ffc06155194eea02c531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get SPI interrupt enable status.  <a href="group__interrupts.html#ga230d7a3ba3a1ffc06155194eea02c531">More...</a><br /></td></tr>
 <tr class="separator:ga230d7a3ba3a1ffc06155194eea02c531"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae50a3224f60d76093827821f06d7aa8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gae50a3224f60d76093827821f06d7aa8a">set_ppca_interrupt_priority</a> (<a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> priority)</td></tr>
+<tr class="separator:gae50a3224f60d76093827821f06d7aa8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga01340fa10bb2a56c53ca3686a97e3b6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga01340fa10bb2a56c53ca3686a97e3b6b">get_ppca_interrupt_priority</a> ()</td></tr>
+<tr class="separator:ga01340fa10bb2a56c53ca3686a97e3b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for interrupts. Interrupts are controlled by registers IE and IE2 bits.</p>
@@ -238,22 +242,22 @@ Functions</h2></td></tr>
 </table>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="gae19e7ad54d6f20fdd374f6dc0e1d1f16" name="gae19e7ad54d6f20fdd374f6dc0e1d1f16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae19e7ad54d6f20fdd374f6dc0e1d1f16">&#9670;&nbsp;</a></span>interrupt_priority</h2>
+<a id="ga9ebbbf91c4e6fa77cced0ac0daefd964" name="ga9ebbbf91c4e6fa77cced0ac0daefd964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9ebbbf91c4e6fa77cced0ac0daefd964">&#9670;&nbsp;</a></span>interrupt_priority_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="group__interrupts.html#gae19e7ad54d6f20fdd374f6dc0e1d1f16">interrupt_priority</a></td>
+          <td class="memname">enum <a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p >Interrupt priority enumeration </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggae19e7ad54d6f20fdd374f6dc0e1d1f16a6a226f4143ca3b18999551694cdb72a8" name="ggae19e7ad54d6f20fdd374f6dc0e1d1f16a6a226f4143ca3b18999551694cdb72a8"></a>LOW&#160;</td><td class="fielddoc"><p >Low priority. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga9ebbbf91c4e6fa77cced0ac0daefd964a6a226f4143ca3b18999551694cdb72a8" name="gga9ebbbf91c4e6fa77cced0ac0daefd964a6a226f4143ca3b18999551694cdb72a8"></a>LOW&#160;</td><td class="fielddoc"><p >Low priority. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggae19e7ad54d6f20fdd374f6dc0e1d1f16a0c3a1dacf94061154b3ee354359c5893" name="ggae19e7ad54d6f20fdd374f6dc0e1d1f16a0c3a1dacf94061154b3ee354359c5893"></a>HIGH&#160;</td><td class="fielddoc"><p >High priority. </p>
+<tr><td class="fieldname"><a id="gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893" name="gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893"></a>HIGH&#160;</td><td class="fielddoc"><p >High priority. </p>
 </td></tr>
 </table>
 
@@ -740,6 +744,25 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga01340fa10bb2a56c53ca3686a97e3b6b" name="ga01340fa10bb2a56c53ca3686a97e3b6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga01340fa10bb2a56c53ca3686a97e3b6b">&#9670;&nbsp;</a></span>get_ppca_interrupt_priority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> get_ppca_interrupt_priority </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Get PPCA interrupt priority</p>
+<dl class="section return"><dt>Returns</dt><dd>PPCA interrupt priority </dd></dl>
+
+</div>
+</div>
 <a id="gaedf2f819d21e74d7d1e90b6b91f9814e" name="gaedf2f819d21e74d7d1e90b6b91f9814e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaedf2f819d21e74d7d1e90b6b91f9814e">&#9670;&nbsp;</a></span>is_adc_interrupt_enabled()</h2>
 
@@ -987,6 +1010,31 @@ Functions</h2></td></tr>
 <p>Get UART1 interrupt enable status. </p>
 <p >Get mcu interrupt and UART1 interrupt support status</p>
 <dl class="section return"><dt>Returns</dt><dd>true if mcu and UART1 interrupt enabled, otherwise false </dd></dl>
+
+</div>
+</div>
+<a id="gae50a3224f60d76093827821f06d7aa8a" name="gae50a3224f60d76093827821f06d7aa8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae50a3224f60d76093827821f06d7aa8a">&#9670;&nbsp;</a></span>set_ppca_interrupt_priority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_ppca_interrupt_priority </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td>
+          <td class="paramname"><em>priority</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Set PPCA interrupt priority</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">priority</td><td>interrupt priority </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

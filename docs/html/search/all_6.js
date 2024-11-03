@@ -1,7 +1,7 @@
 var searchData=
 [
   ['id_5fsize_0',['ID_SIZE',['../chip__id_8h.html#a57375ea0ee50482e9db7de35d1b9e781',1,'chip_id.h']]],
-  ['interrupt_5fpriority_1',['interrupt_priority',['../group__interrupts.html#gae19e7ad54d6f20fdd374f6dc0e1d1f16',1,'interrupts.h']]],
+  ['interrupt_5fpriority_5ft_1',['interrupt_priority_t',['../group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964',1,'interrupts.h']]],
   ['interrupts_2',['Interrupts',['../group__interrupts.html',1,'']]],
   ['interrupts_2eh_3',['interrupts.h',['../interrupts_8h.html',1,'']]],
   ['is_5fadc_5finterrupt_5fenabled_4',['is_adc_interrupt_enabled',['../group__interrupts.html#gaedf2f819d21e74d7d1e90b6b91f9814e',1,'is_adc_interrupt_enabled():&#160;interrupts.c'],['../group__interrupts.html#gaedf2f819d21e74d7d1e90b6b91f9814e',1,'is_adc_interrupt_enabled():&#160;interrupts.c']]],
