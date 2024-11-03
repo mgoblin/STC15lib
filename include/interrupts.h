@@ -170,4 +170,32 @@ void disable_int0_interrupt();
  */
 bool is_int0_interrupt_enabled();
 
+/**
+ * @brief Enable INT1 interrupt
+ * @details Before call this method mcu interrupt support should be enabled 
+ * by calling enable_mcu_interrupts()
+ * 
+ * @ingroup interrupts
+ */
+void enable_int1_interrupt();
+
+/**
+ * @brief Disable INT1 interrupt
+ * @details Before call this method mcu interrupt support should be enabled 
+ * by calling enable_mcu_interrupts()
+ * 
+ * @ingroup interrupts
+ */
+void disable_int1_interrupt();
+
+/**
+ * @brief Get INT1 interrupt enable status
+ * @details Get mcu interrupt and INT1 interrupt support status
+ * 
+ * @return true if mcu and INT1 interrupt enabled, otherwise false 
+ * 
+ * @ingroup interrupts
+ */
+bool is_int1_interrupt_enabled();
+
 #endif

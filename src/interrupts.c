@@ -74,3 +74,18 @@ bool is_int0_interrupt_enabled()
 {
     return EX0 == 1 && is_mcu_interrupts_enabled();
 }
+
+void enable_int1_interrupt()
+{
+    EX1 = 1;
+}
+
+void disable_int1_interrupt()
+{
+    EX1 = 0;
+}
+
+bool is_int1_interrupt_enabled()
+{
+    return EX1 == 1 && is_mcu_interrupts_enabled(); 
+}
