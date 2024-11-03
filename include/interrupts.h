@@ -57,4 +57,8 @@ void disable_mcu_interrupts();
  */
 bool is_mcu_interrupts_enabled();
 
+void enable_low_voltage_interrupt();
+void disable_low_voltage_interrupt();
+bool is_low_voltage_interrupt_enabled();
+
 #endif
