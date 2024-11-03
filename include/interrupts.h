@@ -82,4 +82,8 @@ void disable_low_voltage_interrupt();
  */
 bool is_low_voltage_interrupt_enabled();
 
+void enable_adc_interrupt();
+void disable_adc_interrupt();
+bool is_adc_interrupt_enabled();
+
 #endif

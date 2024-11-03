@@ -93,7 +93,11 @@ $(function() {
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keywordtype">bool</span> <a class="code hl_function" href="group__interrupts.html#ga0ae0ed6501f3d3085328bc4633275d13">is_low_voltage_interrupt_enabled</a>();</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keywordtype">void</span> enable_adc_interrupt();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keywordtype">void</span> disable_adc_interrupt();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="keywordtype">bool</span> is_adc_interrupt_enabled();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="agroup__interrupts_html_ga0ae0ed6501f3d3085328bc4633275d13"><div class="ttname"><a href="group__interrupts.html#ga0ae0ed6501f3d3085328bc4633275d13">is_low_voltage_interrupt_enabled</a></div><div class="ttdeci">bool is_low_voltage_interrupt_enabled()</div><div class="ttdoc">Get low voltage interrupt enable status.</div><div class="ttdef"><b>Definition:</b> interrupts.c:28</div></div>
 <div class="ttc" id="agroup__interrupts_html_ga0c06ab7b414296cbd8184f22926f7111"><div class="ttname"><a href="group__interrupts.html#ga0c06ab7b414296cbd8184f22926f7111">enable_low_voltage_interrupt</a></div><div class="ttdeci">void enable_low_voltage_interrupt()</div><div class="ttdoc">Enable low voltage interrupt.</div><div class="ttdef"><b>Definition:</b> interrupts.c:18</div></div>
 <div class="ttc" id="agroup__interrupts_html_ga77517a0ceb18961ebd4a6859286bbc16"><div class="ttname"><a href="group__interrupts.html#ga77517a0ceb18961ebd4a6859286bbc16">is_mcu_interrupts_enabled</a></div><div class="ttdeci">bool is_mcu_interrupts_enabled()</div><div class="ttdef"><b>Definition:</b> interrupts.c:13</div></div>
