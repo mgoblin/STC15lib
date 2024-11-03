@@ -113,4 +113,32 @@ void disable_adc_interrupt();
  */
 bool is_adc_interrupt_enabled();
 
+/**
+ * @brief Enable UART1 interrupt
+ * @details Before call this method mcu interrupt support should be enabled 
+ * by calling enable_mcu_interrupts()
+ * 
+ * @ingroup interrupts
+ */
+void enable_uart1_interrupt();
+
+/**
+ * @brief Disable UART1 interrupt
+ * @details Before call this method mcu interrupt support should be enabled 
+ * by calling enable_mcu_interrupts()
+ * 
+ * @ingroup interrupts
+ */
+void disable_uart1_interrupt();
+
+/**
+ * @brief Get UART1 interrupt enable status
+ * @details Get mcu interrupt and UART1 interrupt support status
+ * 
+ * @return true if mcu and UART1 interrupt enabled, otherwise false 
+ * 
+ * @ingroup interrupts
+ */
+bool is_uart1_interrupt_enabled();
+
 #endif
