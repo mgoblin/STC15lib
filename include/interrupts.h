@@ -57,8 +57,29 @@ void disable_mcu_interrupts();
  */
 bool is_mcu_interrupts_enabled();
 
+/**
+ * @brief Enable low voltage interrupt
+ * @details Before call this method mcu interrupt support should be enabled 
+ * by calling enable_mcu_interrupts()
+ * 
+ * @ingroup interrupts
+ */
 void enable_low_voltage_interrupt();
+
+/**
+ * @brief Disable low voltage interrupt
+ * @details Before call this method mcu interrupt support should be enabled 
+ * by calling enable_mcu_interrupts()
+ * 
+ * @ingroup interrupts
+ */
 void disable_low_voltage_interrupt();
+
+/**
+ * @brief Get low voltage interrupt enable status
+ * 
+ * @ingroup interrupts
+ */
 bool is_low_voltage_interrupt_enabled();
 
 #endif
