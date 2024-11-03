@@ -20,11 +20,11 @@
 #define or_mask(val, msk)                                   (val |= msk)
 #define and_mask(val, msk)                                  (val &= msk)   
 
-#define test_if_bit_set(val, bit_val)                       (get_bit(val, bit_val) != FALSE)
-#define test_if_bit_cleared(val, bit_val)                   (get_bit(val, bit_val) == FALSE)
+#define test_if_bit_set(val, bit_val)                       (get_bit(val, bit_val) != 0)
+#define test_if_bit_cleared(val, bit_val)                   (get_bit(val, bit_val) == 0)
 
 #define test_if_all_bits_set(val, msk)                      (get_reg(val, msk) == msk)
-#define test_if_any_bit_set(val, msk)                       (get_reg(val, msk) != FALSE)
+#define test_if_any_bit_set(val, msk)                       (get_reg(val, msk) != 0)
 
 /**************************************************************************************************/
 
