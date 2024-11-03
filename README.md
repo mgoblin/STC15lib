@@ -27,7 +27,6 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 * timer0_enable_on_pinINT0_high implemented for timer0 work only on INT0/P3.0 pin is high
 * timer0 and timer2 use interrupts module routines
 * Interrupts module implemented (without interrupts priority support)
-* TODO Implements interrupts module examples
 * TODO Implement interrupt priority routines in interrupts module   
 
 Next releases
