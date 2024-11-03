@@ -9,7 +9,18 @@
  * @defgroup interrupts Interrupts
  * 
  * @details Functions and data structures for interrupts.
- * Interrupts are controlled by registers IE and IE2 bits. 
+ * Interrupts are controlled by registers IE and IE2 bits.
+ * 
+ * Interrupts at all can be enabled, disabled and readed by 
+ * enable_mcu_interrupts(), disable_mcu_interrupts and 
+ * is_mcu_interrupts_enabled() routines.
+ * 
+ * Each kind of interrupt source controlled by 
+ * enable_<source>\_interrupt, disable_<source>\_interrupt routines.
+ * The state of each kind of interrupt source can be probed by 
+ * is_<source>\_interrupts_enabled() routine.
+ * If mcu interrupts support not enabled individual interrupt sources are 
+ * disabled too and is_<source>\_interrupts_enabled() call return false.
  * 
  * @author Michael Golovanov
  */
@@ -253,6 +264,34 @@ void disable_int3_interrupt();
  * @ingroup interrupts
  */
 bool is_int3_interrupt_enabled();
+
+/**
+ * @brief Enable INT4 interrupt
+ * @details Before call this method mcu interrupt support should be enabled 
+ * by calling enable_mcu_interrupts()
+ * 
+ * @ingroup interrupts
+ */
+void enable_int4_interrupt();
+
+/**
+ * @brief Disable INT3 interrupt
+ * @details Before call this method mcu interrupt support should be enabled 
+ * by calling enable_mcu_interrupts()
+ * 
+ * @ingroup interrupts
+ */
+void disable_int4_interrupt();
+
+/**
+ * @brief Get INT4 interrupt enable status
+ * @details Get mcu interrupt and INT4 interrupt support status
+ * 
+ * @return true if mcu and INT4 interrupt enabled, otherwise false 
+ * 
+ * @ingroup interrupts
+ */
+bool is_int4_interrupt_enable();
 
 /**
  * @brief Enable timer0 interrupt
