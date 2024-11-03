@@ -9,6 +9,7 @@
  * @defgroup interrupts Interrupts
  * 
  * @details Functions and data structures for interrupts.
+ * Interrupts are controlled by registerss IE and IE2 bits. 
  * 
  * @author Michael Golovanov
  */
@@ -140,5 +141,33 @@ void disable_uart1_interrupt();
  * @ingroup interrupts
  */
 bool is_uart1_interrupt_enabled();
+
+/**
+ * @brief Enable INT0 interrupt
+ * @details Before call this method mcu interrupt support should be enabled 
+ * by calling enable_mcu_interrupts()
+ * 
+ * @ingroup interrupts
+ */
+void enable_int0_interrupt();
+
+/**
+ * @brief Disable INT0 interrupt
+ * @details Before call this method mcu interrupt support should be enabled 
+ * by calling enable_mcu_interrupts()
+ * 
+ * @ingroup interrupts
+ */
+void disable_int0_interrupt();
+
+/**
+ * @brief Get INT0 interrupt enable status
+ * @details Get mcu interrupt and INT0 interrupt support status
+ * 
+ * @return true if mcu and INT0 interrupt enabled, otherwise false 
+ * 
+ * @ingroup interrupts
+ */
+bool is_int0_interrupt_enabled();
 
 #endif
