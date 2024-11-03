@@ -1,16 +1,16 @@
 #include<interrupts.h>
 
-void enabled_all_interrupts()
+void enable_mcu_interrupts()
 {
     EA = 1;
 }
 
-void disable_all_interrupts()
+void disable_mcu_interrupts()
 {
     EA = 0;
 }
 
-bool is_interrupts_enabled()
+bool is_mcu_interrupts_enabled()
 {
     return EA == 1;
 }

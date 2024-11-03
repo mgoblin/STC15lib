@@ -22,7 +22,7 @@
  * 
  * @ingroup interrupts
  */
-void enabled_all_interrupts();
+void enable_mcu_interrupts();
 
 /**
  * @brief Disable interrupts support of MCU
@@ -33,7 +33,7 @@ void enabled_all_interrupts();
  * 
  * @ingroup interrupts
  */
-void disable_all_interrupts();
+void disable_mcu_interrupts();
 
 /**
  * Get MCU interrupts support state
@@ -42,6 +42,6 @@ void disable_all_interrupts();
  * 
  * @ingroup interrupts
  */
-bool is_interrupts_enabled();
+bool is_mcu_interrupts_enabled();
 
 #endif
