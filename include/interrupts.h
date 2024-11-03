@@ -198,4 +198,32 @@ void disable_int1_interrupt();
  */
 bool is_int1_interrupt_enabled();
 
+/**
+ * @brief Enable timer0 interrupt
+ * @details Before call this method mcu interrupt support should be enabled 
+ * by calling enable_mcu_interrupts()
+ * 
+ * @ingroup interrupts
+ */
+void enable_timer0_interrupt();
+
+/**
+ * @brief Enable timer0 interrupt
+ * @details Before call this method mcu interrupt support should be enabled 
+ * by calling enable_mcu_interrupts()
+ * 
+ * @ingroup interrupts
+ */
+void disable_timer0_interrupt();
+
+/**
+ * @brief Get timer0 interrupt enable status
+ * @details Get mcu interrupt and timer0 interrupt support status
+ * 
+ * @return true if mcu and timer0 interrupt enabled, otherwise false 
+ * 
+ * @ingroup interrupts
+ */
+bool is_timer0_interrupt_enabled();
+
 #endif

@@ -41,7 +41,7 @@ void timer0_mode0_start(uint8_t th_value, uint8_t tl_value)
     TL0 = tl_value;
     TH0 = th_value;
 
-    ET0 = 1; // set timer0 interrupt enabled flag. Global interrupt enabled flag set on init.
+    enable_timer0_interrupt();
 
     TF0 = 0; // clear timer overload flag
     TR0 = 1; // set run timer flag
@@ -52,7 +52,7 @@ void timer0_mode0_start(uint8_t th_value, uint8_t tl_value)
 
 void timer0_mode0_stop()
 {
-    ET0 = 0; // disable timer interrupt
+    disable_timer0_interrupt();
     TF0 = 0; // clear timer overload flag
     TR0 = 0; // clear run timer flag
 }

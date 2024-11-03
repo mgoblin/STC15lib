@@ -131,6 +131,15 @@ Functions</h2></td></tr>
 <tr class="memitem:ga3f33afb2f2db7b9d9afc5fef76163a76"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga3f33afb2f2db7b9d9afc5fef76163a76">is_int1_interrupt_enabled</a> ()</td></tr>
 <tr class="memdesc:ga3f33afb2f2db7b9d9afc5fef76163a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get INT1 interrupt enable status.  <a href="group__interrupts.html#ga3f33afb2f2db7b9d9afc5fef76163a76">More...</a><br /></td></tr>
 <tr class="separator:ga3f33afb2f2db7b9d9afc5fef76163a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga22413fdfddf437b032111775cc7eb6c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga22413fdfddf437b032111775cc7eb6c0">enable_timer0_interrupt</a> ()</td></tr>
+<tr class="memdesc:ga22413fdfddf437b032111775cc7eb6c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable timer0 interrupt.  <a href="group__interrupts.html#ga22413fdfddf437b032111775cc7eb6c0">More...</a><br /></td></tr>
+<tr class="separator:ga22413fdfddf437b032111775cc7eb6c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga52bb702ab0840d8f5ba31b419550712b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga52bb702ab0840d8f5ba31b419550712b">disable_timer0_interrupt</a> ()</td></tr>
+<tr class="memdesc:ga52bb702ab0840d8f5ba31b419550712b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable timer0 interrupt.  <a href="group__interrupts.html#ga52bb702ab0840d8f5ba31b419550712b">More...</a><br /></td></tr>
+<tr class="separator:ga52bb702ab0840d8f5ba31b419550712b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad134ce314e7689f52f12ee700d1a91c9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gad134ce314e7689f52f12ee700d1a91c9">is_timer0_interrupt_enabled</a> ()</td></tr>
+<tr class="memdesc:gad134ce314e7689f52f12ee700d1a91c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer0 interrupt enable status.  <a href="group__interrupts.html#gad134ce314e7689f52f12ee700d1a91c9">More...</a><br /></td></tr>
+<tr class="separator:gad134ce314e7689f52f12ee700d1a91c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for interrupts. Interrupts are controlled by registerss IE and IE2 bits.</p>
@@ -258,6 +267,26 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga52bb702ab0840d8f5ba31b419550712b" name="ga52bb702ab0840d8f5ba31b419550712b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga52bb702ab0840d8f5ba31b419550712b">&#9670;&nbsp;</a></span>disable_timer0_interrupt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void disable_timer0_interrupt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable timer0 interrupt. </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+
+</div>
+</div>
 <a id="ga684c1176eb36d5b2c38c3f42c85ead6b" name="ga684c1176eb36d5b2c38c3f42c85ead6b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga684c1176eb36d5b2c38c3f42c85ead6b">&#9670;&nbsp;</a></span>disable_uart1_interrupt()</h2>
 
@@ -375,6 +404,26 @@ Functions</h2></td></tr>
 
 <p>Enable interrupts support of MCU. </p>
 <p >Set EA to 1 to enable interrupt support. By default interrupts support are disabled Each interrupt should be enabled implicitly by setting its own flag </p>
+
+</div>
+</div>
+<a id="ga22413fdfddf437b032111775cc7eb6c0" name="ga22413fdfddf437b032111775cc7eb6c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga22413fdfddf437b032111775cc7eb6c0">&#9670;&nbsp;</a></span>enable_timer0_interrupt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void enable_timer0_interrupt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable timer0 interrupt. </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -498,6 +547,27 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Get MCU interrupts support state</p>
 <dl class="section return"><dt>Returns</dt><dd>if enabled returns true otherwise returns false </dd></dl>
+
+</div>
+</div>
+<a id="gad134ce314e7689f52f12ee700d1a91c9" name="gad134ce314e7689f52f12ee700d1a91c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad134ce314e7689f52f12ee700d1a91c9">&#9670;&nbsp;</a></span>is_timer0_interrupt_enabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_timer0_interrupt_enabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get timer0 interrupt enable status. </p>
+<p >Get mcu interrupt and timer0 interrupt support status</p>
+<dl class="section return"><dt>Returns</dt><dd>true if mcu and timer0 interrupt enabled, otherwise false </dd></dl>
 
 </div>
 </div>

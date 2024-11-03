@@ -89,3 +89,18 @@ bool is_int1_interrupt_enabled()
 {
     return EX1 == 1 && is_mcu_interrupts_enabled(); 
 }
+
+void enable_timer0_interrupt()
+{
+    ET0 = 1;
+}
+
+void disable_timer0_interrupt()
+{
+    ET0 = 0;
+}
+
+bool is_timer0_interrupt_enabled()
+{
+    return ET0 == 0 && is_mcu_interrupts_enabled();
+}
