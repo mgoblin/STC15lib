@@ -191,12 +191,12 @@ bool is_int4_interrupt_enable()
     return test_if_bit_set(INT_CLKO, 6) && is_mcu_interrupts_enabled();
 }
 
-void set_ppca_interrupt_priority(interrupt_priority_t priority)
+void set_pca_interrupt_priority(interrupt_priority_t priority)
 {
     PPCA = priority;
 }
 
-interrupt_priority_t get_ppca_interrupt_priority()
+interrupt_priority_t get_pca_interrupt_priority()
 {
     return PPCA;
 }

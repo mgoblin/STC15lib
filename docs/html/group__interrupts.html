@@ -185,10 +185,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga230d7a3ba3a1ffc06155194eea02c531"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga230d7a3ba3a1ffc06155194eea02c531">is_spi_interrupt_enabled</a> ()</td></tr>
 <tr class="memdesc:ga230d7a3ba3a1ffc06155194eea02c531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get SPI interrupt enable status.  <a href="group__interrupts.html#ga230d7a3ba3a1ffc06155194eea02c531">More...</a><br /></td></tr>
 <tr class="separator:ga230d7a3ba3a1ffc06155194eea02c531"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae50a3224f60d76093827821f06d7aa8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gae50a3224f60d76093827821f06d7aa8a">set_ppca_interrupt_priority</a> (<a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> priority)</td></tr>
-<tr class="separator:gae50a3224f60d76093827821f06d7aa8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga01340fa10bb2a56c53ca3686a97e3b6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga01340fa10bb2a56c53ca3686a97e3b6b">get_ppca_interrupt_priority</a> ()</td></tr>
-<tr class="separator:ga01340fa10bb2a56c53ca3686a97e3b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaab127a9699665db19209e73c125a36e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaab127a9699665db19209e73c125a36e6">set_pca_interrupt_priority</a> (<a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> priority)</td></tr>
+<tr class="separator:gaab127a9699665db19209e73c125a36e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaabc0dd3884a711ef02b6949592319c21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaabc0dd3884a711ef02b6949592319c21">get_pca_interrupt_priority</a> ()</td></tr>
+<tr class="separator:gaabc0dd3884a711ef02b6949592319c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for interrupts. Interrupts are controlled by registers IE and IE2 bits.</p>
@@ -744,22 +744,22 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga01340fa10bb2a56c53ca3686a97e3b6b" name="ga01340fa10bb2a56c53ca3686a97e3b6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga01340fa10bb2a56c53ca3686a97e3b6b">&#9670;&nbsp;</a></span>get_ppca_interrupt_priority()</h2>
+<a id="gaabc0dd3884a711ef02b6949592319c21" name="gaabc0dd3884a711ef02b6949592319c21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaabc0dd3884a711ef02b6949592319c21">&#9670;&nbsp;</a></span>get_pca_interrupt_priority()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> get_ppca_interrupt_priority </td>
+          <td class="memname"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> get_pca_interrupt_priority </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Get PPCA interrupt priority</p>
-<dl class="section return"><dt>Returns</dt><dd>PPCA interrupt priority </dd></dl>
+<p >Get PCA interrupt priority</p>
+<dl class="section return"><dt>Returns</dt><dd>PCA interrupt priority </dd></dl>
 
 </div>
 </div>
@@ -1013,14 +1013,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gae50a3224f60d76093827821f06d7aa8a" name="gae50a3224f60d76093827821f06d7aa8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae50a3224f60d76093827821f06d7aa8a">&#9670;&nbsp;</a></span>set_ppca_interrupt_priority()</h2>
+<a id="gaab127a9699665db19209e73c125a36e6" name="gaab127a9699665db19209e73c125a36e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaab127a9699665db19209e73c125a36e6">&#9670;&nbsp;</a></span>set_pca_interrupt_priority()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void set_ppca_interrupt_priority </td>
+          <td class="memname">void set_pca_interrupt_priority </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td>
           <td class="paramname"><em>priority</em></td><td>)</td>
@@ -1028,13 +1028,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Set PPCA interrupt priority</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">priority</td><td>interrupt priority </td></tr>
-  </table>
-  </dd>
-</dl>
+<p >Set PCA interrupt priority</p>
+<dl class="section user"><dt>/am priority interrupt priority</dt><dd></dd></dl>
 
 </div>
 </div>

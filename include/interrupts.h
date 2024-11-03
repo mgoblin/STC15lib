@@ -409,21 +409,21 @@ void disable_spi_interrupt();
 bool is_spi_interrupt_enabled();
 
 /**
- * Set PPCA interrupt priority
+ * Set PCA interrupt priority
  * 
- * @param priority interrupt priority
+ * @par/am priority interrupt priority
  * 
  * @ingroup interrupts
  */
-void set_ppca_interrupt_priority(interrupt_priority_t priority);
+void set_pca_interrupt_priority(interrupt_priority_t priority);
 
 /**
- * Get PPCA interrupt priority
+ * Get PCA interrupt priority
  * 
- * @return PPCA interrupt priority
+ * @return PCA interrupt priority
  * 
  * @ingroup interrupts
  */
-interrupt_priority_t get_ppca_interrupt_priority();
+interrupt_priority_t get_pca_interrupt_priority();
 
 #endif
