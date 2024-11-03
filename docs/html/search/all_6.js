@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['main_5ffosc_0',['MAIN_Fosc',['../sys_8h.html#aa52cf4efd75d43c7917d9eec3becd2fa',1,'sys.h']]],
-  ['main_5ffosch_1',['MAIN_FoscH',['../sys_8h.html#ae1b9b7f30c88b5491fd35d286418f6d6',1,'sys.h']]],
-  ['main_5ffoscl_2',['MAIN_FoscL',['../sys_8h.html#ab42e14bee431f5da3ecef889588cc728',1,'sys.h']]],
-  ['master_5fclock_5foutput_5fpin_3',['master_clock_output_pin',['../frequency_8h.html#ae4de59124a4f4ccd36353601d60b8e28',1,'frequency.h']]],
-  ['masterclockoutputpin_4',['MasterClockOutputPin',['../frequency_8h.html#a4de903b9320a994227a4f380782228df',1,'frequency.h']]]
+  ['id_5fsize_0',['ID_SIZE',['../chip__id_8h.html#a57375ea0ee50482e9db7de35d1b9e781',1,'chip_id.h']]],
+  ['interrupt_5fpriority_1',['interrupt_priority',['../group__interrupts.html#gae19e7ad54d6f20fdd374f6dc0e1d1f16',1,'interrupts.h']]],
+  ['interrupts_2',['Interrupts',['../group__interrupts.html',1,'']]],
+  ['interrupts_2eh_3',['interrupts.h',['../interrupts_8h.html',1,'']]],
+  ['is_5fmcu_5finterrupts_5fenabled_4',['is_mcu_interrupts_enabled',['../group__interrupts.html#ga77517a0ceb18961ebd4a6859286bbc16',1,'is_mcu_interrupts_enabled():&#160;interrupts.c'],['../group__interrupts.html#ga77517a0ceb18961ebd4a6859286bbc16',1,'is_mcu_interrupts_enabled():&#160;interrupts.c']]],
+  ['is_5ftimer0_5fp35_5foutput_5fenabled_5',['is_timer0_P35_output_enabled',['../group__timer.html#gaa05541d692e42d378e480afa3bbeaaee',1,'is_timer0_P35_output_enabled():&#160;timer0_common.c'],['../group__timer.html#gaa05541d692e42d378e480afa3bbeaaee',1,'is_timer0_P35_output_enabled():&#160;timer0_common.c']]],
+  ['is_5ftimer2_5fp30_5foutput_5fenabled_6',['is_timer2_P30_output_enabled',['../group__timer.html#gac9628739ab67a887e31c5a44730e7320',1,'is_timer2_P30_output_enabled():&#160;timer2_common.c'],['../group__timer.html#gac9628739ab67a887e31c5a44730e7320',1,'is_timer2_P30_output_enabled():&#160;timer2_common.c']]]
 ];

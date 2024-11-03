@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['t1_0',['T1',['../group__timer.html#ggad15adf0e455bbaba72daf79d770478caa623238751deb7764bdebf4799fe30f07',1,'timer.h']]],
-  ['t12_1',['T12',['../group__timer.html#ggad15adf0e455bbaba72daf79d770478caa5c3a2baea537d57bba309aa892a7926c',1,'timer.h']]]
+  ['none_0',['NONE',['../frequency_8h.html#a4de903b9320a994227a4f380782228dfac157bdf0b85a40d2619cbc8bc1ae5fe2',1,'frequency.h']]]
 ];

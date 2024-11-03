@@ -13,6 +13,19 @@
  * @author Michael Golovanov
  */
 
+/** 
+ * Interrupt priority enumeration
+ * 
+ * @ingroup interrupts
+ */
+enum interrupt_priority
+{
+    /// @brief Low priority
+    LOW, 
+    /// @brief High priority
+    HIGH
+};
+
 /**
  * @brief Enable interrupts support of MCU
  * @details Set EA to 1 to enable interrupt support. 

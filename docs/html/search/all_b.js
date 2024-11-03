@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['uart_20serial_20interface_0',['UART serial interface',['../group__uart.html',1,'']]],
-  ['uart_2eh_1',['uart.h',['../uart_8h.html',1,'']]],
-  ['uart_5finit_2',['uart_init',['../group__uart.html#gaaf8803da40d227f3da866bfe760011f0',1,'uart_init(uint32_t uart_baudrate):&#160;uart.c'],['../group__uart.html#gaaf8803da40d227f3da866bfe760011f0',1,'uart_init(uint32_t uart_baudrate):&#160;uart.c']]],
-  ['uart_5freceive_5fbyte_3',['uart_receive_byte',['../group__uart.html#gaa51e1ff0032e597db706ea1cdbb41bf4',1,'uart_receive_byte():&#160;uart.c'],['../group__uart.html#gaa51e1ff0032e597db706ea1cdbb41bf4',1,'uart_receive_byte():&#160;uart.c']]],
-  ['uart_5fsend_5fbyte_4',['uart_send_byte',['../group__uart.html#ga8c06afe2f1e393776650ebe7f0b336f2',1,'uart_send_byte(uint8_t data):&#160;uart.c'],['../group__uart.html#ga8c06afe2f1e393776650ebe7f0b336f2',1,'uart_send_byte(uint8_t data):&#160;uart.c']]],
-  ['update_5fand_5fget_5ffrequency_5fdivider_5',['update_and_get_frequency_divider',['../group__freq.html#ga430f8c4ccae1431b64ff0f2af0480a98',1,'update_and_get_frequency_divider(uint8_t divider_scale):&#160;frequency.c'],['../group__freq.html#ga430f8c4ccae1431b64ff0f2af0480a98',1,'update_and_get_frequency_divider(uint8_t divider_scale):&#160;frequency.c']]]
+  ['set_5fmaster_5fclock_5foutput_5fpin_0',['set_master_clock_output_pin',['../group__freq.html#ga65b3ff5d3b69d0382fcacab2e977277c',1,'set_master_clock_output_pin(master_clock_output_pin pin):&#160;frequency.c'],['../group__freq.html#ga65b3ff5d3b69d0382fcacab2e977277c',1,'set_master_clock_output_pin(master_clock_output_pin pin):&#160;frequency.c']]],
+  ['stc15w408as_20library_1',['STC15W408AS library',['../index.html',1,'']]],
+  ['sys_2eh_2',['sys.h',['../sys_8h.html',1,'']]]
 ];
