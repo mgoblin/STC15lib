@@ -77,13 +77,40 @@ void disable_low_voltage_interrupt();
 
 /**
  * @brief Get low voltage interrupt enable status
+ * @details Get mcu interrupt and low voltage interrupt support status
+ * 
+ * @return true if mcu and low voltage interrupt enabled, otherwise false 
  * 
  * @ingroup interrupts
  */
 bool is_low_voltage_interrupt_enabled();
 
+/**
+ * @brief Enable ADC interrupt
+ * @details Before call this method mcu interrupt support should be enabled 
+ * by calling enable_mcu_interrupts()
+ * 
+ * @ingroup interrupts
+ */
 void enable_adc_interrupt();
+
+/**
+ * @brief Disable ADC interrupt
+ * @details Before call this method mcu interrupt support should be enabled 
+ * by calling enable_mcu_interrupts()
+ * 
+ * @ingroup interrupts
+ */
 void disable_adc_interrupt();
+
+/**
+ * @brief Get ADC interrupt enable status
+ * @details Get mcu interrupt and ADC interrupt support status
+ * 
+ * @return true if mcu and ADC interrupt enabled, otherwise false 
+ * 
+ * @ingroup interrupts
+ */
 bool is_adc_interrupt_enabled();
 
 #endif

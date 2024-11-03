@@ -92,10 +92,18 @@ Functions</h2></td></tr>
 <tr class="memitem:gae20133d01ce34efd65f0a417512e787c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gae20133d01ce34efd65f0a417512e787c">disable_low_voltage_interrupt</a> ()</td></tr>
 <tr class="memdesc:gae20133d01ce34efd65f0a417512e787c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable low voltage interrupt.  <a href="group__interrupts.html#gae20133d01ce34efd65f0a417512e787c">More...</a><br /></td></tr>
 <tr class="separator:gae20133d01ce34efd65f0a417512e787c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0ae0ed6501f3d3085328bc4633275d13"><td class="memItemLeft" align="right" valign="top"><a id="ga0ae0ed6501f3d3085328bc4633275d13" name="ga0ae0ed6501f3d3085328bc4633275d13"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_low_voltage_interrupt_enabled</b> ()</td></tr>
-<tr class="memdesc:ga0ae0ed6501f3d3085328bc4633275d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get low voltage interrupt enable status. <br /></td></tr>
+<tr class="memitem:ga0ae0ed6501f3d3085328bc4633275d13"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga0ae0ed6501f3d3085328bc4633275d13">is_low_voltage_interrupt_enabled</a> ()</td></tr>
+<tr class="memdesc:ga0ae0ed6501f3d3085328bc4633275d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get low voltage interrupt enable status.  <a href="group__interrupts.html#ga0ae0ed6501f3d3085328bc4633275d13">More...</a><br /></td></tr>
 <tr class="separator:ga0ae0ed6501f3d3085328bc4633275d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae35792f089a9778ecdbe365fe5e2b1cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gae35792f089a9778ecdbe365fe5e2b1cf">enable_adc_interrupt</a> ()</td></tr>
+<tr class="memdesc:gae35792f089a9778ecdbe365fe5e2b1cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable ADC interrupt.  <a href="group__interrupts.html#gae35792f089a9778ecdbe365fe5e2b1cf">More...</a><br /></td></tr>
+<tr class="separator:gae35792f089a9778ecdbe365fe5e2b1cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30dea99cc83ed4943d94b28c9d02a910"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga30dea99cc83ed4943d94b28c9d02a910">disable_adc_interrupt</a> ()</td></tr>
+<tr class="memdesc:ga30dea99cc83ed4943d94b28c9d02a910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable ADC interrupt.  <a href="group__interrupts.html#ga30dea99cc83ed4943d94b28c9d02a910">More...</a><br /></td></tr>
+<tr class="separator:ga30dea99cc83ed4943d94b28c9d02a910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaedf2f819d21e74d7d1e90b6b91f9814e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaedf2f819d21e74d7d1e90b6b91f9814e">is_adc_interrupt_enabled</a> ()</td></tr>
+<tr class="memdesc:gaedf2f819d21e74d7d1e90b6b91f9814e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ADC interrupt enable status.  <a href="group__interrupts.html#gaedf2f819d21e74d7d1e90b6b91f9814e">More...</a><br /></td></tr>
+<tr class="separator:gaedf2f819d21e74d7d1e90b6b91f9814e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for interrupts.</p>
@@ -123,6 +131,26 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_low_voltage_interr
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga30dea99cc83ed4943d94b28c9d02a910" name="ga30dea99cc83ed4943d94b28c9d02a910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga30dea99cc83ed4943d94b28c9d02a910">&#9670;&nbsp;</a></span>disable_adc_interrupt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void disable_adc_interrupt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable ADC interrupt. </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+
+</div>
+</div>
 <a id="gae20133d01ce34efd65f0a417512e787c" name="gae20133d01ce34efd65f0a417512e787c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gae20133d01ce34efd65f0a417512e787c">&#9670;&nbsp;</a></span>disable_low_voltage_interrupt()</h2>
 
@@ -163,6 +191,26 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_low_voltage_interr
 
 </div>
 </div>
+<a id="gae35792f089a9778ecdbe365fe5e2b1cf" name="gae35792f089a9778ecdbe365fe5e2b1cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae35792f089a9778ecdbe365fe5e2b1cf">&#9670;&nbsp;</a></span>enable_adc_interrupt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void enable_adc_interrupt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable ADC interrupt. </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+
+</div>
+</div>
 <a id="ga0c06ab7b414296cbd8184f22926f7111" name="ga0c06ab7b414296cbd8184f22926f7111"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga0c06ab7b414296cbd8184f22926f7111">&#9670;&nbsp;</a></span>enable_low_voltage_interrupt()</h2>
 
@@ -200,6 +248,48 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_low_voltage_interr
 
 <p>Enable interrupts support of MCU. </p>
 <p >Set EA to 1 to enable interrupt support. By default interrupts support are disabled Each interrupt should be enabled implicitly by setting its own flag </p>
+
+</div>
+</div>
+<a id="gaedf2f819d21e74d7d1e90b6b91f9814e" name="gaedf2f819d21e74d7d1e90b6b91f9814e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaedf2f819d21e74d7d1e90b6b91f9814e">&#9670;&nbsp;</a></span>is_adc_interrupt_enabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_adc_interrupt_enabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get ADC interrupt enable status. </p>
+<p >Get mcu interrupt and ADC interrupt support status</p>
+<dl class="section return"><dt>Returns</dt><dd>true if mcu and ADC interrupt enabled, otherwise false </dd></dl>
+
+</div>
+</div>
+<a id="ga0ae0ed6501f3d3085328bc4633275d13" name="ga0ae0ed6501f3d3085328bc4633275d13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ae0ed6501f3d3085328bc4633275d13">&#9670;&nbsp;</a></span>is_low_voltage_interrupt_enabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_low_voltage_interrupt_enabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get low voltage interrupt enable status. </p>
+<p >Get mcu interrupt and low voltage interrupt support status</p>
+<dl class="section return"><dt>Returns</dt><dd>true if mcu and low voltage interrupt enabled, otherwise false </dd></dl>
 
 </div>
 </div>

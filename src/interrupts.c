@@ -27,7 +27,7 @@ void disable_low_voltage_interrupt()
 
 bool is_low_voltage_interrupt_enabled()
 {
-    return ELVD = 1 && is_mcu_interrupts_enabled();
+    return ELVD == 1 && is_mcu_interrupts_enabled();
 }
 
 void enable_adc_interrupt()
