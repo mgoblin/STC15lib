@@ -1,17 +1,18 @@
 #include <sys.h>
 #include <timer.h>
 #include <bits.h>
+#include <interrupts.h>
 
 void timer0_mode0_12T_init()
 { 
-    EA = 1; // set global interrupts enabled flag
+    enable_mcu_interrupts();
     TMOD &= 0xf0; // clear all T0 flags
     bit_clr(AUXR, 7); // 12T input clock mode
 }
 
 void timer0_mode0_1T_init()
 {
-    EA = 1; // set global interrupts enabled flag
+    enable_mcu_interrupts();
     TMOD &= 0xf0; // clear all T0 flags
     bit_set(AUXR, 7); // 1T input clock mode
 }
