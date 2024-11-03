@@ -22,6 +22,37 @@
  * If mcu interrupts support not enabled individual interrupt sources are 
  * disabled too and is_<source>\_interrupts_enabled() call return false.
  * 
+ * Interrupt handler should be declared as:
+ * @code {.c}
+ * void interruptHandler() __interrupt(0)
+ * @endcode
+ * The name of handler routine can be any correct C function name.
+ * Hanlder should have empty parameter list. Keyword __interrupt and interrupt number 
+ * assign handler to specified interrupt. See STC15series MCU Data Sheet Section 6.4.
+ *  
+ * \# | Description
+ * ---|-----------------------------------------
+ * 0  | INT0
+ * 1  | Timer0 interrrupt
+ * 2  | INT1
+ * 3  | Timer1 interrupt (STC15W408AS has no this timer)
+ * 4  | UART1 interrupt
+ * 5  | ADC interrupt
+ * 6  | Low voltage detection (LVD) interrupt
+ * 7  | PCA interrupt
+ * 8  | UART2 interrupt
+ * 9  | SPI interrupt
+ * 10 | INT2
+ * 11 | INT3 
+ * 12 | Timer2 interrupt
+ * 13 | PWM interrupt
+ * 16 | INT4
+ * 17 | S3
+ * 18 | S4
+ * 19 | Timer3 interrupt (STC15W408AS has no this timer)
+ * 20 | Timer4 interrupt (STC15W408AS has no this timer)
+ * 21 | Comparator interrupt
+ * 
  * @author Michael Golovanov
  */
 
@@ -33,9 +64,9 @@
 enum interrupt_priority
 {
     /// @brief Low priority
-    LOW, 
+    LOW = 0, 
     /// @brief High priority
-    HIGH
+    HIGH = 1
 };
 
 /**

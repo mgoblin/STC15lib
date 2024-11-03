@@ -71,8 +71,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:gae19e7ad54d6f20fdd374f6dc0e1d1f16"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gae19e7ad54d6f20fdd374f6dc0e1d1f16">interrupt_priority</a> { <a class="el" href="group__interrupts.html#ggae19e7ad54d6f20fdd374f6dc0e1d1f16a6a226f4143ca3b18999551694cdb72a8">LOW</a>
-, <a class="el" href="group__interrupts.html#ggae19e7ad54d6f20fdd374f6dc0e1d1f16a0c3a1dacf94061154b3ee354359c5893">HIGH</a>
+<tr class="memitem:gae19e7ad54d6f20fdd374f6dc0e1d1f16"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gae19e7ad54d6f20fdd374f6dc0e1d1f16">interrupt_priority</a> { <a class="el" href="group__interrupts.html#ggae19e7ad54d6f20fdd374f6dc0e1d1f16a6a226f4143ca3b18999551694cdb72a8">LOW</a> = 0
+, <a class="el" href="group__interrupts.html#ggae19e7ad54d6f20fdd374f6dc0e1d1f16a0c3a1dacf94061154b3ee354359c5893">HIGH</a> = 1
  }</td></tr>
 <tr class="separator:gae19e7ad54d6f20fdd374f6dc0e1d1f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -190,6 +190,52 @@ Functions</h2></td></tr>
 <p >Functions and data structures for interrupts. Interrupts are controlled by registers IE and IE2 bits.</p>
 <p >Interrupts at all can be enabled, disabled and readed by <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a>, disable_mcu_interrupts and <a class="el" href="group__interrupts.html#ga77517a0ceb18961ebd4a6859286bbc16">is_mcu_interrupts_enabled()</a> routines.</p>
 <p >Each kind of interrupt source controlled by enable_&lt;source&gt;_interrupt, disable_&lt;source&gt;_interrupt routines. The state of each kind of interrupt source can be probed by is_&lt;source&gt;_interrupts_enabled() routine. If mcu interrupts support not enabled individual interrupt sources are disabled too and is_&lt;source&gt;_interrupts_enabled() call return false.</p>
+<p >Interrupt handler should be declared as: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> interruptHandler() __interrupt(0)</div>
+</div><!-- fragment --><p> The name of handler routine can be any correct C function name. Hanlder should have empty parameter list. Keyword __interrupt and interrupt number assign handler to specified interrupt. See STC15series MCU Data Sheet Section 6.4.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">#   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">0   </td><td class="markdownTableBodyNone">INT0    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">Timer0 interrrupt    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">INT1    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">Timer1 interrupt (STC15W408AS has no this timer)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">UART1 interrupt    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">ADC interrupt    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">6   </td><td class="markdownTableBodyNone">Low voltage detection (LVD) interrupt    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">7   </td><td class="markdownTableBodyNone">PCA interrupt    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">8   </td><td class="markdownTableBodyNone">UART2 interrupt    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">9   </td><td class="markdownTableBodyNone">SPI interrupt    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">10   </td><td class="markdownTableBodyNone">INT2    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">11   </td><td class="markdownTableBodyNone">INT3    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">12   </td><td class="markdownTableBodyNone">Timer2 interrupt    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">13   </td><td class="markdownTableBodyNone">PWM interrupt    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">16   </td><td class="markdownTableBodyNone">INT4    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">17   </td><td class="markdownTableBodyNone">S3    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">18   </td><td class="markdownTableBodyNone">S4    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">19   </td><td class="markdownTableBodyNone">Timer3 interrupt (STC15W408AS has no this timer)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">20   </td><td class="markdownTableBodyNone">Timer4 interrupt (STC15W408AS has no this timer)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">21   </td><td class="markdownTableBodyNone">Comparator interrupt   </td></tr>
+</table>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="gae19e7ad54d6f20fdd374f6dc0e1d1f16" name="gae19e7ad54d6f20fdd374f6dc0e1d1f16"></a>
