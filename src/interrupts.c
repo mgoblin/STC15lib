@@ -156,3 +156,20 @@ bool is_int2_interrupt_enabled()
 {
     return test_if_bit_set(INT_CLKO, 4) && is_mcu_interrupts_enabled();
 }
+
+void enable_int3_interrupt()
+{
+    //EX3 = 1;
+    bit_set(INT_CLKO, 5);
+}
+
+void disable_int3_interrupt()
+{
+    //EX3 = 0;
+    bit_clr(INT_CLKO, 5);
+}
+
+bool is_int3_interrupt_enabled()
+{
+    return test_if_bit_set(INT_CLKO, 5) && is_mcu_interrupts_enabled();
+}

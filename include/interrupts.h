@@ -227,6 +227,34 @@ void disable_int2_interrupt();
 bool is_int2_interrupt_enabled();
 
 /**
+ * @brief Enable INT3 interrupt
+ * @details Before call this method mcu interrupt support should be enabled 
+ * by calling enable_mcu_interrupts()
+ * 
+ * @ingroup interrupts
+ */
+void enable_int3_interrupt();
+
+/**
+ * @brief Disable INT3 interrupt
+ * @details Before call this method mcu interrupt support should be enabled 
+ * by calling enable_mcu_interrupts()
+ * 
+ * @ingroup interrupts
+ */
+void disable_int3_interrupt();
+
+/**
+ * @brief Get INT3 interrupt enable status
+ * @details Get mcu interrupt and INT3 interrupt support status
+ * 
+ * @return true if mcu and INT3 interrupt enabled, otherwise false 
+ * 
+ * @ingroup interrupts
+ */
+bool is_int3_interrupt_enabled();
+
+/**
  * @brief Enable timer0 interrupt
  * @details Before call this method mcu interrupt support should be enabled 
  * by calling enable_mcu_interrupts()
