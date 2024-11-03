@@ -9,7 +9,7 @@
  * @defgroup interrupts Interrupts
  * 
  * @details Functions and data structures for interrupts.
- * Interrupts are controlled by registerss IE and IE2 bits. 
+ * Interrupts are controlled by registers IE and IE2 bits. 
  * 
  * @author Michael Golovanov
  */
