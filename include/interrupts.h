@@ -409,7 +409,7 @@ void disable_spi_interrupt();
 bool is_spi_interrupt_enabled();
 
 /**
- * Set PCA interrupt priority
+ * Set programmable counter arrya (PCA) interrupt priority
  * 
  * @param priority interrupt priority
  * 
@@ -418,7 +418,7 @@ bool is_spi_interrupt_enabled();
 void set_pca_interrupt_priority(interrupt_priority_t priority);
 
 /**
- * Get PCA interrupt priority
+ * Get programmable counter arrya (PCA) interrupt priority
  * 
  * @return PCA interrupt priority
  * 
