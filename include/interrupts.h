@@ -459,7 +459,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-void set_low_voltage_interrupt_priority(interrupt_priority_t priority);
+#define set_low_voltage_interrupt_priority(priority) (PLVD = priority)
 
 /**
  * @brief Get low voltage interrupt (LVD) priority
@@ -468,7 +468,7 @@ void set_low_voltage_interrupt_priority(interrupt_priority_t priority);
  * 
  * @ingroup interrupts
  */
-interrupt_priority_t get_low_voltage_interrupt_priority();
+#define get_low_voltage_interrupt_priority() (PVLD)
 
 /**
  * @brief Set analog to digital converter (ADC) interrupt priority

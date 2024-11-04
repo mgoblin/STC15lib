@@ -185,6 +185,12 @@ Macros</h2></td></tr>
 <tr class="memitem:gabf64c78cca4cdf3dbccbe6b3be2ac7f3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gabf64c78cca4cdf3dbccbe6b3be2ac7f3">get_pca_interrupt_priority</a>()&#160;&#160;&#160;(PPCA)</td></tr>
 <tr class="memdesc:gabf64c78cca4cdf3dbccbe6b3be2ac7f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get programmable counter arrya (PCA) interrupt priority.  <a href="group__interrupts.html#gabf64c78cca4cdf3dbccbe6b3be2ac7f3">More...</a><br /></td></tr>
 <tr class="separator:gabf64c78cca4cdf3dbccbe6b3be2ac7f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3d287824f6ad9219ad0ea0ea8ceed3a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga3d287824f6ad9219ad0ea0ea8ceed3a2">set_low_voltage_interrupt_priority</a>(priority)&#160;&#160;&#160;(PLVD = priority)</td></tr>
+<tr class="memdesc:ga3d287824f6ad9219ad0ea0ea8ceed3a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set low voltage (LVD) interrupt priority.  <a href="group__interrupts.html#ga3d287824f6ad9219ad0ea0ea8ceed3a2">More...</a><br /></td></tr>
+<tr class="separator:ga3d287824f6ad9219ad0ea0ea8ceed3a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d6648d7b8c9e35c9a3e19067b8eb8ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga7d6648d7b8c9e35c9a3e19067b8eb8ae">get_low_voltage_interrupt_priority</a>()&#160;&#160;&#160;(PVLD)</td></tr>
+<tr class="memdesc:ga7d6648d7b8c9e35c9a3e19067b8eb8ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get low voltage interrupt (LVD) priority.  <a href="group__interrupts.html#ga7d6648d7b8c9e35c9a3e19067b8eb8ae">More...</a><br /></td></tr>
+<tr class="separator:ga7d6648d7b8c9e35c9a3e19067b8eb8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -199,12 +205,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gacb709294102ab1ee8c6d2418a25c6ef9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gacb709294102ab1ee8c6d2418a25c6ef9">set_low_voltage_interrupt_priority</a> (<a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> priority)</td></tr>
-<tr class="memdesc:gacb709294102ab1ee8c6d2418a25c6ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set low voltage (LVD) interrupt priority.  <a href="group__interrupts.html#gacb709294102ab1ee8c6d2418a25c6ef9">More...</a><br /></td></tr>
-<tr class="separator:gacb709294102ab1ee8c6d2418a25c6ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad99362d10041102b6e413a05f95f31da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gad99362d10041102b6e413a05f95f31da">get_low_voltage_interrupt_priority</a> ()</td></tr>
-<tr class="memdesc:gad99362d10041102b6e413a05f95f31da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get low voltage interrupt (LVD) priority.  <a href="group__interrupts.html#gad99362d10041102b6e413a05f95f31da">More...</a><br /></td></tr>
-<tr class="separator:gad99362d10041102b6e413a05f95f31da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab413739f540390abfc307885452bf652"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gab413739f540390abfc307885452bf652">set_adc_interrupt_priority</a> (<a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> priority)</td></tr>
 <tr class="memdesc:gab413739f540390abfc307885452bf652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set analog to digital converter (ADC) interrupt priority.  <a href="group__interrupts.html#gab413739f540390abfc307885452bf652">More...</a><br /></td></tr>
 <tr class="separator:gab413739f540390abfc307885452bf652"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -788,6 +788,26 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga7d6648d7b8c9e35c9a3e19067b8eb8ae" name="ga7d6648d7b8c9e35c9a3e19067b8eb8ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7d6648d7b8c9e35c9a3e19067b8eb8ae">&#9670;&nbsp;</a></span>get_low_voltage_interrupt_priority</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define get_low_voltage_interrupt_priority</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(PVLD)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get low voltage interrupt (LVD) priority. </p>
+<dl class="section return"><dt>Returns</dt><dd>LVD interrupt priority </dd></dl>
+
+</div>
+</div>
 <a id="gabf64c78cca4cdf3dbccbe6b3be2ac7f3" name="gabf64c78cca4cdf3dbccbe6b3be2ac7f3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gabf64c78cca4cdf3dbccbe6b3be2ac7f3">&#9670;&nbsp;</a></span>get_pca_interrupt_priority</h2>
 
@@ -1058,6 +1078,32 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga3d287824f6ad9219ad0ea0ea8ceed3a2" name="ga3d287824f6ad9219ad0ea0ea8ceed3a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3d287824f6ad9219ad0ea0ea8ceed3a2">&#9670;&nbsp;</a></span>set_low_voltage_interrupt_priority</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define set_low_voltage_interrupt_priority</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">priority</td><td>)</td>
+          <td>&#160;&#160;&#160;(PLVD = priority)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set low voltage (LVD) interrupt priority. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">priority</td><td>interrupt priority </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ga61be7c532b0092fb479d95934351910d" name="ga61be7c532b0092fb479d95934351910d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga61be7c532b0092fb479d95934351910d">&#9670;&nbsp;</a></span>set_pca_interrupt_priority</h2>
 
@@ -1227,26 +1273,6 @@ Functions</h2></td></tr>
 <p>Get INT1 interrupt trigger. </p>
 <p >By default trigger initialized with RAISING_OR_FALLING_EDGE value</p>
 <dl class="section return"><dt>Returns</dt><dd>RAISING_OR_FALLING_EDGE or ONLY_FALLING_EDGE </dd></dl>
-
-</div>
-</div>
-<a id="gad99362d10041102b6e413a05f95f31da" name="gad99362d10041102b6e413a05f95f31da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad99362d10041102b6e413a05f95f31da">&#9670;&nbsp;</a></span>get_low_voltage_interrupt_priority()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> get_low_voltage_interrupt_priority </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get low voltage interrupt (LVD) priority. </p>
-<dl class="section return"><dt>Returns</dt><dd>LVD interrupt priority </dd></dl>
 
 </div>
 </div>
@@ -1434,32 +1460,6 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">trigger</td><td>RAISING_OR_FALLING_EDGE or ONLY_FALLING_EDGE </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="gacb709294102ab1ee8c6d2418a25c6ef9" name="gacb709294102ab1ee8c6d2418a25c6ef9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacb709294102ab1ee8c6d2418a25c6ef9">&#9670;&nbsp;</a></span>set_low_voltage_interrupt_priority()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void set_low_voltage_interrupt_priority </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td>
-          <td class="paramname"><em>priority</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set low voltage (LVD) interrupt priority. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">priority</td><td>interrupt priority </td></tr>
   </table>
   </dd>
 </dl>

@@ -1,16 +1,6 @@
 #include<interrupts.h>
 #include<bits.h>
 
-void set_low_voltage_interrupt_priority(interrupt_priority_t priority)
-{
-    PLVD = priority;
-}
-
-interrupt_priority_t get_low_voltage_interrupt_priority()
-{
-    return PLVD;
-}
-
 void set_adc_interrupt_priority(interrupt_priority_t priority)
 {
     PADC = priority;
