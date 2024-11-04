@@ -161,7 +161,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-void enable_adc_interrupt();
+#define enable_adc_interrupt() (EADC = 1)
 
 /**
  * @brief Disable ADC interrupt
@@ -170,7 +170,7 @@ void enable_adc_interrupt();
  * 
  * @ingroup interrupts
  */
-void disable_adc_interrupt();
+#define disable_adc_interrupt() (EADC = 0)
 
 /**
  * @brief Get ADC interrupt enable status
@@ -180,7 +180,7 @@ void disable_adc_interrupt();
  * 
  * @ingroup interrupts
  */
-bool is_adc_interrupt_enabled();
+#define is_adc_interrupt_enabled() (EADC == 1 && is_mcu_interrupts_enabled())
 
 /**
  * @brief Enable UART1 interrupt
