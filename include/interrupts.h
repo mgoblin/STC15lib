@@ -441,7 +441,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-void set_pca_interrupt_priority(interrupt_priority_t priority);
+#define set_pca_interrupt_priority(priority) (PPCA = priority)
 
 /**
  * @brief Get programmable counter arrya (PCA) interrupt priority
@@ -450,7 +450,7 @@ void set_pca_interrupt_priority(interrupt_priority_t priority);
  * 
  * @ingroup interrupts
  */
-interrupt_priority_t get_pca_interrupt_priority();
+#define get_pca_interrupt_priority() (PPCA)
 
 /**
  * @brief Set low voltage (LVD) interrupt priority

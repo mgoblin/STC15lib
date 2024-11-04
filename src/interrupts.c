@@ -1,16 +1,6 @@
 #include<interrupts.h>
 #include<bits.h>
 
-void set_pca_interrupt_priority(interrupt_priority_t priority)
-{
-    PPCA = priority;
-}
-
-interrupt_priority_t get_pca_interrupt_priority()
-{
-    return PPCA;
-}
-
 void set_low_voltage_interrupt_priority(interrupt_priority_t priority)
 {
     PLVD = priority;

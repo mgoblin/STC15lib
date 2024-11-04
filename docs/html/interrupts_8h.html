@@ -199,6 +199,12 @@ Macros</h2></td></tr>
 <tr class="memitem:ga749a47d315950a06ecd28e89cacec83d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga749a47d315950a06ecd28e89cacec83d">is_spi_interrupt_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(IE2, 1) &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td></tr>
 <tr class="memdesc:ga749a47d315950a06ecd28e89cacec83d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get SPI interrupt enable status.  <a href="group__interrupts.html#ga749a47d315950a06ecd28e89cacec83d">More...</a><br /></td></tr>
 <tr class="separator:ga749a47d315950a06ecd28e89cacec83d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61be7c532b0092fb479d95934351910d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga61be7c532b0092fb479d95934351910d">set_pca_interrupt_priority</a>(priority)&#160;&#160;&#160;(PPCA = priority)</td></tr>
+<tr class="memdesc:ga61be7c532b0092fb479d95934351910d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set programmable counter arrya (PCA) interrupt priority.  <a href="group__interrupts.html#ga61be7c532b0092fb479d95934351910d">More...</a><br /></td></tr>
+<tr class="separator:ga61be7c532b0092fb479d95934351910d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf64c78cca4cdf3dbccbe6b3be2ac7f3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gabf64c78cca4cdf3dbccbe6b3be2ac7f3">get_pca_interrupt_priority</a>()&#160;&#160;&#160;(PPCA)</td></tr>
+<tr class="memdesc:gabf64c78cca4cdf3dbccbe6b3be2ac7f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get programmable counter arrya (PCA) interrupt priority.  <a href="group__interrupts.html#gabf64c78cca4cdf3dbccbe6b3be2ac7f3">More...</a><br /></td></tr>
+<tr class="separator:gabf64c78cca4cdf3dbccbe6b3be2ac7f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -213,12 +219,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaab127a9699665db19209e73c125a36e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaab127a9699665db19209e73c125a36e6">set_pca_interrupt_priority</a> (<a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> priority)</td></tr>
-<tr class="memdesc:gaab127a9699665db19209e73c125a36e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set programmable counter arrya (PCA) interrupt priority.  <a href="group__interrupts.html#gaab127a9699665db19209e73c125a36e6">More...</a><br /></td></tr>
-<tr class="separator:gaab127a9699665db19209e73c125a36e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaabc0dd3884a711ef02b6949592319c21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaabc0dd3884a711ef02b6949592319c21">get_pca_interrupt_priority</a> ()</td></tr>
-<tr class="memdesc:gaabc0dd3884a711ef02b6949592319c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get programmable counter arrya (PCA) interrupt priority.  <a href="group__interrupts.html#gaabc0dd3884a711ef02b6949592319c21">More...</a><br /></td></tr>
-<tr class="separator:gaabc0dd3884a711ef02b6949592319c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacb709294102ab1ee8c6d2418a25c6ef9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gacb709294102ab1ee8c6d2418a25c6ef9">set_low_voltage_interrupt_priority</a> (<a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> priority)</td></tr>
 <tr class="memdesc:gacb709294102ab1ee8c6d2418a25c6ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set low voltage (LVD) interrupt priority.  <a href="group__interrupts.html#gacb709294102ab1ee8c6d2418a25c6ef9">More...</a><br /></td></tr>
 <tr class="separator:gacb709294102ab1ee8c6d2418a25c6ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>

@@ -59,4 +59,5 @@ var menudata={children:[
 {text:"e",url:"globals_defs.html#index_e"},
 {text:"g",url:"globals_defs.html#index_g"},
 {text:"i",url:"globals_defs.html#index_i"},
-{text:"m",url:"globals_defs.html#index_m"}]}]}]}]}
+{text:"m",url:"globals_defs.html#index_m"},
+{text:"s",url:"globals_defs.html#index_s"}]}]}]}]}
