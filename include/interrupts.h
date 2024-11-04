@@ -89,7 +89,9 @@ typedef enum
  */
 typedef enum
 {
+    /// @brief Generate interrupt on both raise and falling edges
     RAISING_OR_FALLING_EDGE = 0,
+    /// @brief Generate interrupt only on fallign edge
     ONLY_FALLING_EDGE = 1
 } external_interrupt_trigger_t;
 
@@ -102,7 +104,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-void enable_mcu_interrupts();
+#define enable_mcu_interrupts() (EA = 1)
 
 /**
  * @brief Disable interrupts support of MCU
@@ -113,7 +115,7 @@ void enable_mcu_interrupts();
  * 
  * @ingroup interrupts
  */
-void disable_mcu_interrupts();
+#define disable_mcu_interrupts() (EA = 0)
 
 /**
  * Get MCU interrupts support state
@@ -122,7 +124,8 @@ void disable_mcu_interrupts();
  * 
  * @ingroup interrupts
  */
-bool is_mcu_interrupts_enabled();
+#define is_mcu_interrupts_enabled() (EA == 1)
+//bool is_mcu_interrupts_enabled();
 
 /**
  * @brief Enable low voltage interrupt

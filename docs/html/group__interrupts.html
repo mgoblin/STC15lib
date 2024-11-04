@@ -63,33 +63,37 @@ $(function() {
 
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Interrupts</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga45385330048db93cc8070cac1819be5c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c">enable_mcu_interrupts</a>()&#160;&#160;&#160;(EA = 1)</td></tr>
+<tr class="memdesc:ga45385330048db93cc8070cac1819be5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable interrupts support of MCU.  <a href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c">More...</a><br /></td></tr>
+<tr class="separator:ga45385330048db93cc8070cac1819be5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b0ea5804af6316376f49ade70b868b3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga8b0ea5804af6316376f49ade70b868b3">disable_mcu_interrupts</a>()&#160;&#160;&#160;(EA = 0)</td></tr>
+<tr class="memdesc:ga8b0ea5804af6316376f49ade70b868b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable interrupts support of MCU.  <a href="group__interrupts.html#ga8b0ea5804af6316376f49ade70b868b3">More...</a><br /></td></tr>
+<tr class="separator:ga8b0ea5804af6316376f49ade70b868b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7af372e71df37937e8ed0b195fbde1f1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>()&#160;&#160;&#160;(EA == 1)</td></tr>
+<tr class="separator:ga7af372e71df37937e8ed0b195fbde1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:ga9ebbbf91c4e6fa77cced0ac0daefd964"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> { <a class="el" href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a6a226f4143ca3b18999551694cdb72a8">LOW</a> = 0
 , <a class="el" href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893">HIGH</a> = 1
  }</td></tr>
 <tr class="separator:ga9ebbbf91c4e6fa77cced0ac0daefd964"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga97fc91f85abe6139a7f24fbdff35c7e7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7">external_interrupt_trigger_t</a> { <b>RAISING_OR_FALLING_EDGE</b> = 0
-, <b>ONLY_FALLING_EDGE</b> = 1
+<tr class="memitem:ga97fc91f85abe6139a7f24fbdff35c7e7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7">external_interrupt_trigger_t</a> { <a class="el" href="group__interrupts.html#gga97fc91f85abe6139a7f24fbdff35c7e7ad791487f941a47c772442d5252a819bc">RAISING_OR_FALLING_EDGE</a> = 0
+, <a class="el" href="group__interrupts.html#gga97fc91f85abe6139a7f24fbdff35c7e7a80874c2f638b4611a7d53723ff1f6c3d">ONLY_FALLING_EDGE</a> = 1
  }</td></tr>
 <tr class="separator:ga97fc91f85abe6139a7f24fbdff35c7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga7d8b123163c39c34432e42165c470e5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f">enable_mcu_interrupts</a> ()</td></tr>
-<tr class="memdesc:ga7d8b123163c39c34432e42165c470e5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable interrupts support of MCU.  <a href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f">More...</a><br /></td></tr>
-<tr class="separator:ga7d8b123163c39c34432e42165c470e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7cb49224e4523d16daefd93e35cf4183"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga7cb49224e4523d16daefd93e35cf4183">disable_mcu_interrupts</a> ()</td></tr>
-<tr class="memdesc:ga7cb49224e4523d16daefd93e35cf4183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable interrupts support of MCU.  <a href="group__interrupts.html#ga7cb49224e4523d16daefd93e35cf4183">More...</a><br /></td></tr>
-<tr class="separator:ga7cb49224e4523d16daefd93e35cf4183"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga77517a0ceb18961ebd4a6859286bbc16"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga77517a0ceb18961ebd4a6859286bbc16">is_mcu_interrupts_enabled</a> ()</td></tr>
-<tr class="separator:ga77517a0ceb18961ebd4a6859286bbc16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0c06ab7b414296cbd8184f22926f7111"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga0c06ab7b414296cbd8184f22926f7111">enable_low_voltage_interrupt</a> ()</td></tr>
 <tr class="memdesc:ga0c06ab7b414296cbd8184f22926f7111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable low voltage interrupt.  <a href="group__interrupts.html#ga0c06ab7b414296cbd8184f22926f7111">More...</a><br /></td></tr>
 <tr class="separator:ga0c06ab7b414296cbd8184f22926f7111"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -252,7 +256,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for interrupts. Interrupts are controlled by registers IE and IE2 bits.</p>
-<p >Interrupts at all can be enabled, disabled and readed by <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a>, disable_mcu_interrupts and <a class="el" href="group__interrupts.html#ga77517a0ceb18961ebd4a6859286bbc16">is_mcu_interrupts_enabled()</a> routines.</p>
+<p >Interrupts at all can be enabled, disabled and readed by <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a>, disable_mcu_interrupts and <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled()</a> routines.</p>
 <p >Each kind of interrupt source controlled by enable_&lt;source&gt;_interrupt, disable_&lt;source&gt;_interrupt routines. The state of each kind of interrupt source can be probed by is_&lt;source&gt;_interrupts_enabled() routine. If mcu interrupts support not enabled individual interrupt sources are disabled too and is_&lt;source&gt;_interrupts_enabled() call return false.</p>
 <p >Interrupt handler should be declared as: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> interruptHandler() __interrupt(0)</div>
 </div><!-- fragment --><p> The name of handler routine can be any correct C function name. Hanlder should have empty parameter list. Keyword __interrupt and interrupt number assign handler to specified interrupt. See STC15series MCU Data Sheet Section 6.4.</p>
@@ -303,6 +307,66 @@ Functions</h2></td></tr>
 <p >For interrupt priority set_&lt;source&gt;_interrupt_priority(priority enum value) and get _&lt;source&gt;_interrupt_priority() routines should be used.</p>
 <p >For INT0 and INT1 trigger configration set_&lt;int0 or int1&gt;_interrupt_trigger(trigger enum value) and get_&lt;int0 or int1&gt;_interrupt_trigger() routines should be used.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga8b0ea5804af6316376f49ade70b868b3" name="ga8b0ea5804af6316376f49ade70b868b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8b0ea5804af6316376f49ade70b868b3">&#9670;&nbsp;</a></span>disable_mcu_interrupts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define disable_mcu_interrupts</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(EA = 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable interrupts support of MCU. </p>
+<p >Set EA to 0 to disable interrupt support. By default interrupts support are disabled Each interrupt should be enabled implicitly by setting its own flag </p>
+
+</div>
+</div>
+<a id="ga45385330048db93cc8070cac1819be5c" name="ga45385330048db93cc8070cac1819be5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga45385330048db93cc8070cac1819be5c">&#9670;&nbsp;</a></span>enable_mcu_interrupts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define enable_mcu_interrupts</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(EA = 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable interrupts support of MCU. </p>
+<p >Set EA to 1 to enable interrupt support. By default interrupts support are disabled Each interrupt should be enabled implicitly by setting its own flag </p>
+
+</div>
+</div>
+<a id="ga7af372e71df37937e8ed0b195fbde1f1" name="ga7af372e71df37937e8ed0b195fbde1f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7af372e71df37937e8ed0b195fbde1f1">&#9670;&nbsp;</a></span>is_mcu_interrupts_enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define is_mcu_interrupts_enabled</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(EA == 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Get MCU interrupts support state</p>
+<dl class="section return"><dt>Returns</dt><dd>if enabled returns true otherwise returns false </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="ga97fc91f85abe6139a7f24fbdff35c7e7" name="ga97fc91f85abe6139a7f24fbdff35c7e7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga97fc91f85abe6139a7f24fbdff35c7e7">&#9670;&nbsp;</a></span>external_interrupt_trigger_t</h2>
@@ -316,6 +380,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >External interrupt (INT0, INT1) trigger enumeration </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga97fc91f85abe6139a7f24fbdff35c7e7ad791487f941a47c772442d5252a819bc" name="gga97fc91f85abe6139a7f24fbdff35c7e7ad791487f941a47c772442d5252a819bc"></a>RAISING_OR_FALLING_EDGE&#160;</td><td class="fielddoc"><p >Generate interrupt on both raise and falling edges. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga97fc91f85abe6139a7f24fbdff35c7e7a80874c2f638b4611a7d53723ff1f6c3d" name="gga97fc91f85abe6139a7f24fbdff35c7e7a80874c2f638b4611a7d53723ff1f6c3d"></a>ONLY_FALLING_EDGE&#160;</td><td class="fielddoc"><p >Generate interrupt only on fallign edge. </p>
+</td></tr>
+</table>
 
 </div>
 </div>
@@ -357,7 +427,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Disable ADC interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -377,7 +447,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Disable INT0 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -397,7 +467,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Disable INT1 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -417,7 +487,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Disable INT2 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -437,7 +507,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Disable INT3 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -457,7 +527,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Disable INT3 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -477,27 +547,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Disable low voltage interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
-
-</div>
-</div>
-<a id="ga7cb49224e4523d16daefd93e35cf4183" name="ga7cb49224e4523d16daefd93e35cf4183"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7cb49224e4523d16daefd93e35cf4183">&#9670;&nbsp;</a></span>disable_mcu_interrupts()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void disable_mcu_interrupts </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Disable interrupts support of MCU. </p>
-<p >Set EA to 0 to disable interrupt support. By default interrupts support are disabled Each interrupt should be enabled implicitly by setting its own flag </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -517,7 +567,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Disable SPI interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -537,7 +587,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enable timer0 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -557,7 +607,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Disable timer2 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -577,7 +627,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Disable UART1 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -597,7 +647,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enable ADC interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -617,7 +667,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enable INT0 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -637,7 +687,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enable INT1 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -657,7 +707,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enable INT2 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -677,7 +727,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enable INT3 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -697,7 +747,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enable INT4 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -717,27 +767,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enable low voltage interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
-
-</div>
-</div>
-<a id="ga7d8b123163c39c34432e42165c470e5f" name="ga7d8b123163c39c34432e42165c470e5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7d8b123163c39c34432e42165c470e5f">&#9670;&nbsp;</a></span>enable_mcu_interrupts()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void enable_mcu_interrupts </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enable interrupts support of MCU. </p>
-<p >Set EA to 1 to enable interrupt support. By default interrupts support are disabled Each interrupt should be enabled implicitly by setting its own flag </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -757,7 +787,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enable SPI interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -777,7 +807,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enable timer0 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -797,7 +827,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enable timer2 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -817,7 +847,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enable UART1 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga7d8b123163c39c34432e42165c470e5f" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -1167,25 +1197,6 @@ Functions</h2></td></tr>
 <p>Get low voltage interrupt enable status. </p>
 <p >Get mcu interrupt and low voltage interrupt support status</p>
 <dl class="section return"><dt>Returns</dt><dd>true if mcu and low voltage interrupt enabled, otherwise false </dd></dl>
-
-</div>
-</div>
-<a id="ga77517a0ceb18961ebd4a6859286bbc16" name="ga77517a0ceb18961ebd4a6859286bbc16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga77517a0ceb18961ebd4a6859286bbc16">&#9670;&nbsp;</a></span>is_mcu_interrupts_enabled()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool is_mcu_interrupts_enabled </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Get MCU interrupts support state</p>
-<dl class="section return"><dt>Returns</dt><dd>if enabled returns true otherwise returns false </dd></dl>
 
 </div>
 </div>
