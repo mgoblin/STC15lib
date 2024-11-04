@@ -413,7 +413,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-void enable_spi_interrupt();
+#define enable_spi_interrupt() (bit_set(IE2, 1))
 
 /**
  * @brief Disable SPI interrupt
@@ -422,7 +422,7 @@ void enable_spi_interrupt();
  * 
  * @ingroup interrupts
  */
-void disable_spi_interrupt();
+#define disable_spi_interrupt() (bit_clr(IE2, 1))
 
 /**
  * @brief Get SPI interrupt enable status
@@ -432,7 +432,7 @@ void disable_spi_interrupt();
  * 
  * @ingroup interrupts
  */
-bool is_spi_interrupt_enabled();
+#define is_spi_interrupt_enabled() (test_if_bit_set(IE2, 1) && is_mcu_interrupts_enabled())
 
 /**
  * @brief Set programmable counter arrya (PCA) interrupt priority

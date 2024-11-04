@@ -170,6 +170,15 @@ Macros</h2></td></tr>
 <tr class="memitem:ga0c35fd771294a22d4cd3e205fd806bdb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga0c35fd771294a22d4cd3e205fd806bdb">is_timer2_interrupt_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(IE2, 2) &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td></tr>
 <tr class="memdesc:ga0c35fd771294a22d4cd3e205fd806bdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer2 interrupt enable status.  <a href="group__interrupts.html#ga0c35fd771294a22d4cd3e205fd806bdb">More...</a><br /></td></tr>
 <tr class="separator:ga0c35fd771294a22d4cd3e205fd806bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1031a01617faf8bd48f91d9eac505792"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga1031a01617faf8bd48f91d9eac505792">enable_spi_interrupt</a>()&#160;&#160;&#160;(bit_set(IE2, 1))</td></tr>
+<tr class="memdesc:ga1031a01617faf8bd48f91d9eac505792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable SPI interrupt.  <a href="group__interrupts.html#ga1031a01617faf8bd48f91d9eac505792">More...</a><br /></td></tr>
+<tr class="separator:ga1031a01617faf8bd48f91d9eac505792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad8ec33652ec7e3a2a2754678217a9799"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gad8ec33652ec7e3a2a2754678217a9799">disable_spi_interrupt</a>()&#160;&#160;&#160;(bit_clr(IE2, 1))</td></tr>
+<tr class="memdesc:gad8ec33652ec7e3a2a2754678217a9799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable SPI interrupt.  <a href="group__interrupts.html#gad8ec33652ec7e3a2a2754678217a9799">More...</a><br /></td></tr>
+<tr class="separator:gad8ec33652ec7e3a2a2754678217a9799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga749a47d315950a06ecd28e89cacec83d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga749a47d315950a06ecd28e89cacec83d">is_spi_interrupt_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(IE2, 1) &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td></tr>
+<tr class="memdesc:ga749a47d315950a06ecd28e89cacec83d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get SPI interrupt enable status.  <a href="group__interrupts.html#ga749a47d315950a06ecd28e89cacec83d">More...</a><br /></td></tr>
+<tr class="separator:ga749a47d315950a06ecd28e89cacec83d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -184,15 +193,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaccbf2d562982d1d61685a67e9fe0e8b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaccbf2d562982d1d61685a67e9fe0e8b2">enable_spi_interrupt</a> ()</td></tr>
-<tr class="memdesc:gaccbf2d562982d1d61685a67e9fe0e8b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable SPI interrupt.  <a href="group__interrupts.html#gaccbf2d562982d1d61685a67e9fe0e8b2">More...</a><br /></td></tr>
-<tr class="separator:gaccbf2d562982d1d61685a67e9fe0e8b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga68fd74ed67a99485f1634ad957147240"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga68fd74ed67a99485f1634ad957147240">disable_spi_interrupt</a> ()</td></tr>
-<tr class="memdesc:ga68fd74ed67a99485f1634ad957147240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable SPI interrupt.  <a href="group__interrupts.html#ga68fd74ed67a99485f1634ad957147240">More...</a><br /></td></tr>
-<tr class="separator:ga68fd74ed67a99485f1634ad957147240"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga230d7a3ba3a1ffc06155194eea02c531"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga230d7a3ba3a1ffc06155194eea02c531">is_spi_interrupt_enabled</a> ()</td></tr>
-<tr class="memdesc:ga230d7a3ba3a1ffc06155194eea02c531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get SPI interrupt enable status.  <a href="group__interrupts.html#ga230d7a3ba3a1ffc06155194eea02c531">More...</a><br /></td></tr>
-<tr class="separator:ga230d7a3ba3a1ffc06155194eea02c531"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaab127a9699665db19209e73c125a36e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaab127a9699665db19209e73c125a36e6">set_pca_interrupt_priority</a> (<a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> priority)</td></tr>
 <tr class="memdesc:gaab127a9699665db19209e73c125a36e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set programmable counter arrya (PCA) interrupt priority.  <a href="group__interrupts.html#gaab127a9699665db19209e73c125a36e6">More...</a><br /></td></tr>
 <tr class="separator:gaab127a9699665db19209e73c125a36e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -468,6 +468,26 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gad8ec33652ec7e3a2a2754678217a9799" name="gad8ec33652ec7e3a2a2754678217a9799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad8ec33652ec7e3a2a2754678217a9799">&#9670;&nbsp;</a></span>disable_spi_interrupt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define disable_spi_interrupt</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(bit_clr(IE2, 1))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable SPI interrupt. </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+
+</div>
+</div>
 <a id="ga2ef6ebd3211c16ce240018d22589e8da" name="ga2ef6ebd3211c16ce240018d22589e8da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga2ef6ebd3211c16ce240018d22589e8da">&#9670;&nbsp;</a></span>disable_timer0_interrupt</h2>
 
@@ -685,6 +705,26 @@ Functions</h2></td></tr>
 
 <p>Enable interrupts support of MCU. </p>
 <p >Set EA to 1 to enable interrupt support. By default interrupts support are disabled Each interrupt should be enabled implicitly by setting its own flag </p>
+
+</div>
+</div>
+<a id="ga1031a01617faf8bd48f91d9eac505792" name="ga1031a01617faf8bd48f91d9eac505792"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1031a01617faf8bd48f91d9eac505792">&#9670;&nbsp;</a></span>enable_spi_interrupt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define enable_spi_interrupt</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(bit_set(IE2, 1))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable SPI interrupt. </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
 </div>
@@ -914,6 +954,27 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga749a47d315950a06ecd28e89cacec83d" name="ga749a47d315950a06ecd28e89cacec83d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga749a47d315950a06ecd28e89cacec83d">&#9670;&nbsp;</a></span>is_spi_interrupt_enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define is_spi_interrupt_enabled</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(test_if_bit_set(IE2, 1) &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get SPI interrupt enable status. </p>
+<p >Get mcu interrupt and SPI interrupt support status</p>
+<dl class="section return"><dt>Returns</dt><dd>true if mcu and SPI interrupt enabled, otherwise false </dd></dl>
+
+</div>
+</div>
 <a id="gaf6a267bf6befa9aee24a701bd782f457" name="gaf6a267bf6befa9aee24a701bd782f457"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf6a267bf6befa9aee24a701bd782f457">&#9670;&nbsp;</a></span>is_timer0_interrupt_enabled</h2>
 
@@ -1021,46 +1082,6 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga68fd74ed67a99485f1634ad957147240" name="ga68fd74ed67a99485f1634ad957147240"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga68fd74ed67a99485f1634ad957147240">&#9670;&nbsp;</a></span>disable_spi_interrupt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void disable_spi_interrupt </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Disable SPI interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
-
-</div>
-</div>
-<a id="gaccbf2d562982d1d61685a67e9fe0e8b2" name="gaccbf2d562982d1d61685a67e9fe0e8b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaccbf2d562982d1d61685a67e9fe0e8b2">&#9670;&nbsp;</a></span>enable_spi_interrupt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void enable_spi_interrupt </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enable SPI interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
-
-</div>
-</div>
 <a id="ga6d5bc3dc0359348039199677f85b4b74" name="ga6d5bc3dc0359348039199677f85b4b74"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga6d5bc3dc0359348039199677f85b4b74">&#9670;&nbsp;</a></span>get_adc_interrupt_priority()</h2>
 
@@ -1260,27 +1281,6 @@ Functions</h2></td></tr>
 
 <p>Get UART1 interrupt priority. </p>
 <dl class="section return"><dt>Returns</dt><dd>UART1 interrupt priority </dd></dl>
-
-</div>
-</div>
-<a id="ga230d7a3ba3a1ffc06155194eea02c531" name="ga230d7a3ba3a1ffc06155194eea02c531"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga230d7a3ba3a1ffc06155194eea02c531">&#9670;&nbsp;</a></span>is_spi_interrupt_enabled()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool is_spi_interrupt_enabled </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get SPI interrupt enable status. </p>
-<p >Get mcu interrupt and SPI interrupt support status</p>
-<dl class="section return"><dt>Returns</dt><dd>true if mcu and SPI interrupt enabled, otherwise false </dd></dl>
 
 </div>
 </div>

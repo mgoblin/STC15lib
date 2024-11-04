@@ -1,23 +1,6 @@
 #include<interrupts.h>
 #include<bits.h>
 
-void enable_spi_interrupt()
-{
-    //ESPI = 1;
-    bit_set(IE2, 1);
-}
-
-void disable_spi_interrupt()
-{
-    //ESPI = 0;
-    bit_clr(IE2, 1);
-}
-
-bool is_spi_interrupt_enabled()
-{
-    return test_if_bit_set(IE2, 1) && is_mcu_interrupts_enabled();
-}
-
 void set_pca_interrupt_priority(interrupt_priority_t priority)
 {
     PPCA = priority;
