@@ -3,6 +3,7 @@
 
 #include<stdbool.h>
 #include<sys.h>
+#include<bits.h>
 
 /**
  * @file interrupts.h
@@ -491,11 +492,11 @@ typedef enum
 /**
  * @brief Set UART1 interrupt priority
  * 
- * @param priority interrupt priority
+ * @param interrupt_priority_t priority interrupt priority
  * 
  * @ingroup interrupts
  */
-void set_uart1_interrupt_priority(interrupt_priority_t priority);
+#define set_uart1_interrupt_priority(priority) (PS = priority)
 
 /**
  * @brief Get UART1 interrupt priority
@@ -504,25 +505,25 @@ void set_uart1_interrupt_priority(interrupt_priority_t priority);
  * 
  * @ingroup interrupts
  */
-interrupt_priority_t get_uart1_interrupt_priority();
+#define get_uart1_interrupt_priority() (PS)
 
 /**
  * @brief Set INT0 interrupt priority
  * 
- * @param priority interrupt priority
+ * @param interrupt_priority_t priority interrupt priority
  * 
  * @ingroup interrupts
  */
-void set_int0_interrupt_priority(interrupt_priority_t priority);
+#define set_int0_interrupt_priority(priority) (PX0 = priority)
 
 /**
  * @brief Get INT0 interrupt priority
  * 
- * @return INT0 interrupt priority
+ * @return interrupt_priority_t INT0 interrupt priority
  * 
  * @ingroup interrupts
  */
-interrupt_priority_t get_int0_interrupt_priority();
+#define get_int0_interrupt_priority() (PX0)
 
 /**
  * @brief Set INT1 interrupt priority

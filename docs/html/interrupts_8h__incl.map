@@ -1,7 +1,8 @@
 <map id="include/interrupts.h" name="include/interrupts.h">
-<area shape="rect" id="node1" title=" " alt="" coords="19,5,167,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="66,5,214,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,80,88,107"/>
 <area shape="rect" id="node3" href="$sys_8h.html" title=" " alt="" coords="112,80,168,107"/>
+<area shape="rect" id="node6" href="$bits_8h_source.html" title=" " alt="" coords="192,80,251,107"/>
 <area shape="rect" id="node4" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="91,155,189,181"/>
 <area shape="rect" id="node5" title=" " alt="" coords="95,229,185,256"/>
 </map>
