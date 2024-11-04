@@ -134,6 +134,15 @@ Macros</h2></td></tr>
 <tr class="memitem:ga88ebf38f3c33cba4de86d19e2532ec97"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga88ebf38f3c33cba4de86d19e2532ec97">is_int2_interrupt_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, 4) &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td></tr>
 <tr class="memdesc:ga88ebf38f3c33cba4de86d19e2532ec97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get INT2 interrupt enable status.  <a href="group__interrupts.html#ga88ebf38f3c33cba4de86d19e2532ec97">More...</a><br /></td></tr>
 <tr class="separator:ga88ebf38f3c33cba4de86d19e2532ec97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga10ccfe3b81e2f0f8f8a9014a6f6cb382"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga10ccfe3b81e2f0f8f8a9014a6f6cb382">enable_int3_interrupt</a>()&#160;&#160;&#160;(bit_set(INT_CLKO, 5))</td></tr>
+<tr class="memdesc:ga10ccfe3b81e2f0f8f8a9014a6f6cb382"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable INT3 interrupt.  <a href="group__interrupts.html#ga10ccfe3b81e2f0f8f8a9014a6f6cb382">More...</a><br /></td></tr>
+<tr class="separator:ga10ccfe3b81e2f0f8f8a9014a6f6cb382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0eefb72a54f3befd3535d70e71a06de4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga0eefb72a54f3befd3535d70e71a06de4">disable_int3_interrupt</a>()&#160;&#160;&#160;(bit_clr(INT_CLKO, 5))</td></tr>
+<tr class="memdesc:ga0eefb72a54f3befd3535d70e71a06de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable INT3 interrupt.  <a href="group__interrupts.html#ga0eefb72a54f3befd3535d70e71a06de4">More...</a><br /></td></tr>
+<tr class="separator:ga0eefb72a54f3befd3535d70e71a06de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga55815a15f668bf452348f7483ca94a2e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga55815a15f668bf452348f7483ca94a2e">is_int3_interrupt_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, 5) &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td></tr>
+<tr class="memdesc:ga55815a15f668bf452348f7483ca94a2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get INT3 interrupt enable status.  <a href="group__interrupts.html#ga55815a15f668bf452348f7483ca94a2e">More...</a><br /></td></tr>
+<tr class="separator:ga55815a15f668bf452348f7483ca94a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -148,15 +157,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gabd7fad4fd6c3c005593a746688bde542"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gabd7fad4fd6c3c005593a746688bde542">enable_int3_interrupt</a> ()</td></tr>
-<tr class="memdesc:gabd7fad4fd6c3c005593a746688bde542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable INT3 interrupt.  <a href="group__interrupts.html#gabd7fad4fd6c3c005593a746688bde542">More...</a><br /></td></tr>
-<tr class="separator:gabd7fad4fd6c3c005593a746688bde542"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaecdd994bc71f43f9060d8b145d186e52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaecdd994bc71f43f9060d8b145d186e52">disable_int3_interrupt</a> ()</td></tr>
-<tr class="memdesc:gaecdd994bc71f43f9060d8b145d186e52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable INT3 interrupt.  <a href="group__interrupts.html#gaecdd994bc71f43f9060d8b145d186e52">More...</a><br /></td></tr>
-<tr class="separator:gaecdd994bc71f43f9060d8b145d186e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga93af9ec51434ec7173e68a85138e91f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga93af9ec51434ec7173e68a85138e91f5">is_int3_interrupt_enabled</a> ()</td></tr>
-<tr class="memdesc:ga93af9ec51434ec7173e68a85138e91f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get INT3 interrupt enable status.  <a href="group__interrupts.html#ga93af9ec51434ec7173e68a85138e91f5">More...</a><br /></td></tr>
-<tr class="separator:ga93af9ec51434ec7173e68a85138e91f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga78972d8ed562682884ed9ddec915ec06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga78972d8ed562682884ed9ddec915ec06">enable_int4_interrupt</a> ()</td></tr>
 <tr class="memdesc:ga78972d8ed562682884ed9ddec915ec06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable INT4 interrupt.  <a href="group__interrupts.html#ga78972d8ed562682884ed9ddec915ec06">More...</a><br /></td></tr>
 <tr class="separator:ga78972d8ed562682884ed9ddec915ec06"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -388,6 +388,26 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga0eefb72a54f3befd3535d70e71a06de4" name="ga0eefb72a54f3befd3535d70e71a06de4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0eefb72a54f3befd3535d70e71a06de4">&#9670;&nbsp;</a></span>disable_int3_interrupt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define disable_int3_interrupt</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(bit_clr(INT_CLKO, 5))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable INT3 interrupt. </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+
+</div>
+</div>
 <a id="gae7bd7f894582b7f376b077fbd4435864" name="gae7bd7f894582b7f376b077fbd4435864"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gae7bd7f894582b7f376b077fbd4435864">&#9670;&nbsp;</a></span>disable_low_voltage_interrupt</h2>
 
@@ -524,6 +544,26 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enable INT2 interrupt. </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+
+</div>
+</div>
+<a id="ga10ccfe3b81e2f0f8f8a9014a6f6cb382" name="ga10ccfe3b81e2f0f8f8a9014a6f6cb382"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga10ccfe3b81e2f0f8f8a9014a6f6cb382">&#9670;&nbsp;</a></span>enable_int3_interrupt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define enable_int3_interrupt</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(bit_set(INT_CLKO, 5))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable INT3 interrupt. </p>
 <p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
@@ -672,6 +712,27 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga55815a15f668bf452348f7483ca94a2e" name="ga55815a15f668bf452348f7483ca94a2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga55815a15f668bf452348f7483ca94a2e">&#9670;&nbsp;</a></span>is_int3_interrupt_enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define is_int3_interrupt_enabled</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, 5) &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get INT3 interrupt enable status. </p>
+<p >Get mcu interrupt and INT3 interrupt support status</p>
+<dl class="section return"><dt>Returns</dt><dd>true if mcu and INT3 interrupt enabled, otherwise false </dd></dl>
+
+</div>
+</div>
 <a id="gac4ef997b6aa14a6864c2ef2c432aac4a" name="gac4ef997b6aa14a6864c2ef2c432aac4a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gac4ef997b6aa14a6864c2ef2c432aac4a">&#9670;&nbsp;</a></span>is_low_voltage_interrupt_enabled</h2>
 
@@ -777,26 +838,6 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gaecdd994bc71f43f9060d8b145d186e52" name="gaecdd994bc71f43f9060d8b145d186e52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaecdd994bc71f43f9060d8b145d186e52">&#9670;&nbsp;</a></span>disable_int3_interrupt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void disable_int3_interrupt </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Disable INT3 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
-
-</div>
-</div>
 <a id="gadc50ceada9d2c1a49bee8bcb4e7efc14" name="gadc50ceada9d2c1a49bee8bcb4e7efc14"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gadc50ceada9d2c1a49bee8bcb4e7efc14">&#9670;&nbsp;</a></span>disable_int4_interrupt()</h2>
 
@@ -873,26 +914,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Disable timer2 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
-
-</div>
-</div>
-<a id="gabd7fad4fd6c3c005593a746688bde542" name="gabd7fad4fd6c3c005593a746688bde542"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabd7fad4fd6c3c005593a746688bde542">&#9670;&nbsp;</a></span>enable_int3_interrupt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void enable_int3_interrupt </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enable INT3 interrupt. </p>
 <p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
@@ -1176,27 +1197,6 @@ Functions</h2></td></tr>
 
 <p>Get UART1 interrupt priority. </p>
 <dl class="section return"><dt>Returns</dt><dd>UART1 interrupt priority </dd></dl>
-
-</div>
-</div>
-<a id="ga93af9ec51434ec7173e68a85138e91f5" name="ga93af9ec51434ec7173e68a85138e91f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga93af9ec51434ec7173e68a85138e91f5">&#9670;&nbsp;</a></span>is_int3_interrupt_enabled()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool is_int3_interrupt_enabled </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get INT3 interrupt enable status. </p>
-<p >Get mcu interrupt and INT3 interrupt support status</p>
-<dl class="section return"><dt>Returns</dt><dd>true if mcu and INT3 interrupt enabled, otherwise false </dd></dl>
 
 </div>
 </div>
