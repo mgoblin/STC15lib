@@ -385,7 +385,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-void enable_timer2_interrupt();
+#define enable_timer2_interrupt() (bit_set(IE2, 2))
 
 /**
  * @brief Disable timer2 interrupt
@@ -394,7 +394,7 @@ void enable_timer2_interrupt();
  * 
  * @ingroup interrupts
  */
-void disable_timer2_interrupt();
+#define disable_timer2_interrupt() (bit_clr(IE2, 2))
 
 /**
  * @brief Get timer2 interrupt enable status
@@ -404,7 +404,7 @@ void disable_timer2_interrupt();
  * 
  * @ingroup interrupts
  */
-bool is_timer2_interrupt_enabled();
+#define is_timer2_interrupt_enabled() (test_if_bit_set(IE2, 2) && is_mcu_interrupts_enabled())
 
 /**
  * @brief Enable SPI interrupt

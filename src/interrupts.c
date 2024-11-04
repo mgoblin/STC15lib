@@ -1,23 +1,6 @@
 #include<interrupts.h>
 #include<bits.h>
 
-void enable_timer2_interrupt()
-{
-    //ET2 = 1;
-    bit_set(IE2, 2);   
-}
-
-void disable_timer2_interrupt()
-{
-    //ET2 = 0;
-    bit_clr(IE2, 2);
-}
-
-bool is_timer2_interrupt_enabled()
-{
-    return test_if_bit_set(IE2, 2) && is_mcu_interrupts_enabled();
-}
-
 void enable_spi_interrupt()
 {
     //ESPI = 1;
