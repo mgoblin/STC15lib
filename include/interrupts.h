@@ -546,20 +546,20 @@ typedef enum
 /**
  * @brief Set timer0 interrupt priority
  * 
- * @param priority interrupt priority
+ * @param priority interrupt_priority_t interrupt priority
  * 
  * @ingroup interrupts
  */
-void set_timer0_interrupt_priority(interrupt_priority_t priority);
+#define set_timer0_interrupt_priority(priority) (PT0 = priority)
 
 /**
  * @brief Get timer0 interrupt priority
  * 
- * @return timer0 interrupt priority
+ * @return interrupt_priority_t timer0 interrupt priority
  * 
  * @ingroup interrupts
  */
-interrupt_priority_t get_timer0_interrupt_priority();
+#define get_timer0_interrupt_priority() (PT0)
 
 /**
  * @brief Set SPI interrupt priority
