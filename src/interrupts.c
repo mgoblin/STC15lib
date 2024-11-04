@@ -1,21 +1,6 @@
 #include<interrupts.h>
 #include<bits.h>
 
-void enable_uart1_interrupt()
-{
-    ES = 1;
-}
-
-void disable_uart1_interrupt()
-{
-    ES = 0;
-}
-
-bool is_uart1_interrupt_enabled()
-{
-    return ES == 1 && is_mcu_interrupts_enabled();
-}
-
 void disable_int0_interrupt()
 {
     EX0 = 0;

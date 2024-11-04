@@ -189,7 +189,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-void enable_uart1_interrupt();
+#define enable_uart1_interrupt() (ES = 1)
 
 /**
  * @brief Disable UART1 interrupt
@@ -198,7 +198,7 @@ void enable_uart1_interrupt();
  * 
  * @ingroup interrupts
  */
-void disable_uart1_interrupt();
+#define disable_uart1_interrupt() (ES = 0)
 
 /**
  * @brief Get UART1 interrupt enable status
@@ -208,7 +208,7 @@ void disable_uart1_interrupt();
  * 
  * @ingroup interrupts
  */
-bool is_uart1_interrupt_enabled();
+#define is_uart1_interrupt_enabled() (ES == 1 && is_mcu_interrupts_enabled())
 
 /**
  * @brief Enable INT0 interrupt
