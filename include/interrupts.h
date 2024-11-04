@@ -477,7 +477,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-void set_adc_interrupt_priority(interrupt_priority_t priority);
+#define set_adc_interrupt_priority(priority) (PADC = priority)
 
 /**
  * @brief Get analog to digital converter (ADC) interrupt priority

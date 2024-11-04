@@ -1,11 +1,6 @@
 #include<interrupts.h>
 #include<bits.h>
 
-void set_adc_interrupt_priority(interrupt_priority_t priority)
-{
-    PADC = priority;
-}
-
 interrupt_priority_t get_adc_interrupt_priority()
 {
     return PADC;
