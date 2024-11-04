@@ -213,7 +213,7 @@ interrupt_priority_t get_low_voltage_interrupt_priority()
 
 void set_adc_interrupt_priority(interrupt_priority_t priority)
 {
-    PADC = 1;
+    PADC = priority;
 }
 
 interrupt_priority_t get_adc_interrupt_priority()
@@ -223,7 +223,7 @@ interrupt_priority_t get_adc_interrupt_priority()
 
 void set_uart1_interrupt_priority(interrupt_priority_t priority)
 {
-    PS = 1;
+    PS = priority;
 }
 
 interrupt_priority_t get_uart1_interrupt_priority()

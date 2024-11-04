@@ -409,7 +409,7 @@ void disable_spi_interrupt();
 bool is_spi_interrupt_enabled();
 
 /**
- * Set programmable counter arrya (PCA) interrupt priority
+ * @brief Set programmable counter arrya (PCA) interrupt priority
  * 
  * @param priority interrupt priority
  * 
@@ -418,7 +418,7 @@ bool is_spi_interrupt_enabled();
 void set_pca_interrupt_priority(interrupt_priority_t priority);
 
 /**
- * Get programmable counter arrya (PCA) interrupt priority
+ * @brief Get programmable counter arrya (PCA) interrupt priority
  * 
  * @return PCA interrupt priority
  * 
@@ -427,7 +427,7 @@ void set_pca_interrupt_priority(interrupt_priority_t priority);
 interrupt_priority_t get_pca_interrupt_priority();
 
 /**
- * Set low voltage (LVD) interrupt priority
+ * @brief Set low voltage (LVD) interrupt priority
  * 
  * @param priority interrupt priority
  * 
@@ -436,7 +436,7 @@ interrupt_priority_t get_pca_interrupt_priority();
 void set_low_voltage_interrupt_priority(interrupt_priority_t priority);
 
 /**
- * Get low voltage interrupt (LVD) priority
+ * @brief Get low voltage interrupt (LVD) priority
  * 
  * @return LVD interrupt priority
  * 
@@ -445,7 +445,7 @@ void set_low_voltage_interrupt_priority(interrupt_priority_t priority);
 interrupt_priority_t get_low_voltage_interrupt_priority();
 
 /**
- * Set analog to digital converter (ADC) interrupt priority
+ * @brief Set analog to digital converter (ADC) interrupt priority
  * 
  * @param priority interrupt priority
  * 
@@ -454,7 +454,7 @@ interrupt_priority_t get_low_voltage_interrupt_priority();
 void set_adc_interrupt_priority(interrupt_priority_t priority);
 
 /**
- * Get analog to digital converter (ADC) interrupt priority
+ * @brief Get analog to digital converter (ADC) interrupt priority
  * 
  * @return ADC interrupt priority
  * 
@@ -463,7 +463,7 @@ void set_adc_interrupt_priority(interrupt_priority_t priority);
 interrupt_priority_t get_adc_interrupt_priority();
 
 /**
- * Set analog UART1 interrupt priority
+ * @brief Set analog UART1 interrupt priority
  * 
  * @param priority interrupt priority
  * 
@@ -472,7 +472,7 @@ interrupt_priority_t get_adc_interrupt_priority();
 void set_uart1_interrupt_priority(interrupt_priority_t priority);
 
 /**
- * Get UART1 interrupt priority
+ * @brief Get UART1 interrupt priority
  * 
  * @return UART1 interrupt priority
  * 
