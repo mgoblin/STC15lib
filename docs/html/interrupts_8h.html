@@ -136,6 +136,15 @@ Macros</h2></td></tr>
 <tr class="memitem:ga194f7f1f70af345370c596512b23a588"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga194f7f1f70af345370c596512b23a588">is_int0_interrupt_enabled</a>()&#160;&#160;&#160;(EX0 == 1 &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td></tr>
 <tr class="memdesc:ga194f7f1f70af345370c596512b23a588"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get INT0 interrupt enable status.  <a href="group__interrupts.html#ga194f7f1f70af345370c596512b23a588">More...</a><br /></td></tr>
 <tr class="separator:ga194f7f1f70af345370c596512b23a588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4fb0d9228dcf2749cd098092edaa1308"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga4fb0d9228dcf2749cd098092edaa1308">enable_int1_interrupt</a>()&#160;&#160;&#160;(EX1 = 1)</td></tr>
+<tr class="memdesc:ga4fb0d9228dcf2749cd098092edaa1308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable INT1 interrupt.  <a href="group__interrupts.html#ga4fb0d9228dcf2749cd098092edaa1308">More...</a><br /></td></tr>
+<tr class="separator:ga4fb0d9228dcf2749cd098092edaa1308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa588f32201651fc565dd745d36048a97"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaa588f32201651fc565dd745d36048a97">disable_int1_interrupt</a>()&#160;&#160;&#160;(EX1 = 0)</td></tr>
+<tr class="memdesc:gaa588f32201651fc565dd745d36048a97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable INT1 interrupt.  <a href="group__interrupts.html#gaa588f32201651fc565dd745d36048a97">More...</a><br /></td></tr>
+<tr class="separator:gaa588f32201651fc565dd745d36048a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga77b38abe100ab6558721575d42b9776a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga77b38abe100ab6558721575d42b9776a">is_int1_interrupt_enabled</a>()&#160;&#160;&#160;(EX1 == 1 &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td></tr>
+<tr class="memdesc:ga77b38abe100ab6558721575d42b9776a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get INT1 interrupt enable status.  <a href="group__interrupts.html#ga77b38abe100ab6558721575d42b9776a">More...</a><br /></td></tr>
+<tr class="separator:ga77b38abe100ab6558721575d42b9776a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -150,15 +159,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga07cefc86bf085b7d7f76ef4cd76f58b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga07cefc86bf085b7d7f76ef4cd76f58b5">enable_int1_interrupt</a> ()</td></tr>
-<tr class="memdesc:ga07cefc86bf085b7d7f76ef4cd76f58b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable INT1 interrupt.  <a href="group__interrupts.html#ga07cefc86bf085b7d7f76ef4cd76f58b5">More...</a><br /></td></tr>
-<tr class="separator:ga07cefc86bf085b7d7f76ef4cd76f58b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9a88388bd2affb3f2559d704967632f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga9a88388bd2affb3f2559d704967632f9">disable_int1_interrupt</a> ()</td></tr>
-<tr class="memdesc:ga9a88388bd2affb3f2559d704967632f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable INT1 interrupt.  <a href="group__interrupts.html#ga9a88388bd2affb3f2559d704967632f9">More...</a><br /></td></tr>
-<tr class="separator:ga9a88388bd2affb3f2559d704967632f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3f33afb2f2db7b9d9afc5fef76163a76"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga3f33afb2f2db7b9d9afc5fef76163a76">is_int1_interrupt_enabled</a> ()</td></tr>
-<tr class="memdesc:ga3f33afb2f2db7b9d9afc5fef76163a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get INT1 interrupt enable status.  <a href="group__interrupts.html#ga3f33afb2f2db7b9d9afc5fef76163a76">More...</a><br /></td></tr>
-<tr class="separator:ga3f33afb2f2db7b9d9afc5fef76163a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab2770dd07d7f2e5d401a144a6a6e1efd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gab2770dd07d7f2e5d401a144a6a6e1efd">enable_int2_interrupt</a> ()</td></tr>
 <tr class="memdesc:gab2770dd07d7f2e5d401a144a6a6e1efd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable INT2 interrupt.  <a href="group__interrupts.html#gab2770dd07d7f2e5d401a144a6a6e1efd">More...</a><br /></td></tr>
 <tr class="separator:gab2770dd07d7f2e5d401a144a6a6e1efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
