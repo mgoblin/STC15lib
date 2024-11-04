@@ -230,3 +230,13 @@ interrupt_priority_t get_uart1_interrupt_priority()
 {
     return PS;
 }
+
+void set_int0_interrupt_priority(interrupt_priority_t priority)
+{
+    PX0 = priority;
+}
+
+interrupt_priority_t get_int0_interrupt_priority()
+{
+    return PX0;
+}

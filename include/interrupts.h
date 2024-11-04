@@ -480,4 +480,22 @@ void set_uart1_interrupt_priority(interrupt_priority_t priority);
  */
 interrupt_priority_t get_uart1_interrupt_priority();
 
+/**
+ * @brief Set analog INT0 interrupt priority
+ * 
+ * @param priority interrupt priority
+ * 
+ * @ingroup interrupts
+ */
+void set_int0_interrupt_priority(interrupt_priority_t priority);
+
+/**
+ * @brief Get INT0 interrupt priority
+ * 
+ * @return INT0 interrupt priority
+ * 
+ * @ingroup interrupts
+ */
+interrupt_priority_t get_int0_interrupt_priority();
+
 #endif
