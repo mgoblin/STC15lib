@@ -197,6 +197,10 @@ Functions</h2></td></tr>
 <tr class="separator:gab413739f540390abfc307885452bf652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6d5bc3dc0359348039199677f85b4b74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga6d5bc3dc0359348039199677f85b4b74">get_adc_interrupt_priority</a> ()</td></tr>
 <tr class="separator:ga6d5bc3dc0359348039199677f85b4b74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3e0b9ee758394678cfd71bc9ab6a8d2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga3e0b9ee758394678cfd71bc9ab6a8d2a">set_uart1_interrupt_priority</a> (<a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> priority)</td></tr>
+<tr class="separator:ga3e0b9ee758394678cfd71bc9ab6a8d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab320a7db8d945dbf2945ac01abde1090"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gab320a7db8d945dbf2945ac01abde1090">get_uart1_interrupt_priority</a> ()</td></tr>
+<tr class="separator:gab320a7db8d945dbf2945ac01abde1090"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for interrupts. Interrupts are controlled by registers IE and IE2 bits.</p>
@@ -809,6 +813,25 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gab320a7db8d945dbf2945ac01abde1090" name="gab320a7db8d945dbf2945ac01abde1090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab320a7db8d945dbf2945ac01abde1090">&#9670;&nbsp;</a></span>get_uart1_interrupt_priority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> get_uart1_interrupt_priority </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Get UART1 interrupt priority</p>
+<dl class="section return"><dt>Returns</dt><dd>UART1 interrupt priority </dd></dl>
+
+</div>
+</div>
 <a id="gaedf2f819d21e74d7d1e90b6b91f9814e" name="gaedf2f819d21e74d7d1e90b6b91f9814e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaedf2f819d21e74d7d1e90b6b91f9814e">&#9670;&nbsp;</a></span>is_adc_interrupt_enabled()</h2>
 
@@ -1125,6 +1148,31 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >Set programmable counter arrya (PCA) interrupt priority</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">priority</td><td>interrupt priority </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga3e0b9ee758394678cfd71bc9ab6a8d2a" name="ga3e0b9ee758394678cfd71bc9ab6a8d2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3e0b9ee758394678cfd71bc9ab6a8d2a">&#9670;&nbsp;</a></span>set_uart1_interrupt_priority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_uart1_interrupt_priority </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td>
+          <td class="paramname"><em>priority</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Set analog UART1 interrupt priority</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">priority</td><td>interrupt priority </td></tr>

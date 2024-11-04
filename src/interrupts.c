@@ -220,3 +220,13 @@ interrupt_priority_t get_adc_interrupt_priority()
 {
     return PADC;
 }
+
+void set_uart1_interrupt_priority(interrupt_priority_t priority)
+{
+    PS = 1;
+}
+
+interrupt_priority_t get_uart1_interrupt_priority()
+{
+    return PS;
+}
