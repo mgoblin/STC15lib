@@ -8,6 +8,7 @@
         "uart.h": "c",
         "bits.h": "c",
         "time.h": "c",
-        "unity_config.h": "c"
+        "unity_config.h": "c",
+        "type_traits": "cpp"
     }
 }

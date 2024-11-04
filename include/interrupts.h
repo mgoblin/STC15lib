@@ -61,9 +61,9 @@
  * routines should be used.
  * 
  * For INT0 and INT1 trigger configration 
- * set_<int0 or int1>\_trigger(trigger enum value) 
+ * set_<int0 or int1>\_interrupt_trigger(trigger enum value) 
  * and 
- * get_<int0 or int1>\_trigger()
+ * get_<int0 or int1>\_interrupt_trigger()
  * routines should be used.
  * 
  * @author Michael Golovanov
@@ -89,8 +89,8 @@ typedef enum
  */
 typedef enum
 {
-    RAISING_OR_FALLING = 0,
-    ONLY_FALLING = 1
+    RAISING_OR_FALLING_EDGE = 0,
+    ONLY_FALLING_EDGE = 1
 } external_interrupt_trigger_t;
 
 /**
@@ -576,5 +576,42 @@ void set_spi_interrupt_priority(interrupt_priority_t priority);
  */
 interrupt_priority_t get_spi_interrupt_priority();
 
+/**
+ * @brief Set INT0 interrupt trigger
+ * 
+ * @param trigger RAISING_OR_FALLING_EDGE or ONLY_FALLING_EDGE
+ * 
+ * @ingroup interrupts
+ */
+void set_int0_interrupt_trigger(external_interrupt_trigger_t trigger);
+
+/**
+ * @brief Get INT0 interrupt trigger
+ * @details By default trigger initialized with RAISING_OR_FALLING_EDGE value
+ * 
+ * @return RAISING_OR_FALLING_EDGE or ONLY_FALLING_EDGE
+ * 
+ * @ingroup interrupts
+ */
+external_interrupt_trigger_t get_int0_interrupt_trigger();
+
+/**
+ * @brief Set INT1 interrupt trigger
+ * 
+ * @param trigger RAISING_OR_FALLING_EDGE or ONLY_FALLING_EDGE
+ * 
+ * @ingroup interrupts
+ */
+void set_int1_interrupt_trigger(external_interrupt_trigger_t trigger);
+
+/**
+ * @brief Get INT1 interrupt trigger
+ * @details By default trigger initialized with RAISING_OR_FALLING_EDGE value
+ * 
+ * @return RAISING_OR_FALLING_EDGE or ONLY_FALLING_EDGE
+ * 
+ * @ingroup interrupts
+ */
+external_interrupt_trigger_t get_int1_interrupt_trigger();
 
 #endif
