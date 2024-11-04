@@ -517,14 +517,22 @@ void set_int1_interrupt_priority(interrupt_priority_t priority);
 interrupt_priority_t get_int1_interrupt_priority();
 
 /**
- * @brief Set analog INT1 interrupt priority
+ * @brief Set timer0 interrupt priority
  * 
  * @param priority interrupt priority
  * 
  * @ingroup interrupts
  */
-void set_int1_interrupt_priority(interrupt_priority_t priority);
+void set_timer0_interrupt_priority(interrupt_priority_t priority);
 
+/**
+ * @brief Get timer0 interrupt priority
+ * 
+ * @return timer0 interrupt priority
+ * 
+ * @ingroup interrupts
+ */
+interrupt_priority_t get_timer0_interrupt_priority();
 
 
 #endif
