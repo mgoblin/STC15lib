@@ -189,6 +189,10 @@ Functions</h2></td></tr>
 <tr class="separator:gaab127a9699665db19209e73c125a36e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaabc0dd3884a711ef02b6949592319c21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaabc0dd3884a711ef02b6949592319c21">get_pca_interrupt_priority</a> ()</td></tr>
 <tr class="separator:gaabc0dd3884a711ef02b6949592319c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacb709294102ab1ee8c6d2418a25c6ef9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gacb709294102ab1ee8c6d2418a25c6ef9">set_low_voltage_interrupt_priority</a> (<a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> priority)</td></tr>
+<tr class="separator:gacb709294102ab1ee8c6d2418a25c6ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad99362d10041102b6e413a05f95f31da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gad99362d10041102b6e413a05f95f31da">get_low_voltage_interrupt_priority</a> ()</td></tr>
+<tr class="separator:gad99362d10041102b6e413a05f95f31da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for interrupts. Interrupts are controlled by registers IE and IE2 bits.</p>
@@ -744,6 +748,25 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gad99362d10041102b6e413a05f95f31da" name="gad99362d10041102b6e413a05f95f31da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad99362d10041102b6e413a05f95f31da">&#9670;&nbsp;</a></span>get_low_voltage_interrupt_priority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> get_low_voltage_interrupt_priority </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Get low voltage interrupt priority</p>
+<dl class="section return"><dt>Returns</dt><dd>PCA interrupt priority </dd></dl>
+
+</div>
+</div>
 <a id="gaabc0dd3884a711ef02b6949592319c21" name="gaabc0dd3884a711ef02b6949592319c21"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaabc0dd3884a711ef02b6949592319c21">&#9670;&nbsp;</a></span>get_pca_interrupt_priority()</h2>
 
@@ -1013,6 +1036,31 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gacb709294102ab1ee8c6d2418a25c6ef9" name="gacb709294102ab1ee8c6d2418a25c6ef9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacb709294102ab1ee8c6d2418a25c6ef9">&#9670;&nbsp;</a></span>set_low_voltage_interrupt_priority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_low_voltage_interrupt_priority </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td>
+          <td class="paramname"><em>priority</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Set low voltage (LVD) interrupt priority</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">priority</td><td>interrupt priority </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="gaab127a9699665db19209e73c125a36e6" name="gaab127a9699665db19209e73c125a36e6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaab127a9699665db19209e73c125a36e6">&#9670;&nbsp;</a></span>set_pca_interrupt_priority()</h2>
 
@@ -1029,7 +1077,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >Set PCA interrupt priority</p>
-<dl class="section user"><dt>/am priority interrupt priority</dt><dd></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">priority</td><td>interrupt priority </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -411,7 +411,7 @@ bool is_spi_interrupt_enabled();
 /**
  * Set PCA interrupt priority
  * 
- * @par/am priority interrupt priority
+ * @param priority interrupt priority
  * 
  * @ingroup interrupts
  */
@@ -425,5 +425,23 @@ void set_pca_interrupt_priority(interrupt_priority_t priority);
  * @ingroup interrupts
  */
 interrupt_priority_t get_pca_interrupt_priority();
+
+/**
+ * Set low voltage (LVD) interrupt priority
+ * 
+ * @param priority interrupt priority
+ * 
+ * @ingroup interrupts
+ */
+void set_low_voltage_interrupt_priority(interrupt_priority_t priority);
+
+/**
+ * Get low voltage interrupt priority
+ * 
+ * @return PCA interrupt priority
+ * 
+ * @ingroup interrupts
+ */
+interrupt_priority_t get_low_voltage_interrupt_priority();
 
 #endif
