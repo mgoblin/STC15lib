@@ -329,7 +329,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-void enable_int4_interrupt();
+#define enable_int4_interrupt() (bit_set(INT_CLKO, 6))
 
 /**
  * @brief Disable INT3 interrupt
@@ -338,7 +338,7 @@ void enable_int4_interrupt();
  * 
  * @ingroup interrupts
  */
-void disable_int4_interrupt();
+#define disable_int4_interrupt() (bit_clr(INT_CLKO, 6))
 
 /**
  * @brief Get INT4 interrupt enable status
@@ -348,7 +348,7 @@ void disable_int4_interrupt();
  * 
  * @ingroup interrupts
  */
-bool is_int4_interrupt_enable();
+#define is_int4_interrupt_enable() (test_if_bit_set(INT_CLKO, 6) && is_mcu_interrupts_enabled())
 
 /**
  * @brief Enable timer0 interrupt

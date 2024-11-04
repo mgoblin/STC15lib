@@ -9,7 +9,7 @@ var searchData=
   ['is_5fint1_5finterrupt_5fenabled_6',['is_int1_interrupt_enabled',['../group__interrupts.html#ga77b38abe100ab6558721575d42b9776a',1,'interrupts.h']]],
   ['is_5fint2_5finterrupt_5fenabled_7',['is_int2_interrupt_enabled',['../group__interrupts.html#ga88ebf38f3c33cba4de86d19e2532ec97',1,'interrupts.h']]],
   ['is_5fint3_5finterrupt_5fenabled_8',['is_int3_interrupt_enabled',['../group__interrupts.html#ga55815a15f668bf452348f7483ca94a2e',1,'interrupts.h']]],
-  ['is_5fint4_5finterrupt_5fenable_9',['is_int4_interrupt_enable',['../group__interrupts.html#ga2f26688e2c0b01997b20a7ad9a93d330',1,'is_int4_interrupt_enable():&#160;interrupts.c'],['../group__interrupts.html#ga2f26688e2c0b01997b20a7ad9a93d330',1,'is_int4_interrupt_enable():&#160;interrupts.c']]],
+  ['is_5fint4_5finterrupt_5fenable_9',['is_int4_interrupt_enable',['../group__interrupts.html#gab74f8baae5f006ebecd8ccbb787decb0',1,'interrupts.h']]],
   ['is_5flow_5fvoltage_5finterrupt_5fenabled_10',['is_low_voltage_interrupt_enabled',['../group__interrupts.html#gac4ef997b6aa14a6864c2ef2c432aac4a',1,'interrupts.h']]],
   ['is_5fmcu_5finterrupts_5fenabled_11',['is_mcu_interrupts_enabled',['../group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1',1,'interrupts.h']]],
   ['is_5fspi_5finterrupt_5fenabled_12',['is_spi_interrupt_enabled',['../group__interrupts.html#ga230d7a3ba3a1ffc06155194eea02c531',1,'is_spi_interrupt_enabled():&#160;interrupts.c'],['../group__interrupts.html#ga230d7a3ba3a1ffc06155194eea02c531',1,'is_spi_interrupt_enabled():&#160;interrupts.c']]],

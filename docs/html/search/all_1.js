@@ -8,7 +8,7 @@ var searchData=
   ['disable_5fint1_5finterrupt_5',['disable_int1_interrupt',['../group__interrupts.html#gaa588f32201651fc565dd745d36048a97',1,'interrupts.h']]],
   ['disable_5fint2_5finterrupt_6',['disable_int2_interrupt',['../group__interrupts.html#ga4668129f676d8d123d5992da8b7d6564',1,'interrupts.h']]],
   ['disable_5fint3_5finterrupt_7',['disable_int3_interrupt',['../group__interrupts.html#ga0eefb72a54f3befd3535d70e71a06de4',1,'interrupts.h']]],
-  ['disable_5fint4_5finterrupt_8',['disable_int4_interrupt',['../group__interrupts.html#gadc50ceada9d2c1a49bee8bcb4e7efc14',1,'disable_int4_interrupt():&#160;interrupts.c'],['../group__interrupts.html#gadc50ceada9d2c1a49bee8bcb4e7efc14',1,'disable_int4_interrupt():&#160;interrupts.c']]],
+  ['disable_5fint4_5finterrupt_8',['disable_int4_interrupt',['../group__interrupts.html#gae3a80148c904b86a58976a26399720d0',1,'interrupts.h']]],
   ['disable_5flow_5fvoltage_5finterrupt_9',['disable_low_voltage_interrupt',['../group__interrupts.html#gae7bd7f894582b7f376b077fbd4435864',1,'interrupts.h']]],
   ['disable_5fmaster_5fclock_5foutput_10',['disable_master_clock_output',['../group__freq.html#gabcec59e26510c1132c4f13f45b13ec6b',1,'frequency.h']]],
   ['disable_5fmcu_5finterrupts_11',['disable_mcu_interrupts',['../group__interrupts.html#ga8b0ea5804af6316376f49ade70b868b3',1,'interrupts.h']]],
