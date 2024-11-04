@@ -193,6 +193,10 @@ Functions</h2></td></tr>
 <tr class="separator:gacb709294102ab1ee8c6d2418a25c6ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad99362d10041102b6e413a05f95f31da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gad99362d10041102b6e413a05f95f31da">get_low_voltage_interrupt_priority</a> ()</td></tr>
 <tr class="separator:gad99362d10041102b6e413a05f95f31da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab413739f540390abfc307885452bf652"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gab413739f540390abfc307885452bf652">set_adc_interrupt_priority</a> (<a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> priority)</td></tr>
+<tr class="separator:gab413739f540390abfc307885452bf652"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6d5bc3dc0359348039199677f85b4b74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga6d5bc3dc0359348039199677f85b4b74">get_adc_interrupt_priority</a> ()</td></tr>
+<tr class="separator:ga6d5bc3dc0359348039199677f85b4b74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for interrupts. Interrupts are controlled by registers IE and IE2 bits.</p>
@@ -748,6 +752,25 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga6d5bc3dc0359348039199677f85b4b74" name="ga6d5bc3dc0359348039199677f85b4b74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6d5bc3dc0359348039199677f85b4b74">&#9670;&nbsp;</a></span>get_adc_interrupt_priority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> get_adc_interrupt_priority </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Get analog to digital converter (ADC) interrupt priority</p>
+<dl class="section return"><dt>Returns</dt><dd>ADC interrupt priority </dd></dl>
+
+</div>
+</div>
 <a id="gad99362d10041102b6e413a05f95f31da" name="gad99362d10041102b6e413a05f95f31da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gad99362d10041102b6e413a05f95f31da">&#9670;&nbsp;</a></span>get_low_voltage_interrupt_priority()</h2>
 
@@ -762,8 +785,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Get low voltage interrupt priority</p>
-<dl class="section return"><dt>Returns</dt><dd>PCA interrupt priority </dd></dl>
+<p >Get low voltage interrupt (LVD) priority</p>
+<dl class="section return"><dt>Returns</dt><dd>LVD interrupt priority </dd></dl>
 
 </div>
 </div>
@@ -1033,6 +1056,31 @@ Functions</h2></td></tr>
 <p>Get UART1 interrupt enable status. </p>
 <p >Get mcu interrupt and UART1 interrupt support status</p>
 <dl class="section return"><dt>Returns</dt><dd>true if mcu and UART1 interrupt enabled, otherwise false </dd></dl>
+
+</div>
+</div>
+<a id="gab413739f540390abfc307885452bf652" name="gab413739f540390abfc307885452bf652"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab413739f540390abfc307885452bf652">&#9670;&nbsp;</a></span>set_adc_interrupt_priority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_adc_interrupt_priority </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td>
+          <td class="paramname"><em>priority</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Set analog to digital converter (ADC) interrupt priority</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">priority</td><td>interrupt priority </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

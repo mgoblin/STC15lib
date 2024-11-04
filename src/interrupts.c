@@ -210,3 +210,13 @@ interrupt_priority_t get_low_voltage_interrupt_priority()
 {
     return PLVD;
 }
+
+void set_adc_interrupt_priority(interrupt_priority_t priority)
+{
+    PADC = 1;
+}
+
+interrupt_priority_t get_adc_interrupt_priority()
+{
+    return PADC;
+}

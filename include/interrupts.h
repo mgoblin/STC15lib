@@ -436,12 +436,30 @@ interrupt_priority_t get_pca_interrupt_priority();
 void set_low_voltage_interrupt_priority(interrupt_priority_t priority);
 
 /**
- * Get low voltage interrupt priority
+ * Get low voltage interrupt (LVD) priority
  * 
- * @return PCA interrupt priority
+ * @return LVD interrupt priority
  * 
  * @ingroup interrupts
  */
 interrupt_priority_t get_low_voltage_interrupt_priority();
+
+/**
+ * Set analog to digital converter (ADC) interrupt priority
+ * 
+ * @param priority interrupt priority
+ * 
+ * @ingroup interrupts
+ */
+void set_adc_interrupt_priority(interrupt_priority_t priority);
+
+/**
+ * Get analog to digital converter (ADC) interrupt priority
+ * 
+ * @return ADC interrupt priority
+ * 
+ * @ingroup interrupts
+ */
+interrupt_priority_t get_adc_interrupt_priority();
 
 #endif
