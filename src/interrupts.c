@@ -1,16 +1,6 @@
 #include<interrupts.h>
 #include<bits.h>
 
-void set_int1_interrupt_priority(interrupt_priority_t priority)
-{
-    PX1 = priority;
-}
-
-interrupt_priority_t get_int1_interrupt_priority()
-{
-    return PX1;
-}
-
 void set_timer0_interrupt_priority(interrupt_priority_t priority)
 {
     PT0 = priority;
