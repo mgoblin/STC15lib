@@ -357,7 +357,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-void enable_timer0_interrupt();
+#define enable_timer0_interrupt() (ET0 = 1)
 
 /**
  * @brief Enable timer0 interrupt
@@ -366,7 +366,7 @@ void enable_timer0_interrupt();
  * 
  * @ingroup interrupts
  */
-void disable_timer0_interrupt();
+#define disable_timer0_interrupt() (ET0 = 0)
 
 /**
  * @brief Get timer0 interrupt enable status
@@ -376,7 +376,7 @@ void disable_timer0_interrupt();
  * 
  * @ingroup interrupts
  */
-bool is_timer0_interrupt_enabled();
+#define is_timer0_interrupt_enabled() (ET0 == 0 && is_mcu_interrupts_enabled())
 
 /**
  * @brief Enable timer2 interrupt

@@ -172,6 +172,15 @@ Macros</h2></td></tr>
 <tr class="memitem:gab74f8baae5f006ebecd8ccbb787decb0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gab74f8baae5f006ebecd8ccbb787decb0">is_int4_interrupt_enable</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, 6) &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td></tr>
 <tr class="memdesc:gab74f8baae5f006ebecd8ccbb787decb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get INT4 interrupt enable status.  <a href="group__interrupts.html#gab74f8baae5f006ebecd8ccbb787decb0">More...</a><br /></td></tr>
 <tr class="separator:gab74f8baae5f006ebecd8ccbb787decb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3ce3cdb9bf4963e75a0664964fb83c3a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga3ce3cdb9bf4963e75a0664964fb83c3a">enable_timer0_interrupt</a>()&#160;&#160;&#160;(ET0 = 1)</td></tr>
+<tr class="memdesc:ga3ce3cdb9bf4963e75a0664964fb83c3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable timer0 interrupt.  <a href="group__interrupts.html#ga3ce3cdb9bf4963e75a0664964fb83c3a">More...</a><br /></td></tr>
+<tr class="separator:ga3ce3cdb9bf4963e75a0664964fb83c3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ef6ebd3211c16ce240018d22589e8da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga2ef6ebd3211c16ce240018d22589e8da">disable_timer0_interrupt</a>()&#160;&#160;&#160;(ET0 = 0)</td></tr>
+<tr class="memdesc:ga2ef6ebd3211c16ce240018d22589e8da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable timer0 interrupt.  <a href="group__interrupts.html#ga2ef6ebd3211c16ce240018d22589e8da">More...</a><br /></td></tr>
+<tr class="separator:ga2ef6ebd3211c16ce240018d22589e8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf6a267bf6befa9aee24a701bd782f457"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaf6a267bf6befa9aee24a701bd782f457">is_timer0_interrupt_enabled</a>()&#160;&#160;&#160;(ET0 == 0 &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td></tr>
+<tr class="memdesc:gaf6a267bf6befa9aee24a701bd782f457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer0 interrupt enable status.  <a href="group__interrupts.html#gaf6a267bf6befa9aee24a701bd782f457">More...</a><br /></td></tr>
+<tr class="separator:gaf6a267bf6befa9aee24a701bd782f457"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -186,15 +195,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga22413fdfddf437b032111775cc7eb6c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga22413fdfddf437b032111775cc7eb6c0">enable_timer0_interrupt</a> ()</td></tr>
-<tr class="memdesc:ga22413fdfddf437b032111775cc7eb6c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable timer0 interrupt.  <a href="group__interrupts.html#ga22413fdfddf437b032111775cc7eb6c0">More...</a><br /></td></tr>
-<tr class="separator:ga22413fdfddf437b032111775cc7eb6c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga52bb702ab0840d8f5ba31b419550712b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga52bb702ab0840d8f5ba31b419550712b">disable_timer0_interrupt</a> ()</td></tr>
-<tr class="memdesc:ga52bb702ab0840d8f5ba31b419550712b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable timer0 interrupt.  <a href="group__interrupts.html#ga52bb702ab0840d8f5ba31b419550712b">More...</a><br /></td></tr>
-<tr class="separator:ga52bb702ab0840d8f5ba31b419550712b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad134ce314e7689f52f12ee700d1a91c9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gad134ce314e7689f52f12ee700d1a91c9">is_timer0_interrupt_enabled</a> ()</td></tr>
-<tr class="memdesc:gad134ce314e7689f52f12ee700d1a91c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer0 interrupt enable status.  <a href="group__interrupts.html#gad134ce314e7689f52f12ee700d1a91c9">More...</a><br /></td></tr>
-<tr class="separator:gad134ce314e7689f52f12ee700d1a91c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga52d5166bc4f9162fcb5fcfb7fdb2a0ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga52d5166bc4f9162fcb5fcfb7fdb2a0ba">enable_timer2_interrupt</a> ()</td></tr>
 <tr class="memdesc:ga52d5166bc4f9162fcb5fcfb7fdb2a0ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable timer2 interrupt.  <a href="group__interrupts.html#ga52d5166bc4f9162fcb5fcfb7fdb2a0ba">More...</a><br /></td></tr>
 <tr class="separator:ga52d5166bc4f9162fcb5fcfb7fdb2a0ba"><td class="memSeparator" colspan="2">&#160;</td></tr>

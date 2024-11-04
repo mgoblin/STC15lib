@@ -1,21 +1,6 @@
 #include<interrupts.h>
 #include<bits.h>
 
-void enable_timer0_interrupt()
-{
-    ET0 = 1;
-}
-
-void disable_timer0_interrupt()
-{
-    ET0 = 0;
-}
-
-bool is_timer0_interrupt_enabled()
-{
-    return ET0 == 0 && is_mcu_interrupts_enabled();
-}
-
 void enable_timer2_interrupt()
 {
     //ET2 = 1;
