@@ -19,7 +19,7 @@
  * 
  * @ingroup freq
  */
-inline const unsigned long get_master_clock_frequency();
+#define get_master_clock_frequency() (MAIN_Fosc)
 
 /**
  * Get high part of MAIN_Fosc defined as MAIN_FoscH in sys.h
@@ -28,7 +28,7 @@ inline const unsigned long get_master_clock_frequency();
  * 
  * @ingroup freq
  */
-inline const int get_master_clock_frequency_high_part();
+#define get_master_clock_frequency_high_part() (MAIN_FoscH)
 
 /**
  * Get low part of MAIN_Fosc defined as MAIN_FoscL in sys.h
@@ -37,7 +37,7 @@ inline const int get_master_clock_frequency_high_part();
  * 
  * @ingroup freq
  */
-inline const int get_master_clock_frequency_low_part();
+#define get_master_clock_frequency_low_part() (MAIN_FoscL)
 
 /**
  * Get master clock frequency divider (CLK_DIV bits [0..2])
@@ -48,7 +48,7 @@ inline const int get_master_clock_frequency_low_part();
  * 
  * @ingroup freq
  */
-inline uint8_t get_frequency_divider();
+#define get_frequency_divider() (1 << (CLK_DIV & 0x07))
 
 /**
  * @brief Update and get master clock frequency divider (CLK_DIV bits [0..2])
@@ -62,7 +62,7 @@ inline uint8_t get_frequency_divider();
  * 
  * @ingroup freq
  */
-inline uint8_t update_and_get_frequency_divider(uint8_t divider_scale);
+uint8_t update_and_get_frequency_divider(uint8_t divider_scale);
 
 /**
  * Enable master clock output. By default output set to P5.4 pin.
@@ -72,7 +72,7 @@ inline uint8_t update_and_get_frequency_divider(uint8_t divider_scale);
  * 
  * @ingroup freq
  */
-inline void enable_master_clock_output_div1();
+#define enable_master_clock_output_div1() (CLK_DIV |= 0x40)
 
 /**
  * Enable (master clock output)/2. By default output set to P5.4 pin.
@@ -82,7 +82,7 @@ inline void enable_master_clock_output_div1();
  * 
  * @ingroup freq
  */
-inline void enable_master_clock_output_div2();
+#define enable_master_clock_output_div2() (CLK_DIV |= 0x80)
 
 /**
  * Enable (master clock output)/4. By default output set to P5.4 pin.
@@ -92,19 +92,19 @@ inline void enable_master_clock_output_div2();
  * 
  * @ingroup freq
  */
-inline void enable_master_clock_output_div4();
+#define enable_master_clock_output_div4() (CLK_DIV |= 0xC0)
 
 /**
  * Disable master clock output
  * 
  * @ingroup freq
  */
-inline void disable_master_clock_output();
+#define disable_master_clock_output() (CLK_DIV &= 0x3f)
 
 /**
- * Master clock output pinsf enumeration
+ * Master clock output pins enumeration
  */
-typedef enum MasterClockOutputPin
+typedef enum 
 {
     /// output disabled
     NONE, 
@@ -112,7 +112,7 @@ typedef enum MasterClockOutputPin
     P5_4, 
     /// output to pin 1.6
     P1_6  
-} master_clock_output_pin;
+} master_clock_output_pin_t;
 
 /**
  * Get master clock output
@@ -121,7 +121,7 @@ typedef enum MasterClockOutputPin
  * 
  * @ingroup freq
  */
-inline master_clock_output_pin get_master_clock_output_pin();
+master_clock_output_pin_t get_master_clock_output_pin();
 
 /**
  * Set master clock output pin
@@ -130,6 +130,6 @@ inline master_clock_output_pin get_master_clock_output_pin();
  * 
  * @ingroup freq
  */
-inline void set_master_clock_output_pin(master_clock_output_pin pin);
+void set_master_clock_output_pin(master_clock_output_pin_t pin);
 
 #endif 

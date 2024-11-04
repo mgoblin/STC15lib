@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['masterclockoutputpin_0',['MasterClockOutputPin',['../frequency_8h.html#a4de903b9320a994227a4f380782228df',1,'frequency.h']]]
+  ['master_5fclock_5foutput_5fpin_5ft_0',['master_clock_output_pin_t',['../frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2',1,'frequency.h']]]
 ];
