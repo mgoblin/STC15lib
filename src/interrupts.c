@@ -260,3 +260,13 @@ interrupt_priority_t get_timer0_interrupt_priority()
 {
     return PT0;
 }
+
+void set_spi_interrupt_priority(interrupt_priority_t priority)
+{
+    priority == HIGH ? bit_set(IP2, 1) : bit_clr(IP2, 1); 
+}
+
+interrupt_priority_t get_spi_interrupt_priority()
+{
+    return test_if_bit_set(IE2, 1);
+}

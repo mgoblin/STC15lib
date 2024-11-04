@@ -534,5 +534,23 @@ void set_timer0_interrupt_priority(interrupt_priority_t priority);
  */
 interrupt_priority_t get_timer0_interrupt_priority();
 
+/**
+ * @brief Set SPI interrupt priority
+ * 
+ * @param priority interrupt priority
+ * 
+ * @ingroup interrupts
+ */
+void set_spi_interrupt_priority(interrupt_priority_t priority);
+
+/**
+ * @brief Get SPI interrupt priority
+ * 
+ * @return SPI interrupt priority
+ * 
+ * @ingroup interrupts
+ */
+interrupt_priority_t get_spi_interrupt_priority();
+
 
 #endif

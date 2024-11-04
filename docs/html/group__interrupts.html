@@ -227,6 +227,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga35a66468110170a775164b92f78e2585"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga35a66468110170a775164b92f78e2585">get_timer0_interrupt_priority</a> ()</td></tr>
 <tr class="memdesc:ga35a66468110170a775164b92f78e2585"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer0 interrupt priority.  <a href="group__interrupts.html#ga35a66468110170a775164b92f78e2585">More...</a><br /></td></tr>
 <tr class="separator:ga35a66468110170a775164b92f78e2585"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c22ed69e1932950058c8e2c58e014d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga5c22ed69e1932950058c8e2c58e014d5">set_spi_interrupt_priority</a> (<a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> priority)</td></tr>
+<tr class="memdesc:ga5c22ed69e1932950058c8e2c58e014d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set SPI interrupt priority.  <a href="group__interrupts.html#ga5c22ed69e1932950058c8e2c58e014d5">More...</a><br /></td></tr>
+<tr class="separator:ga5c22ed69e1932950058c8e2c58e014d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1693e3a2c2f513f73735bdb6a6f3989f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga1693e3a2c2f513f73735bdb6a6f3989f">get_spi_interrupt_priority</a> ()</td></tr>
+<tr class="memdesc:ga1693e3a2c2f513f73735bdb6a6f3989f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get SPI interrupt priority.  <a href="group__interrupts.html#ga1693e3a2c2f513f73735bdb6a6f3989f">More...</a><br /></td></tr>
+<tr class="separator:ga1693e3a2c2f513f73735bdb6a6f3989f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for interrupts. Interrupts are controlled by registers IE and IE2 bits.</p>
@@ -882,6 +888,26 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga1693e3a2c2f513f73735bdb6a6f3989f" name="ga1693e3a2c2f513f73735bdb6a6f3989f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1693e3a2c2f513f73735bdb6a6f3989f">&#9670;&nbsp;</a></span>get_spi_interrupt_priority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> get_spi_interrupt_priority </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get SPI interrupt priority. </p>
+<dl class="section return"><dt>Returns</dt><dd>SPI interrupt priority </dd></dl>
+
+</div>
+</div>
 <a id="ga35a66468110170a775164b92f78e2585" name="ga35a66468110170a775164b92f78e2585"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga35a66468110170a775164b92f78e2585">&#9670;&nbsp;</a></span>get_timer0_interrupt_priority()</h2>
 
@@ -1293,6 +1319,32 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set programmable counter arrya (PCA) interrupt priority. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">priority</td><td>interrupt priority </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga5c22ed69e1932950058c8e2c58e014d5" name="ga5c22ed69e1932950058c8e2c58e014d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5c22ed69e1932950058c8e2c58e014d5">&#9670;&nbsp;</a></span>set_spi_interrupt_priority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_spi_interrupt_priority </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td>
+          <td class="paramname"><em>priority</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set SPI interrupt priority. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">priority</td><td>interrupt priority </td></tr>
