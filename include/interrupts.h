@@ -564,20 +564,20 @@ typedef enum
 /**
  * @brief Set SPI interrupt priority
  * 
- * @param priority interrupt priority
+ * @param priority interrupt_priority_t interrupt priority
  * 
  * @ingroup interrupts
  */
-void set_spi_interrupt_priority(interrupt_priority_t priority);
+#define set_spi_interrupt_priority(priority) (priority == HIGH ? bit_set(IP2, 1) : bit_clr(IP2, 1))
 
 /**
  * @brief Get SPI interrupt priority
  * 
- * @return SPI interrupt priority
+ * @return SPI interrupt_priority_t interrupt priority
  * 
  * @ingroup interrupts
  */
-interrupt_priority_t get_spi_interrupt_priority();
+#define get_spi_interrupt_priority() (test_if_bit_set(IP2, 1))
 
 /**
  * @brief Set INT0 interrupt trigger

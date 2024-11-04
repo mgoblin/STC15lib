@@ -243,6 +243,12 @@ Macros</h2></td></tr>
 <tr class="memitem:gaae1d82dd8aa3ed51e31de9cdf4d03eaa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaae1d82dd8aa3ed51e31de9cdf4d03eaa">get_timer0_interrupt_priority</a>()&#160;&#160;&#160;(PT0)</td></tr>
 <tr class="memdesc:gaae1d82dd8aa3ed51e31de9cdf4d03eaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer0 interrupt priority.  <a href="group__interrupts.html#gaae1d82dd8aa3ed51e31de9cdf4d03eaa">More...</a><br /></td></tr>
 <tr class="separator:gaae1d82dd8aa3ed51e31de9cdf4d03eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7f4ce2c83eea0366ba67f8cc956aab8f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga7f4ce2c83eea0366ba67f8cc956aab8f">set_spi_interrupt_priority</a>(priority)&#160;&#160;&#160;(priority == <a class="el" href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893">HIGH</a> ? bit_set(IP2, 1) : bit_clr(IP2, 1))</td></tr>
+<tr class="memdesc:ga7f4ce2c83eea0366ba67f8cc956aab8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set SPI interrupt priority.  <a href="group__interrupts.html#ga7f4ce2c83eea0366ba67f8cc956aab8f">More...</a><br /></td></tr>
+<tr class="separator:ga7f4ce2c83eea0366ba67f8cc956aab8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaacd1dbc81fe112ce6b25b664d07f2924"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaacd1dbc81fe112ce6b25b664d07f2924">get_spi_interrupt_priority</a>()&#160;&#160;&#160;(test_if_bit_set(IP2, 1))</td></tr>
+<tr class="memdesc:gaacd1dbc81fe112ce6b25b664d07f2924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get SPI interrupt priority.  <a href="group__interrupts.html#gaacd1dbc81fe112ce6b25b664d07f2924">More...</a><br /></td></tr>
+<tr class="separator:gaacd1dbc81fe112ce6b25b664d07f2924"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -257,12 +263,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga5c22ed69e1932950058c8e2c58e014d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga5c22ed69e1932950058c8e2c58e014d5">set_spi_interrupt_priority</a> (<a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a> priority)</td></tr>
-<tr class="memdesc:ga5c22ed69e1932950058c8e2c58e014d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set SPI interrupt priority.  <a href="group__interrupts.html#ga5c22ed69e1932950058c8e2c58e014d5">More...</a><br /></td></tr>
-<tr class="separator:ga5c22ed69e1932950058c8e2c58e014d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1693e3a2c2f513f73735bdb6a6f3989f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga1693e3a2c2f513f73735bdb6a6f3989f">get_spi_interrupt_priority</a> ()</td></tr>
-<tr class="memdesc:ga1693e3a2c2f513f73735bdb6a6f3989f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get SPI interrupt priority.  <a href="group__interrupts.html#ga1693e3a2c2f513f73735bdb6a6f3989f">More...</a><br /></td></tr>
-<tr class="separator:ga1693e3a2c2f513f73735bdb6a6f3989f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga90fbd256fb6a0e278caf6b701306d792"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga90fbd256fb6a0e278caf6b701306d792">set_int0_interrupt_trigger</a> (<a class="el" href="group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7">external_interrupt_trigger_t</a> trigger)</td></tr>
 <tr class="memdesc:ga90fbd256fb6a0e278caf6b701306d792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set INT0 interrupt trigger.  <a href="group__interrupts.html#ga90fbd256fb6a0e278caf6b701306d792">More...</a><br /></td></tr>
 <tr class="separator:ga90fbd256fb6a0e278caf6b701306d792"><td class="memSeparator" colspan="2">&#160;</td></tr>

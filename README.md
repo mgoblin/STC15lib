@@ -30,6 +30,8 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 
 0.4.1
 * frequency module use defines instead of function decl for output hex code decreasing 
+* TODO interrupts module use defines instead of function decl for output hex code decreasing
+* TODO timer module use defines instead of function decl for output hex code decreasing
 
 Next releases todo
 * TODO Timer aux - set timers in terms of output signal freq and timings
