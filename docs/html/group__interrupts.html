@@ -80,6 +80,18 @@ Macros</h2></td></tr>
 <tr class="separator:ga8b0ea5804af6316376f49ade70b868b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7af372e71df37937e8ed0b195fbde1f1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>()&#160;&#160;&#160;(EA == 1)</td></tr>
 <tr class="separator:ga7af372e71df37937e8ed0b195fbde1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gada95baa6c6b2484eb8cf3c01889071fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gada95baa6c6b2484eb8cf3c01889071fc">enable_low_voltage_interrupt</a>()&#160;&#160;&#160;(ELVD = 1)</td></tr>
+<tr class="memdesc:gada95baa6c6b2484eb8cf3c01889071fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable low voltage interrupt.  <a href="group__interrupts.html#gada95baa6c6b2484eb8cf3c01889071fc">More...</a><br /></td></tr>
+<tr class="separator:gada95baa6c6b2484eb8cf3c01889071fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7bd7f894582b7f376b077fbd4435864"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gae7bd7f894582b7f376b077fbd4435864">disable_low_voltage_interrupt</a>()&#160;&#160;&#160;(ELVD = 0)</td></tr>
+<tr class="memdesc:gae7bd7f894582b7f376b077fbd4435864"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable low voltage interrupt.  <a href="group__interrupts.html#gae7bd7f894582b7f376b077fbd4435864">More...</a><br /></td></tr>
+<tr class="separator:gae7bd7f894582b7f376b077fbd4435864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac4ef997b6aa14a6864c2ef2c432aac4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gac4ef997b6aa14a6864c2ef2c432aac4a">is_low_voltage_interrupt_enabled</a>()&#160;&#160;&#160;(ELVD == 1 &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td></tr>
+<tr class="memdesc:gac4ef997b6aa14a6864c2ef2c432aac4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get low voltage interrupt enable status.  <a href="group__interrupts.html#gac4ef997b6aa14a6864c2ef2c432aac4a">More...</a><br /></td></tr>
+<tr class="separator:gac4ef997b6aa14a6864c2ef2c432aac4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9f0976519e8c6f8102dce44f7ad2aa6a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga9f0976519e8c6f8102dce44f7ad2aa6a">enable_int0_interrupt</a>()&#160;&#160;&#160;(EX0 = 1)</td></tr>
+<tr class="memdesc:ga9f0976519e8c6f8102dce44f7ad2aa6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable INT0 interrupt.  <a href="group__interrupts.html#ga9f0976519e8c6f8102dce44f7ad2aa6a">More...</a><br /></td></tr>
+<tr class="separator:ga9f0976519e8c6f8102dce44f7ad2aa6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -94,15 +106,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga0c06ab7b414296cbd8184f22926f7111"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga0c06ab7b414296cbd8184f22926f7111">enable_low_voltage_interrupt</a> ()</td></tr>
-<tr class="memdesc:ga0c06ab7b414296cbd8184f22926f7111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable low voltage interrupt.  <a href="group__interrupts.html#ga0c06ab7b414296cbd8184f22926f7111">More...</a><br /></td></tr>
-<tr class="separator:ga0c06ab7b414296cbd8184f22926f7111"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae20133d01ce34efd65f0a417512e787c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gae20133d01ce34efd65f0a417512e787c">disable_low_voltage_interrupt</a> ()</td></tr>
-<tr class="memdesc:gae20133d01ce34efd65f0a417512e787c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable low voltage interrupt.  <a href="group__interrupts.html#gae20133d01ce34efd65f0a417512e787c">More...</a><br /></td></tr>
-<tr class="separator:gae20133d01ce34efd65f0a417512e787c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0ae0ed6501f3d3085328bc4633275d13"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga0ae0ed6501f3d3085328bc4633275d13">is_low_voltage_interrupt_enabled</a> ()</td></tr>
-<tr class="memdesc:ga0ae0ed6501f3d3085328bc4633275d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get low voltage interrupt enable status.  <a href="group__interrupts.html#ga0ae0ed6501f3d3085328bc4633275d13">More...</a><br /></td></tr>
-<tr class="separator:ga0ae0ed6501f3d3085328bc4633275d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae35792f089a9778ecdbe365fe5e2b1cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gae35792f089a9778ecdbe365fe5e2b1cf">enable_adc_interrupt</a> ()</td></tr>
 <tr class="memdesc:gae35792f089a9778ecdbe365fe5e2b1cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable ADC interrupt.  <a href="group__interrupts.html#gae35792f089a9778ecdbe365fe5e2b1cf">More...</a><br /></td></tr>
 <tr class="separator:gae35792f089a9778ecdbe365fe5e2b1cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,9 +124,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga3e0c30b86f80469c6826e61cd810e461"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga3e0c30b86f80469c6826e61cd810e461">is_uart1_interrupt_enabled</a> ()</td></tr>
 <tr class="memdesc:ga3e0c30b86f80469c6826e61cd810e461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get UART1 interrupt enable status.  <a href="group__interrupts.html#ga3e0c30b86f80469c6826e61cd810e461">More...</a><br /></td></tr>
 <tr class="separator:ga3e0c30b86f80469c6826e61cd810e461"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaaaced6a797e74f29c84a5e7f2af02972"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaaaced6a797e74f29c84a5e7f2af02972">enable_int0_interrupt</a> ()</td></tr>
-<tr class="memdesc:gaaaced6a797e74f29c84a5e7f2af02972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable INT0 interrupt.  <a href="group__interrupts.html#gaaaced6a797e74f29c84a5e7f2af02972">More...</a><br /></td></tr>
-<tr class="separator:gaaaced6a797e74f29c84a5e7f2af02972"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacebb7eae3b50e1858ea990216fc7c3f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gacebb7eae3b50e1858ea990216fc7c3f6">disable_int0_interrupt</a> ()</td></tr>
 <tr class="memdesc:gacebb7eae3b50e1858ea990216fc7c3f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable INT0 interrupt.  <a href="group__interrupts.html#gacebb7eae3b50e1858ea990216fc7c3f6">More...</a><br /></td></tr>
 <tr class="separator:gacebb7eae3b50e1858ea990216fc7c3f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -308,6 +308,26 @@ Functions</h2></td></tr>
 <p >For INT0 and INT1 trigger configration set_&lt;int0 or int1&gt;_interrupt_trigger(trigger enum value) and get_&lt;int0 or int1&gt;_interrupt_trigger() routines should be used.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="gae7bd7f894582b7f376b077fbd4435864" name="gae7bd7f894582b7f376b077fbd4435864"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae7bd7f894582b7f376b077fbd4435864">&#9670;&nbsp;</a></span>disable_low_voltage_interrupt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define disable_low_voltage_interrupt</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(ELVD = 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable low voltage interrupt. </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+
+</div>
+</div>
 <a id="ga8b0ea5804af6316376f49ade70b868b3" name="ga8b0ea5804af6316376f49ade70b868b3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga8b0ea5804af6316376f49ade70b868b3">&#9670;&nbsp;</a></span>disable_mcu_interrupts</h2>
 
@@ -328,6 +348,46 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga9f0976519e8c6f8102dce44f7ad2aa6a" name="ga9f0976519e8c6f8102dce44f7ad2aa6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9f0976519e8c6f8102dce44f7ad2aa6a">&#9670;&nbsp;</a></span>enable_int0_interrupt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define enable_int0_interrupt</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(EX0 = 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable INT0 interrupt. </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+
+</div>
+</div>
+<a id="gada95baa6c6b2484eb8cf3c01889071fc" name="gada95baa6c6b2484eb8cf3c01889071fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gada95baa6c6b2484eb8cf3c01889071fc">&#9670;&nbsp;</a></span>enable_low_voltage_interrupt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define enable_low_voltage_interrupt</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(ELVD = 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable low voltage interrupt. </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+
+</div>
+</div>
 <a id="ga45385330048db93cc8070cac1819be5c" name="ga45385330048db93cc8070cac1819be5c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga45385330048db93cc8070cac1819be5c">&#9670;&nbsp;</a></span>enable_mcu_interrupts</h2>
 
@@ -345,6 +405,27 @@ Functions</h2></td></tr>
 
 <p>Enable interrupts support of MCU. </p>
 <p >Set EA to 1 to enable interrupt support. By default interrupts support are disabled Each interrupt should be enabled implicitly by setting its own flag </p>
+
+</div>
+</div>
+<a id="gac4ef997b6aa14a6864c2ef2c432aac4a" name="gac4ef997b6aa14a6864c2ef2c432aac4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac4ef997b6aa14a6864c2ef2c432aac4a">&#9670;&nbsp;</a></span>is_low_voltage_interrupt_enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define is_low_voltage_interrupt_enabled</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(ELVD == 1 &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get low voltage interrupt enable status. </p>
+<p >Get mcu interrupt and low voltage interrupt support status</p>
+<dl class="section return"><dt>Returns</dt><dd>true if mcu and low voltage interrupt enabled, otherwise false </dd></dl>
 
 </div>
 </div>
@@ -531,26 +612,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gae20133d01ce34efd65f0a417512e787c" name="gae20133d01ce34efd65f0a417512e787c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae20133d01ce34efd65f0a417512e787c">&#9670;&nbsp;</a></span>disable_low_voltage_interrupt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void disable_low_voltage_interrupt </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Disable low voltage interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
-
-</div>
-</div>
 <a id="ga68fd74ed67a99485f1634ad957147240" name="ga68fd74ed67a99485f1634ad957147240"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga68fd74ed67a99485f1634ad957147240">&#9670;&nbsp;</a></span>disable_spi_interrupt()</h2>
 
@@ -651,26 +712,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaaaced6a797e74f29c84a5e7f2af02972" name="gaaaced6a797e74f29c84a5e7f2af02972"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaaaced6a797e74f29c84a5e7f2af02972">&#9670;&nbsp;</a></span>enable_int0_interrupt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void enable_int0_interrupt </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enable INT0 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
-
-</div>
-</div>
 <a id="ga07cefc86bf085b7d7f76ef4cd76f58b5" name="ga07cefc86bf085b7d7f76ef4cd76f58b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga07cefc86bf085b7d7f76ef4cd76f58b5">&#9670;&nbsp;</a></span>enable_int1_interrupt()</h2>
 
@@ -747,26 +788,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enable INT4 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
-
-</div>
-</div>
-<a id="ga0c06ab7b414296cbd8184f22926f7111" name="ga0c06ab7b414296cbd8184f22926f7111"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0c06ab7b414296cbd8184f22926f7111">&#9670;&nbsp;</a></span>enable_low_voltage_interrupt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void enable_low_voltage_interrupt </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enable low voltage interrupt. </p>
 <p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
 
 </div>
@@ -1176,27 +1197,6 @@ Functions</h2></td></tr>
 <p>Get INT4 interrupt enable status. </p>
 <p >Get mcu interrupt and INT4 interrupt support status</p>
 <dl class="section return"><dt>Returns</dt><dd>true if mcu and INT4 interrupt enabled, otherwise false </dd></dl>
-
-</div>
-</div>
-<a id="ga0ae0ed6501f3d3085328bc4633275d13" name="ga0ae0ed6501f3d3085328bc4633275d13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0ae0ed6501f3d3085328bc4633275d13">&#9670;&nbsp;</a></span>is_low_voltage_interrupt_enabled()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool is_low_voltage_interrupt_enabled </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get low voltage interrupt enable status. </p>
-<p >Get mcu interrupt and low voltage interrupt support status</p>
-<dl class="section return"><dt>Returns</dt><dd>true if mcu and low voltage interrupt enabled, otherwise false </dd></dl>
 
 </div>
 </div>

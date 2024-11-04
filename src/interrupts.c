@@ -1,21 +1,6 @@
 #include<interrupts.h>
 #include<bits.h>
 
-void enable_low_voltage_interrupt()
-{
-    ELVD = 1;
-}
-
-void disable_low_voltage_interrupt()
-{
-    ELVD = 0;
-}
-
-bool is_low_voltage_interrupt_enabled()
-{
-    return ELVD == 1 && is_mcu_interrupts_enabled();
-}
-
 void enable_adc_interrupt()
 {
     EADC = 1;
@@ -44,11 +29,6 @@ void disable_uart1_interrupt()
 bool is_uart1_interrupt_enabled()
 {
     return ES == 1 && is_mcu_interrupts_enabled();
-}
-
-void enable_int0_interrupt()
-{
-    EX0 = 1;
 }
 
 void disable_int0_interrupt()

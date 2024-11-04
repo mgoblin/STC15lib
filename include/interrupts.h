@@ -125,7 +125,6 @@ typedef enum
  * @ingroup interrupts
  */
 #define is_mcu_interrupts_enabled() (EA == 1)
-//bool is_mcu_interrupts_enabled();
 
 /**
  * @brief Enable low voltage interrupt
@@ -134,7 +133,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-void enable_low_voltage_interrupt();
+#define enable_low_voltage_interrupt() (ELVD = 1)
 
 /**
  * @brief Disable low voltage interrupt
@@ -143,7 +142,7 @@ void enable_low_voltage_interrupt();
  * 
  * @ingroup interrupts
  */
-void disable_low_voltage_interrupt();
+#define disable_low_voltage_interrupt() (ELVD = 0)
 
 /**
  * @brief Get low voltage interrupt enable status
@@ -153,7 +152,7 @@ void disable_low_voltage_interrupt();
  * 
  * @ingroup interrupts
  */
-bool is_low_voltage_interrupt_enabled();
+#define is_low_voltage_interrupt_enabled() (ELVD == 1 && is_mcu_interrupts_enabled())
 
 /**
  * @brief Enable ADC interrupt
@@ -218,7 +217,7 @@ bool is_uart1_interrupt_enabled();
  * 
  * @ingroup interrupts
  */
-void enable_int0_interrupt();
+#define enable_int0_interrupt() (EX0 = 1)
 
 /**
  * @brief Disable INT0 interrupt
