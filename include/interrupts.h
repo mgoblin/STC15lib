@@ -226,7 +226,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-void disable_int0_interrupt();
+#define disable_int0_interrupt() (EX0 = 0)
 
 /**
  * @brief Get INT0 interrupt enable status
@@ -236,7 +236,7 @@ void disable_int0_interrupt();
  * 
  * @ingroup interrupts
  */
-bool is_int0_interrupt_enabled();
+#define is_int0_interrupt_enabled() (EX0 == 1 && is_mcu_interrupts_enabled())
 
 /**
  * @brief Enable INT1 interrupt

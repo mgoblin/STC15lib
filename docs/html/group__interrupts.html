@@ -110,6 +110,12 @@ Macros</h2></td></tr>
 <tr class="memitem:ga9f0976519e8c6f8102dce44f7ad2aa6a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga9f0976519e8c6f8102dce44f7ad2aa6a">enable_int0_interrupt</a>()&#160;&#160;&#160;(EX0 = 1)</td></tr>
 <tr class="memdesc:ga9f0976519e8c6f8102dce44f7ad2aa6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable INT0 interrupt.  <a href="group__interrupts.html#ga9f0976519e8c6f8102dce44f7ad2aa6a">More...</a><br /></td></tr>
 <tr class="separator:ga9f0976519e8c6f8102dce44f7ad2aa6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5280b5134c4d1fad2f492e30205d7691"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga5280b5134c4d1fad2f492e30205d7691">disable_int0_interrupt</a>()&#160;&#160;&#160;(EX0 = 0)</td></tr>
+<tr class="memdesc:ga5280b5134c4d1fad2f492e30205d7691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable INT0 interrupt.  <a href="group__interrupts.html#ga5280b5134c4d1fad2f492e30205d7691">More...</a><br /></td></tr>
+<tr class="separator:ga5280b5134c4d1fad2f492e30205d7691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga194f7f1f70af345370c596512b23a588"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga194f7f1f70af345370c596512b23a588">is_int0_interrupt_enabled</a>()&#160;&#160;&#160;(EX0 == 1 &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td></tr>
+<tr class="memdesc:ga194f7f1f70af345370c596512b23a588"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get INT0 interrupt enable status.  <a href="group__interrupts.html#ga194f7f1f70af345370c596512b23a588">More...</a><br /></td></tr>
+<tr class="separator:ga194f7f1f70af345370c596512b23a588"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -124,12 +130,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gacebb7eae3b50e1858ea990216fc7c3f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gacebb7eae3b50e1858ea990216fc7c3f6">disable_int0_interrupt</a> ()</td></tr>
-<tr class="memdesc:gacebb7eae3b50e1858ea990216fc7c3f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable INT0 interrupt.  <a href="group__interrupts.html#gacebb7eae3b50e1858ea990216fc7c3f6">More...</a><br /></td></tr>
-<tr class="separator:gacebb7eae3b50e1858ea990216fc7c3f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf8b4a92ca36fbf967a007fc65912a5e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaf8b4a92ca36fbf967a007fc65912a5e9">is_int0_interrupt_enabled</a> ()</td></tr>
-<tr class="memdesc:gaf8b4a92ca36fbf967a007fc65912a5e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get INT0 interrupt enable status.  <a href="group__interrupts.html#gaf8b4a92ca36fbf967a007fc65912a5e9">More...</a><br /></td></tr>
-<tr class="separator:gaf8b4a92ca36fbf967a007fc65912a5e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga07cefc86bf085b7d7f76ef4cd76f58b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga07cefc86bf085b7d7f76ef4cd76f58b5">enable_int1_interrupt</a> ()</td></tr>
 <tr class="memdesc:ga07cefc86bf085b7d7f76ef4cd76f58b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable INT1 interrupt.  <a href="group__interrupts.html#ga07cefc86bf085b7d7f76ef4cd76f58b5">More...</a><br /></td></tr>
 <tr class="separator:ga07cefc86bf085b7d7f76ef4cd76f58b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -328,6 +328,26 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga5280b5134c4d1fad2f492e30205d7691" name="ga5280b5134c4d1fad2f492e30205d7691"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5280b5134c4d1fad2f492e30205d7691">&#9670;&nbsp;</a></span>disable_int0_interrupt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define disable_int0_interrupt</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(EX0 = 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable INT0 interrupt. </p>
+<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+
+</div>
+</div>
 <a id="gae7bd7f894582b7f376b077fbd4435864" name="gae7bd7f894582b7f376b077fbd4435864"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gae7bd7f894582b7f376b077fbd4435864">&#9670;&nbsp;</a></span>disable_low_voltage_interrupt</h2>
 
@@ -509,6 +529,27 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga194f7f1f70af345370c596512b23a588" name="ga194f7f1f70af345370c596512b23a588"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga194f7f1f70af345370c596512b23a588">&#9670;&nbsp;</a></span>is_int0_interrupt_enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define is_int0_interrupt_enabled</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(EX0 == 1 &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get INT0 interrupt enable status. </p>
+<p >Get mcu interrupt and INT0 interrupt support status</p>
+<dl class="section return"><dt>Returns</dt><dd>true if mcu and INT0 interrupt enabled, otherwise false </dd></dl>
+
+</div>
+</div>
 <a id="gac4ef997b6aa14a6864c2ef2c432aac4a" name="gac4ef997b6aa14a6864c2ef2c432aac4a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gac4ef997b6aa14a6864c2ef2c432aac4a">&#9670;&nbsp;</a></span>is_low_voltage_interrupt_enabled</h2>
 
@@ -614,26 +655,6 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gacebb7eae3b50e1858ea990216fc7c3f6" name="gacebb7eae3b50e1858ea990216fc7c3f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacebb7eae3b50e1858ea990216fc7c3f6">&#9670;&nbsp;</a></span>disable_int0_interrupt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void disable_int0_interrupt </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Disable INT0 interrupt. </p>
-<p >Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
-
-</div>
-</div>
 <a id="ga9a88388bd2affb3f2559d704967632f9" name="ga9a88388bd2affb3f2559d704967632f9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga9a88388bd2affb3f2559d704967632f9">&#9670;&nbsp;</a></span>disable_int1_interrupt()</h2>
 
@@ -1113,27 +1134,6 @@ Functions</h2></td></tr>
 
 <p>Get UART1 interrupt priority. </p>
 <dl class="section return"><dt>Returns</dt><dd>UART1 interrupt priority </dd></dl>
-
-</div>
-</div>
-<a id="gaf8b4a92ca36fbf967a007fc65912a5e9" name="gaf8b4a92ca36fbf967a007fc65912a5e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf8b4a92ca36fbf967a007fc65912a5e9">&#9670;&nbsp;</a></span>is_int0_interrupt_enabled()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool is_int0_interrupt_enabled </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get INT0 interrupt enable status. </p>
-<p >Get mcu interrupt and INT0 interrupt support status</p>
-<dl class="section return"><dt>Returns</dt><dd>true if mcu and INT0 interrupt enabled, otherwise false </dd></dl>
 
 </div>
 </div>
