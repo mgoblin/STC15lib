@@ -486,7 +486,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-interrupt_priority_t get_adc_interrupt_priority();
+#define get_adc_interrupt_priority() (PADC)
 
 /**
  * @brief Set UART1 interrupt priority
