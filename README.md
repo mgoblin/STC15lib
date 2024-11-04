@@ -28,8 +28,10 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 * timer0 and timer2 use interrupts module routines
 * Interrupts module implemented (with interrupts priority and int0/int1 trigger config support)
 
-Next releases todo
+0.4.1
 * TODO Try to use defines instead of function decl
+
+Next releases todo
 * TODO Timer aux - set timers in terms of output signal freq and timings
 * TODO Timers aux should not biased from CPU frequency dividers
 * TODO Timers mode1,2,3 should be implemented and documented 
