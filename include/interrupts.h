@@ -53,6 +53,19 @@
  * 20 | Timer4 interrupt (STC15W408AS has no this timer)
  * 21 | Comparator interrupt
  * 
+ * 
+ * For interrupt priority 
+ *  set_<source>\_interrupt_priority(priority enum value) 
+ * and 
+ *  get _<source>\_interrupt_priority()
+ * routines should be used.
+ * 
+ * For INT0 and INT1 trigger configration 
+ * set_<int0 or int1>\_trigger(trigger enum value) 
+ * and 
+ * get_<int0 or int1>\_trigger()
+ * routines should be used.
+ * 
  * @author Michael Golovanov
  */
 
@@ -68,6 +81,17 @@ typedef enum
     /// @brief High priority
     HIGH = 1
 } interrupt_priority_t;
+
+/** 
+ * External interrupt (INT0, INT1) trigger enumeration
+ * 
+ * @ingroup interrupts
+ */
+typedef enum
+{
+    RAISING_OR_FALLING = 0,
+    ONLY_FALLING = 1
+} external_interrupt_trigger_t;
 
 /**
  * @brief Enable interrupts support of MCU

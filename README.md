@@ -26,9 +26,7 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 * Enable and disable timer2 mode0 output to P3.0 pin supported now
 * timer0_enable_on_pinINT0_high implemented for timer0 work only on INT0/P3.0 pin is high
 * timer0 and timer2 use interrupts module routines
-* Interrupts module implemented (without interrupts priority support)
-* TODO Implement interrupt priority routines in interrupts module
-* TODO implements int0 and int1 trigger routines    
+* Interrupts module implemented (with interrupts priority and int0/int1 trigger config support)
 
 Next releases todo
 * TODO Try to use defines instead of function decl
