@@ -1,6 +1,6 @@
 #include <sys.h>
 #include <delay.h>
-#include <interrupts.h>
+#include <interrupt.h>
 
 #define LED P10
 #define INT0 P32

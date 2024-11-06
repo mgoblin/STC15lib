@@ -3,7 +3,7 @@
 
 /**
  * @file delay.h
- * @defgroup delays Delays
+ * @defgroup delays Delay
  * @details Functions and data structures related to delaying program flow
  * @author Michael Golovanov
  */

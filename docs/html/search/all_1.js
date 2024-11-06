@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['delay_2eh_0',['delay.h',['../delay_8h.html',1,'']]],
-  ['delay_5fms_1',['delay_ms',['../group__delays.html#gaa0dce6d249d81fb85b082273270ba710',1,'delay_ms(uint16_t ms):&#160;delay.c'],['../group__delays.html#gaa0dce6d249d81fb85b082273270ba710',1,'delay_ms(uint16_t ms):&#160;delay.c']]],
-  ['delays_2',['Delays',['../group__delays.html',1,'']]],
+  ['delay_0',['Delay',['../group__delays.html',1,'']]],
+  ['delay_2eh_1',['delay.h',['../delay_8h.html',1,'']]],
+  ['delay_5fms_2',['delay_ms',['../group__delays.html#gaa0dce6d249d81fb85b082273270ba710',1,'delay_ms(uint16_t ms):&#160;delay.c'],['../group__delays.html#gaa0dce6d249d81fb85b082273270ba710',1,'delay_ms(uint16_t ms):&#160;delay.c']]],
   ['disable_5fadc_5finterrupt_3',['disable_adc_interrupt',['../group__interrupts.html#ga499a9a838de2728a9c6ab4311d055b86',1,'interrupt.h']]],
   ['disable_5fint0_5finterrupt_4',['disable_int0_interrupt',['../group__interrupts.html#ga5280b5134c4d1fad2f492e30205d7691',1,'interrupt.h']]],
   ['disable_5fint1_5finterrupt_5',['disable_int1_interrupt',['../group__interrupts.html#gaa588f32201651fc565dd745d36048a97',1,'interrupt.h']]],
