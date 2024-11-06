@@ -227,6 +227,12 @@ Macros</h2></td></tr>
 <tr class="memitem:gaacd1dbc81fe112ce6b25b664d07f2924"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaacd1dbc81fe112ce6b25b664d07f2924">get_spi_interrupt_priority</a>()&#160;&#160;&#160;(test_if_bit_set(IP2, 1))</td></tr>
 <tr class="memdesc:gaacd1dbc81fe112ce6b25b664d07f2924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get SPI interrupt priority.  <a href="group__interrupts.html#gaacd1dbc81fe112ce6b25b664d07f2924">More...</a><br /></td></tr>
 <tr class="separator:gaacd1dbc81fe112ce6b25b664d07f2924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae83d9bb9ef89de5990b742de004f8ed5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gae83d9bb9ef89de5990b742de004f8ed5">set_int0_interrupt_trigger</a>(trigger)&#160;&#160;&#160;( IT0 = trigger)</td></tr>
+<tr class="memdesc:gae83d9bb9ef89de5990b742de004f8ed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set INT0 interrupt trigger.  <a href="group__interrupts.html#gae83d9bb9ef89de5990b742de004f8ed5">More...</a><br /></td></tr>
+<tr class="separator:gae83d9bb9ef89de5990b742de004f8ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafa1390efc7ccf39edab668888d503995"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gafa1390efc7ccf39edab668888d503995">get_int0_interrupt_trigger</a>()&#160;&#160;&#160;(IT0)</td></tr>
+<tr class="memdesc:gafa1390efc7ccf39edab668888d503995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get INT0 interrupt trigger.  <a href="group__interrupts.html#gafa1390efc7ccf39edab668888d503995">More...</a><br /></td></tr>
+<tr class="separator:gafa1390efc7ccf39edab668888d503995"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -241,12 +247,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga90fbd256fb6a0e278caf6b701306d792"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga90fbd256fb6a0e278caf6b701306d792">set_int0_interrupt_trigger</a> (<a class="el" href="group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7">external_interrupt_trigger_t</a> trigger)</td></tr>
-<tr class="memdesc:ga90fbd256fb6a0e278caf6b701306d792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set INT0 interrupt trigger.  <a href="group__interrupts.html#ga90fbd256fb6a0e278caf6b701306d792">More...</a><br /></td></tr>
-<tr class="separator:ga90fbd256fb6a0e278caf6b701306d792"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9fe547fe8ac369169c0855f6e2d5d74d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7">external_interrupt_trigger_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga9fe547fe8ac369169c0855f6e2d5d74d">get_int0_interrupt_trigger</a> ()</td></tr>
-<tr class="memdesc:ga9fe547fe8ac369169c0855f6e2d5d74d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get INT0 interrupt trigger.  <a href="group__interrupts.html#ga9fe547fe8ac369169c0855f6e2d5d74d">More...</a><br /></td></tr>
-<tr class="separator:ga9fe547fe8ac369169c0855f6e2d5d74d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga98f5dbe245965a03ffe3b0c7b9315862"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga98f5dbe245965a03ffe3b0c7b9315862">set_int1_interrupt_trigger</a> (<a class="el" href="group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7">external_interrupt_trigger_t</a> trigger)</td></tr>
 <tr class="memdesc:ga98f5dbe245965a03ffe3b0c7b9315862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set INT1 interrupt trigger.  <a href="group__interrupts.html#ga98f5dbe245965a03ffe3b0c7b9315862">More...</a><br /></td></tr>
 <tr class="separator:ga98f5dbe245965a03ffe3b0c7b9315862"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -828,6 +828,27 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gafa1390efc7ccf39edab668888d503995" name="gafa1390efc7ccf39edab668888d503995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafa1390efc7ccf39edab668888d503995">&#9670;&nbsp;</a></span>get_int0_interrupt_trigger</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define get_int0_interrupt_trigger</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(IT0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get INT0 interrupt trigger. </p>
+<p >By default trigger initialized with RAISING_OR_FALLING_EDGE value</p>
+<dl class="section return"><dt>Returns</dt><dd>RAISING_OR_FALLING_EDGE or ONLY_FALLING_EDGE </dd></dl>
+
+</div>
+</div>
 <a id="ga00c71c291d049d66e03de830a21cbe29" name="ga00c71c291d049d66e03de830a21cbe29"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga00c71c291d049d66e03de830a21cbe29">&#9670;&nbsp;</a></span>get_int1_interrupt_priority</h2>
 
@@ -1250,6 +1271,32 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gae83d9bb9ef89de5990b742de004f8ed5" name="gae83d9bb9ef89de5990b742de004f8ed5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae83d9bb9ef89de5990b742de004f8ed5">&#9670;&nbsp;</a></span>set_int0_interrupt_trigger</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define set_int0_interrupt_trigger</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">trigger</td><td>)</td>
+          <td>&#160;&#160;&#160;( IT0 = trigger)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set INT0 interrupt trigger. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">trigger</td><td>RAISING_OR_FALLING_EDGE or ONLY_FALLING_EDGE </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="gafcf2592c8e8e557e3ba9eab108c34ce9" name="gafcf2592c8e8e557e3ba9eab108c34ce9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gafcf2592c8e8e557e3ba9eab108c34ce9">&#9670;&nbsp;</a></span>set_int1_interrupt_priority</h2>
 
@@ -1450,27 +1497,6 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga9fe547fe8ac369169c0855f6e2d5d74d" name="ga9fe547fe8ac369169c0855f6e2d5d74d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9fe547fe8ac369169c0855f6e2d5d74d">&#9670;&nbsp;</a></span>get_int0_interrupt_trigger()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7">external_interrupt_trigger_t</a> get_int0_interrupt_trigger </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get INT0 interrupt trigger. </p>
-<p >By default trigger initialized with RAISING_OR_FALLING_EDGE value</p>
-<dl class="section return"><dt>Returns</dt><dd>RAISING_OR_FALLING_EDGE or ONLY_FALLING_EDGE </dd></dl>
-
-</div>
-</div>
 <a id="ga2bf6e60e63938cc908f5e15a9fd88f0b" name="ga2bf6e60e63938cc908f5e15a9fd88f0b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga2bf6e60e63938cc908f5e15a9fd88f0b">&#9670;&nbsp;</a></span>get_int1_interrupt_trigger()</h2>
 
@@ -1489,32 +1515,6 @@ Functions</h2></td></tr>
 <p>Get INT1 interrupt trigger. </p>
 <p >By default trigger initialized with RAISING_OR_FALLING_EDGE value</p>
 <dl class="section return"><dt>Returns</dt><dd>RAISING_OR_FALLING_EDGE or ONLY_FALLING_EDGE </dd></dl>
-
-</div>
-</div>
-<a id="ga90fbd256fb6a0e278caf6b701306d792" name="ga90fbd256fb6a0e278caf6b701306d792"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga90fbd256fb6a0e278caf6b701306d792">&#9670;&nbsp;</a></span>set_int0_interrupt_trigger()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void set_int0_interrupt_trigger </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7">external_interrupt_trigger_t</a>&#160;</td>
-          <td class="paramname"><em>trigger</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set INT0 interrupt trigger. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">trigger</td><td>RAISING_OR_FALLING_EDGE or ONLY_FALLING_EDGE </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

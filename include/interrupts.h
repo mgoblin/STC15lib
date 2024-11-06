@@ -586,7 +586,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-void set_int0_interrupt_trigger(external_interrupt_trigger_t trigger);
+#define set_int0_interrupt_trigger(trigger) ( IT0 = trigger)
 
 /**
  * @brief Get INT0 interrupt trigger
@@ -596,7 +596,7 @@ void set_int0_interrupt_trigger(external_interrupt_trigger_t trigger);
  * 
  * @ingroup interrupts
  */
-external_interrupt_trigger_t get_int0_interrupt_trigger();
+#define get_int0_interrupt_trigger() (IT0)
 
 /**
  * @brief Set INT1 interrupt trigger

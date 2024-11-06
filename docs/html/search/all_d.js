@@ -2,7 +2,7 @@ var searchData=
 [
   ['set_5fadc_5finterrupt_5fpriority_0',['set_adc_interrupt_priority',['../group__interrupts.html#gac3ad7282866c58628f44b746ec2da56f',1,'interrupts.h']]],
   ['set_5fint0_5finterrupt_5fpriority_1',['set_int0_interrupt_priority',['../group__interrupts.html#gadc1f845094582635951872311de9f1f4',1,'interrupts.h']]],
-  ['set_5fint0_5finterrupt_5ftrigger_2',['set_int0_interrupt_trigger',['../group__interrupts.html#ga90fbd256fb6a0e278caf6b701306d792',1,'set_int0_interrupt_trigger(external_interrupt_trigger_t trigger):&#160;interrupts.c'],['../group__interrupts.html#ga90fbd256fb6a0e278caf6b701306d792',1,'set_int0_interrupt_trigger(external_interrupt_trigger_t trigger):&#160;interrupts.c']]],
+  ['set_5fint0_5finterrupt_5ftrigger_2',['set_int0_interrupt_trigger',['../group__interrupts.html#gae83d9bb9ef89de5990b742de004f8ed5',1,'interrupts.h']]],
   ['set_5fint1_5finterrupt_5fpriority_3',['set_int1_interrupt_priority',['../group__interrupts.html#gafcf2592c8e8e557e3ba9eab108c34ce9',1,'interrupts.h']]],
   ['set_5fint1_5finterrupt_5ftrigger_4',['set_int1_interrupt_trigger',['../group__interrupts.html#ga98f5dbe245965a03ffe3b0c7b9315862',1,'set_int1_interrupt_trigger(external_interrupt_trigger_t trigger):&#160;interrupts.c'],['../group__interrupts.html#ga98f5dbe245965a03ffe3b0c7b9315862',1,'set_int1_interrupt_trigger(external_interrupt_trigger_t trigger):&#160;interrupts.c']]],
   ['set_5flow_5fvoltage_5finterrupt_5fpriority_5',['set_low_voltage_interrupt_priority',['../group__interrupts.html#ga3d287824f6ad9219ad0ea0ea8ceed3a2',1,'interrupts.h']]],

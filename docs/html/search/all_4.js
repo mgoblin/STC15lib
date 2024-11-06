@@ -4,7 +4,7 @@ var searchData=
   ['get_5fchipid_1',['get_chipid',['../group__chip__id.html#ga999e39479cf1cded4bf023b6efd472e3',1,'chip_id.h']]],
   ['get_5ffrequency_5fdivider_2',['get_frequency_divider',['../group__freq.html#gabec6924a99fc0c136d0d1d6de5f8bf52',1,'frequency.h']]],
   ['get_5fint0_5finterrupt_5fpriority_3',['get_int0_interrupt_priority',['../group__interrupts.html#gaad8983bc0b980226f8a20ea91576f224',1,'interrupts.h']]],
-  ['get_5fint0_5finterrupt_5ftrigger_4',['get_int0_interrupt_trigger',['../group__interrupts.html#ga9fe547fe8ac369169c0855f6e2d5d74d',1,'get_int0_interrupt_trigger():&#160;interrupts.c'],['../group__interrupts.html#ga9fe547fe8ac369169c0855f6e2d5d74d',1,'get_int0_interrupt_trigger():&#160;interrupts.c']]],
+  ['get_5fint0_5finterrupt_5ftrigger_4',['get_int0_interrupt_trigger',['../group__interrupts.html#gafa1390efc7ccf39edab668888d503995',1,'interrupts.h']]],
   ['get_5fint1_5finterrupt_5fpriority_5',['get_int1_interrupt_priority',['../group__interrupts.html#ga00c71c291d049d66e03de830a21cbe29',1,'interrupts.h']]],
   ['get_5fint1_5finterrupt_5ftrigger_6',['get_int1_interrupt_trigger',['../group__interrupts.html#ga2bf6e60e63938cc908f5e15a9fd88f0b',1,'get_int1_interrupt_trigger():&#160;interrupts.c'],['../group__interrupts.html#ga2bf6e60e63938cc908f5e15a9fd88f0b',1,'get_int1_interrupt_trigger():&#160;interrupts.c']]],
   ['get_5flow_5fvoltage_5finterrupt_5fpriority_7',['get_low_voltage_interrupt_priority',['../group__interrupts.html#ga7d6648d7b8c9e35c9a3e19067b8eb8ae',1,'interrupts.h']]],
