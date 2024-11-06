@@ -78,6 +78,8 @@ Macros</h2></td></tr>
 <tr class="separator:ga68b53855ca88473c1f21651184ee2cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac2f34fcd6ffbec0a91510385d3286f70"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gac2f34fcd6ffbec0a91510385d3286f70">get_timer0_clock_divider</a>()&#160;&#160;&#160;(get_bit(AUXR, 7) == 0 ? <a class="el" href="group__timer.html#ggaf044d39b4f1cbe40ca04353b2852a21da5c3a2baea537d57bba309aa892a7926c">T12</a> : <a class="el" href="group__timer.html#ggaf044d39b4f1cbe40ca04353b2852a21da623238751deb7764bdebf4799fe30f07">T1</a>)</td></tr>
 <tr class="separator:gac2f34fcd6ffbec0a91510385d3286f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4259384552df325973b81bd5425b7f4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga4259384552df325973b81bd5425b7f4a">get_timer2_clock_divider</a>()&#160;&#160;&#160;(get_bit(AUXR, 2) == 0 ? <a class="el" href="group__timer.html#ggaf044d39b4f1cbe40ca04353b2852a21da5c3a2baea537d57bba309aa892a7926c">T12</a> : <a class="el" href="group__timer.html#ggaf044d39b4f1cbe40ca04353b2852a21da623238751deb7764bdebf4799fe30f07">T1</a>)</td></tr>
+<tr class="separator:ga4259384552df325973b81bd5425b7f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -88,8 +90,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga9c368c4e1582fe9678f1675b65f08e77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__timer.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga9c368c4e1582fe9678f1675b65f08e77">get_timer2_clock_divider</a> ()</td></tr>
-<tr class="separator:ga9c368c4e1582fe9678f1675b65f08e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa05541d692e42d378e480afa3bbeaaee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gaa05541d692e42d378e480afa3bbeaaee">is_timer0_P35_output_enabled</a> ()</td></tr>
 <tr class="separator:gaa05541d692e42d378e480afa3bbeaaee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac9628739ab67a887e31c5a44730e7320"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gac9628739ab67a887e31c5a44730e7320">is_timer2_P30_output_enabled</a> ()</td></tr>
@@ -183,6 +183,25 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga4259384552df325973b81bd5425b7f4a" name="ga4259384552df325973b81bd5425b7f4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4259384552df325973b81bd5425b7f4a">&#9670;&nbsp;</a></span>get_timer2_clock_divider</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define get_timer2_clock_divider</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(get_bit(AUXR, 2) == 0 ? <a class="el" href="group__timer.html#ggaf044d39b4f1cbe40ca04353b2852a21da5c3a2baea537d57bba309aa892a7926c">T12</a> : <a class="el" href="group__timer.html#ggaf044d39b4f1cbe40ca04353b2852a21da623238751deb7764bdebf4799fe30f07">T1</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Get timer2 clock divider</p>
+<dl class="section return"><dt>Returns</dt><dd>timer2 clock divider </dd></dl>
+
+</div>
+</div>
 <a id="ga68b53855ca88473c1f21651184ee2cc8" name="ga68b53855ca88473c1f21651184ee2cc8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga68b53855ca88473c1f21651184ee2cc8">&#9670;&nbsp;</a></span>get_timer2_mode</h2>
 
@@ -225,25 +244,6 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga9c368c4e1582fe9678f1675b65f08e77" name="ga9c368c4e1582fe9678f1675b65f08e77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9c368c4e1582fe9678f1675b65f08e77">&#9670;&nbsp;</a></span>get_timer2_clock_divider()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__timer.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a> get_timer2_clock_divider </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Get timer2 clock divider</p>
-<dl class="section return"><dt>Returns</dt><dd>timer2 clock divider </dd></dl>
-
-</div>
-</div>
 <a id="gaa05541d692e42d378e480afa3bbeaaee" name="gaa05541d692e42d378e480afa3bbeaaee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaa05541d692e42d378e480afa3bbeaaee">&#9670;&nbsp;</a></span>is_timer0_P35_output_enabled()</h2>
 

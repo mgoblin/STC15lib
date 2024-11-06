@@ -87,7 +87,7 @@ typedef enum
  * 
  * @ingroup timer
  */
-timer_clock_divider_t get_timer2_clock_divider();
+#define get_timer2_clock_divider() (get_bit(AUXR, 2) == 0 ? T12 : T1)
 
 /**
  * Get output to pin P3.5 output flag enabled value
