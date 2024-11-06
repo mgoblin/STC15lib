@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['interrupts_0',['Interrupts',['../group__interrupts.html',1,'']]]
+  ['interrupt_0',['Interrupt',['../group__interrupts.html',1,'']]]
 ];

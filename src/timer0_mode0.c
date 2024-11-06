@@ -1,7 +1,7 @@
 #include <sys.h>
 #include <timer.h>
 #include <bits.h>
-#include <interrupts.h>
+#include <interrupt.h>
 
 void timer0_mode0_12T_init()
 { 

@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <bits.h>
-#include <interrupts.h>
+#include <interrupt.h>
 
 void timer2_mode0_12T_init()
 {

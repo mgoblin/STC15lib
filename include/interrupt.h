@@ -7,7 +7,7 @@
 
 /**
  * @file interrupts.h
- * @defgroup interrupts Interrupts
+ * @defgroup interrupts Interrupt
  * 
  * @details Functions and data structures for interrupts.
  * Interrupts are controlled by registers IE and IE2 bits.
