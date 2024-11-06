@@ -239,7 +239,7 @@ void timer2_mode0_enableP30_output(bool enable);
 
 //============================== Timer2 mode0 declarations end ============================
 
-//============================== Timer0 mode0 declarations begin ==========================
+//============================== Timer0 mode1 declarations begin ==========================
 
 /**
  * Initialize mode1 12T for timer0. Set TMOD and AUXR bits.
