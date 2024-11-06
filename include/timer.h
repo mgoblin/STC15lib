@@ -2,6 +2,7 @@
 #define STC15_TIMERH
 
 #include <stdbool.h>
+#include <bits.h>
 
 /**
  * @file timer.h
@@ -77,7 +78,7 @@ typedef enum
  * 
  * @ingroup timer
  */
-timer_clock_divider_t get_timer0_clock_divider();
+#define get_timer0_clock_divider() (get_bit(AUXR, 7) == 0 ? T12 : T1)
 
 /**
  * Get timer2 clock divider
