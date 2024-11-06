@@ -96,7 +96,7 @@ typedef enum
  * 
  * @ingroup timer
  */
-bool is_timer0_P35_output_enabled();
+#define is_timer0_P35_output_enabled() (INT_CLKO & 0x01 > 0)
 
 /**
  * Get output to pin P3.0 output flag enabled value

@@ -80,6 +80,8 @@ Macros</h2></td></tr>
 <tr class="separator:gac2f34fcd6ffbec0a91510385d3286f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4259384552df325973b81bd5425b7f4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga4259384552df325973b81bd5425b7f4a">get_timer2_clock_divider</a>()&#160;&#160;&#160;(get_bit(AUXR, 2) == 0 ? <a class="el" href="group__timer.html#ggaf044d39b4f1cbe40ca04353b2852a21da5c3a2baea537d57bba309aa892a7926c">T12</a> : <a class="el" href="group__timer.html#ggaf044d39b4f1cbe40ca04353b2852a21da623238751deb7764bdebf4799fe30f07">T1</a>)</td></tr>
 <tr class="separator:ga4259384552df325973b81bd5425b7f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae9aaed1fca016d231d3c6bdbb4b11319"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gae9aaed1fca016d231d3c6bdbb4b11319">is_timer0_P35_output_enabled</a>()&#160;&#160;&#160;(INT_CLKO &amp; 0x01 &gt; 0)</td></tr>
+<tr class="separator:gae9aaed1fca016d231d3c6bdbb4b11319"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -90,8 +92,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaa05541d692e42d378e480afa3bbeaaee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gaa05541d692e42d378e480afa3bbeaaee">is_timer0_P35_output_enabled</a> ()</td></tr>
-<tr class="separator:gaa05541d692e42d378e480afa3bbeaaee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac9628739ab67a887e31c5a44730e7320"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gac9628739ab67a887e31c5a44730e7320">is_timer2_P30_output_enabled</a> ()</td></tr>
 <tr class="separator:gac9628739ab67a887e31c5a44730e7320"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafc1922d4d4dacedb83fe63a73984bcc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gafc1922d4d4dacedb83fe63a73984bcc6">timer0_mode0_12T_init</a> ()</td></tr>
@@ -221,6 +221,25 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gae9aaed1fca016d231d3c6bdbb4b11319" name="gae9aaed1fca016d231d3c6bdbb4b11319"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae9aaed1fca016d231d3c6bdbb4b11319">&#9670;&nbsp;</a></span>is_timer0_P35_output_enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define is_timer0_P35_output_enabled</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(INT_CLKO &amp; 0x01 &gt; 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Get output to pin P3.5 output flag enabled value</p>
+<dl class="section return"><dt>Returns</dt><dd>true if output enabled oterwise false </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="gaf044d39b4f1cbe40ca04353b2852a21d" name="gaf044d39b4f1cbe40ca04353b2852a21d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf044d39b4f1cbe40ca04353b2852a21d">&#9670;&nbsp;</a></span>timer_clock_divider_t</h2>
@@ -244,25 +263,6 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gaa05541d692e42d378e480afa3bbeaaee" name="gaa05541d692e42d378e480afa3bbeaaee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa05541d692e42d378e480afa3bbeaaee">&#9670;&nbsp;</a></span>is_timer0_P35_output_enabled()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool is_timer0_P35_output_enabled </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Get output to pin P3.5 output flag enabled value</p>
-<dl class="section return"><dt>Returns</dt><dd>true if output enabled oterwise false </dd></dl>
-
-</div>
-</div>
 <a id="gac9628739ab67a887e31c5a44730e7320" name="gac9628739ab67a887e31c5a44730e7320"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gac9628739ab67a887e31c5a44730e7320">&#9670;&nbsp;</a></span>is_timer2_P30_output_enabled()</h2>
 
