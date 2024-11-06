@@ -104,6 +104,9 @@ Macros</h2></td></tr>
 <tr class="separator:gae9aaed1fca016d231d3c6bdbb4b11319"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga42a0a7e0d9d71cf3535113a5bb769324"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga42a0a7e0d9d71cf3535113a5bb769324">is_timer2_P30_output_enabled</a>()&#160;&#160;&#160;(get_bit(INT_CLKO, 2) &gt; 0)</td></tr>
 <tr class="separator:ga42a0a7e0d9d71cf3535113a5bb769324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac66bdb451614f8dd51aa9c1cb20e10d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8h.html#ac66bdb451614f8dd51aa9c1cb20e10d0">timer0_enable_on_pinINT0_high</a>()&#160;&#160;&#160;(bit_set(TMOD, 3))</td></tr>
+<tr class="memdesc:ac66bdb451614f8dd51aa9c1cb20e10d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable timer on INT0(P3.2) pin is low.  <a href="timer_8h.html#ac66bdb451614f8dd51aa9c1cb20e10d0">More...</a><br /></td></tr>
+<tr class="separator:ac66bdb451614f8dd51aa9c1cb20e10d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -130,9 +133,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga46cf16f89446f74dc7f3938388ccef68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">timer0_mode0_enableP35_output</a> (bool enable)</td></tr>
 <tr class="memdesc:ga46cf16f89446f74dc7f3938388ccef68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable output of meandr with timer times on P3.5 pin.  <a href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">More...</a><br /></td></tr>
 <tr class="separator:ga46cf16f89446f74dc7f3938388ccef68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a02b7d5c51b87ca05f703dd9c3d1c8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8h.html#a9a02b7d5c51b87ca05f703dd9c3d1c8f">timer0_enable_on_pinINT0_high</a> ()</td></tr>
-<tr class="memdesc:a9a02b7d5c51b87ca05f703dd9c3d1c8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable timer on INT0(P3.2) pin is low.  <a href="timer_8h.html#a9a02b7d5c51b87ca05f703dd9c3d1c8f">More...</a><br /></td></tr>
-<tr class="separator:a9a02b7d5c51b87ca05f703dd9c3d1c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabe56c22feca0e373507d08c4fe9aa3d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gabe56c22feca0e373507d08c4fe9aa3d4">timer2_mode0_12T_init</a> ()</td></tr>
 <tr class="memdesc:gabe56c22feca0e373507d08c4fe9aa3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize mode0 12T for timer2. Set AUXR bits.  <a href="group__timer.html#gabe56c22feca0e373507d08c4fe9aa3d4">More...</a><br /></td></tr>
 <tr class="separator:gabe56c22feca0e373507d08c4fe9aa3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,18 +152,18 @@ Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>timer0_mode1_12T_init</b> ()</td></tr>
 <tr class="separator:a5453bf2f413f079ad65fa4bf75eeb3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a9a02b7d5c51b87ca05f703dd9c3d1c8f" name="a9a02b7d5c51b87ca05f703dd9c3d1c8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a02b7d5c51b87ca05f703dd9c3d1c8f">&#9670;&nbsp;</a></span>timer0_enable_on_pinINT0_high()</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ac66bdb451614f8dd51aa9c1cb20e10d0" name="ac66bdb451614f8dd51aa9c1cb20e10d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac66bdb451614f8dd51aa9c1cb20e10d0">&#9670;&nbsp;</a></span>timer0_enable_on_pinINT0_high</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void timer0_enable_on_pinINT0_high </td>
+          <td class="memname">#define timer0_enable_on_pinINT0_high</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td>&#160;&#160;&#160;(bit_set(TMOD, 3))</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -178,7 +178,7 @@ void timer0_mode0_enableP35_output(bool enable);
  * @details if you wand resore default timer behaviour indepned of INT0 state
  * reinit timer should be done 
  */
-void timer0_enable_on_pinINT0_high();
+# define timer0_enable_on_pinINT0_high() (bit_set(TMOD, 3))
 
 //============================== Timer0 mode0 declarations end ============================
 
