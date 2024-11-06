@@ -491,8 +491,7 @@ typedef enum
 
 /**
  * @brief Set UART1 interrupt priority
- * 
- * @param interrupt_priority_t priority interrupt priority
+ * @details Parameter has type interrupt_priority_t and means interrupt priority
  * 
  * @ingroup interrupts
  */
@@ -509,8 +508,7 @@ typedef enum
 
 /**
  * @brief Set INT0 interrupt priority
- * 
- * @param interrupt_priority_t priority interrupt priority
+ * @details Parameter has type interrupt_priority_t and means interrupt priority
  * 
  * @ingroup interrupts
  */
