@@ -133,7 +133,7 @@ typedef enum
 /**
  * Set master clock output pin
  * 
- * @param master_clock_output_pin_t pin pin to set output
+ * @param pin master_clock_output_pin_t pin to set output
  * 
  * @ingroup freq
  */

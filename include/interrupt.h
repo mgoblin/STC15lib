@@ -6,7 +6,7 @@
 #include<bits.h>
 
 /**
- * @file interrupts.h
+ * @file interrupt.h
  * @defgroup interrupts Interrupt
  * 
  * @details Functions and data structures for interrupts.
