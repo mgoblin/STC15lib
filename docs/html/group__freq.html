@@ -90,11 +90,11 @@ Macros</h2></td></tr>
 <tr class="separator:ga6fa1489df98df6cf04b7ef07168267a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabcec59e26510c1132c4f13f45b13ec6b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#gabcec59e26510c1132c4f13f45b13ec6b">disable_master_clock_output</a>()&#160;&#160;&#160;(CLK_DIV &amp;= 0x3f)</td></tr>
 <tr class="separator:gabcec59e26510c1132c4f13f45b13ec6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac8981aaa3084498168f17aabc235dea7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#gac8981aaa3084498168f17aabc235dea7">get_master_clock_output_pin</a>()&#160;&#160;&#160;((CLK_DIV &amp; 0xC0) == 0 ? <a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a> : (CLK_DIV &amp; 0x08) == 0 ? <a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050">P5_4</a> : <a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d">P1_6</a>)</td></tr>
+<tr class="separator:gac8981aaa3084498168f17aabc235dea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gacc86e7d71fb4d234b825b6313cb5f2b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2">master_clock_output_pin_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#gacc86e7d71fb4d234b825b6313cb5f2b4">get_master_clock_output_pin</a> ()</td></tr>
-<tr class="separator:gacc86e7d71fb4d234b825b6313cb5f2b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gace7387c8427d0cc7fc10a41e532164d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#gace7387c8427d0cc7fc10a41e532164d9">set_master_clock_output_pin</a> (<a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2">master_clock_output_pin_t</a> pin)</td></tr>
 <tr class="separator:gace7387c8427d0cc7fc10a41e532164d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -262,6 +262,25 @@ set_master_clock_output_pin(master_clock_output_pin pin) <br  />
 
 </div>
 </div>
+<a id="gac8981aaa3084498168f17aabc235dea7" name="gac8981aaa3084498168f17aabc235dea7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac8981aaa3084498168f17aabc235dea7">&#9670;&nbsp;</a></span>get_master_clock_output_pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define get_master_clock_output_pin</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;((CLK_DIV &amp; 0xC0) == 0 ? <a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a> : (CLK_DIV &amp; 0x08) == 0 ? <a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050">P5_4</a> : <a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d">P1_6</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Get master clock output</p>
+<dl class="section return"><dt>Returns</dt><dd>info about current master clock output </dd></dl>
+
+</div>
+</div>
 <a id="ga1f80d9bae2e7c0b0b059c35c8e38cacf" name="ga1f80d9bae2e7c0b0b059c35c8e38cacf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga1f80d9bae2e7c0b0b059c35c8e38cacf">&#9670;&nbsp;</a></span>update_and_get_frequency_divider</h2>
 
@@ -299,25 +318,6 @@ set_master_clock_output_pin(master_clock_output_pin pin) <br  />
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gacc86e7d71fb4d234b825b6313cb5f2b4" name="gacc86e7d71fb4d234b825b6313cb5f2b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacc86e7d71fb4d234b825b6313cb5f2b4">&#9670;&nbsp;</a></span>get_master_clock_output_pin()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2">master_clock_output_pin_t</a> get_master_clock_output_pin </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Get master clock output</p>
-<dl class="section return"><dt>Returns</dt><dd>info about current master clock output </dd></dl>
-
-</div>
-</div>
 <a id="gace7387c8427d0cc7fc10a41e532164d9" name="gace7387c8427d0cc7fc10a41e532164d9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gace7387c8427d0cc7fc10a41e532164d9">&#9670;&nbsp;</a></span>set_master_clock_output_pin()</h2>
 

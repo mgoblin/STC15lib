@@ -127,7 +127,7 @@ typedef enum
  * 
  * @ingroup freq
  */
-master_clock_output_pin_t get_master_clock_output_pin();
+#define get_master_clock_output_pin() ((CLK_DIV & 0xC0) == 0 ? NONE : (CLK_DIV & 0x08) == 0 ? P5_4 : P1_6)
 
 /**
  * Set master clock output pin

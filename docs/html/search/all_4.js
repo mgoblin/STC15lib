@@ -11,7 +11,7 @@ var searchData=
   ['get_5fmaster_5fclock_5ffrequency_8',['get_master_clock_frequency',['../group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b',1,'frequency.h']]],
   ['get_5fmaster_5fclock_5ffrequency_5fhigh_5fpart_9',['get_master_clock_frequency_high_part',['../group__freq.html#ga2c1fe9860e17f13e1bcc3f5c46d420c8',1,'frequency.h']]],
   ['get_5fmaster_5fclock_5ffrequency_5flow_5fpart_10',['get_master_clock_frequency_low_part',['../group__freq.html#gaab28dddcfa288a3f7449bbf680e85414',1,'frequency.h']]],
-  ['get_5fmaster_5fclock_5foutput_5fpin_11',['get_master_clock_output_pin',['../group__freq.html#gacc86e7d71fb4d234b825b6313cb5f2b4',1,'get_master_clock_output_pin():&#160;frequency.c'],['../group__freq.html#gacc86e7d71fb4d234b825b6313cb5f2b4',1,'get_master_clock_output_pin():&#160;frequency.c']]],
+  ['get_5fmaster_5fclock_5foutput_5fpin_11',['get_master_clock_output_pin',['../group__freq.html#gac8981aaa3084498168f17aabc235dea7',1,'frequency.h']]],
   ['get_5fpca_5finterrupt_5fpriority_12',['get_pca_interrupt_priority',['../group__interrupts.html#gabf64c78cca4cdf3dbccbe6b3be2ac7f3',1,'interrupts.h']]],
   ['get_5fspi_5finterrupt_5fpriority_13',['get_spi_interrupt_priority',['../group__interrupts.html#gaacd1dbc81fe112ce6b25b664d07f2924',1,'interrupts.h']]],
   ['get_5ftimer0_5fclock_5fdivider_14',['get_timer0_clock_divider',['../group__timer.html#gac2f34fcd6ffbec0a91510385d3286f70',1,'timer.h']]],
