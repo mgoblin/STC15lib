@@ -59,7 +59,7 @@ typedef enum
  * 
  * @ingroup timer
  */
-uint8_t get_timer0_mode();
+#define get_timer0_mode() (TMOD & 0x03)
 
 /**
  * Get timer2 mode

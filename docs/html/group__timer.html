@@ -63,12 +63,18 @@ $(function() {
 
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Timer</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga8fb5b0ee3b737afe80af761364e3b729"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga8fb5b0ee3b737afe80af761364e3b729">get_timer0_mode</a>()&#160;&#160;&#160;(TMOD &amp; 0x03)</td></tr>
+<tr class="separator:ga8fb5b0ee3b737afe80af761364e3b729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:gaf044d39b4f1cbe40ca04353b2852a21d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a> { <a class="el" href="group__timer.html#ggaf044d39b4f1cbe40ca04353b2852a21da623238751deb7764bdebf4799fe30f07">T1</a> = 1
@@ -78,8 +84,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gab49ff79da082a2790379f648f3477a22"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gab49ff79da082a2790379f648f3477a22">get_timer0_mode</a> ()</td></tr>
-<tr class="separator:gab49ff79da082a2790379f648f3477a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga36baa6e822a053b8f5b159eafff19075"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga36baa6e822a053b8f5b159eafff19075">get_timer2_mode</a> ()</td></tr>
 <tr class="separator:ga36baa6e822a053b8f5b159eafff19075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5bc02d1f1ea4fe55114cc5e00e29ffa1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__timer.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga5bc02d1f1ea4fe55114cc5e00e29ffa1">get_timer0_clock_divider</a> ()</td></tr>
@@ -140,6 +144,26 @@ Functions</h2></td></tr>
 <p >CPU frequency change biased timer delays.</p>
 <p >This module version supports only timer0, timer2 mode0 12T and 1T for timer0. Other timers, modes and counter mode does not implements yet.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga8fb5b0ee3b737afe80af761364e3b729" name="ga8fb5b0ee3b737afe80af761364e3b729"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8fb5b0ee3b737afe80af761364e3b729">&#9670;&nbsp;</a></span>get_timer0_mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define get_timer0_mode</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(TMOD &amp; 0x03)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Get timer0 mode</p>
+<dl class="section return"><dt>Returns</dt><dd>timer0 mode in range from 0 to 3 </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="gaf044d39b4f1cbe40ca04353b2852a21d" name="gaf044d39b4f1cbe40ca04353b2852a21d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf044d39b4f1cbe40ca04353b2852a21d">&#9670;&nbsp;</a></span>timer_clock_divider_t</h2>
@@ -179,25 +203,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Get timer0 clock divider</p>
 <dl class="section return"><dt>Returns</dt><dd>timer0 clock divider </dd></dl>
-
-</div>
-</div>
-<a id="gab49ff79da082a2790379f648f3477a22" name="gab49ff79da082a2790379f648f3477a22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab49ff79da082a2790379f648f3477a22">&#9670;&nbsp;</a></span>get_timer0_mode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t get_timer0_mode </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Get timer0 mode</p>
-<dl class="section return"><dt>Returns</dt><dd>timer0 mode in range from 0 to 3 </dd></dl>
 
 </div>
 </div>
