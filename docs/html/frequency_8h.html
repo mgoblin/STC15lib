@@ -68,21 +68,22 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle"><div class="title">frequency.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="sys_8h_source.html">sys.h</a>&gt;</code><br />
+<code>#include &lt;bits.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for frequency.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="frequency_8h__incl.png" border="0" usemap="#ainclude_2frequency_8h" alt=""/></div>
 <map name="ainclude_2frequency_8h" id="ainclude_2frequency_8h">
-<area shape="rect" title=" " alt="" coords="11,5,159,32"/>
+<area shape="rect" title=" " alt="" coords="55,5,203,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,76,107"/>
 <area shape="rect" href="sys_8h.html" title=" " alt="" coords="101,80,157,107"/>
+<area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="181,80,239,107"/>
 <area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="79,155,178,181"/>
 <area shape="rect" title=" " alt="" coords="83,229,174,256"/>
 </map>
@@ -122,6 +123,8 @@ Macros</h2></td></tr>
 <tr class="separator:gabcec59e26510c1132c4f13f45b13ec6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac8981aaa3084498168f17aabc235dea7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#gac8981aaa3084498168f17aabc235dea7">get_master_clock_output_pin</a>()&#160;&#160;&#160;((CLK_DIV &amp; 0xC0) == 0 ? <a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a> : (CLK_DIV &amp; 0x08) == 0 ? <a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050">P5_4</a> : <a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d">P1_6</a>)</td></tr>
 <tr class="separator:gac8981aaa3084498168f17aabc235dea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadbf3520848e3ffb8498074ba7c25bfed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#gadbf3520848e3ffb8498074ba7c25bfed">set_master_clock_output_pin</a>(pin)</td></tr>
+<tr class="separator:gadbf3520848e3ffb8498074ba7c25bfed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -130,11 +133,6 @@ Enumerations</h2></td></tr>
 , <a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d">P1_6</a>
  }</td></tr>
 <tr class="separator:ae5d505beabdbd466d648cb5dccf4b6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:gace7387c8427d0cc7fc10a41e532164d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#gace7387c8427d0cc7fc10a41e532164d9">set_master_clock_output_pin</a> (<a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2">master_clock_output_pin_t</a> pin)</td></tr>
-<tr class="separator:gace7387c8427d0cc7fc10a41e532164d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="ae5d505beabdbd466d648cb5dccf4b6d2" name="ae5d505beabdbd466d648cb5dccf4b6d2"></a>

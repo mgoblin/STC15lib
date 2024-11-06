@@ -63,8 +63,7 @@ $(function() {
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">Frequency</div></div>
 </div><!--header-->
 <div class="contents">
@@ -92,11 +91,8 @@ Macros</h2></td></tr>
 <tr class="separator:gabcec59e26510c1132c4f13f45b13ec6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac8981aaa3084498168f17aabc235dea7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#gac8981aaa3084498168f17aabc235dea7">get_master_clock_output_pin</a>()&#160;&#160;&#160;((CLK_DIV &amp; 0xC0) == 0 ? <a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a> : (CLK_DIV &amp; 0x08) == 0 ? <a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050">P5_4</a> : <a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d">P1_6</a>)</td></tr>
 <tr class="separator:gac8981aaa3084498168f17aabc235dea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:gace7387c8427d0cc7fc10a41e532164d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#gace7387c8427d0cc7fc10a41e532164d9">set_master_clock_output_pin</a> (<a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2">master_clock_output_pin_t</a> pin)</td></tr>
-<tr class="separator:gace7387c8427d0cc7fc10a41e532164d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadbf3520848e3ffb8498074ba7c25bfed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#gadbf3520848e3ffb8498074ba7c25bfed">set_master_clock_output_pin</a>(pin)</td></tr>
+<tr class="separator:gadbf3520848e3ffb8498074ba7c25bfed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for get chip CPU frequency. Chip CPU frequency defined in <a class="el" href="sys_8h.html">sys.h</a> as a MAIN_Fosc constant. </p><dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
@@ -136,7 +132,7 @@ Functions</h2></td></tr>
 <p >Enable master clock output. By default output set to P5.4 pin.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__freq.html#gabcec59e26510c1132c4f13f45b13ec6b">disable_master_clock_output()</a> </dd>
 <dd>
-set_master_clock_output_pin(master_clock_output_pin pin) <br  />
+<a class="el" href="group__freq.html#gadbf3520848e3ffb8498074ba7c25bfed">set_master_clock_output_pin(master_clock_output_pin pin)</a> <br  />
  </dd></dl>
 
 </div>
@@ -158,7 +154,7 @@ set_master_clock_output_pin(master_clock_output_pin pin) <br  />
 <p >Enable (master clock output)/2. By default output set to P5.4 pin.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__freq.html#gabcec59e26510c1132c4f13f45b13ec6b">disable_master_clock_output()</a> </dd>
 <dd>
-set_master_clock_output_pin(master_clock_output_pin pin) <br  />
+<a class="el" href="group__freq.html#gadbf3520848e3ffb8498074ba7c25bfed">set_master_clock_output_pin(master_clock_output_pin pin)</a> <br  />
  </dd></dl>
 
 </div>
@@ -180,7 +176,7 @@ set_master_clock_output_pin(master_clock_output_pin pin) <br  />
 <p >Enable (master clock output)/4. By default output set to P5.4 pin.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__freq.html#gabcec59e26510c1132c4f13f45b13ec6b">disable_master_clock_output()</a> </dd>
 <dd>
-set_master_clock_output_pin(master_clock_output_pin pin) <br  />
+<a class="el" href="group__freq.html#gadbf3520848e3ffb8498074ba7c25bfed">set_master_clock_output_pin(master_clock_output_pin pin)</a> <br  />
  </dd></dl>
 
 </div>
@@ -281,6 +277,48 @@ set_master_clock_output_pin(master_clock_output_pin pin) <br  />
 
 </div>
 </div>
+<a id="gadbf3520848e3ffb8498074ba7c25bfed" name="gadbf3520848e3ffb8498074ba7c25bfed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadbf3520848e3ffb8498074ba7c25bfed">&#9670;&nbsp;</a></span>set_master_clock_output_pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define set_master_clock_output_pin</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pin</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    {          \</div>
+<div class="line">    if (pin == <a class="code hl_enumvalue" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a>)                                \</div>
+<div class="line">    {                                               \</div>
+<div class="line">        disable_master_clock_output();              \</div>
+<div class="line">    }                                               \</div>
+<div class="line">    else <span class="keywordflow">if</span> (pin == <a class="code hl_enumvalue" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050">P5_4</a>)                           \</div>
+<div class="line">    {                                               \</div>
+<div class="line">        bit_clr(CLK_DIV, 3);                        \</div>
+<div class="line">    }                                               \</div>
+<div class="line">    else <span class="keywordflow">if</span> (pin == <a class="code hl_enumvalue" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d">P1_6</a>)                           \</div>
+<div class="line">    {                                               \</div>
+<div class="line">        bit_set(CLK_DIV, 3);                        \</div>
+<div class="line">    }                                               \</div>
+<div class="line">}</div>
+<div class="ttc" id="afrequency_8h_html_ae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d"><div class="ttname"><a href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d">P1_6</a></div><div class="ttdeci">@ P1_6</div><div class="ttdoc">output to pin 1.6</div><div class="ttdef"><b>Definition:</b> frequency.h:121</div></div>
+<div class="ttc" id="afrequency_8h_html_ae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050"><div class="ttname"><a href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050">P5_4</a></div><div class="ttdeci">@ P5_4</div><div class="ttdoc">output to pin 5.4</div><div class="ttdef"><b>Definition:</b> frequency.h:119</div></div>
+<div class="ttc" id="afrequency_8h_html_ae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2"><div class="ttname"><a href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a></div><div class="ttdeci">@ NONE</div><div class="ttdoc">output disabled</div><div class="ttdef"><b>Definition:</b> frequency.h:117</div></div>
+</div><!-- fragment --><p >Set master clock output pin</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">master_clock_output_pin_t</td><td>pin pin to set output </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ga1f80d9bae2e7c0b0b059c35c8e38cacf" name="ga1f80d9bae2e7c0b0b059c35c8e38cacf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga1f80d9bae2e7c0b0b059c35c8e38cacf">&#9670;&nbsp;</a></span>update_and_get_frequency_divider</h2>
 
@@ -314,32 +352,6 @@ set_master_clock_output_pin(master_clock_output_pin pin) <br  />
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>master clock frequency divider value</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__freq.html#gabec6924a99fc0c136d0d1d6de5f8bf52">get_frequency_divider()</a> </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="gace7387c8427d0cc7fc10a41e532164d9" name="gace7387c8427d0cc7fc10a41e532164d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gace7387c8427d0cc7fc10a41e532164d9">&#9670;&nbsp;</a></span>set_master_clock_output_pin()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void set_master_clock_output_pin </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2">master_clock_output_pin_t</a>&#160;</td>
-          <td class="paramname"><em>pin</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Set master clock output pin</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pin</td><td>pin to set output </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

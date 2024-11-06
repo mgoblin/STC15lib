@@ -11,6 +11,7 @@
 
 #include <stdint.h>
 #include <sys.h>
+#include <bits.h>
 
 /**
  * Get MAIN_Fosc value
@@ -132,10 +133,23 @@ typedef enum
 /**
  * Set master clock output pin
  * 
- * @param pin pin to set output
+ * @param master_clock_output_pin_t pin pin to set output
  * 
  * @ingroup freq
  */
-void set_master_clock_output_pin(master_clock_output_pin_t pin);
+#define set_master_clock_output_pin(pin) {          \
+    if (pin == NONE)                                \
+    {                                               \
+        disable_master_clock_output();              \
+    }                                               \
+    else if (pin == P5_4)                           \
+    {                                               \
+        bit_clr(CLK_DIV, 3);                        \
+    }                                               \
+    else if (pin == P1_6)                           \
+    {                                               \
+        bit_set(CLK_DIV, 3);                        \
+    }                                               \
+}
 
 #endif 
