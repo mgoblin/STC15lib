@@ -68,7 +68,7 @@ typedef enum
  * 
  * @ingroup timer
  */
-uint8_t get_timer2_mode();
+#define get_timer2_mode() (0)
 
 /**
  * Get timer0 clock divider
