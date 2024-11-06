@@ -105,7 +105,7 @@ typedef enum
  * 
  * @ingroup timer
  */
-bool is_timer2_P30_output_enabled();
+#define is_timer2_P30_output_enabled() (get_bit(INT_CLKO, 2) > 0)
 
 //============================== Timer0 mode0 declarations begin ==========================
 /**
