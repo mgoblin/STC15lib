@@ -39,6 +39,20 @@
 #include <stdint.h>
 
 /**
+ * Timer clock divider
+ * 
+ * @ingroup timer
+ */
+typedef enum 
+{
+    /// Sysclk/1
+    T1 = 1, 
+    /// Sysclk/12
+    T12 = 12
+} timer_clock_divider_t;
+
+
+/**
  * Get timer0 mode
  * 
  * @return timer0 mode in range from 0 to 3
@@ -57,26 +71,13 @@ uint8_t get_timer0_mode();
 uint8_t get_timer2_mode();
 
 /**
- * Timer clock divider
- * 
- * @ingroup timer
- */
-typedef enum TimerClockDivider
-{
-    /// Sysclk/1
-    T1 = 1, 
-    /// Sysclk/12
-    T12 = 12
-} timer_clock_divider;
-
-/**
  * Get timer0 clock divider
  * 
  * @return timer0 clock divider
  * 
  * @ingroup timer
  */
-timer_clock_divider get_timer0_clock_divider();
+timer_clock_divider_t get_timer0_clock_divider();
 
 /**
  * Get timer2 clock divider
@@ -85,7 +86,7 @@ timer_clock_divider get_timer0_clock_divider();
  * 
  * @ingroup timer
  */
-timer_clock_divider get_timer2_clock_divider();
+timer_clock_divider_t get_timer2_clock_divider();
 
 /**
  * Get output to pin P3.5 output flag enabled value

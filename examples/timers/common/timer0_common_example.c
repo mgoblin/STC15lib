@@ -15,7 +15,7 @@ void main()
     {
         timer0_mode0_12T_init();
         uint8_t mode = get_timer0_mode();
-        timer0_clock_divider divider =  get_timer0_clock_divider();
+        timer_clock_divider_t divider =  get_timer0_clock_divider();
         printf_tiny("Timer mode is %d and divider is %d\n", mode, divider);
 
         delay_ms(500);

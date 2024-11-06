@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['t1_0',['T1',['../group__timer.html#ggad15adf0e455bbaba72daf79d770478caa623238751deb7764bdebf4799fe30f07',1,'timer.h']]],
-  ['t12_1',['T12',['../group__timer.html#ggad15adf0e455bbaba72daf79d770478caa5c3a2baea537d57bba309aa892a7926c',1,'timer.h']]],
+  ['t1_0',['T1',['../group__timer.html#ggaf044d39b4f1cbe40ca04353b2852a21da623238751deb7764bdebf4799fe30f07',1,'timer.h']]],
+  ['t12_1',['T12',['../group__timer.html#ggaf044d39b4f1cbe40ca04353b2852a21da5c3a2baea537d57bba309aa892a7926c',1,'timer.h']]],
   ['timer_2',['Timer',['../group__timer.html',1,'']]],
   ['timer_2eh_3',['timer.h',['../timer_8h.html',1,'']]],
   ['timer0_5fenable_5fon_5fpinint0_5fhigh_4',['timer0_enable_on_pinINT0_high',['../timer_8h.html#a9a02b7d5c51b87ca05f703dd9c3d1c8f',1,'timer0_common.c']]],
@@ -16,6 +16,5 @@ var searchData=
   ['timer2_5fmode0_5fenablep30_5foutput_13',['timer2_mode0_enableP30_output',['../group__timer.html#gacf131c40821319b41488f7c619641b35',1,'timer2_mode0_enableP30_output(bool enable):&#160;timer2_mode0.c'],['../group__timer.html#gacf131c40821319b41488f7c619641b35',1,'timer2_mode0_enableP30_output(bool enable):&#160;timer2_mode0.c']]],
   ['timer2_5fmode0_5fstart_14',['timer2_mode0_start',['../group__timer.html#ga86e7135b9a2f52f8f1730888cc311ee9',1,'timer2_mode0_start(uint8_t th_value, uint8_t tl_value):&#160;timer2_mode0.c'],['../group__timer.html#ga86e7135b9a2f52f8f1730888cc311ee9',1,'timer2_mode0_start(uint8_t th_value, uint8_t tl_value):&#160;timer2_mode0.c']]],
   ['timer2_5fmode0_5fstop_15',['timer2_mode0_stop',['../group__timer.html#ga9244653a9105cb70db08d02584dcde35',1,'timer2_mode0_stop():&#160;timer2_mode0.c'],['../group__timer.html#ga9244653a9105cb70db08d02584dcde35',1,'timer2_mode0_stop():&#160;timer2_mode0.c']]],
-  ['timer_5fclock_5fdivider_16',['timer_clock_divider',['../group__timer.html#ga19c46d46596fb37c89d9a7ae5ddbdfa7',1,'timer.h']]],
-  ['timerclockdivider_17',['TimerClockDivider',['../group__timer.html#gad15adf0e455bbaba72daf79d770478ca',1,'timer.h']]]
+  ['timer_5fclock_5fdivider_5ft_16',['timer_clock_divider_t',['../group__timer.html#gaf044d39b4f1cbe40ca04353b2852a21d',1,'timer.h']]]
 ];
