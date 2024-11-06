@@ -1,14 +1,5 @@
 #include <frequency.h>
 
-uint8_t update_and_get_frequency_divider(uint8_t divider_scale)
-{
-    if (divider_scale < 8)
-    {
-        CLK_DIV &= (0xf8 | divider_scale);
-    }
-    return get_frequency_divider();
-}
-
 master_clock_output_pin_t get_master_clock_output_pin()
 {
     if ((CLK_DIV & 0xC0) == 0)

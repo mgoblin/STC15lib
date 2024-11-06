@@ -109,6 +109,9 @@ Macros</h2></td></tr>
 <tr class="separator:gaab28dddcfa288a3f7449bbf680e85414"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabec6924a99fc0c136d0d1d6de5f8bf52"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#gabec6924a99fc0c136d0d1d6de5f8bf52">get_frequency_divider</a>()&#160;&#160;&#160;(1 &lt;&lt; (CLK_DIV &amp; 0x07))</td></tr>
 <tr class="separator:gabec6924a99fc0c136d0d1d6de5f8bf52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1f80d9bae2e7c0b0b059c35c8e38cacf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#ga1f80d9bae2e7c0b0b059c35c8e38cacf">update_and_get_frequency_divider</a>(divider_scale)</td></tr>
+<tr class="memdesc:ga1f80d9bae2e7c0b0b059c35c8e38cacf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update and get master clock frequency divider (CLK_DIV bits [0..2])  <a href="group__freq.html#ga1f80d9bae2e7c0b0b059c35c8e38cacf">More...</a><br /></td></tr>
+<tr class="separator:ga1f80d9bae2e7c0b0b059c35c8e38cacf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab0cf04749c06459a905501a82de37ec5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#gab0cf04749c06459a905501a82de37ec5">enable_master_clock_output_div1</a>()&#160;&#160;&#160;(CLK_DIV |= 0x40)</td></tr>
 <tr class="separator:gab0cf04749c06459a905501a82de37ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab8cf6beb70bdf87d5ecb400ed00bb797"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#gab8cf6beb70bdf87d5ecb400ed00bb797">enable_master_clock_output_div2</a>()&#160;&#160;&#160;(CLK_DIV |= 0x80)</td></tr>
@@ -128,9 +131,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga430f8c4ccae1431b64ff0f2af0480a98"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#ga430f8c4ccae1431b64ff0f2af0480a98">update_and_get_frequency_divider</a> (uint8_t divider_scale)</td></tr>
-<tr class="memdesc:ga430f8c4ccae1431b64ff0f2af0480a98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update and get master clock frequency divider (CLK_DIV bits [0..2])  <a href="group__freq.html#ga430f8c4ccae1431b64ff0f2af0480a98">More...</a><br /></td></tr>
-<tr class="separator:ga430f8c4ccae1431b64ff0f2af0480a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacc86e7d71fb4d234b825b6313cb5f2b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2">master_clock_output_pin_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#gacc86e7d71fb4d234b825b6313cb5f2b4">get_master_clock_output_pin</a> ()</td></tr>
 <tr class="separator:gacc86e7d71fb4d234b825b6313cb5f2b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gace7387c8427d0cc7fc10a41e532164d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#gace7387c8427d0cc7fc10a41e532164d9">set_master_clock_output_pin</a> (<a class="el" href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2">master_clock_output_pin_t</a> pin)</td></tr>
