@@ -6,7 +6,7 @@ var searchData=
   ['get_5fint0_5finterrupt_5fpriority_3',['get_int0_interrupt_priority',['../group__interrupts.html#gaad8983bc0b980226f8a20ea91576f224',1,'interrupts.h']]],
   ['get_5fint0_5finterrupt_5ftrigger_4',['get_int0_interrupt_trigger',['../group__interrupts.html#gafa1390efc7ccf39edab668888d503995',1,'interrupts.h']]],
   ['get_5fint1_5finterrupt_5fpriority_5',['get_int1_interrupt_priority',['../group__interrupts.html#ga00c71c291d049d66e03de830a21cbe29',1,'interrupts.h']]],
-  ['get_5fint1_5finterrupt_5ftrigger_6',['get_int1_interrupt_trigger',['../group__interrupts.html#ga2bf6e60e63938cc908f5e15a9fd88f0b',1,'get_int1_interrupt_trigger():&#160;interrupts.c'],['../group__interrupts.html#ga2bf6e60e63938cc908f5e15a9fd88f0b',1,'get_int1_interrupt_trigger():&#160;interrupts.c']]],
+  ['get_5fint1_5finterrupt_5ftrigger_6',['get_int1_interrupt_trigger',['../group__interrupts.html#ga87497515d718a96065c9606e3e7eb99f',1,'interrupts.h']]],
   ['get_5flow_5fvoltage_5finterrupt_5fpriority_7',['get_low_voltage_interrupt_priority',['../group__interrupts.html#ga7d6648d7b8c9e35c9a3e19067b8eb8ae',1,'interrupts.h']]],
   ['get_5fmaster_5fclock_5ffrequency_8',['get_master_clock_frequency',['../group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b',1,'frequency.h']]],
   ['get_5fmaster_5fclock_5ffrequency_5fhigh_5fpart_9',['get_master_clock_frequency_high_part',['../group__freq.html#ga2c1fe9860e17f13e1bcc3f5c46d420c8',1,'frequency.h']]],

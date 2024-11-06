@@ -4,7 +4,7 @@ var searchData=
   ['set_5fint0_5finterrupt_5fpriority_1',['set_int0_interrupt_priority',['../group__interrupts.html#gadc1f845094582635951872311de9f1f4',1,'interrupts.h']]],
   ['set_5fint0_5finterrupt_5ftrigger_2',['set_int0_interrupt_trigger',['../group__interrupts.html#gae83d9bb9ef89de5990b742de004f8ed5',1,'interrupts.h']]],
   ['set_5fint1_5finterrupt_5fpriority_3',['set_int1_interrupt_priority',['../group__interrupts.html#gafcf2592c8e8e557e3ba9eab108c34ce9',1,'interrupts.h']]],
-  ['set_5fint1_5finterrupt_5ftrigger_4',['set_int1_interrupt_trigger',['../group__interrupts.html#ga98f5dbe245965a03ffe3b0c7b9315862',1,'set_int1_interrupt_trigger(external_interrupt_trigger_t trigger):&#160;interrupts.c'],['../group__interrupts.html#ga98f5dbe245965a03ffe3b0c7b9315862',1,'set_int1_interrupt_trigger(external_interrupt_trigger_t trigger):&#160;interrupts.c']]],
+  ['set_5fint1_5finterrupt_5ftrigger_4',['set_int1_interrupt_trigger',['../group__interrupts.html#gae5bb64646f48ac6321349bca7fb8094c',1,'interrupts.h']]],
   ['set_5flow_5fvoltage_5finterrupt_5fpriority_5',['set_low_voltage_interrupt_priority',['../group__interrupts.html#ga3d287824f6ad9219ad0ea0ea8ceed3a2',1,'interrupts.h']]],
   ['set_5fmaster_5fclock_5foutput_5fpin_6',['set_master_clock_output_pin',['../group__freq.html#gace7387c8427d0cc7fc10a41e532164d9',1,'set_master_clock_output_pin(master_clock_output_pin_t pin):&#160;frequency.c'],['../group__freq.html#gace7387c8427d0cc7fc10a41e532164d9',1,'set_master_clock_output_pin(master_clock_output_pin_t pin):&#160;frequency.c']]],
   ['set_5fpca_5finterrupt_5fpriority_7',['set_pca_interrupt_priority',['../group__interrupts.html#ga61be7c532b0092fb479d95934351910d',1,'interrupts.h']]],
