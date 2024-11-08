@@ -1,9 +1,6 @@
 #include <sys.h>
 #include <frequency.h>
 #include <delay.h>
-#include <uart.h>
-
-#include <stdio.h>
 
 #define LED P10
 
