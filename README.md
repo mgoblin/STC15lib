@@ -32,16 +32,9 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 * frequency module use defines instead of function decl for output hex code decreasing 
 * interrupts module use defines instead of function decl for firmware size decreasing
 * timer module use defines on commons functionality instead of function decl for firmware size decreasing
-* README for examples folder added
-* TODO README for each examples subfolder
 
 Next releases todo
 * TODO timer module use defines in all functionality
-* TODO add documentation for bits examples
-* TODO add documentation for chip_id examples
-* TODO add documentation for delay examples
-* TODO add documentation for frequency examples
-* TODO add documentation for interrupt examples
 * TODO add documentation for timer examples
 * TODO add documentation for uart examples
 * TODO Timer aux - set timers in terms of output signal freq and timings
