@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">STC15W408AS library<span id="projectnumber">&#160;0.4</span>
+   <div id="projectname">STC15W408AS library<span id="projectnumber">&#160;0.4.1</span>
    </div>
   </td>
  </tr>
@@ -91,31 +91,23 @@ Include dependency graph for chip_id.h:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a57375ea0ee50482e9db7de35d1b9e781"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chip__id_8h.html#a57375ea0ee50482e9db7de35d1b9e781">ID_SIZE</a>&#160;&#160;&#160;7</td></tr>
-<tr class="separator:a57375ea0ee50482e9db7de35d1b9e781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga909ec39ac520a4448627b2d9aa61d016"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__chip__id.html#ga909ec39ac520a4448627b2d9aa61d016">CHIP_ID_SIZE</a>&#160;&#160;&#160;7</td></tr>
+<tr class="memdesc:ga909ec39ac520a4448627b2d9aa61d016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of chip id array.  <a href="group__chip__id.html#ga909ec39ac520a4448627b2d9aa61d016">More...</a><br /></td></tr>
+<tr class="separator:ga909ec39ac520a4448627b2d9aa61d016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gade5a33c9ca0579ba754154984706deff"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHIP_ID_ADDR_ROM</b>&#160;&#160;&#160;0x1ff9</td></tr>
+<tr class="memdesc:gade5a33c9ca0579ba754154984706deff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chip id address in flash memory. <br /></td></tr>
+<tr class="separator:gade5a33c9ca0579ba754154984706deff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga73068c6cf5d5b5fd06172a8e60a066a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__chip__id.html#ga73068c6cf5d5b5fd06172a8e60a066a1">get_chipid</a>(cid)</td></tr>
+<tr class="memdesc:ga73068c6cf5d5b5fd06172a8e60a066a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get chip id as array. Array size is ID_SIZE.  <a href="group__chip__id.html#ga73068c6cf5d5b5fd06172a8e60a066a1">More...</a><br /></td></tr>
+<tr class="separator:ga73068c6cf5d5b5fd06172a8e60a066a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga999e39479cf1cded4bf023b6efd472e3"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__chip__id.html#ga999e39479cf1cded4bf023b6efd472e3">get_chipid</a> ()</td></tr>
-<tr class="separator:ga999e39479cf1cded4bf023b6efd472e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf797f652068877217b527fa8d320bb43"><td class="memItemLeft" align="right" valign="top">__code&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__chip__id.html#gaf797f652068877217b527fa8d320bb43">__at</a> (<a class="el" href="group__chip__id.html#gade5a33c9ca0579ba754154984706deff">CHIP_ID_ADDR_ROM</a>) uint8_t chip_id</td></tr>
+<tr class="memdesc:gaf797f652068877217b527fa8d320bb43"><td class="mdescLeft">&#160;</td><td class="mdescRight">First byte of chip id in flash.  <a href="group__chip__id.html#gaf797f652068877217b527fa8d320bb43">More...</a><br /></td></tr>
+<tr class="separator:gaf797f652068877217b527fa8d320bb43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a57375ea0ee50482e9db7de35d1b9e781" name="a57375ea0ee50482e9db7de35d1b9e781"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57375ea0ee50482e9db7de35d1b9e781">&#9670;&nbsp;</a></span>ID_SIZE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define ID_SIZE&#160;&#160;&#160;7</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Size of chip id array <br  />
- </p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,19 +1,18 @@
-#include <uart.h>
 #include <chip_id.h>
+
 #include <stdio.h>
+#include <uart.h>
 
 void main()
 {
     uart_init(9600);
 
-    uint8_t *id = get_chipid();
-
     while (1)
     {
-        printf_tiny("Chip id is ");
-        for (uint8_t i = 0; i < ID_SIZE; i++)
+        const uint8_t *cid2 = &chip_id;
+        for(uint8_t i = 0; i < CHIP_ID_SIZE; i++)
         {
-            printf_tiny("%x", id[i]);
+            printf_tiny("%x", cid2[i]);
         }
         printf_tiny("\n");
     }

@@ -1,11 +1,11 @@
 var indexSectionsWithContent =
 {
-  0: "cdefghilmnoprstu",
+  0: "_cdefghilmnoprstu",
   1: "cdfistu",
-  2: "dgptu",
+  2: "_dgptu",
   3: "eimt",
   4: "hlnoprt",
-  5: "imt",
+  5: "mt",
   6: "cdfitu",
   7: "s"
 };

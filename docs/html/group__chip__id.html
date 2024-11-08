@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">STC15W408AS library<span id="projectnumber">&#160;0.4</span>
+   <div id="projectname">STC15W408AS library<span id="projectnumber">&#160;0.4.1</span>
    </div>
   </td>
  </tr>
@@ -63,36 +63,131 @@ $(function() {
 
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">ChipID</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga909ec39ac520a4448627b2d9aa61d016"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__chip__id.html#ga909ec39ac520a4448627b2d9aa61d016">CHIP_ID_SIZE</a>&#160;&#160;&#160;7</td></tr>
+<tr class="memdesc:ga909ec39ac520a4448627b2d9aa61d016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of chip id array.  <a href="group__chip__id.html#ga909ec39ac520a4448627b2d9aa61d016">More...</a><br /></td></tr>
+<tr class="separator:ga909ec39ac520a4448627b2d9aa61d016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gade5a33c9ca0579ba754154984706deff"><td class="memItemLeft" align="right" valign="top"><a id="gade5a33c9ca0579ba754154984706deff" name="gade5a33c9ca0579ba754154984706deff"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHIP_ID_ADDR_ROM</b>&#160;&#160;&#160;0x1ff9</td></tr>
+<tr class="memdesc:gade5a33c9ca0579ba754154984706deff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chip id address in flash memory. <br /></td></tr>
+<tr class="separator:gade5a33c9ca0579ba754154984706deff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga73068c6cf5d5b5fd06172a8e60a066a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__chip__id.html#ga73068c6cf5d5b5fd06172a8e60a066a1">get_chipid</a>(cid)</td></tr>
+<tr class="memdesc:ga73068c6cf5d5b5fd06172a8e60a066a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get chip id as array. Array size is ID_SIZE.  <a href="group__chip__id.html#ga73068c6cf5d5b5fd06172a8e60a066a1">More...</a><br /></td></tr>
+<tr class="separator:ga73068c6cf5d5b5fd06172a8e60a066a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga999e39479cf1cded4bf023b6efd472e3"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__chip__id.html#ga999e39479cf1cded4bf023b6efd472e3">get_chipid</a> ()</td></tr>
-<tr class="separator:ga999e39479cf1cded4bf023b6efd472e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf797f652068877217b527fa8d320bb43"><td class="memItemLeft" align="right" valign="top">__code&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__chip__id.html#gaf797f652068877217b527fa8d320bb43">__at</a> (<a class="el" href="group__chip__id.html#gade5a33c9ca0579ba754154984706deff">CHIP_ID_ADDR_ROM</a>) uint8_t chip_id</td></tr>
+<tr class="memdesc:gaf797f652068877217b527fa8d320bb43"><td class="mdescLeft">&#160;</td><td class="mdescRight">First byte of chip id in flash.  <a href="group__chip__id.html#gaf797f652068877217b527fa8d320bb43">More...</a><br /></td></tr>
+<tr class="separator:gaf797f652068877217b527fa8d320bb43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p >Functions and data structures related to chip id </p><dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ga999e39479cf1cded4bf023b6efd472e3" name="ga999e39479cf1cded4bf023b6efd472e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga999e39479cf1cded4bf023b6efd472e3">&#9670;&nbsp;</a></span>get_chipid()</h2>
+<p >Functions and data structures related to chip id </p>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga909ec39ac520a4448627b2d9aa61d016" name="ga909ec39ac520a4448627b2d9aa61d016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga909ec39ac520a4448627b2d9aa61d016">&#9670;&nbsp;</a></span>CHIP_ID_SIZE</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t * get_chipid </td>
+          <td class="memname">#define CHIP_ID_SIZE&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Size of chip id array. </p>
+<p >&lt;&gt; </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="chip_id_example_8c-example.html#a1">chip_id_example.c</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="ga73068c6cf5d5b5fd06172a8e60a066a1" name="ga73068c6cf5d5b5fd06172a8e60a066a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga73068c6cf5d5b5fd06172a8e60a066a1">&#9670;&nbsp;</a></span>get_chipid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define get_chipid</td>
           <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cid</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    {                       \</div>
+<div class="line">    const uint8_t *<span class="keywordtype">id</span> = &amp;chip_id;               \</div>
+<div class="line">    for(uint8_t i = 0; i &lt; <a class="code hl_define" href="group__chip__id.html#ga909ec39ac520a4448627b2d9aa61d016">CHIP_ID_SIZE</a>; i++)   \</div>
+<div class="line">    {                                           \</div>
+<div class="line">        cid[i] = <span class="keywordtype">id</span>[i];                         \</div>
+<div class="line">    }                                           \</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__chip__id_html_ga909ec39ac520a4448627b2d9aa61d016"><div class="ttname"><a href="group__chip__id.html#ga909ec39ac520a4448627b2d9aa61d016">CHIP_ID_SIZE</a></div><div class="ttdeci">#define CHIP_ID_SIZE</div><div class="ttdoc">Size of chip id array.</div><div class="ttdef"><b>Definition:</b> chip_id.h:22</div></div>
+</div><!-- fragment -->
+<p>Get chip id as array. Array size is ID_SIZE. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cid</td><td>array of CHIP_ID_SIZE </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>filled chip id array </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gaf797f652068877217b527fa8d320bb43" name="gaf797f652068877217b527fa8d320bb43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf797f652068877217b527fa8d320bb43">&#9670;&nbsp;</a></span>__at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__code __at </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__chip__id.html#gade5a33c9ca0579ba754154984706deff">CHIP_ID_ADDR_ROM</a>&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Get chip id as array. Array size is ID_SIZE</p>
-<dl class="section return"><dt>Returns</dt><dd>chip id array </dd></dl>
 
+<p>First byte of chip id in flash. </p>
+<p >Size of chip id is CHIP_ID_SIZE</p>
+<p >Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="chip__id_8h.html">chip_id.h</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="uart_8h.html">uart.h</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_function" href="group__uart.html#gaaf8803da40d227f3da866bfe760011f0">uart_init</a>(9600);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">while</span> (1)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">const</span> uint8_t *cid2 = &amp;chip_id;</div>
+<div class="line">        <span class="keywordflow">for</span>(uint8_t i = 0; i &lt; <a class="code hl_define" href="group__chip__id.html#ga909ec39ac520a4448627b2d9aa61d016">CHIP_ID_SIZE</a>; i++)</div>
+<div class="line">        {</div>
+<div class="line">            printf_tiny(<span class="stringliteral">&quot;%x&quot;</span>, cid2[i]);</div>
+<div class="line">        }</div>
+<div class="line">        printf_tiny(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">    </div>
+<div class="line">}</div>
+<div class="ttc" id="achip__id_8h_html"><div class="ttname"><a href="chip__id_8h.html">chip_id.h</a></div></div>
+<div class="ttc" id="agroup__uart_html_gaaf8803da40d227f3da866bfe760011f0"><div class="ttname"><a href="group__uart.html#gaaf8803da40d227f3da866bfe760011f0">uart_init</a></div><div class="ttdeci">void uart_init(uint32_t uart_baudrate)</div><div class="ttdoc">Initiazlize UART.</div><div class="ttdef"><b>Definition:</b> uart.c:4</div></div>
+<div class="ttc" id="auart_8h_html"><div class="ttname"><a href="uart_8h.html">uart.h</a></div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->
