@@ -107,7 +107,10 @@
  * 
  * @ingroup timer
  */
-void timer2_mode0_stop();
+#define timer2_mode0_stop() {                               \
+    bit_clr(AUXR, 4); /* clear T2 run flag */               \
+    disable_timer2_interrupt();                             \
+}
 
 /**
  * @brief Enable output of meandr with timer times on P3.0 pin.

@@ -64,8 +64,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle"><div class="title">Timer</div></div>
 </div><!--header-->
 <div class="contents">
@@ -116,6 +115,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gaecef145b097378f2f4715706b266c14c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gaecef145b097378f2f4715706b266c14c">timer2_mode0_start</a>(tick)</td></tr>
 <tr class="memdesc:gaecef145b097378f2f4715706b266c14c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer2 mode0 with interrupt support.  <a href="group__timer.html#gaecef145b097378f2f4715706b266c14c">More...</a><br /></td></tr>
 <tr class="separator:gaecef145b097378f2f4715706b266c14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga86d1f3d5c229e55f341ed316b21e71ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga86d1f3d5c229e55f341ed316b21e71ab">timer2_mode0_stop</a>()</td></tr>
+<tr class="memdesc:ga86d1f3d5c229e55f341ed316b21e71ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop timer2 mode0 with interrupt support.  <a href="group__timer.html#ga86d1f3d5c229e55f341ed316b21e71ab">More...</a><br /></td></tr>
+<tr class="separator:ga86d1f3d5c229e55f341ed316b21e71ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga57ace2191bf6dbce66f831097636249d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga57ace2191bf6dbce66f831097636249d">timer2_mode0_enableP30_output</a>(enable)&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, 2) : bit_clr(INT_CLKO, 2))</td></tr>
 <tr class="memdesc:ga57ace2191bf6dbce66f831097636249d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable output of meandr with timer times on P3.0 pin.  <a href="group__timer.html#ga57ace2191bf6dbce66f831097636249d">More...</a><br /></td></tr>
 <tr class="separator:ga57ace2191bf6dbce66f831097636249d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,12 +128,6 @@ Enumerations</h2></td></tr>
 , <a class="el" href="group__timer.html#ggaf044d39b4f1cbe40ca04353b2852a21da5c3a2baea537d57bba309aa892a7926c">T12</a> = 12
  }</td></tr>
 <tr class="separator:gaf044d39b4f1cbe40ca04353b2852a21d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ga9244653a9105cb70db08d02584dcde35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga9244653a9105cb70db08d02584dcde35">timer2_mode0_stop</a> ()</td></tr>
-<tr class="memdesc:ga9244653a9105cb70db08d02584dcde35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop timer2 mode0 with interrupt support.  <a href="group__timer.html#ga9244653a9105cb70db08d02584dcde35">More...</a><br /></td></tr>
-<tr class="separator:ga9244653a9105cb70db08d02584dcde35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for timers.</p>
@@ -657,6 +653,30 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga86d1f3d5c229e55f341ed316b21e71ab" name="ga86d1f3d5c229e55f341ed316b21e71ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga86d1f3d5c229e55f341ed316b21e71ab">&#9670;&nbsp;</a></span>timer2_mode0_stop</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer2_mode0_stop</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    {                               \</div>
+<div class="line">    bit_clr(AUXR, 4); <span class="comment">/* clear T2 run flag */</span>               \</div>
+<div class="line">    disable_timer2_interrupt();                             \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Stop timer2 mode0 with interrupt support. </p>
+<p >Before stop timer2_mode0_start should be called. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="gaf044d39b4f1cbe40ca04353b2852a21d" name="gaf044d39b4f1cbe40ca04353b2852a21d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf044d39b4f1cbe40ca04353b2852a21d">&#9670;&nbsp;</a></span>timer_clock_divider_t</h2>
@@ -676,27 +696,6 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="ggaf044d39b4f1cbe40ca04353b2852a21da5c3a2baea537d57bba309aa892a7926c" name="ggaf044d39b4f1cbe40ca04353b2852a21da5c3a2baea537d57bba309aa892a7926c"></a>T12&#160;</td><td class="fielddoc"><p >Sysclk/12. </p>
 </td></tr>
 </table>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ga9244653a9105cb70db08d02584dcde35" name="ga9244653a9105cb70db08d02584dcde35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9244653a9105cb70db08d02584dcde35">&#9670;&nbsp;</a></span>timer2_mode0_stop()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void timer2_mode0_stop </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Stop timer2 mode0 with interrupt support. </p>
-<p >Before stop timer2_mode0_start should be called. </p>
 
 </div>
 </div>
