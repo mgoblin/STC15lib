@@ -117,9 +117,9 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaed5fb1eb4640d4018f3c350e7fdf2105"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gaed5fb1eb4640d4018f3c350e7fdf2105">timer0_start</a> (uint16_t value)</td></tr>
-<tr class="memdesc:gaed5fb1eb4640d4018f3c350e7fdf2105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0.  <a href="group__timer.html#gaed5fb1eb4640d4018f3c350e7fdf2105">More...</a><br /></td></tr>
-<tr class="separator:gaed5fb1eb4640d4018f3c350e7fdf2105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaab71671c2410fb839232204b3586b61d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gaab71671c2410fb839232204b3586b61d">timer0_start</a> (uint16_t ticks)</td></tr>
+<tr class="memdesc:gaab71671c2410fb839232204b3586b61d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0.  <a href="group__timer.html#gaab71671c2410fb839232204b3586b61d">More...</a><br /></td></tr>
+<tr class="separator:gaab71671c2410fb839232204b3586b61d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaacaa3d2da5da2456041d39da0cb2d3c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gaacaa3d2da5da2456041d39da0cb2d3c0">timer0_mode0_stop</a> ()</td></tr>
 <tr class="memdesc:gaacaa3d2da5da2456041d39da0cb2d3c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop timer0 mode0 with interrupt support.  <a href="group__timer.html#gaacaa3d2da5da2456041d39da0cb2d3c0">More...</a><br /></td></tr>
 <tr class="separator:gaacaa3d2da5da2456041d39da0cb2d3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -587,8 +587,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaed5fb1eb4640d4018f3c350e7fdf2105" name="gaed5fb1eb4640d4018f3c350e7fdf2105"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaed5fb1eb4640d4018f3c350e7fdf2105">&#9670;&nbsp;</a></span>timer0_start()</h2>
+<a id="gaab71671c2410fb839232204b3586b61d" name="gaab71671c2410fb839232204b3586b61d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaab71671c2410fb839232204b3586b61d">&#9670;&nbsp;</a></span>timer0_start()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -597,7 +597,7 @@ Functions</h2></td></tr>
           <td class="memname">void timer0_start </td>
           <td>(</td>
           <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramname"><em>ticks</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -606,10 +606,11 @@ Functions</h2></td></tr>
 <p>Run timer0. </p>
 <p >Before run timerX_mode0_12T_init or timerX_mode0_1T_init should be called.</p>
 <p >After run program flow not blocked and interrupt will raised when timer is overloaded. Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code.</p>
-<p >Timer rerun after overloaded and interuppt handler called. Dont mix call timer0_mode0_start call with void timer0_modeX_run_once_and_wait call</p>
+<p >Timer rerun after overloaded and interupt handler called.</p>
+<p >Dont mix call timer0_mode0_start call with void timer0_modeX_run_once_and_wait call</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td>uint16_t timer interval </td></tr>
+    <tr><td class="paramname">ticks</td><td>uint16_t timer ticks count </td></tr>
   </table>
   </dd>
 </dl>

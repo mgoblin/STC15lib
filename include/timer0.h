@@ -107,15 +107,16 @@
  * After run program flow not blocked and interrupt will raised when timer is overloaded.
  * Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code.
  * 
- * Timer rerun after overloaded and interuppt handler called. 
+ * Timer rerun after overloaded and interupt handler called. 
+ * 
  * Dont mix call timer0_mode0_start call with 
  * void timer0_modeX_run_once_and_wait call
  * 
- * @param value uint16_t timer interval
+ * @param ticks uint16_t timer ticks count
  * 
  * @ingroup timer
  */
-void timer0_start(uint16_t value);
+void timer0_start(uint16_t ticks);
 
 /**
  * @brief Stop timer0 mode0 with interrupt support.

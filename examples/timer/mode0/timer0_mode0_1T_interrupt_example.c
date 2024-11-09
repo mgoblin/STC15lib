@@ -21,7 +21,7 @@ void main()
     timer0_mode0_1T_init();
 
     // LED blinking during 1 second 
-    timer0_start(0);
+    timer0_start(0xffff);
     delay_ms(1000);
 
     // Not LED blinking during 2 seconds
