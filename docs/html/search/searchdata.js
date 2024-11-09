@@ -5,7 +5,7 @@ var indexSectionsWithContent =
   2: "_dgptu",
   3: "eimt",
   4: "hlnoprt",
-  5: "mt",
+  5: "m",
   6: "cdfitu",
   7: "s"
 };

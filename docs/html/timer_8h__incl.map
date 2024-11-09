@@ -1,7 +1,8 @@
 <map id="include/timer.h" name="include/timer.h">
-<area shape="rect" id="node1" title=" " alt="" coords="126,5,245,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="195,5,314,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,80,88,107"/>
 <area shape="rect" id="node3" href="$bits_8h_source.html" title=" " alt="" coords="112,80,171,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="195,80,266,107"/>
-<area shape="rect" id="node5" href="$timer__structs_8h_source.html" title=" " alt="" coords="291,80,411,107"/>
+<area shape="rect" id="node4" href="$timer__structs_8h_source.html" title=" " alt="" coords="195,80,315,107"/>
+<area shape="rect" id="node5" href="$timer0_8h_source.html" title=" " alt="" coords="339,80,416,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="379,155,450,181"/>
 </map>
