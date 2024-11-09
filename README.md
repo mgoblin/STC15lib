@@ -39,6 +39,7 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 * timer0_modeX_run_once_and_wait now have only one parameter uint_16 - timer ticks count
 * timer0_start and timer2_mode0_start now have only one parameter uint_16 - timer ticks count
 * TODO Timer0 mode0 reload timer routines implemented
+* TODO timer0_modeX_run_once_and_wait -> timer0_run_once_and_wait
 * timer0 mode1 imeplemented
 
 Next releases todo
