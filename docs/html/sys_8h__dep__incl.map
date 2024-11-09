@@ -1,7 +1,9 @@
 <map id="include/sys.h" name="include/sys.h">
-<area shape="rect" id="node1" title=" " alt="" coords="181,5,288,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="265,5,372,32"/>
 <area shape="rect" id="node2" href="$chip__id_8h.html" title=" " alt="" coords="5,80,136,107"/>
 <area shape="rect" id="node3" href="$frequency_8h.html" title=" " alt="" coords="161,80,309,107"/>
 <area shape="rect" id="node5" href="$interrupt_8h.html" title=" " alt="" coords="333,80,475,107"/>
+<area shape="rect" id="node6" href="$timer0_8h_source.html" title=" " alt="" coords="393,155,521,181"/>
 <area shape="rect" id="node4" href="$delay_8h.html" title=" " alt="" coords="175,155,294,181"/>
+<area shape="rect" id="node7" href="$timer_8h.html" title=" " alt="" coords="398,229,517,256"/>
 </map>

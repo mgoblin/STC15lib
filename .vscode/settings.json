@@ -9,6 +9,8 @@
         "bits.h": "c",
         "time.h": "c",
         "unity_config.h": "c",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "interrupt.h": "c",
+        "stdint.h": "c"
     }
 }

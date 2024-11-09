@@ -1,9 +1,4 @@
-#include <sys.h>
-#include <time.h>
-#include <stdint.h>
-#include <stdbool.h>
-#include <bits.h>
-#include <interrupt.h>
+#include <timer.h>
 
 void timer2_mode0_12T_init()
 {

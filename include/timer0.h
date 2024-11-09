@@ -1,7 +1,12 @@
 #ifndef STC15_TIMER0H
 #define STC15_TIMER0H
 
+#include <sys.h>
+#include <bits.h>
+#include <interrupt.h>
+
 #include <stdint.h>
+#include <stdbool.h>
 
 /**
  * Get timer0 mode
