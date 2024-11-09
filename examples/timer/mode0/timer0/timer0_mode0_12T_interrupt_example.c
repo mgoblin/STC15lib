@@ -1,5 +1,4 @@
 #include <sys.h>
-#include <delay.h>
 #include <timer.h>
 
 #define LED P10
@@ -15,9 +14,5 @@ void main()
 
     timer0_start(0xffff);
 
-    delay_ms(2000);
-
-    timer0_stop();
-
-    delay_ms(2000);
+    while(1){};
 }
