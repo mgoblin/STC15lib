@@ -66,64 +66,31 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">timer.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
-<code>#include &lt;bits.h&gt;</code><br />
-<code>#include &lt;timer_structs.h&gt;</code><br />
-<code>#include &lt;timer0.h&gt;</code><br />
-<code>#include &lt;stdint.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;timer0.h&gt;</code><br />
+<code>#include &lt;timer2.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for timer.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="timer_8h__incl.png" border="0" usemap="#ainclude_2timer_8h" alt=""/></div>
 <map name="ainclude_2timer_8h" id="ainclude_2timer_8h">
-<area shape="rect" title=" " alt="" coords="277,5,395,32"/>
-<area shape="rect" title=" " alt="" coords="5,229,88,256"/>
-<area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="233,229,292,256"/>
-<area shape="rect" href="timer__structs_8h_source.html" title=" " alt="" coords="447,80,567,107"/>
-<area shape="rect" href="timer0_8h_source.html" title=" " alt="" coords="181,80,259,107"/>
-<area shape="rect" title=" " alt="" coords="301,155,371,181"/>
-<area shape="rect" href="sys_8h.html" title=" " alt="" coords="132,229,188,256"/>
-<area shape="rect" href="interrupt_8h.html" title=" " alt="" coords="135,155,225,181"/>
-<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="111,304,209,331"/>
-<area shape="rect" title=" " alt="" coords="115,379,205,405"/>
+<area shape="rect" title=" " alt="" coords="267,5,386,32"/>
+<area shape="rect" href="timer0_8h_source.html" title=" " alt="" coords="180,80,257,107"/>
+<area shape="rect" href="timer2_8h_source.html" title=" " alt="" coords="397,80,475,107"/>
+<area shape="rect" href="sys_8h.html" title=" " alt="" coords="27,229,83,256"/>
+<area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="107,229,165,256"/>
+<area shape="rect" href="interrupt_8h.html" title=" " alt="" coords="91,155,181,181"/>
+<area shape="rect" title=" " alt="" coords="189,229,272,256"/>
+<area shape="rect" title=" " alt="" coords="401,155,471,181"/>
+<area shape="rect" href="timer__structs_8h_source.html" title=" " alt="" coords="256,155,376,181"/>
+<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="5,304,104,331"/>
+<area shape="rect" title=" " alt="" coords="9,379,100,405"/>
 </map>
 </div>
 </div>
 <p><a href="timer_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:ga68b53855ca88473c1f21651184ee2cc8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga68b53855ca88473c1f21651184ee2cc8">get_timer2_mode</a>()&#160;&#160;&#160;(0)</td></tr>
-<tr class="separator:ga68b53855ca88473c1f21651184ee2cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4259384552df325973b81bd5425b7f4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga4259384552df325973b81bd5425b7f4a">get_timer2_clock_divider</a>()&#160;&#160;&#160;(get_bit(AUXR, 2) == 0 ? <a class="el" href="group__timer.html#ggaf044d39b4f1cbe40ca04353b2852a21da5c3a2baea537d57bba309aa892a7926c">T12</a> : <a class="el" href="group__timer.html#ggaf044d39b4f1cbe40ca04353b2852a21da623238751deb7764bdebf4799fe30f07">T1</a>)</td></tr>
-<tr class="separator:ga4259384552df325973b81bd5425b7f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga42a0a7e0d9d71cf3535113a5bb769324"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga42a0a7e0d9d71cf3535113a5bb769324">is_timer2_P30_output_enabled</a>()&#160;&#160;&#160;(get_bit(INT_CLKO, 2) &gt; 0)</td></tr>
-<tr class="separator:ga42a0a7e0d9d71cf3535113a5bb769324"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:gabe56c22feca0e373507d08c4fe9aa3d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gabe56c22feca0e373507d08c4fe9aa3d4">timer2_mode0_12T_init</a> ()</td></tr>
-<tr class="memdesc:gabe56c22feca0e373507d08c4fe9aa3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize mode0 12T for timer2. Set AUXR bits.  <a href="group__timer.html#gabe56c22feca0e373507d08c4fe9aa3d4">More...</a><br /></td></tr>
-<tr class="separator:gabe56c22feca0e373507d08c4fe9aa3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga828c06ed1eddfd6e11f9a6aa848a0cf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga828c06ed1eddfd6e11f9a6aa848a0cf2">timer2_mode0_1T_init</a> ()</td></tr>
-<tr class="memdesc:ga828c06ed1eddfd6e11f9a6aa848a0cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize mode0 1T for timer2. Set AUXR bits.  <a href="group__timer.html#ga828c06ed1eddfd6e11f9a6aa848a0cf2">More...</a><br /></td></tr>
-<tr class="separator:ga828c06ed1eddfd6e11f9a6aa848a0cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga86e7135b9a2f52f8f1730888cc311ee9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga86e7135b9a2f52f8f1730888cc311ee9">timer2_mode0_start</a> (uint8_t th_value, uint8_t tl_value)</td></tr>
-<tr class="memdesc:ga86e7135b9a2f52f8f1730888cc311ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer2 mode0 with interrupt support.  <a href="group__timer.html#ga86e7135b9a2f52f8f1730888cc311ee9">More...</a><br /></td></tr>
-<tr class="separator:ga86e7135b9a2f52f8f1730888cc311ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9244653a9105cb70db08d02584dcde35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga9244653a9105cb70db08d02584dcde35">timer2_mode0_stop</a> ()</td></tr>
-<tr class="memdesc:ga9244653a9105cb70db08d02584dcde35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop timer2 mode0 with interrupt support.  <a href="group__timer.html#ga9244653a9105cb70db08d02584dcde35">More...</a><br /></td></tr>
-<tr class="separator:ga9244653a9105cb70db08d02584dcde35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacf131c40821319b41488f7c619641b35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gacf131c40821319b41488f7c619641b35">timer2_mode0_enableP30_output</a> (bool enable)</td></tr>
-<tr class="memdesc:gacf131c40821319b41488f7c619641b35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable output of meandr with timer times on P3.0 pin.  <a href="group__timer.html#gacf131c40821319b41488f7c619641b35">More...</a><br /></td></tr>
-<tr class="separator:gacf131c40821319b41488f7c619641b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

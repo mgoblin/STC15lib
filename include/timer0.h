@@ -8,6 +8,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#include <timer_structs.h>
+
 /**
  * Get timer0 mode
  * 

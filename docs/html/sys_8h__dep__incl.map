@@ -1,10 +1,11 @@
 <map id="include/sys.h" name="include/sys.h">
-<area shape="rect" id="node1" title=" " alt="" coords="351,5,457,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="347,5,453,32"/>
 <area shape="rect" id="node2" href="$chip__id_8h.html" title=" " alt="" coords="5,80,136,107"/>
 <area shape="rect" id="node3" href="$frequency_8h.html" title=" " alt="" coords="161,80,309,107"/>
-<area shape="rect" id="node5" href="$interrupt_8h.html" title=" " alt="" coords="333,80,475,107"/>
-<area shape="rect" id="node6" href="$timer0_8h_source.html" title=" " alt="" coords="393,155,521,181"/>
-<area shape="rect" id="node8" href="$uart_8h.html" title=" " alt="" coords="550,80,661,107"/>
+<area shape="rect" id="node5" href="$interrupt_8h.html" title=" " alt="" coords="384,80,525,107"/>
+<area shape="rect" id="node6" href="$timer0_8h_source.html" title=" " alt="" coords="332,155,460,181"/>
+<area shape="rect" id="node8" href="$timer2_8h_source.html" title=" " alt="" coords="484,155,612,181"/>
+<area shape="rect" id="node9" href="$uart_8h.html" title=" " alt="" coords="601,80,711,107"/>
 <area shape="rect" id="node4" href="$delay_8h.html" title=" " alt="" coords="175,155,294,181"/>
-<area shape="rect" id="node7" href="$timer_8h.html" title=" " alt="" coords="398,229,517,256"/>
+<area shape="rect" id="node7" href="$timer_8h.html" title=" " alt="" coords="413,229,531,256"/>
 </map>
