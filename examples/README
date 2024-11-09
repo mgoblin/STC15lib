@@ -14,4 +14,5 @@ Each subfolder contains examples for lib module.
 |  |--common        - Read timer mode and divider
 |  |--mode0         - Timer mode0 examples
 |  |--mode1         - Timer mode1 examples 
+|  |--shared        - int0 and output to PIN example
 |--uart             - UART examples

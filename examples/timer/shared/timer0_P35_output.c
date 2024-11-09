@@ -24,7 +24,7 @@ void main()
     delay_ms(5000);
     
     // enable output of timer to P3.5 pin. The signal is _|‾|_|‾|_
-    timer0_mode0_enableP35_output(true); 
+    timer0_enableP35_output(true); 
 
     timer0_start(0xff00); //start timer
 

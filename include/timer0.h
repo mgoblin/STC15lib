@@ -156,7 +156,7 @@
  * 
  * @ingroup timer
  */
-#define timer0_mode0_enableP35_output(enable) (enable ? bit_set(INT_CLKO, 0) : bit_clr(INT_CLKO, 0))
+#define timer0_enableP35_output(enable) (enable ? bit_set(INT_CLKO, 0) : bit_clr(INT_CLKO, 0))
 
 //============================== Timer0 mode0 declarations end ============================
 
