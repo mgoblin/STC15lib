@@ -26,7 +26,7 @@ void main()
     // enable output of timer to P3.5 pin. The signal is _|‾|_|‾|_
     timer0_mode0_enableP35_output(true); 
 
-    timer0_mode0_start(0xff, 0x00); //start timer
+    timer0_start(0xff, 0x00); //start timer
 
     output_enabled = is_timer0_P35_output_enabled();
     printf_tiny("P3.5 output enabled is %d\n", output_enabled);

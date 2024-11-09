@@ -118,39 +118,39 @@ $(function() {
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">    TF0 = 0; </span><span class="comment">/* clear timer overload flag */</span><span class="preprocessor">                            \</span></div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">}</span></div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#ga66eaee5c6001af11ff2a5a2366e4653a">timer0_mode0_start</a>(uint8_t th_value, uint8_t tl_value);</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#gaacaa3d2da5da2456041d39da0cb2d3c0">timer0_mode0_stop</a>();</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">timer0_mode0_enableP35_output</a>(<span class="keywordtype">bool</span> enable);</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment">//============================== Timer0 mode0 declarations end ============================</span></div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="comment">//============================== Timer0 mode1 declarations begin ==========================</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="group__timer.html#ga3d2497311fb1e1f08b4f0323745e70e4">  148</a></span><span class="preprocessor">#define timer0_mode1_12T_init() {                       \</span></div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="preprocessor">    enable_mcu_interrupts();                            \</span></div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="preprocessor">    TMOD &amp;= 0xf0;                                       \</span></div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">    TMOD |= 0x01;                                       \</span></div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">    bit_clr(AUXR, 7);                                   \</span></div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="preprocessor">}</span></div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="group__timer.html#ga42d9d0ba050ccbe9988bfb9e164498b8">  160</a></span><span class="preprocessor">#define timer0_mode1_1T_init() {                        \</span></div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="preprocessor">    enable_mcu_interrupts();                            \</span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="preprocessor">    TMOD &amp;= 0xf0;                                       \</span></div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="preprocessor">    TMOD |= 0x01;                                       \</span></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="preprocessor">    bit_set(AUXR, 7);                                   \</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">}</span></div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="group__timer.html#ga840155661a550d5631059ea3201faf1c">  184</a></span><span class="preprocessor">#define timer0_mode1_run_once_and_wait timer0_mode0_run_once_and_wait</span></div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="comment">//============================== Timer0 mode1 declarations end ============================</span></div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#gae28ff9fe2ed0ec707a84cd726fe0415f">timer0_start</a>(uint8_t th_value, uint8_t tl_value);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#gaacaa3d2da5da2456041d39da0cb2d3c0">timer0_mode0_stop</a>();</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">timer0_mode0_enableP35_output</a>(<span class="keywordtype">bool</span> enable);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="comment">//============================== Timer0 mode0 declarations end ============================</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="comment">//============================== Timer0 mode1 declarations begin ==========================</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="group__timer.html#ga3d2497311fb1e1f08b4f0323745e70e4">  149</a></span><span class="preprocessor">#define timer0_mode1_12T_init() {                       \</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="preprocessor">    enable_mcu_interrupts();                            \</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">    TMOD &amp;= 0xf0;                                       \</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">    TMOD |= 0x01;                                       \</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="preprocessor">    bit_clr(AUXR, 7);                                   \</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="group__timer.html#ga42d9d0ba050ccbe9988bfb9e164498b8">  161</a></span><span class="preprocessor">#define timer0_mode1_1T_init() {                        \</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="preprocessor">    enable_mcu_interrupts();                            \</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="preprocessor">    TMOD &amp;= 0xf0;                                       \</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="preprocessor">    TMOD |= 0x01;                                       \</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">    bit_set(AUXR, 7);                                   \</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="group__timer.html#ga840155661a550d5631059ea3201faf1c">  185</a></span><span class="preprocessor">#define timer0_mode1_run_once_and_wait timer0_mode0_run_once_and_wait</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="comment">//============================== Timer0 mode1 declarations end ============================</span></div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="agroup__timer_html_ga46cf16f89446f74dc7f3938388ccef68"><div class="ttname"><a href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">timer0_mode0_enableP35_output</a></div><div class="ttdeci">void timer0_mode0_enableP35_output(bool enable)</div><div class="ttdoc">Enable output of meandr with timer times on P3.5 pin.</div><div class="ttdef"><b>Definition:</b> timer0_mode0.c:25</div></div>
-<div class="ttc" id="agroup__timer_html_ga66eaee5c6001af11ff2a5a2366e4653a"><div class="ttname"><a href="group__timer.html#ga66eaee5c6001af11ff2a5a2366e4653a">timer0_mode0_start</a></div><div class="ttdeci">void timer0_mode0_start(uint8_t th_value, uint8_t tl_value)</div><div class="ttdoc">Run timer0 mode0 with interrupt support.</div><div class="ttdef"><b>Definition:</b> timer0_mode0.c:3</div></div>
 <div class="ttc" id="agroup__timer_html_gaacaa3d2da5da2456041d39da0cb2d3c0"><div class="ttname"><a href="group__timer.html#gaacaa3d2da5da2456041d39da0cb2d3c0">timer0_mode0_stop</a></div><div class="ttdeci">void timer0_mode0_stop()</div><div class="ttdoc">Stop timer0 mode0 with interrupt support.</div><div class="ttdef"><b>Definition:</b> timer0_mode0.c:18</div></div>
+<div class="ttc" id="agroup__timer_html_gae28ff9fe2ed0ec707a84cd726fe0415f"><div class="ttname"><a href="group__timer.html#gae28ff9fe2ed0ec707a84cd726fe0415f">timer0_start</a></div><div class="ttdeci">void timer0_start(uint8_t th_value, uint8_t tl_value)</div><div class="ttdoc">Run timer0.</div><div class="ttdef"><b>Definition:</b> timer0_mode0.c:3</div></div>
 <div class="ttc" id="ainterrupt_8h_html"><div class="ttname"><a href="interrupt_8h.html">interrupt.h</a></div></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -101,20 +101,21 @@
 }
 
 /**
- * @brief Run timer0 mode0 with interrupt support.
- * @details Before run timer0_mode0_12T_init or timer0_mode0_1T_init should be called. 
+ * @brief Run timer0.
+ * @details Before run timerX_mode0_12T_init or timerX_mode0_1T_init should be called.
+ *  
  * After run program flow not blocked and interrupt will generated when timer is overloaded.
  * Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code.
  * Timer rerun after overloaded and interuppt handler called. 
  * Dont mix call timer0_mode0_start call with 
- * void timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value) call
+ * void timer0_modeX_run_once_and_wait call
  * 
  * @param th_value timer interval prescaler (high 8 bits)
  * @param tl_value timer interval prescaler (low 5 bits)
  * 
  * @ingroup timer
  */
-void timer0_mode0_start(uint8_t th_value, uint8_t tl_value);
+void timer0_start(uint8_t th_value, uint8_t tl_value);
 
 /**
  * @brief Stop timer0 mode0 with interrupt support.
