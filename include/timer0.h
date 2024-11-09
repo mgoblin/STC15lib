@@ -152,11 +152,11 @@
  * @brief Enable output of meandr with timer times on P3.5 pin.
  * @details By default output is disabled
  * 
- * @param enable if true output is enabled otherwise output is disabled 
+ * @param enable bool if true output is enabled otherwise output is disabled 
  * 
  * @ingroup timer
  */
-void timer0_mode0_enableP35_output(bool enable);
+#define timer0_mode0_enableP35_output(enable) (enable ? bit_set(INT_CLKO, 0) : bit_clr(INT_CLKO, 0))
 
 //============================== Timer0 mode0 declarations end ============================
 

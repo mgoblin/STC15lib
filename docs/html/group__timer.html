@@ -91,6 +91,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga3583683265e677358d18d5970822d3f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga3583683265e677358d18d5970822d3f0">timer0_stop</a>()</td></tr>
 <tr class="memdesc:ga3583683265e677358d18d5970822d3f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop timer0 mode0 with interrupt support.  <a href="group__timer.html#ga3583683265e677358d18d5970822d3f0">More...</a><br /></td></tr>
 <tr class="separator:ga3583683265e677358d18d5970822d3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabb28446e0920255c43aabbc359392c4c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gabb28446e0920255c43aabbc359392c4c">timer0_mode0_enableP35_output</a>(enable)&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, 0) : bit_clr(INT_CLKO, 0))</td></tr>
+<tr class="memdesc:gabb28446e0920255c43aabbc359392c4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable output of meandr with timer times on P3.5 pin.  <a href="group__timer.html#gabb28446e0920255c43aabbc359392c4c">More...</a><br /></td></tr>
+<tr class="separator:gabb28446e0920255c43aabbc359392c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3d2497311fb1e1f08b4f0323745e70e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga3d2497311fb1e1f08b4f0323745e70e4">timer0_mode1_12T_init</a>()</td></tr>
 <tr class="separator:ga3d2497311fb1e1f08b4f0323745e70e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga42d9d0ba050ccbe9988bfb9e164498b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga42d9d0ba050ccbe9988bfb9e164498b8">timer0_mode1_1T_init</a>()</td></tr>
@@ -123,9 +126,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga46cf16f89446f74dc7f3938388ccef68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">timer0_mode0_enableP35_output</a> (bool enable)</td></tr>
-<tr class="memdesc:ga46cf16f89446f74dc7f3938388ccef68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable output of meandr with timer times on P3.5 pin.  <a href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">More...</a><br /></td></tr>
-<tr class="separator:ga46cf16f89446f74dc7f3938388ccef68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga86e7135b9a2f52f8f1730888cc311ee9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga86e7135b9a2f52f8f1730888cc311ee9">timer2_mode0_start</a> (uint8_t th_value, uint8_t tl_value)</td></tr>
 <tr class="memdesc:ga86e7135b9a2f52f8f1730888cc311ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer2 mode0 with interrupt support.  <a href="group__timer.html#ga86e7135b9a2f52f8f1730888cc311ee9">More...</a><br /></td></tr>
 <tr class="separator:ga86e7135b9a2f52f8f1730888cc311ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -310,6 +310,33 @@ Functions</h2></td></tr>
 <div class="line">    bit_set(AUXR, 7);                           \</div>
 <div class="line">}</div>
 </div><!-- fragment --><p >Initialize mode0 1T for timer0. Set TMOD bits. </p>
+
+</div>
+</div>
+<a id="gabb28446e0920255c43aabbc359392c4c" name="gabb28446e0920255c43aabbc359392c4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabb28446e0920255c43aabbc359392c4c">&#9670;&nbsp;</a></span>timer0_mode0_enableP35_output</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer0_mode0_enableP35_output</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">enable</td><td>)</td>
+          <td>&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, 0) : bit_clr(INT_CLKO, 0))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable output of meandr with timer times on P3.5 pin. </p>
+<p >By default output is disabled</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>bool if true output is enabled otherwise output is disabled </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -613,33 +640,6 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga46cf16f89446f74dc7f3938388ccef68" name="ga46cf16f89446f74dc7f3938388ccef68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga46cf16f89446f74dc7f3938388ccef68">&#9670;&nbsp;</a></span>timer0_mode0_enableP35_output()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void timer0_mode0_enableP35_output </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>enable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enable output of meandr with timer times on P3.5 pin. </p>
-<p >By default output is disabled</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">enable</td><td>if true output is enabled otherwise output is disabled </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="ga86e7135b9a2f52f8f1730888cc311ee9" name="ga86e7135b9a2f52f8f1730888cc311ee9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga86e7135b9a2f52f8f1730888cc311ee9">&#9670;&nbsp;</a></span>timer2_mode0_start()</h2>
 

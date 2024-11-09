@@ -142,7 +142,7 @@ $(function() {
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">    TR0 = 0; </span><span class="comment">/* clear run timer flag */</span><span class="preprocessor">                     \</span></div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="preprocessor">}</span></div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">timer0_mode0_enableP35_output</a>(<span class="keywordtype">bool</span> enable);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="group__timer.html#gabb28446e0920255c43aabbc359392c4c">  159</a></span><span class="preprocessor">#define timer0_mode0_enableP35_output(enable) (enable ? bit_set(INT_CLKO, 0) : bit_clr(INT_CLKO, 0))</span></div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="comment">//============================== Timer0 mode0 declarations end ============================</span></div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
@@ -168,7 +168,6 @@ $(function() {
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="agroup__timer_html_ga46cf16f89446f74dc7f3938388ccef68"><div class="ttname"><a href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">timer0_mode0_enableP35_output</a></div><div class="ttdeci">void timer0_mode0_enableP35_output(bool enable)</div><div class="ttdoc">Enable output of meandr with timer times on P3.5 pin.</div><div class="ttdef"><b>Definition:</b> timer0_mode0.c:3</div></div>
 <div class="ttc" id="ainterrupt_8h_html"><div class="ttname"><a href="interrupt_8h.html">interrupt.h</a></div></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
