@@ -1,12 +1,5 @@
 #include <timer.h>
 
-void timer0_mode0_12T_init()
-{ 
-    enable_mcu_interrupts();
-    TMOD &= 0xf0; // clear all T0 flags
-    bit_clr(AUXR, 7); // 12T input clock mode
-}
-
 void timer0_mode0_1T_init()
 {
     enable_mcu_interrupts();

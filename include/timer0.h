@@ -37,8 +37,6 @@
  */
 #define is_timer0_P35_output_enabled() (INT_CLKO & 0x01 > 0)
 
-//============================== Timer0 mode0 declarations begin ==========================
-
 /**
  * @brief Disable timer on INT0(P3.2) pin is low
  * @details if you wand resore default timer behaviour indepned of INT0 state
@@ -51,7 +49,13 @@
  * 
  * @ingroup timer
  */
-void timer0_mode0_12T_init();
+#define timer0_mode0_12T_init() {               \
+    enable_mcu_interrupts();                    \
+    TMOD &= 0xf0;                               \
+    bit_clr(AUXR, 7);                           \
+}
+
+//============================== Timer0 mode0 declarations begin ==========================
 
 /**
  * Initialize mode0 1T for timer0. Set TMOD bits.
@@ -127,7 +131,12 @@ void timer0_mode0_enableP35_output(bool enable);
  * 
  * @ingroup timer
  */
-void timer0_mode1_12T_init();
+#define timer0_mode1_12T_init() {                       \
+    enable_mcu_interrupts();                            \
+    TMOD &= 0xf0;                                       \
+    TMOD |= 0x01;                                       \
+    bit_clr(AUXR, 7);                                   \
+}
 
 // /**
 //  * Initialize mode0 1T for timer0 in mode1. Set TMOD bits.

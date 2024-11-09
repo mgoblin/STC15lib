@@ -78,6 +78,10 @@ Macros</h2></td></tr>
 <tr class="separator:gac2f34fcd6ffbec0a91510385d3286f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae9aaed1fca016d231d3c6bdbb4b11319"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gae9aaed1fca016d231d3c6bdbb4b11319">is_timer0_P35_output_enabled</a>()&#160;&#160;&#160;(INT_CLKO &amp; 0x01 &gt; 0)</td></tr>
 <tr class="separator:gae9aaed1fca016d231d3c6bdbb4b11319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga34caaadba5e538e023c05217fcc8e062"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga34caaadba5e538e023c05217fcc8e062">timer0_mode0_12T_init</a>()</td></tr>
+<tr class="separator:ga34caaadba5e538e023c05217fcc8e062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3d2497311fb1e1f08b4f0323745e70e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga3d2497311fb1e1f08b4f0323745e70e4">timer0_mode1_12T_init</a>()</td></tr>
+<tr class="separator:ga3d2497311fb1e1f08b4f0323745e70e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga68b53855ca88473c1f21651184ee2cc8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga68b53855ca88473c1f21651184ee2cc8">get_timer2_mode</a>()&#160;&#160;&#160;(0)</td></tr>
 <tr class="separator:ga68b53855ca88473c1f21651184ee2cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4259384552df325973b81bd5425b7f4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga4259384552df325973b81bd5425b7f4a">get_timer2_clock_divider</a>()&#160;&#160;&#160;(get_bit(AUXR, 2) == 0 ? <a class="el" href="group__timer.html#ggaf044d39b4f1cbe40ca04353b2852a21da5c3a2baea537d57bba309aa892a7926c">T12</a> : <a class="el" href="group__timer.html#ggaf044d39b4f1cbe40ca04353b2852a21da623238751deb7764bdebf4799fe30f07">T1</a>)</td></tr>
@@ -94,8 +98,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gafc1922d4d4dacedb83fe63a73984bcc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gafc1922d4d4dacedb83fe63a73984bcc6">timer0_mode0_12T_init</a> ()</td></tr>
-<tr class="separator:gafc1922d4d4dacedb83fe63a73984bcc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga88c5a7d6624d367693e1373e7640345c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga88c5a7d6624d367693e1373e7640345c">timer0_mode0_1T_init</a> ()</td></tr>
 <tr class="separator:ga88c5a7d6624d367693e1373e7640345c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga376560fc8232925561d041328af2e198"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga376560fc8232925561d041328af2e198">timer0_mode0_run_once_and_wait</a> (uint8_t th_value, uint8_t tl_value)</td></tr>
@@ -110,8 +112,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga46cf16f89446f74dc7f3938388ccef68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">timer0_mode0_enableP35_output</a> (bool enable)</td></tr>
 <tr class="memdesc:ga46cf16f89446f74dc7f3938388ccef68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable output of meandr with timer times on P3.5 pin.  <a href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">More...</a><br /></td></tr>
 <tr class="separator:ga46cf16f89446f74dc7f3938388ccef68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5453bf2f413f079ad65fa4bf75eeb3ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga5453bf2f413f079ad65fa4bf75eeb3ec">timer0_mode1_12T_init</a> ()</td></tr>
-<tr class="separator:ga5453bf2f413f079ad65fa4bf75eeb3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7eb9d6a409c5dc2b8b37cb41f6d97751"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga7eb9d6a409c5dc2b8b37cb41f6d97751">timer0_mode1_run_once_and_wait</a> (uint8_t th_value, uint8_t tl_value)</td></tr>
 <tr class="memdesc:ga7eb9d6a409c5dc2b8b37cb41f6d97751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0 mode1 once and wait with program flow blocking timer not finished.  <a href="group__timer.html#ga7eb9d6a409c5dc2b8b37cb41f6d97751">More...</a><br /></td></tr>
 <tr class="separator:ga7eb9d6a409c5dc2b8b37cb41f6d97751"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -265,6 +265,53 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga34caaadba5e538e023c05217fcc8e062" name="ga34caaadba5e538e023c05217fcc8e062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga34caaadba5e538e023c05217fcc8e062">&#9670;&nbsp;</a></span>timer0_mode0_12T_init</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer0_mode0_12T_init</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    {               \</div>
+<div class="line">    enable_mcu_interrupts();                    \</div>
+<div class="line">    TMOD &amp;= 0xf0;                               \</div>
+<div class="line">    bit_clr(AUXR, 7);                           \</div>
+<div class="line">}</div>
+</div><!-- fragment --><p >Initialize mode0 12T for timer0 in mode0. Set TMOD bits. </p>
+
+</div>
+</div>
+<a id="ga3d2497311fb1e1f08b4f0323745e70e4" name="ga3d2497311fb1e1f08b4f0323745e70e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3d2497311fb1e1f08b4f0323745e70e4">&#9670;&nbsp;</a></span>timer0_mode1_12T_init</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer0_mode1_12T_init</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    {                       \</div>
+<div class="line">    enable_mcu_interrupts();                            \</div>
+<div class="line">    TMOD &amp;= 0xf0;                                       \</div>
+<div class="line">    TMOD |= 0x01;                                       \</div>
+<div class="line">    bit_clr(AUXR, 7);                                   \</div>
+<div class="line">}</div>
+</div><!-- fragment --><p >Initialize mode1 12T for timer0 in mode1. Set TMOD and AUXR bits. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="gaf044d39b4f1cbe40ca04353b2852a21d" name="gaf044d39b4f1cbe40ca04353b2852a21d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf044d39b4f1cbe40ca04353b2852a21d">&#9670;&nbsp;</a></span>timer_clock_divider_t</h2>
@@ -288,24 +335,6 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gafc1922d4d4dacedb83fe63a73984bcc6" name="gafc1922d4d4dacedb83fe63a73984bcc6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafc1922d4d4dacedb83fe63a73984bcc6">&#9670;&nbsp;</a></span>timer0_mode0_12T_init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void timer0_mode0_12T_init </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Initialize mode0 12T for timer0 in mode0. Set TMOD bits. </p>
-
-</div>
-</div>
 <a id="ga88c5a7d6624d367693e1373e7640345c" name="ga88c5a7d6624d367693e1373e7640345c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga88c5a7d6624d367693e1373e7640345c">&#9670;&nbsp;</a></span>timer0_mode0_1T_init()</h2>
 
@@ -447,24 +476,6 @@ Functions</h2></td></tr>
 
 <p>Stop timer0 mode0 with interrupt support. </p>
 <p >Before stop timer0_mode0_start should be called. Dont mix timer0_mode0_stop call with void <a class="el" href="group__timer.html#ga376560fc8232925561d041328af2e198" title="Run timer0 mode0 once and wait with program flow blocking timer not finished.">timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value)</a> call </p>
-
-</div>
-</div>
-<a id="ga5453bf2f413f079ad65fa4bf75eeb3ec" name="ga5453bf2f413f079ad65fa4bf75eeb3ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5453bf2f413f079ad65fa4bf75eeb3ec">&#9670;&nbsp;</a></span>timer0_mode1_12T_init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void timer0_mode1_12T_init </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Initialize mode1 12T for timer0 in mode1. Set TMOD and AUXR bits. </p>
 
 </div>
 </div>
