@@ -101,6 +101,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga3f16895698879dc595d6ae71974dba2e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga3f16895698879dc595d6ae71974dba2e">timer2_mode0_12T_init</a>()</td></tr>
 <tr class="memdesc:ga3f16895698879dc595d6ae71974dba2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize mode0 12T for timer2. Set AUXR bits.  <a href="group__timer.html#ga3f16895698879dc595d6ae71974dba2e">More...</a><br /></td></tr>
 <tr class="separator:ga3f16895698879dc595d6ae71974dba2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadf419f934a3f374993349e6a257ed29d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gadf419f934a3f374993349e6a257ed29d">timer2_mode0_1T_init</a>()</td></tr>
+<tr class="memdesc:gadf419f934a3f374993349e6a257ed29d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize mode0 1T for timer2. Set AUXR bits.  <a href="group__timer.html#gadf419f934a3f374993349e6a257ed29d">More...</a><br /></td></tr>
+<tr class="separator:gadf419f934a3f374993349e6a257ed29d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -120,9 +123,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga46cf16f89446f74dc7f3938388ccef68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">timer0_mode0_enableP35_output</a> (bool enable)</td></tr>
 <tr class="memdesc:ga46cf16f89446f74dc7f3938388ccef68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable output of meandr with timer times on P3.5 pin.  <a href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">More...</a><br /></td></tr>
 <tr class="separator:ga46cf16f89446f74dc7f3938388ccef68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga828c06ed1eddfd6e11f9a6aa848a0cf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga828c06ed1eddfd6e11f9a6aa848a0cf2">timer2_mode0_1T_init</a> ()</td></tr>
-<tr class="memdesc:ga828c06ed1eddfd6e11f9a6aa848a0cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize mode0 1T for timer2. Set AUXR bits.  <a href="group__timer.html#ga828c06ed1eddfd6e11f9a6aa848a0cf2">More...</a><br /></td></tr>
-<tr class="separator:ga828c06ed1eddfd6e11f9a6aa848a0cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga86e7135b9a2f52f8f1730888cc311ee9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga86e7135b9a2f52f8f1730888cc311ee9">timer2_mode0_start</a> (uint8_t th_value, uint8_t tl_value)</td></tr>
 <tr class="memdesc:ga86e7135b9a2f52f8f1730888cc311ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer2 mode0 with interrupt support.  <a href="group__timer.html#ga86e7135b9a2f52f8f1730888cc311ee9">More...</a><br /></td></tr>
 <tr class="separator:ga86e7135b9a2f52f8f1730888cc311ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -465,6 +465,35 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gadf419f934a3f374993349e6a257ed29d" name="gadf419f934a3f374993349e6a257ed29d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadf419f934a3f374993349e6a257ed29d">&#9670;&nbsp;</a></span>timer2_mode0_1T_init</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer2_mode0_1T_init</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    {                                        \</div>
+<div class="line">    enable_mcu_interrupts();                                            \</div>
+<div class="line">    <span class="comment">/* bit_clr(AUXR, 4); // clear T2 run flag */</span>                        \</div>
+<div class="line">    <span class="comment">/*bit_clr(AUXR, 3); // clear T/C flag for set timer mode */</span>         \</div>
+<div class="line">    <span class="comment">/*bit_set(AUXR, 2); // set T2 T2x12 flag for set 1T mode */</span>         \</div>
+<div class="line">    AUXR &amp;= 0xE7;<span class="comment">/*0b11100111;*/</span>                                        <a class="code hl_define" href="group__interrupts.html#ga6ba6fe72d49d266c76ca27b31bcb0395">\</a></div>
+<div class="line"><a class="code hl_define" href="group__interrupts.html#ga6ba6fe72d49d266c76ca27b31bcb0395">                                                                        \</a></div>
+<div class="line"><a class="code hl_define" href="group__interrupts.html#ga6ba6fe72d49d266c76ca27b31bcb0395">    enable_timer2_interrupt</a>();                                          \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Initialize mode0 1T for timer2. Set AUXR bits. </p>
+<p >Timer2 could be used for UART. This method init timer2 as general purpose timer in mode0 with input from sysClk/1. Using timer2 in this mode disable UART capability. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="gaf044d39b4f1cbe40ca04353b2852a21d" name="gaf044d39b4f1cbe40ca04353b2852a21d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf044d39b4f1cbe40ca04353b2852a21d">&#9670;&nbsp;</a></span>timer_clock_divider_t</h2>
@@ -570,26 +599,6 @@ Functions</h2></td></tr>
 
 <p>Stop timer0 mode0 with interrupt support. </p>
 <p >Before stop timer0_mode0_start should be called. Dont mix timer0_mode0_stop call with void <a class="el" href="group__timer.html#ga906a731d5cbc2a4427901a6fc2e3b38d" title="Run timer0 mode0 once and wait with program flow blocking timer not finished.">timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value)</a> call </p>
-
-</div>
-</div>
-<a id="ga828c06ed1eddfd6e11f9a6aa848a0cf2" name="ga828c06ed1eddfd6e11f9a6aa848a0cf2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga828c06ed1eddfd6e11f9a6aa848a0cf2">&#9670;&nbsp;</a></span>timer2_mode0_1T_init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void timer2_mode0_1T_init </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initialize mode0 1T for timer2. Set AUXR bits. </p>
-<p >Timer2 could be used for UART. This method init timer2 as general purpose timer in mode0 with input from sysClk/1. Using timer2 in this mode disable UART capability. </p>
 
 </div>
 </div>
