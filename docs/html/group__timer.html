@@ -99,7 +99,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ga88c5a7d6624d367693e1373e7640345c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga88c5a7d6624d367693e1373e7640345c">timer0_mode0_1T_init</a> ()</td></tr>
 <tr class="separator:ga88c5a7d6624d367693e1373e7640345c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga376560fc8232925561d041328af2e198"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga376560fc8232925561d041328af2e198">timer0_mode0_run_once_and_wait</a> (uint8_t th_value, uint8_t tl_value)</td></tr>
-<tr class="memdesc:ga376560fc8232925561d041328af2e198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0 mode0 and wait timer not finished.  <a href="group__timer.html#ga376560fc8232925561d041328af2e198">More...</a><br /></td></tr>
+<tr class="memdesc:ga376560fc8232925561d041328af2e198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0 mode0 once and wait with program flow blocking timer not finished.  <a href="group__timer.html#ga376560fc8232925561d041328af2e198">More...</a><br /></td></tr>
 <tr class="separator:ga376560fc8232925561d041328af2e198"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga66eaee5c6001af11ff2a5a2366e4653a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga66eaee5c6001af11ff2a5a2366e4653a">timer0_mode0_start</a> (uint8_t th_value, uint8_t tl_value)</td></tr>
 <tr class="memdesc:ga66eaee5c6001af11ff2a5a2366e4653a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0 mode0 with interrupt support.  <a href="group__timer.html#ga66eaee5c6001af11ff2a5a2366e4653a">More...</a><br /></td></tr>
@@ -112,6 +112,9 @@ Functions</h2></td></tr>
 <tr class="separator:ga46cf16f89446f74dc7f3938388ccef68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5453bf2f413f079ad65fa4bf75eeb3ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga5453bf2f413f079ad65fa4bf75eeb3ec">timer0_mode1_12T_init</a> ()</td></tr>
 <tr class="separator:ga5453bf2f413f079ad65fa4bf75eeb3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7eb9d6a409c5dc2b8b37cb41f6d97751"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga7eb9d6a409c5dc2b8b37cb41f6d97751">timer0_mode1_run_once_and_wait</a> (uint8_t th_value, uint8_t tl_value)</td></tr>
+<tr class="memdesc:ga7eb9d6a409c5dc2b8b37cb41f6d97751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0 mode1 once and wait with program flow blocking timer not finished.  <a href="group__timer.html#ga7eb9d6a409c5dc2b8b37cb41f6d97751">More...</a><br /></td></tr>
+<tr class="separator:ga7eb9d6a409c5dc2b8b37cb41f6d97751"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabe56c22feca0e373507d08c4fe9aa3d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gabe56c22feca0e373507d08c4fe9aa3d4">timer2_mode0_12T_init</a> ()</td></tr>
 <tr class="memdesc:gabe56c22feca0e373507d08c4fe9aa3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize mode0 12T for timer2. Set AUXR bits.  <a href="group__timer.html#gabe56c22feca0e373507d08c4fe9aa3d4">More...</a><br /></td></tr>
 <tr class="separator:gabe56c22feca0e373507d08c4fe9aa3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -374,13 +377,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Run timer0 mode0 and wait timer not finished. </p>
-<p >Before run timer0_mode0_12T_init or timer0_mode0_1T_init <br  />
- should be called. After run program flow blocked until timer does not overloaded. Dont mix call of timer0_mode0_run_once_and_wait with timer0_mode0_start/timer0_mode0_stop calls.</p>
+<p>Run timer0 mode0 once and wait with program flow blocking timer not finished. </p>
+<p >Before run timer0_mode0_12T_init or timer0_mode0_1T_init should be called.</p>
+<p >After run program flow blocked until timer does not overloaded. Timer overloading occurs on th_value and tl_value is 0xff, therefore maximal timer interval corresponds to th_value and tl_value equals 0</p>
+<p >Dont mix call of timer0_mode0_run_once_and_wait with timer0_mode0_start/timer0_mode0_stop calls.</p>
+<p >For mode0 and mode1 implementation is the same.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">th_value</td><td>timer interval prescaler (high 8 bits) </td></tr>
-    <tr><td class="paramname">tl_value</td><td>timer interval prescaler (low 5 bits) </td></tr>
+    <tr><td class="paramname">th_value</td><td>timer interval high part (high 8 bits) </td></tr>
+    <tr><td class="paramname">tl_value</td><td>timer interval low part (low 8 bits) </td></tr>
   </table>
   </dd>
 </dl>
@@ -414,7 +419,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Run timer0 mode0 with interrupt support. </p>
-<p >Before run timer0_mode0_12T_init or timer0_mode0_1T_init should be called. After run program flow not blocked and interrupt will generated when timer is overloaded. Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code. Timer rerun after overloaded and interuppt handler called. Dont mix call timer0_mode0_start call with void <a class="el" href="group__timer.html#ga376560fc8232925561d041328af2e198" title="Run timer0 mode0 and wait timer not finished.">timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value)</a> call</p>
+<p >Before run timer0_mode0_12T_init or timer0_mode0_1T_init should be called. After run program flow not blocked and interrupt will generated when timer is overloaded. Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code. Timer rerun after overloaded and interuppt handler called. Dont mix call timer0_mode0_start call with void <a class="el" href="group__timer.html#ga376560fc8232925561d041328af2e198" title="Run timer0 mode0 once and wait with program flow blocking timer not finished.">timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value)</a> call</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">th_value</td><td>timer interval prescaler (high 8 bits) </td></tr>
@@ -441,7 +446,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Stop timer0 mode0 with interrupt support. </p>
-<p >Before stop timer0_mode0_start should be called. Dont mix timer0_mode0_stop call with void <a class="el" href="group__timer.html#ga376560fc8232925561d041328af2e198" title="Run timer0 mode0 and wait timer not finished.">timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value)</a> call </p>
+<p >Before stop timer0_mode0_start should be called. Dont mix timer0_mode0_stop call with void <a class="el" href="group__timer.html#ga376560fc8232925561d041328af2e198" title="Run timer0 mode0 once and wait with program flow blocking timer not finished.">timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value)</a> call </p>
 
 </div>
 </div>
@@ -460,6 +465,47 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >Initialize mode1 12T for timer0 in mode1. Set TMOD and AUXR bits. </p>
+
+</div>
+</div>
+<a id="ga7eb9d6a409c5dc2b8b37cb41f6d97751" name="ga7eb9d6a409c5dc2b8b37cb41f6d97751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7eb9d6a409c5dc2b8b37cb41f6d97751">&#9670;&nbsp;</a></span>timer0_mode1_run_once_and_wait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void timer0_mode1_run_once_and_wait </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>th_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>tl_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Run timer0 mode1 once and wait with program flow blocking timer not finished. </p>
+<p >Before run timer0_mode1_12T_init or timer0_mode1_1T_init should be called.</p>
+<p >After run program flow blocked until timer does not overloaded. Timer overloading occurs on th_value and tl_value is 0xff, therefore maximal timer interval corresponds to th_value and tl_value equals 0</p>
+<p >Dont mix call of timer0_mode0_run_once_and_wait with timer0_mode1_start/timer0_mode1_stop calls.</p>
+<p >For mode0 and mode1 implementation is the same.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">th_value</td><td>timer interval high part (high 8 bits) </td></tr>
+    <tr><td class="paramname">tl_value</td><td>timer interval low part (low 8 bits) </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
