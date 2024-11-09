@@ -102,9 +102,9 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga0d1e275be84c914a531bc402f4666af5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga0d1e275be84c914a531bc402f4666af5">timer0_mode0_run_once_and_wait</a> (uint16_t value)</td></tr>
-<tr class="memdesc:ga0d1e275be84c914a531bc402f4666af5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0 mode0 once and wait with program flow blocking timer not finished.  <a href="group__timer.html#ga0d1e275be84c914a531bc402f4666af5">More...</a><br /></td></tr>
-<tr class="separator:ga0d1e275be84c914a531bc402f4666af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab90309dee66327e943fefda156b24b0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gab90309dee66327e943fefda156b24b0a">timer0_mode0_run_once_and_wait</a> (uint16_t ticks)</td></tr>
+<tr class="memdesc:gab90309dee66327e943fefda156b24b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0 mode0 once and wait with program flow blocking timer not finished.  <a href="group__timer.html#gab90309dee66327e943fefda156b24b0a">More...</a><br /></td></tr>
+<tr class="separator:gab90309dee66327e943fefda156b24b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga66eaee5c6001af11ff2a5a2366e4653a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga66eaee5c6001af11ff2a5a2366e4653a">timer0_mode0_start</a> (uint8_t th_value, uint8_t tl_value)</td></tr>
 <tr class="memdesc:ga66eaee5c6001af11ff2a5a2366e4653a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0 mode0 with interrupt support.  <a href="group__timer.html#ga66eaee5c6001af11ff2a5a2366e4653a">More...</a><br /></td></tr>
 <tr class="separator:ga66eaee5c6001af11ff2a5a2366e4653a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -411,8 +411,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga0d1e275be84c914a531bc402f4666af5" name="ga0d1e275be84c914a531bc402f4666af5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0d1e275be84c914a531bc402f4666af5">&#9670;&nbsp;</a></span>timer0_mode0_run_once_and_wait()</h2>
+<a id="gab90309dee66327e943fefda156b24b0a" name="gab90309dee66327e943fefda156b24b0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab90309dee66327e943fefda156b24b0a">&#9670;&nbsp;</a></span>timer0_mode0_run_once_and_wait()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -421,7 +421,7 @@ Functions</h2></td></tr>
           <td class="memname">void timer0_mode0_run_once_and_wait </td>
           <td>(</td>
           <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramname"><em>ticks</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -429,12 +429,12 @@ Functions</h2></td></tr>
 
 <p>Run timer0 mode0 once and wait with program flow blocking timer not finished. </p>
 <p >Before run timer0_mode0_12T_init or timer0_mode0_1T_init should be called.</p>
-<p >After run program flow blocked until timer does not overloaded. Timer overloading occurs on value is 0xffff, therefore maximal timer interval corresponds to value equals 0</p>
+<p >After run program flow blocked until timer does not overloaded.</p>
 <p >Dont mix call of timer0_mode0_run_once_and_wait with timer0_mode0_start/timer0_mode0_stop calls.</p>
 <p >For mode0 and mode1 implementation is the same.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td>uint16_t timer interval </td></tr>
+    <tr><td class="paramname">ticks</td><td>uint16_t timer ticks count </td></tr>
   </table>
   </dd>
 </dl>

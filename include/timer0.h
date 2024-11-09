@@ -75,19 +75,17 @@
  * Before run timer0_mode0_12T_init or timer0_mode0_1T_init should be called. 
  * 
  * After run program flow blocked until timer does not overloaded.
- * Timer overloading occurs on value is 0xffff, therefore 
- * maximal timer interval corresponds to value equals 0 
  * 
  * Dont mix call of timer0_mode0_run_once_and_wait with
  * timer0_mode0_start/timer0_mode0_stop calls.
  * 
  * For mode0 and mode1 implementation is the same.
  * 
- * @param value uint16_t timer interval 
+ * @param ticks uint16_t timer ticks count 
  * 
  * @ingroup timer 
  */
-void timer0_mode0_run_once_and_wait(uint16_t value);
+void timer0_mode0_run_once_and_wait(uint16_t ticks);
 
 /**
  * @brief Run timer0 mode0 with interrupt support.

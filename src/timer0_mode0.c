@@ -1,7 +1,9 @@
 #include <timer.h>
 
-void timer0_mode0_run_once_and_wait(uint16_t value)
+void timer0_mode0_run_once_and_wait(uint16_t ticks)
 {
+    uint16_t value = 0xffff - ticks;
+    
     // Load timer high and low bytes value
     TL0 = (uint8_t) value;
     TH0 = (uint8_t) bit_shift_left(value, 7);

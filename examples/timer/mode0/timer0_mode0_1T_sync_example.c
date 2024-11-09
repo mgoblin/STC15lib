@@ -13,7 +13,7 @@ void main()
     {
         for (uint8_t i = 0; i < 12; i++)
         {
-            timer0_mode0_run_once_and_wait(0x00);
+            timer0_mode0_run_once_and_wait(0xffff);
         }
         LED = !LED;
     }
