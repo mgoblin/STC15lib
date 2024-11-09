@@ -142,7 +142,7 @@
  * 
  * @ingroup timer
  */
-void timer0_mode0_stop();
+void timer0_stop();
 
 /**
  * @brief Enable output of meandr with timer times on P3.5 pin.

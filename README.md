@@ -41,7 +41,6 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 
 Next releases todo
 * TODO timer module use defines in all functionality
-* TODO add documentation for timer examples
 * TODO add documentation for uart examples
 * TODO Timer aux - set timers in terms of output signal freq and timings
 * TODO Timers aux should not biased from CPU frequency dividers

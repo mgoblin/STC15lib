@@ -1,10 +1,10 @@
 #include <timer.h>
 
-void timer0_mode0_stop()
+void timer0_stop()
 {
     disable_timer0_interrupt();
-    TF0 = 0; // clear timer overload flag
-    TR0 = 0; // clear run timer flag
+    TF0 = 0; /* clear timer overload flag */
+    TR0 = 0; /* clear run timer flag */
 }
 
 void timer0_mode0_enableP35_output(bool enable)

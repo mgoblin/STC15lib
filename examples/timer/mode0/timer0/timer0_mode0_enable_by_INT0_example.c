@@ -25,7 +25,7 @@ void main()
 
     delay_ms(2000);
 
-    timer0_mode0_stop();
+    timer0_stop();
 
     delay_ms(2000);
     //======================================================
@@ -41,7 +41,7 @@ void main()
 
     delay_ms(2000);
 
-    timer0_mode0_stop();
+    timer0_stop();
 
     delay_ms(2000);
 }

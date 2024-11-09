@@ -25,7 +25,7 @@ void main()
     delay_ms(1000);
 
     // Not LED blinking during 2 seconds
-    timer0_mode0_stop();
+    timer0_stop();
     interrupt_counter = 0;
     delay_ms(2000);
 }
