@@ -16,8 +16,3 @@ void timer2_mode0_stop()
     AUXR &= 0xef; //0b11101111;
     disable_timer2_interrupt();
 }
-
-void timer2_mode0_enableP30_output(bool enable)
-{
-    enable ? bit_set(INT_CLKO, 2) : bit_clr(INT_CLKO, 2);
-}

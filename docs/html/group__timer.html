@@ -104,6 +104,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gadf419f934a3f374993349e6a257ed29d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gadf419f934a3f374993349e6a257ed29d">timer2_mode0_1T_init</a>()</td></tr>
 <tr class="memdesc:gadf419f934a3f374993349e6a257ed29d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize mode0 1T for timer2. Set AUXR bits.  <a href="group__timer.html#gadf419f934a3f374993349e6a257ed29d">More...</a><br /></td></tr>
 <tr class="separator:gadf419f934a3f374993349e6a257ed29d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga57ace2191bf6dbce66f831097636249d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga57ace2191bf6dbce66f831097636249d">timer2_mode0_enableP30_output</a>(enable)&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, 2) : bit_clr(INT_CLKO, 2))</td></tr>
+<tr class="memdesc:ga57ace2191bf6dbce66f831097636249d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable output of meandr with timer times on P3.0 pin.  <a href="group__timer.html#ga57ace2191bf6dbce66f831097636249d">More...</a><br /></td></tr>
+<tr class="separator:ga57ace2191bf6dbce66f831097636249d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -129,9 +132,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga9244653a9105cb70db08d02584dcde35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga9244653a9105cb70db08d02584dcde35">timer2_mode0_stop</a> ()</td></tr>
 <tr class="memdesc:ga9244653a9105cb70db08d02584dcde35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop timer2 mode0 with interrupt support.  <a href="group__timer.html#ga9244653a9105cb70db08d02584dcde35">More...</a><br /></td></tr>
 <tr class="separator:ga9244653a9105cb70db08d02584dcde35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacf131c40821319b41488f7c619641b35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gacf131c40821319b41488f7c619641b35">timer2_mode0_enableP30_output</a> (bool enable)</td></tr>
-<tr class="memdesc:gacf131c40821319b41488f7c619641b35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable output of meandr with timer times on P3.0 pin.  <a href="group__timer.html#gacf131c40821319b41488f7c619641b35">More...</a><br /></td></tr>
-<tr class="separator:gacf131c40821319b41488f7c619641b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for timers.</p>
@@ -494,6 +494,33 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga57ace2191bf6dbce66f831097636249d" name="ga57ace2191bf6dbce66f831097636249d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga57ace2191bf6dbce66f831097636249d">&#9670;&nbsp;</a></span>timer2_mode0_enableP30_output</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer2_mode0_enableP30_output</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">enable</td><td>)</td>
+          <td>&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, 2) : bit_clr(INT_CLKO, 2))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable output of meandr with timer times on P3.0 pin. </p>
+<p >By default output is disabled</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>bool if true output is enabled otherwise output is disabled </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="gaf044d39b4f1cbe40ca04353b2852a21d" name="gaf044d39b4f1cbe40ca04353b2852a21d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf044d39b4f1cbe40ca04353b2852a21d">&#9670;&nbsp;</a></span>timer_clock_divider_t</h2>
@@ -599,33 +626,6 @@ Functions</h2></td></tr>
 
 <p>Stop timer0 mode0 with interrupt support. </p>
 <p >Before stop timer0_mode0_start should be called. Dont mix timer0_mode0_stop call with void <a class="el" href="group__timer.html#ga906a731d5cbc2a4427901a6fc2e3b38d" title="Run timer0 mode0 once and wait with program flow blocking timer not finished.">timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value)</a> call </p>
-
-</div>
-</div>
-<a id="gacf131c40821319b41488f7c619641b35" name="gacf131c40821319b41488f7c619641b35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacf131c40821319b41488f7c619641b35">&#9670;&nbsp;</a></span>timer2_mode0_enableP30_output()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void timer2_mode0_enableP30_output </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>enable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enable output of meandr with timer times on P3.0 pin. </p>
-<p >By default output is disabled</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">enable</td><td>if true output is enabled otherwise output is disabled </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

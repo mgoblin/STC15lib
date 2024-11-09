@@ -100,11 +100,11 @@ void timer2_mode0_stop();
  * @brief Enable output of meandr with timer times on P3.0 pin.
  * @details By default output is disabled
  * 
- * @param enable if true output is enabled otherwise output is disabled 
+ * @param enable bool if true output is enabled otherwise output is disabled 
  * 
  * @ingroup timer
  */
-void timer2_mode0_enableP30_output(bool enable);
+#define timer2_mode0_enableP30_output(enable) (enable ? bit_set(INT_CLKO, 2) : bit_clr(INT_CLKO, 2))
 
 //============================== Timer2 mode0 declarations end ============================
 

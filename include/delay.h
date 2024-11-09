@@ -11,6 +11,9 @@
 #include <stdint.h>
 #include <frequency.h>
 
+static uint16_t ms_div;
+static unsigned int i;
+
 /** 
 *  @brief Delays program flow using CPU nop
 *  @details Using NOP CPU cycles to delay. Use delay_ms with care. 
@@ -20,8 +23,7 @@
 *  @ingroup delays 
 */
 #define delay_ms(ms) {                              \
-    uint16_t ms_div = ms / get_frequency_divider(); \
-    unsigned int i;                                 \
+    ms_div = ms / get_frequency_divider();          \
     do                                              \
     {                                               \
        i = (get_master_clock_frequency() / 13000);  \
