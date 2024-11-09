@@ -1,13 +1,14 @@
 #include <timer.h>
 
-void timer2_mode0_start(uint8_t th_value, uint8_t tl_value)
+void timer2_mode0_start(uint16_t tick)
 {
-    // Load high and low timer value bytes
-    T2L = tl_value;
-    T2H = th_value;
+    uint16_t value = 0xffff - tick;
+    /* Load high and low timer value bytes */
+    T2L = value & 0xff;
+    T2H = (value >> 8) & 0xff;
 
-    //bit_set(AUXR, 4); // set T2 run flag
-    AUXR |= 0x10; //0b00010000;
+    /* bit_set(AUXR, 4); // set T2 run flag */
+    AUXR |= 0x10; /* 0b00010000 ; */
 }
 
 void timer2_mode0_stop()

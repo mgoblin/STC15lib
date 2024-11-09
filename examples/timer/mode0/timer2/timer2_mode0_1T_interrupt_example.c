@@ -13,7 +13,7 @@ void main(void)
 {
     timer2_mode0_1T_init();
 
-    timer2_mode0_start(0x00, 0x00);
+    timer2_mode0_start(0xffff);
 
     while(1) {}
 

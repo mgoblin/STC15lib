@@ -126,9 +126,9 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga86e7135b9a2f52f8f1730888cc311ee9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga86e7135b9a2f52f8f1730888cc311ee9">timer2_mode0_start</a> (uint8_t th_value, uint8_t tl_value)</td></tr>
-<tr class="memdesc:ga86e7135b9a2f52f8f1730888cc311ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer2 mode0 with interrupt support.  <a href="group__timer.html#ga86e7135b9a2f52f8f1730888cc311ee9">More...</a><br /></td></tr>
-<tr class="separator:ga86e7135b9a2f52f8f1730888cc311ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga93e8a47563b0e586bc32a0e76307c302"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga93e8a47563b0e586bc32a0e76307c302">timer2_mode0_start</a> (uint16_t tick)</td></tr>
+<tr class="memdesc:ga93e8a47563b0e586bc32a0e76307c302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer2 mode0 with interrupt support.  <a href="group__timer.html#ga93e8a47563b0e586bc32a0e76307c302">More...</a><br /></td></tr>
+<tr class="separator:ga93e8a47563b0e586bc32a0e76307c302"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9244653a9105cb70db08d02584dcde35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga9244653a9105cb70db08d02584dcde35">timer2_mode0_stop</a> ()</td></tr>
 <tr class="memdesc:ga9244653a9105cb70db08d02584dcde35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop timer2 mode0 with interrupt support.  <a href="group__timer.html#ga9244653a9105cb70db08d02584dcde35">More...</a><br /></td></tr>
 <tr class="separator:ga9244653a9105cb70db08d02584dcde35"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -640,8 +640,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga86e7135b9a2f52f8f1730888cc311ee9" name="ga86e7135b9a2f52f8f1730888cc311ee9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga86e7135b9a2f52f8f1730888cc311ee9">&#9670;&nbsp;</a></span>timer2_mode0_start()</h2>
+<a id="ga93e8a47563b0e586bc32a0e76307c302" name="ga93e8a47563b0e586bc32a0e76307c302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga93e8a47563b0e586bc32a0e76307c302">&#9670;&nbsp;</a></span>timer2_mode0_start()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -649,29 +649,21 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void timer2_mode0_start </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>th_value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>tick</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>tl_value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Run timer2 mode0 with interrupt support. </p>
-<p >Before run timer2_mode0_12T_init or timer2_mode0_1T_init should be called. After run program flow not blocked and interrupt will generated when timer is overloaded. Interrupt handler void timer2ISR(void) __interrupt(12) should be defined in user code. Timer rerun after overloaded and interuppt handler called.</p>
+<p >Before run timer2_mode0_12T_init or timer2_mode0_1T_init should be called.</p>
+<p >After run program flow not blocked and interrupt will raised when timer is overloaded.</p>
+<p >Interrupt handler void timer2ISR(void) __interrupt(12) should be defined in user code.</p>
+<p >Timer rerun occurs after overloading and interuppt handler calling.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">th_value</td><td>timer interval prescaler (high 8 bits) </td></tr>
-    <tr><td class="paramname">tl_value</td><td>timer interval prescaler (low 5 bits) </td></tr>
+    <tr><td class="paramname">tick</td><td>uint16_t timer tick count </td></tr>
   </table>
   </dd>
 </dl>

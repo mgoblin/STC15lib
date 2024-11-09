@@ -19,7 +19,7 @@ void main()
     // enable output of timer to P3.0 pin. The signal is _|‾|_|‾|_
     timer2_mode0_enableP30_output(true); 
 
-    timer2_mode0_start(0x00, 0x00); //start timer
+    timer2_mode0_start(0xffff); //start timer
 
     while (1) {}
 }

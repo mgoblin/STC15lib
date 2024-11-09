@@ -16,7 +16,7 @@ var searchData=
   ['timer2_5fmode0_5f12t_5finit_13',['timer2_mode0_12T_init',['../group__timer.html#ga3f16895698879dc595d6ae71974dba2e',1,'timer2.h']]],
   ['timer2_5fmode0_5f1t_5finit_14',['timer2_mode0_1T_init',['../group__timer.html#gadf419f934a3f374993349e6a257ed29d',1,'timer2.h']]],
   ['timer2_5fmode0_5fenablep30_5foutput_15',['timer2_mode0_enableP30_output',['../group__timer.html#ga57ace2191bf6dbce66f831097636249d',1,'timer2.h']]],
-  ['timer2_5fmode0_5fstart_16',['timer2_mode0_start',['../group__timer.html#ga86e7135b9a2f52f8f1730888cc311ee9',1,'timer2_mode0_start(uint8_t th_value, uint8_t tl_value):&#160;timer2_mode0.c'],['../group__timer.html#ga86e7135b9a2f52f8f1730888cc311ee9',1,'timer2_mode0_start(uint8_t th_value, uint8_t tl_value):&#160;timer2_mode0.c']]],
+  ['timer2_5fmode0_5fstart_16',['timer2_mode0_start',['../group__timer.html#ga93e8a47563b0e586bc32a0e76307c302',1,'timer2_mode0_start(uint16_t tick):&#160;timer2_mode0.c'],['../group__timer.html#ga93e8a47563b0e586bc32a0e76307c302',1,'timer2_mode0_start(uint16_t tick):&#160;timer2_mode0.c']]],
   ['timer2_5fmode0_5fstop_17',['timer2_mode0_stop',['../group__timer.html#ga9244653a9105cb70db08d02584dcde35',1,'timer2_mode0_stop():&#160;timer2_mode0.c'],['../group__timer.html#ga9244653a9105cb70db08d02584dcde35',1,'timer2_mode0_stop():&#160;timer2_mode0.c']]],
   ['timer_5fclock_5fdivider_5ft_18',['timer_clock_divider_t',['../group__timer.html#gaf044d39b4f1cbe40ca04353b2852a21d',1,'timer_structs.h']]]
 ];
