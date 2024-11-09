@@ -138,12 +138,12 @@ void timer0_mode0_enableP35_output(bool enable);
     bit_clr(AUXR, 7);                                   \
 }
 
-// /**
-//  * Initialize mode0 1T for timer0 in mode1. Set TMOD bits.
-//  * 
-//  * @ingroup timer
-//  */
-// TODO void timer0_mode1_1T_init();
+/**
+ * Initialize mode1 1T for timer0 in mode1. Set TMOD bits.
+ * 
+ * @ingroup timer
+ */
+void timer0_mode1_1T_init();
 
 /**
  * @brief Run timer0 mode1 once and wait with program flow blocking timer not finished.

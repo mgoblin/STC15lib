@@ -112,6 +112,8 @@ Functions</h2></td></tr>
 <tr class="memitem:ga46cf16f89446f74dc7f3938388ccef68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">timer0_mode0_enableP35_output</a> (bool enable)</td></tr>
 <tr class="memdesc:ga46cf16f89446f74dc7f3938388ccef68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable output of meandr with timer times on P3.5 pin.  <a href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">More...</a><br /></td></tr>
 <tr class="separator:ga46cf16f89446f74dc7f3938388ccef68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac4ff783fbacb3e2981a551bec7df9581"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gac4ff783fbacb3e2981a551bec7df9581">timer0_mode1_1T_init</a> ()</td></tr>
+<tr class="separator:gac4ff783fbacb3e2981a551bec7df9581"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7eb9d6a409c5dc2b8b37cb41f6d97751"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga7eb9d6a409c5dc2b8b37cb41f6d97751">timer0_mode1_run_once_and_wait</a> (uint8_t th_value, uint8_t tl_value)</td></tr>
 <tr class="memdesc:ga7eb9d6a409c5dc2b8b37cb41f6d97751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0 mode1 once and wait with program flow blocking timer not finished.  <a href="group__timer.html#ga7eb9d6a409c5dc2b8b37cb41f6d97751">More...</a><br /></td></tr>
 <tr class="separator:ga7eb9d6a409c5dc2b8b37cb41f6d97751"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -476,6 +478,24 @@ Functions</h2></td></tr>
 
 <p>Stop timer0 mode0 with interrupt support. </p>
 <p >Before stop timer0_mode0_start should be called. Dont mix timer0_mode0_stop call with void <a class="el" href="group__timer.html#ga376560fc8232925561d041328af2e198" title="Run timer0 mode0 once and wait with program flow blocking timer not finished.">timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value)</a> call </p>
+
+</div>
+</div>
+<a id="gac4ff783fbacb3e2981a551bec7df9581" name="gac4ff783fbacb3e2981a551bec7df9581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac4ff783fbacb3e2981a551bec7df9581">&#9670;&nbsp;</a></span>timer0_mode1_1T_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void timer0_mode1_1T_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Initialize mode1 1T for timer0 in mode1. Set TMOD bits. </p>
 
 </div>
 </div>
