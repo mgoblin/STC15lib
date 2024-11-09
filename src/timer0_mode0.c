@@ -1,25 +1,5 @@
 #include <timer.h>
 
-void timer0_mode0_run_once_and_wait(uint16_t ticks)
-{
-    uint16_t value = 0xffff - ticks;
-    
-    // Load timer high and low bytes value
-    TL0 = (uint8_t) value;
-    TH0 = (uint8_t) bit_shift_left(value, 7);
-
-    TF0 = 0; // clear timer overload flag
-    TR0 = 1; // set run timer flag
-
-    // Waiting for timer overloaded (timer overload flag set to 1)
-    while(!TF0)
-    {
-    }
-
-    TR0 = 0; // clear run timer flag
-    TF0 = 0; // clear timer overload flag
-}
-
 void timer0_mode0_start(uint8_t th_value, uint8_t tl_value)
 {
     // Load timer high and low bytes value
