@@ -15,10 +15,18 @@
 *  @brief Delays program flow using CPU nop
 *  @details Using NOP CPU cycles to delay. Use delay_ms with care. 
 *
-*  @param ms delay value
+*  @param ms uint16_t delay value
 *  
 *  @ingroup delays 
 */
-void delay_ms(uint16_t ms);
+#define delay_ms(ms) {                              \
+    uint16_t ms_div = ms / get_frequency_divider(); \
+    unsigned int i;                                 \
+    do                                              \
+    {                                               \
+       i = (get_master_clock_frequency() / 13000);  \
+       while (--i);                                 \
+    } while (--ms_div);                             \
+}
 
 #endif

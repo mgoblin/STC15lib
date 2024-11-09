@@ -63,41 +63,52 @@ $(function() {
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">Delay</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:gaa0dce6d249d81fb85b082273270ba710"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__delays.html#gaa0dce6d249d81fb85b082273270ba710">delay_ms</a> (uint16_t ms)</td></tr>
-<tr class="memdesc:gaa0dce6d249d81fb85b082273270ba710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delays program flow using CPU nop.  <a href="group__delays.html#gaa0dce6d249d81fb85b082273270ba710">More...</a><br /></td></tr>
-<tr class="separator:gaa0dce6d249d81fb85b082273270ba710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga389926e6490f1d3db0f0896e8b0f5f2e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__delays.html#ga389926e6490f1d3db0f0896e8b0f5f2e">delay_ms</a>(ms)</td></tr>
+<tr class="memdesc:ga389926e6490f1d3db0f0896e8b0f5f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delays program flow using CPU nop.  <a href="group__delays.html#ga389926e6490f1d3db0f0896e8b0f5f2e">More...</a><br /></td></tr>
+<tr class="separator:ga389926e6490f1d3db0f0896e8b0f5f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures related to delaying program flow </p><dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="gaa0dce6d249d81fb85b082273270ba710" name="gaa0dce6d249d81fb85b082273270ba710"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa0dce6d249d81fb85b082273270ba710">&#9670;&nbsp;</a></span>delay_ms()</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga389926e6490f1d3db0f0896e8b0f5f2e" name="ga389926e6490f1d3db0f0896e8b0f5f2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga389926e6490f1d3db0f0896e8b0f5f2e">&#9670;&nbsp;</a></span>delay_ms</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void delay_ms </td>
+          <td class="memname">#define delay_ms</td>
           <td>(</td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>ms</em></td><td>)</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ms</td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Value:</b><div class="fragment"><div class="line">    {                              \</div>
+<div class="line">    uint16_t ms_div = ms / <a class="code hl_define" href="group__freq.html#gabec6924a99fc0c136d0d1d6de5f8bf52">get_frequency_divider</a>(); \</div>
+<div class="line">    unsigned <span class="keywordtype">int</span> i;                                 \</div>
+<div class="line">    do                                              \</div>
+<div class="line">    {                                               \</div>
+<div class="line">       i = (<a class="code hl_define" href="group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b">get_master_clock_frequency</a>() / 13000);  \</div>
+<div class="line">       while (--i);                                 \</div>
+<div class="line">    } <span class="keywordflow">while</span> (--ms_div);                             \</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__freq_html_ga4b6a94e4ee8538e604d14f2a2b759d7b"><div class="ttname"><a href="group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b">get_master_clock_frequency</a></div><div class="ttdeci">#define get_master_clock_frequency()</div><div class="ttdef"><b>Definition:</b> frequency.h:23</div></div>
+<div class="ttc" id="agroup__freq_html_gabec6924a99fc0c136d0d1d6de5f8bf52"><div class="ttname"><a href="group__freq.html#gabec6924a99fc0c136d0d1d6de5f8bf52">get_frequency_divider</a></div><div class="ttdeci">#define get_frequency_divider()</div><div class="ttdef"><b>Definition:</b> frequency.h:52</div></div>
+</div><!-- fragment -->
 <p>Delays program flow using CPU nop. </p>
 <p >Using NOP CPU cycles to delay. Use delay_ms with care.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ms</td><td>delay value </td></tr>
+    <tr><td class="paramname">ms</td><td>uint16_t delay value </td></tr>
   </table>
   </dd>
 </dl>
