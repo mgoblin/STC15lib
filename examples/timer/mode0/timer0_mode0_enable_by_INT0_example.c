@@ -21,7 +21,7 @@ void main()
 
     timer0_enable_on_pinINT0_high();
 
-    timer0_mode0_start(0x00, 0x00);
+    timer0_start(0xffff);
 
     delay_ms(2000);
 

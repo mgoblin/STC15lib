@@ -116,7 +116,23 @@
  * 
  * @ingroup timer
  */
-void timer0_start(uint16_t ticks);
+#define timer0_start(ticks) {                               \
+    uint16_t value = 0xffff - ticks;                        \
+                                                            \
+    /* Load timer high and low bytes value */               \
+    TL0 = value & 0xff;                                     \
+    TH0 = (value >> 8) & 0xff;                              \
+                                                            \
+    enable_timer0_interrupt();                              \
+                                                            \
+    TF0 = 0; /* clear timer overload flag */                \
+    TR0 = 1; /* set run timer flag */                       \
+                                                            \
+    /* Atfer method call finished interrupt handler */      \
+    /* will be called on timer overload */                  \
+    /* and timer will restore high and low bytes value */   \
+    /* automatically */                                     \
+} 
 
 /**
  * @brief Stop timer0 mode0 with interrupt support.
