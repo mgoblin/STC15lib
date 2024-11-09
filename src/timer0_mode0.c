@@ -1,10 +1,10 @@
 #include <timer.h>
 
-void timer0_start(uint8_t th_value, uint8_t tl_value)
+void timer0_start(uint16_t value)
 {
     // Load timer high and low bytes value
-    TL0 = tl_value;
-    TH0 = th_value;
+    TL0 = value & 0xff;
+    TH0 = (value >> 8) & 0xff;
 
     enable_timer0_interrupt();
 

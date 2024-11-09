@@ -3,7 +3,6 @@
 #include <timer.h>
 
 #define LED P10
-#define BLINKS 3
 
 uint8_t interrupt_counter = 0; // interrupt counter. 
 
@@ -22,7 +21,7 @@ void main()
     timer0_mode0_1T_init();
 
     // LED blinking during 1 second 
-    timer0_start(0x00, 0x00);
+    timer0_start(0);
     delay_ms(1000);
 
     // Not LED blinking during 2 seconds
