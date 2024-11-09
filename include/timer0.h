@@ -88,8 +88,8 @@
 #define timer0_mode0_run_once_and_wait(ticks) {                         \
     uint16_t value = 0xffff - ticks;                                    \
     /* Load timer high and low bytes value */                           \
-    TL0 = (uint8_t) value;                                              \
-    TH0 = (uint8_t) bit_shift_left(value, 7);                           \
+    TL0 = value & 0xff;                                                 \
+    TH0 = (value >> 8) & 0xff;                                          \
     TF0 = 0; /* clear timer overload flag */                            \
     TR0 = 1; /* set run timer flag */                                   \
     /* Waiting for timer overloaded (timer overload flag set to 1) */   \
@@ -181,7 +181,7 @@ void timer0_mode0_enableP35_output(bool enable);
  * 
  * @ingroup timer 
  */
-#define timer0_mode1_run_once_and_wait(ticks) timer0_mode0_run_once_and_wait(ticks) 
+#define timer0_mode1_run_once_and_wait timer0_mode0_run_once_and_wait
 
 //============================== Timer0 mode1 declarations end ============================
 
