@@ -113,6 +113,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gadf419f934a3f374993349e6a257ed29d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gadf419f934a3f374993349e6a257ed29d">timer2_mode0_1T_init</a>()</td></tr>
 <tr class="memdesc:gadf419f934a3f374993349e6a257ed29d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize mode0 1T for timer2. Set AUXR bits.  <a href="group__timer.html#gadf419f934a3f374993349e6a257ed29d">More...</a><br /></td></tr>
 <tr class="separator:gadf419f934a3f374993349e6a257ed29d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaecef145b097378f2f4715706b266c14c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gaecef145b097378f2f4715706b266c14c">timer2_mode0_start</a>(tick)</td></tr>
+<tr class="memdesc:gaecef145b097378f2f4715706b266c14c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer2 mode0 with interrupt support.  <a href="group__timer.html#gaecef145b097378f2f4715706b266c14c">More...</a><br /></td></tr>
+<tr class="separator:gaecef145b097378f2f4715706b266c14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga57ace2191bf6dbce66f831097636249d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga57ace2191bf6dbce66f831097636249d">timer2_mode0_enableP30_output</a>(enable)&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, 2) : bit_clr(INT_CLKO, 2))</td></tr>
 <tr class="memdesc:ga57ace2191bf6dbce66f831097636249d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable output of meandr with timer times on P3.0 pin.  <a href="group__timer.html#ga57ace2191bf6dbce66f831097636249d">More...</a><br /></td></tr>
 <tr class="separator:ga57ace2191bf6dbce66f831097636249d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,9 +129,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga93e8a47563b0e586bc32a0e76307c302"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga93e8a47563b0e586bc32a0e76307c302">timer2_mode0_start</a> (uint16_t tick)</td></tr>
-<tr class="memdesc:ga93e8a47563b0e586bc32a0e76307c302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer2 mode0 with interrupt support.  <a href="group__timer.html#ga93e8a47563b0e586bc32a0e76307c302">More...</a><br /></td></tr>
-<tr class="separator:ga93e8a47563b0e586bc32a0e76307c302"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9244653a9105cb70db08d02584dcde35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga9244653a9105cb70db08d02584dcde35">timer2_mode0_stop</a> ()</td></tr>
 <tr class="memdesc:ga9244653a9105cb70db08d02584dcde35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop timer2 mode0 with interrupt support.  <a href="group__timer.html#ga9244653a9105cb70db08d02584dcde35">More...</a><br /></td></tr>
 <tr class="separator:ga9244653a9105cb70db08d02584dcde35"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -617,6 +617,46 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gaecef145b097378f2f4715706b266c14c" name="gaecef145b097378f2f4715706b266c14c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaecef145b097378f2f4715706b266c14c">&#9670;&nbsp;</a></span>timer2_mode0_start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer2_mode0_start</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">tick</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    {                          \</div>
+<div class="line">    uint16_t value = 0xffff - tick;                         \</div>
+<div class="line">    <span class="comment">/* Load high and low timer value bytes */</span>               \</div>
+<div class="line">    T2L = value &amp; 0xff;                                     \</div>
+<div class="line">    T2H = (value &gt;&gt; 8) &amp; 0xff;                              <a class="code hl_define" href="group__interrupts.html#ga3ce3cdb9bf4963e75a0664964fb83c3a">\</a></div>
+<div class="line"><a class="code hl_define" href="group__interrupts.html#ga3ce3cdb9bf4963e75a0664964fb83c3a">                                                            \</a></div>
+<div class="line"><a class="code hl_define" href="group__interrupts.html#ga3ce3cdb9bf4963e75a0664964fb83c3a">    enable_timer0_interrupt</a>();                              \</div>
+<div class="line">                                                            \</div>
+<div class="line">    bit_set(AUXR, 4); <span class="comment">/* set T2 run flag */</span>                 \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Run timer2 mode0 with interrupt support. </p>
+<p >Before run timer2_mode0_12T_init or timer2_mode0_1T_init should be called.</p>
+<p >After run program flow not blocked and interrupt will raised when timer is overloaded.</p>
+<p >Interrupt handler void timer2ISR(void) __interrupt(12) should be defined in user code.</p>
+<p >Timer rerun occurs after overloading and interuppt handler calling.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tick</td><td>uint16_t timer tick count </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="gaf044d39b4f1cbe40ca04353b2852a21d" name="gaf044d39b4f1cbe40ca04353b2852a21d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf044d39b4f1cbe40ca04353b2852a21d">&#9670;&nbsp;</a></span>timer_clock_divider_t</h2>
@@ -640,36 +680,6 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga93e8a47563b0e586bc32a0e76307c302" name="ga93e8a47563b0e586bc32a0e76307c302"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga93e8a47563b0e586bc32a0e76307c302">&#9670;&nbsp;</a></span>timer2_mode0_start()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void timer2_mode0_start </td>
-          <td>(</td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>tick</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Run timer2 mode0 with interrupt support. </p>
-<p >Before run timer2_mode0_12T_init or timer2_mode0_1T_init should be called.</p>
-<p >After run program flow not blocked and interrupt will raised when timer is overloaded.</p>
-<p >Interrupt handler void timer2ISR(void) __interrupt(12) should be defined in user code.</p>
-<p >Timer rerun occurs after overloading and interuppt handler calling.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">tick</td><td>uint16_t timer tick count </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="ga9244653a9105cb70db08d02584dcde35" name="ga9244653a9105cb70db08d02584dcde35"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga9244653a9105cb70db08d02584dcde35">&#9670;&nbsp;</a></span>timer2_mode0_stop()</h2>
 

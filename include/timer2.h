@@ -90,7 +90,16 @@
  * 
  * @ingroup timer
  */
-void timer2_mode0_start(uint16_t tick);
+#define timer2_mode0_start(tick) {                          \
+    uint16_t value = 0xffff - tick;                         \
+    /* Load high and low timer value bytes */               \
+    T2L = value & 0xff;                                     \
+    T2H = (value >> 8) & 0xff;                              \
+                                                            \
+    enable_timer0_interrupt();                              \
+                                                            \
+    bit_set(AUXR, 4); /* set T2 run flag */                 \
+} 
 
 /**
  * @brief Stop timer2 mode0 with interrupt support.

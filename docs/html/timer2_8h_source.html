@@ -108,17 +108,26 @@ $(function() {
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">    enable_timer2_interrupt();                                          \</span></div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">}</span></div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#ga93e8a47563b0e586bc32a0e76307c302">timer2_mode0_start</a>(uint16_t tick);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#ga9244653a9105cb70db08d02584dcde35">timer2_mode0_stop</a>();</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="group__timer.html#ga57ace2191bf6dbce66f831097636249d">  111</a></span><span class="preprocessor">#define timer2_mode0_enableP30_output(enable) (enable ? bit_set(INT_CLKO, 2) : bit_clr(INT_CLKO, 2))</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="group__timer.html#gaecef145b097378f2f4715706b266c14c">   93</a></span><span class="preprocessor">#define timer2_mode0_start(tick) {                          \</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">    uint16_t value = 0xffff - tick;                         \</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">    </span><span class="comment">/* Load high and low timer value bytes */</span><span class="preprocessor">               \</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">    T2L = value &amp; 0xff;                                     \</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">    T2H = (value &gt;&gt; 8) &amp; 0xff;                              \</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">                                                            \</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">    enable_timer0_interrupt();                              \</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">                                                            \</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">    bit_set(AUXR, 4); </span><span class="comment">/* set T2 run flag */</span><span class="preprocessor">                 \</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">} </span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">//void timer2_mode0_start(uint16_t tick);</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#ga9244653a9105cb70db08d02584dcde35">timer2_mode0_stop</a>();</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">//============================== Timer2 mode0 declarations end ============================</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="agroup__timer_html_ga9244653a9105cb70db08d02584dcde35"><div class="ttname"><a href="group__timer.html#ga9244653a9105cb70db08d02584dcde35">timer2_mode0_stop</a></div><div class="ttdeci">void timer2_mode0_stop()</div><div class="ttdoc">Stop timer2 mode0 with interrupt support.</div><div class="ttdef"><b>Definition:</b> timer2_mode0.c:14</div></div>
-<div class="ttc" id="agroup__timer_html_ga93e8a47563b0e586bc32a0e76307c302"><div class="ttname"><a href="group__timer.html#ga93e8a47563b0e586bc32a0e76307c302">timer2_mode0_start</a></div><div class="ttdeci">void timer2_mode0_start(uint16_t tick)</div><div class="ttdoc">Run timer2 mode0 with interrupt support.</div><div class="ttdef"><b>Definition:</b> timer2_mode0.c:3</div></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="group__timer.html#ga57ace2191bf6dbce66f831097636249d">  121</a></span><span class="preprocessor">#define timer2_mode0_enableP30_output(enable) (enable ? bit_set(INT_CLKO, 2) : bit_clr(INT_CLKO, 2))</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment">//============================== Timer2 mode0 declarations end ============================</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__timer_html_ga9244653a9105cb70db08d02584dcde35"><div class="ttname"><a href="group__timer.html#ga9244653a9105cb70db08d02584dcde35">timer2_mode0_stop</a></div><div class="ttdeci">void timer2_mode0_stop()</div><div class="ttdoc">Stop timer2 mode0 with interrupt support.</div><div class="ttdef"><b>Definition:</b> timer2_mode0.c:3</div></div>
 <div class="ttc" id="ainterrupt_8h_html"><div class="ttname"><a href="interrupt_8h.html">interrupt.h</a></div></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
