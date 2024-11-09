@@ -147,7 +147,12 @@ void timer0_mode0_enableP35_output(bool enable);
  * 
  * @ingroup timer
  */
-void timer0_mode1_1T_init();
+#define timer0_mode1_1T_init() {                        \
+    enable_mcu_interrupts();                            \
+    TMOD &= 0xf0;                                       \
+    TMOD |= 0x01;                                       \
+    bit_set(AUXR, 7);                                   \
+}
 
 /**
  * @brief Run timer0 mode1 once and wait with program flow blocking timer not finished.
