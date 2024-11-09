@@ -1,4 +1,3 @@
-#include <sys.h>
 #include <uart.h>
 
 void uart_init(uint32_t uart_baudrate)

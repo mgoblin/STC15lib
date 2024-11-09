@@ -6,7 +6,7 @@
  * @details Functions and data structures related to exchange data thru UART
  * @author Michael Golovanov
  */
-
+#include <sys.h>
 #include <stdint.h>
 
 /**
