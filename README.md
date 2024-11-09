@@ -34,7 +34,7 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 * timer module use defines on commons functionality instead of function decl for firmware size decreasing
 
 0.5.0
-* timer0 mode1 support
+* TODO timer0 mode1 support
 
 Next releases todo
 * TODO timer module use defines in all functionality
