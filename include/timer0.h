@@ -181,7 +181,7 @@ void timer0_mode0_enableP35_output(bool enable);
  * 
  * @ingroup timer 
  */
-void timer0_mode1_run_once_and_wait(uint16_t ticks);
+#define timer0_mode1_run_once_and_wait(ticks) timer0_mode0_run_once_and_wait(ticks) 
 
 //============================== Timer0 mode1 declarations end ============================
 

@@ -89,6 +89,9 @@ Macros</h2></td></tr>
 <tr class="separator:ga3d2497311fb1e1f08b4f0323745e70e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga42d9d0ba050ccbe9988bfb9e164498b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga42d9d0ba050ccbe9988bfb9e164498b8">timer0_mode1_1T_init</a>()</td></tr>
 <tr class="separator:ga42d9d0ba050ccbe9988bfb9e164498b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1f591ccd64e77f0ae231ebb4d589942a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga1f591ccd64e77f0ae231ebb4d589942a">timer0_mode1_run_once_and_wait</a>(ticks)&#160;&#160;&#160;<a class="el" href="group__timer.html#ga906a731d5cbc2a4427901a6fc2e3b38d">timer0_mode0_run_once_and_wait</a>(ticks)</td></tr>
+<tr class="memdesc:ga1f591ccd64e77f0ae231ebb4d589942a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0 mode1 once and wait with program flow blocking timer not finished.  <a href="group__timer.html#ga1f591ccd64e77f0ae231ebb4d589942a">More...</a><br /></td></tr>
+<tr class="separator:ga1f591ccd64e77f0ae231ebb4d589942a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga68b53855ca88473c1f21651184ee2cc8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga68b53855ca88473c1f21651184ee2cc8">get_timer2_mode</a>()&#160;&#160;&#160;(0)</td></tr>
 <tr class="separator:ga68b53855ca88473c1f21651184ee2cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4259384552df325973b81bd5425b7f4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga4259384552df325973b81bd5425b7f4a">get_timer2_clock_divider</a>()&#160;&#160;&#160;(get_bit(AUXR, 2) == 0 ? <a class="el" href="group__timer.html#ggaf044d39b4f1cbe40ca04353b2852a21da5c3a2baea537d57bba309aa892a7926c">T12</a> : <a class="el" href="group__timer.html#ggaf044d39b4f1cbe40ca04353b2852a21da623238751deb7764bdebf4799fe30f07">T1</a>)</td></tr>
@@ -114,9 +117,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga46cf16f89446f74dc7f3938388ccef68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">timer0_mode0_enableP35_output</a> (bool enable)</td></tr>
 <tr class="memdesc:ga46cf16f89446f74dc7f3938388ccef68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable output of meandr with timer times on P3.5 pin.  <a href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">More...</a><br /></td></tr>
 <tr class="separator:ga46cf16f89446f74dc7f3938388ccef68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab8a044f6beb6c77a6d166fb4418faf71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gab8a044f6beb6c77a6d166fb4418faf71">timer0_mode1_run_once_and_wait</a> (uint16_t ticks)</td></tr>
-<tr class="memdesc:gab8a044f6beb6c77a6d166fb4418faf71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0 mode1 once and wait with program flow blocking timer not finished.  <a href="group__timer.html#gab8a044f6beb6c77a6d166fb4418faf71">More...</a><br /></td></tr>
-<tr class="separator:gab8a044f6beb6c77a6d166fb4418faf71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabe56c22feca0e373507d08c4fe9aa3d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#gabe56c22feca0e373507d08c4fe9aa3d4">timer2_mode0_12T_init</a> ()</td></tr>
 <tr class="memdesc:gabe56c22feca0e373507d08c4fe9aa3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize mode0 12T for timer2. Set AUXR bits.  <a href="group__timer.html#gabe56c22feca0e373507d08c4fe9aa3d4">More...</a><br /></td></tr>
 <tr class="separator:gabe56c22feca0e373507d08c4fe9aa3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -405,6 +405,36 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga1f591ccd64e77f0ae231ebb4d589942a" name="ga1f591ccd64e77f0ae231ebb4d589942a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1f591ccd64e77f0ae231ebb4d589942a">&#9670;&nbsp;</a></span>timer0_mode1_run_once_and_wait</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer0_mode1_run_once_and_wait</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ticks</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="group__timer.html#ga906a731d5cbc2a4427901a6fc2e3b38d">timer0_mode0_run_once_and_wait</a>(ticks)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Run timer0 mode1 once and wait with program flow blocking timer not finished. </p>
+<p >Before run timer0_mode1_12T_init or timer0_mode1_1T_init should be called.</p>
+<p >After run program flow blocked until timer does not overloaded.</p>
+<p >Dont mix call of timer0_mode0_run_once_and_wait with timer0_mode1_start/timer0_mode1_stop calls.</p>
+<p >For mode0 and mode1 implementation is the same.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ticks</td><td>uint16_t timer ticks count </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="gaf044d39b4f1cbe40ca04353b2852a21d" name="gaf044d39b4f1cbe40ca04353b2852a21d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf044d39b4f1cbe40ca04353b2852a21d">&#9670;&nbsp;</a></span>timer_clock_divider_t</h2>
@@ -510,36 +540,6 @@ Functions</h2></td></tr>
 
 <p>Stop timer0 mode0 with interrupt support. </p>
 <p >Before stop timer0_mode0_start should be called. Dont mix timer0_mode0_stop call with void <a class="el" href="group__timer.html#ga906a731d5cbc2a4427901a6fc2e3b38d" title="Run timer0 mode0 once and wait with program flow blocking timer not finished.">timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value)</a> call </p>
-
-</div>
-</div>
-<a id="gab8a044f6beb6c77a6d166fb4418faf71" name="gab8a044f6beb6c77a6d166fb4418faf71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab8a044f6beb6c77a6d166fb4418faf71">&#9670;&nbsp;</a></span>timer0_mode1_run_once_and_wait()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void timer0_mode1_run_once_and_wait </td>
-          <td>(</td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>ticks</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Run timer0 mode1 once and wait with program flow blocking timer not finished. </p>
-<p >Before run timer0_mode1_12T_init or timer0_mode1_1T_init should be called.</p>
-<p >After run program flow blocked until timer does not overloaded.</p>
-<p >Dont mix call of timer0_mode0_run_once_and_wait with timer0_mode1_start/timer0_mode1_stop calls.</p>
-<p >For mode0 and mode1 implementation is the same.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ticks</td><td>uint16_t timer ticks count </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

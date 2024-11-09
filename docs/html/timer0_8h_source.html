@@ -142,7 +142,7 @@ $(function() {
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="preprocessor">    bit_set(AUXR, 7);                                   \</span></div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">}</span></div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__timer.html#gab8a044f6beb6c77a6d166fb4418faf71">timer0_mode1_run_once_and_wait</a>(uint16_t ticks);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="group__timer.html#ga1f591ccd64e77f0ae231ebb4d589942a">  184</a></span><span class="preprocessor">#define timer0_mode1_run_once_and_wait(ticks) timer0_mode0_run_once_and_wait(ticks) </span></div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="comment">//============================== Timer0 mode1 declarations end ============================</span></div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
@@ -151,7 +151,6 @@ $(function() {
 <div class="ttc" id="agroup__timer_html_ga46cf16f89446f74dc7f3938388ccef68"><div class="ttname"><a href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">timer0_mode0_enableP35_output</a></div><div class="ttdeci">void timer0_mode0_enableP35_output(bool enable)</div><div class="ttdoc">Enable output of meandr with timer times on P3.5 pin.</div><div class="ttdef"><b>Definition:</b> timer0_mode0.c:25</div></div>
 <div class="ttc" id="agroup__timer_html_ga66eaee5c6001af11ff2a5a2366e4653a"><div class="ttname"><a href="group__timer.html#ga66eaee5c6001af11ff2a5a2366e4653a">timer0_mode0_start</a></div><div class="ttdeci">void timer0_mode0_start(uint8_t th_value, uint8_t tl_value)</div><div class="ttdoc">Run timer0 mode0 with interrupt support.</div><div class="ttdef"><b>Definition:</b> timer0_mode0.c:3</div></div>
 <div class="ttc" id="agroup__timer_html_gaacaa3d2da5da2456041d39da0cb2d3c0"><div class="ttname"><a href="group__timer.html#gaacaa3d2da5da2456041d39da0cb2d3c0">timer0_mode0_stop</a></div><div class="ttdeci">void timer0_mode0_stop()</div><div class="ttdoc">Stop timer0 mode0 with interrupt support.</div><div class="ttdef"><b>Definition:</b> timer0_mode0.c:18</div></div>
-<div class="ttc" id="agroup__timer_html_gab8a044f6beb6c77a6d166fb4418faf71"><div class="ttname"><a href="group__timer.html#gab8a044f6beb6c77a6d166fb4418faf71">timer0_mode1_run_once_and_wait</a></div><div class="ttdeci">void timer0_mode1_run_once_and_wait(uint16_t ticks)</div><div class="ttdoc">Run timer0 mode1 once and wait with program flow blocking timer not finished.</div><div class="ttdef"><b>Definition:</b> timer0_mode1.c:4</div></div>
 <div class="ttc" id="ainterrupt_8h_html"><div class="ttname"><a href="interrupt_8h.html">interrupt.h</a></div></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
