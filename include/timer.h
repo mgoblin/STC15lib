@@ -12,7 +12,8 @@
  * Counter increments on external singnal (like pin 1/0 change state). 
  * 
  * 8051 chips timer has 4 modes
- * * mode0 - 13-Bit Auto-Reload Timer/Counter
+ * * mode0 - 16-Bit Auto-Reload Timer/Counter
+ * * mode1 - 16-Bit Timer/Counter
  * 
  * For mode0:
  * * Input of timer is system clock.

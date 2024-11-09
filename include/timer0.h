@@ -47,7 +47,7 @@
 # define timer0_enable_on_pinINT0_high() (bit_set(TMOD, 3))
 
 /**
- * Initialize mode0 12T for timer0. Set TMOD bits.
+ * Initialize mode0 12T for timer0 in mode0. Set TMOD bits.
  * 
  * @ingroup timer
  */
@@ -116,11 +116,19 @@ void timer0_mode0_enableP35_output(bool enable);
 //============================== Timer0 mode1 declarations begin ==========================
 
 /**
- * Initialize mode1 12T for timer0. Set TMOD and AUXR bits.
+ * Initialize mode1 12T for timer0 in mode1. Set TMOD and AUXR bits.
  * 
  * @ingroup timer
  */
 void timer0_mode1_12T_init();
+
+// /**
+//  * Initialize mode0 1T for timer0 in mode1. Set TMOD bits.
+//  * 
+//  * @ingroup timer
+//  */
+// TODO void timer0_mode1_1T_init();
+
 
 //============================== Timer0 mode1 declarations end ============================
 
