@@ -75,20 +75,19 @@
  * Before run timer0_mode0_12T_init or timer0_mode0_1T_init should be called. 
  * 
  * After run program flow blocked until timer does not overloaded.
- * Timer overloading occurs on th_value and tl_value is 0xff, therefore 
- * maximal timer interval corresponds to th_value and tl_value equals 0 
+ * Timer overloading occurs on value is 0xffff, therefore 
+ * maximal timer interval corresponds to value equals 0 
  * 
  * Dont mix call of timer0_mode0_run_once_and_wait with
  * timer0_mode0_start/timer0_mode0_stop calls.
  * 
  * For mode0 and mode1 implementation is the same.
  * 
- * @param th_value timer interval high part (high 8 bits)
- * @param tl_value timer interval low part (low 8 bits)
+ * @param value uint16_t timer interval 
  * 
  * @ingroup timer 
  */
-void timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value);
+void timer0_mode0_run_once_and_wait(uint16_t value);
 
 /**
  * @brief Run timer0 mode0 with interrupt support.
@@ -161,20 +160,19 @@ void timer0_mode0_enableP35_output(bool enable);
  * Before run timer0_mode1_12T_init or timer0_mode1_1T_init should be called. 
  * 
  * After run program flow blocked until timer does not overloaded.
- * Timer overloading occurs on th_value and tl_value is 0xff, therefore 
- * maximal timer interval corresponds to th_value and tl_value equals 0 
+ * Timer overloading occurs on value is 0xffff, therefore 
+ * maximal timer interval corresponds to value equals 0 
  * 
  * Dont mix call of timer0_mode0_run_once_and_wait with
  * timer0_mode1_start/timer0_mode1_stop calls.
  * 
  * For mode0 and mode1 implementation is the same.
  * 
- * @param th_value timer interval high part (high 8 bits)
- * @param tl_value timer interval low part (low 8 bits)
+ * @param value uint16_t timer interval high part (high 8 bits)
  * 
  * @ingroup timer 
  */
-void timer0_mode1_run_once_and_wait(uint8_t th_value, uint8_t tl_value);
+void timer0_mode1_run_once_and_wait(uint16_t value);
 
 //============================== Timer0 mode1 declarations end ============================
 

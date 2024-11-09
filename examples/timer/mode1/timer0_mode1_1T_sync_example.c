@@ -13,7 +13,7 @@ void main()
     while(1)
     {
         for(uint8_t i = 0; i < 12 * TIMER_CYCLES_MULTIPLIER; i++) {
-            timer0_mode1_run_once_and_wait(0x00, 0x00); // 0, 0 take maximal timer delay
+            timer0_mode1_run_once_and_wait(0x00); // 0 take maximal timer delay
         }
         
         LED = !LED;

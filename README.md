@@ -35,6 +35,7 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 
 0.5.0
 * delay module now use defines instead of func decls 
+* timer0_modeX_run_once_and_wait now have only one param uint_16
 * TODO timer0 mode1 support
 
 Next releases todo
