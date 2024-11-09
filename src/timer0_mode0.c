@@ -1,12 +1,5 @@
 #include <timer.h>
 
-void timer0_mode0_1T_init()
-{
-    enable_mcu_interrupts();
-    TMOD &= 0xf0; // clear all T0 flags
-    bit_set(AUXR, 7); // 1T input clock mode
-}
-
 void timer0_mode0_run_once_and_wait(uint8_t tl_value, uint8_t th_value)
 {
     // Load timer high and low bytes value

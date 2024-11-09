@@ -62,7 +62,11 @@
  * 
  * @ingroup timer
  */
-void timer0_mode0_1T_init();
+#define timer0_mode0_1T_init() {                \
+    enable_mcu_interrupts();                    \
+    TMOD &= 0xf0;                               \
+    bit_set(AUXR, 7);                           \
+}
 
 /**
  * @brief Run timer0 mode0 once and wait with program flow blocking timer not finished.
