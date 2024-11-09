@@ -142,7 +142,11 @@
  * 
  * @ingroup timer
  */
-void timer0_stop();
+#define timer0_stop() {                                     \
+    disable_timer0_interrupt();                             \
+    TF0 = 0; /* clear timer overload flag */                \
+    TR0 = 0; /* clear run timer flag */                     \
+}
 
 /**
  * @brief Enable output of meandr with timer times on P3.5 pin.

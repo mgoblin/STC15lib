@@ -88,6 +88,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga983e6a023d3f5f54a4f43aea4f08a05f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga983e6a023d3f5f54a4f43aea4f08a05f">timer0_start</a>(ticks)</td></tr>
 <tr class="memdesc:ga983e6a023d3f5f54a4f43aea4f08a05f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0.  <a href="group__timer.html#ga983e6a023d3f5f54a4f43aea4f08a05f">More...</a><br /></td></tr>
 <tr class="separator:ga983e6a023d3f5f54a4f43aea4f08a05f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3583683265e677358d18d5970822d3f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga3583683265e677358d18d5970822d3f0">timer0_stop</a>()</td></tr>
+<tr class="memdesc:ga3583683265e677358d18d5970822d3f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop timer0 mode0 with interrupt support.  <a href="group__timer.html#ga3583683265e677358d18d5970822d3f0">More...</a><br /></td></tr>
+<tr class="separator:ga3583683265e677358d18d5970822d3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3d2497311fb1e1f08b4f0323745e70e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga3d2497311fb1e1f08b4f0323745e70e4">timer0_mode1_12T_init</a>()</td></tr>
 <tr class="separator:ga3d2497311fb1e1f08b4f0323745e70e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga42d9d0ba050ccbe9988bfb9e164498b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga42d9d0ba050ccbe9988bfb9e164498b8">timer0_mode1_1T_init</a>()</td></tr>
@@ -120,9 +123,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga7431d3fbc014f4481d7557e9e72de42a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga7431d3fbc014f4481d7557e9e72de42a">timer0_stop</a> ()</td></tr>
-<tr class="memdesc:ga7431d3fbc014f4481d7557e9e72de42a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop timer0 mode0 with interrupt support.  <a href="group__timer.html#ga7431d3fbc014f4481d7557e9e72de42a">More...</a><br /></td></tr>
-<tr class="separator:ga7431d3fbc014f4481d7557e9e72de42a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga46cf16f89446f74dc7f3938388ccef68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">timer0_mode0_enableP35_output</a> (bool enable)</td></tr>
 <tr class="memdesc:ga46cf16f89446f74dc7f3938388ccef68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable output of meandr with timer times on P3.5 pin.  <a href="group__timer.html#ga46cf16f89446f74dc7f3938388ccef68">More...</a><br /></td></tr>
 <tr class="separator:ga46cf16f89446f74dc7f3938388ccef68"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -479,6 +479,31 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga3583683265e677358d18d5970822d3f0" name="ga3583683265e677358d18d5970822d3f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3583683265e677358d18d5970822d3f0">&#9670;&nbsp;</a></span>timer0_stop</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer0_stop</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    {                                     \</div>
+<div class="line">    disable_timer0_interrupt();                             \</div>
+<div class="line">    TF0 = 0; <span class="comment">/* clear timer overload flag */</span>                \</div>
+<div class="line">    TR0 = 0; <span class="comment">/* clear run timer flag */</span>                     \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Stop timer0 mode0 with interrupt support. </p>
+<p >Before stop timer0_mode0_start should be called. Dont mix timer0_mode0_stop call with void <a class="el" href="group__timer.html#ga906a731d5cbc2a4427901a6fc2e3b38d" title="Run timer0 mode0 once and wait with program flow blocking timer not finished.">timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value)</a> call </p>
+
+</div>
+</div>
 <a id="ga3f16895698879dc595d6ae71974dba2e" name="ga3f16895698879dc595d6ae71974dba2e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga3f16895698879dc595d6ae71974dba2e">&#9670;&nbsp;</a></span>timer2_mode0_12T_init</h2>
 
@@ -612,26 +637,6 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="ga7431d3fbc014f4481d7557e9e72de42a" name="ga7431d3fbc014f4481d7557e9e72de42a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7431d3fbc014f4481d7557e9e72de42a">&#9670;&nbsp;</a></span>timer0_stop()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void timer0_stop </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Stop timer0 mode0 with interrupt support. </p>
-<p >Before stop timer0_mode0_start should be called. Dont mix timer0_mode0_stop call with void <a class="el" href="group__timer.html#ga906a731d5cbc2a4427901a6fc2e3b38d" title="Run timer0 mode0 once and wait with program flow blocking timer not finished.">timer0_mode0_run_once_and_wait(uint8_t th_value, uint8_t tl_value)</a> call </p>
 
 </div>
 </div>
