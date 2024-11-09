@@ -46,7 +46,15 @@
  * 
  * @ingroup timer
  */
-void timer2_mode0_12T_init();
+#define timer2_mode0_12T_init() {                                       \
+    enable_mcu_interrupts();                                            \
+    /* bit_clr(AUXR, 4); clear T2 run flag */                           \
+    /* bit_clr(AUXR, 3); // clear T/C flag for set timer mode */        \
+    /* bit_clr(AUXR, 2); // clear T2 T2x12 flag for set 12T mode */     \
+    AUXR &= 0xE3; /* 0b11100011 */                                      \
+                                                                        \
+    enable_timer2_interrupt();                                          \
+}
 
 /**
  * @brief Initialize mode0 1T for timer2. Set AUXR bits.
