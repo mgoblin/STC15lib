@@ -134,6 +134,48 @@
     bit_clr(AUXR, 4); /* clear T2 run flag */               \
 }
 
+/** 
+ * @brief Get timer2 started status
+ * 
+ * @return bool true if started otherwise false
+ * 
+ * @ingroup timer2
+ */
+#define is_timer2_started() (test_if_bit_set(AUXR, 4))
+
+/**
+ * @brief Reload timer2 ticks on the fly
+ * 
+ * @details Reload is available in mode 0 only
+ * 
+ * @param ticks uint16_t timer ticks reloaded value
+ * 
+ * @return reload_status_t reload status
+ * 
+ * @ingroup timer0
+ */
+#define timer2_reload(ticks) {                                  \
+    reload_status_t status;                                     \
+    if (!is_timer2_started())                                   \
+    {                                                           \
+        status = NOT_STARTED;                                   \
+    }                                                           \
+    else if (get_timer2_mode() != 0)                            \
+    {                                                           \
+        status = NOT_SUPPORTED_IN_MODE;                         \
+    }                                                           \
+    else                                                        \
+    {                                                           \
+        uint16_t value = 0xffff - ticks;                        \
+        /* Load timer high and low bytes value */               \
+        T2L = value & 0xff;                                     \
+        T2H = (value >> 8) & 0xff;                              \
+                                                                \
+        status = OK;                                            \
+    }                                                           \
+    status;                                                     \
+}
+
 /**
  * @brief Enable output of meandr with timer times on P3.0 pin.
  * @details By default output is disabled

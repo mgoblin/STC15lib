@@ -249,7 +249,9 @@
 #define is_timer0_started() (TR0 == 1)
 
 /**
- * @brief Reload timer ticks on the fly
+ * @brief Reload timer0 ticks on the fly
+ * 
+ * @details Reload is available in modes 0, 2, 3
  * 
  * @param ticks uint16_t timer ticks reloaded value
  * 

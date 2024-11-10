@@ -11,6 +11,7 @@
         "unity_config.h": "c",
         "type_traits": "cpp",
         "interrupt.h": "c",
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "timer2.h": "c"
     }
 }

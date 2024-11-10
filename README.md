@@ -35,15 +35,16 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 
 0.5.0
 * delay module now use defines instead of func decls
-* timer module now use defines instead of func decl 
+* timer modules now use defines instead of func decl 
 * timer0_modeX_run_once_and_wait now have only one parameter uint_16 - timer ticks count
 * timer0_start and timer2_mode0_start now have only one parameter uint_16 - timer ticks count
 * timer0 and timer2 are modules now
-* timer0 mode0 reload timer routines implemented
+* timer0 and timer2 mode0 reload timer routines implemented
 * TODO timer0_modeX_run_once_and_wait -> timer0_run_once_and_wait
 * timer0 mode1 imeplemented
 
 Next releases todo
+* TODO timer2 get mode should not always return mode0 constant
 * TODO pause and resume timers using GATE
 * TODO Timer aux - set timers in terms of output signal freq and timings
 * TODO Timers aux should not biased from CPU frequency dividers
