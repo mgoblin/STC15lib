@@ -15,7 +15,7 @@
  * * mode0 - 16-Bit Auto-Reload Timer/Counter
  * * mode1 - 16-Bit Timer/Counter
  * 
- * For mode0, mode1:
+ * For timer:
  * * Input of timer is system clock.
  * * By default timer input is 12T mode. Timer increments by sysClock/12.
  * * Timer input can be switched to 1T mode. In this mode timer increments by sysClock/1. 
@@ -131,7 +131,7 @@
 /**
  * Initialize mode1 1T for timer0 in mode1. Set TMOD bits.
  * 
- * @ingroup timer
+ * @ingroup timer0
  */
 #define timer0_mode1_1T_init() {                        \
     enable_mcu_interrupts();                            \
@@ -156,7 +156,7 @@
  * 
  * @param ticks uint16_t timer ticks count
  * 
- * @ingroup timer 
+ * @ingroup timer0 
  */
 #define timer0_mode1_run_once_and_wait timer0_mode0_run_once_and_wait
 

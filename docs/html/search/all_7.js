@@ -15,6 +15,6 @@ var searchData=
   ['is_5ftimer0_5finterrupt_5fenabled_12',['is_timer0_interrupt_enabled',['../group__interrupts.html#gaf6a267bf6befa9aee24a701bd782f457',1,'interrupt.h']]],
   ['is_5ftimer0_5fp35_5foutput_5fenabled_13',['is_timer0_P35_output_enabled',['../group__timer0.html#gae9aaed1fca016d231d3c6bdbb4b11319',1,'timer0.h']]],
   ['is_5ftimer2_5finterrupt_5fenabled_14',['is_timer2_interrupt_enabled',['../group__interrupts.html#ga0c35fd771294a22d4cd3e205fd806bdb',1,'interrupt.h']]],
-  ['is_5ftimer2_5fp30_5foutput_5fenabled_15',['is_timer2_P30_output_enabled',['../group__timer.html#ga42a0a7e0d9d71cf3535113a5bb769324',1,'timer2.h']]],
+  ['is_5ftimer2_5fp30_5foutput_5fenabled_15',['is_timer2_P30_output_enabled',['../group__timer2.html#ga42a0a7e0d9d71cf3535113a5bb769324',1,'timer2.h']]],
   ['is_5fuart1_5finterrupt_5fenabled_16',['is_uart1_interrupt_enabled',['../group__interrupts.html#gae4d7cee935888f8c3b25ae5697d868b5',1,'interrupt.h']]]
 ];
