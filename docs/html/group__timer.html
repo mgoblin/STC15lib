@@ -74,11 +74,42 @@ Enumerations</h2></td></tr>
 , <a class="el" href="group__timer.html#ggaf044d39b4f1cbe40ca04353b2852a21da5c3a2baea537d57bba309aa892a7926c">T12</a> = 12
  }</td></tr>
 <tr class="separator:gaf044d39b4f1cbe40ca04353b2852a21d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga804d2b8e192599948a4b686896eede8e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer.html#ga804d2b8e192599948a4b686896eede8e">reload_status_t</a> { <a class="el" href="group__timer.html#gga804d2b8e192599948a4b686896eede8ea2bc49ec37d6a5715dd23e85f1ff5bb59">OK</a> = 0
+, <a class="el" href="group__timer.html#gga804d2b8e192599948a4b686896eede8eae7d82dfe80ea0bd4feea8ee49ea2eab5">NOT_STARTED</a> = 1
+, <a class="el" href="group__timer.html#gga804d2b8e192599948a4b686896eede8ea4f5d82f7118e3d6b96b18658abe030fc">NOT_SUPPORTED_IN_MODE</a> = 2
+ }</td></tr>
+<tr class="memdesc:ga804d2b8e192599948a4b686896eede8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">timer reload status  <a href="group__timer.html#ga804d2b8e192599948a4b686896eede8e">More...</a><br /></td></tr>
+<tr class="separator:ga804d2b8e192599948a4b686896eede8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Common functions and data structures for timers.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga804d2b8e192599948a4b686896eede8e" name="ga804d2b8e192599948a4b686896eede8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga804d2b8e192599948a4b686896eede8e">&#9670;&nbsp;</a></span>reload_status_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__timer.html#ga804d2b8e192599948a4b686896eede8e">reload_status_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>timer reload status </p>
+<p >In some modes timers tick can be reloaded without restarting </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga804d2b8e192599948a4b686896eede8ea2bc49ec37d6a5715dd23e85f1ff5bb59" name="gga804d2b8e192599948a4b686896eede8ea2bc49ec37d6a5715dd23e85f1ff5bb59"></a>OK&#160;</td><td class="fielddoc"><p >ticks reloaded </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga804d2b8e192599948a4b686896eede8eae7d82dfe80ea0bd4feea8ee49ea2eab5" name="gga804d2b8e192599948a4b686896eede8eae7d82dfe80ea0bd4feea8ee49ea2eab5"></a>NOT_STARTED&#160;</td><td class="fielddoc"><p >timer doesnt started yet and ticks not reloaded. You sould start timer before </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga804d2b8e192599948a4b686896eede8ea4f5d82f7118e3d6b96b18658abe030fc" name="gga804d2b8e192599948a4b686896eede8ea4f5d82f7118e3d6b96b18658abe030fc"></a>NOT_SUPPORTED_IN_MODE&#160;</td><td class="fielddoc"><p >timer ticks reloading doesnt supported in this timer/mode </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="gaf044d39b4f1cbe40ca04353b2852a21d" name="gaf044d39b4f1cbe40ca04353b2852a21d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf044d39b4f1cbe40ca04353b2852a21d">&#9670;&nbsp;</a></span>timer_clock_divider_t</h2>
 

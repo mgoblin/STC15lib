@@ -103,6 +103,12 @@ Macros</h2></td></tr>
 <tr class="memitem:ga3583683265e677358d18d5970822d3f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0.html#ga3583683265e677358d18d5970822d3f0">timer0_stop</a>()</td></tr>
 <tr class="memdesc:ga3583683265e677358d18d5970822d3f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop timer0.  <a href="group__timer0.html#ga3583683265e677358d18d5970822d3f0">More...</a><br /></td></tr>
 <tr class="separator:ga3583683265e677358d18d5970822d3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadeaf20aeeccf19cf907ff481175bac3e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0.html#gadeaf20aeeccf19cf907ff481175bac3e">is_timer0_started</a>()&#160;&#160;&#160;(TR0 == 1)</td></tr>
+<tr class="memdesc:gadeaf20aeeccf19cf907ff481175bac3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer0 started status.  <a href="group__timer0.html#gadeaf20aeeccf19cf907ff481175bac3e">More...</a><br /></td></tr>
+<tr class="separator:gadeaf20aeeccf19cf907ff481175bac3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7b9b119fd210eeec3721c8442c08e4e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0.html#ga7b9b119fd210eeec3721c8442c08e4e3">timer0_reload</a>(ticks)</td></tr>
+<tr class="memdesc:ga7b9b119fd210eeec3721c8442c08e4e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload timer ticks on the fly.  <a href="group__timer0.html#ga7b9b119fd210eeec3721c8442c08e4e3">More...</a><br /></td></tr>
+<tr class="separator:ga7b9b119fd210eeec3721c8442c08e4e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for timer0.</p>
@@ -175,6 +181,26 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p >Get output to pin P3.5 output flag enabled value</p>
 <dl class="section return"><dt>Returns</dt><dd>true if output enabled oterwise false </dd></dl>
+
+</div>
+</div>
+<a id="gadeaf20aeeccf19cf907ff481175bac3e" name="gadeaf20aeeccf19cf907ff481175bac3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadeaf20aeeccf19cf907ff481175bac3e">&#9670;&nbsp;</a></span>is_timer0_started</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define is_timer0_started</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(TR0 == 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get timer0 started status. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool true if started otherwise false </dd></dl>
 
 </div>
 </div>
@@ -391,6 +417,59 @@ Macros</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ga7b9b119fd210eeec3721c8442c08e4e3" name="ga7b9b119fd210eeec3721c8442c08e4e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7b9b119fd210eeec3721c8442c08e4e3">&#9670;&nbsp;</a></span>timer0_reload</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer0_reload</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ticks</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    {                              \</div>
+<div class="line">    reload_status_t status;                                 \</div>
+<div class="line">    if(!<a class="code hl_define" href="group__timer0.html#gadeaf20aeeccf19cf907ff481175bac3e">is_timer0_started</a>())                                \</div>
+<div class="line">    {                                                       \</div>
+<div class="line">        status = <a class="code hl_enumvalue" href="group__timer.html#gga804d2b8e192599948a4b686896eede8eae7d82dfe80ea0bd4feea8ee49ea2eab5">NOT_STARTED</a>;                               \</div>
+<div class="line">    }                                                       \</div>
+<div class="line">    else <span class="keywordflow">if</span> (<a class="code hl_define" href="group__timer0.html#ga8fb5b0ee3b737afe80af761364e3b729">get_timer0_mode</a>() == 1)                        \</div>
+<div class="line">    {                                                       \</div>
+<div class="line">        status = <a class="code hl_enumvalue" href="group__timer.html#gga804d2b8e192599948a4b686896eede8ea4f5d82f7118e3d6b96b18658abe030fc">NOT_SUPPORTED_IN_MODE</a>;                     \</div>
+<div class="line">    }                                                       \</div>
+<div class="line">    else                                                    \</div>
+<div class="line">    {                                                       \</div>
+<div class="line">        uint16_t value = 0xffff - ticks;                    \</div>
+<div class="line">        <span class="comment">/* Load timer high and low bytes value */</span>           \</div>
+<div class="line">        TL0 = value &amp; 0xff;                                 \</div>
+<div class="line">        TH0 = (value &gt;&gt; 8) &amp; 0xff;                          \</div>
+<div class="line">                                                            \</div>
+<div class="line">        status = <a class="code hl_enumvalue" href="group__timer.html#gga804d2b8e192599948a4b686896eede8ea2bc49ec37d6a5715dd23e85f1ff5bb59">OK</a>;                                        \</div>
+<div class="line">    }                                                       \</div>
+<div class="line">    status;                                                 \</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__timer0_html_ga8fb5b0ee3b737afe80af761364e3b729"><div class="ttname"><a href="group__timer0.html#ga8fb5b0ee3b737afe80af761364e3b729">get_timer0_mode</a></div><div class="ttdeci">#define get_timer0_mode()</div><div class="ttdef"><b>Definition:</b> timer0.h:48</div></div>
+<div class="ttc" id="agroup__timer0_html_gadeaf20aeeccf19cf907ff481175bac3e"><div class="ttname"><a href="group__timer0.html#gadeaf20aeeccf19cf907ff481175bac3e">is_timer0_started</a></div><div class="ttdeci">#define is_timer0_started()</div><div class="ttdoc">Get timer0 started status.</div><div class="ttdef"><b>Definition:</b> timer0.h:249</div></div>
+<div class="ttc" id="agroup__timer_html_gga804d2b8e192599948a4b686896eede8ea2bc49ec37d6a5715dd23e85f1ff5bb59"><div class="ttname"><a href="group__timer.html#gga804d2b8e192599948a4b686896eede8ea2bc49ec37d6a5715dd23e85f1ff5bb59">OK</a></div><div class="ttdeci">@ OK</div><div class="ttdoc">ticks reloaded</div><div class="ttdef"><b>Definition:</b> timer_structs.h:27</div></div>
+<div class="ttc" id="agroup__timer_html_gga804d2b8e192599948a4b686896eede8ea4f5d82f7118e3d6b96b18658abe030fc"><div class="ttname"><a href="group__timer.html#gga804d2b8e192599948a4b686896eede8ea4f5d82f7118e3d6b96b18658abe030fc">NOT_SUPPORTED_IN_MODE</a></div><div class="ttdeci">@ NOT_SUPPORTED_IN_MODE</div><div class="ttdoc">timer ticks reloading doesnt supported in this timer/mode</div><div class="ttdef"><b>Definition:</b> timer_structs.h:31</div></div>
+<div class="ttc" id="agroup__timer_html_gga804d2b8e192599948a4b686896eede8eae7d82dfe80ea0bd4feea8ee49ea2eab5"><div class="ttname"><a href="group__timer.html#gga804d2b8e192599948a4b686896eede8eae7d82dfe80ea0bd4feea8ee49ea2eab5">NOT_STARTED</a></div><div class="ttdeci">@ NOT_STARTED</div><div class="ttdoc">timer doesnt started yet and ticks not reloaded. You sould start timer before</div><div class="ttdef"><b>Definition:</b> timer_structs.h:29</div></div>
+</div><!-- fragment -->
+<p>Reload timer ticks on the fly. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ticks</td><td>uint16_t timer ticks reloaded value</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>reload_status_t reload status </dd></dl>
 
 </div>
 </div>

@@ -239,4 +239,44 @@
     TF0 = 0; /* clear timer overload flag */                \
 }
 
+/** 
+ * @brief Get timer0 started status
+ * 
+ * @return bool true if started otherwise false
+ * 
+ * @ingroup timer0
+ */
+#define is_timer0_started() (TR0 == 1)
+
+/**
+ * @brief Reload timer ticks on the fly
+ * 
+ * @param ticks uint16_t timer ticks reloaded value
+ * 
+ * @return reload_status_t reload status
+ * 
+ * @ingroup timer0
+ */
+#define timer0_reload(ticks) {                              \
+    reload_status_t status;                                 \
+    if(!is_timer0_started())                                \
+    {                                                       \
+        status = NOT_STARTED;                               \
+    }                                                       \
+    else if (get_timer0_mode() == 1)                        \
+    {                                                       \
+        status = NOT_SUPPORTED_IN_MODE;                     \
+    }                                                       \
+    else                                                    \
+    {                                                       \
+        uint16_t value = 0xffff - ticks;                    \
+        /* Load timer high and low bytes value */           \
+        TL0 = value & 0xff;                                 \
+        TH0 = (value >> 8) & 0xff;                          \
+                                                            \
+        status = OK;                                        \
+    }                                                       \
+    status;                                                 \
+}
+
 #endif
