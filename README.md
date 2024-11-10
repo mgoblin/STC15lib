@@ -43,6 +43,8 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 * timer0 mode1 implemented
 * timer2 mode0 implemented
 
+0.6
+
 Next releases todo
 * TODO timer0_modeX_run_once_and_wait -> timer0_run_once_and_wait
 * TODO timer2 get mode should not always return mode0 constant
