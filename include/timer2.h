@@ -150,30 +150,13 @@
  * 
  * @param ticks uint16_t timer ticks reloaded value
  * 
- * @return reload_status_t reload status
- * 
  * @ingroup timer2
  */
 #define timer2_reload(ticks) {                                  \
-    reload_status_t status;                                     \
-    if (!is_timer2_started())                                   \
-    {                                                           \
-        status = NOT_STARTED;                                   \
-    }                                                           \
-    else if (get_timer2_mode() != 0)                            \
-    {                                                           \
-        status = NOT_SUPPORTED_IN_MODE;                         \
-    }                                                           \
-    else                                                        \
-    {                                                           \
-        uint16_t value = 0xffff - ticks;                        \
-        /* Load timer high and low bytes value */               \
-        T2L = value & 0xff;                                     \
-        T2H = (value >> 8) & 0xff;                              \
-                                                                \
-        status = OK;                                            \
-    }                                                           \
-    status;                                                     \
+    uint16_t value = 0xffff - ticks;                            \
+    /* Load timer high and low bytes value */                   \
+    T2L = value & 0xff;                                         \
+    T2H = (value >> 8) & 0xff;                                  \
 }
 
 /**

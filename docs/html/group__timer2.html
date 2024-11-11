@@ -352,41 +352,20 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    {                                  \</div>
-<div class="line">    reload_status_t status;                                     \</div>
-<div class="line">    if (!<a class="code hl_define" href="group__timer2.html#ga4feca3f4c1beef26a5a6ab4ef5a210ad">is_timer2_started</a>())                                   \</div>
-<div class="line">    {                                                           \</div>
-<div class="line">        status = <a class="code hl_enumvalue" href="group__timer.html#gga804d2b8e192599948a4b686896eede8eae7d82dfe80ea0bd4feea8ee49ea2eab5">NOT_STARTED</a>;                                   \</div>
-<div class="line">    }                                                           \</div>
-<div class="line">    else <span class="keywordflow">if</span> (<a class="code hl_define" href="group__timer2.html#ga68b53855ca88473c1f21651184ee2cc8">get_timer2_mode</a>() != 0)                            \</div>
-<div class="line">    {                                                           \</div>
-<div class="line">        status = <a class="code hl_enumvalue" href="group__timer.html#gga804d2b8e192599948a4b686896eede8ea4f5d82f7118e3d6b96b18658abe030fc">NOT_SUPPORTED_IN_MODE</a>;                         \</div>
-<div class="line">    }                                                           \</div>
-<div class="line">    else                                                        \</div>
-<div class="line">    {                                                           \</div>
-<div class="line">        uint16_t value = 0xffff - ticks;                        \</div>
-<div class="line">        <span class="comment">/* Load timer high and low bytes value */</span>               \</div>
-<div class="line">        T2L = value &amp; 0xff;                                     \</div>
-<div class="line">        T2H = (value &gt;&gt; 8) &amp; 0xff;                              \</div>
-<div class="line">                                                                \</div>
-<div class="line">        status = <a class="code hl_enumvalue" href="group__timer.html#gga804d2b8e192599948a4b686896eede8ea2bc49ec37d6a5715dd23e85f1ff5bb59">OK</a>;                                            \</div>
-<div class="line">    }                                                           \</div>
-<div class="line">    status;                                                     \</div>
+<div class="line">    uint16_t value = 0xffff - ticks;                            \</div>
+<div class="line">    <span class="comment">/* Load timer high and low bytes value */</span>                   \</div>
+<div class="line">    T2L = value &amp; 0xff;                                         \</div>
+<div class="line">    T2H = (value &gt;&gt; 8) &amp; 0xff;                                  \</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__timer2_html_ga4feca3f4c1beef26a5a6ab4ef5a210ad"><div class="ttname"><a href="group__timer2.html#ga4feca3f4c1beef26a5a6ab4ef5a210ad">is_timer2_started</a></div><div class="ttdeci">#define is_timer2_started()</div><div class="ttdoc">Get timer2 started status.</div><div class="ttdef"><b>Definition:</b> timer2.h:144</div></div>
-<div class="ttc" id="agroup__timer2_html_ga68b53855ca88473c1f21651184ee2cc8"><div class="ttname"><a href="group__timer2.html#ga68b53855ca88473c1f21651184ee2cc8">get_timer2_mode</a></div><div class="ttdeci">#define get_timer2_mode()</div><div class="ttdef"><b>Definition:</b> timer2.h:46</div></div>
-<div class="ttc" id="agroup__timer_html_gga804d2b8e192599948a4b686896eede8ea2bc49ec37d6a5715dd23e85f1ff5bb59"><div class="ttname"><a href="group__timer.html#gga804d2b8e192599948a4b686896eede8ea2bc49ec37d6a5715dd23e85f1ff5bb59">OK</a></div><div class="ttdeci">@ OK</div><div class="ttdoc">ticks reloaded</div><div class="ttdef"><b>Definition:</b> timer_structs.h:27</div></div>
-<div class="ttc" id="agroup__timer_html_gga804d2b8e192599948a4b686896eede8ea4f5d82f7118e3d6b96b18658abe030fc"><div class="ttname"><a href="group__timer.html#gga804d2b8e192599948a4b686896eede8ea4f5d82f7118e3d6b96b18658abe030fc">NOT_SUPPORTED_IN_MODE</a></div><div class="ttdeci">@ NOT_SUPPORTED_IN_MODE</div><div class="ttdoc">timer ticks reloading doesnt supported in this timer/mode</div><div class="ttdef"><b>Definition:</b> timer_structs.h:31</div></div>
-<div class="ttc" id="agroup__timer_html_gga804d2b8e192599948a4b686896eede8eae7d82dfe80ea0bd4feea8ee49ea2eab5"><div class="ttname"><a href="group__timer.html#gga804d2b8e192599948a4b686896eede8eae7d82dfe80ea0bd4feea8ee49ea2eab5">NOT_STARTED</a></div><div class="ttdeci">@ NOT_STARTED</div><div class="ttdoc">timer doesnt started yet and ticks not reloaded. You sould start timer before</div><div class="ttdef"><b>Definition:</b> timer_structs.h:29</div></div>
 </div><!-- fragment -->
 <p>Reload timer2 ticks on the fly. </p>
 <p >Reload is available in mode 0 only</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ticks</td><td>uint16_t timer ticks reloaded value</td></tr>
+    <tr><td class="paramname">ticks</td><td>uint16_t timer ticks reloaded value </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>reload_status_t reload status </dd></dl>
 
 </div>
 </div>
