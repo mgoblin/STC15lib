@@ -62,14 +62,13 @@ $(function() {
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">Timer0</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader">init</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p >Timer initializaion functions </p>
+</td></tr>
 <tr class="memitem:ga34caaadba5e538e023c05217fcc8e062"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0.html#ga34caaadba5e538e023c05217fcc8e062">timer0_mode0_12T_init</a>()</td></tr>
 <tr class="memdesc:ga34caaadba5e538e023c05217fcc8e062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize mode0 12T for timer0 in mode0.  <a href="group__timer0.html#ga34caaadba5e538e023c05217fcc8e062">More...</a><br /></td></tr>
 <tr class="separator:ga34caaadba5e538e023c05217fcc8e062"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -82,6 +81,10 @@ Macros</h2></td></tr>
 <tr class="memitem:ga42d9d0ba050ccbe9988bfb9e164498b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0.html#ga42d9d0ba050ccbe9988bfb9e164498b8">timer0_mode1_1T_init</a>()</td></tr>
 <tr class="memdesc:ga42d9d0ba050ccbe9988bfb9e164498b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize mode1 1T for timer0 in mode1.  <a href="group__timer0.html#ga42d9d0ba050ccbe9988bfb9e164498b8">More...</a><br /></td></tr>
 <tr class="separator:ga42d9d0ba050ccbe9988bfb9e164498b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">config</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p >Timer configuration functions </p>
+</td></tr>
 <tr class="memitem:ga8fb5b0ee3b737afe80af761364e3b729"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0.html#ga8fb5b0ee3b737afe80af761364e3b729">get_timer0_mode</a>()&#160;&#160;&#160;(TMOD &amp; 0x03)</td></tr>
 <tr class="memdesc:ga8fb5b0ee3b737afe80af761364e3b729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer0 mode.  <a href="group__timer0.html#ga8fb5b0ee3b737afe80af761364e3b729">More...</a><br /></td></tr>
 <tr class="separator:ga8fb5b0ee3b737afe80af761364e3b729"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -97,6 +100,10 @@ Macros</h2></td></tr>
 <tr class="memitem:gac66bdb451614f8dd51aa9c1cb20e10d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0.html#gac66bdb451614f8dd51aa9c1cb20e10d0">timer0_enable_on_pinINT0_high</a>()&#160;&#160;&#160;(bit_set(TMOD, 3))</td></tr>
 <tr class="memdesc:gac66bdb451614f8dd51aa9c1cb20e10d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable timer on INT0(P3.2) pin is low.  <a href="group__timer0.html#gac66bdb451614f8dd51aa9c1cb20e10d0">More...</a><br /></td></tr>
 <tr class="separator:gac66bdb451614f8dd51aa9c1cb20e10d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">run in async mode</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p >Timer run/stop/reload functions </p>
+</td></tr>
 <tr class="memitem:ga983e6a023d3f5f54a4f43aea4f08a05f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0.html#ga983e6a023d3f5f54a4f43aea4f08a05f">timer0_start</a>(ticks)</td></tr>
 <tr class="memdesc:ga983e6a023d3f5f54a4f43aea4f08a05f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0.  <a href="group__timer0.html#ga983e6a023d3f5f54a4f43aea4f08a05f">More...</a><br /></td></tr>
 <tr class="separator:ga983e6a023d3f5f54a4f43aea4f08a05f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,15 +113,19 @@ Macros</h2></td></tr>
 <tr class="memitem:gadeaf20aeeccf19cf907ff481175bac3e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0.html#gadeaf20aeeccf19cf907ff481175bac3e">is_timer0_started</a>()&#160;&#160;&#160;(TR0 == 1)</td></tr>
 <tr class="memdesc:gadeaf20aeeccf19cf907ff481175bac3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer0 started status.  <a href="group__timer0.html#gadeaf20aeeccf19cf907ff481175bac3e">More...</a><br /></td></tr>
 <tr class="separator:gadeaf20aeeccf19cf907ff481175bac3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7b9b119fd210eeec3721c8442c08e4e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0.html#ga7b9b119fd210eeec3721c8442c08e4e3">timer0_reload</a>(ticks)</td></tr>
+<tr class="memdesc:ga7b9b119fd210eeec3721c8442c08e4e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload timer0 ticks on the fly.  <a href="group__timer0.html#ga7b9b119fd210eeec3721c8442c08e4e3">More...</a><br /></td></tr>
+<tr class="separator:ga7b9b119fd210eeec3721c8442c08e4e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">run in sync mode</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p >Timer run/stop/reload functions </p>
+</td></tr>
 <tr class="memitem:ga906a731d5cbc2a4427901a6fc2e3b38d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0.html#ga906a731d5cbc2a4427901a6fc2e3b38d">timer0_mode0_run_once_and_wait</a>(ticks)</td></tr>
 <tr class="memdesc:ga906a731d5cbc2a4427901a6fc2e3b38d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0 once and wait with program flow blocking timer not finished.  <a href="group__timer0.html#ga906a731d5cbc2a4427901a6fc2e3b38d">More...</a><br /></td></tr>
 <tr class="separator:ga906a731d5cbc2a4427901a6fc2e3b38d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga840155661a550d5631059ea3201faf1c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0.html#ga840155661a550d5631059ea3201faf1c">timer0_mode1_run_once_and_wait</a>&#160;&#160;&#160;<a class="el" href="group__timer0.html#ga906a731d5cbc2a4427901a6fc2e3b38d">timer0_mode0_run_once_and_wait</a></td></tr>
 <tr class="memdesc:ga840155661a550d5631059ea3201faf1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0 mode1 once and wait with program flow blocking timer not finished.  <a href="group__timer0.html#ga840155661a550d5631059ea3201faf1c">More...</a><br /></td></tr>
 <tr class="separator:ga840155661a550d5631059ea3201faf1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7b9b119fd210eeec3721c8442c08e4e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0.html#ga7b9b119fd210eeec3721c8442c08e4e3">timer0_reload</a>(ticks)</td></tr>
-<tr class="memdesc:ga7b9b119fd210eeec3721c8442c08e4e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload timer0 ticks on the fly.  <a href="group__timer0.html#ga7b9b119fd210eeec3721c8442c08e4e3">More...</a><br /></td></tr>
-<tr class="separator:ga7b9b119fd210eeec3721c8442c08e4e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for timer0.</p>

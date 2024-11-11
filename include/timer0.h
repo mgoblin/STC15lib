@@ -39,7 +39,10 @@
 #include <timer_structs.h>
 
 //============================== Timer0 mode0 declarations begin ==========================
-
+/** @name init
+ *  Timer initializaion functions 
+ */
+///@{
 /**
  * @brief Initialize mode0 12T for timer0 in mode0. 
  * 
@@ -65,7 +68,6 @@
     TMOD &= 0xf0;                               \
     bit_set(AUXR, 7);                           \
 }
-
 //============================== Timer0 mode0 declarations end ============================
 
 //============================== Timer0 mode1 declarations begin ==========================
@@ -95,9 +97,14 @@
     bit_set(TMOD, 0);                                   \
     bit_set(AUXR, 7);                                   \
 }
+///@}
 //============================== Timer0 mode1 declarations end ============================
 
 //============================== Timer0 get mode, divider, pins declarations start ========
+/** @name config
+ *  Timer configuration functions 
+ */
+///@{
 /**
  * @brief Get timer0 mode
  * 
@@ -144,10 +151,14 @@
  * @ingroup timer0
  */
 # define timer0_enable_on_pinINT0_high() (bit_set(TMOD, 3))
+///@}
 //============================== Timer0 get mode, divider, pins declarations end =======
 
 //============================== Timer0 run/stop declarations start =====================
-
+/** @name run in async mode
+ *  Timer run/stop/reload functions 
+ */
+///@{
 /**
  * @brief Run timer0.
  * @details Before run timer0_modeX_12T_init or timer0_modeX_1T_init should be called.
@@ -200,10 +211,31 @@
  */
 #define is_timer0_started() (TR0 == 1)
 
+/**
+ * @brief Reload timer0 ticks on the fly
+ * 
+ * @details Reload is available in modes 0, 2, 3
+ * 
+ * @param ticks uint16_t timer ticks reloaded value
+ * 
+ * 
+ * @ingroup timer0
+ */
+#define timer0_reload(ticks)                                \
+{                                                           \
+    uint16_t value = 0xffff - ticks;                        \
+    /* Load timer high and low bytes value */               \
+    TL0 = value & 0xff;                                     \
+    TH0 = (value >> 8) & 0xff;                              \
+}
+///@}
 //============================== Timer0 run/stop declarations end =======================
 
 //============================== Timer0 run once declarations start =====================
-
+/** @name run in sync mode
+ *  Timer run/stop/reload functions 
+ */
+///@{
 /**
  * @brief Run timer0 once and wait with program flow blocking timer not finished.
  * 
@@ -248,30 +280,12 @@
  * @ingroup timer0 
  */
 #define timer0_mode1_run_once_and_wait timer0_mode0_run_once_and_wait
-
+///@}
 //============================== Timer0 run once declarations end =========================
 
 //============================== Timer0 mode2 declarations start ==========================
 
 
 //============================== Timer0 mode2 declarations end ============================
-
-/**
- * @brief Reload timer0 ticks on the fly
- * 
- * @details Reload is available in modes 0, 2, 3
- * 
- * @param ticks uint16_t timer ticks reloaded value
- * 
- * 
- * @ingroup timer0
- */
-#define timer0_reload(ticks)                                \
-{                                                           \
-    uint16_t value = 0xffff - ticks;                        \
-    /* Load timer high and low bytes value */               \
-    TL0 = value & 0xff;                                     \
-    TH0 = (value >> 8) & 0xff;                              \
-}
 
 #endif
