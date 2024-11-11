@@ -152,7 +152,7 @@
  * 
  * @return reload_status_t reload status
  * 
- * @ingroup timer0
+ * @ingroup timer2
  */
 #define timer2_reload(ticks) {                                  \
     reload_status_t status;                                     \

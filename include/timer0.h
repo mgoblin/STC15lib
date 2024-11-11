@@ -162,6 +162,11 @@
 
 //============================== Timer0 mode1 declarations end ============================
 
+//============================== Timer0 mode2 declarations start ==========================
+
+
+//============================== Timer0 mode2 declarations end ============================
+
 /**
  * @brief Run timer0 once and wait with program flow blocking timer not finished.
  * 

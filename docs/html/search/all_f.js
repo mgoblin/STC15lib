@@ -24,6 +24,6 @@ var searchData=
   ['timer2_5fmode0_5fenablep30_5foutput_21',['timer2_mode0_enableP30_output',['../group__timer2.html#ga57ace2191bf6dbce66f831097636249d',1,'timer2.h']]],
   ['timer2_5fmode0_5fstart_22',['timer2_mode0_start',['../group__timer2.html#gaecef145b097378f2f4715706b266c14c',1,'timer2.h']]],
   ['timer2_5fmode0_5fstop_23',['timer2_mode0_stop',['../group__timer2.html#ga86d1f3d5c229e55f341ed316b21e71ab',1,'timer2.h']]],
-  ['timer2_5freload_24',['timer2_reload',['../group__timer0.html#ga336cd9bcbc3405efa76d55190a8db99a',1,'timer2.h']]],
+  ['timer2_5freload_24',['timer2_reload',['../group__timer2.html#ga336cd9bcbc3405efa76d55190a8db99a',1,'timer2.h']]],
   ['timer_5fclock_5fdivider_5ft_25',['timer_clock_divider_t',['../group__timer.html#gaf044d39b4f1cbe40ca04353b2852a21d',1,'timer_structs.h']]]
 ];
