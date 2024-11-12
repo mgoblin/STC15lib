@@ -152,7 +152,7 @@
  * Timer rerun after overloaded and interupt handler called. 
  * 
  * Dont mix call timer0__mode0_start call with 
- * void timer0_mode0_run_once_and_wait call
+ * void timer0_mode0_delay call
  * 
  * @param ticks uint16_t timer ticks count. 
  * 
@@ -170,7 +170,7 @@
  * @brief Stop timer0.
  * @details Before stop timer0_start should be called. 
  * Dont mix timer0_stop call with
- * timer0_mode0_run_once_and_wait call 
+ * timer0_mode0_delay call 
  * 
  * @ingroup timer0_mode0
  */
@@ -205,7 +205,7 @@
  * 
  * After run program flow blocked until timer does not overloaded.
  * 
- * Dont mix call of timer0_mode0_run_once_and_wait with
+ * Dont mix call of timer0_mode0_delay with
  * timer0_mode0_open_gate/timer0_mode0_close_gate calls.
  * 
  * @param ticks uint16_t timer ticks count. 

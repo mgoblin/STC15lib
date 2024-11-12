@@ -105,6 +105,33 @@ Macros</h2></td></tr>
 <tr class="memitem:ga42d9d0ba050ccbe9988bfb9e164498b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode1.html#ga42d9d0ba050ccbe9988bfb9e164498b8">timer0_mode1_1T_init</a>()</td></tr>
 <tr class="memdesc:ga42d9d0ba050ccbe9988bfb9e164498b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize mode1 1T for timer0.  <a href="group__timer0__mode1.html#ga42d9d0ba050ccbe9988bfb9e164498b8">More...</a><br /></td></tr>
 <tr class="separator:ga42d9d0ba050ccbe9988bfb9e164498b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">config</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p >Timer configuration functions </p>
+</div></td></tr>
+<tr class="memitem:gaeb88246b375114bb0c1dde84746f93c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode1.html#gaeb88246b375114bb0c1dde84746f93c4">timer0_mode1_close_gate</a>()&#160;&#160;&#160;(bit_set(TMOD, 3))</td></tr>
+<tr class="memdesc:gaeb88246b375114bb0c1dde84746f93c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close timer starting gate.  <a href="group__timer0__mode1.html#gaeb88246b375114bb0c1dde84746f93c4">More...</a><br /></td></tr>
+<tr class="separator:gaeb88246b375114bb0c1dde84746f93c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga180f0e2bdd045f15b9033937d3d81f7a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode1.html#ga180f0e2bdd045f15b9033937d3d81f7a">timer0_mode1_open_gate</a>()&#160;&#160;&#160;(bit_clr(TMOD, 3))</td></tr>
+<tr class="memdesc:ga180f0e2bdd045f15b9033937d3d81f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open timer starting gate.  <a href="group__timer0__mode1.html#ga180f0e2bdd045f15b9033937d3d81f7a">More...</a><br /></td></tr>
+<tr class="separator:ga180f0e2bdd045f15b9033937d3d81f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7f6cceb0066689cb9d212b43417719df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode1.html#ga7f6cceb0066689cb9d212b43417719df">is_timer0_mode1_gate_opened</a>()&#160;&#160;&#160;(test_if_bit_cleared(TMOD, 3))</td></tr>
+<tr class="memdesc:ga7f6cceb0066689cb9d212b43417719df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer starting gate state.  <a href="group__timer0__mode1.html#ga7f6cceb0066689cb9d212b43417719df">More...</a><br /></td></tr>
+<tr class="separator:ga7f6cceb0066689cb9d212b43417719df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">run in async mode</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p >Timer run/stop/reload functions </p>
+</div></td></tr>
+<tr class="memitem:ga78da56947585a3d34b6c9b280557d439"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode1.html#ga78da56947585a3d34b6c9b280557d439">timer0_mode1_start</a>(ticks)</td></tr>
+<tr class="memdesc:ga78da56947585a3d34b6c9b280557d439"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0.  <a href="group__timer0__mode1.html#ga78da56947585a3d34b6c9b280557d439">More...</a><br /></td></tr>
+<tr class="separator:ga78da56947585a3d34b6c9b280557d439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga829ff1e3f5899ba9076cdb923f9944cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode1.html#ga829ff1e3f5899ba9076cdb923f9944cd">timer0_mode1_stop</a>()</td></tr>
+<tr class="memdesc:ga829ff1e3f5899ba9076cdb923f9944cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop timer0.  <a href="group__timer0__mode1.html#ga829ff1e3f5899ba9076cdb923f9944cd">More...</a><br /></td></tr>
+<tr class="separator:ga829ff1e3f5899ba9076cdb923f9944cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">run in sync mode</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p >Timer run once functions </p>
+</div></td></tr>
+<tr class="memitem:gaceaaf0bb8b7633507861278a67f7cfc1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode1.html#gaceaaf0bb8b7633507861278a67f7cfc1">timer0_mode1_delay</a>(ticks)</td></tr>
+<tr class="memdesc:gaceaaf0bb8b7633507861278a67f7cfc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0 mode1 once and wait with program flow blocking timer not finished.  <a href="group__timer0__mode1.html#gaceaaf0bb8b7633507861278a67f7cfc1">More...</a><br /></td></tr>
+<tr class="separator:gaceaaf0bb8b7633507861278a67f7cfc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

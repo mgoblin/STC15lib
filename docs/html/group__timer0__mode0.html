@@ -301,7 +301,7 @@ $(function() {
 <p>Run timer0 mode0 once and wait with program flow blocking timer not finished. </p>
 <p >Before run timer0_mode0_12T_init or timer0_mode0_1T_init should be called.</p>
 <p >After run program flow blocked until timer does not overloaded.</p>
-<p >Dont mix call of timer0_mode0_run_once_and_wait with timer0_mode0_open_gate/timer0_mode0_close_gate calls.</p>
+<p >Dont mix call of timer0_mode0_delay with timer0_mode0_open_gate/timer0_mode0_close_gate calls.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ticks</td><td>uint16_t timer ticks count. </td></tr>
@@ -417,7 +417,7 @@ $(function() {
 <p >Before run timer0_mode0_12T_init or timer0_mode0_1T_init should be called.</p>
 <p >After run program flow not blocked and interrupt will raised when timer is overloaded. Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code.</p>
 <p >Timer rerun after overloaded and interupt handler called.</p>
-<p >Dont mix call timer0__mode0_start call with void timer0_mode0_run_once_and_wait call</p>
+<p >Dont mix call timer0__mode0_start call with void timer0_mode0_delay call</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ticks</td><td>uint16_t timer ticks count. </td></tr>
@@ -447,7 +447,7 @@ $(function() {
 <div class="line">}</div>
 </div><!-- fragment -->
 <p>Stop timer0. </p>
-<p >Before stop timer0_start should be called. Dont mix timer0_stop call with timer0_mode0_run_once_and_wait call </p>
+<p >Before stop timer0_start should be called. Dont mix timer0_stop call with timer0_mode0_delay call </p>
 
 </div>
 </div>
