@@ -1,5 +1,5 @@
 #include <sys.h>
-#include <timer.h>
+#include <timer0_mode1.h>
 
 #include <stdint.h>
 
@@ -13,7 +13,7 @@ void main()
     while(1)
     {
         for(uint8_t i = 0; i < 12 * TIMER_CYCLES_MULTIPLIER; i++) {
-            timer0_mode1_run_once_and_wait(0xffff);
+            timer0_mode1_delay(0xffff);
         }
         
         LED = !LED;

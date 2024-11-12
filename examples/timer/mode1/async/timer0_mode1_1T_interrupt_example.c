@@ -26,11 +26,11 @@ void main()
     timer0_mode1_1T_init();
 
     // LED blinking during 1 second 
-    timer0_start(0xffff);
+    timer0_mode1_start(0xffff);
     delay(1000);
 
     // Not LED blinking during 2 seconds
-    timer0_stop();
+    timer0_mode1_stop();
     interrupt_counter = 0;
     delay(2000);
 }
