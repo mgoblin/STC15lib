@@ -144,6 +144,16 @@
     TF0 = 0; /* clear timer overload flag */                \
 }
 
+/** 
+ * @brief Get timer0 mode1 started status
+ * 
+ * @return bool true if started otherwise false
+ * 
+ * @ingroup timer0_mode1
+ */
+#define is_timer0_mode1_started() (TR0 == 1 && (is_timer0_mode1_gate_opened() || INT0 == 1))
+
+
 ///@}
 
 /** @name run in sync mode

@@ -98,6 +98,9 @@ $(function() {
 <tr class="memitem:ga829ff1e3f5899ba9076cdb923f9944cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode1.html#ga829ff1e3f5899ba9076cdb923f9944cd">timer0_mode1_stop</a>()</td></tr>
 <tr class="memdesc:ga829ff1e3f5899ba9076cdb923f9944cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop timer0.  <a href="group__timer0__mode1.html#ga829ff1e3f5899ba9076cdb923f9944cd">More...</a><br /></td></tr>
 <tr class="separator:ga829ff1e3f5899ba9076cdb923f9944cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga25729702ad8fee46946a46b4b7037f33"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode1.html#ga25729702ad8fee46946a46b4b7037f33">is_timer0_mode1_started</a>()&#160;&#160;&#160;(TR0 == 1 &amp;&amp; (<a class="el" href="group__timer0__mode1.html#ga7f6cceb0066689cb9d212b43417719df">is_timer0_mode1_gate_opened</a>() || INT0 == 1))</td></tr>
+<tr class="memdesc:ga25729702ad8fee46946a46b4b7037f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer0 mode1 started status.  <a href="group__timer0__mode1.html#ga25729702ad8fee46946a46b4b7037f33">More...</a><br /></td></tr>
+<tr class="separator:ga25729702ad8fee46946a46b4b7037f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">run in sync mode</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p >Timer run once functions </p>
@@ -137,6 +140,26 @@ $(function() {
 
 <p>Get timer starting gate state. </p>
 <dl class="section return"><dt>Returns</dt><dd>bool true if gate is open otherwise false </dd></dl>
+
+</div>
+</div>
+<a id="ga25729702ad8fee46946a46b4b7037f33" name="ga25729702ad8fee46946a46b4b7037f33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga25729702ad8fee46946a46b4b7037f33">&#9670;&nbsp;</a></span>is_timer0_mode1_started</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define is_timer0_mode1_started</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(TR0 == 1 &amp;&amp; (<a class="el" href="group__timer0__mode1.html#ga7f6cceb0066689cb9d212b43417719df">is_timer0_mode1_gate_opened</a>() || INT0 == 1))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get timer0 mode1 started status. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool true if started otherwise false </dd></dl>
 
 </div>
 </div>
