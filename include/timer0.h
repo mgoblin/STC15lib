@@ -44,7 +44,7 @@
  */
 ///@{
 /**
- * @brief Initialize mode0 12T for timer0 in mode0. 
+ * @brief Initialize mode0 12T for timer0. 
  * 
  * @ingroup timer0
  */
@@ -73,11 +73,12 @@
 //============================== Timer0 mode1 declarations begin ==========================
 
 /**
- * @brief Initialize mode1 12T for timer0 in mode1. 
+ * @brief Initialize mode1 12T for timer0. 
  * 
  * @ingroup timer0
  */
-#define timer0_mode1_12T_init() {                       \
+#define timer0_mode1_12T_init()                         \
+{                                                       \
     enable_mcu_interrupts();                            \
     enable_timer0_interrupt();                          \
     TMOD &= 0xf0;                                       \
@@ -86,51 +87,56 @@
 }
 
 /**
- * @brief Initialize mode1 1T for timer0 in mode1. 
+ * @brief Initialize mode1 1T for timer0. 
  * 
  * @ingroup timer0
  */
-#define timer0_mode1_1T_init() {                        \
+#define timer0_mode1_1T_init()                          \
+{                                                       \
     enable_mcu_interrupts();                            \
     enable_timer0_interrupt();                          \
     TMOD &= 0xf0;                                       \
     bit_set(TMOD, 0);                                   \
     bit_set(AUXR, 7);                                   \
 }
-///@}
-//============================== Timer0 mode1 declarations end ============================
 
-//============================== Timer0 get mode, divider, pins declarations start ========
+//============================== Timer0 mode1 declarations end ============================
+//============================== Timer0 mode2 declarations start ==========================
+
+/**
+ * @brief Initialize mode2 12T for timer0.
+ * 
+ * @ingroup timer0
+ */
+#define timer0_mode2_12T_init()                         \
+{                                                       \
+    enable_mcu_interrupts();                            \
+    enable_timer0_interrupt();                          \
+    TMOD &= 0xf0;                                       \
+    bit_set(TMOD, 1);                                   \
+    bit_clr(AUXR, 7);                                   \
+}
+
+/**
+ * @brief Initialize mode2 12T for timer0.
+ * 
+ * @ingroup timer0
+ */
+#define timer0_mode2_1T_init()                          \
+{                                                       \
+    enable_mcu_interrupts();                            \
+    enable_timer0_interrupt();                          \
+    TMOD &= 0xf0;                                       \
+    bit_set(TMOD, 1);                                   \
+    bit_set(AUXR, 7);                                   \
+}
+
+//============================== Timer0 mode2 declarations end ============================
+///@}
 /** @name config
  *  Timer configuration functions 
  */
 ///@{
-/**
- * @brief Get timer0 mode
- * 
- * @return timer0 mode in range from 0 to 3
- * 
- * @ingroup timer0
- */
-#define get_timer0_mode() (TMOD & 0x03)
-
-/**
- * @brief Get timer0 clock divider
- * 
- * @return timer0 clock divider
- * 
- * @ingroup timer0
- */
-#define get_timer0_clock_divider() (test_if_bit_cleared(AUXR, 7) ? T12 : T1)
-
-/**
- * @brief Enable output of meandr with timer interval on P3.5 pin.
- * @details By default output is disabled
- * 
- * @param enable bool if true output is enabled otherwise output is disabled 
- * 
- * @ingroup timer0
- */
 #define timer0_enableP35_output(enable) (enable ? bit_set(INT_CLKO, 0) : bit_clr(INT_CLKO, 0))
 
 /**
@@ -151,8 +157,9 @@
  * @ingroup timer0
  */
 # define timer0_enable_on_pinINT0_high() (bit_set(TMOD, 3))
-///@}
+
 //============================== Timer0 get mode, divider, pins declarations end =======
+///@}
 
 //============================== Timer0 run/stop declarations start =====================
 /** @name run in async mode
@@ -171,7 +178,9 @@
  * Dont mix call timer0_start call with 
  * void timer0_modeX_run_once_and_wait call
  * 
- * @param ticks uint16_t timer ticks count
+ * In mode2 ticks is uint8_t low bytes 
+ * 
+ * @param ticks uint16_t timer ticks count. In mode2 ticks is uint8_t low bytes.
  * 
  * @ingroup timer0
  */
@@ -214,10 +223,10 @@
 /**
  * @brief Reload timer0 ticks on the fly
  * 
- * @details Reload is available in modes 0, 2, 3
+ * @details Reload is available in modes 0, 2, 3.
+ * In mode2 ticks is uint8_t low bytes
  * 
- * @param ticks uint16_t timer ticks reloaded value
- * 
+ * @param ticks uint16_t timer ticks reloaded value. In mode2 ticks is uint8_t low bytes
  * 
  * @ingroup timer0
  */
@@ -247,19 +256,22 @@
  * Dont mix call of timer0_mode0_run_once_and_wait with
  * timer0_start/timer0_stop calls.
  * 
+ * In mode2 ticks is uint8_t low bytes.
+ * 
  * For mode0 and mode1 implementation is the same.
  * 
- * @param ticks uint16_t timer ticks count 
+ * @param ticks uint16_t timer ticks count. In mode2 ticks is uint8_t low bytes.
  * 
  * @ingroup timer0 
  */
-#define timer0_mode0_run_once_and_wait(ticks) {                         \
-    timer0_start();                                                     \
+#define timer0_mode0_run_once_and_wait(ticks)                           \
+{                                                                       \
+    timer0_start(ticks);                                                \
     /* Waiting for timer overloaded (timer overload flag set to 1) */   \
     while(!TF0)                                                         \
     {                                                                   \
     }                                                                   \
-    timer0_stop();                                                      \                                                                   \
+    timer0_stop();                                                      \
 }
 
 /**
@@ -273,9 +285,11 @@
  * Dont mix call of timer0_mode0_run_once_and_wait with
  * timer0_start/timer0_stop calls.
  * 
+ * In mode2 ticks is uint8_t low bytes
+ * 
  * For mode0 and mode1 implementation is the same.
  * 
- * @param ticks uint16_t timer ticks count
+ * @param ticks uint16_t timer ticks count. In mode2 ticks is uint8_t low bytes
  * 
  * @ingroup timer0 
  */
@@ -283,9 +297,5 @@
 ///@}
 //============================== Timer0 run once declarations end =========================
 
-//============================== Timer0 mode2 declarations start ==========================
-
-
-//============================== Timer0 mode2 declarations end ============================
 
 #endif

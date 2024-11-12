@@ -37,24 +37,6 @@
 #include <timer_structs.h>
 
 /**
- * Get timer2 mode
- * 
- * @return timer2 mode. Timer2 have only mode0.
- * 
- * @ingroup timer2
- */
-#define get_timer2_mode() (0)
-
-/**
- * Get timer2 clock divider
- * 
- * @return timer2 clock divider
- * 
- * @ingroup timer2
- */
-#define get_timer2_clock_divider() (get_bit(AUXR, 2) == 0 ? T12 : T1)
-
-/**
  * Get output to pin P3.0 output flag enabled value
  * 
  * @return bool true if output enabled oterwise false
