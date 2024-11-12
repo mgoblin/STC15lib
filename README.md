@@ -47,11 +47,9 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 * timer0 mode0 module full implementation
 
 Next releases todo
-* TODO timer0_modeX_run_once_and_wait -> timer0_run_once_and_wait
 * TODO timer2 get mode should not always return mode0 constant
-* TODO pause and resume timer0 using GATE
 * TODO Timer aux - set timers in terms of output signal freq and timings
 * TODO Timers aux should not biased from CPU frequency dividers
-* TODO Timers mode 2,3 should be implemented and documented 
+* TODO Timers mode 1,2,3 should be implemented and documented 
 * TODO Counters
 
