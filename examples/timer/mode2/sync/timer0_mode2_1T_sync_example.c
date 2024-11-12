@@ -1,7 +1,4 @@
-#include <sys.h>
-#include <timer.h>
-
-#include <stdint.h>
+#include <timer0_mode2.h>
 
 #define LED P10
 #define TIMER_CYCLES_MULTIPLIER 10000
@@ -13,7 +10,7 @@ void main()
     while(1)
     {
         for(uint16_t i = 0; i < TIMER_CYCLES_MULTIPLIER; i++) {
-            timer0_mode0_run_once_and_wait(0xff00);
+            timer0_mode2_delay(0xff);
         }
         
         LED = !LED;
