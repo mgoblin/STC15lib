@@ -15,28 +15,26 @@ void main()
 
     while (1)
     {
+        printf_tiny("========================\n");
+
         timer0_mode0_12T_init();
         uint8_t mode = get_timer0_mode();
         timer_clock_divider_t divider =  get_timer0_clock_divider();
         printf_tiny("Timer mode is %d and divider is %d\n", mode, divider);
-
-        delay_ms(500);
 
         timer0_mode0_1T_init();
         mode = get_timer0_mode();
         divider =  get_timer0_clock_divider();
         printf_tiny("Timer mode is %d and divider is %d\n", mode, divider);
         
-        delay_ms(500);
-
         timer0_mode1_12T_init();
         mode = get_timer0_mode();
         divider =  get_timer0_clock_divider();
         printf_tiny("Timer mode is %d and divider is %d\n", mode, divider);
-
-        delay_ms(500);
-
-        LED = !LED;
         
+        printf_tiny("========================\n");
+
+        delay_ms(5000);
+
     }
 }

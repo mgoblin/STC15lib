@@ -96,10 +96,7 @@
  * 
  * @ingroup timer0_mode0
 */
-#define timer0_mode0_close_gate()                                    \
-{                                                                    \
-    bit_set(TMOD, 3);                                                \
-}                                                                   
+#define timer0_mode0_close_gate() (bit_set(TMOD, 3))                                                \
 
 /** 
  * @brief Open timer starting gate.
@@ -107,10 +104,7 @@
  * 
  * @ingroup timer0_mode0
 */
-#define timer0_mode0_open_gate()                                    \
-{                                                                   \
-    bit_clr(TMOD, 3);                                               \
-}                                                                   
+#define timer0_mode0_open_gate() (bit_clr(TMOD, 3))                                               \
 
 /**
  * @brief Get timer starting gate state
@@ -119,10 +113,7 @@
  * 
  * @ingroup timer0_mode0
  */
-#define is_timer0_mode0_gate_opened()                               \
-{                                                                   \
-    test_if_bit_cleared(TMOD, 3)                                    \
-}
+#define is_timer0_mode0_gate_opened() (test_if_bit_cleared(TMOD, 3))
 
 ///@}
 //============================== Timer0 get mode, divider, pins declarations end =======
@@ -165,22 +156,14 @@
  * 
  * @param ticks uint16_t timer ticks count. 
  * 
- * @return start result start_status_t
- * 
  * @ingroup timer0_mode0
  */
-#define timer0_mode0_start(ticks)                               \
-{                                                               \
-    timer0_mode0_reload(ticks);                                 \
-                                                                \
-    TF0 = 0; /* clear timer overload flag */                    \
-    TR0 = 1; /* set run timer flag */                           \
-    is_timer0_mode0_gate_opened() ? OK : ONLY_ON_INT_PIN_HIGH   \
-                                                                \
-    /* Atfer method call finished interrupt handler */          \
-    /* will be called on timer overload */                      \
-    /* and timer will restore high and low bytes value */       \
-    /* automatically */                                         \
+#define timer0_mode0_start(ticks)                                                       \
+{                                                                                       \
+    timer0_mode0_reload(ticks);                                                         \
+                                                                                        \
+    TF0 = 0; /* clear timer overload flag */                                            \
+    TR0 = 1; /* set run timer flag */                                                   \
 } 
 
 /**

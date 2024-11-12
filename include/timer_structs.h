@@ -19,12 +19,5 @@ typedef enum
  * 
  * @ingroup timer
  */
-typedef enum
-{
-    /// @brief Timer started
-    OK,
-    /// @brief Timer will be ticks only on INT pin is high
-    ONLY_ON_INT_PIN_HIGH
-} start_status_t;
 
 #endif

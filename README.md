@@ -44,7 +44,7 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 * timer2 mode0 implemented
 
 0.6
-* Refactor and clear timer0 module
+* timer0 mode0 module full implementation
 
 Next releases todo
 * TODO timer0_modeX_run_once_and_wait -> timer0_run_once_and_wait
