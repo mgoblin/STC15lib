@@ -2,7 +2,7 @@
 #define STC15_TIMERH
 
 /**
- * @file timer.h
+ * @file timer_all.h
  * @defgroup timer_all Timer All
  * @details Common functions and data structures for timers.
  * 

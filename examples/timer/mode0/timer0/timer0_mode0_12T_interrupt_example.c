@@ -1,5 +1,5 @@
 #include <sys.h>
-#include <timer.h>
+#include <timer0_mode0.h>
 
 #define LED P10
 
@@ -12,7 +12,7 @@ void main()
 {
     timer0_mode0_12T_init();
 
-    timer0_start(0xffff);
+    timer0_mode0_start(0xffff);
 
     while(1){};
 }

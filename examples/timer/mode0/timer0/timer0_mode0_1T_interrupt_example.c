@@ -1,6 +1,6 @@
 #include <sys.h>
 #include <delay.h>
-#include <timer.h>
+#include <timer0_mode0.h>
 
 #define LED P10
 
@@ -21,11 +21,11 @@ void main()
     timer0_mode0_1T_init();
 
     // LED blinking during 1 second 
-    timer0_start(0xffff);
+    timer0_mode0_start(0xffff);
     delay_ms(1000);
 
     // Not LED blinking during 2 seconds
-    timer0_stop();
+    timer0_mode0_stop();
     interrupt_counter = 0;
     delay_ms(2000);
 }

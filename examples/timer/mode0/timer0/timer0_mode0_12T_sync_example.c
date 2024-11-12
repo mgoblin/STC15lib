@@ -1,5 +1,5 @@
 #include <sys.h>
-#include <timer.h>
+#include <timer0_mode0.h>
 
 #include <stdint.h>
 

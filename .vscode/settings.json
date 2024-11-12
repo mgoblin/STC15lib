@@ -13,5 +13,6 @@
         "interrupt.h": "c",
         "stdint.h": "c",
         "timer2.h": "c"
-    }
+    },
+    "C_Cpp.errorSquiggles": "enabled"
 }

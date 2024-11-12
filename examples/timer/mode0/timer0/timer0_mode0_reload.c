@@ -3,7 +3,7 @@
  * ticks array contains timer ticks series that cyclic rotates 
  * with timer0_reload call after timer start.
  */
-#include <timer.h>
+#include <timer0_mode0.h>
 #include <delay.h>
 
 #define LED P10
@@ -17,13 +17,13 @@ static
 void main()
 {
     timer0_mode0_12T_init();
-    timer0_start(ticks[0]);
+    timer0_mode0_start(ticks[0]);
 
     while (1)
     {
         for(uint8_t idx = 0; idx < TICKS_ARRAY_SIZE; idx++)
         {
-            timer0_reload(ticks[idx]);
+            timer0_mode0_reload(ticks[idx]);
             delay_ms((TICKS_ARRAY_SIZE - idx) * 1000);
         }
     }
