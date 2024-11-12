@@ -51,6 +51,6 @@ Next releases todo
 * TODO timer2 get mode should not always return mode0 constant
 * TODO Timer aux - set timers in terms of output signal freq and timings
 * TODO Timers aux should not biased from CPU frequency dividers
-* TODO Timers mode 1,2,3 should be implemented and documented 
+* TODO Timers mode 3 should be implemented and documented 
 * TODO Counters
 
