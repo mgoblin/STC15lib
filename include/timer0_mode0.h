@@ -96,7 +96,7 @@
  * 
  * @ingroup timer0_mode0
 */
-#define timer0_mode0_close_gate() (bit_set(TMOD, 3))                                                \
+#define timer0_mode0_close_gate() (bit_set(TMOD, 3))
 
 /** 
  * @brief Open timer starting gate.
@@ -104,7 +104,7 @@
  * 
  * @ingroup timer0_mode0
 */
-#define timer0_mode0_open_gate() (bit_clr(TMOD, 3))                                               \
+#define timer0_mode0_open_gate() (bit_clr(TMOD, 3))
 
 /**
  * @brief Get timer starting gate state
