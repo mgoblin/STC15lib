@@ -79,7 +79,7 @@
  * 
  * @ingroup timer0_mode0
  */
-#define timer0_mode0_enableP35_output(enable) (enable ? bit_set(INT_CLKO, 0) : bit_clr(INT_CLKO, 0))
+#define timer0_mode0_enable_P35_output(enable) (enable ? bit_set(INT_CLKO, 0) : bit_clr(INT_CLKO, 0))
 
 /**
  * @brief Get output to pin P3.5 output flag enabled value
@@ -90,15 +90,39 @@
  */
 #define is_timer0_mode0_P35_output_enabled() (test_if_bit_set(INT_CLKO, 0))
 
-/**
- * @brief Disable timer on INT0(P3.2) pin is low
+/** 
+ * @brief Close timer starting gate.
+ * @details When gate is closed timer will ticks after start only when INT0 pin is HIGH  
  * 
- * @details if you wand resore default timer behaviour indepned of INT0 state
- * reinit timer should be done 
+ * @ingroup timer0_mode0
+*/
+#define timer0_mode0_close_gate()                                    \
+{                                                                    \
+    bit_set(TMOD, 3);                                                \
+}                                                                   
+
+/** 
+ * @brief Open timer starting gate.
+ * @details When gate is open timer ticks after starts  
+ * 
+ * @ingroup timer0_mode0
+*/
+#define timer0_mode0_open_gate()                                    \
+{                                                                   \
+    bit_clr(TMOD, 3);                                               \
+}                                                                   
+
+/**
+ * @brief Get timer starting gate state
+ * 
+ * @return bool true if gate is open otherwise false
  * 
  * @ingroup timer0_mode0
  */
-# define timer0_mode0_enable_on_pinINT0_high() (bit_set(TMOD, 3))
+#define is_timer0_mode0_gate_opened()                               \
+{                                                                   \
+    test_if_bit_cleared(TMOD, 3)                                    \
+}
 
 ///@}
 //============================== Timer0 get mode, divider, pins declarations end =======
@@ -109,6 +133,7 @@
  *  Timer run/stop/reload functions 
  */
 ///@{
+
 /**
  * @brief Reload timer0 mode0 ticks on the fly
  * 
@@ -138,21 +163,24 @@
  * Dont mix call timer0__mode0_start call with 
  * void timer0_mode0_run_once_and_wait call
  * 
- * @param ticks uint16_t timer ticks count. In mode2 ticks is uint8_t low bytes.
+ * @param ticks uint16_t timer ticks count. 
+ * 
+ * @return start result start_status_t
  * 
  * @ingroup timer0_mode0
  */
-#define timer0_mode0_start(ticks)                           \
-{                                                           \
-    timer0_mode0_reload(ticks);                             \
-                                                            \
-    TF0 = 0; /* clear timer overload flag */                \
-    TR0 = 1; /* set run timer flag */                       \
-                                                            \
-    /* Atfer method call finished interrupt handler */      \
-    /* will be called on timer overload */                  \
-    /* and timer will restore high and low bytes value */   \
-    /* automatically */                                     \
+#define timer0_mode0_start(ticks)                               \
+{                                                               \
+    timer0_mode0_reload(ticks);                                 \
+                                                                \
+    TF0 = 0; /* clear timer overload flag */                    \
+    TR0 = 1; /* set run timer flag */                           \
+    is_timer0_mode0_gate_opened() ? OK : ONLY_ON_INT_PIN_HIGH   \
+                                                                \
+    /* Atfer method call finished interrupt handler */          \
+    /* will be called on timer overload */                      \
+    /* and timer will restore high and low bytes value */       \
+    /* automatically */                                         \
 } 
 
 /**
@@ -176,7 +204,7 @@
  * 
  * @ingroup timer0_mode0
  */
-#define is_timer0_mode0_started() (TR0 == 1)
+#define is_timer0_mode0_started() (TR0 == 1 && (is_timer0_mode0_gate_opened() || INT0 == 1))
 
 ///@}
 //============================== Timer0 run/stop declarations end =======================
@@ -195,20 +223,36 @@
  * After run program flow blocked until timer does not overloaded.
  * 
  * Dont mix call of timer0_mode0_run_once_and_wait with
- * timer0_mode0_start/timer0_mode0_stop calls.
+ * timer0_mode0_open_gate/timer0_mode0_close_gate calls.
  * 
  * @param ticks uint16_t timer ticks count. 
  * 
- * @ingroup timer0_mode0 
+ * @ingroup timer0_mode0
  */
-#define timer0_mode0_run_once_and_wait(ticks)                           \
+#define timer0_mode0_delay(ticks)                                       \
 {                                                                       \
+    bool is_gate_opened = is_timer0_mode0_gate_opened();                \
+    bool is_interrupt_enabled = is_timer0_interrupt_enabled();          \
+                                                                        \
+    timer0_mode0_open_gate();                                           \
+    disable_timer0_interrupt();                                         \
+                                                                        \
     timer0_mode0_start(ticks);                                          \
     /* Waiting for timer overloaded (timer overload flag set to 1) */   \
     while(!TF0)                                                         \
     {                                                                   \
     }                                                                   \
     timer0_mode0_stop();                                                \
+                                                                        \
+    if (is_interrupt_enabled)                                           \
+    {                                                                   \
+        enable_timer0_interrupt();                                      \
+    }                                                                   \
+                                                                        \
+    if (!is_gate_opened)                                                \
+    {                                                                   \
+        timer0_mode0_close_gate();                                      \
+    }                                                                   \
 }
 ///@}
 //============================== Timer0 run once declarations end =========================

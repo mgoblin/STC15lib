@@ -13,10 +13,11 @@ var searchData=
   ['is_5fmcu_5finterrupts_5fenabled_10',['is_mcu_interrupts_enabled',['../group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1',1,'interrupt.h']]],
   ['is_5fspi_5finterrupt_5fenabled_11',['is_spi_interrupt_enabled',['../group__interrupts.html#ga749a47d315950a06ecd28e89cacec83d',1,'interrupt.h']]],
   ['is_5ftimer0_5finterrupt_5fenabled_12',['is_timer0_interrupt_enabled',['../group__interrupts.html#gaf6a267bf6befa9aee24a701bd782f457',1,'interrupt.h']]],
-  ['is_5ftimer0_5fmode0_5fp35_5foutput_5fenabled_13',['is_timer0_mode0_P35_output_enabled',['../group__timer0__mode0.html#gabca5c0f95450276da6bfdc9e2d95b30d',1,'timer0_mode0.h']]],
-  ['is_5ftimer0_5fmode0_5fstarted_14',['is_timer0_mode0_started',['../group__timer0__mode0.html#ga0e77853f94ad55b9c991d08428cfb2bb',1,'timer0_mode0.h']]],
-  ['is_5ftimer2_5finterrupt_5fenabled_15',['is_timer2_interrupt_enabled',['../group__interrupts.html#ga0c35fd771294a22d4cd3e205fd806bdb',1,'interrupt.h']]],
-  ['is_5ftimer2_5fp30_5foutput_5fenabled_16',['is_timer2_P30_output_enabled',['../group__timer2.html#ga42a0a7e0d9d71cf3535113a5bb769324',1,'timer2.h']]],
-  ['is_5ftimer2_5fstarted_17',['is_timer2_started',['../group__timer2.html#ga4feca3f4c1beef26a5a6ab4ef5a210ad',1,'timer2.h']]],
-  ['is_5fuart1_5finterrupt_5fenabled_18',['is_uart1_interrupt_enabled',['../group__interrupts.html#gae4d7cee935888f8c3b25ae5697d868b5',1,'interrupt.h']]]
+  ['is_5ftimer0_5fmode0_5fgate_5fopened_13',['is_timer0_mode0_gate_opened',['../group__timer0__mode0.html#ga2a99233df8668e561f71da8db499f4b0',1,'timer0_mode0.h']]],
+  ['is_5ftimer0_5fmode0_5fp35_5foutput_5fenabled_14',['is_timer0_mode0_P35_output_enabled',['../group__timer0__mode0.html#gabca5c0f95450276da6bfdc9e2d95b30d',1,'timer0_mode0.h']]],
+  ['is_5ftimer0_5fmode0_5fstarted_15',['is_timer0_mode0_started',['../group__timer0__mode0.html#ga0e77853f94ad55b9c991d08428cfb2bb',1,'timer0_mode0.h']]],
+  ['is_5ftimer2_5finterrupt_5fenabled_16',['is_timer2_interrupt_enabled',['../group__interrupts.html#ga0c35fd771294a22d4cd3e205fd806bdb',1,'interrupt.h']]],
+  ['is_5ftimer2_5fp30_5foutput_5fenabled_17',['is_timer2_P30_output_enabled',['../group__timer2.html#ga42a0a7e0d9d71cf3535113a5bb769324',1,'timer2.h']]],
+  ['is_5ftimer2_5fstarted_18',['is_timer2_started',['../group__timer2.html#ga4feca3f4c1beef26a5a6ab4ef5a210ad',1,'timer2.h']]],
+  ['is_5fuart1_5finterrupt_5fenabled_19',['is_uart1_interrupt_enabled',['../group__interrupts.html#gae4d7cee935888f8c3b25ae5697d868b5',1,'interrupt.h']]]
 ];
