@@ -12,7 +12,8 @@
         "type_traits": "cpp",
         "interrupt.h": "c",
         "stdint.h": "c",
-        "timer2.h": "c"
+        "timer2.h": "c",
+        "delay.h": "c"
     },
-    "C_Cpp.errorSquiggles": "enabled"
+    "C_Cpp.errorSquiggles": "disabled"
 }

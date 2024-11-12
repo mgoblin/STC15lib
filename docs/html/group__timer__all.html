@@ -76,10 +76,10 @@ Macros</h2></td></tr>
 <tr class="memitem:gac2f34fcd6ffbec0a91510385d3286f70"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__all.html#gac2f34fcd6ffbec0a91510385d3286f70">get_timer0_clock_divider</a>()&#160;&#160;&#160;(test_if_bit_cleared(AUXR, 7) ? T12 : T1)</td></tr>
 <tr class="memdesc:gac2f34fcd6ffbec0a91510385d3286f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer0 clock divider.  <a href="group__timer__all.html#gac2f34fcd6ffbec0a91510385d3286f70">More...</a><br /></td></tr>
 <tr class="separator:gac2f34fcd6ffbec0a91510385d3286f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga68b53855ca88473c1f21651184ee2cc8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__all.html#ga68b53855ca88473c1f21651184ee2cc8">get_timer2_mode</a>()&#160;&#160;&#160;(0)</td></tr>
+<tr class="memitem:ga68b53855ca88473c1f21651184ee2cc8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__all.html#ga68b53855ca88473c1f21651184ee2cc8">get_timer2_mode</a>()&#160;&#160;&#160;(test_if_bit_set(AUXR, 0))</td></tr>
 <tr class="memdesc:ga68b53855ca88473c1f21651184ee2cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable output of meandr with timer interval on P3.5 pin.  <a href="group__timer__all.html#ga68b53855ca88473c1f21651184ee2cc8">More...</a><br /></td></tr>
 <tr class="separator:ga68b53855ca88473c1f21651184ee2cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4259384552df325973b81bd5425b7f4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__all.html#ga4259384552df325973b81bd5425b7f4a">get_timer2_clock_divider</a>()&#160;&#160;&#160;(get_bit(AUXR, 2) == 0 ? T12 : T1)</td></tr>
+<tr class="memitem:ga4259384552df325973b81bd5425b7f4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__all.html#ga4259384552df325973b81bd5425b7f4a">get_timer2_clock_divider</a>()&#160;&#160;&#160;(test_if_bit_cleared(AUXR, 2) ? T12 : T1)</td></tr>
 <tr class="separator:ga4259384552df325973b81bd5425b7f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -136,7 +136,7 @@ Macros</h2></td></tr>
           <td class="memname">#define get_timer2_clock_divider</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(get_bit(AUXR, 2) == 0 ? T12 : T1)</td>
+          <td>&#160;&#160;&#160;(test_if_bit_cleared(AUXR, 2) ? T12 : T1)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -155,7 +155,7 @@ Macros</h2></td></tr>
           <td class="memname">#define get_timer2_mode</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(0)</td>
+          <td>&#160;&#160;&#160;(test_if_bit_set(AUXR, 0))</td>
         </tr>
       </table>
 </div><div class="memdoc">

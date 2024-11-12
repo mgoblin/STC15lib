@@ -1,10 +1,4 @@
-#include <sys.h>
-#include <delay.h>
-#include <timer.h>
-
-#include <uart.h>
-#include <stdio.h>
-#include <delay.h>
+#include <timer2_mode0.h>
 
 #define LED P10
 

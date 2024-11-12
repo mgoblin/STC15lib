@@ -9,6 +9,7 @@
  * @author Michael Golovanov
  */
 
+#include <bits.h>
 #include <timer_structs.h>
 
 //============================== Timer0 get mode, divider, pins declarations start ========
@@ -46,7 +47,7 @@
  * 
  * @ingroup timer_all
  */
-#define get_timer2_mode() (0)
+#define get_timer2_mode() (test_if_bit_set(AUXR, 0))
 
 /**
  * Get timer2 clock divider
@@ -55,6 +56,6 @@
  * 
  * @ingroup timer_all
  */
-#define get_timer2_clock_divider() (get_bit(AUXR, 2) == 0 ? T12 : T1)
+#define get_timer2_clock_divider() (test_if_bit_cleared(AUXR, 2) ? T12 : T1)
 
 #endif

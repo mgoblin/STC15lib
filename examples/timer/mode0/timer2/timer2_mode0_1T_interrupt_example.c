@@ -1,12 +1,17 @@
-#include <sys.h>
-#include <delay.h>
-#include <timer.h>
+#include <timer2_mode0.h>
 
 #define LED P10
+#define SLOW_DOWN_COUNT 120
+
+uint8_t interrupt_counter = SLOW_DOWN_COUNT;
 
 void timer2ISR() __interrupt(12)
 {
-    LED = !LED;
+    if (interrupt_counter-- <= 0)
+    {
+        interrupt_counter = SLOW_DOWN_COUNT;
+        LED = !LED;
+    }
 }
 
 void main(void)
