@@ -215,10 +215,8 @@
 #define timer0_mode0_delay(ticks)                                       \
 {                                                                       \
     bool is_gate_opened = is_timer0_mode0_gate_opened();                \
-    bool is_interrupt_enabled = is_timer0_interrupt_enabled();          \
                                                                         \
     timer0_mode0_open_gate();                                           \
-    disable_timer0_interrupt();                                         \
                                                                         \
     timer0_mode0_start(ticks);                                          \
     /* Waiting for timer overloaded (timer overload flag set to 1) */   \
@@ -226,11 +224,6 @@
     {                                                                   \
     }                                                                   \
     timer0_mode0_stop();                                                \
-                                                                        \
-    if (is_interrupt_enabled)                                           \
-    {                                                                   \
-        enable_timer0_interrupt();                                      \
-    }                                                                   \
                                                                         \
     if (!is_gate_opened)                                                \
     {                                                                   \

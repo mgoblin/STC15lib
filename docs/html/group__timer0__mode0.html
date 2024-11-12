@@ -278,11 +278,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">{                                                                       \</div>
-<div class="line">    bool is_gate_opened = <a class="code hl_define" href="group__timer0__mode0.html#ga2a99233df8668e561f71da8db499f4b0">is_timer0_mode0_gate_opened</a>();                \</div>
-<div class="line">    bool is_interrupt_enabled = <a class="code hl_define" href="group__interrupts.html#gaf6a267bf6befa9aee24a701bd782f457">is_timer0_interrupt_enabled</a>();          <a class="code hl_define" href="group__timer0__mode0.html#gac46b16166e317f423687b0b744310035">\</a></div>
+<div class="line">    bool is_gate_opened = <a class="code hl_define" href="group__timer0__mode0.html#ga2a99233df8668e561f71da8db499f4b0">is_timer0_mode0_gate_opened</a>();                <a class="code hl_define" href="group__timer0__mode0.html#gac46b16166e317f423687b0b744310035">\</a></div>
 <div class="line"><a class="code hl_define" href="group__timer0__mode0.html#gac46b16166e317f423687b0b744310035">                                                                        \</a></div>
-<div class="line"><a class="code hl_define" href="group__timer0__mode0.html#gac46b16166e317f423687b0b744310035">    timer0_mode0_open_gate</a>();                                           \</div>
-<div class="line">    disable_timer0_interrupt();                                         <a class="code hl_define" href="group__timer0__mode0.html#ga7574c9933d116e0d9de0bf3c00f8c088">\</a></div>
+<div class="line"><a class="code hl_define" href="group__timer0__mode0.html#gac46b16166e317f423687b0b744310035">    timer0_mode0_open_gate</a>();                                           <a class="code hl_define" href="group__timer0__mode0.html#ga7574c9933d116e0d9de0bf3c00f8c088">\</a></div>
 <div class="line"><a class="code hl_define" href="group__timer0__mode0.html#ga7574c9933d116e0d9de0bf3c00f8c088">                                                                        \</a></div>
 <div class="line"><a class="code hl_define" href="group__timer0__mode0.html#ga7574c9933d116e0d9de0bf3c00f8c088">    timer0_mode0_start</a>(ticks);                                          \</div>
 <div class="line">    <span class="comment">/* Waiting for timer overloaded (timer overload flag set to 1) */</span>   \</div>
@@ -291,17 +289,11 @@ $(function() {
 <div class="line">    }                                                                   \</div>
 <div class="line">    timer0_mode0_stop();                                                \</div>
 <div class="line">                                                                        \</div>
-<div class="line">    if (is_interrupt_enabled)                                           \</div>
-<div class="line">    {                                                                   \</div>
-<div class="line">        enable_timer0_interrupt();                                      \</div>
-<div class="line">    }                                                                   \</div>
-<div class="line">                                                                        \</div>
 <div class="line">    if (!is_gate_opened)                                                \</div>
 <div class="line">    {                                                                   \</div>
 <div class="line">        timer0_mode0_close_gate();                                      \</div>
 <div class="line">    }                                                                   \</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__interrupts_html_gaf6a267bf6befa9aee24a701bd782f457"><div class="ttname"><a href="group__interrupts.html#gaf6a267bf6befa9aee24a701bd782f457">is_timer0_interrupt_enabled</a></div><div class="ttdeci">#define is_timer0_interrupt_enabled()</div><div class="ttdoc">Get timer0 interrupt enable status.</div><div class="ttdef"><b>Definition:</b> interrupt.h:380</div></div>
 <div class="ttc" id="agroup__timer0__mode0_html_ga2a99233df8668e561f71da8db499f4b0"><div class="ttname"><a href="group__timer0__mode0.html#ga2a99233df8668e561f71da8db499f4b0">is_timer0_mode0_gate_opened</a></div><div class="ttdeci">#define is_timer0_mode0_gate_opened()</div><div class="ttdoc">Get timer starting gate state.</div><div class="ttdef"><b>Definition:</b> timer0_mode0.h:116</div></div>
 <div class="ttc" id="agroup__timer0__mode0_html_ga7574c9933d116e0d9de0bf3c00f8c088"><div class="ttname"><a href="group__timer0__mode0.html#ga7574c9933d116e0d9de0bf3c00f8c088">timer0_mode0_start</a></div><div class="ttdeci">#define timer0_mode0_start(ticks)</div><div class="ttdoc">Run timer0.</div><div class="ttdef"><b>Definition:</b> timer0_mode0.h:161</div></div>
 <div class="ttc" id="agroup__timer0__mode0_html_gac46b16166e317f423687b0b744310035"><div class="ttname"><a href="group__timer0__mode0.html#gac46b16166e317f423687b0b744310035">timer0_mode0_open_gate</a></div><div class="ttdeci">#define timer0_mode0_open_gate()</div><div class="ttdoc">Open timer starting gate.</div><div class="ttdef"><b>Definition:</b> timer0_mode0.h:107</div></div>
