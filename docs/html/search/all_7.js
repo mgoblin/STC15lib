@@ -21,8 +21,11 @@ var searchData=
   ['is_5ftimer0_5fmode2_5fgate_5fopened_18',['is_timer0_mode2_gate_opened',['../group__timer0__mode2.html#ga139bd39f5b59c65b58f764a61a732b2d',1,'timer0_mode2.h']]],
   ['is_5ftimer0_5fmode2_5fp35_5foutput_5fenabled_19',['is_timer0_mode2_P35_output_enabled',['../group__timer0__mode2.html#ga85404a5d6de7a47f0e898f61cbedba9c',1,'timer0_mode2.h']]],
   ['is_5ftimer0_5fmode2_5fstarted_20',['is_timer0_mode2_started',['../group__timer0__mode2.html#ga22d9e6a4eb2cebc9c38daa1fb5df95a4',1,'timer0_mode2.h']]],
-  ['is_5ftimer2_5finterrupt_5fenabled_21',['is_timer2_interrupt_enabled',['../group__interrupts.html#ga0c35fd771294a22d4cd3e205fd806bdb',1,'interrupt.h']]],
-  ['is_5ftimer2_5fmode0_5fstarted_22',['is_timer2_mode0_started',['../group__timer2__mode0.html#ga3ed7e8910a209208306bebcc62975d2b',1,'timer2_mode0.h']]],
-  ['is_5ftimer2_5fp30_5foutput_5fenabled_23',['is_timer2_P30_output_enabled',['../group__timer2__mode0.html#ga42a0a7e0d9d71cf3535113a5bb769324',1,'timer2_mode0.h']]],
-  ['is_5fuart1_5finterrupt_5fenabled_24',['is_uart1_interrupt_enabled',['../group__interrupts.html#gae4d7cee935888f8c3b25ae5697d868b5',1,'interrupt.h']]]
+  ['is_5ftimer0_5fmode3_5fgate_5fopened_21',['is_timer0_mode3_gate_opened',['../group__timer0__mode3.html#ga164988a97d7aa1ca3e415a663ad5ecd3',1,'timer0_mode3.h']]],
+  ['is_5ftimer0_5fmode3_5fp35_5foutput_5fenabled_22',['is_timer0_mode3_P35_output_enabled',['../group__timer0__mode3.html#ga5531c418c37ba9debf04ef1ecb713670',1,'timer0_mode3.h']]],
+  ['is_5ftimer0_5fmode3_5fstarted_23',['is_timer0_mode3_started',['../group__timer0__mode3.html#gabf95428e5822aa5534d2a5ad5f46bb10',1,'timer0_mode3.h']]],
+  ['is_5ftimer2_5finterrupt_5fenabled_24',['is_timer2_interrupt_enabled',['../group__interrupts.html#ga0c35fd771294a22d4cd3e205fd806bdb',1,'interrupt.h']]],
+  ['is_5ftimer2_5fmode0_5fstarted_25',['is_timer2_mode0_started',['../group__timer2__mode0.html#ga3ed7e8910a209208306bebcc62975d2b',1,'timer2_mode0.h']]],
+  ['is_5ftimer2_5fp30_5foutput_5fenabled_26',['is_timer2_P30_output_enabled',['../group__timer2__mode0.html#ga42a0a7e0d9d71cf3535113a5bb769324',1,'timer2_mode0.h']]],
+  ['is_5fuart1_5finterrupt_5fenabled_27',['is_uart1_interrupt_enabled',['../group__interrupts.html#gae4d7cee935888f8c3b25ae5697d868b5',1,'interrupt.h']]]
 ];
