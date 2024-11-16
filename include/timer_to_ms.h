@@ -24,7 +24,7 @@
  * 
  * @param ticks timer ticks count to covert
  * 
- * @return uint32_t frequency corresponding to ticks count 
+ * @return uint32_t frequency multiplied by 100 corresponding to ticks count 
  * 
  * @ingroup timer_to_ms
  */

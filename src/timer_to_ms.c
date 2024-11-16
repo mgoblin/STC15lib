@@ -22,5 +22,5 @@ uint32_t timer_uint16_ticks_to_freq(uint16_t ticks)
     uint32_t ticks_divider = 1 + (uint32_t)ticks;
     uint32_t freq = get_master_clock_frequency() / (12 * 2 * ticks_divider);
 
-    return freq;
+    return (100 * freq) / get_frequency_divider();
 }

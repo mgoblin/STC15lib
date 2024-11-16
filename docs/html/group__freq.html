@@ -78,9 +78,9 @@ Macros</h2></td></tr>
 <tr class="separator:gaab28dddcfa288a3f7449bbf680e85414"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabec6924a99fc0c136d0d1d6de5f8bf52"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#gabec6924a99fc0c136d0d1d6de5f8bf52">get_frequency_divider</a>()&#160;&#160;&#160;(1 &lt;&lt; (CLK_DIV &amp; 0x07))</td></tr>
 <tr class="separator:gabec6924a99fc0c136d0d1d6de5f8bf52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1f80d9bae2e7c0b0b059c35c8e38cacf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#ga1f80d9bae2e7c0b0b059c35c8e38cacf">update_and_get_frequency_divider</a>(divider_scale)</td></tr>
-<tr class="memdesc:ga1f80d9bae2e7c0b0b059c35c8e38cacf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update and get master clock frequency divider (CLK_DIV bits [0..2])  <a href="group__freq.html#ga1f80d9bae2e7c0b0b059c35c8e38cacf">More...</a><br /></td></tr>
-<tr class="separator:ga1f80d9bae2e7c0b0b059c35c8e38cacf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c0b9dad15150c932dcdfb329193cf85"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#ga3c0b9dad15150c932dcdfb329193cf85">set_frequency_divider_scaler</a>(divider_scale)</td></tr>
+<tr class="memdesc:ga3c0b9dad15150c932dcdfb329193cf85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update and get master clock frequency divider (CLK_DIV bits [0..2])  <a href="group__freq.html#ga3c0b9dad15150c932dcdfb329193cf85">More...</a><br /></td></tr>
+<tr class="separator:ga3c0b9dad15150c932dcdfb329193cf85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab0cf04749c06459a905501a82de37ec5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#gab0cf04749c06459a905501a82de37ec5">enable_master_clock_output_div1</a>()&#160;&#160;&#160;(CLK_DIV |= 0x40)</td></tr>
 <tr class="separator:gab0cf04749c06459a905501a82de37ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab8cf6beb70bdf87d5ecb400ed00bb797"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__freq.html#gab8cf6beb70bdf87d5ecb400ed00bb797">enable_master_clock_output_div2</a>()&#160;&#160;&#160;(CLK_DIV |= 0x80)</td></tr>
@@ -197,7 +197,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p >Get master clock frequency divider (CLK_DIV bits [0..2])</p>
 <dl class="section return"><dt>Returns</dt><dd>master clock frequency divider. Divider values range is from 1 to 128.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__freq.html#ga1f80d9bae2e7c0b0b059c35c8e38cacf" title="Update and get master clock frequency divider (CLK_DIV bits [0..2])">update_and_get_frequency_divider(uint8_t divider_scale)</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>update_and_get_frequency_divider(uint8_t divider_scale) </dd></dl>
 
 </div>
 </div>
@@ -277,6 +277,42 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="ga3c0b9dad15150c932dcdfb329193cf85" name="ga3c0b9dad15150c932dcdfb329193cf85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3c0b9dad15150c932dcdfb329193cf85">&#9670;&nbsp;</a></span>set_frequency_divider_scaler</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define set_frequency_divider_scaler</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">divider_scale</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                                       \</div>
+<div class="line">    if (divider_scale &lt; 8)                              \</div>
+<div class="line">    {                                                   \</div>
+<div class="line">        CLK_DIV &amp;= 0xf8;                                \</div>
+<div class="line">        CLK_DIV |= divider_scale;                       \</div>
+<div class="line">    }                                                   \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Update and get master clock frequency divider (CLK_DIV bits [0..2]) </p>
+<p >Before setting divider value validate if divider scale is out of range 0..7.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">divider_scale</td><td>uint8 scale from 0 to 7 corresponds dividers 1, 2, 4, ...128</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>master clock frequency divider value</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__freq.html#gabec6924a99fc0c136d0d1d6de5f8bf52">get_frequency_divider()</a> </dd></dl>
+
+</div>
+</div>
 <a id="gadbf3520848e3ffb8498074ba7c25bfed" name="gadbf3520848e3ffb8498074ba7c25bfed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gadbf3520848e3ffb8498074ba7c25bfed">&#9670;&nbsp;</a></span>set_master_clock_output_pin</h2>
 
@@ -306,9 +342,9 @@ Macros</h2></td></tr>
 <div class="line">        bit_set(CLK_DIV, 3);                        \</div>
 <div class="line">    }                                               \</div>
 <div class="line">}</div>
-<div class="ttc" id="afrequency_8h_html_ae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d"><div class="ttname"><a href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d">P1_6</a></div><div class="ttdeci">@ P1_6</div><div class="ttdoc">output to pin 1.6</div><div class="ttdef"><b>Definition:</b> frequency.h:121</div></div>
-<div class="ttc" id="afrequency_8h_html_ae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050"><div class="ttname"><a href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050">P5_4</a></div><div class="ttdeci">@ P5_4</div><div class="ttdoc">output to pin 5.4</div><div class="ttdef"><b>Definition:</b> frequency.h:119</div></div>
-<div class="ttc" id="afrequency_8h_html_ae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2"><div class="ttname"><a href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a></div><div class="ttdeci">@ NONE</div><div class="ttdoc">output disabled</div><div class="ttdef"><b>Definition:</b> frequency.h:117</div></div>
+<div class="ttc" id="afrequency_8h_html_ae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d"><div class="ttname"><a href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d">P1_6</a></div><div class="ttdeci">@ P1_6</div><div class="ttdoc">output to pin 1.6</div><div class="ttdef"><b>Definition:</b> frequency.h:122</div></div>
+<div class="ttc" id="afrequency_8h_html_ae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050"><div class="ttname"><a href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050">P5_4</a></div><div class="ttdeci">@ P5_4</div><div class="ttdoc">output to pin 5.4</div><div class="ttdef"><b>Definition:</b> frequency.h:120</div></div>
+<div class="ttc" id="afrequency_8h_html_ae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2"><div class="ttname"><a href="frequency_8h.html#ae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a></div><div class="ttdeci">@ NONE</div><div class="ttdoc">output disabled</div><div class="ttdef"><b>Definition:</b> frequency.h:118</div></div>
 </div><!-- fragment --><p >Set master clock output pin</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -316,42 +352,6 @@ Macros</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="ga1f80d9bae2e7c0b0b059c35c8e38cacf" name="ga1f80d9bae2e7c0b0b059c35c8e38cacf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1f80d9bae2e7c0b0b059c35c8e38cacf">&#9670;&nbsp;</a></span>update_and_get_frequency_divider</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define update_and_get_frequency_divider</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">divider_scale</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    { \</div>
-<div class="line">    if (divider_scale &lt; 8) \</div>
-<div class="line">    { \</div>
-<div class="line">        CLK_DIV &amp;= (0xf8 | divider_scale); \</div>
-<div class="line">    } \</div>
-<div class="line">    get_frequency_divider(); \</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p>Update and get master clock frequency divider (CLK_DIV bits [0..2]) </p>
-<p >Before setting divider value validate if divider scale is out of range 0..7.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">divider_scale</td><td>uint8 scale from 0 to 7 corresponds dividers 1, 2, 4, ...128</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>master clock frequency divider value</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__freq.html#gabec6924a99fc0c136d0d1d6de5f8bf52">get_frequency_divider()</a> </dd></dl>
 
 </div>
 </div>

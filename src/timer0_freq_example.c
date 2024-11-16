@@ -1,6 +1,7 @@
 #include <timer0_mode0.h>
 #include <timer_to_ms.h>
 
+#include <frequency.h>
 #include <delay.h>
 #include <uart.h>
 #include <stdio.h>
@@ -16,7 +17,12 @@ void timerISR() __interrupt(1)
 
 void main()
 {    
-    // 64 628 = 0xFC74
+    set_frequency_divider_scaler(7);
+    uint32_t timer_frequency = timer_uint16_ticks_to_freq(TICKS);
+    set_frequency_divider_scaler(0);
+
+    char fstr[32];
+    __ultoa(timer_frequency, fstr, 10);
 
     uart_init(9600);
 
@@ -24,14 +30,8 @@ void main()
     timer0_mode0_enable_P35_output(true);
     timer0_mode0_start(TICKS);
     
-    uint32_t timer_frequency = timer_uint16_ticks_to_freq(TICKS);
-
-    char fstr[32];
-
-    __ultoa(timer_frequency, fstr, 10);
-
     while (1) {
         delay_ms(300);
-        printf_tiny("Frequency: %s Hz\n", fstr);
+        printf_tiny("Frequency: %s / 100 Hz\n", fstr);
     }
 }

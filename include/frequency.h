@@ -63,12 +63,13 @@
  * 
  * @ingroup freq
  */
-#define update_and_get_frequency_divider(divider_scale) { \
-    if (divider_scale < 8) \
-    { \
-        CLK_DIV &= (0xf8 | divider_scale); \
-    } \
-    get_frequency_divider(); \
+#define set_frequency_divider_scaler(divider_scale)     \
+{                                                       \
+    if (divider_scale < 8)                              \
+    {                                                   \
+        CLK_DIV &= 0xf8;                                \
+        CLK_DIV |= divider_scale;                       \
+    }                                                   \
 }
 
 /**
