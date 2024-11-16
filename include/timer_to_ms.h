@@ -22,13 +22,15 @@
  * @details The output frequency = (SYSclk/12)/((65536-[RL_TH0, RL_TL0]) * 2)
  * Frequency is biased by MCU clock frequency divider.
  * 
+ * uint16 ticks used in mode 0, 1, 3
+ * 
  * @param ticks timer ticks count to covert
  * 
  * @return uint32_t frequency multiplied by 100 corresponding to ticks count 
  * 
  * @ingroup timer_to_ms
  */
-uint32_t timer_uint16_ticks_to_freq(uint16_t ticks); 
+uint32_t timer_uint16_ticks_to_freq(uint16_t ticks);
 
 ///@}
 
