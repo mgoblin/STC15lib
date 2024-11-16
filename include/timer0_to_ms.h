@@ -21,8 +21,9 @@
 ///@{
 
 /**
- * @brief Convert ticks to timer frequency for timer0.
+ * @brief Convert ticks to timer frequency for timer0 multiplied by 100.
  * @details The output frequency = (SYSclk/timer_clock_divider)/((65536-ticks) * 2).
+ * Multiplication by 100 is used for get frequency value without using float numbers.
  * 
  * Call this method after timer0 is initialized and MCU clock frequency divider scale is set.
  * 

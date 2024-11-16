@@ -23,7 +23,7 @@ static unsigned int i;
 *  @ingroup delays 
 */
 #define delay_ms(ms) {                              \
-    ms_div = ms / get_frequency_divider();          \
+    ms_div = ms / get_frequency_divider_scale();    \
     do                                              \
     {                                               \
        i = (get_master_clock_frequency() / 13000);  \
