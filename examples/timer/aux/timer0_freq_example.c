@@ -24,7 +24,7 @@ void main()
     timer0_mode0_enable_P35_output(true);
     timer0_mode0_start(TICKS);
     
-    uint32_t timer_frequency = timer0_mode0_to_freq(TICKS);
+    uint32_t timer_frequency = timer_uint16_ticks_to_freq(TICKS);
 
     char fstr[32];
 

@@ -28,7 +28,7 @@
  * 
  * @ingroup timer_to_ms
  */
-uint32_t timer0_mode0_to_freq(uint16_t ticks); 
+uint32_t timer_uint16_ticks_to_freq(uint16_t ticks); 
 
 ///@}
 

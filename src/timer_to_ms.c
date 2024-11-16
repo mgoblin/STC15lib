@@ -1,6 +1,6 @@
 #include <timer_to_ms.h>
 
-uint32_t timer0_mode0_to_freq(uint16_t ticks)
+uint32_t timer_uint16_ticks_to_freq(uint16_t ticks)
 {
     // When T0 in 12T mode (AUXR.7/T0x12=1), 
     // the output frequency = (SYSclk/12)/((65536-[RL_TH0, RL_TL0]) * 2)
