@@ -39,20 +39,21 @@
 uint32_t timer0_uint16_ticks_to_freq100(uint16_t ticks);
 
 /**
- * @brief Convert timer frequency to ticks. 
- * @details The output frequency = (SYSclk/12)/((65536 - [regs]) * 2)
- * frequency/(SYSclk/12) = 1/((65536- regs) * 2)
- * (((65536- regs) * 2) * frequency)/(SYSclk/12) = 1
- * ((65536- regs) * 2) * frequency = (SYSclk/12)
- * (65536- regs) * 2 = (SYSclk/12) / frequency
- * 65536 - regs = (SYSclk/12) / (2 * frequency)
- * -regs = (SYSclk/12) / (2 * frequency) - 65536
- * regs = 65536 - (SYSclk/12) / (2 * frequency)
- * regs = 65535 - ticks
+ * @brief Unsafe approximation timer frequency corresponding to ticks. 
+ * @details 
+ * ticks = get_master_clock_frequency() / (2 * get_timer0_clock_divider() * frequency))
+ * 
+ * Call this method after timer0 is initialized and MCU clock frequency divider scale is set.
+ * 
+ * This method doesnt analyze corner cases and overflow of result. Be careful. 
+ * 
+ * @param frequency uint32_t frequency value in Hz. Should not be 0;
+ * 
+ * @return uint16_t timer0 ticks corresponding to frequency value
  * 
  * @ingroup timer0_to_ms
  */
-uint16_t timer_frequency_to_ticks(uint32_t frequency);
+uint16_t timer0_frequency_to_ticks_unsafe(uint32_t frequency);
 
 ///@}
 

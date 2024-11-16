@@ -27,10 +27,10 @@ uint32_t timer0_uint16_ticks_to_freq100(uint16_t ticks)
     return freq >> get_frequency_divider_scale();
 }
 
-uint16_t timer_frequency_to_ticks(uint32_t frequency)
+uint16_t timer0_frequency_to_ticks_unsafe(uint32_t frequency)
 {
     // TODO Corner cases for fequency parameter value
-    // TODO Use timer_clock_divider and get_frequency_divider_scale
-    uint16_t th_regs = 65536 - (get_master_clock_frequency() / (12 * 2 * frequency));
-    return 65535 - th_regs;
+    uint8_t timer_clock_divider = get_timer0_clock_divider();
+    uint16_t ticks = (get_master_clock_frequency() >> 1) / (frequency * timer_clock_divider);
+    return (ticks >> get_frequency_divider_scale());
 }
