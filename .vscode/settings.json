@@ -13,7 +13,9 @@
         "interrupt.h": "c",
         "stdint.h": "c",
         "timer2.h": "c",
-        "delay.h": "c"
+        "delay.h": "c",
+        "timer_to_ms.h": "c",
+        "stdlib.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
