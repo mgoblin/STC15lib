@@ -2,15 +2,18 @@
 #define STC15_TIMER_To_MSH
 
 /**
- * @file timer_to_ms.h
- * @defgroup timer_to_ms Timer Aux
- * @details Functions and data structures for converting timer ticks to frequency and times.
+ * @file timer0_to_ms.h
+ * @defgroup timer0_to_ms Timer0 Aux
+ * @details Functions and data structures for converting timer ticks 
+ * to frequency and times for timer0.
  * 
  * @author Michael Golovanov
 */
 
 #include <stdint.h>
 #include <frequency.h>
+#include <timer0_mode0.h>
+#include <timer_all.h>
 
 /** @name frequency and ticks
  *  ticks to frequency and vice versa convertions  
@@ -18,8 +21,10 @@
 ///@{
 
 /**
- * @brief Convert ticks to timer frequency.
- * @details The output frequency = (SYSclk/12)/((65536-ticks) * 2)
+ * @brief Convert ticks to timer frequency for timer0.
+ * @details The output frequency = (SYSclk/timer_clock_divider)/((65536-ticks) * 2).
+ * 
+ * Call this method after timer0 is initialized and MCU clock frequency divider scale is set.
  * 
  * uint16 ticks used in mode 0, 1, 3.
  * Low byte of ticks is used in mode 2. 
@@ -28,9 +33,9 @@
  * 
  * @return uint32_t frequency multiplied by 100 corresponding to ticks count 
  * 
- * @ingroup timer_to_ms
+ * @ingroup timer0_to_ms
  */
-uint32_t timer_uint16_ticks_to_freq(uint16_t ticks);
+uint32_t timer0_uint16_ticks_to_freq100(uint16_t ticks);
 
 /**
  * @brief Convert timer frequency to ticks. 
@@ -44,7 +49,7 @@ uint32_t timer_uint16_ticks_to_freq(uint16_t ticks);
  * regs = 65536 - (SYSclk/12) / (2 * frequency)
  * regs = 65535 - ticks
  * 
- * @ingroup timer_to_ms
+ * @ingroup timer0_to_ms
  */
 uint16_t timer_frequency_to_ticks(uint32_t frequency);
 

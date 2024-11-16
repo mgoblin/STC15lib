@@ -1,7 +1,7 @@
 var searchData=
 [
   ['timer_20all_0',['Timer All',['../group__timer__all.html',1,'']]],
-  ['timer_20aux_1',['Timer Aux',['../group__timer__to__ms.html',1,'']]],
+  ['timer0_20aux_1',['Timer0 Aux',['../group__timer0__to__ms.html',1,'']]],
   ['timer0_20mode0_2',['Timer0 Mode0',['../group__timer0__mode0.html',1,'']]],
   ['timer0_20mode1_3',['Timer0 Mode1',['../group__timer0__mode1.html',1,'']]],
   ['timer0_20mode2_4',['Timer0 Mode2',['../group__timer0__mode2.html',1,'']]],
@@ -44,16 +44,16 @@ var searchData=
   ['timer0_5fmode3_5freload_41',['timer0_mode3_reload',['../group__timer0__mode3.html#gac1d1b26c8977897b0c67e7a3b2f2b632',1,'timer0_mode3.h']]],
   ['timer0_5fmode3_5fstart_42',['timer0_mode3_start',['../group__timer0__mode3.html#ga998ffba506f9bf9d1e252b861d6bece8',1,'timer0_mode3.h']]],
   ['timer0_5fmode3_5fstop_43',['timer0_mode3_stop',['../group__timer0__mode3.html#ga839eddc877098991cce7ecfa3db28f68',1,'timer0_mode3.h']]],
-  ['timer2_20mode0_44',['Timer2 Mode0',['../group__timer2__mode0.html',1,'']]],
-  ['timer2_5fmode0_2eh_45',['timer2_mode0.h',['../timer2__mode0_8h.html',1,'']]],
-  ['timer2_5fmode0_5f12t_5finit_46',['timer2_mode0_12T_init',['../group__timer2__mode0.html#ga3f16895698879dc595d6ae71974dba2e',1,'timer2_mode0.h']]],
-  ['timer2_5fmode0_5f1t_5finit_47',['timer2_mode0_1T_init',['../group__timer2__mode0.html#gadf419f934a3f374993349e6a257ed29d',1,'timer2_mode0.h']]],
-  ['timer2_5fmode0_5fenablep30_5foutput_48',['timer2_mode0_enableP30_output',['../group__timer2__mode0.html#ga57ace2191bf6dbce66f831097636249d',1,'timer2_mode0.h']]],
-  ['timer2_5fmode0_5freload_49',['timer2_mode0_reload',['../group__timer2__mode0.html#ga607a922d8faac666c2dcddd233e0bab1',1,'timer2_mode0.h']]],
-  ['timer2_5fmode0_5fstart_50',['timer2_mode0_start',['../group__timer2__mode0.html#ga4896ed979b875120c708dee3dc0db480',1,'timer2_mode0.h']]],
-  ['timer2_5fmode0_5fstop_51',['timer2_mode0_stop',['../group__timer2__mode0.html#ga86d1f3d5c229e55f341ed316b21e71ab',1,'timer2_mode0.h']]],
-  ['timer_5fall_2eh_52',['timer_all.h',['../timer__all_8h.html',1,'']]],
-  ['timer_5ffrequency_5fto_5fticks_53',['timer_frequency_to_ticks',['../group__timer__to__ms.html#gac26860278e95de9e7daea806e7597dd7',1,'timer_frequency_to_ticks(uint32_t frequency):&#160;timer_to_ms.c'],['../group__timer__to__ms.html#gac26860278e95de9e7daea806e7597dd7',1,'timer_frequency_to_ticks(uint32_t frequency):&#160;timer_to_ms.c']]],
-  ['timer_5fto_5fms_2eh_54',['timer_to_ms.h',['../timer__to__ms_8h.html',1,'']]],
-  ['timer_5fuint16_5fticks_5fto_5ffreq_55',['timer_uint16_ticks_to_freq',['../group__timer__to__ms.html#ga55be6988ccfef0d6242bccb9287b8ab0',1,'timer_uint16_ticks_to_freq(uint16_t ticks):&#160;timer_to_ms.c'],['../group__timer__to__ms.html#ga55be6988ccfef0d6242bccb9287b8ab0',1,'timer_uint16_ticks_to_freq(uint16_t ticks):&#160;timer_to_ms.c']]]
+  ['timer0_5fto_5fms_2eh_44',['timer0_to_ms.h',['../timer0__to__ms_8h.html',1,'']]],
+  ['timer0_5fuint16_5fticks_5fto_5ffreq100_45',['timer0_uint16_ticks_to_freq100',['../group__timer0__to__ms.html#ga015940592f8cd8a0929642d982477a22',1,'timer0_uint16_ticks_to_freq100(uint16_t ticks):&#160;timer0_to_ms.c'],['../group__timer0__to__ms.html#ga015940592f8cd8a0929642d982477a22',1,'timer0_uint16_ticks_to_freq100(uint16_t ticks):&#160;timer0_to_ms.c']]],
+  ['timer2_20mode0_46',['Timer2 Mode0',['../group__timer2__mode0.html',1,'']]],
+  ['timer2_5fmode0_2eh_47',['timer2_mode0.h',['../timer2__mode0_8h.html',1,'']]],
+  ['timer2_5fmode0_5f12t_5finit_48',['timer2_mode0_12T_init',['../group__timer2__mode0.html#ga3f16895698879dc595d6ae71974dba2e',1,'timer2_mode0.h']]],
+  ['timer2_5fmode0_5f1t_5finit_49',['timer2_mode0_1T_init',['../group__timer2__mode0.html#gadf419f934a3f374993349e6a257ed29d',1,'timer2_mode0.h']]],
+  ['timer2_5fmode0_5fenablep30_5foutput_50',['timer2_mode0_enableP30_output',['../group__timer2__mode0.html#ga57ace2191bf6dbce66f831097636249d',1,'timer2_mode0.h']]],
+  ['timer2_5fmode0_5freload_51',['timer2_mode0_reload',['../group__timer2__mode0.html#ga607a922d8faac666c2dcddd233e0bab1',1,'timer2_mode0.h']]],
+  ['timer2_5fmode0_5fstart_52',['timer2_mode0_start',['../group__timer2__mode0.html#ga4896ed979b875120c708dee3dc0db480',1,'timer2_mode0.h']]],
+  ['timer2_5fmode0_5fstop_53',['timer2_mode0_stop',['../group__timer2__mode0.html#ga86d1f3d5c229e55f341ed316b21e71ab',1,'timer2_mode0.h']]],
+  ['timer_5fall_2eh_54',['timer_all.h',['../timer__all_8h.html',1,'']]],
+  ['timer_5ffrequency_5fto_5fticks_55',['timer_frequency_to_ticks',['../group__timer0__to__ms.html#gac26860278e95de9e7daea806e7597dd7',1,'timer_frequency_to_ticks(uint32_t frequency):&#160;timer0_to_ms.c'],['../group__timer0__to__ms.html#gac26860278e95de9e7daea806e7597dd7',1,'timer_frequency_to_ticks(uint32_t frequency):&#160;timer0_to_ms.c']]]
 ];

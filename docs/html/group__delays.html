@@ -93,7 +93,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    {                              \</div>
-<div class="line">    ms_div = ms / <a class="code hl_define" href="group__freq.html#gabec6924a99fc0c136d0d1d6de5f8bf52">get_frequency_divider</a>();          \</div>
+<div class="line">    ms_div = ms / get_frequency_divider();          \</div>
 <div class="line">    do                                              \</div>
 <div class="line">    {                                               \</div>
 <div class="line">       i = (<a class="code hl_define" href="group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b">get_master_clock_frequency</a>() / 13000);  \</div>
@@ -101,7 +101,6 @@ Macros</h2></td></tr>
 <div class="line">    } <span class="keywordflow">while</span> (--ms_div);                             \</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__freq_html_ga4b6a94e4ee8538e604d14f2a2b759d7b"><div class="ttname"><a href="group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b">get_master_clock_frequency</a></div><div class="ttdeci">#define get_master_clock_frequency()</div><div class="ttdef"><b>Definition:</b> frequency.h:23</div></div>
-<div class="ttc" id="agroup__freq_html_gabec6924a99fc0c136d0d1d6de5f8bf52"><div class="ttname"><a href="group__freq.html#gabec6924a99fc0c136d0d1d6de5f8bf52">get_frequency_divider</a></div><div class="ttdeci">#define get_frequency_divider()</div><div class="ttdef"><b>Definition:</b> frequency.h:52</div></div>
 </div><!-- fragment -->
 <p>Delays program flow using CPU nop. </p>
 <p >Using NOP CPU cycles to delay. Use delay_ms with care.</p>

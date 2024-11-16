@@ -82,9 +82,9 @@ $(function() {
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="group__freq.html#gaab28dddcfa288a3f7449bbf680e85414">   41</a></span><span class="preprocessor">#define get_master_clock_frequency_low_part() (MAIN_FoscL)</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="group__freq.html#gabec6924a99fc0c136d0d1d6de5f8bf52">   52</a></span><span class="preprocessor">#define get_frequency_divider() (1 &lt;&lt; (CLK_DIV &amp; 0x07))</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">   52</a></span><span class="preprocessor">#define get_frequency_divider_scale() (1 &lt;&lt; (CLK_DIV &amp; 0x07))</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="group__freq.html#ga3c0b9dad15150c932dcdfb329193cf85">   66</a></span><span class="preprocessor">#define set_frequency_divider_scaler(divider_scale)     \</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="group__freq.html#ga78fdcc336987b6447dec7b7480c4e9a8">   66</a></span><span class="preprocessor">#define set_frequency_divider_scale(divider_scale)      \</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">{                                                       \</span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">    if (divider_scale &lt; 8)                              \</span></div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">    {                                                   \</span></div>

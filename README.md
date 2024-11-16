@@ -49,6 +49,7 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 * Aux module covert ticks to frequency implemented 
 
 Next releases todo
+* Rename timer_all.h to timer_common.h
 * TODO timer2 get mode should not always return mode0 constant
 * TODO Implements timer2 baud rate mode
 * TODO Timer aux - set timers in terms of output signal freq and timings

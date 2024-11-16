@@ -49,7 +49,7 @@
  * 
  * @ingroup freq
  */
-#define get_frequency_divider() (1 << (CLK_DIV & 0x07))
+#define get_frequency_divider_scale() (1 << (CLK_DIV & 0x07))
 
 /**
  * @brief Update and get master clock frequency divider (CLK_DIV bits [0..2])
@@ -63,7 +63,7 @@
  * 
  * @ingroup freq
  */
-#define set_frequency_divider_scaler(divider_scale)     \
+#define set_frequency_divider_scale(divider_scale)      \
 {                                                       \
     if (divider_scale < 8)                              \
     {                                                   \

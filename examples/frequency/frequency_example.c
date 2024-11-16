@@ -6,7 +6,7 @@
 
 void main()
 {
-    set_frequency_divider_scaler(7); // set system clock value to master clock / 128
+    set_frequency_divider_scale(7); // set system clock value to master clock / 128
 
     while (1)
     {

@@ -2,7 +2,7 @@ var searchData=
 [
   ['get_5fadc_5finterrupt_5fpriority_0',['get_adc_interrupt_priority',['../group__interrupts.html#gad657770c0ca0c4561bbe0370c219020d',1,'interrupt.h']]],
   ['get_5fchipid_1',['get_chipid',['../group__chip__id.html#ga73068c6cf5d5b5fd06172a8e60a066a1',1,'chip_id.h']]],
-  ['get_5ffrequency_5fdivider_2',['get_frequency_divider',['../group__freq.html#gabec6924a99fc0c136d0d1d6de5f8bf52',1,'frequency.h']]],
+  ['get_5ffrequency_5fdivider_5fscale_2',['get_frequency_divider_scale',['../group__freq.html#ga2282854ce7886421e523f6d8f8467fae',1,'frequency.h']]],
   ['get_5fint0_5finterrupt_5fpriority_3',['get_int0_interrupt_priority',['../group__interrupts.html#gaad8983bc0b980226f8a20ea91576f224',1,'interrupt.h']]],
   ['get_5fint0_5finterrupt_5ftrigger_4',['get_int0_interrupt_trigger',['../group__interrupts.html#gafa1390efc7ccf39edab668888d503995',1,'interrupt.h']]],
   ['get_5fint1_5finterrupt_5fpriority_5',['get_int1_interrupt_priority',['../group__interrupts.html#ga00c71c291d049d66e03de830a21cbe29',1,'interrupt.h']]],

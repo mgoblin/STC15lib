@@ -1,7 +1,7 @@
 var searchData=
 [
   ['set_5fadc_5finterrupt_5fpriority_0',['set_adc_interrupt_priority',['../group__interrupts.html#gac3ad7282866c58628f44b746ec2da56f',1,'interrupt.h']]],
-  ['set_5ffrequency_5fdivider_5fscaler_1',['set_frequency_divider_scaler',['../group__freq.html#ga3c0b9dad15150c932dcdfb329193cf85',1,'frequency.h']]],
+  ['set_5ffrequency_5fdivider_5fscale_1',['set_frequency_divider_scale',['../group__freq.html#ga78fdcc336987b6447dec7b7480c4e9a8',1,'frequency.h']]],
   ['set_5fint0_5finterrupt_5fpriority_2',['set_int0_interrupt_priority',['../group__interrupts.html#gadc1f845094582635951872311de9f1f4',1,'interrupt.h']]],
   ['set_5fint0_5finterrupt_5ftrigger_3',['set_int0_interrupt_trigger',['../group__interrupts.html#gae83d9bb9ef89de5990b742de004f8ed5',1,'interrupt.h']]],
   ['set_5fint1_5finterrupt_5fpriority_4',['set_int1_interrupt_priority',['../group__interrupts.html#gafcf2592c8e8e557e3ba9eab108c34ce9',1,'interrupt.h']]],
