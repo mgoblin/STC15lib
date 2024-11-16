@@ -71,13 +71,37 @@ $(function() {
  </p>
 </td></tr>
 <tr class="memitem:ga55be6988ccfef0d6242bccb9287b8ab0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#ga55be6988ccfef0d6242bccb9287b8ab0">timer_uint16_ticks_to_freq</a> (uint16_t ticks)</td></tr>
-<tr class="memdesc:ga55be6988ccfef0d6242bccb9287b8ab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert ticks to PIN output meander frequency.  <a href="group__timer__to__ms.html#ga55be6988ccfef0d6242bccb9287b8ab0">More...</a><br /></td></tr>
+<tr class="memdesc:ga55be6988ccfef0d6242bccb9287b8ab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert ticks to timer frequency.  <a href="group__timer__to__ms.html#ga55be6988ccfef0d6242bccb9287b8ab0">More...</a><br /></td></tr>
 <tr class="separator:ga55be6988ccfef0d6242bccb9287b8ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac26860278e95de9e7daea806e7597dd7"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#gac26860278e95de9e7daea806e7597dd7">timer_frequency_to_ticks</a> (uint32_t frequency)</td></tr>
+<tr class="memdesc:gac26860278e95de9e7daea806e7597dd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert timer frequency to ticks.  <a href="group__timer__to__ms.html#gac26860278e95de9e7daea806e7597dd7">More...</a><br /></td></tr>
+<tr class="separator:gac26860278e95de9e7daea806e7597dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for converting timer ticks to frequency and times.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="gac26860278e95de9e7daea806e7597dd7" name="gac26860278e95de9e7daea806e7597dd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac26860278e95de9e7daea806e7597dd7">&#9670;&nbsp;</a></span>timer_frequency_to_ticks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t timer_frequency_to_ticks </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>frequency</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert timer frequency to ticks. </p>
+<p >The output frequency = (SYSclk/12)/((65536 - [regs]) * 2) frequency/(SYSclk/12) = 1/((65536- regs) * 2) (((65536- regs) * 2) * frequency)/(SYSclk/12) = 1 ((65536- regs) * 2) * frequency = (SYSclk/12) (65536- regs) * 2 = (SYSclk/12) / frequency 65536 - regs = (SYSclk/12) / (2 * frequency) -regs = (SYSclk/12) / (2 * frequency) - 65536 regs = 65536 - (SYSclk/12) / (2 * frequency) regs = 65535 - ticks </p>
+
+</div>
+</div>
 <a id="ga55be6988ccfef0d6242bccb9287b8ab0" name="ga55be6988ccfef0d6242bccb9287b8ab0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga55be6988ccfef0d6242bccb9287b8ab0">&#9670;&nbsp;</a></span>timer_uint16_ticks_to_freq()</h2>
 
@@ -94,9 +118,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p>Convert ticks to PIN output meander frequency. </p>
-<p >The output frequency = (SYSclk/12)/((65536-[RL_TH0, RL_TL0]) * 2) Frequency is biased by MCU clock frequency divider.</p>
-<p >uint16 ticks used in mode 0, 1, 3</p>
+<p>Convert ticks to timer frequency. </p>
+<p >The output frequency = (SYSclk/12)/((65536-ticks) * 2)</p>
+<p >uint16 ticks used in mode 0, 1, 3. Low byte of ticks is used in mode 2.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ticks</td><td>timer ticks count to covert</td></tr>

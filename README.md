@@ -52,6 +52,5 @@ Next releases todo
 * TODO timer2 get mode should not always return mode0 constant
 * TODO Implements timer2 baud rate mode
 * TODO Timer aux - set timers in terms of output signal freq and timings
-* TODO Timers aux should not biased from CPU frequency dividers
 * TODO Counters
 
