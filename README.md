@@ -46,8 +46,8 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 0.6
 * timer0 mode 0,1,2,3 module full implementation
 * timer2 mode0 module full implementation
-* Aux module covert ticks to frequency implemented for timer0 
-* Aux module covert timer0 frequency to ticks implemented (need describe example)
+* Aux module convert ticks to frequency implemented for timer0 
+* Aux module convert timer0 frequency to ticks implemented (need describe example)
 
 Next releases todo
 * TODO Describe aux module timer0_12T_ticks_example.c
