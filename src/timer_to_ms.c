@@ -3,7 +3,7 @@
 uint32_t timer0_mode0_to_freq(uint16_t ticks)
 {
     // When T0 in 12T mode (AUXR.7/T0x12=1), 
-    // the output frequency = (SYSclk/12)/(65536-[RL_TH0, RL_TL0])/2
+    // the output frequency = (SYSclk/12)/((65536-[RL_TH0, RL_TL0]) * 2)
 
     // TH0 = 0xff and HL = 0xff. 65536-[RL_TH0, RL_TL0] = 1
     // Frequency = SysClk/24.

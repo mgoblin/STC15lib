@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>STC15W408AS library: examples/frequency Directory Reference</title>
+<title>STC15W408AS library: Timer Aux</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,6 +46,7 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,25 +61,50 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_d28a4824dc47e487b107a5db32ef43c4.html">examples</a></li><li class="navelem"><a class="el" href="dir_022c70a4c242b590c6b5b9f5062478fb.html">frequency</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">frequency Directory Reference</div></div>
+  <div class="headertitle"><div class="title">Timer Aux</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Directory dependency graph for frequency:</div>
-<div class="dyncontent">
-<div class="center"><img src="dir_022c70a4c242b590c6b5b9f5062478fb_dep.png" border="0" usemap="#adir__022c70a4c242b590c6b5b9f5062478fb__dep" alt="examples/frequency"/></div>
-<map name="adir__022c70a4c242b590c6b5b9f5062478fb__dep" id="adir__022c70a4c242b590c6b5b9f5062478fb__dep">
-<area shape="rect" href="dir_022c70a4c242b590c6b5b9f5062478fb.html" title="frequency" alt="" coords="27,52,114,100"/>
-<area shape="rect" href="dir_d44c64559bbebec7f509842c48db8b23.html" title="include" alt="" coords="35,148,107,196"/>
-<area shape="rect" href="dir_000010_000011.html" title="7" alt="" coords="74,122,84,137"/>
-<area shape="rect" href="dir_d28a4824dc47e487b107a5db32ef43c4.html" title="examples" alt="" coords="16,16,125,111"/>
-</map>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">frequency and ticks</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p >ticks to frequency and vice versa convertions <br  />
+ </p>
+</td></tr>
+<tr class="memitem:gaaeb0f90ebda36850ac8a5353a866329d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#gaaeb0f90ebda36850ac8a5353a866329d">timer0_mode0_to_freq</a> (uint16_t ticks)</td></tr>
+<tr class="memdesc:gaaeb0f90ebda36850ac8a5353a866329d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert ticks to PIN output meander frequency.  <a href="group__timer__to__ms.html#gaaeb0f90ebda36850ac8a5353a866329d">More...</a><br /></td></tr>
+<tr class="separator:gaaeb0f90ebda36850ac8a5353a866329d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p >Functions and data structures for converting timer ticks to frequency and times.</p>
+<dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gaaeb0f90ebda36850ac8a5353a866329d" name="gaaeb0f90ebda36850ac8a5353a866329d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaeb0f90ebda36850ac8a5353a866329d">&#9670;&nbsp;</a></span>timer0_mode0_to_freq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t timer0_mode0_to_freq </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>ticks</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert ticks to PIN output meander frequency. </p>
+<p >The output frequency = (SYSclk/12)/((65536-[RL_TH0, RL_TL0]) * 2) Frequency is biased by MCU clock frequency divider.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ticks</td><td>timer ticks count to covert</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>uint32_t frequency corresponding to ticks count </dd></dl>
+
+</div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
