@@ -41,15 +41,26 @@
 #define get_master_clock_frequency_low_part() (MAIN_FoscL)
 
 /**
- * Get master clock frequency divider (CLK_DIV bits [0..2])
+ * Get master clock frequency divider (1 << CLK_DIV bits [0..2])
  * 
  * @return master clock frequency divider. Divider values range is from 1 to 128.
  * 
- * @see update_and_get_frequency_divider(uint8_t divider_scale)
+ * @see get_frequency_divider_scale(uint8_t divider_scale)
  * 
  * @ingroup freq
  */
-#define get_frequency_divider_scale() (1 << (CLK_DIV & 0x07))
+#define get_frequency_divider() (1 << (CLK_DIV & 0x07))
+
+/**
+ * Get master clock frequency divider scale (CLK_DIV bits [0..2])
+ * 
+ * @return master clock frequency divider scale. Divider scale range is from 0 to 7.
+ * 
+ * @see get_frequency_divider_scale(uint8_t divider_scale)
+ * 
+ * @ingroup freq
+ */
+#define get_frequency_divider_scale() (CLK_DIV & 0x07)
 
 /**
  * @brief Update and get master clock frequency divider (CLK_DIV bits [0..2])

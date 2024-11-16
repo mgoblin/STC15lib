@@ -19,11 +19,12 @@ uint32_t timer0_uint16_ticks_to_freq100(uint16_t ticks)
     // Mesurement result is 7.041 Hz
     // high pin time is 71.01 milli sec, low pin time is 7.02 milli sec
 
-    uint8_t timer_clock_divider = get_timer0_clock_divider();
-    uint32_t ticks_divider = 1 + (uint32_t)ticks;
-    uint32_t freq = get_master_clock_frequency() / (2 * timer_clock_divider * ticks_divider);
+    uint32_t ticks_divider = 1;
+    ticks_divider += (uint32_t)ticks;
+    uint8_t timer_clock_divider = get_timer0_clock_divider() << 1;
+    uint32_t freq = 100 * get_master_clock_frequency() / (timer_clock_divider * ticks_divider);
     
-    return (100 * freq) / get_frequency_divider_scale();
+    return freq >> get_frequency_divider_scale();
 }
 
 uint16_t timer_frequency_to_ticks(uint32_t frequency)

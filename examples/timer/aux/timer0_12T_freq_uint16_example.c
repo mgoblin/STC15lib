@@ -31,7 +31,7 @@ void main()
     timer0_mode0_start(TICKS);
     
     while (1) {
-        delay_ms(300);
+        delay_ms(2000);
         printf_tiny("Frequency: %s / 100 Hz\n", fstr);
     }
 }
