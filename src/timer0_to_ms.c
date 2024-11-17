@@ -1,5 +1,15 @@
 #include <timer0_to_ms.h>
 
+uint32_t timer_uint16_ticks_to_freq100
+(
+    uint16_t ticks, 
+    uint8_t timer_clock_divider,
+    uint8_t frequency_divider_scale
+)
+{
+    return (100 * get_master_clock_frequency() / ((timer_clock_divider << 1) * (1 + (uint32_t)ticks))) >> frequency_divider_scale;
+}
+
 uint32_t timer0_uint16_ticks_to_freq100(uint16_t ticks)
 {
     // When timer0 in 12T mode (AUXR.7/T0x12=1), 
@@ -19,12 +29,11 @@ uint32_t timer0_uint16_ticks_to_freq100(uint16_t ticks)
     // Mesurement result is 7.041 Hz
     // high pin time is 71.01 milli sec, low pin time is 7.02 milli sec
 
-    uint32_t ticks_divider = 1;
-    ticks_divider += (uint32_t)ticks;
-    uint8_t timer_clock_divider = get_timer0_clock_divider() << 1;
-    uint32_t freq = 100 * get_master_clock_frequency() / (timer_clock_divider * ticks_divider);
-    
-    return freq >> get_frequency_divider_scale();
+    return timer_uint16_ticks_to_freq100(
+        ticks, 
+        get_timer0_clock_divider(), 
+        get_frequency_divider_scale()
+    );
 }
 
 uint16_t timer0_frequency_to_ticks_unsafe(uint32_t frequency)

@@ -20,6 +20,13 @@
  */
 ///@{
 
+uint32_t timer_uint16_ticks_to_freq100
+(
+    uint16_t ticks, 
+    uint8_t timer_clock_divider,
+    uint8_t frequency_divider_scale
+);
+
 /**
  * @brief Convert ticks to timer frequency for timer0 multiplied by 100.
  * @details The output frequency = (SYSclk/timer_clock_divider)/((65536-ticks) * 2).
