@@ -51,7 +51,7 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 * timer_all.h to timer_common.h renamed
 
 Next releases todo
-* TODO Implement 1T aux module examples
+* TODO Implement 1T timer0 aux module examples
 * TODO Calculate frequency ranges for 12T/1T timer dividers and MCU clock scalers  
 * TODO Make safe to overfows version of timer0_frequency_to_ticks_unsafe
 * TODO Implement ticks to times part of aux module
