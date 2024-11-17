@@ -16,7 +16,7 @@
 #include <timer_common.h>
 
 /** @name frequency and ticks
- *  ticks to frequency and vice versa convertions  
+ *  Timer ticks to frequency and vice versa convertions  
  */
 ///@{
 
@@ -45,7 +45,7 @@ uint32_t timer0_uint16_ticks_to_freq100(uint16_t ticks);
  * 
  * Call this method after timer0 is initialized and MCU clock frequency divider scale is set.
  * 
- * This method doesnt analyze corner cases and overflow of result. Be careful. 
+ * <b>This method doesnt analyze corner cases and overflow of result. Be careful.</b> 
  * 
  * @param frequency uint32_t frequency value in Hz. Should not be 0;
  * 
