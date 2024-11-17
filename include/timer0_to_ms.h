@@ -59,7 +59,7 @@ uint32_t timer_uint16_ticks_to_freq100
  * 
  * @ingroup timer0_to_ms
  */
-uint32_t timer0_uint16_ticks_to_freq100(uint16_t ticks);
+#define timer0_uint16_ticks_to_freq100(ticks) (timer_uint16_ticks_to_freq100(ticks, get_timer0_clock_divider(), get_frequency_divider_scale()))
 
 /**
  * @brief Unsafe approximation timer frequency corresponding to ticks. 
