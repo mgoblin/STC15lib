@@ -52,6 +52,7 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 
 Next releases todo
 * TODO Describe aux module timer0_12T_ticks_example.c
+* TODO Implement 1T aux module examples
 * TODO Make safe to overfows version of timer0_frequency_to_ticks_unsafe
 * TODO Generalize aux module timer0* methods to timer2 
 * TODO timer2 get mode should not always return mode0 constant
