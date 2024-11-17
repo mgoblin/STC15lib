@@ -20,6 +20,22 @@
  */
 ///@{
 
+/**
+ * @brief Convert ticks to timer frequency multiplied by 100.
+ * @details The output frequency = (SYSclk/timer_clock_divider)/((65536-ticks) * 2).
+ * Multiplication by 100 is used for get frequency value without using float numbers.
+ * 
+ * uint16 ticks used in mode 0, 1, 3.
+ * Low byte of ticks is used in mode 2. 
+ * 
+ * @param ticks uint16_t timer ticks count to covert
+ * @param timer_clock_divider uint8_t timer clock divider T12 or T1
+ * @param frequency_divider_scale uint8_t mcu frequency divider scale 0..7
+ * 
+ * @return uint32_t frequency multiplied by 100 corresponding to ticks count 
+ * 
+ * @ingroup timer0_to_ms
+ */
 uint32_t timer_uint16_ticks_to_freq100
 (
     uint16_t ticks, 
@@ -37,7 +53,7 @@ uint32_t timer_uint16_ticks_to_freq100
  * uint16 ticks used in mode 0, 1, 3.
  * Low byte of ticks is used in mode 2. 
  * 
- * @param ticks timer ticks count to covert
+ * @param ticks uint16_t timer ticks count to covert
  * 
  * @return uint32_t frequency multiplied by 100 corresponding to ticks count 
  * 
