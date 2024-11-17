@@ -1,4 +1,4 @@
-#include <timer0_to_ms.h>
+#include <timer2_to_ms.h>
 
 #include <frequency.h>
 #include <delay.h>
