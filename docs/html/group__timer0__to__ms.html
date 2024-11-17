@@ -79,6 +79,9 @@ $(function() {
 <tr class="memitem:gac123fbb19f13962e20c7d2761f1a10a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__to__ms.html#gac123fbb19f13962e20c7d2761f1a10a0">timer0_uint16_ticks_to_freq100</a>(ticks)&#160;&#160;&#160;(<a class="el" href="group__timer0__to__ms.html#ga14f7d4df89dcdde42466faa8b65c4756">timer_uint16_ticks_to_freq100</a>(ticks, <a class="el" href="group__timer__common.html#gac2f34fcd6ffbec0a91510385d3286f70">get_timer0_clock_divider</a>(), <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td></tr>
 <tr class="memdesc:gac123fbb19f13962e20c7d2761f1a10a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert ticks to timer frequency for timer0 multiplied by 100.  <a href="group__timer0__to__ms.html#gac123fbb19f13962e20c7d2761f1a10a0">More...</a><br /></td></tr>
 <tr class="separator:gac123fbb19f13962e20c7d2761f1a10a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab91deb5b06b8decf78783fb7484bef3e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__to__ms.html#gab91deb5b06b8decf78783fb7484bef3e">timer2_uint16_ticks_to_freq100</a>(ticks)&#160;&#160;&#160;(<a class="el" href="group__timer0__to__ms.html#ga14f7d4df89dcdde42466faa8b65c4756">timer_uint16_ticks_to_freq100</a>(ticks, <a class="el" href="group__timer__common.html#ga4259384552df325973b81bd5425b7f4a">get_timer2_clock_divider</a>(), <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td></tr>
+<tr class="memdesc:gab91deb5b06b8decf78783fb7484bef3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert ticks to timer frequency for timer2 multiplied by 100.  <a href="group__timer0__to__ms.html#gab91deb5b06b8decf78783fb7484bef3e">More...</a><br /></td></tr>
+<tr class="separator:gab91deb5b06b8decf78783fb7484bef3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for converting timer ticks to frequency and times for timer0.</p>
@@ -104,6 +107,35 @@ $(function() {
 <p >The output frequency = (SYSclk/timer_clock_divider)/((65536-ticks) * 2). Multiplication by 100 is used for get frequency value without using float numbers.</p>
 <p >Call this method after timer0 is initialized and MCU clock frequency divider scale is set.</p>
 <p >uint16 ticks used in mode 0, 1, 3. Low byte of ticks is used in mode 2.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ticks</td><td>uint16_t timer ticks count to covert</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>uint32_t frequency multiplied by 100 corresponding to ticks count </dd></dl>
+
+</div>
+</div>
+<a id="gab91deb5b06b8decf78783fb7484bef3e" name="gab91deb5b06b8decf78783fb7484bef3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab91deb5b06b8decf78783fb7484bef3e">&#9670;&nbsp;</a></span>timer2_uint16_ticks_to_freq100</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer2_uint16_ticks_to_freq100</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ticks</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="group__timer0__to__ms.html#ga14f7d4df89dcdde42466faa8b65c4756">timer_uint16_ticks_to_freq100</a>(ticks, <a class="el" href="group__timer__common.html#ga4259384552df325973b81bd5425b7f4a">get_timer2_clock_divider</a>(), <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert ticks to timer frequency for timer2 multiplied by 100. </p>
+<p >The output frequency = (SYSclk/timer_clock_divider)/((65536-ticks) * 2). Multiplication by 100 is used for get frequency value without using float numbers.</p>
+<p >Call this method after timer2 is initialized and MCU clock frequency divider scale is set.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ticks</td><td>uint16_t timer ticks count to covert</td></tr>

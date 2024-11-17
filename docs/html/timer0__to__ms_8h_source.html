@@ -75,26 +75,30 @@ $(function() {
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;<a class="code" href="frequency_8h.html">frequency.h</a>&gt;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;<a class="code" href="timer0__mode0_8h.html">timer0_mode0.h</a>&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;<a class="code" href="timer__common_8h.html">timer_common.h</a>&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>uint32_t <a class="code hl_function" href="group__timer0__to__ms.html#ga14f7d4df89dcdde42466faa8b65c4756">timer_uint16_ticks_to_freq100</a></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>(</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    uint16_t ticks, </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    uint8_t timer_clock_divider,</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    uint8_t frequency_divider_scale</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="group__timer0__to__ms.html#gac123fbb19f13962e20c7d2761f1a10a0">   62</a></span><span class="preprocessor">#define timer0_uint16_ticks_to_freq100(ticks) (timer_uint16_ticks_to_freq100(ticks, get_timer0_clock_divider(), get_frequency_divider_scale()))</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>uint16_t <a class="code hl_function" href="group__timer0__to__ms.html#gaee4b3caa380e8a924e37a26566f4a342">timer0_frequency_to_ticks_unsafe</a>(uint32_t frequency);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;<a class="code" href="timer2__mode0_8h.html">timer2_mode0.h</a>&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="timer__common_8h.html">timer_common.h</a>&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>uint32_t <a class="code hl_function" href="group__timer0__to__ms.html#ga14f7d4df89dcdde42466faa8b65c4756">timer_uint16_ticks_to_freq100</a></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>(</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    uint16_t ticks, </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    uint8_t timer_clock_divider,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    uint8_t frequency_divider_scale</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="group__timer0__to__ms.html#gac123fbb19f13962e20c7d2761f1a10a0">   63</a></span><span class="preprocessor">#define timer0_uint16_ticks_to_freq100(ticks) (timer_uint16_ticks_to_freq100(ticks, get_timer0_clock_divider(), get_frequency_divider_scale()))</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="group__timer0__to__ms.html#gab91deb5b06b8decf78783fb7484bef3e">   78</a></span><span class="preprocessor">#define timer2_uint16_ticks_to_freq100(ticks) (timer_uint16_ticks_to_freq100(ticks, get_timer2_clock_divider(), get_frequency_divider_scale()))</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>uint16_t <a class="code hl_function" href="group__timer0__to__ms.html#gaee4b3caa380e8a924e37a26566f4a342">timer0_frequency_to_ticks_unsafe</a>(uint32_t frequency);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="afrequency_8h_html"><div class="ttname"><a href="frequency_8h.html">frequency.h</a></div></div>
 <div class="ttc" id="agroup__timer0__to__ms_html_ga14f7d4df89dcdde42466faa8b65c4756"><div class="ttname"><a href="group__timer0__to__ms.html#ga14f7d4df89dcdde42466faa8b65c4756">timer_uint16_ticks_to_freq100</a></div><div class="ttdeci">uint32_t timer_uint16_ticks_to_freq100(uint16_t ticks, uint8_t timer_clock_divider, uint8_t frequency_divider_scale)</div><div class="ttdoc">Convert ticks to timer frequency multiplied by 100.</div><div class="ttdef"><b>Definition:</b> timer0_to_ms.c:4</div></div>
 <div class="ttc" id="agroup__timer0__to__ms_html_gaee4b3caa380e8a924e37a26566f4a342"><div class="ttname"><a href="group__timer0__to__ms.html#gaee4b3caa380e8a924e37a26566f4a342">timer0_frequency_to_ticks_unsafe</a></div><div class="ttdeci">uint16_t timer0_frequency_to_ticks_unsafe(uint32_t frequency)</div><div class="ttdoc">Unsafe approximation timer frequency corresponding to ticks.</div><div class="ttdef"><b>Definition:</b> timer0_to_ms.c:13</div></div>
 <div class="ttc" id="atimer0__mode0_8h_html"><div class="ttname"><a href="timer0__mode0_8h.html">timer0_mode0.h</a></div></div>
+<div class="ttc" id="atimer2__mode0_8h_html"><div class="ttname"><a href="timer2__mode0_8h.html">timer2_mode0.h</a></div></div>
 <div class="ttc" id="atimer__common_8h_html"><div class="ttname"><a href="timer__common_8h.html">timer_common.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
