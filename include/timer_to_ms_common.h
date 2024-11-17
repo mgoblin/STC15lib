@@ -10,6 +10,10 @@
  * @author Michael Golovanov
 */
 
+#include <stdint.h>
+#include <frequency.h>
+#include <timer_to_ms_common.h>
+
 /**
  * @brief Convert ticks to timer frequency multiplied by 100.
  * @details The output frequency = (SYSclk/timer_clock_divider)/((65536-ticks) * 2).
@@ -28,5 +32,6 @@
  */
 #define timer_uint16_ticks_to_freq100(ticks, timer_clock_divider, frequency_divider_scale) ((100 * get_master_clock_frequency() / ((timer_clock_divider << 1) * (1 + (uint32_t)ticks))) >> frequency_divider_scale)
 
+#define timer_frequency_to_ticks_unsafe(frequency, timer_clock_divider, frequency_divider_scale) (((get_master_clock_frequency() >> 1) / (frequency * timer_clock_divider)) >> frequency_divider_scale)
 
 #endif

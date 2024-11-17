@@ -1,6 +1,7 @@
 <map id="include/frequency.h" name="include/frequency.h">
-<area shape="rect" id="node1" title=" " alt="" coords="161,5,309,32"/>
-<area shape="rect" id="node2" href="$delay_8h.html" title=" " alt="" coords="5,80,124,107"/>
-<area shape="rect" id="node3" href="$timer0__to__ms_8h.html" title=" " alt="" coords="148,80,323,107"/>
-<area shape="rect" id="node4" href="$timer2__to__ms_8h.html" title=" " alt="" coords="347,80,521,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="145,5,293,32"/>
+<area shape="rect" id="node2" href="$delay_8h.html" title=" " alt="" coords="5,87,124,114"/>
+<area shape="rect" id="node3" href="$timer0__to__ms_8h.html" title=" " alt="" coords="101,169,276,196"/>
+<area shape="rect" id="node4" href="$timer2__to__ms_8h.html" title=" " alt="" coords="313,169,488,196"/>
+<area shape="rect" id="node5" href="$timer__to__ms__common_8h.html" title=" " alt="" coords="199,80,354,121"/>
 </map>

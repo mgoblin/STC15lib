@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['timer0_5ffrequency_5fto_5fticks_5funsafe_0',['timer0_frequency_to_ticks_unsafe',['../group__timer0__to__ms.html#gaee4b3caa380e8a924e37a26566f4a342',1,'timer0_frequency_to_ticks_unsafe(uint32_t frequency):&#160;timer0_to_ms.c'],['../group__timer0__to__ms.html#gaee4b3caa380e8a924e37a26566f4a342',1,'timer0_frequency_to_ticks_unsafe(uint32_t frequency):&#160;timer0_to_ms.c']]]
+  ['uart_5finit_0',['uart_init',['../group__uart.html#gaaf8803da40d227f3da866bfe760011f0',1,'uart_init(uint32_t uart_baudrate):&#160;uart.c'],['../group__uart.html#gaaf8803da40d227f3da866bfe760011f0',1,'uart_init(uint32_t uart_baudrate):&#160;uart.c']]],
+  ['uart_5freceive_5fbyte_1',['uart_receive_byte',['../group__uart.html#gaa51e1ff0032e597db706ea1cdbb41bf4',1,'uart_receive_byte():&#160;uart.c'],['../group__uart.html#gaa51e1ff0032e597db706ea1cdbb41bf4',1,'uart_receive_byte():&#160;uart.c']]],
+  ['uart_5fsend_5fbyte_2',['uart_send_byte',['../group__uart.html#ga8c06afe2f1e393776650ebe7f0b336f2',1,'uart_send_byte(uint8_t data):&#160;uart.c'],['../group__uart.html#ga8c06afe2f1e393776650ebe7f0b336f2',1,'uart_send_byte(uint8_t data):&#160;uart.c']]]
 ];

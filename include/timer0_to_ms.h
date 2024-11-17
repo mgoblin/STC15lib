@@ -54,7 +54,7 @@
  * 
  * @ingroup timer0_to_ms
  */
-uint16_t timer0_frequency_to_ticks_unsafe(uint32_t frequency);
+#define timer0_frequency_to_ticks_unsafe(frequency) (timer_frequency_to_ticks_unsafe(frequency, get_timer0_clock_divider(), get_frequency_divider_scale()))
 
 ///@}
 
