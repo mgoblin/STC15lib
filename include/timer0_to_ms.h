@@ -37,12 +37,7 @@
  * 
  * @ingroup timer0_to_ms
  */
-uint32_t timer_uint16_ticks_to_freq100
-(
-    uint16_t ticks, 
-    uint8_t timer_clock_divider,
-    uint8_t frequency_divider_scale
-);
+#define timer_uint16_ticks_to_freq100(ticks, timer_clock_divider, frequency_divider_scale) ((100 * get_master_clock_frequency() / ((timer_clock_divider << 1) * (1 + (uint32_t)ticks))) >> frequency_divider_scale)
 
 /**
  * @brief Convert ticks to timer frequency for timer0 multiplied by 100.

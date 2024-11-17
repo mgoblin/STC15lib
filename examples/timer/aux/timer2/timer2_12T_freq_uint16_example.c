@@ -7,7 +7,7 @@
 #include <stdlib.h>
 
 #define LED P10
-#define TICKS 0xffff
+#define TICKS 0 //0xffff
 
 void timerISR() __interrupt(1)
 {
