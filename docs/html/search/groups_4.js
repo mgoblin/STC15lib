@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['timer_20all_0',['Timer All',['../group__timer__all.html',1,'']]],
+  ['timer_20common_0',['Timer common',['../group__timer__common.html',1,'']]],
   ['timer0_20aux_1',['Timer0 Aux',['../group__timer0__to__ms.html',1,'']]],
   ['timer0_20mode0_2',['Timer0 Mode0',['../group__timer0__mode0.html',1,'']]],
   ['timer0_20mode1_3',['Timer0 Mode1',['../group__timer0__mode1.html',1,'']]],

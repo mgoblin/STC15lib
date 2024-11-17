@@ -4,7 +4,7 @@
 /**
  * @brief Timer clock divider values enum
  * 
- * @ingroup timer
+ * @ingroup timer_common
  */
 typedef enum 
 {
@@ -13,11 +13,5 @@ typedef enum
     /// Sysclk/12
     T12 = 12
 } timer_clock_divider_t;
-
-/**
- * @brief Timer clock start status enum
- * 
- * @ingroup timer
- */
 
 #endif

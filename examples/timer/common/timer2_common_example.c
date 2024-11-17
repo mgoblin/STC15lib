@@ -1,5 +1,5 @@
 #include <sys.h>
-#include <timer_all.h>
+#include <timer_common.h>
 #include <delay.h>
 #include <uart.h>
 

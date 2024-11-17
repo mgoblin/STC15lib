@@ -2,8 +2,8 @@
 #define STC15_TIMERH
 
 /**
- * @file timer_all.h
- * @defgroup timer_all Timer All
+ * @file timer_common.h
+ * @defgroup timer_common Timer common
  * @details Common functions and data structures for timers.
  * 
  * @author Michael Golovanov
@@ -18,7 +18,7 @@
  * 
  * @return timer0 mode in range from 0 to 3
  * 
- * @ingroup timer_all
+ * @ingroup timer_common
  */
 #define get_timer0_mode() (TMOD & 0x03)
 
@@ -27,7 +27,7 @@
  * 
  * @return timer0 clock divider
  * 
- * @ingroup timer_all
+ * @ingroup timer_common
  */
 #define get_timer0_clock_divider() (test_if_bit_cleared(AUXR, 7) ? T12 : T1)
 
@@ -45,7 +45,7 @@
  * 
  * @return timer2 mode. Timer2 have only mode0.
  * 
- * @ingroup timer_all
+ * @ingroup timer_common
  */
 #define get_timer2_mode() (test_if_bit_set(AUXR, 0))
 
@@ -54,7 +54,7 @@
  * 
  * @return timer2 clock divider
  * 
- * @ingroup timer_all
+ * @ingroup timer_common
  */
 #define get_timer2_clock_divider() (test_if_bit_cleared(AUXR, 2) ? T12 : T1)
 

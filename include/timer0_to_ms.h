@@ -13,7 +13,7 @@
 #include <stdint.h>
 #include <frequency.h>
 #include <timer0_mode0.h>
-#include <timer_all.h>
+#include <timer_common.h>
 
 /** @name frequency and ticks
  *  ticks to frequency and vice versa convertions  
