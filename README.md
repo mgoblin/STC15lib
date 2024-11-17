@@ -54,6 +54,7 @@ Next releases todo
 * TODO Implement 1T aux module examples
 * TODO Calculate frequency ranges for 12T/1T timer dividers and MCU clock scalers  
 * TODO Make safe to overfows version of timer0_frequency_to_ticks_unsafe
+* TODO Implement ticks to times part of aux module
 * TODO Generalize aux module timer0* methods to timer2
 * TODO Add example links to module documentation 
 * TODO timer2 get mode should not always return mode0 constant
