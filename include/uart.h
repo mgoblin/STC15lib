@@ -27,7 +27,7 @@ void uart1_init(uint32_t uart_baudrate);
  * 
  * @ingroup uart
  */
-void uart_send_byte(uint8_t data);
+void uart1_send_byte(uint8_t data);
 
 /**
  * @brief Receive byte from UART

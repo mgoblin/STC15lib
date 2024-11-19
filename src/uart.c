@@ -9,7 +9,7 @@ void uart1_init(uint32_t uart_baudrate)
     AUXR |= 0x01; 
 }
 
-void uart_send_byte(uint8_t data)
+void uart1_send_byte(uint8_t data)
 {
     SBUF = data;
 	while(TI==0);
@@ -25,7 +25,7 @@ uint8_t uart_receive_byte()
 
 int putchar(int ch)
 {
-    uart_send_byte(ch);
+    uart1_send_byte(ch);
     return ch;
 }
 
