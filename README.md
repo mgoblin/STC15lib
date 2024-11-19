@@ -52,12 +52,12 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 * UART to UART1 renamed 
 
 Next releases todo
+* TODO UART bias timer0 1T by setting AUXR value. Fixed. Need test
 * TODO Implements timer2 baud rate mode T2L and T2H calc routines
 * TODO Calculate frequency ranges for 12T/1T timer dividers and MCU clock scales
 * TODO Make safe tversion of timer0_frequency_to_ticks_unsafe
 * TODO Make safe tversion of timer2_frequency_to_ticks_unsafe
 * TODO Implement ticks to times part of aux module
 * TODO Add example links to module documentation 
-* TODO UART bias timer0 1T by setting AUXR value 
 * TODO Counters
 
