@@ -100,6 +100,16 @@ $(function() {
 <tr class="memitem:ga3ed7e8910a209208306bebcc62975d2b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga3ed7e8910a209208306bebcc62975d2b">is_timer2_mode0_started</a>()&#160;&#160;&#160;(test_if_bit_set(AUXR, 4))</td></tr>
 <tr class="memdesc:ga3ed7e8910a209208306bebcc62975d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer2 started status.  <a href="group__timer2__mode0.html#ga3ed7e8910a209208306bebcc62975d2b">More...</a><br /></td></tr>
 <tr class="separator:ga3ed7e8910a209208306bebcc62975d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">baud rate</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p >Select timer2 as UART1 baud rate generator </p>
+</td></tr>
+<tr class="memitem:ga5e0b856f8e94d20b6b19ba48117c6c56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga5e0b856f8e94d20b6b19ba48117c6c56">enable_timer2_mode0_as_uart1_baud_rate</a>(enabled)&#160;&#160;&#160;(enabled ? bit_set(AUXR, 0) : bit_clr(AUXR, 0))</td></tr>
+<tr class="memdesc:ga5e0b856f8e94d20b6b19ba48117c6c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">select/unselect timer2 as uart1 baud rate generator  <a href="group__timer2__mode0.html#ga5e0b856f8e94d20b6b19ba48117c6c56">More...</a><br /></td></tr>
+<tr class="separator:ga5e0b856f8e94d20b6b19ba48117c6c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga75c4c92ed456a4bc546e14de00d340e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga75c4c92ed456a4bc546e14de00d340e4">is_timer2_mode0_as_uart1_baud_rate_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(AUXR, 0))</td></tr>
+<tr class="memdesc:ga75c4c92ed456a4bc546e14de00d340e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is timer0 used as UART1 baud rate generator?  <a href="group__timer2__mode0.html#ga75c4c92ed456a4bc546e14de00d340e4">More...</a><br /></td></tr>
+<tr class="separator:ga75c4c92ed456a4bc546e14de00d340e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for timer2 mode0.</p>
@@ -117,6 +127,54 @@ $(function() {
 <p >CPU frequency change biased timer delays.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga5e0b856f8e94d20b6b19ba48117c6c56" name="ga5e0b856f8e94d20b6b19ba48117c6c56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5e0b856f8e94d20b6b19ba48117c6c56">&#9670;&nbsp;</a></span>enable_timer2_mode0_as_uart1_baud_rate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define enable_timer2_mode0_as_uart1_baud_rate</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">enabled</td><td>)</td>
+          <td>&#160;&#160;&#160;(enabled ? bit_set(AUXR, 0) : bit_clr(AUXR, 0))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>select/unselect timer2 as uart1 baud rate generator </p>
+<p >by default timer0 used as UART1 baud rate generator</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td>bool true - select, false - unselect </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga75c4c92ed456a4bc546e14de00d340e4" name="ga75c4c92ed456a4bc546e14de00d340e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga75c4c92ed456a4bc546e14de00d340e4">&#9670;&nbsp;</a></span>is_timer2_mode0_as_uart1_baud_rate_enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define is_timer2_mode0_as_uart1_baud_rate_enabled</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(test_if_bit_set(AUXR, 0))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Is timer0 used as UART1 baud rate generator? </p>
+<p >by default timer0 used as UART1 baud rate generator</p>
+<dl class="section return"><dt>Returns</dt><dd>bool true if timer0 used as UART1 baud rate generator, otherwise false </dd></dl>
+
+</div>
+</div>
 <a id="ga3ed7e8910a209208306bebcc62975d2b" name="ga3ed7e8910a209208306bebcc62975d2b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga3ed7e8910a209208306bebcc62975d2b">&#9670;&nbsp;</a></span>is_timer2_mode0_started</h2>
 
