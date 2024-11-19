@@ -1,3 +1,7 @@
+/**
+ * delay_ms example
+ * blink LED 500 ms and adapt to mcu frequency slowdown
+ */
 #include <sys.h>
 #include <delay.h>
 
@@ -5,8 +9,10 @@
 
 void main()
 {
-    LED = 1;
-    delay_ms(500);
-    LED = 0;
-    delay_ms(500);
+    set_frequency_divider_scale(2);
+    while (1)
+    {
+        LED = !LED;
+        delay_ms(500);
+    }
 }
