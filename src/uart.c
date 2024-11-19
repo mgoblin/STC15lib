@@ -11,7 +11,7 @@ void uart1_init(uint32_t uart_baudrate)
 
     bit_set(AUXR, 4); // run timer2
 
-    enable_timer2_mode0_as_uart1_baud_rate(true);   
+    enable_timer2_mode0_as_uart1_baud_rate(true);
 }
 
 void uart1_send_byte(uint8_t data)
