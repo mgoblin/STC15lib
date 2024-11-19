@@ -47,7 +47,7 @@
  * 
  * @ingroup timer_common
  */
-#define get_timer2_mode() (test_if_bit_set(AUXR, 0))
+#define get_timer2_mode() 0
 
 /**
  * Get timer2 clock divider

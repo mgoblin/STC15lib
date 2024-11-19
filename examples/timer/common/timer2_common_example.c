@@ -1,5 +1,7 @@
 #include <sys.h>
 #include <timer_common.h>
+#include <timer2_mode0.h>
+
 #include <delay.h>
 #include <uart.h>
 
