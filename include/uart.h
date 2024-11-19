@@ -2,8 +2,8 @@
 
 /**
  * @file uart.h
- * @defgroup uart UART serial interface
- * @details Functions and data structures related to exchange data thru UART
+ * @defgroup uart UART1
+ * @details Functions and data structures related to exchange data thru UART1
  * @author Michael Golovanov
  */
 #include <sys.h>
@@ -30,19 +30,19 @@ void uart1_init(uint32_t uart_baudrate);
 void uart1_send_byte(uint8_t data);
 
 /**
- * @brief Receive byte from UART
+ * @brief Receive byte from UART1
  * 
- * @details Tihs receive is implemented as synhcronous operation. 
+ * @details This receive is implemented as synhcronous operation. 
  * Waiting until byte is received 
  * 
  * @return received byte
  * 
  * @ingroup uart
  */
-uint8_t uart_receive_byte();
+uint8_t uart1_receive_byte();
 
 /**
- * @brief Send character to UART
+ * @brief Send character to UART1
  * @details This method need for printf
  * 
  * @param ch character to send
@@ -54,7 +54,7 @@ uint8_t uart_receive_byte();
 int putchar(int ch);
 
 /**
- * @brief Receive character from UART
+ * @brief Receive character from UART1
  * @details This method need for scanf
  * 
  * @return received char

@@ -16,7 +16,7 @@ void uart1_send_byte(uint8_t data)
 	TI=0;
 }
 
-uint8_t uart_receive_byte()
+uint8_t uart1_receive_byte()
 {
 	while(RI==0);
 	RI=0;
@@ -31,6 +31,6 @@ int putchar(int ch)
 
 int getchar(void)
 {
-    return uart_receive_byte();
+    return uart1_receive_byte();
 }
 
