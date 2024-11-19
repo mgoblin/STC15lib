@@ -32,7 +32,7 @@ uint8_t bit_mask_2 = bit_mask(2);
 
 void main()
 {
-    uart_init(9600);
+    uart1_init(9600);
     while(1)
     {
         printf_tiny("original_byte = 0x%x\n", original_byte);

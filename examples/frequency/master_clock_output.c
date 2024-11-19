@@ -26,7 +26,7 @@ void print_master_clock_output()
 
 void main()
 {
-    uart_init(9600);
+    uart1_init(9600);
     
     enable_master_clock_output_div4();
     set_master_clock_output_pin(P5_4);

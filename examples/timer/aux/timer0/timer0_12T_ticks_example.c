@@ -49,7 +49,7 @@ void main()
     char fstr[32];
     __ultoa(freq, fstr, 10);
 
-    uart_init(9600);
+    uart1_init(9600);
     while(1) 
     {
         delay_ms(300);

@@ -1,6 +1,6 @@
 #include <uart.h>
 
-void uart_init(uint32_t uart_baudrate)
+void uart1_init(uint32_t uart_baudrate)
 {
     SCON = 0x50; // Set Mode1: 8-Bit UART with Variable Baud Rate 
     T2L = (65536 - (MAIN_Fosc/4/uart_baudrate)); //Set the preload value

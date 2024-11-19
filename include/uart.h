@@ -10,15 +10,15 @@
 #include <stdint.h>
 
 /**
- * @brief Initiazlize UART
+ * @brief Initiazlize UART1
  * 
- * @details Initialize uart using Timer0. Set timer according to baudrate
+ * @details Initialize uart using Timer2. Set timer according to baudrate
  * 
  * @param uart_baudrate uart baudrate, like 9600 and etc
  * 
  * @ingroup uart
  */
-void uart_init(uint32_t uart_baudrate);
+void uart1_init(uint32_t uart_baudrate);
 
 /**
  * Send byte to UART

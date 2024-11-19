@@ -26,7 +26,7 @@ void main()
     char fstr[32];
     __ultoa(timer_frequency, fstr, 10);
 
-    uart_init(9600);
+    uart1_init(9600);
 
     timer0_mode0_start(TICKS);
     

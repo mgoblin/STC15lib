@@ -11,7 +11,7 @@
 
 void main()
 {
-    uart_init(9600);
+    uart1_init(9600);
 
     while (1)
     {

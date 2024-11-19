@@ -26,7 +26,7 @@ void main()
     char fstr[32];
     __ultoa(timer_frequency, fstr, 10);
 
-    uart_init(9600);
+    uart1_init(9600);
     while (1) {
         delay_ms(200);
         // For TICKS = 0xffff and mcu clock divider 128 print 5 / 100 Hz
