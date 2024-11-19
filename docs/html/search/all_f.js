@@ -63,6 +63,7 @@ var searchData=
   ['timer2_5fuint16_5fticks_5fto_5ffreq100_60',['timer2_uint16_ticks_to_freq100',['../group__timer2__to__ms.html#gab91deb5b06b8decf78783fb7484bef3e',1,'timer2_to_ms.h']]],
   ['timer_5fclock_5fdivider_5ft_61',['timer_clock_divider_t',['../group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d',1,'timer_structs.h']]],
   ['timer_5fcommon_2eh_62',['timer_common.h',['../timer__common_8h.html',1,'']]],
-  ['timer_5fto_5fms_5fcommon_2eh_63',['timer_to_ms_common.h',['../timer__to__ms__common_8h.html',1,'']]],
-  ['timer_5fuint16_5fticks_5fto_5ffreq100_64',['timer_uint16_ticks_to_freq100',['../group__timer__to__ms.html#ga05eec17c45e48cc9ceb0c238cfbe5505',1,'timer_to_ms_common.h']]]
+  ['timer_5ffrequency_5fto_5fticks_5funsafe_63',['timer_frequency_to_ticks_unsafe',['../group__timer__to__ms.html#ga36e1de1ec7beecd79fbc758e75f35a65',1,'timer_to_ms_common.h']]],
+  ['timer_5fto_5fms_5fcommon_2eh_64',['timer_to_ms_common.h',['../timer__to__ms__common_8h.html',1,'']]],
+  ['timer_5fuint16_5fticks_5fto_5ffreq100_65',['timer_uint16_ticks_to_freq100',['../group__timer__to__ms.html#ga05eec17c45e48cc9ceb0c238cfbe5505',1,'timer_to_ms_common.h']]]
 ];

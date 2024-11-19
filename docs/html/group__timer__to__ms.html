@@ -73,11 +73,61 @@ Macros</h2></td></tr>
 <tr class="memitem:ga05eec17c45e48cc9ceb0c238cfbe5505"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#ga05eec17c45e48cc9ceb0c238cfbe5505">timer_uint16_ticks_to_freq100</a>(ticks,  timer_clock_divider,  frequency_divider_scale)&#160;&#160;&#160;((100 * <a class="el" href="group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b">get_master_clock_frequency</a>() / ((timer_clock_divider &lt;&lt; 1) * (1 + (uint32_t)ticks))) &gt;&gt; frequency_divider_scale)</td></tr>
 <tr class="memdesc:ga05eec17c45e48cc9ceb0c238cfbe5505"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert ticks to timer frequency multiplied by 100.  <a href="group__timer__to__ms.html#ga05eec17c45e48cc9ceb0c238cfbe5505">More...</a><br /></td></tr>
 <tr class="separator:ga05eec17c45e48cc9ceb0c238cfbe5505"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga36e1de1ec7beecd79fbc758e75f35a65"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#ga36e1de1ec7beecd79fbc758e75f35a65">timer_frequency_to_ticks_unsafe</a>(frequency,  timer_clock_divider,  frequency_divider_scale)&#160;&#160;&#160;(((<a class="el" href="group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b">get_master_clock_frequency</a>() &gt;&gt; 1) / (frequency * timer_clock_divider)) &gt;&gt; frequency_divider_scale)</td></tr>
+<tr class="memdesc:ga36e1de1ec7beecd79fbc758e75f35a65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert timer frequency to ticks (unsafe operation)  <a href="group__timer__to__ms.html#ga36e1de1ec7beecd79fbc758e75f35a65">More...</a><br /></td></tr>
+<tr class="separator:ga36e1de1ec7beecd79fbc758e75f35a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for converting timer ticks to frequency and times for timers.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga36e1de1ec7beecd79fbc758e75f35a65" name="ga36e1de1ec7beecd79fbc758e75f35a65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga36e1de1ec7beecd79fbc758e75f35a65">&#9670;&nbsp;</a></span>timer_frequency_to_ticks_unsafe</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer_frequency_to_ticks_unsafe</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">frequency, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">timer_clock_divider, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">frequency_divider_scale&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(((<a class="el" href="group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b">get_master_clock_frequency</a>() &gt;&gt; 1) / (frequency * timer_clock_divider)) &gt;&gt; frequency_divider_scale)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert timer frequency to ticks (unsafe operation) </p>
+<p >Frequency to ticks is a reverse operation of ticks to frequency,</p>
+<p >Not all frequency ranges can be correctly coverted to ticks. This method doesnt carefully analyze frequency to ticks covertion correctness.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frequency</td><td>uint32_t frequency </td></tr>
+    <tr><td class="paramname">timer_clock_divider</td><td>uint8_t or timer_clock_divider_t enum T12 or T1 timer clock divider </td></tr>
+    <tr><td class="paramname">frequency_divider_scale</td><td>uint8_t mcu clock frequency diviver scale in range of [0..7]</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>uint16_t ticks count for input parameters </dd></dl>
+
+</div>
+</div>
 <a id="ga05eec17c45e48cc9ceb0c238cfbe5505" name="ga05eec17c45e48cc9ceb0c238cfbe5505"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga05eec17c45e48cc9ceb0c238cfbe5505">&#9670;&nbsp;</a></span>timer_uint16_ticks_to_freq100</h2>
 
