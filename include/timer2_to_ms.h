@@ -31,6 +31,22 @@
  */
 #define timer2_uint16_ticks_to_freq100(ticks) (timer_uint16_ticks_to_freq100(ticks, get_timer2_clock_divider(), get_frequency_divider_scale()))
 
+/**
+ * @brief Unsafe approximation timer2 frequency corresponding to ticks. 
+ * @details 
+ * ticks = get_master_clock_frequency() / (2 * get_timer2_clock_divider() * frequency))
+ * 
+ * Call this method after timer2 is initialized and MCU clock frequency divider scale is set.
+ * 
+ * <b>This method doesnt analyze corner cases and overflow of result. Be careful.</b> 
+ * 
+ * @param frequency uint32_t frequency value in Hz. Should not be 0;
+ * 
+ * @return uint16_t timer0 ticks corresponding to frequency value
+ * 
+ * @ingroup timer2_to_ms
+ */
+#define timer2_frequency_to_ticks_unsafe(frequency) (timer_frequency_to_ticks_unsafe(frequency, get_timer2_clock_divider(), get_frequency_divider_scale()))
 
 
 #endif

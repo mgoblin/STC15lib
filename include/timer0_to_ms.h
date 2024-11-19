@@ -40,7 +40,7 @@
 #define timer0_uint16_ticks_to_freq100(ticks) (timer_uint16_ticks_to_freq100(ticks, get_timer0_clock_divider(), get_frequency_divider_scale()))
 
 /**
- * @brief Unsafe approximation timer frequency corresponding to ticks. 
+ * @brief Unsafe approximation timer0 frequency corresponding to ticks. 
  * @details 
  * ticks = get_master_clock_frequency() / (2 * get_timer0_clock_divider() * frequency))
  * 
