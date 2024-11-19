@@ -49,7 +49,8 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 * Aux module convert ticks to frequency implemented 
 * Aux module unsafe convert frequency to ticks
 * timer_all.h to timer_common.h renamed
-* UART to UART1 renamed 
+* delay_ms partially rewrited to asm to decrease size 
+* UART to UART1 renamed
 
 Next releases todo
 * TODO UART bias timer0 1T by setting AUXR value. Fixed. Need test
