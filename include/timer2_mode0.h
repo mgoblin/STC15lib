@@ -169,7 +169,7 @@
 
 ///@}
 
-/** @name baud rate
+/** @name baud rate enable/disable
  *  Select timer2 as UART1 baud rate generator 
  */
 ///@{

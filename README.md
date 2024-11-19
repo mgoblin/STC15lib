@@ -51,8 +51,9 @@ This C-library contains the code for interaction with STC15W408AS. STC15W408AS i
 * timer_all.h to timer_common.h renamed
 * UART to UART1 renamed 
 
-Ne5xt releases todo
-* TODO Implements timer2 baud rate mode
+Next releases todo
+* TODO Implements timer2 baud rate mode routines
+* TODO Use timer2_mode0 routines in UART1 init
 * TODO Calculate frequency ranges for 12T/1T timer dividers and MCU clock scales
 * TODO Make safe tversion of timer0_frequency_to_ticks_unsafe
 * TODO Make safe tversion of timer2_frequency_to_ticks_unsafe

@@ -1,7 +1,12 @@
 <map id="include/uart.h" name="include/uart.h">
-<area shape="rect" id="node1" title=" " alt="" coords="43,5,154,32"/>
-<area shape="rect" id="node2" href="$sys_8h.html" title=" " alt="" coords="27,80,83,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="107,80,178,107"/>
-<area shape="rect" id="node3" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="5,155,104,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="9,229,100,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="151,5,261,32"/>
+<area shape="rect" id="node2" href="$sys_8h.html" title=" " alt="" coords="446,229,502,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,155,76,181"/>
+<area shape="rect" id="node6" href="$timer2__mode0_8h.html" title=" " alt="" coords="141,80,271,107"/>
+<area shape="rect" id="node3" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="425,304,523,331"/>
+<area shape="rect" id="node4" title=" " alt="" coords="429,379,519,405"/>
+<area shape="rect" id="node7" href="$bits_8h_source.html" title=" " alt="" coords="199,229,258,256"/>
+<area shape="rect" id="node8" href="$interrupt_8h.html" title=" " alt="" coords="202,155,293,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="83,229,166,256"/>
+<area shape="rect" id="node10" href="$timer__structs_8h_source.html" title=" " alt="" coords="317,155,437,181"/>
 </map>

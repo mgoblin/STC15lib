@@ -8,7 +8,10 @@ void main()
 {
     uart1_init(9600);
 
-    uart1_send_byte(10);
-    putchar('H');
-    printf("ello %s", "anonymous");
+    while (1)
+    {
+        uart1_send_byte(10);
+        putchar('H');
+        printf_tiny("ello %s", "anonymous");
+    }
 }

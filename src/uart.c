@@ -2,11 +2,16 @@
 
 void uart1_init(uint32_t uart_baudrate)
 {
-    SCON = 0x50; // Set Mode1: 8-Bit UART with Variable Baud Rate 
+    SCON = 0x50; // Set Mode1: 8-Bit UART with Variable Baud Rate
+    
+    timer2_mode0_1T_init(); 
+    
     T2L = (65536 - (MAIN_Fosc/4/uart_baudrate)); //Set the preload value
     T2H = (65536 - (MAIN_Fosc/4/uart_baudrate))>>8;
-    AUXR = 0x14; //T2 in 1T mode, and run T2
-    AUXR |= 0x01; 
+
+    bit_set(AUXR, 4); // run timer2
+
+    enable_timer2_mode0_as_uart1_baud_rate(true);   
 }
 
 void uart1_send_byte(uint8_t data)
