@@ -117,15 +117,12 @@ Macros</h2></td></tr>
 <tr class="memitem:ga14954bfb79088274f0a50fb2616b7046"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__to__ms.html#ga14954bfb79088274f0a50fb2616b7046">timer2_frequency_to_ticks_unsafe</a>(frequency)&#160;&#160;&#160;(<a class="el" href="group__timer__to__ms.html#ga36e1de1ec7beecd79fbc758e75f35a65">timer_frequency_to_ticks_unsafe</a>(frequency, <a class="el" href="group__timer__common.html#ga4259384552df325973b81bd5425b7f4a">get_timer2_clock_divider</a>(), <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td></tr>
 <tr class="memdesc:ga14954bfb79088274f0a50fb2616b7046"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsafe approximation timer2 frequency corresponding to ticks.  <a href="group__timer2__to__ms.html#ga14954bfb79088274f0a50fb2616b7046">More...</a><br /></td></tr>
 <tr class="separator:ga14954bfb79088274f0a50fb2616b7046"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">UART baud rate to ticks</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p >UART baud rate to timer ticks to overlow frequency and vice versa convertions </p>
 </div></td></tr>
-<tr class="memitem:ga40bcece5302a71332fcfc0255ce7accf"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__to__ms.html#ga40bcece5302a71332fcfc0255ce7accf">timer2_mode0_baudrate_to_ticks</a> (uint16_t uart_baudrate)</td></tr>
-<tr class="memdesc:ga40bcece5302a71332fcfc0255ce7accf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate timer2 ticks for UART baudrate.  <a href="group__timer2__to__ms.html#ga40bcece5302a71332fcfc0255ce7accf">More...</a><br /></td></tr>
-<tr class="separator:ga40bcece5302a71332fcfc0255ce7accf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf526ab4e81d771f1cc410df02be173f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__to__ms.html#gabf526ab4e81d771f1cc410df02be173f">timer2_mode0_baudrate_to_ticks</a>(uart_baudrate)&#160;&#160;&#160;((<a class="el" href="group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b">get_master_clock_frequency</a>() &gt;&gt; <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>())/4/uart_baudrate - 1)</td></tr>
+<tr class="memdesc:gabf526ab4e81d771f1cc410df02be173f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate timer2 ticks for UART baudrate.  <a href="group__timer2__to__ms.html#gabf526ab4e81d771f1cc410df02be173f">More...</a><br /></td></tr>
+<tr class="separator:gabf526ab4e81d771f1cc410df02be173f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

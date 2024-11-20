@@ -85,12 +85,11 @@ $(function() {
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>uint16_t <a class="code hl_function" href="group__timer2__to__ms.html#ga40bcece5302a71332fcfc0255ce7accf">timer2_mode0_baudrate_to_ticks</a>(uint16_t uart_baudrate);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="group__timer2__to__ms.html#gabf526ab4e81d771f1cc410df02be173f">   73</a></span><span class="preprocessor">#define timer2_mode0_baudrate_to_ticks(uart_baudrate) ((get_master_clock_frequency() &gt;&gt; get_frequency_divider_scale())/4/uart_baudrate - 1)</span></div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="afrequency_8h_html"><div class="ttname"><a href="frequency_8h.html">frequency.h</a></div></div>
-<div class="ttc" id="agroup__timer2__to__ms_html_ga40bcece5302a71332fcfc0255ce7accf"><div class="ttname"><a href="group__timer2__to__ms.html#ga40bcece5302a71332fcfc0255ce7accf">timer2_mode0_baudrate_to_ticks</a></div><div class="ttdeci">uint16_t timer2_mode0_baudrate_to_ticks(uint16_t uart_baudrate)</div><div class="ttdoc">Calculate timer2 ticks for UART baudrate.</div><div class="ttdef"><b>Definition:</b> timer2_to_ms.c:3</div></div>
 <div class="ttc" id="atimer2__mode0_8h_html"><div class="ttname"><a href="timer2__mode0_8h.html">timer2_mode0.h</a></div></div>
 <div class="ttc" id="atimer__common_8h_html"><div class="ttname"><a href="timer__common_8h.html">timer_common.h</a></div></div>
 <div class="ttc" id="atimer__to__ms__common_8h_html"><div class="ttname"><a href="timer__to__ms__common_8h.html">timer_to_ms_common.h</a></div></div>

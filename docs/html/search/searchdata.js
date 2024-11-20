@@ -2,7 +2,7 @@ var indexSectionsWithContent =
 {
   0: "_cdefghilmnoprstu",
   1: "cdfistu",
-  2: "_dgptu",
+  2: "_dgpu",
   3: "eimt",
   4: "hlnoprt",
   5: "m",

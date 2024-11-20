@@ -52,9 +52,9 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 * delay_ms partially rewrited to asm to decrease size 
 * UART to UART1 renamed
 * Fix: UART bias timer0 1T by setting AUXR.7 value to 1.
+* timer2 baud rate ticks calculation implemented
 
 Next releases todo
-* TODO Implements timer2 baud rate mode T2L and T2H calc routines
 * TODO Calculate frequency ranges for 12T/1T timer dividers and MCU clock scales
 * TODO Make safe version of timer0_frequency_to_ticks_unsafe
 * TODO Make safe version of timer2_frequency_to_ticks_unsafe
