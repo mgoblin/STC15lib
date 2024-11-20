@@ -70,9 +70,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaccb4a570ec2e1a3e94ad9ca6fb149f2d"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart.html#gaccb4a570ec2e1a3e94ad9ca6fb149f2d">uart1_init</a> (uint32_t uart_baudrate)</td></tr>
-<tr class="memdesc:gaccb4a570ec2e1a3e94ad9ca6fb149f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiazlize UART1.  <a href="group__uart.html#gaccb4a570ec2e1a3e94ad9ca6fb149f2d">More...</a><br /></td></tr>
-<tr class="separator:gaccb4a570ec2e1a3e94ad9ca6fb149f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae94c688a8aead8d685a24300648d8554"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart.html#gae94c688a8aead8d685a24300648d8554">uart1_init</a> (uint32_t uart_baudrate)</td></tr>
+<tr class="memdesc:gae94c688a8aead8d685a24300648d8554"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiazlize UART1.  <a href="group__uart.html#gae94c688a8aead8d685a24300648d8554">More...</a><br /></td></tr>
+<tr class="separator:gae94c688a8aead8d685a24300648d8554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaee0e2768c65fa6dfe5e87991f729c6d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart.html#gaee0e2768c65fa6dfe5e87991f729c6d0">uart1_send_byte</a> (uint8_t data)</td></tr>
 <tr class="separator:gaee0e2768c65fa6dfe5e87991f729c6d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5f66ea2c05ce23684284f338d9067179"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart.html#ga5f66ea2c05ce23684284f338d9067179">uart1_receive_byte</a> ()</td></tr>
@@ -138,14 +138,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaccb4a570ec2e1a3e94ad9ca6fb149f2d" name="gaccb4a570ec2e1a3e94ad9ca6fb149f2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaccb4a570ec2e1a3e94ad9ca6fb149f2d">&#9670;&nbsp;</a></span>uart1_init()</h2>
+<a id="gae94c688a8aead8d685a24300648d8554" name="gae94c688a8aead8d685a24300648d8554"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae94c688a8aead8d685a24300648d8554">&#9670;&nbsp;</a></span>uart1_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t uart1_init </td>
+          <td class="memname">void uart1_init </td>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>uart_baudrate</em></td><td>)</td>
@@ -158,11 +158,10 @@ Functions</h2></td></tr>
 <p >Initialize uart using Timer2. Set timer according to baudrate</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">uart_baudrate</td><td>uart baudrate, like 9600 and etc</td></tr>
+    <tr><td class="paramname">uart_baudrate</td><td>uart baudrate, like 9600 and etc </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>timer2 ticks for baudrate </dd></dl>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="chip_id_example_8c-example.html#a0">chip_id_example.c</a>.</dd>
 </dl>
 

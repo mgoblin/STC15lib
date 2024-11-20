@@ -12,6 +12,11 @@
 
 #define UART_BAUDRATE 74880
 
+uint16_t ticks_count(uint32_t baudrate)
+{
+    return timer2_mode0_baudrate_to_ticks(baudrate);
+}
+
 void main()
 {
     // UART1 on init use timer2_mode0_baudrate_to_ticks. 
@@ -19,7 +24,7 @@ void main()
     // The reason of deviation is division inaccuracy inside timer2_mode0_baudrate_to_ticks   
     // The result of baudrates timer2_mode0_baudrate_to_ticks not exact value 
     // but approximation.
-    uint16_t ticks = uart1_init(UART_BAUDRATE); // ticks is 0x0B for baudrate 250000
+    uart1_init(UART_BAUDRATE); // ticks is 0x0B for baudrate 250000
     
     // On UART_BAUDRATE 250000 ticks value 0x0B leads to ustable UART1 transmittion.
     // Decrease ticks from calulated value 0x0B to 0x0A and UART1 transmittion 
@@ -31,7 +36,7 @@ void main()
 
     while (1)
     {
-        printf_tiny("Calulated timer2 ticks value is 0x%x\n", ticks);
+        printf_tiny("Calulated timer2 ticks value is 0x%x\n", timer2_mode0_baudrate_to_ticks(UART_BAUDRATE));
         printf_tiny("Loaded to timer2 ticks value is 0x%x\n", loaded_ticks);
         delay_ms(500);
     }

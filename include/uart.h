@@ -18,11 +18,10 @@
  * 
  * @param uart_baudrate uart baudrate, like 9600 and etc
  * 
- * @return timer2 ticks for baudrate
  * 
  * @ingroup uart
  */
-uint16_t uart1_init(uint32_t uart_baudrate);
+void uart1_init(uint32_t uart_baudrate);
 
 /**
  * Send byte to UART
