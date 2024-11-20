@@ -55,6 +55,8 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 * timer2 baud rate ticks calculation implemented
 
 Next releases todo
+* Calculate and document baudrate ticks
+* UART init should use timer2 baudrate calc routines and will be replaced to #define 
 * TODO Calculate frequency ranges for 12T/1T timer dividers and MCU clock scales
 * TODO Make safe version of timer0_frequency_to_ticks_unsafe
 * TODO Make safe version of timer2_frequency_to_ticks_unsafe
