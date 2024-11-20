@@ -16,6 +16,11 @@
 #include <timer_common.h>
 #include <timer_to_ms_common.h>
 
+/** @name tick to frequency conversions
+ *  Timer ticks to overlow frequency and vice versa convertions 
+ */
+///@{
+
 /**
  * @brief Convert ticks to timer frequency for timer2 multiplied by 100.
  * @details The output frequency = (SYSclk/timer_clock_divider)/((65536-ticks) * 2).
@@ -48,5 +53,20 @@
  */
 #define timer2_frequency_to_ticks_unsafe(frequency) (timer_frequency_to_ticks_unsafe(frequency, get_timer2_clock_divider(), get_frequency_divider_scale()))
 
+///@}
+
+/** @name UART baud rate to ticks
+ *  UART baud rate to timer ticks to overlow frequency and vice versa convertions 
+ */
+///@{
+
+/**
+ * @brief TODO document me
+ * 
+ * @ingroup timer2_to_ms
+ */
+uint16_t timer2_mode0_baudrate_to_ticks(uint32_t baudrate);
+
+///@}
 
 #endif
