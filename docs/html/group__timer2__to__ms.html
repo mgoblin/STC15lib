@@ -134,7 +134,10 @@ $(function() {
 </div><div class="memdoc">
 
 <p>Calculate timer2 ticks for UART baudrate. </p>
-<p >Adapter for mcu frequency divider</p>
+<p >Adapted for use mcu frequency divider. On some baudrates get not exact values. The reasons are</p><ul>
+<li>Formula not get int values</li>
+<li>Divisions doesnt support floats and accumulate integer division errors</li>
+</ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">uart_baudrate</td><td>uint16_t UART baudrate</td></tr>

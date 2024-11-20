@@ -1,6 +1,6 @@
 #include <uart.h>
 
-uint16_t uart1_init(uint16_t uart_baudrate)
+uint16_t uart1_init(uint32_t uart_baudrate)
 {
     SCON = 0x50; // Set Mode1: 8-Bit UART with Variable Baud Rate
     

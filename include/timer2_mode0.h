@@ -127,7 +127,7 @@
  */
 #define timer2_mode0_start(ticks)                           \
 {                                                           \
-    timer2_mode0_reload(ticks);                                   \
+    timer2_mode0_reload(ticks);                             \
                                                             \
     bit_set(AUXR, 4); /* set T2 run flag */                 \
 } 

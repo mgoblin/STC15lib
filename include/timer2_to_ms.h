@@ -62,7 +62,10 @@
 
 /**
  * @brief Calculate timer2 ticks for UART baudrate
- * @details Adapter for mcu frequency divider
+ * @details Adapted for use mcu frequency divider. On some baudrates get not exact values.
+ * The reasons are 
+ * * Formula not get int values
+ * * Divisions doesnt support floats and accumulate integer division errors
  * 
  * @param uart_baudrate uint16_t UART baudrate
  * 
