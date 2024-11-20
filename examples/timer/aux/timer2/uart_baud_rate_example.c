@@ -6,21 +6,20 @@
 
 #include <delay.h>
 
+#define UART_BAUDRATE 9600UL
+
 void main()
 {
-    const uint16_t uart_baudrate = 9600;
-    uart1_init(uart_baudrate);
+    
+    set_frequency_divider_scale(2);
 
-    uint8_t T2L_value = (65536 - (MAIN_Fosc/4/uart_baudrate)); //Set the preload value
-    uint8_t T2H_value = (65536 - (MAIN_Fosc/4/uart_baudrate))>>8;
+    uart1_init(UART_BAUDRATE);
 
-    uint16_t ticks = timer2_mode0_baudrate_to_ticks(uart_baudrate);
+    uint16_t ticks = timer2_mode0_baudrate_to_ticks(UART_BAUDRATE);
 
     while (1)
     {
-        printf_tiny("T2L and T2H values is 0x%x%x\n", T2H_value, T2L_value);
-        printf_tiny("Ticks value is 0x%x\n", ticks);
-        
+        printf_tiny("Timer2 ticks value is %u\n", ticks);
         delay_ms(500);
     }
     

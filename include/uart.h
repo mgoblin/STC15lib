@@ -20,7 +20,7 @@
  * 
  * @ingroup uart
  */
-void uart1_init(uint32_t uart_baudrate);
+void uart1_init(uint16_t uart_baudrate);
 
 /**
  * Send byte to UART
