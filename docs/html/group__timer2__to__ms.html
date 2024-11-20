@@ -69,9 +69,8 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader">UART baud rate to ticks</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p >UART baud rate to timer ticks to overlow frequency and vice versa convertions </p>
 </td></tr>
-<tr class="memitem:ga40bcece5302a71332fcfc0255ce7accf"><td class="memItemLeft" align="right" valign="top"><a id="ga40bcece5302a71332fcfc0255ce7accf" name="ga40bcece5302a71332fcfc0255ce7accf"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>timer2_mode0_baudrate_to_ticks</b> (uint16_t uart_baudrate)</td></tr>
-<tr class="memdesc:ga40bcece5302a71332fcfc0255ce7accf"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO document me. <br /></td></tr>
+<tr class="memitem:ga40bcece5302a71332fcfc0255ce7accf"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__to__ms.html#ga40bcece5302a71332fcfc0255ce7accf">timer2_mode0_baudrate_to_ticks</a> (uint16_t uart_baudrate)</td></tr>
+<tr class="memdesc:ga40bcece5302a71332fcfc0255ce7accf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate timer2 ticks for UART baudrate.  <a href="group__timer2__to__ms.html#ga40bcece5302a71332fcfc0255ce7accf">More...</a><br /></td></tr>
 <tr class="separator:ga40bcece5302a71332fcfc0255ce7accf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">tick to frequency conversions</h2></td></tr>
@@ -144,6 +143,35 @@ uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>timer2_mode0_baud
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>uint32_t frequency multiplied by 100 corresponding to ticks count </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga40bcece5302a71332fcfc0255ce7accf" name="ga40bcece5302a71332fcfc0255ce7accf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga40bcece5302a71332fcfc0255ce7accf">&#9670;&nbsp;</a></span>timer2_mode0_baudrate_to_ticks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t timer2_mode0_baudrate_to_ticks </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>uart_baudrate</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate timer2 ticks for UART baudrate. </p>
+<p >Adapter for mcu frequency divider</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uart_baudrate</td><td>uint16_t UART baudrate</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>uint16_t timer2 ticks count for UART baudrate </dd></dl>
 
 </div>
 </div>

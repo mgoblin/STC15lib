@@ -61,7 +61,12 @@
 ///@{
 
 /**
- * @brief TODO document me
+ * @brief Calculate timer2 ticks for UART baudrate
+ * @details Adapter for mcu frequency divider
+ * 
+ * @param uart_baudrate uint16_t UART baudrate
+ * 
+ * @return uint16_t timer2 ticks count for UART baudrate
  * 
  * @ingroup timer2_to_ms
  */
