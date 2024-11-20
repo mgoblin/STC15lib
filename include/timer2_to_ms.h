@@ -65,7 +65,7 @@
  * 
  * @ingroup timer2_to_ms
  */
-uint16_t timer2_mode0_baudrate_to_ticks(uint32_t baudrate);
+uint16_t timer2_mode0_baudrate_to_ticks(uint32_t uart_baudrate);
 
 ///@}
 

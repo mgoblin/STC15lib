@@ -9,6 +9,7 @@
 #include <sys.h>
 #include <stdint.h>
 #include <timer2_mode0.h>
+#include <timer2_to_ms.h>
 
 /**
  * @brief Initiazlize UART1

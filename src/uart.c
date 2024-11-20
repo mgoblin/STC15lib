@@ -7,14 +7,7 @@ void uart1_init(uint32_t uart_baudrate)
     timer2_mode0_1T_init(); 
     enable_timer2_mode0_as_uart1_baud_rate(true);
     
-    //======== change by timer2 aux calc and timer2_mode0_start() ======
-
-    T2L = (65536 - (MAIN_Fosc/4/uart_baudrate)); //Set the preload value
-    T2H = (65536 - (MAIN_Fosc/4/uart_baudrate))>>8;
-
-    bit_set(AUXR, 4); // run timer2
-
-    //======== change by timer2 aux calc and timer2_mode0_start() ======
+    timer2_mode0_start(timer2_mode0_baudrate_to_ticks(uart_baudrate));
 }
 
 void uart1_send_byte(uint8_t data)
