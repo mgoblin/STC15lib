@@ -67,6 +67,18 @@
  * * Formula not get int values
  * * Divisions doesnt support floats and accumulate integer division errors
  * 
+ * | Freq div | Baudrate   | Ticks hex |
+ * | ---------| ---------- | --------- |
+ * |     1    | 9600       |  0x120    |
+ * |     1    | 19200      |  0x90     |
+ * |     1    | 38400      |  0x48     |
+ * |     1    | 57600      |  0x30     |
+ * |     1    | 74880      |  0x24     |
+ * |     1    | 115200     |  0x18     |
+ * |     1    | 230400     |  0x0C     |
+ * |     1    | 250000     |  0x0B     |
+ * 
+ * 
  * @param uart_baudrate uint16_t UART baudrate
  * 
  * @return uint16_t timer2 ticks count for UART baudrate

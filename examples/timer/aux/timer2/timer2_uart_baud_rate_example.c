@@ -23,15 +23,12 @@ void main()
     // For high UART baudrates timer2_mode0_baudrate_to_ticks has calc deviation.
     // The reason of deviation is division inaccuracy inside timer2_mode0_baudrate_to_ticks   
     // The result of baudrates timer2_mode0_baudrate_to_ticks not exact value 
-    // but approximation.
-    uart1_init(UART_BAUDRATE); // ticks is 0x0B for baudrate 250000
+    // but good approximation.
+    uart1_init(UART_BAUDRATE);
     
-    // On UART_BAUDRATE 250000 ticks value 0x0B leads to ustable UART1 transmittion.
-    // Decrease ticks from calulated value 0x0B to 0x0A and UART1 transmittion 
-    // becomes stable.
     // For baudrate 74880 timer2_mode0_baudrate_to_ticks result is 0x23
-    // Calculation with float support in PC get value 36,9 -> 37 -> 0x25 
-    uint16_t loaded_ticks = 0x25; 
+    // Calculation by hand get value 0x24 
+    uint16_t loaded_ticks = 0x24; 
     timer2_mode0_reload(loaded_ticks); // reload ticks value of timer2 iwth more correct value
 
     while (1)
