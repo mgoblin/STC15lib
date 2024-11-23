@@ -56,8 +56,6 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 * UART1 use timer2_mode0 and timer2 aux modules routines now 
 
 Next releases todo
-* TODO Make safe version of timer0_frequency_to_ticks_unsafe
-* TODO Make safe version of timer2_frequency_to_ticks_unsafe
 * TODO Implement ticks to times part of aux module
 * TODO Add example links to module documentation 
 * TODO Implements counters
