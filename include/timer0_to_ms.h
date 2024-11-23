@@ -56,6 +56,15 @@
  */
 #define timer0_frequency_to_ticks_unsafe(frequency) (timer_frequency_to_ticks_unsafe(frequency, get_timer0_clock_divider(), get_frequency_divider_scale()))
 
+/**
+ * @brief Convert ticks count to ms
+ * 
+ * @return milliseconds time corresponing to timer ticks
+ * 
+ * @ingroup timer0_to_ms
+ */
+uint32_t timer0_ticks_to_ms_usafe(uint16_t ticks);
+
 ///@}
 
 #endif
