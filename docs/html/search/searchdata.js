@@ -1,12 +1,12 @@
 var indexSectionsWithContent =
 {
   0: "_cdefghilmnoprstu",
-  1: "cdfistu",
+  1: "cdfirstu",
   2: "_dgptu",
   3: "eimt",
   4: "hlnoprt",
   5: "m",
-  6: "cdfitu",
+  6: "cdfirtu",
   7: "s"
 };
 
