@@ -83,12 +83,14 @@ $(function() {
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="group__timer2__to__ms.html#ga14954bfb79088274f0a50fb2616b7046">   54</a></span><span class="preprocessor">#define timer2_frequency_to_ticks_unsafe(frequency) (timer_frequency_to_ticks_unsafe(frequency, get_timer2_clock_divider(), get_frequency_divider_scale()))</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>uint16_t <a class="code hl_function" href="group__timer2__to__ms.html#gaa6e02e9e59bd2b185672a055e786fd2d">timer2_mode0_baudrate_to_ticks</a>(uint32_t uart_baudrate); </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="group__timer2__to__ms.html#gae700d8698534d9f5c196d6525e27fb1e">   66</a></span><span class="preprocessor">#define timer2_ticks_to_ms_usafe(ticks) (timer_ticks_to_ms_usafe(ticks, get_timer0_clock_divider(), get_frequency_divider_scale()))</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>uint16_t <a class="code hl_function" href="group__timer2__to__ms.html#gaa6e02e9e59bd2b185672a055e786fd2d">timer2_mode0_baudrate_to_ticks</a>(uint32_t uart_baudrate); </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="afrequency_8h_html"><div class="ttname"><a href="frequency_8h.html">frequency.h</a></div></div>
 <div class="ttc" id="agroup__timer2__to__ms_html_gaa6e02e9e59bd2b185672a055e786fd2d"><div class="ttname"><a href="group__timer2__to__ms.html#gaa6e02e9e59bd2b185672a055e786fd2d">timer2_mode0_baudrate_to_ticks</a></div><div class="ttdeci">uint16_t timer2_mode0_baudrate_to_ticks(uint32_t uart_baudrate)</div><div class="ttdoc">Calculate timer2 ticks for UART baudrate.</div><div class="ttdef"><b>Definition:</b> timer2_to_ms.c:3</div></div>
 <div class="ttc" id="atimer2__mode0_8h_html"><div class="ttname"><a href="timer2__mode0_8h.html">timer2_mode0.h</a></div></div>

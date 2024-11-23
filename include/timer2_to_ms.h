@@ -53,6 +53,18 @@
  */
 #define timer2_frequency_to_ticks_unsafe(frequency) (timer_frequency_to_ticks_unsafe(frequency, get_timer2_clock_divider(), get_frequency_divider_scale()))
 
+/**
+ * @brief Convert ticks count to ms
+ * @details <b>This method doesnt analyze corner cases and overflow of result. Be careful.</b> 
+ * 
+ * @param ticks uint16_t ticks count
+ * 
+ * @return milliseconds time corresponing to timer ticks
+ * 
+ * @ingroup timer0_to_ms
+ */
+#define timer2_ticks_to_ms_usafe(ticks) (timer_ticks_to_ms_usafe(ticks, get_timer0_clock_divider(), get_frequency_divider_scale()))
+
 ///@}
 
 /** @name UART baud rate to ticks

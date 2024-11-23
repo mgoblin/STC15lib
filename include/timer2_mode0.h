@@ -91,7 +91,7 @@
  * 
  * @ingroup timer2_mode0
  */
-#define timer2_mode0_enableP30_output(enable) (enable ? bit_set(INT_CLKO, 2) : bit_clr(INT_CLKO, 2))
+#define timer2_mode0_enable_P30_output(enable) (enable ? bit_set(INT_CLKO, 2) : bit_clr(INT_CLKO, 2))
 
 /**
  * Get output to pin P3.0 output flag enabled value

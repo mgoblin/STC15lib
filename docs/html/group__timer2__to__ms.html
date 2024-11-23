@@ -82,6 +82,9 @@ $(function() {
 <tr class="memitem:ga14954bfb79088274f0a50fb2616b7046"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__to__ms.html#ga14954bfb79088274f0a50fb2616b7046">timer2_frequency_to_ticks_unsafe</a>(frequency)&#160;&#160;&#160;(<a class="el" href="group__timer__to__ms.html#ga36e1de1ec7beecd79fbc758e75f35a65">timer_frequency_to_ticks_unsafe</a>(frequency, <a class="el" href="group__timer__common.html#ga4259384552df325973b81bd5425b7f4a">get_timer2_clock_divider</a>(), <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td></tr>
 <tr class="memdesc:ga14954bfb79088274f0a50fb2616b7046"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsafe approximation timer2 frequency corresponding to ticks.  <a href="group__timer2__to__ms.html#ga14954bfb79088274f0a50fb2616b7046">More...</a><br /></td></tr>
 <tr class="separator:ga14954bfb79088274f0a50fb2616b7046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae700d8698534d9f5c196d6525e27fb1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__to__ms.html#gae700d8698534d9f5c196d6525e27fb1e">timer2_ticks_to_ms_usafe</a>(ticks)&#160;&#160;&#160;(<a class="el" href="group__timer__to__ms.html#ga6dcc7b3aa5aa900fcea589a46e3620cc">timer_ticks_to_ms_usafe</a>(ticks, <a class="el" href="group__timer__common.html#gac2f34fcd6ffbec0a91510385d3286f70">get_timer0_clock_divider</a>(), <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td></tr>
+<tr class="memdesc:gae700d8698534d9f5c196d6525e27fb1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert ticks count to ms.  <a href="group__timer2__to__ms.html#gae700d8698534d9f5c196d6525e27fb1e">More...</a><br /></td></tr>
+<tr class="separator:gae700d8698534d9f5c196d6525e27fb1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for converting timer ticks to frequency and times for timer2.</p>
@@ -114,6 +117,34 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>uint16_t timer0 ticks corresponding to frequency value </dd></dl>
+
+</div>
+</div>
+<a id="gae700d8698534d9f5c196d6525e27fb1e" name="gae700d8698534d9f5c196d6525e27fb1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae700d8698534d9f5c196d6525e27fb1e">&#9670;&nbsp;</a></span>timer2_ticks_to_ms_usafe</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer2_ticks_to_ms_usafe</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ticks</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="group__timer__to__ms.html#ga6dcc7b3aa5aa900fcea589a46e3620cc">timer_ticks_to_ms_usafe</a>(ticks, <a class="el" href="group__timer__common.html#gac2f34fcd6ffbec0a91510385d3286f70">get_timer0_clock_divider</a>(), <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert ticks count to ms. </p>
+<p ><b>This method doesnt analyze corner cases and overflow of result. Be careful.</b></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ticks</td><td>uint16_t ticks count</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>milliseconds time corresponing to timer ticks </dd></dl>
 
 </div>
 </div>
