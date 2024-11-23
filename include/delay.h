@@ -11,9 +11,6 @@
 #include <stdint.h>
 #include <frequency.h>
 
-static uint16_t var_ms;
-static uint16_t i;
-
 /** 
 *  @brief Delays program flow using CPU nop
 *  @details Using CPU cycles to delay. Use delay_ms with care. 
