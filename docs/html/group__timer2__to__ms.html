@@ -168,7 +168,7 @@ $(function() {
 <li>Formula not get int values</li>
 <li>Divisions doesnt support floats and accumulate integer division errors</li>
 </ul>
-<table class="markdownTable">
+<p >freq/4 = 2764800 </p><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Freq div   </th><th class="markdownTableHeadNone">Baudrate   </th><th class="markdownTableHeadNone">Ticks hex    </th></tr>
 <tr class="markdownTableRowOdd">
@@ -180,7 +180,7 @@ $(function() {
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">57600   </td><td class="markdownTableBodyNone">0x30    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">74880   </td><td class="markdownTableBodyNone">0x24    </td></tr>
+<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">74880   </td><td class="markdownTableBodyNone">0x25    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">115200   </td><td class="markdownTableBodyNone">0x18    </td></tr>
 <tr class="markdownTableRowOdd">
@@ -188,7 +188,7 @@ $(function() {
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">250000   </td><td class="markdownTableBodyNone">0x0B   </td></tr>
 </table>
-<table class="markdownTable">
+<p >freq / 8 = 1382400 </p><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Freq div   </th><th class="markdownTableHeadNone">Baudrate   </th><th class="markdownTableHeadNone">Ticks hex    </th></tr>
 <tr class="markdownTableRowOdd">
@@ -196,17 +196,57 @@ $(function() {
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">19200   </td><td class="markdownTableBodyNone">0x48    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">38400   </td><td class="markdownTableBodyNone">0x30    </td></tr>
+<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">38400   </td><td class="markdownTableBodyNone">0x24    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">57600   </td><td class="markdownTableBodyNone">0x24    </td></tr>
+<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">57600   </td><td class="markdownTableBodyNone">0x18    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">74880   </td><td class="markdownTableBodyNone">0x18    </td></tr>
+<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">74880   </td><td class="markdownTableBodyNone">0x12    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">115200   </td><td class="markdownTableBodyNone">0x0C    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">230400   </td><td class="markdownTableBodyNone">0x0B    </td></tr>
+<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">230400   </td><td class="markdownTableBodyNone">0x06    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">250000   </td><td class="markdownTableBodyNone">0x05   </td></tr>
+<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">250000   </td><td class="markdownTableBodyNone">0x05 0x06?   </td></tr>
+</table>
+<p >freq/16 = 691200 </p><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Freq div   </th><th class="markdownTableHeadNone">Baudrate   </th><th class="markdownTableHeadNone">Ticks hex    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">9600   </td><td class="markdownTableBodyNone">0x48    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">19200   </td><td class="markdownTableBodyNone">0x24    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">38400   </td><td class="markdownTableBodyNone">0x12    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">57600   </td><td class="markdownTableBodyNone">0x0C    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">74880   </td><td class="markdownTableBodyNone">0x09    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">115200   </td><td class="markdownTableBodyNone">0x06    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">230400   </td><td class="markdownTableBodyNone">0x03    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">250000   </td><td class="markdownTableBodyNone">0x02-0x03?   </td></tr>
+</table>
+<p >freq/32 = 345600 </p><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Freq div   </th><th class="markdownTableHeadNone">Baudrate   </th><th class="markdownTableHeadNone">Ticks hex    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">8   </td><td class="markdownTableBodyNone">9600   </td><td class="markdownTableBodyNone">0x48    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">8   </td><td class="markdownTableBodyNone">19200   </td><td class="markdownTableBodyNone">0x24    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">8   </td><td class="markdownTableBodyNone">38400   </td><td class="markdownTableBodyNone">0x12    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">8   </td><td class="markdownTableBodyNone">57600   </td><td class="markdownTableBodyNone">0x0C    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">8   </td><td class="markdownTableBodyNone">74880   </td><td class="markdownTableBodyNone">0x09    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">8   </td><td class="markdownTableBodyNone">115200   </td><td class="markdownTableBodyNone">0x06    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">8   </td><td class="markdownTableBodyNone">230400   </td><td class="markdownTableBodyNone">0x03    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">8   </td><td class="markdownTableBodyNone">250000   </td><td class="markdownTableBodyNone">0x02-0x03?   </td></tr>
 </table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
