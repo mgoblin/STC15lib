@@ -78,9 +78,9 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="group__timer__to__ms.html#ga05eec17c45e48cc9ceb0c238cfbe5505">   33</a></span><span class="preprocessor">#define timer_uint16_ticks_to_freq100(ticks, timer_clock_divider, frequency_divider_scale) ((100 * get_master_clock_frequency() / ((timer_clock_divider &lt;&lt; 1) * (1 + (uint32_t)ticks))) &gt;&gt; frequency_divider_scale)</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="group__timer__to__ms.html#ga36e1de1ec7beecd79fbc758e75f35a65">   50</a></span><span class="preprocessor">#define timer_frequency_to_ticks_unsafe(frequency, timer_clock_divider, frequency_divider_scale) (((get_master_clock_frequency() &gt;&gt; 1) / (frequency * timer_clock_divider)) &gt;&gt; frequency_divider_scale)</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="group__timer__to__ms.html#ga36e1de1ec7beecd79fbc758e75f35a65">   56</a></span><span class="preprocessor">#define timer_frequency_to_ticks_unsafe(frequency, timer_clock_divider, frequency_divider_scale) (((get_master_clock_frequency() &gt;&gt; 1) / (frequency * timer_clock_divider)) &gt;&gt; frequency_divider_scale)</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="afrequency_8h_html"><div class="ttname"><a href="frequency_8h.html">frequency.h</a></div></div>
 <div class="ttc" id="atimer__to__ms__common_8h_html"><div class="ttname"><a href="timer__to__ms__common_8h.html">timer_to_ms_common.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

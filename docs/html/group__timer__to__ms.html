@@ -116,6 +116,8 @@ Macros</h2></td></tr>
 <p>Convert timer frequency to ticks (unsafe operation) </p>
 <p >Frequency to ticks is a reverse operation of ticks to frequency,</p>
 <p >Not all frequency ranges can be correctly coverted to ticks. This method doesnt carefully analyze frequency to ticks covertion correctness.</p>
+<p >For 1T mode and frequency divider scale 0 minimal frequency is near 100Hz (11059200 / 2 / 100) = 55296 ticks and maximum frequency is near 5MHz 1.1 ticks</p>
+<p >For 12T mode and frequency divider scale 0 minimal frequency is near 8Hz (11059200 / 2 / 12 / 8) = 57600 ticks and maximum frequency is near 400kHz</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">frequency</td><td>uint32_t frequency </td></tr>

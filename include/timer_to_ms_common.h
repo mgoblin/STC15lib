@@ -38,6 +38,12 @@
  * 
  * Not all frequency ranges can be correctly coverted to ticks. This method doesnt carefully 
  * analyze frequency to ticks covertion correctness.
+ * 
+ * For 1T mode and frequency divider scale 0 minimal frequency is near 100Hz 
+ * (11059200 / 2 / 100) = 55296 ticks and maximum frequency is near 5MHz 1.1 ticks
+ * 
+ * For 12T mode and frequency divider scale 0 minimal frequency is near 8Hz 
+ * (11059200 / 2 / 12 / 8) = 57600 ticks and maximum frequency is near 400kHz
  *   
  * @param frequency uint32_t frequency
  * @param timer_clock_divider uint8_t or timer_clock_divider_t enum T12 or T1 timer clock divider
