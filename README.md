@@ -53,10 +53,12 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 * UART to UART1 renamed
 * Fix: UART bias timer0 1T by setting AUXR.7 value to 1.
 * timer2 baud rate ticks calculation implemented
-* UART1 use timer2_mode0 and timer2 aux modules routines now 
+* UART1 use timer2_mode0 and timer2 aux modules routines now
+* Implement ticks to times part of aux module for timer0 
 
 Next releases todo
-* TODO Implement ticks to times part of aux module
+* TODO Implement ticks to times part of aux module for timer2
+* TODO Implement times to ticks part of aux module
 * TODO Add example links to module documentation 
 * TODO Implements counters
 * Optimize timer2 baud rate calculation. Use precalculated array of baudrates
