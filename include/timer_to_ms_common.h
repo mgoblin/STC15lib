@@ -12,8 +12,7 @@
 
 #include <stdint.h>
 #include <frequency.h>
-#include <timer_to_ms_common.h>
-
+#include <timer_structs.h>
 /**
  * @brief Convert ticks to timer frequency multiplied by 100.
  * @details The output frequency = (SYSclk/timer_clock_divider)/((65536-ticks) * 2).
@@ -54,5 +53,19 @@
  * @ingroup timer_to_ms
  */
 #define timer_frequency_to_ticks_unsafe(frequency, timer_clock_divider, frequency_divider_scale) (((get_master_clock_frequency() >> 1) / (frequency * timer_clock_divider)) >> frequency_divider_scale)
+
+/**
+ * @brief Convert ticks count to ms
+ * @details <b>This method doesnt analyze corner cases and overflow of result. Be careful.</b> 
+ * 
+ * @param ticks uint16_t ticks count
+ * @param timer_divider timer_clock_divider_t 1T or 12T timer clock divider
+ * @param frequency_divider_scale uint8_t MCU frequency divider scale
+ * 
+ * @return milliseconds time corresponing to timer ticks
+ * 
+ * @ingroup timer_to_ms
+ */
+uint32_t timer_ticks_to_ms_usafe(uint16_t ticks, timer_clock_divider_t timer_divider, uint8_t frequency_divider_scale);
 
 #endif

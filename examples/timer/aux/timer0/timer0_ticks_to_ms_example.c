@@ -12,7 +12,7 @@ void main()
 
    uart1_init(9600);
 
-   timer0_mode0_12T_init();
+   timer0_mode0_1T_init();
    timer0_mode0_enable_P35_output(true);
    
    timer0_mode0_start(TICKS);

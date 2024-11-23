@@ -60,11 +60,13 @@
  * @brief Convert ticks count to ms
  * @details <b>This method doesnt analyze corner cases and overflow of result. Be careful.</b> 
  * 
+ * @param ticks uint16_t ticks count
+ * 
  * @return milliseconds time corresponing to timer ticks
  * 
  * @ingroup timer0_to_ms
  */
-uint32_t timer0_ticks_to_ms_usafe(uint16_t ticks);
+#define timer0_ticks_to_ms_usafe(ticks) (timer_ticks_to_ms_usafe(ticks, get_timer0_clock_divider(), get_frequency_divider_scale()))
 
 ///@}
 

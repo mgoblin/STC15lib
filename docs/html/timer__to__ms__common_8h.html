@@ -67,21 +67,23 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">timer_to_ms_common.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="frequency_8h_source.html">frequency.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="timer__to__ms__common_8h_source.html">timer_to_ms_common.h</a>&gt;</code><br />
+<code>#include &lt;timer_structs.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for timer_to_ms_common.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="timer__to__ms__common_8h__incl.png" border="0" usemap="#ainclude_2timer__to__ms__common_8h" alt=""/></div>
 <map name="ainclude_2timer__to__ms__common_8h" id="ainclude_2timer__to__ms__common_8h">
-<area shape="rect" title=" " alt="" coords="6,5,161,47"/>
+<area shape="rect" title=" " alt="" coords="50,5,205,47"/>
 <area shape="rect" title=" " alt="" coords="5,169,76,196"/>
 <area shape="rect" href="frequency_8h.html" title=" " alt="" coords="79,95,176,121"/>
+<area shape="rect" href="timer__structs_8h_source.html" title=" " alt="" coords="201,95,321,121"/>
 <area shape="rect" href="sys_8h.html" title=" " alt="" coords="101,169,157,196"/>
 <area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="181,169,239,196"/>
 <area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="79,244,178,271"/>
@@ -110,6 +112,12 @@ Macros</h2></td></tr>
 <tr class="memitem:ga36e1de1ec7beecd79fbc758e75f35a65"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#ga36e1de1ec7beecd79fbc758e75f35a65">timer_frequency_to_ticks_unsafe</a>(frequency,  timer_clock_divider,  frequency_divider_scale)&#160;&#160;&#160;(((<a class="el" href="group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b">get_master_clock_frequency</a>() &gt;&gt; 1) / (frequency * timer_clock_divider)) &gt;&gt; frequency_divider_scale)</td></tr>
 <tr class="memdesc:ga36e1de1ec7beecd79fbc758e75f35a65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert timer frequency to ticks (unsafe operation)  <a href="group__timer__to__ms.html#ga36e1de1ec7beecd79fbc758e75f35a65">More...</a><br /></td></tr>
 <tr class="separator:ga36e1de1ec7beecd79fbc758e75f35a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a6dcc7b3aa5aa900fcea589a46e3620cc"><td class="memItemLeft" align="right" valign="top"><a id="a6dcc7b3aa5aa900fcea589a46e3620cc" name="a6dcc7b3aa5aa900fcea589a46e3620cc"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>timer_ticks_to_ms_usafe</b> (uint16_t ticks, <a class="el" href="group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a> timer_divider, uint8_t frequency_divider_scale)</td></tr>
+<tr class="separator:a6dcc7b3aa5aa900fcea589a46e3620cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
