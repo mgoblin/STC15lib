@@ -55,7 +55,10 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 * timer2 baud rate ticks calculation implemented
 * UART1 use timer2_mode0 and timer2 aux modules routines now
 * Implement ticks to times part of aux module for timer0, timer2 
-s
+
+0.7
+* 
+
 Next releases todo
 * TODO Implement times to ticks part of aux module
 * TODO Enhance description of project for indexing in google/yandex and so on search engines
