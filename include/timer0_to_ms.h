@@ -58,6 +58,7 @@
 
 /**
  * @brief Convert ticks count to ms
+ * @details <b>This method doesnt analyze corner cases and overflow of result. Be careful.</b> 
  * 
  * @return milliseconds time corresponing to timer ticks
  * 
