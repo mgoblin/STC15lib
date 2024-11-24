@@ -21,8 +21,6 @@
  * Timer2 mode0 can be used in sync (main prorgam flow blocked until timer overloaded) 
  * and interrupt (call interrupt handler on timer overloaded) modes.
  * 
- * CPU frequency change biased timer delays.
- *  
  * @author Michael Golovanov
  */
 
