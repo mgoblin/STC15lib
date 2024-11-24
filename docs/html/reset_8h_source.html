@@ -97,14 +97,12 @@ $(function() {
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#ga355eee3da94d468a19c60aa13744567e">   86</a></span><span class="preprocessor">#define wdt_clear() (bit_set(WDT_CONTR, 4))</span></div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keywordtype">bool</span> <a class="code hl_function" href="group__mcu__reset.html#gaa2d25284ac04e775d31088d954936751">is_wdt_flag_on</a>();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#gac1c4fb7f1f59ef6ad7b431fa6c64c058">   96</a></span><span class="preprocessor">#define is_wdt_flag_on() (test_if_bit_set(WDT_CONTR, 7))</span></div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__mcu__reset.html#ga174e9370c1c332066f93b6a56f9b357c">reset_wdt_flag</a>();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#ga5b97e61020b67d9876a8178486112a60">  104</a></span><span class="preprocessor">#define reset_wdt_flag() (bit_clr(WDT_CONTR, 7))</span></div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="agroup__mcu__reset_html_ga174e9370c1c332066f93b6a56f9b357c"><div class="ttname"><a href="group__mcu__reset.html#ga174e9370c1c332066f93b6a56f9b357c">reset_wdt_flag</a></div><div class="ttdeci">void reset_wdt_flag()</div><div class="ttdoc">Reset WDT flag.</div><div class="ttdef"><b>Definition:</b> reset.c:8</div></div>
-<div class="ttc" id="agroup__mcu__reset_html_gaa2d25284ac04e775d31088d954936751"><div class="ttname"><a href="group__mcu__reset.html#gaa2d25284ac04e775d31088d954936751">is_wdt_flag_on</a></div><div class="ttdeci">bool is_wdt_flag_on()</div><div class="ttdoc">Get reset by WDT flag.</div><div class="ttdef"><b>Definition:</b> reset.c:3</div></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

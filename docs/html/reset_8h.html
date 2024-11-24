@@ -98,10 +98,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gadff1ae9368523be49ce8ef497d4ca902"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mcu__reset.html#gadff1ae9368523be49ce8ef497d4ca902">reset</a>()&#160;&#160;&#160;(bit_set(IAP_CONTR, 5))</td></tr>
 <tr class="memdesc:gadff1ae9368523be49ce8ef497d4ca902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Software reset.  <a href="group__mcu__reset.html#gadff1ae9368523be49ce8ef497d4ca902">More...</a><br /></td></tr>
 <tr class="separator:gadff1ae9368523be49ce8ef497d4ca902"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">watchdog timer</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p >Watchdog timer functions </p>
-</td></tr>
+<tr><td colspan="2"><div class="groupHeader">watchdog timer</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p >Watchdog timer functions </p>
+</div></td></tr>
 <tr class="memitem:ga4b2fd1f627e92c1af1acf116abc95180"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mcu__reset.html#ga4b2fd1f627e92c1af1acf116abc95180">wdt_init</a>(wdt_scale)</td></tr>
 <tr class="memdesc:ga4b2fd1f627e92c1af1acf116abc95180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init WDT.  <a href="group__mcu__reset.html#ga4b2fd1f627e92c1af1acf116abc95180">More...</a><br /></td></tr>
 <tr class="separator:ga4b2fd1f627e92c1af1acf116abc95180"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,12 +116,12 @@ Macros</h2></td></tr>
 <tr class="memitem:ga355eee3da94d468a19c60aa13744567e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mcu__reset.html#ga355eee3da94d468a19c60aa13744567e">wdt_clear</a>()&#160;&#160;&#160;(bit_set(WDT_CONTR, 4))</td></tr>
 <tr class="memdesc:ga355eee3da94d468a19c60aa13744567e"><td class="mdescLeft">&#160;</td><td class="mdescRight">clear WDT to prevent restart  <a href="group__mcu__reset.html#ga355eee3da94d468a19c60aa13744567e">More...</a><br /></td></tr>
 <tr class="separator:ga355eee3da94d468a19c60aa13744567e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa2d25284ac04e775d31088d954936751"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mcu__reset.html#gaa2d25284ac04e775d31088d954936751">is_wdt_flag_on</a> ()</td></tr>
-<tr class="memdesc:gaa2d25284ac04e775d31088d954936751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get reset by WDT flag.  <a href="group__mcu__reset.html#gaa2d25284ac04e775d31088d954936751">More...</a><br /></td></tr>
-<tr class="separator:gaa2d25284ac04e775d31088d954936751"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga174e9370c1c332066f93b6a56f9b357c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mcu__reset.html#ga174e9370c1c332066f93b6a56f9b357c">reset_wdt_flag</a> ()</td></tr>
-<tr class="memdesc:ga174e9370c1c332066f93b6a56f9b357c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset WDT flag.  <a href="group__mcu__reset.html#ga174e9370c1c332066f93b6a56f9b357c">More...</a><br /></td></tr>
-<tr class="separator:ga174e9370c1c332066f93b6a56f9b357c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac1c4fb7f1f59ef6ad7b431fa6c64c058"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mcu__reset.html#gac1c4fb7f1f59ef6ad7b431fa6c64c058">is_wdt_flag_on</a>()&#160;&#160;&#160;(test_if_bit_set(WDT_CONTR, 7))</td></tr>
+<tr class="memdesc:gac1c4fb7f1f59ef6ad7b431fa6c64c058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get reset by WDT flag.  <a href="group__mcu__reset.html#gac1c4fb7f1f59ef6ad7b431fa6c64c058">More...</a><br /></td></tr>
+<tr class="separator:gac1c4fb7f1f59ef6ad7b431fa6c64c058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5b97e61020b67d9876a8178486112a60"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mcu__reset.html#ga5b97e61020b67d9876a8178486112a60">reset_wdt_flag</a>()&#160;&#160;&#160;(bit_clr(WDT_CONTR, 7))</td></tr>
+<tr class="memdesc:ga5b97e61020b67d9876a8178486112a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset WDT flag.  <a href="group__mcu__reset.html#ga5b97e61020b67d9876a8178486112a60">More...</a><br /></td></tr>
+<tr class="separator:ga5b97e61020b67d9876a8178486112a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -4,5 +4,5 @@ var searchData=
   ['reset_1',['reset',['../group__mcu__reset.html#gadff1ae9368523be49ce8ef497d4ca902',1,'reset.h']]],
   ['reset_20and_20wdt_2',['Reset and WDT',['../group__mcu__reset.html',1,'']]],
   ['reset_2eh_3',['reset.h',['../reset_8h.html',1,'']]],
-  ['reset_5fwdt_5fflag_4',['reset_wdt_flag',['../group__mcu__reset.html#ga174e9370c1c332066f93b6a56f9b357c',1,'reset_wdt_flag():&#160;reset.c'],['../group__mcu__reset.html#ga174e9370c1c332066f93b6a56f9b357c',1,'reset_wdt_flag():&#160;reset.c']]]
+  ['reset_5fwdt_5fflag_4',['reset_wdt_flag',['../group__mcu__reset.html#ga5b97e61020b67d9876a8178486112a60',1,'reset.h']]]
 ];

@@ -93,7 +93,7 @@
  * 
  * @ingroup mcu_reset
  */
-bool is_wdt_flag_on();
+#define is_wdt_flag_on() (test_if_bit_set(WDT_CONTR, 7))
 
 /**
  * @brief Reset WDT flag
@@ -101,7 +101,7 @@ bool is_wdt_flag_on();
  * 
  * @ingroup mcu_reset
  */
-void reset_wdt_flag();
+#define reset_wdt_flag() (bit_clr(WDT_CONTR, 7))
 
 ///@}
 

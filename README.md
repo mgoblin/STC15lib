@@ -59,7 +59,7 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 0.7
 * Fix: remove variables from delay module
 * Reset routine implemented
-* Watchdog timer routines implemented 
+* Watchdog timer routines implemented
 
 Next releases todo
 * TODO Implement times to ticks part of aux module
@@ -67,4 +67,6 @@ Next releases todo
 * TODO Add example links to module documentation 
 * TODO Implements counters
 * Optimize timer2 baud rate calculation. Use precalculated array of baudrates
+* TODO Implement WDT idle flag
+* TODO Implement P5.4 as MCU reset source
 
