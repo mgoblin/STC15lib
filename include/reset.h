@@ -17,6 +17,6 @@
  * 
  * @ingroup reset
  */
-void reset();
+#define reset() (bit_set(IAP_CONTR, 5))
 
 #endif
