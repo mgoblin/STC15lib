@@ -1,10 +1,5 @@
 #include <reset.h>
 
-void wdt_clear()
-{
-    bit_set(WDT_CONTR, 4);
-}
-
 bool is_wdt_flag_on()
 {
     return test_if_bit_set(WDT_CONTR, 7);

@@ -83,7 +83,7 @@
  * 
  * @ingroup mcu_reset
  */
-void wdt_clear();
+#define wdt_clear() (bit_set(WDT_CONTR, 4))
 
 /**
  * @brief Get reset by WDT flag

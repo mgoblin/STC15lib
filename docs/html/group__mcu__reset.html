@@ -69,9 +69,6 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader">watchdog timer</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p >Watchdog timer functions </p>
 </td></tr>
-<tr class="memitem:ga6f65e8b6ef3220926d0486368a7f930d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mcu__reset.html#ga6f65e8b6ef3220926d0486368a7f930d">wdt_clear</a> ()</td></tr>
-<tr class="memdesc:ga6f65e8b6ef3220926d0486368a7f930d"><td class="mdescLeft">&#160;</td><td class="mdescRight">clear WDT to prevent restart  <a href="group__mcu__reset.html#ga6f65e8b6ef3220926d0486368a7f930d">More...</a><br /></td></tr>
-<tr class="separator:ga6f65e8b6ef3220926d0486368a7f930d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa2d25284ac04e775d31088d954936751"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mcu__reset.html#gaa2d25284ac04e775d31088d954936751">is_wdt_flag_on</a> ()</td></tr>
 <tr class="memdesc:gaa2d25284ac04e775d31088d954936751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get reset by WDT flag.  <a href="group__mcu__reset.html#gaa2d25284ac04e775d31088d954936751">More...</a><br /></td></tr>
 <tr class="separator:gaa2d25284ac04e775d31088d954936751"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -90,6 +87,9 @@ $(function() {
 <tr class="memitem:ga843c35409dc0a28f62bb961488dfd62c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mcu__reset.html#ga843c35409dc0a28f62bb961488dfd62c">is_wdt_started</a>()&#160;&#160;&#160;(test_if_bit_set(WDT_CONTR, 5))</td></tr>
 <tr class="memdesc:ga843c35409dc0a28f62bb961488dfd62c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get WDT start status.  <a href="group__mcu__reset.html#ga843c35409dc0a28f62bb961488dfd62c">More...</a><br /></td></tr>
 <tr class="separator:ga843c35409dc0a28f62bb961488dfd62c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga355eee3da94d468a19c60aa13744567e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mcu__reset.html#ga355eee3da94d468a19c60aa13744567e">wdt_clear</a>()&#160;&#160;&#160;(bit_set(WDT_CONTR, 4))</td></tr>
+<tr class="memdesc:ga355eee3da94d468a19c60aa13744567e"><td class="mdescLeft">&#160;</td><td class="mdescRight">clear WDT to prevent restart  <a href="group__mcu__reset.html#ga355eee3da94d468a19c60aa13744567e">More...</a><br /></td></tr>
+<tr class="separator:ga355eee3da94d468a19c60aa13744567e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">reset</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p >MCU reset functions </p>
@@ -141,6 +141,26 @@ $(function() {
 
 <p>Software reset. </p>
 <p >Restart MCU </p>
+
+</div>
+</div>
+<a id="ga355eee3da94d468a19c60aa13744567e" name="ga355eee3da94d468a19c60aa13744567e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga355eee3da94d468a19c60aa13744567e">&#9670;&nbsp;</a></span>wdt_clear</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define wdt_clear</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(bit_set(WDT_CONTR, 4))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>clear WDT to prevent restart </p>
+<p >Call wdt_clear after wdt_start call to prevent WDT reset MCU </p>
 
 </div>
 </div>
@@ -254,26 +274,6 @@ $(function() {
 
 <p>Reset WDT flag. </p>
 <p >Reset WDT flag to false. </p>
-
-</div>
-</div>
-<a id="ga6f65e8b6ef3220926d0486368a7f930d" name="ga6f65e8b6ef3220926d0486368a7f930d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6f65e8b6ef3220926d0486368a7f930d">&#9670;&nbsp;</a></span>wdt_clear()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void wdt_clear </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>clear WDT to prevent restart </p>
-<p >Call wdt_clear after wdt_start call to prevent WDT reset MCU </p>
 
 </div>
 </div>
