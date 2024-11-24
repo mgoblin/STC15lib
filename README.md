@@ -58,6 +58,7 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 
 0.7
 * Fix: remove variables from delay module
+* Reset implemented
 
 Next releases todo
 * TODO Implement times to ticks part of aux module
