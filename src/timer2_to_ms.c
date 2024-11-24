@@ -2,5 +2,5 @@
 
 uint16_t timer2_mode0_baudrate_to_ticks(uint32_t uart_baudrate)
 {
-    return (get_master_clock_frequency() >> get_frequency_divider_scale())/4/uart_baudrate - 1;
+    return (get_master_clock_frequency() >> get_frequency_divider_scale())/4/uart_baudrate;
 }
