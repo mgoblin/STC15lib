@@ -17,7 +17,7 @@ void main()
    
    timer0_mode0_start(TICKS);
 
-   uint32_t ms = timer0_ticks_to_ms_usafe(TICKS);
+   uint32_t ms = timer_ticks_to_ms_usafe(TICKS, get_timer0_clock_divider(), get_frequency_divider());
 
    while (1) {
         printf_fast("P35 time is %lu ms\n", ms);
