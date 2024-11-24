@@ -129,7 +129,6 @@ $(function() {
 <li>Timer interrupt cannot be disabled</li>
 </ul>
 <p >Timer0 in mode3 can be used in sync (main prorgam flow blocked until timer overloaded) and interrupt (call interrupt handler on timer overloaded) modes.</p>
-<p >CPU frequency change biased timer delays.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ga164988a97d7aa1ca3e415a663ad5ecd3" name="ga164988a97d7aa1ca3e415a663ad5ecd3"></a>
@@ -297,9 +296,9 @@ $(function() {
 <div class="line">        timer0_mode3_close_gate();                                      \</div>
 <div class="line">    }                                                                   \</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__timer0__mode3_html_ga164988a97d7aa1ca3e415a663ad5ecd3"><div class="ttname"><a href="group__timer0__mode3.html#ga164988a97d7aa1ca3e415a663ad5ecd3">is_timer0_mode3_gate_opened</a></div><div class="ttdeci">#define is_timer0_mode3_gate_opened()</div><div class="ttdoc">Get timer starting gate state.</div><div class="ttdef"><b>Definition:</b> timer0_mode3.h:119</div></div>
-<div class="ttc" id="agroup__timer0__mode3_html_ga4eef8d197453f432b66f3c5fe10d0fdc"><div class="ttname"><a href="group__timer0__mode3.html#ga4eef8d197453f432b66f3c5fe10d0fdc">timer0_mode3_open_gate</a></div><div class="ttdeci">#define timer0_mode3_open_gate()</div><div class="ttdoc">Open timer starting gate.</div><div class="ttdef"><b>Definition:</b> timer0_mode3.h:110</div></div>
-<div class="ttc" id="agroup__timer0__mode3_html_ga998ffba506f9bf9d1e252b861d6bece8"><div class="ttname"><a href="group__timer0__mode3.html#ga998ffba506f9bf9d1e252b861d6bece8">timer0_mode3_start</a></div><div class="ttdeci">#define timer0_mode3_start(ticks)</div><div class="ttdoc">Run timer0.</div><div class="ttdef"><b>Definition:</b> timer0_mode3.h:164</div></div>
+<div class="ttc" id="agroup__timer0__mode3_html_ga164988a97d7aa1ca3e415a663ad5ecd3"><div class="ttname"><a href="group__timer0__mode3.html#ga164988a97d7aa1ca3e415a663ad5ecd3">is_timer0_mode3_gate_opened</a></div><div class="ttdeci">#define is_timer0_mode3_gate_opened()</div><div class="ttdoc">Get timer starting gate state.</div><div class="ttdef"><b>Definition:</b> timer0_mode3.h:117</div></div>
+<div class="ttc" id="agroup__timer0__mode3_html_ga4eef8d197453f432b66f3c5fe10d0fdc"><div class="ttname"><a href="group__timer0__mode3.html#ga4eef8d197453f432b66f3c5fe10d0fdc">timer0_mode3_open_gate</a></div><div class="ttdeci">#define timer0_mode3_open_gate()</div><div class="ttdoc">Open timer starting gate.</div><div class="ttdef"><b>Definition:</b> timer0_mode3.h:108</div></div>
+<div class="ttc" id="agroup__timer0__mode3_html_ga998ffba506f9bf9d1e252b861d6bece8"><div class="ttname"><a href="group__timer0__mode3.html#ga998ffba506f9bf9d1e252b861d6bece8">timer0_mode3_start</a></div><div class="ttdeci">#define timer0_mode3_start(ticks)</div><div class="ttdoc">Run timer0.</div><div class="ttdef"><b>Definition:</b> timer0_mode3.h:162</div></div>
 </div><!-- fragment -->
 <p>Run timer0 mode3 once and wait with program flow blocking timer not finished. </p>
 <p >Before run timer0_mode3_12T_init or timer0_mode3_1T_init should be called.</p>
