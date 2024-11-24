@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['wdt_5finit_0',['wdt_init',['../group__mcu__reset.html#gaeb3e1d85e3bd30e955dcfb6ec28b9dea',1,'wdt_init(uint8_t wdt_scale):&#160;reset.c'],['../group__mcu__reset.html#gaeb3e1d85e3bd30e955dcfb6ec28b9dea',1,'wdt_init(uint8_t wdt_scale):&#160;reset.c']]],
-  ['wdt_5fstart_1',['wdt_start',['../group__mcu__reset.html#ga98060ad4dd264d9497226efb57839752',1,'wdt_start():&#160;reset.c'],['../group__mcu__reset.html#ga98060ad4dd264d9497226efb57839752',1,'wdt_start():&#160;reset.c']]],
-  ['wdt_5fstop_2',['wdt_stop',['../group__mcu__reset.html#ga44294222e5922be90b84dd689dfa121e',1,'wdt_stop():&#160;reset.c'],['../group__mcu__reset.html#ga44294222e5922be90b84dd689dfa121e',1,'wdt_stop():&#160;reset.c']]]
+  ['timer2_5fmode0_5fbaudrate_5fto_5fticks_0',['timer2_mode0_baudrate_to_ticks',['../group__timer2__to__ms.html#gaa6e02e9e59bd2b185672a055e786fd2d',1,'timer2_mode0_baudrate_to_ticks(uint32_t uart_baudrate):&#160;timer2_to_ms.c'],['../group__timer2__to__ms.html#gaa6e02e9e59bd2b185672a055e786fd2d',1,'timer2_mode0_baudrate_to_ticks(uint32_t uart_baudrate):&#160;timer2_to_ms.c']]],
+  ['timer_5fticks_5fto_5fms_5fusafe_1',['timer_ticks_to_ms_usafe',['../group__timer__to__ms.html#ga6dcc7b3aa5aa900fcea589a46e3620cc',1,'timer_ticks_to_ms_usafe(uint16_t ticks, timer_clock_divider_t timer_divider, uint8_t frequency_divider_scale):&#160;timer0_to_ms_common.c'],['../group__timer__to__ms.html#ga6dcc7b3aa5aa900fcea589a46e3620cc',1,'timer_ticks_to_ms_usafe(uint16_t ticks, timer_clock_divider_t timer_divider, uint8_t frequency_divider_scale):&#160;timer0_to_ms_common.c']]]
 ];

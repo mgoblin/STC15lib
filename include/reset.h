@@ -32,7 +32,7 @@
 
 ///@}
 
-/** @name wdt
+/** @name watchdog timer
  *  Watchdog timer functions 
  */
 ///@{
@@ -62,9 +62,41 @@ void wdt_start();
  * @ingroup mcu_reset
  */
 void wdt_stop();
+
+/**
+ * @brief Get WDT start status
+ * @details Call is_wdt_started after wdt_init call 
+ * 
+ * @return bool - true if WDT started and false if not
+ * 
+ * @ingroup mcu_reset
+ */
 bool is_wdt_started();
+
+/**
+ * @brief clear WDT to prevent restart
+ * @details Call wdt_clear after wdt_start call to prevent WDT reset MCU
+ * 
+ * @ingroup mcu_reset
+ */
 void wdt_clear();
+
+/**
+ * @brief Get reset by WDT flag
+ * @details WDT reset flag set after restart caused by WDT
+ * 
+ * @return bool true if MCU reset caused by WDT and false otherwise 
+ * 
+ * @ingroup mcu_reset
+ */
 bool is_wdt_flag_on();
+
+/**
+ * @brief Reset WDT flag
+ * @details Reset WDT flag to false. 
+ * 
+ * @ingroup mcu_reset
+ */
 void reset_wdt_flag();
 
 ///@}
