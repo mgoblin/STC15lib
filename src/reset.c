@@ -21,7 +21,7 @@ bool is_wdt_started()
     return test_if_bit_set(WDT_CONTR, 5);
 }
 
-void wdt_reset()
+void wdt_clear()
 {
     bit_set(WDT_CONTR, 4);
 }
