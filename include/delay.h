@@ -11,6 +11,11 @@
 #include <stdint.h>
 #include <frequency.h>
 
+/**
+ * Ticks for 1ms delay
+ * 
+ * @ingroup delays 
+ */
 #define TICKS_DELAY_1ms ((uint16_t) (((get_master_clock_frequency() / 1000UL) - 30UL) / 18UL))
 
 /** 
