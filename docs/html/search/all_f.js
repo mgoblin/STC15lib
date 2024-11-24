@@ -58,7 +58,7 @@ var searchData=
   ['timer2_5fmode0_2eh_55',['timer2_mode0.h',['../timer2__mode0_8h.html',1,'']]],
   ['timer2_5fmode0_5f12t_5finit_56',['timer2_mode0_12T_init',['../group__timer2__mode0.html#ga3f16895698879dc595d6ae71974dba2e',1,'timer2_mode0.h']]],
   ['timer2_5fmode0_5f1t_5finit_57',['timer2_mode0_1T_init',['../group__timer2__mode0.html#gadf419f934a3f374993349e6a257ed29d',1,'timer2_mode0.h']]],
-  ['timer2_5fmode0_5fbaudrate_5fto_5fticks_58',['timer2_mode0_baudrate_to_ticks',['../group__timer2__to__ms.html#gaa6e02e9e59bd2b185672a055e786fd2d',1,'timer2_mode0_baudrate_to_ticks(uint32_t uart_baudrate):&#160;timer2_to_ms.c'],['../group__timer2__to__ms.html#gaa6e02e9e59bd2b185672a055e786fd2d',1,'timer2_mode0_baudrate_to_ticks(uint32_t uart_baudrate):&#160;timer2_to_ms.c']]],
+  ['timer2_5fmode0_5fbaudrate_5fto_5fticks_58',['timer2_mode0_baudrate_to_ticks',['../group__timer2__to__ms.html#gabf526ab4e81d771f1cc410df02be173f',1,'timer2_to_ms.h']]],
   ['timer2_5fmode0_5fenable_5fp30_5foutput_59',['timer2_mode0_enable_P30_output',['../group__timer2__mode0.html#gafbbdd131ce0efa3e2d8d7d27c285aceb',1,'timer2_mode0.h']]],
   ['timer2_5fmode0_5freload_60',['timer2_mode0_reload',['../group__timer2__mode0.html#ga607a922d8faac666c2dcddd233e0bab1',1,'timer2_mode0.h']]],
   ['timer2_5fmode0_5fstart_61',['timer2_mode0_start',['../group__timer2__mode0.html#ga4896ed979b875120c708dee3dc0db480',1,'timer2_mode0.h']]],

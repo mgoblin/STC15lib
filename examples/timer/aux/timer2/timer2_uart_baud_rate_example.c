@@ -16,10 +16,12 @@ void main()
 {
     // UART1 on init use timer2_mode0_baudrate_to_ticks. 
     uart1_init(UART_BAUDRATE);
+
+    uint16_t ticks = timer2_mode0_baudrate_to_ticks(UART_BAUDRATE);
     
     while (1)
     {
-        printf_tiny("Calulated timer2 ticks value is 0x%x\n", timer2_mode0_baudrate_to_ticks(UART_BAUDRATE));
+        printf_tiny("Calulated timer2 ticks value is 0x%x\n", ticks);
         delay_ms(500);
     }
     
