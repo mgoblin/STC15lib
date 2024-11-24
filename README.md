@@ -60,6 +60,7 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 * Fix: remove variables from delay module
 * Reset routine implemented
 * Watchdog timer routines implemented
+* delay_ms now is define again
 
 Next releases todo
 * TODO Implement times to ticks part of aux module
