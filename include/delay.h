@@ -11,6 +11,8 @@
 #include <stdint.h>
 #include <frequency.h>
 
+#define TICKS_DELAY_1ms ((uint16_t) (((get_master_clock_frequency() / 1000UL) - 30UL) / 18UL))
+
 /** 
 *  @brief Delays program flow using CPU nop
 *  @details Using CPU cycles to delay. Use delay_ms with care. 
