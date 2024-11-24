@@ -45,7 +45,11 @@
  * 
  * @ingroup mcu_reset
  */
-void wdt_init(uint8_t wdt_scale);
+#define wdt_init(wdt_scale)             \
+{                                       \
+    WDT_CONTR &= 0x00;                  \
+    WDT_CONTR |= (wdt_scale & 0x07);    \
+}
 
 /**
  * @brief Start WDT
@@ -53,7 +57,7 @@ void wdt_init(uint8_t wdt_scale);
  * 
  * @ingroup mcu_reset
  */
-void wdt_start();
+#define wdt_start() (bit_set(WDT_CONTR, 5)) 
 
 /**
  * @brief Stop WDT
@@ -61,7 +65,7 @@ void wdt_start();
  * 
  * @ingroup mcu_reset
  */
-void wdt_stop();
+#define wdt_stop() (bit_clr(WDT_CONTR, 5)) 
 
 /**
  * @brief Get WDT start status
@@ -71,7 +75,7 @@ void wdt_stop();
  * 
  * @ingroup mcu_reset
  */
-bool is_wdt_started();
+#define is_wdt_started() (test_if_bit_set(WDT_CONTR, 5)) 
 
 /**
  * @brief clear WDT to prevent restart
