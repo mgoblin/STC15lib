@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['putchar_0',['putchar',['../group__uart.html#ga07036e93939040c563e862a6a31b65bc',1,'putchar(int ch):&#160;uart.c'],['../group__uart.html#ga07036e93939040c563e862a6a31b65bc',1,'putchar(int ch):&#160;uart.c']]]
+  ['timer2_5fmode0_5fbaudrate_5fto_5fticks_0',['timer2_mode0_baudrate_to_ticks',['../group__timer2__to__ms.html#gaa6e02e9e59bd2b185672a055e786fd2d',1,'timer2_mode0_baudrate_to_ticks(uint32_t uart_baudrate):&#160;timer2_to_ms.c'],['../group__timer2__to__ms.html#gaa6e02e9e59bd2b185672a055e786fd2d',1,'timer2_mode0_baudrate_to_ticks(uint32_t uart_baudrate):&#160;timer2_to_ms.c']]]
 ];
