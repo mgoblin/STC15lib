@@ -11,6 +11,12 @@
  * @author Michael Golovanov
  */
 
+/**
+ * @brief Software reset
+ * @details Restart MCU 
+ * 
+ * @ingroup reset
+ */
 void reset();
 
 #endif
