@@ -78,17 +78,26 @@ $(function() {
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="group__reset.html#gadff1ae9368523be49ce8ef497d4ca902">   23</a></span><span class="preprocessor">#define reset() (bit_set(IAP_CONTR, 5))</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">void</span> wdt_init(uint8_t wdt_scale);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">void</span> wdt_start();</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">void</span> wdt_stop();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">bool</span> is_wdt_started();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keywordtype">void</span> wdt_clear();</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">bool</span> is_wdt_flag_on();</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keywordtype">void</span> reset_wdt_flag();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#gadff1ae9368523be49ce8ef497d4ca902">   31</a></span><span class="preprocessor">#define reset() (bit_set(IAP_CONTR, 5))</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__mcu__reset.html#gaeb3e1d85e3bd30e955dcfb6ec28b9dea">wdt_init</a>(uint8_t wdt_scale);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__mcu__reset.html#ga98060ad4dd264d9497226efb57839752">wdt_start</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__mcu__reset.html#ga44294222e5922be90b84dd689dfa121e">wdt_stop</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keywordtype">bool</span> is_wdt_started();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keywordtype">void</span> wdt_clear();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">bool</span> is_wdt_flag_on();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keywordtype">void</span> reset_wdt_flag();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__mcu__reset_html_ga44294222e5922be90b84dd689dfa121e"><div class="ttname"><a href="group__mcu__reset.html#ga44294222e5922be90b84dd689dfa121e">wdt_stop</a></div><div class="ttdeci">void wdt_stop()</div><div class="ttdoc">Stop WDT.</div><div class="ttdef"><b>Definition:</b> reset.c:14</div></div>
+<div class="ttc" id="agroup__mcu__reset_html_ga98060ad4dd264d9497226efb57839752"><div class="ttname"><a href="group__mcu__reset.html#ga98060ad4dd264d9497226efb57839752">wdt_start</a></div><div class="ttdeci">void wdt_start()</div><div class="ttdoc">Start WDT.</div><div class="ttdef"><b>Definition:</b> reset.c:9</div></div>
+<div class="ttc" id="agroup__mcu__reset_html_gaeb3e1d85e3bd30e955dcfb6ec28b9dea"><div class="ttname"><a href="group__mcu__reset.html#gaeb3e1d85e3bd30e955dcfb6ec28b9dea">wdt_init</a></div><div class="ttdeci">void wdt_init(uint8_t wdt_scale)</div><div class="ttdoc">Init WDT.</div><div class="ttdef"><b>Definition:</b> reset.c:3</div></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

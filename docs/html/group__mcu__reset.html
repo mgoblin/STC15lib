@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>STC15W408AS library: include/reset.h File Reference</title>
+<title>STC15W408AS library: Reset and WDT</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,6 +46,7 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,50 +61,14 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">reset.h File Reference</div></div>
+  <div class="headertitle"><div class="title">Reset and WDT</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="sys_8h_source.html">sys.h</a>&gt;</code><br />
-<code>#include &lt;bits.h&gt;</code><br />
-<code>#include &lt;stdint.h&gt;</code><br />
-<code>#include &lt;stdbool.h&gt;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for reset.h:</div>
-<div class="dyncontent">
-<div class="center"><img src="reset_8h__incl.png" border="0" usemap="#ainclude_2reset_8h" alt=""/></div>
-<map name="ainclude_2reset_8h" id="ainclude_2reset_8h">
-<area shape="rect" title=" " alt="" coords="121,5,239,32"/>
-<area shape="rect" href="sys_8h.html" title=" " alt="" coords="27,80,83,107"/>
-<area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="107,80,165,107"/>
-<area shape="rect" title=" " alt="" coords="190,80,261,107"/>
-<area shape="rect" title=" " alt="" coords="285,80,368,107"/>
-<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="5,155,104,181"/>
-<area shape="rect" title=" " alt="" coords="9,229,100,256"/>
-</map>
-</div>
-</div>
-<p><a href="reset_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader">reset</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p >MCU reset functions </p>
-</div></td></tr>
-<tr class="memitem:gadff1ae9368523be49ce8ef497d4ca902"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mcu__reset.html#gadff1ae9368523be49ce8ef497d4ca902">reset</a>()&#160;&#160;&#160;(bit_set(IAP_CONTR, 5))</td></tr>
-<tr class="memdesc:gadff1ae9368523be49ce8ef497d4ca902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Software reset.  <a href="group__mcu__reset.html#gadff1ae9368523be49ce8ef497d4ca902">More...</a><br /></td></tr>
-<tr class="separator:gadff1ae9368523be49ce8ef497d4ca902"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader">wdt</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p >Watchdog timer functions </p>
-</div></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader">wdt</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p >Watchdog timer functions </p>
+</td></tr>
 <tr class="memitem:gaeb3e1d85e3bd30e955dcfb6ec28b9dea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mcu__reset.html#gaeb3e1d85e3bd30e955dcfb6ec28b9dea">wdt_init</a> (uint8_t wdt_scale)</td></tr>
 <tr class="memdesc:gaeb3e1d85e3bd30e955dcfb6ec28b9dea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init WDT.  <a href="group__mcu__reset.html#gaeb3e1d85e3bd30e955dcfb6ec28b9dea">More...</a><br /></td></tr>
 <tr class="separator:gaeb3e1d85e3bd30e955dcfb6ec28b9dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,19 +78,119 @@ Functions</h2></td></tr>
 <tr class="memitem:ga44294222e5922be90b84dd689dfa121e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mcu__reset.html#ga44294222e5922be90b84dd689dfa121e">wdt_stop</a> ()</td></tr>
 <tr class="memdesc:ga44294222e5922be90b84dd689dfa121e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop WDT.  <a href="group__mcu__reset.html#ga44294222e5922be90b84dd689dfa121e">More...</a><br /></td></tr>
 <tr class="separator:ga44294222e5922be90b84dd689dfa121e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2761101edc346433d498adb25c4e3d7d"><td class="memItemLeft" align="right" valign="top">
+<tr class="memitem:ga2761101edc346433d498adb25c4e3d7d"><td class="memItemLeft" align="right" valign="top"><a id="ga2761101edc346433d498adb25c4e3d7d" name="ga2761101edc346433d498adb25c4e3d7d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_wdt_started</b> ()</td></tr>
 <tr class="separator:ga2761101edc346433d498adb25c4e3d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6f65e8b6ef3220926d0486368a7f930d"><td class="memItemLeft" align="right" valign="top">
+<tr class="memitem:ga6f65e8b6ef3220926d0486368a7f930d"><td class="memItemLeft" align="right" valign="top"><a id="ga6f65e8b6ef3220926d0486368a7f930d" name="ga6f65e8b6ef3220926d0486368a7f930d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>wdt_clear</b> ()</td></tr>
 <tr class="separator:ga6f65e8b6ef3220926d0486368a7f930d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa2d25284ac04e775d31088d954936751"><td class="memItemLeft" align="right" valign="top">
+<tr class="memitem:gaa2d25284ac04e775d31088d954936751"><td class="memItemLeft" align="right" valign="top"><a id="gaa2d25284ac04e775d31088d954936751" name="gaa2d25284ac04e775d31088d954936751"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_wdt_flag_on</b> ()</td></tr>
 <tr class="separator:gaa2d25284ac04e775d31088d954936751"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga174e9370c1c332066f93b6a56f9b357c"><td class="memItemLeft" align="right" valign="top">
+<tr class="memitem:ga174e9370c1c332066f93b6a56f9b357c"><td class="memItemLeft" align="right" valign="top"><a id="ga174e9370c1c332066f93b6a56f9b357c" name="ga174e9370c1c332066f93b6a56f9b357c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>reset_wdt_flag</b> ()</td></tr>
 <tr class="separator:ga174e9370c1c332066f93b6a56f9b357c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">reset</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p >MCU reset functions </p>
+</td></tr>
+<tr class="memitem:gadff1ae9368523be49ce8ef497d4ca902"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mcu__reset.html#gadff1ae9368523be49ce8ef497d4ca902">reset</a>()&#160;&#160;&#160;(bit_set(IAP_CONTR, 5))</td></tr>
+<tr class="memdesc:gadff1ae9368523be49ce8ef497d4ca902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Software reset.  <a href="group__mcu__reset.html#gadff1ae9368523be49ce8ef497d4ca902">More...</a><br /></td></tr>
+<tr class="separator:gadff1ae9368523be49ce8ef497d4ca902"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p >Functions and data structures related software reset</p>
+<p >WDT timings biased by MCU frequency change (frequency divider).</p>
+<dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="gadff1ae9368523be49ce8ef497d4ca902" name="gadff1ae9368523be49ce8ef497d4ca902"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadff1ae9368523be49ce8ef497d4ca902">&#9670;&nbsp;</a></span>reset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define reset</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(bit_set(IAP_CONTR, 5))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Software reset. </p>
+<p >Restart MCU </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gaeb3e1d85e3bd30e955dcfb6ec28b9dea" name="gaeb3e1d85e3bd30e955dcfb6ec28b9dea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeb3e1d85e3bd30e955dcfb6ec28b9dea">&#9670;&nbsp;</a></span>wdt_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wdt_init </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>wdt_scale</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Init WDT. </p>
+<p >WDT overflow time = (12 * wdt_scale * 32768) / MainFosc</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wdt_scale</td><td>uint8_t WDT timer scale in range 0..7 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga98060ad4dd264d9497226efb57839752" name="ga98060ad4dd264d9497226efb57839752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga98060ad4dd264d9497226efb57839752">&#9670;&nbsp;</a></span>wdt_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wdt_start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start WDT. </p>
+<p >Call wdt_start after wdt_init call </p>
+
+</div>
+</div>
+<a id="ga44294222e5922be90b84dd689dfa121e" name="ga44294222e5922be90b84dd689dfa121e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga44294222e5922be90b84dd689dfa121e">&#9670;&nbsp;</a></span>wdt_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wdt_stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stop WDT. </p>
+<p >Call wdt_stop after wdt_init and wdt_start call </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
