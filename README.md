@@ -64,12 +64,12 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 * Idle power managment routine implemented
 
 Next releases todo
+* TODO Implement WDT idle flag
 * TODO Implement power down mode
 * TODO Implement times to ticks part of aux module
 * TODO Enhance description of project for indexing in google/yandex and so on search engines
 * TODO Add example links to module documentation 
 * TODO Implements counters
 * Optimize timer2 baud rate calculation. Use precalculated array of baudrates
-* TODO Implement WDT idle flag
 * TODO Implement P5.4 as MCU reset source
 
