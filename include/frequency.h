@@ -76,11 +76,8 @@
  */
 #define set_frequency_divider_scale(divider_scale)      \
 {                                                       \
-    if (divider_scale < 8)                              \
-    {                                                   \
-        CLK_DIV &= 0xf8;                                \
-        CLK_DIV |= divider_scale;                       \
-    }                                                   \
+    CLK_DIV &= 0xf8;                                    \
+    CLK_DIV |= (divider_scale & 0x07);                  \
 }
 
 /**

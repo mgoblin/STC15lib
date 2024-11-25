@@ -47,7 +47,6 @@
  */
 #define wdt_init(wdt_scale)             \
 {                                       \
-    WDT_CONTR &= 0x00;                  \
     WDT_CONTR |= (wdt_scale & 0x07);    \
 }
 
@@ -102,6 +101,16 @@
  * @ingroup mcu_reset
  */
 #define reset_wdt_flag() (bit_clr(WDT_CONTR, 7))
+
+/**
+ * @brief Set WDT enabled/disabled in MCU idle mode
+ * @details By default WDT in MCU idle mode is disabled.
+ * 
+ * @param enabled bool - true - to enable WDT in idle mode, otherwise false
+ * 
+ * @ingroup mcu_reset
+ */
+#define enable_wdt_in_idle(enabled) (enabled ? bit_set(WDT_CONTR, 3) : bit_clr(WDT_CONTR, 3))
 
 ///@}
 

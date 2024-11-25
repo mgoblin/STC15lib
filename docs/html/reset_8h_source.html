@@ -85,24 +85,25 @@ $(function() {
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#ga4b2fd1f627e92c1af1acf116abc95180">   48</a></span><span class="preprocessor">#define wdt_init(wdt_scale)             \</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">{                                       \</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">    WDT_CONTR &amp;= 0x00;                  \</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">    WDT_CONTR |= (wdt_scale &amp; 0x07);    \</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">}</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#ga1ff5051835023e879151f4a8df3504e0">   60</a></span><span class="preprocessor">#define wdt_start() (bit_set(WDT_CONTR, 5)) </span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#ga27cbee9012a32bab0784e5d7a7c4d713">   68</a></span><span class="preprocessor">#define wdt_stop() (bit_clr(WDT_CONTR, 5)) </span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#ga843c35409dc0a28f62bb961488dfd62c">   78</a></span><span class="preprocessor">#define is_wdt_started() (test_if_bit_set(WDT_CONTR, 5)) </span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#ga355eee3da94d468a19c60aa13744567e">   86</a></span><span class="preprocessor">#define wdt_clear() (bit_set(WDT_CONTR, 4))</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#gac1c4fb7f1f59ef6ad7b431fa6c64c058">   96</a></span><span class="preprocessor">#define is_wdt_flag_on() (test_if_bit_set(WDT_CONTR, 7))</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#ga5b97e61020b67d9876a8178486112a60">  104</a></span><span class="preprocessor">#define reset_wdt_flag() (bit_clr(WDT_CONTR, 7))</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">    WDT_CONTR |= (wdt_scale &amp; 0x07);    \</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#ga1ff5051835023e879151f4a8df3504e0">   59</a></span><span class="preprocessor">#define wdt_start() (bit_set(WDT_CONTR, 5)) </span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#ga27cbee9012a32bab0784e5d7a7c4d713">   67</a></span><span class="preprocessor">#define wdt_stop() (bit_clr(WDT_CONTR, 5)) </span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#ga843c35409dc0a28f62bb961488dfd62c">   77</a></span><span class="preprocessor">#define is_wdt_started() (test_if_bit_set(WDT_CONTR, 5)) </span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#ga355eee3da94d468a19c60aa13744567e">   85</a></span><span class="preprocessor">#define wdt_clear() (bit_set(WDT_CONTR, 4))</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#gac1c4fb7f1f59ef6ad7b431fa6c64c058">   95</a></span><span class="preprocessor">#define is_wdt_flag_on() (test_if_bit_set(WDT_CONTR, 7))</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#ga5b97e61020b67d9876a8178486112a60">  103</a></span><span class="preprocessor">#define reset_wdt_flag() (bit_clr(WDT_CONTR, 7))</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#ga27ea2780d1228b5e65c152a19a9f9c1e">  113</a></span><span class="preprocessor">#define enable_wdt_in_idle(enabled) (enabled ? bit_set(WDT_CONTR, 3) : bit_clr(WDT_CONTR, 3))</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
