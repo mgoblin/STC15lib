@@ -61,9 +61,10 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 * Reset routine implemented
 * Watchdog timer routines implemented
 * delay_ms now is define again
+* Idle power managment routine implemented
 
 Next releases todo
-* TODO Implement power managment idle routine
+* TODO Implement power down mode
 * TODO Implement times to ticks part of aux module
 * TODO Enhance description of project for indexing in google/yandex and so on search engines
 * TODO Add example links to module documentation 
