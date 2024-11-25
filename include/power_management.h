@@ -22,4 +22,6 @@
  */
 #define idle() (bit_set(PCON, 0))
 
+#define power_down() (bit_set(PCON, 0))
+
 #endif
