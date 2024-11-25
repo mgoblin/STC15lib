@@ -20,6 +20,6 @@
  * 
  * @ingroup power_management
  */
-void idle();
+#define idle() (bit_set(PCON, 0))
 
 #endif

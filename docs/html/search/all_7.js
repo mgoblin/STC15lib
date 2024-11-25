@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['idle_0',['idle',['../group__power__management.html#ga83abbeda22fc5e6c2b35523b64199c1c',1,'idle():&#160;power_management.c'],['../group__power__management.html#ga83abbeda22fc5e6c2b35523b64199c1c',1,'idle():&#160;power_management.c']]],
+  ['idle_0',['idle',['../group__power__management.html#ga89e1b35bd6cbaf15cc0d33631acac076',1,'power_management.h']]],
   ['interrupt_1',['Interrupt',['../group__interrupts.html',1,'']]],
   ['interrupt_2eh_2',['interrupt.h',['../interrupt_8h.html',1,'']]],
   ['interrupt_5fpriority_5ft_3',['interrupt_priority_t',['../group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964',1,'interrupt.h']]],
