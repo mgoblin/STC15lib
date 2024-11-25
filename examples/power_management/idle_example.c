@@ -1,3 +1,12 @@
+/**
+ * How to use idle.
+ * 
+ * Start timer0 that change is_idle_required flag.
+ * In main routine LED blink and idle if is_idle_required = true. 
+ * Idle freeze main until timer0 interrupt arrived.
+ * 
+ * As a result LED blink some period of time and pause blinking until timer interrupt.  
+ */
 #include <power_management.h>
 
 #include <delay.h>
