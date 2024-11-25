@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reset_20and_20wdt_0',['Reset and WDT',['../group__mcu__reset.html',1,'']]]
+  ['power_20management_0',['Power management',['../group__power__management.html',1,'']]]
 ];

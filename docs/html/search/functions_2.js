@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['putchar_0',['putchar',['../group__uart.html#ga07036e93939040c563e862a6a31b65bc',1,'putchar(int ch):&#160;uart.c'],['../group__uart.html#ga07036e93939040c563e862a6a31b65bc',1,'putchar(int ch):&#160;uart.c']]]
+  ['idle_0',['idle',['../group__power__management.html#ga83abbeda22fc5e6c2b35523b64199c1c',1,'idle():&#160;power_management.c'],['../group__power__management.html#ga83abbeda22fc5e6c2b35523b64199c1c',1,'idle():&#160;power_management.c']]]
 ];
