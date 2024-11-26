@@ -22,6 +22,12 @@
  */
 #define idle() (bit_set(PCON, 0))
 
-#define power_down() (bit_set(PCON, 0))
+/**
+ * @brief Set MCU power down mode
+ * @details 
+ * 
+ * @ingroup power_management
+ */
+#define power_down() (bit_set(PCON, 1))
 
 #endif

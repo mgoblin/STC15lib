@@ -47,6 +47,7 @@
  */
 #define wdt_init(wdt_scale)             \
 {                                       \
+    WDT_CONTR = 0;                      \
     WDT_CONTR |= (wdt_scale & 0x07);    \
 }
 

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>STC15W408AS library: include/power_management.h File Reference</title>
+<title>STC15W408AS library: examples/power_management/power_management.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d28a4824dc47e487b107a5db32ef43c4.html">examples</a></li><li class="navelem"><a class="el" href="dir_b1f420cbc16285bdb739e86a837de2c8.html">power_management</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -76,13 +76,13 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for power_management.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="power__management_8h__incl.png" border="0" usemap="#ainclude_2power__management_8h" alt=""/></div>
-<map name="ainclude_2power__management_8h" id="ainclude_2power__management_8h">
-<area shape="rect" title=" " alt="" coords="5,5,224,32"/>
-<area shape="rect" href="sys_8h.html" title=" " alt="" coords="47,80,103,107"/>
-<area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="127,80,185,107"/>
-<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="25,155,124,181"/>
-<area shape="rect" title=" " alt="" coords="29,229,120,256"/>
+<div class="center"><img src="power__management_8h__incl.png" border="0" usemap="#aexamples_2power__management_2power__management_8h" alt=""/></div>
+<map name="aexamples_2power__management_2power__management_8h" id="aexamples_2power__management_2power__management_8h">
+<area shape="rect" title=" " alt="" coords="5,5,229,47"/>
+<area shape="rect" href="sys_8h.html" title=" " alt="" coords="49,95,105,121"/>
+<area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="129,95,188,121"/>
+<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="28,169,127,196"/>
+<area shape="rect" title=" " alt="" coords="32,244,123,271"/>
 </map>
 </div>
 </div>
@@ -93,9 +93,10 @@ Macros</h2></td></tr>
 <tr class="memitem:ga89e1b35bd6cbaf15cc0d33631acac076"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#ga89e1b35bd6cbaf15cc0d33631acac076">idle</a>()&#160;&#160;&#160;(bit_set(PCON, 0))</td></tr>
 <tr class="memdesc:ga89e1b35bd6cbaf15cc0d33631acac076"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MCU idle mode.  <a href="group__power__management.html#ga89e1b35bd6cbaf15cc0d33631acac076">More...</a><br /></td></tr>
 <tr class="separator:ga89e1b35bd6cbaf15cc0d33631acac076"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e0d38ad57d2078db65a84e857f5e5b6"><td class="memItemLeft" align="right" valign="top"><a id="a1e0d38ad57d2078db65a84e857f5e5b6" name="a1e0d38ad57d2078db65a84e857f5e5b6"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>power_down</b>()&#160;&#160;&#160;(bit_set(PCON, 0))</td></tr>
-<tr class="separator:a1e0d38ad57d2078db65a84e857f5e5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1e0d38ad57d2078db65a84e857f5e5b6"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>power_down</b>()&#160;&#160;&#160;(bit_set(PCON, 1))</td></tr>
+<tr class="memdesc:ga1e0d38ad57d2078db65a84e857f5e5b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MCU power down mode. <br /></td></tr>
+<tr class="separator:ga1e0d38ad57d2078db65a84e857f5e5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
