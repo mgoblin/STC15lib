@@ -65,6 +65,7 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 * Power down mode implemented
 
 Next releases todo
+* TODO implement bitX_set, bitX_clr to avoid unnessary bit operation in bit_set and bit_clr
 * TODO Implement times to ticks part of aux module
 * TODO Enhance description of project for indexing in google/yandex and so on search engines
 * TODO Add example links to module documentation 
