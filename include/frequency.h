@@ -153,11 +153,11 @@ typedef enum
     }                                               \
     else if (pin == P5_4)                           \
     {                                               \
-        bit_clr(CLK_DIV, 3);                        \
+        bit_clr(CLK_DIV, CBIT3);                    \
     }                                               \
     else if (pin == P1_6)                           \
     {                                               \
-        bit_set(CLK_DIV, 3);                        \
+        bit_set(CLK_DIV, SBIT3);                    \
     }                                               \
 }
 

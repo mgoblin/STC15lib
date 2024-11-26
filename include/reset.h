@@ -28,7 +28,7 @@
  * 
  * @ingroup mcu_reset
  */
-#define reset() (bit_set(IAP_CONTR, 5))
+#define reset() (bit_set(IAP_CONTR, SBIT5))
 
 ///@}
 
@@ -57,7 +57,7 @@
  * 
  * @ingroup mcu_reset
  */
-#define wdt_start() (bit_set(WDT_CONTR, 5)) 
+#define wdt_start() (bit_set(WDT_CONTR, SBIT5)) 
 
 /**
  * @brief Stop WDT
@@ -65,7 +65,7 @@
  * 
  * @ingroup mcu_reset
  */
-#define wdt_stop() (bit_clr(WDT_CONTR, 5)) 
+#define wdt_stop() (bit_clr(WDT_CONTR, CBIT5)) 
 
 /**
  * @brief Get WDT start status
@@ -83,7 +83,7 @@
  * 
  * @ingroup mcu_reset
  */
-#define wdt_clear() (bit_set(WDT_CONTR, 4))
+#define wdt_clear() (bit_set(WDT_CONTR, SBIT4))
 
 /**
  * @brief Get reset by WDT flag
@@ -101,7 +101,7 @@
  * 
  * @ingroup mcu_reset
  */
-#define reset_wdt_flag() (bit_clr(WDT_CONTR, 7))
+#define reset_wdt_flag() (bit_clr(WDT_CONTR, CBIT7))
 
 /**
  * @brief Set WDT enabled/disabled in MCU idle mode
@@ -111,7 +111,7 @@
  * 
  * @ingroup mcu_reset
  */
-#define enable_wdt_in_idle(enabled) (enabled ? bit_set(WDT_CONTR, 3) : bit_clr(WDT_CONTR, 3))
+#define enable_wdt_in_idle(enabled) (enabled ? bit_set(WDT_CONTR, SBIT3) : bit_clr(WDT_CONTR, CBIT3))
 
 ///@}
 

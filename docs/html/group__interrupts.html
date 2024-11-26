@@ -127,25 +127,25 @@ Macros</h2></td></tr>
 <tr class="memitem:ga590f0de8191271977e1f79d9ab9576ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga590f0de8191271977e1f79d9ab9576ab">enable_int2_interrupt</a>()&#160;&#160;&#160;(bit_set(INT_CLKO, 4))</td></tr>
 <tr class="memdesc:ga590f0de8191271977e1f79d9ab9576ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable INT2 interrupt.  <a href="group__interrupts.html#ga590f0de8191271977e1f79d9ab9576ab">More...</a><br /></td></tr>
 <tr class="separator:ga590f0de8191271977e1f79d9ab9576ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4668129f676d8d123d5992da8b7d6564"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga4668129f676d8d123d5992da8b7d6564">disable_int2_interrupt</a>()&#160;&#160;&#160;(bit_clr(INT_CLKO, 4))</td></tr>
+<tr class="memitem:ga4668129f676d8d123d5992da8b7d6564"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga4668129f676d8d123d5992da8b7d6564">disable_int2_interrupt</a>()&#160;&#160;&#160;(bit_clr(INT_CLKO, CBIT4))</td></tr>
 <tr class="memdesc:ga4668129f676d8d123d5992da8b7d6564"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable INT2 interrupt.  <a href="group__interrupts.html#ga4668129f676d8d123d5992da8b7d6564">More...</a><br /></td></tr>
 <tr class="separator:ga4668129f676d8d123d5992da8b7d6564"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga88ebf38f3c33cba4de86d19e2532ec97"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga88ebf38f3c33cba4de86d19e2532ec97">is_int2_interrupt_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, 4) &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td></tr>
 <tr class="memdesc:ga88ebf38f3c33cba4de86d19e2532ec97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get INT2 interrupt enable status.  <a href="group__interrupts.html#ga88ebf38f3c33cba4de86d19e2532ec97">More...</a><br /></td></tr>
 <tr class="separator:ga88ebf38f3c33cba4de86d19e2532ec97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga10ccfe3b81e2f0f8f8a9014a6f6cb382"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga10ccfe3b81e2f0f8f8a9014a6f6cb382">enable_int3_interrupt</a>()&#160;&#160;&#160;(bit_set(INT_CLKO, 5))</td></tr>
+<tr class="memitem:ga10ccfe3b81e2f0f8f8a9014a6f6cb382"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga10ccfe3b81e2f0f8f8a9014a6f6cb382">enable_int3_interrupt</a>()&#160;&#160;&#160;(bit_set(INT_CLKO, SBIT5))</td></tr>
 <tr class="memdesc:ga10ccfe3b81e2f0f8f8a9014a6f6cb382"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable INT3 interrupt.  <a href="group__interrupts.html#ga10ccfe3b81e2f0f8f8a9014a6f6cb382">More...</a><br /></td></tr>
 <tr class="separator:ga10ccfe3b81e2f0f8f8a9014a6f6cb382"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0eefb72a54f3befd3535d70e71a06de4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga0eefb72a54f3befd3535d70e71a06de4">disable_int3_interrupt</a>()&#160;&#160;&#160;(bit_clr(INT_CLKO, 5))</td></tr>
+<tr class="memitem:ga0eefb72a54f3befd3535d70e71a06de4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga0eefb72a54f3befd3535d70e71a06de4">disable_int3_interrupt</a>()&#160;&#160;&#160;(bit_clr(INT_CLKO, CBIT5))</td></tr>
 <tr class="memdesc:ga0eefb72a54f3befd3535d70e71a06de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable INT3 interrupt.  <a href="group__interrupts.html#ga0eefb72a54f3befd3535d70e71a06de4">More...</a><br /></td></tr>
 <tr class="separator:ga0eefb72a54f3befd3535d70e71a06de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga55815a15f668bf452348f7483ca94a2e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga55815a15f668bf452348f7483ca94a2e">is_int3_interrupt_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, 5) &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td></tr>
 <tr class="memdesc:ga55815a15f668bf452348f7483ca94a2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get INT3 interrupt enable status.  <a href="group__interrupts.html#ga55815a15f668bf452348f7483ca94a2e">More...</a><br /></td></tr>
 <tr class="separator:ga55815a15f668bf452348f7483ca94a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0e5e4a9cb47201c8f5be1e0918d29ac4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga0e5e4a9cb47201c8f5be1e0918d29ac4">enable_int4_interrupt</a>()&#160;&#160;&#160;(bit_set(INT_CLKO, 6))</td></tr>
+<tr class="memitem:ga0e5e4a9cb47201c8f5be1e0918d29ac4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga0e5e4a9cb47201c8f5be1e0918d29ac4">enable_int4_interrupt</a>()&#160;&#160;&#160;(bit_set(INT_CLKO, SBIT6))</td></tr>
 <tr class="memdesc:ga0e5e4a9cb47201c8f5be1e0918d29ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable INT4 interrupt.  <a href="group__interrupts.html#ga0e5e4a9cb47201c8f5be1e0918d29ac4">More...</a><br /></td></tr>
 <tr class="separator:ga0e5e4a9cb47201c8f5be1e0918d29ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae3a80148c904b86a58976a26399720d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gae3a80148c904b86a58976a26399720d0">disable_int4_interrupt</a>()&#160;&#160;&#160;(bit_clr(INT_CLKO, 6))</td></tr>
+<tr class="memitem:gae3a80148c904b86a58976a26399720d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gae3a80148c904b86a58976a26399720d0">disable_int4_interrupt</a>()&#160;&#160;&#160;(bit_clr(INT_CLKO, CBIT6))</td></tr>
 <tr class="memdesc:gae3a80148c904b86a58976a26399720d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable INT3 interrupt.  <a href="group__interrupts.html#gae3a80148c904b86a58976a26399720d0">More...</a><br /></td></tr>
 <tr class="separator:gae3a80148c904b86a58976a26399720d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab74f8baae5f006ebecd8ccbb787decb0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gab74f8baae5f006ebecd8ccbb787decb0">is_int4_interrupt_enable</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, 6) &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td></tr>
@@ -160,19 +160,19 @@ Macros</h2></td></tr>
 <tr class="memitem:gaf6a267bf6befa9aee24a701bd782f457"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaf6a267bf6befa9aee24a701bd782f457">is_timer0_interrupt_enabled</a>()&#160;&#160;&#160;(ET0 == 0 &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td></tr>
 <tr class="memdesc:gaf6a267bf6befa9aee24a701bd782f457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer0 interrupt enable status.  <a href="group__interrupts.html#gaf6a267bf6befa9aee24a701bd782f457">More...</a><br /></td></tr>
 <tr class="separator:gaf6a267bf6befa9aee24a701bd782f457"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6ba6fe72d49d266c76ca27b31bcb0395"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga6ba6fe72d49d266c76ca27b31bcb0395">enable_timer2_interrupt</a>()&#160;&#160;&#160;(bit_set(IE2, 2))</td></tr>
+<tr class="memitem:ga6ba6fe72d49d266c76ca27b31bcb0395"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga6ba6fe72d49d266c76ca27b31bcb0395">enable_timer2_interrupt</a>()&#160;&#160;&#160;(bit_set(IE2, SBIT2))</td></tr>
 <tr class="memdesc:ga6ba6fe72d49d266c76ca27b31bcb0395"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable timer2 interrupt.  <a href="group__interrupts.html#ga6ba6fe72d49d266c76ca27b31bcb0395">More...</a><br /></td></tr>
 <tr class="separator:ga6ba6fe72d49d266c76ca27b31bcb0395"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac8daf51c922df876c57f419b63996dd5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gac8daf51c922df876c57f419b63996dd5">disable_timer2_interrupt</a>()&#160;&#160;&#160;(bit_clr(IE2, 2))</td></tr>
+<tr class="memitem:gac8daf51c922df876c57f419b63996dd5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gac8daf51c922df876c57f419b63996dd5">disable_timer2_interrupt</a>()&#160;&#160;&#160;(bit_clr(IE2, CBIT2))</td></tr>
 <tr class="memdesc:gac8daf51c922df876c57f419b63996dd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable timer2 interrupt.  <a href="group__interrupts.html#gac8daf51c922df876c57f419b63996dd5">More...</a><br /></td></tr>
 <tr class="separator:gac8daf51c922df876c57f419b63996dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0c35fd771294a22d4cd3e205fd806bdb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga0c35fd771294a22d4cd3e205fd806bdb">is_timer2_interrupt_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(IE2, 2) &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td></tr>
 <tr class="memdesc:ga0c35fd771294a22d4cd3e205fd806bdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer2 interrupt enable status.  <a href="group__interrupts.html#ga0c35fd771294a22d4cd3e205fd806bdb">More...</a><br /></td></tr>
 <tr class="separator:ga0c35fd771294a22d4cd3e205fd806bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1031a01617faf8bd48f91d9eac505792"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga1031a01617faf8bd48f91d9eac505792">enable_spi_interrupt</a>()&#160;&#160;&#160;(bit_set(IE2, 1))</td></tr>
+<tr class="memitem:ga1031a01617faf8bd48f91d9eac505792"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga1031a01617faf8bd48f91d9eac505792">enable_spi_interrupt</a>()&#160;&#160;&#160;(bit_set(IE2, SBIT1))</td></tr>
 <tr class="memdesc:ga1031a01617faf8bd48f91d9eac505792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable SPI interrupt.  <a href="group__interrupts.html#ga1031a01617faf8bd48f91d9eac505792">More...</a><br /></td></tr>
 <tr class="separator:ga1031a01617faf8bd48f91d9eac505792"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad8ec33652ec7e3a2a2754678217a9799"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gad8ec33652ec7e3a2a2754678217a9799">disable_spi_interrupt</a>()&#160;&#160;&#160;(bit_clr(IE2, 1))</td></tr>
+<tr class="memitem:gad8ec33652ec7e3a2a2754678217a9799"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gad8ec33652ec7e3a2a2754678217a9799">disable_spi_interrupt</a>()&#160;&#160;&#160;(bit_clr(IE2, CBIT1))</td></tr>
 <tr class="memdesc:gad8ec33652ec7e3a2a2754678217a9799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable SPI interrupt.  <a href="group__interrupts.html#gad8ec33652ec7e3a2a2754678217a9799">More...</a><br /></td></tr>
 <tr class="separator:gad8ec33652ec7e3a2a2754678217a9799"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga749a47d315950a06ecd28e89cacec83d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga749a47d315950a06ecd28e89cacec83d">is_spi_interrupt_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(IE2, 1) &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td></tr>
@@ -220,7 +220,7 @@ Macros</h2></td></tr>
 <tr class="memitem:gaae1d82dd8aa3ed51e31de9cdf4d03eaa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaae1d82dd8aa3ed51e31de9cdf4d03eaa">get_timer0_interrupt_priority</a>()&#160;&#160;&#160;(PT0)</td></tr>
 <tr class="memdesc:gaae1d82dd8aa3ed51e31de9cdf4d03eaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer0 interrupt priority.  <a href="group__interrupts.html#gaae1d82dd8aa3ed51e31de9cdf4d03eaa">More...</a><br /></td></tr>
 <tr class="separator:gaae1d82dd8aa3ed51e31de9cdf4d03eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7f4ce2c83eea0366ba67f8cc956aab8f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga7f4ce2c83eea0366ba67f8cc956aab8f">set_spi_interrupt_priority</a>(priority)&#160;&#160;&#160;(priority == <a class="el" href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893">HIGH</a> ? bit_set(IP2, 1) : bit_clr(IP2, 1))</td></tr>
+<tr class="memitem:ga7f4ce2c83eea0366ba67f8cc956aab8f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga7f4ce2c83eea0366ba67f8cc956aab8f">set_spi_interrupt_priority</a>(priority)&#160;&#160;&#160;(priority == <a class="el" href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893">HIGH</a> ? bit_set(IP2, SBIT1) : bit_clr(IP2, CBIT1))</td></tr>
 <tr class="memdesc:ga7f4ce2c83eea0366ba67f8cc956aab8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set SPI interrupt priority.  <a href="group__interrupts.html#ga7f4ce2c83eea0366ba67f8cc956aab8f">More...</a><br /></td></tr>
 <tr class="separator:ga7f4ce2c83eea0366ba67f8cc956aab8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaacd1dbc81fe112ce6b25b664d07f2924"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaacd1dbc81fe112ce6b25b664d07f2924">get_spi_interrupt_priority</a>()&#160;&#160;&#160;(test_if_bit_set(IP2, 1))</td></tr>
@@ -374,7 +374,7 @@ Enumerations</h2></td></tr>
           <td class="memname">#define disable_int2_interrupt</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_clr(INT_CLKO, 4))</td>
+          <td>&#160;&#160;&#160;(bit_clr(INT_CLKO, CBIT4))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -394,7 +394,7 @@ Enumerations</h2></td></tr>
           <td class="memname">#define disable_int3_interrupt</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_clr(INT_CLKO, 5))</td>
+          <td>&#160;&#160;&#160;(bit_clr(INT_CLKO, CBIT5))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -414,7 +414,7 @@ Enumerations</h2></td></tr>
           <td class="memname">#define disable_int4_interrupt</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_clr(INT_CLKO, 6))</td>
+          <td>&#160;&#160;&#160;(bit_clr(INT_CLKO, CBIT6))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -474,7 +474,7 @@ Enumerations</h2></td></tr>
           <td class="memname">#define disable_spi_interrupt</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_clr(IE2, 1))</td>
+          <td>&#160;&#160;&#160;(bit_clr(IE2, CBIT1))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -514,7 +514,7 @@ Enumerations</h2></td></tr>
           <td class="memname">#define disable_timer2_interrupt</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_clr(IE2, 2))</td>
+          <td>&#160;&#160;&#160;(bit_clr(IE2, CBIT2))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -634,7 +634,7 @@ Enumerations</h2></td></tr>
           <td class="memname">#define enable_int3_interrupt</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_set(INT_CLKO, 5))</td>
+          <td>&#160;&#160;&#160;(bit_set(INT_CLKO, SBIT5))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -654,7 +654,7 @@ Enumerations</h2></td></tr>
           <td class="memname">#define enable_int4_interrupt</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_set(INT_CLKO, 6))</td>
+          <td>&#160;&#160;&#160;(bit_set(INT_CLKO, SBIT6))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -714,7 +714,7 @@ Enumerations</h2></td></tr>
           <td class="memname">#define enable_spi_interrupt</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_set(IE2, 1))</td>
+          <td>&#160;&#160;&#160;(bit_set(IE2, SBIT1))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -754,7 +754,7 @@ Enumerations</h2></td></tr>
           <td class="memname">#define enable_timer2_interrupt</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_set(IE2, 2))</td>
+          <td>&#160;&#160;&#160;(bit_set(IE2, SBIT2))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1424,7 +1424,7 @@ Enumerations</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">priority</td><td>)</td>
-          <td>&#160;&#160;&#160;(priority == <a class="el" href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893">HIGH</a> ? bit_set(IP2, 1) : bit_clr(IP2, 1))</td>
+          <td>&#160;&#160;&#160;(priority == <a class="el" href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893">HIGH</a> ? bit_set(IP2, SBIT1) : bit_clr(IP2, CBIT1))</td>
         </tr>
       </table>
 </div><div class="memdoc">

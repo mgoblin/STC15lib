@@ -68,11 +68,11 @@
 {                                                                       \
     enable_mcu_interrupts();                                            \
     enable_timer2_interrupt();                                          \
-    /* bit_clr(AUXR, 4); // clear T2 run flag */                        \
+    /*bit_clr(AUXR, 4); // clear T2 run flag */                         \
     /*bit_clr(AUXR, 3); // clear T/C flag for set timer mode */         \
-    /*bit_set(AUXR, 2); // set T2 T2x12 flag for set 1T mode */         \
-    AUXR &= 0xE3;/*0b11100011;*/                                        \
-    bit_set(AUXR, 2);                                                   \
+    /*bit_set(AUXR, SBIT2); // set T2 T2x12 flag for set 1T mode */     \
+    AUXR &= 0xE7;/*0b11100111;*/                                        \
+    bit_set(AUXR, SBIT2);                                               \
 }
 ///@}
 
@@ -89,7 +89,7 @@
  * 
  * @ingroup timer2_mode0
  */
-#define timer2_mode0_enable_P30_output(enable) (enable ? bit_set(INT_CLKO, 2) : bit_clr(INT_CLKO, 2))
+#define timer2_mode0_enable_P30_output(enable) (enable ? bit_set(INT_CLKO, SBIT2) : bit_clr(INT_CLKO, CBIT2))
 
 /**
  * Get output to pin P3.0 output flag enabled value
@@ -98,7 +98,7 @@
  * 
  * @ingroup timer2_mode0
  */
-#define is_timer2_P30_output_enabled() (get_bit(INT_CLKO, 2) > 0)
+#define is_timer2_mode0_P30_output_enabled() (get_bit(INT_CLKO, 2) > 0)
 
 ///@}
 
@@ -127,7 +127,7 @@
 {                                                           \
     timer2_mode0_reload(ticks);                             \
                                                             \
-    bit_set(AUXR, 4); /* set T2 run flag */                 \
+    bit_set(AUXR, SBIT4); /* set T2 run flag */             \
 } 
 
 /**
@@ -137,7 +137,7 @@
  * @ingroup timer2_mode0
  */
 #define timer2_mode0_stop() {                               \
-    bit_clr(AUXR, 4); /* clear T2 run flag */               \
+    bit_clr(AUXR, CBIT4); /* clear T2 run flag */           \
 }
 
 /** 
@@ -180,7 +180,7 @@
  * 
  * @ingroup timer2_mode0
  */
-#define enable_timer2_mode0_as_uart1_baud_rate(enabled) (enabled ? bit_set(AUXR, 0) : bit_clr(AUXR, 0))
+#define enable_timer2_mode0_as_uart1_baud_rate(enabled) (enabled ? bit_set(AUXR, SBIT0) : bit_clr(AUXR, CBIT0))
 
 /**
  * @brief Is timer0 used as UART1 baud rate generator?

@@ -283,7 +283,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define disable_int2_interrupt() (bit_clr(INT_CLKO, 4))
+#define disable_int2_interrupt() (bit_clr(INT_CLKO, CBIT4))
 
 /**
  * @brief Get INT2 interrupt enable status
@@ -302,7 +302,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define enable_int3_interrupt() (bit_set(INT_CLKO, 5))
+#define enable_int3_interrupt() (bit_set(INT_CLKO, SBIT5))
 
 /**
  * @brief Disable INT3 interrupt
@@ -311,7 +311,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define disable_int3_interrupt() (bit_clr(INT_CLKO, 5))
+#define disable_int3_interrupt() (bit_clr(INT_CLKO, CBIT5))
 
 /**
  * @brief Get INT3 interrupt enable status
@@ -330,7 +330,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define enable_int4_interrupt() (bit_set(INT_CLKO, 6))
+#define enable_int4_interrupt() (bit_set(INT_CLKO, SBIT6))
 
 /**
  * @brief Disable INT3 interrupt
@@ -339,7 +339,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define disable_int4_interrupt() (bit_clr(INT_CLKO, 6))
+#define disable_int4_interrupt() (bit_clr(INT_CLKO, CBIT6))
 
 /**
  * @brief Get INT4 interrupt enable status
@@ -386,7 +386,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define enable_timer2_interrupt() (bit_set(IE2, 2))
+#define enable_timer2_interrupt() (bit_set(IE2, SBIT2))
 
 /**
  * @brief Disable timer2 interrupt
@@ -395,7 +395,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define disable_timer2_interrupt() (bit_clr(IE2, 2))
+#define disable_timer2_interrupt() (bit_clr(IE2, CBIT2))
 
 /**
  * @brief Get timer2 interrupt enable status
@@ -414,7 +414,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define enable_spi_interrupt() (bit_set(IE2, 1))
+#define enable_spi_interrupt() (bit_set(IE2, SBIT1))
 
 /**
  * @brief Disable SPI interrupt
@@ -423,7 +423,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define disable_spi_interrupt() (bit_clr(IE2, 1))
+#define disable_spi_interrupt() (bit_clr(IE2, CBIT1))
 
 /**
  * @brief Get SPI interrupt enable status
@@ -566,7 +566,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define set_spi_interrupt_priority(priority) (priority == HIGH ? bit_set(IP2, 1) : bit_clr(IP2, 1))
+#define set_spi_interrupt_priority(priority) (priority == HIGH ? bit_set(IP2, SBIT1) : bit_clr(IP2, CBIT1))
 
 /**
  * @brief Get SPI interrupt priority

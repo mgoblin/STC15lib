@@ -79,16 +79,16 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader">config</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p >Timer configuration functions </p>
 </td></tr>
-<tr class="memitem:ga9078534f96c317ccdf8a4dd7c3f4120a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2.html#ga9078534f96c317ccdf8a4dd7c3f4120a">timer0_mode2_enable_P35_output</a>(enable)&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, 0) : bit_clr(INT_CLKO, 0))</td></tr>
+<tr class="memitem:ga9078534f96c317ccdf8a4dd7c3f4120a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2.html#ga9078534f96c317ccdf8a4dd7c3f4120a">timer0_mode2_enable_P35_output</a>(enable)&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, SBIT0) : bit_clr(INT_CLKO, CBIT0))</td></tr>
 <tr class="memdesc:ga9078534f96c317ccdf8a4dd7c3f4120a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable P35 meandr output.  <a href="group__timer0__mode2.html#ga9078534f96c317ccdf8a4dd7c3f4120a">More...</a><br /></td></tr>
 <tr class="separator:ga9078534f96c317ccdf8a4dd7c3f4120a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga85404a5d6de7a47f0e898f61cbedba9c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2.html#ga85404a5d6de7a47f0e898f61cbedba9c">is_timer0_mode2_P35_output_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, 0))</td></tr>
 <tr class="memdesc:ga85404a5d6de7a47f0e898f61cbedba9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get output to pin P3.5 output flag enabled value.  <a href="group__timer0__mode2.html#ga85404a5d6de7a47f0e898f61cbedba9c">More...</a><br /></td></tr>
 <tr class="separator:ga85404a5d6de7a47f0e898f61cbedba9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3a127f64ac148bcffc923590a769382d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2.html#ga3a127f64ac148bcffc923590a769382d">timer0_mode2_close_gate</a>()&#160;&#160;&#160;(bit_set(TMOD, 3))</td></tr>
+<tr class="memitem:ga3a127f64ac148bcffc923590a769382d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2.html#ga3a127f64ac148bcffc923590a769382d">timer0_mode2_close_gate</a>()&#160;&#160;&#160;(bit_set(TMOD, SBIT3))</td></tr>
 <tr class="memdesc:ga3a127f64ac148bcffc923590a769382d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close timer starting gate.  <a href="group__timer0__mode2.html#ga3a127f64ac148bcffc923590a769382d">More...</a><br /></td></tr>
 <tr class="separator:ga3a127f64ac148bcffc923590a769382d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacb82ae8e621b0480ec3228c2041c4896"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2.html#gacb82ae8e621b0480ec3228c2041c4896">timer0_mode2_open_gate</a>()&#160;&#160;&#160;(bit_clr(TMOD, 3))</td></tr>
+<tr class="memitem:gacb82ae8e621b0480ec3228c2041c4896"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2.html#gacb82ae8e621b0480ec3228c2041c4896">timer0_mode2_open_gate</a>()&#160;&#160;&#160;(bit_clr(TMOD, CBIT3))</td></tr>
 <tr class="memdesc:gacb82ae8e621b0480ec3228c2041c4896"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open timer starting gate.  <a href="group__timer0__mode2.html#gacb82ae8e621b0480ec3228c2041c4896">More...</a><br /></td></tr>
 <tr class="separator:gacb82ae8e621b0480ec3228c2041c4896"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga139bd39f5b59c65b58f764a61a732b2d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2.html#ga139bd39f5b59c65b58f764a61a732b2d">is_timer0_mode2_gate_opened</a>()&#160;&#160;&#160;(test_if_bit_cleared(TMOD, 3))</td></tr>
@@ -210,7 +210,7 @@ $(function() {
 <div class="line">    enable_timer0_interrupt();                  \</div>
 <div class="line">    TMOD &amp;= 0xf0;                               \</div>
 <div class="line">    TMOD |= 0x02;                               \</div>
-<div class="line">    bit_clr(AUXR, 7);                           \</div>
+<div class="line">    bit_clr(AUXR, CBIT7);                       \</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p>Initialize mode2 12T for timer0. </p>
@@ -236,7 +236,7 @@ $(function() {
 <div class="line">    enable_timer0_interrupt();                  \</div>
 <div class="line">    TMOD &amp;= 0xf0;                               \</div>
 <div class="line">    TMOD |= 0x02;                               \</div>
-<div class="line">    bit_set(AUXR, 7);                           \</div>
+<div class="line">    bit_set(AUXR, SBIT7);                       \</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p>Initialize mode2 1T for timer0. </p>
@@ -253,7 +253,7 @@ $(function() {
           <td class="memname">#define timer0_mode2_close_gate</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_set(TMOD, 3))</td>
+          <td>&#160;&#160;&#160;(bit_set(TMOD, SBIT3))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -324,7 +324,7 @@ $(function() {
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">enable</td><td>)</td>
-          <td>&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, 0) : bit_clr(INT_CLKO, 0))</td>
+          <td>&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, SBIT0) : bit_clr(INT_CLKO, CBIT0))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -349,7 +349,7 @@ $(function() {
           <td class="memname">#define timer0_mode2_open_gate</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_clr(TMOD, 3))</td>
+          <td>&#160;&#160;&#160;(bit_clr(TMOD, CBIT3))</td>
         </tr>
       </table>
 </div><div class="memdoc">

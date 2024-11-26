@@ -79,11 +79,11 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader">config</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p >Timer configuration functions </p>
 </td></tr>
-<tr class="memitem:gafbbdd131ce0efa3e2d8d7d27c285aceb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#gafbbdd131ce0efa3e2d8d7d27c285aceb">timer2_mode0_enable_P30_output</a>(enable)&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, 2) : bit_clr(INT_CLKO, 2))</td></tr>
+<tr class="memitem:gafbbdd131ce0efa3e2d8d7d27c285aceb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#gafbbdd131ce0efa3e2d8d7d27c285aceb">timer2_mode0_enable_P30_output</a>(enable)&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, SBIT2) : bit_clr(INT_CLKO, CBIT2))</td></tr>
 <tr class="memdesc:gafbbdd131ce0efa3e2d8d7d27c285aceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable output of meandr with timer times on P3.0 pin.  <a href="group__timer2__mode0.html#gafbbdd131ce0efa3e2d8d7d27c285aceb">More...</a><br /></td></tr>
 <tr class="separator:gafbbdd131ce0efa3e2d8d7d27c285aceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga42a0a7e0d9d71cf3535113a5bb769324"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga42a0a7e0d9d71cf3535113a5bb769324">is_timer2_P30_output_enabled</a>()&#160;&#160;&#160;(get_bit(INT_CLKO, 2) &gt; 0)</td></tr>
-<tr class="separator:ga42a0a7e0d9d71cf3535113a5bb769324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga25d6eb799c19b1f8a5a95202256f4129"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga25d6eb799c19b1f8a5a95202256f4129">is_timer2_mode0_P30_output_enabled</a>()&#160;&#160;&#160;(get_bit(INT_CLKO, 2) &gt; 0)</td></tr>
+<tr class="separator:ga25d6eb799c19b1f8a5a95202256f4129"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">run in async mode</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p >Timer run/stop/reload functions </p>
@@ -104,7 +104,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader">baud rate enable/disable</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p >Select timer2 as UART1 baud rate generator </p>
 </td></tr>
-<tr class="memitem:ga5e0b856f8e94d20b6b19ba48117c6c56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga5e0b856f8e94d20b6b19ba48117c6c56">enable_timer2_mode0_as_uart1_baud_rate</a>(enabled)&#160;&#160;&#160;(enabled ? bit_set(AUXR, 0) : bit_clr(AUXR, 0))</td></tr>
+<tr class="memitem:ga5e0b856f8e94d20b6b19ba48117c6c56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga5e0b856f8e94d20b6b19ba48117c6c56">enable_timer2_mode0_as_uart1_baud_rate</a>(enabled)&#160;&#160;&#160;(enabled ? bit_set(AUXR, SBIT0) : bit_clr(AUXR, CBIT0))</td></tr>
 <tr class="memdesc:ga5e0b856f8e94d20b6b19ba48117c6c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">select/unselect timer2 as uart1 baud rate generator  <a href="group__timer2__mode0.html#ga5e0b856f8e94d20b6b19ba48117c6c56">More...</a><br /></td></tr>
 <tr class="separator:ga5e0b856f8e94d20b6b19ba48117c6c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga75c4c92ed456a4bc546e14de00d340e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga75c4c92ed456a4bc546e14de00d340e4">is_timer2_mode0_as_uart1_baud_rate_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(AUXR, 0))</td></tr>
@@ -137,7 +137,7 @@ $(function() {
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">enabled</td><td>)</td>
-          <td>&#160;&#160;&#160;(enabled ? bit_set(AUXR, 0) : bit_clr(AUXR, 0))</td>
+          <td>&#160;&#160;&#160;(enabled ? bit_set(AUXR, SBIT0) : bit_clr(AUXR, CBIT0))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -174,6 +174,25 @@ $(function() {
 
 </div>
 </div>
+<a id="ga25d6eb799c19b1f8a5a95202256f4129" name="ga25d6eb799c19b1f8a5a95202256f4129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga25d6eb799c19b1f8a5a95202256f4129">&#9670;&nbsp;</a></span>is_timer2_mode0_P30_output_enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define is_timer2_mode0_P30_output_enabled</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(get_bit(INT_CLKO, 2) &gt; 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Get output to pin P3.0 output flag enabled value</p>
+<dl class="section return"><dt>Returns</dt><dd>bool true if output enabled oterwise false </dd></dl>
+
+</div>
+</div>
 <a id="ga3ed7e8910a209208306bebcc62975d2b" name="ga3ed7e8910a209208306bebcc62975d2b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga3ed7e8910a209208306bebcc62975d2b">&#9670;&nbsp;</a></span>is_timer2_mode0_started</h2>
 
@@ -191,25 +210,6 @@ $(function() {
 
 <p>Get timer2 started status. </p>
 <dl class="section return"><dt>Returns</dt><dd>bool true if started otherwise false </dd></dl>
-
-</div>
-</div>
-<a id="ga42a0a7e0d9d71cf3535113a5bb769324" name="ga42a0a7e0d9d71cf3535113a5bb769324"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga42a0a7e0d9d71cf3535113a5bb769324">&#9670;&nbsp;</a></span>is_timer2_P30_output_enabled</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define is_timer2_P30_output_enabled</td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(get_bit(INT_CLKO, 2) &gt; 0)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Get output to pin P3.0 output flag enabled value</p>
-<dl class="section return"><dt>Returns</dt><dd>bool true if output enabled oterwise false </dd></dl>
 
 </div>
 </div>
@@ -259,11 +259,11 @@ $(function() {
 <b>Value:</b><div class="fragment"><div class="line">{                                                                       \</div>
 <div class="line">    enable_mcu_interrupts();                                            \</div>
 <div class="line">    enable_timer2_interrupt();                                          \</div>
-<div class="line">    <span class="comment">/* bit_clr(AUXR, 4); // clear T2 run flag */</span>                        \</div>
+<div class="line">    <span class="comment">/*bit_clr(AUXR, 4); // clear T2 run flag */</span>                         \</div>
 <div class="line">    <span class="comment">/*bit_clr(AUXR, 3); // clear T/C flag for set timer mode */</span>         \</div>
-<div class="line">    <span class="comment">/*bit_set(AUXR, 2); // set T2 T2x12 flag for set 1T mode */</span>         \</div>
-<div class="line">    AUXR &amp;= 0xE3;<span class="comment">/*0b11100011;*/</span>                                        \</div>
-<div class="line">    bit_set(AUXR, 2);                                                   \</div>
+<div class="line">    <span class="comment">/*bit_set(AUXR, SBIT2); // set T2 T2x12 flag for set 1T mode */</span>     \</div>
+<div class="line">    AUXR &amp;= 0xE7;<span class="comment">/*0b11100111;*/</span>                                        \</div>
+<div class="line">    bit_set(AUXR, SBIT2);                                               \</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p>Initialize mode0 1T for timer2. </p>
@@ -282,7 +282,7 @@ $(function() {
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">enable</td><td>)</td>
-          <td>&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, 2) : bit_clr(INT_CLKO, 2))</td>
+          <td>&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, SBIT2) : bit_clr(INT_CLKO, CBIT2))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -349,7 +349,7 @@ $(function() {
 <b>Value:</b><div class="fragment"><div class="line">{                                                           \</div>
 <div class="line">    timer2_mode0_reload(ticks);                             \</div>
 <div class="line">                                                            \</div>
-<div class="line">    bit_set(AUXR, 4); <span class="comment">/* set T2 run flag */</span>                 \</div>
+<div class="line">    bit_set(AUXR, SBIT4); <span class="comment">/* set T2 run flag */</span>             \</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p>Run timer2 mode0 with interrupt support. </p>
@@ -381,7 +381,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    {                               \</div>
-<div class="line">    bit_clr(AUXR, 4); <span class="comment">/* clear T2 run flag */</span>               \</div>
+<div class="line">    bit_clr(AUXR, CBIT4); <span class="comment">/* clear T2 run flag */</span>           \</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p>Stop timer2 mode0. </p>

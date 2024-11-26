@@ -88,7 +88,7 @@ $(function() {
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">    enable_mcu_interrupts();                    \</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">    enable_timer0_interrupt();                  \</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">    TMOD &amp;= 0xf0;                               \</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">    bit_clr(AUXR, 7);                           \</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">    bit_clr(AUXR, CBIT7);                       \</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">}</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#ga398d5a72d45883fd02261b9f8791e9c4">   58</a></span><span class="preprocessor">#define timer0_mode0_1T_init()                  \</span></div>
@@ -96,19 +96,19 @@ $(function() {
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">    enable_mcu_interrupts();                    \</span></div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">    enable_timer0_interrupt();                  \</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">    TMOD &amp;= 0xf0;                               \</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">    bit_set(AUXR, 7);                           \</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">    bit_set(AUXR, SBIT7);                       \</span></div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">}</span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">//============================== Timer0 mode0 declarations end ============================</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#ga82468838c1126b5958d076bd856d8664">   80</a></span><span class="preprocessor">#define timer0_mode0_enable_P35_output(enable) (enable ? bit_set(INT_CLKO, 0) : bit_clr(INT_CLKO, 0))</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#ga82468838c1126b5958d076bd856d8664">   80</a></span><span class="preprocessor">#define timer0_mode0_enable_P35_output(enable) (enable ? bit_set(INT_CLKO, SBIT0) : bit_clr(INT_CLKO, CBIT0))</span></div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#gabca5c0f95450276da6bfdc9e2d95b30d">   89</a></span><span class="preprocessor">#define is_timer0_mode0_P35_output_enabled() (test_if_bit_set(INT_CLKO, 0))</span></div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#gacfd1f4baac73ad9ae28048dc7b8ce401">   97</a></span><span class="preprocessor">#define timer0_mode0_close_gate() (bit_set(TMOD, 3))</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#gacfd1f4baac73ad9ae28048dc7b8ce401">   97</a></span><span class="preprocessor">#define timer0_mode0_close_gate() (bit_set(TMOD, SBIT3))</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#gac46b16166e317f423687b0b744310035">  105</a></span><span class="preprocessor">#define timer0_mode0_open_gate() (bit_clr(TMOD, 3))</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#gac46b16166e317f423687b0b744310035">  105</a></span><span class="preprocessor">#define timer0_mode0_open_gate() (bit_clr(TMOD, CBIT3))</span></div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#ga2a99233df8668e561f71da8db499f4b0">  114</a></span><span class="preprocessor">#define is_timer0_mode0_gate_opened() (test_if_bit_cleared(TMOD, 3))</span></div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>

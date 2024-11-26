@@ -63,9 +63,10 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 * delay_ms now is define again
 * Idle power managment routine implemented
 * Power down mode implemented
+* Use bitmask as a constant implemented in bits.h to avoid unnessary bit operations in bit_set and bit_clr
 
 Next releases todo
-* TODO implement bitX_set, bitX_clr to avoid unnessary bit operation in bit_set and bit_clr
+* TODO use bitmask as constant in get_bit, test_if_bit_set, test_if_bit_cleared 
 * TODO Implement times to ticks part of aux module
 * TODO Enhance description of project for indexing in google/yandex and so on search engines
 * TODO Add example links to module documentation 
