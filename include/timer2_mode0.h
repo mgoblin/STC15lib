@@ -98,7 +98,7 @@
  * 
  * @ingroup timer2_mode0
  */
-#define is_timer2_mode0_P30_output_enabled() (get_bit(INT_CLKO, 2) > 0)
+#define is_timer2_mode0_P30_output_enabled() (test_if_bit_set(INT_CLKO, 2) > 0)
 
 ///@}
 
