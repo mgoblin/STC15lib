@@ -20,7 +20,7 @@
  * 
  * @ingroup power_management
  */
-#define idle() (bit_set(PCON, 0))
+#define idle() (bit_set(PCON, CBTI0))
 
 /**
  * @brief Set MCU power down mode
@@ -28,6 +28,6 @@
  * 
  * @ingroup power_management
  */
-#define power_down() (bit_set(PCON, 1))
+#define power_down() (bit_set(PCON, CBIT1))
 
 #endif

@@ -70,11 +70,11 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga89e1b35bd6cbaf15cc0d33631acac076"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#ga89e1b35bd6cbaf15cc0d33631acac076">idle</a>()&#160;&#160;&#160;(bit_set(PCON, 0))</td></tr>
+<tr class="memitem:ga89e1b35bd6cbaf15cc0d33631acac076"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#ga89e1b35bd6cbaf15cc0d33631acac076">idle</a>()&#160;&#160;&#160;(bit_set(PCON, CBTI0))</td></tr>
 <tr class="memdesc:ga89e1b35bd6cbaf15cc0d33631acac076"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MCU idle mode.  <a href="group__power__management.html#ga89e1b35bd6cbaf15cc0d33631acac076">More...</a><br /></td></tr>
 <tr class="separator:ga89e1b35bd6cbaf15cc0d33631acac076"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1e0d38ad57d2078db65a84e857f5e5b6"><td class="memItemLeft" align="right" valign="top"><a id="ga1e0d38ad57d2078db65a84e857f5e5b6" name="ga1e0d38ad57d2078db65a84e857f5e5b6"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>power_down</b>()&#160;&#160;&#160;(bit_set(PCON, 1))</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>power_down</b>()&#160;&#160;&#160;(bit_set(PCON, CBIT1))</td></tr>
 <tr class="memdesc:ga1e0d38ad57d2078db65a84e857f5e5b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MCU power down mode. <br /></td></tr>
 <tr class="separator:ga1e0d38ad57d2078db65a84e857f5e5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -91,7 +91,7 @@ Macros</h2></td></tr>
           <td class="memname">#define idle</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_set(PCON, 0))</td>
+          <td>&#160;&#160;&#160;(bit_set(PCON, CBTI0))</td>
         </tr>
       </table>
 </div><div class="memdoc">
