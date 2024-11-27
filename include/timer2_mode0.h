@@ -180,7 +180,7 @@
  * 
  * @ingroup timer2_mode0
  */
-#define enable_timer2_mode0_as_uart1_baud_rate(enabled) (enabled ? bit_set(AUXR, SBIT0) : bit_clr(AUXR, CBIT0))
+#define enable_timer2_mode0_as_uart1_baud_rate(enabled) (enabled? bit_set(AUXR, SBIT0) : bit_clr(AUXR, CBIT0))
 
 /**
  * @brief Is timer0 used as UART1 baud rate generator?
