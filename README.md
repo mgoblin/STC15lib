@@ -68,11 +68,11 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 
 Next releases todo
 * TODO Verify examples
-* TOD Optimize and refactor is_... ..._enabled(enable) routines 
-* TODO Implement times to ticks part of aux module
+* TODO Optimize and refactor is_... ..._enabled(enable) routines 
 * TODO Enhance description of project for indexing in google/yandex and so on search engines
+* TODO Implement times to ticks part of aux module
 * TODO Add example links to module documentation 
 * TODO Implements counters
-* Optimize timer2 baud rate calculation. Use precalculated array of baudrates
+* TODO Optimize timer2 baud rate calculation. Use precalculated array of baudrates
 * TODO Implement P5.4 as MCU reset source
 
