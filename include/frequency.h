@@ -146,6 +146,8 @@ typedef enum
  * 
  * @ingroup freq
  */
+#pragma save
+#pragma disable_warning 126
 #define set_master_clock_output_pin(pin) {          \
     if (pin == NONE)                                \
     {                                               \
@@ -160,5 +162,6 @@ typedef enum
         bit_set(CLK_DIV, SBIT3);                    \
     }                                               \
 }
+#pragma restore
 
 #endif 
