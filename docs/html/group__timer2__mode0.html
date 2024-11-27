@@ -82,7 +82,7 @@ $(function() {
 <tr class="memitem:gafbbdd131ce0efa3e2d8d7d27c285aceb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#gafbbdd131ce0efa3e2d8d7d27c285aceb">timer2_mode0_enable_P30_output</a>(enable)&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, SBIT2) : bit_clr(INT_CLKO, CBIT2))</td></tr>
 <tr class="memdesc:gafbbdd131ce0efa3e2d8d7d27c285aceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable output of meandr with timer times on P3.0 pin.  <a href="group__timer2__mode0.html#gafbbdd131ce0efa3e2d8d7d27c285aceb">More...</a><br /></td></tr>
 <tr class="separator:gafbbdd131ce0efa3e2d8d7d27c285aceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga25d6eb799c19b1f8a5a95202256f4129"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga25d6eb799c19b1f8a5a95202256f4129">is_timer2_mode0_P30_output_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, 2) &gt; 0)</td></tr>
+<tr class="memitem:ga25d6eb799c19b1f8a5a95202256f4129"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga25d6eb799c19b1f8a5a95202256f4129">is_timer2_mode0_P30_output_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, SBIT2))</td></tr>
 <tr class="separator:ga25d6eb799c19b1f8a5a95202256f4129"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">run in async mode</h2></td></tr>
@@ -97,7 +97,7 @@ $(function() {
 <tr class="memitem:ga607a922d8faac666c2dcddd233e0bab1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga607a922d8faac666c2dcddd233e0bab1">timer2_mode0_reload</a>(ticks)</td></tr>
 <tr class="memdesc:ga607a922d8faac666c2dcddd233e0bab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload timer2 ticks on the fly.  <a href="group__timer2__mode0.html#ga607a922d8faac666c2dcddd233e0bab1">More...</a><br /></td></tr>
 <tr class="separator:ga607a922d8faac666c2dcddd233e0bab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3ed7e8910a209208306bebcc62975d2b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga3ed7e8910a209208306bebcc62975d2b">is_timer2_mode0_started</a>()&#160;&#160;&#160;(test_if_bit_set(AUXR, 4))</td></tr>
+<tr class="memitem:ga3ed7e8910a209208306bebcc62975d2b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga3ed7e8910a209208306bebcc62975d2b">is_timer2_mode0_started</a>()&#160;&#160;&#160;(test_if_bit_set(AUXR, SBIT4))</td></tr>
 <tr class="memdesc:ga3ed7e8910a209208306bebcc62975d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer2 started status.  <a href="group__timer2__mode0.html#ga3ed7e8910a209208306bebcc62975d2b">More...</a><br /></td></tr>
 <tr class="separator:ga3ed7e8910a209208306bebcc62975d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -107,7 +107,7 @@ $(function() {
 <tr class="memitem:ga5e0b856f8e94d20b6b19ba48117c6c56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga5e0b856f8e94d20b6b19ba48117c6c56">enable_timer2_mode0_as_uart1_baud_rate</a>(enabled)&#160;&#160;&#160;(enabled? bit_set(AUXR, SBIT0) : bit_clr(AUXR, CBIT0))</td></tr>
 <tr class="memdesc:ga5e0b856f8e94d20b6b19ba48117c6c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">select/unselect timer2 as uart1 baud rate generator  <a href="group__timer2__mode0.html#ga5e0b856f8e94d20b6b19ba48117c6c56">More...</a><br /></td></tr>
 <tr class="separator:ga5e0b856f8e94d20b6b19ba48117c6c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga75c4c92ed456a4bc546e14de00d340e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga75c4c92ed456a4bc546e14de00d340e4">is_timer2_mode0_as_uart1_baud_rate_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(AUXR, 0))</td></tr>
+<tr class="memitem:ga75c4c92ed456a4bc546e14de00d340e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga75c4c92ed456a4bc546e14de00d340e4">is_timer2_mode0_as_uart1_baud_rate_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(AUXR, SBIT0))</td></tr>
 <tr class="memdesc:ga75c4c92ed456a4bc546e14de00d340e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is timer0 used as UART1 baud rate generator?  <a href="group__timer2__mode0.html#ga75c4c92ed456a4bc546e14de00d340e4">More...</a><br /></td></tr>
 <tr class="separator:ga75c4c92ed456a4bc546e14de00d340e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -163,7 +163,7 @@ $(function() {
           <td class="memname">#define is_timer2_mode0_as_uart1_baud_rate_enabled</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(test_if_bit_set(AUXR, 0))</td>
+          <td>&#160;&#160;&#160;(test_if_bit_set(AUXR, SBIT0))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -184,7 +184,7 @@ $(function() {
           <td class="memname">#define is_timer2_mode0_P30_output_enabled</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, 2) &gt; 0)</td>
+          <td>&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, SBIT2))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -203,7 +203,7 @@ $(function() {
           <td class="memname">#define is_timer2_mode0_started</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(test_if_bit_set(AUXR, 4))</td>
+          <td>&#160;&#160;&#160;(test_if_bit_set(AUXR, SBIT4))</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -128,19 +128,19 @@ $(function() {
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga4668129f676d8d123d5992da8b7d6564">  286</a></span><span class="preprocessor">#define disable_int2_interrupt() (bit_clr(INT_CLKO, CBIT4))</span></div>
 <div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span> </div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga88ebf38f3c33cba4de86d19e2532ec97">  296</a></span><span class="preprocessor">#define is_int2_interrupt_enabled() (test_if_bit_set(INT_CLKO, 4) &amp;&amp; is_mcu_interrupts_enabled())</span></div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga88ebf38f3c33cba4de86d19e2532ec97">  296</a></span><span class="preprocessor">#define is_int2_interrupt_enabled() (test_if_bit_set(INT_CLKO, SBIT4) &amp;&amp; is_mcu_interrupts_enabled())</span></div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga10ccfe3b81e2f0f8f8a9014a6f6cb382">  305</a></span><span class="preprocessor">#define enable_int3_interrupt() (bit_set(INT_CLKO, SBIT5))</span></div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga0eefb72a54f3befd3535d70e71a06de4">  314</a></span><span class="preprocessor">#define disable_int3_interrupt() (bit_clr(INT_CLKO, CBIT5))</span></div>
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga55815a15f668bf452348f7483ca94a2e">  324</a></span><span class="preprocessor">#define is_int3_interrupt_enabled() (test_if_bit_set(INT_CLKO, 5) &amp;&amp; is_mcu_interrupts_enabled())</span></div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga55815a15f668bf452348f7483ca94a2e">  324</a></span><span class="preprocessor">#define is_int3_interrupt_enabled() (test_if_bit_set(INT_CLKO, SBIT5) &amp;&amp; is_mcu_interrupts_enabled())</span></div>
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga0e5e4a9cb47201c8f5be1e0918d29ac4">  333</a></span><span class="preprocessor">#define enable_int4_interrupt() (bit_set(INT_CLKO, SBIT6))</span></div>
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno"><a class="line" href="group__interrupts.html#gae3a80148c904b86a58976a26399720d0">  342</a></span><span class="preprocessor">#define disable_int4_interrupt() (bit_clr(INT_CLKO, CBIT6))</span></div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span> </div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno"><a class="line" href="group__interrupts.html#gab74f8baae5f006ebecd8ccbb787decb0">  352</a></span><span class="preprocessor">#define is_int4_interrupt_enable() (test_if_bit_set(INT_CLKO, 6) &amp;&amp; is_mcu_interrupts_enabled())</span></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno"><a class="line" href="group__interrupts.html#gab74f8baae5f006ebecd8ccbb787decb0">  352</a></span><span class="preprocessor">#define is_int4_interrupt_enable() (test_if_bit_set(INT_CLKO, SBIT6) &amp;&amp; is_mcu_interrupts_enabled())</span></div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span> </div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga3ce3cdb9bf4963e75a0664964fb83c3a">  361</a></span><span class="preprocessor">#define enable_timer0_interrupt() (ET0 = 1)</span></div>
 <div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
@@ -152,13 +152,13 @@ $(function() {
 <div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span> </div>
 <div class="line"><a id="l00398" name="l00398"></a><span class="lineno"><a class="line" href="group__interrupts.html#gac8daf51c922df876c57f419b63996dd5">  398</a></span><span class="preprocessor">#define disable_timer2_interrupt() (bit_clr(IE2, CBIT2))</span></div>
 <div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span> </div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga0c35fd771294a22d4cd3e205fd806bdb">  408</a></span><span class="preprocessor">#define is_timer2_interrupt_enabled() (test_if_bit_set(IE2, 2) &amp;&amp; is_mcu_interrupts_enabled())</span></div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga0c35fd771294a22d4cd3e205fd806bdb">  408</a></span><span class="preprocessor">#define is_timer2_interrupt_enabled() (test_if_bit_set(IE2, SBIT2) &amp;&amp; is_mcu_interrupts_enabled())</span></div>
 <div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span> </div>
 <div class="line"><a id="l00417" name="l00417"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga1031a01617faf8bd48f91d9eac505792">  417</a></span><span class="preprocessor">#define enable_spi_interrupt() (bit_set(IE2, SBIT1))</span></div>
 <div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span> </div>
 <div class="line"><a id="l00426" name="l00426"></a><span class="lineno"><a class="line" href="group__interrupts.html#gad8ec33652ec7e3a2a2754678217a9799">  426</a></span><span class="preprocessor">#define disable_spi_interrupt() (bit_clr(IE2, CBIT1))</span></div>
 <div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span> </div>
-<div class="line"><a id="l00436" name="l00436"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga749a47d315950a06ecd28e89cacec83d">  436</a></span><span class="preprocessor">#define is_spi_interrupt_enabled() (test_if_bit_set(IE2, 1) &amp;&amp; is_mcu_interrupts_enabled())</span></div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga749a47d315950a06ecd28e89cacec83d">  436</a></span><span class="preprocessor">#define is_spi_interrupt_enabled() (test_if_bit_set(IE2, SBIT1) &amp;&amp; is_mcu_interrupts_enabled())</span></div>
 <div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span> </div>
 <div class="line"><a id="l00445" name="l00445"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga61be7c532b0092fb479d95934351910d">  445</a></span><span class="preprocessor">#define set_pca_interrupt_priority(priority) (PPCA = priority)</span></div>
 <div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span> </div>
@@ -190,7 +190,7 @@ $(function() {
 <div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span> </div>
 <div class="line"><a id="l00569" name="l00569"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga7f4ce2c83eea0366ba67f8cc956aab8f">  569</a></span><span class="preprocessor">#define set_spi_interrupt_priority(priority) (priority == HIGH ? bit_set(IP2, SBIT1) : bit_clr(IP2, CBIT1))</span></div>
 <div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span> </div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno"><a class="line" href="group__interrupts.html#gaacd1dbc81fe112ce6b25b664d07f2924">  578</a></span><span class="preprocessor">#define get_spi_interrupt_priority() (test_if_bit_set(IP2, 1))</span></div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno"><a class="line" href="group__interrupts.html#gaacd1dbc81fe112ce6b25b664d07f2924">  578</a></span><span class="preprocessor">#define get_spi_interrupt_priority() (test_if_bit_set(IP2, SBIT1))</span></div>
 <div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span> </div>
 <div class="line"><a id="l00587" name="l00587"></a><span class="lineno"><a class="line" href="group__interrupts.html#gae83d9bb9ef89de5990b742de004f8ed5">  587</a></span><span class="preprocessor">#define set_int0_interrupt_trigger(trigger) ( IT0 = trigger)</span></div>
 <div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span> </div>

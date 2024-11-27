@@ -86,7 +86,7 @@
  * 
  * @ingroup timer0_mode0
  */
-#define is_timer0_mode0_P35_output_enabled() (test_if_bit_set(INT_CLKO, 0))
+#define is_timer0_mode0_P35_output_enabled() (test_if_bit_set(INT_CLKO, SBIT0))
 
 /** 
  * @brief Close timer starting gate.

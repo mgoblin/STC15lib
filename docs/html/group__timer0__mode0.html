@@ -82,7 +82,7 @@ $(function() {
 <tr class="memitem:ga82468838c1126b5958d076bd856d8664"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode0.html#ga82468838c1126b5958d076bd856d8664">timer0_mode0_enable_P35_output</a>(enable)&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, SBIT0) : bit_clr(INT_CLKO, CBIT0))</td></tr>
 <tr class="memdesc:ga82468838c1126b5958d076bd856d8664"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable P35 meandr output.  <a href="group__timer0__mode0.html#ga82468838c1126b5958d076bd856d8664">More...</a><br /></td></tr>
 <tr class="separator:ga82468838c1126b5958d076bd856d8664"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabca5c0f95450276da6bfdc9e2d95b30d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode0.html#gabca5c0f95450276da6bfdc9e2d95b30d">is_timer0_mode0_P35_output_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, 0))</td></tr>
+<tr class="memitem:gabca5c0f95450276da6bfdc9e2d95b30d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode0.html#gabca5c0f95450276da6bfdc9e2d95b30d">is_timer0_mode0_P35_output_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, SBIT0))</td></tr>
 <tr class="memdesc:gabca5c0f95450276da6bfdc9e2d95b30d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get output to pin P3.5 output flag enabled value.  <a href="group__timer0__mode0.html#gabca5c0f95450276da6bfdc9e2d95b30d">More...</a><br /></td></tr>
 <tr class="separator:gabca5c0f95450276da6bfdc9e2d95b30d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacfd1f4baac73ad9ae28048dc7b8ce401"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode0.html#gacfd1f4baac73ad9ae28048dc7b8ce401">timer0_mode0_close_gate</a>()&#160;&#160;&#160;(bit_set(TMOD, SBIT3))</td></tr>
@@ -160,7 +160,7 @@ $(function() {
           <td class="memname">#define is_timer0_mode0_P35_output_enabled</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, 0))</td>
+          <td>&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, SBIT0))</td>
         </tr>
       </table>
 </div><div class="memdoc">

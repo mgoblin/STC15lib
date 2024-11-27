@@ -75,7 +75,7 @@
  * 
  * @ingroup mcu_reset
  */
-#define is_wdt_started() (test_if_bit_set(WDT_CONTR, 5)) 
+#define is_wdt_started() (test_if_bit_set(WDT_CONTR, SBIT5)) 
 
 /**
  * @brief clear WDT to prevent restart
@@ -93,7 +93,7 @@
  * 
  * @ingroup mcu_reset
  */
-#define is_wdt_flag_on() (test_if_bit_set(WDT_CONTR, 7))
+#define is_wdt_flag_on() (test_if_bit_set(WDT_CONTR, SBIT7))
 
 /**
  * @brief Reset WDT flag

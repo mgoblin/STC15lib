@@ -12,16 +12,16 @@
 #define bit_clr(val, bit_mask_val)                          (val &= bit_mask_val)
 #define bit_tgl(val, bit_val)                               (val ^= bit_mask(bit_val))
 #define get_bit(val, bit_val)                               (val & bit_mask(bit_val))
-#define get_reg(val, msk)                                   (val & msk)
+#define get_reg(val, bit_mask_val)                          (val & bit_mask_val)
 
 #define set_bits(reg, val, pos)                             (reg |= bit_shift_left(val, pos))    
 #define clr_bits(reg, val, pos)                             (reg &= ~bit_shift_left(val, pos)) 
 
-#define test_if_bit_set(val, bit_val)                       (get_bit(val, bit_val) != 0)
-#define test_if_bit_cleared(val, bit_val)                   (get_bit(val, bit_val) == 0)
+#define test_if_bit_set(val, bit_mask_val)                  ((val & bit_mask_val) != 0)
+#define test_if_bit_cleared(val, bit_mask_val)              ((val & bit_mask_val) == 0)
 
-#define test_if_all_bits_set(val, msk)                      (get_reg(val, msk) == msk)
-#define test_if_any_bit_set(val, msk)                       (get_reg(val, msk) != 0)
+#define test_if_all_bits_set(val, bit_mask_val)             (get_reg(val, bit_mask_val) == bit_mask_val)
+#define test_if_any_bit_set(val, bit_mask_val)              (get_reg(val, bit_mask_val) != 0)
 
 /**************************************************************************************************/
 

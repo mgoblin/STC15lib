@@ -36,7 +36,7 @@ void main()
         interrupt_counter = 0;
         delay_ms(2000);
 
-        if (test_if_bit_set(AUXR, 7))
+        if (test_if_bit_set(AUXR, SBIT7))
         {
             printf_tiny("UART init does not clear AUXR.7. Its ok\n");
         }

@@ -293,7 +293,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define is_int2_interrupt_enabled() (test_if_bit_set(INT_CLKO, 4) && is_mcu_interrupts_enabled())
+#define is_int2_interrupt_enabled() (test_if_bit_set(INT_CLKO, SBIT4) && is_mcu_interrupts_enabled())
 
 /**
  * @brief Enable INT3 interrupt
@@ -321,7 +321,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define is_int3_interrupt_enabled() (test_if_bit_set(INT_CLKO, 5) && is_mcu_interrupts_enabled())
+#define is_int3_interrupt_enabled() (test_if_bit_set(INT_CLKO, SBIT5) && is_mcu_interrupts_enabled())
 
 /**
  * @brief Enable INT4 interrupt
@@ -349,7 +349,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define is_int4_interrupt_enable() (test_if_bit_set(INT_CLKO, 6) && is_mcu_interrupts_enabled())
+#define is_int4_interrupt_enable() (test_if_bit_set(INT_CLKO, SBIT6) && is_mcu_interrupts_enabled())
 
 /**
  * @brief Enable timer0 interrupt
@@ -405,7 +405,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define is_timer2_interrupt_enabled() (test_if_bit_set(IE2, 2) && is_mcu_interrupts_enabled())
+#define is_timer2_interrupt_enabled() (test_if_bit_set(IE2, SBIT2) && is_mcu_interrupts_enabled())
 
 /**
  * @brief Enable SPI interrupt
@@ -433,7 +433,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define is_spi_interrupt_enabled() (test_if_bit_set(IE2, 1) && is_mcu_interrupts_enabled())
+#define is_spi_interrupt_enabled() (test_if_bit_set(IE2, SBIT1) && is_mcu_interrupts_enabled())
 
 /**
  * @brief Set programmable counter arrya (PCA) interrupt priority
@@ -575,7 +575,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define get_spi_interrupt_priority() (test_if_bit_set(IP2, 1))
+#define get_spi_interrupt_priority() (test_if_bit_set(IP2, SBIT1))
 
 /**
  * @brief Set INT0 interrupt trigger

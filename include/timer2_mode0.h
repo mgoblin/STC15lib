@@ -98,7 +98,7 @@
  * 
  * @ingroup timer2_mode0
  */
-#define is_timer2_mode0_P30_output_enabled() (test_if_bit_set(INT_CLKO, 2) > 0)
+#define is_timer2_mode0_P30_output_enabled() (test_if_bit_set(INT_CLKO, SBIT2))
 
 ///@}
 
@@ -147,7 +147,7 @@
  * 
  * @ingroup timer2
  */
-#define is_timer2_mode0_started() (test_if_bit_set(AUXR, 4))
+#define is_timer2_mode0_started() (test_if_bit_set(AUXR, SBIT4))
 
 /**
  * @brief Reload timer2 ticks on the fly
@@ -190,7 +190,7 @@
  * 
  * @ingroup timer2_mode0
  */
-#define is_timer2_mode0_as_uart1_baud_rate_enabled() (test_if_bit_set(AUXR, 0))
+#define is_timer2_mode0_as_uart1_baud_rate_enabled() (test_if_bit_set(AUXR, SBIT0))
 
 ///@}
 

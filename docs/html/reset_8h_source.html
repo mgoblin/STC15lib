@@ -93,11 +93,11 @@ $(function() {
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#ga27cbee9012a32bab0784e5d7a7c4d713">   68</a></span><span class="preprocessor">#define wdt_stop() (bit_clr(WDT_CONTR, CBIT5)) </span></div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#ga843c35409dc0a28f62bb961488dfd62c">   78</a></span><span class="preprocessor">#define is_wdt_started() (test_if_bit_set(WDT_CONTR, 5)) </span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#ga843c35409dc0a28f62bb961488dfd62c">   78</a></span><span class="preprocessor">#define is_wdt_started() (test_if_bit_set(WDT_CONTR, SBIT5)) </span></div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#ga355eee3da94d468a19c60aa13744567e">   86</a></span><span class="preprocessor">#define wdt_clear() (bit_set(WDT_CONTR, SBIT4))</span></div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#gac1c4fb7f1f59ef6ad7b431fa6c64c058">   96</a></span><span class="preprocessor">#define is_wdt_flag_on() (test_if_bit_set(WDT_CONTR, 7))</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#gac1c4fb7f1f59ef6ad7b431fa6c64c058">   96</a></span><span class="preprocessor">#define is_wdt_flag_on() (test_if_bit_set(WDT_CONTR, SBIT7))</span></div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="group__mcu__reset.html#ga5b97e61020b67d9876a8178486112a60">  104</a></span><span class="preprocessor">#define reset_wdt_flag() (bit_clr(WDT_CONTR, CBIT7))</span></div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>

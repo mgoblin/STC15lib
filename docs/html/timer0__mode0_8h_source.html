@@ -104,7 +104,7 @@ $(function() {
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#ga82468838c1126b5958d076bd856d8664">   80</a></span><span class="preprocessor">#define timer0_mode0_enable_P35_output(enable) (enable ? bit_set(INT_CLKO, SBIT0) : bit_clr(INT_CLKO, CBIT0))</span></div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#gabca5c0f95450276da6bfdc9e2d95b30d">   89</a></span><span class="preprocessor">#define is_timer0_mode0_P35_output_enabled() (test_if_bit_set(INT_CLKO, 0))</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#gabca5c0f95450276da6bfdc9e2d95b30d">   89</a></span><span class="preprocessor">#define is_timer0_mode0_P35_output_enabled() (test_if_bit_set(INT_CLKO, SBIT0))</span></div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#gacfd1f4baac73ad9ae28048dc7b8ce401">   97</a></span><span class="preprocessor">#define timer0_mode0_close_gate() (bit_set(TMOD, SBIT3))</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
