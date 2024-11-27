@@ -105,7 +105,7 @@ Functions</h2></td></tr>
 
 <p>Size of chip id array. </p>
 <p >&lt;&gt; </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="chip_id_example_8c-example.html#a1">chip_id_example.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="chip_id_example_8c-example.html#a0">chip_id_example.c</a>.</dd>
 </dl>
 
 </div>
@@ -142,6 +142,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>filled chip id array </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="chip_id_example_8c-example.html#a2">chip_id_example.c</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -169,22 +171,36 @@ Functions</h2></td></tr>
 <div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="uart_8h.html">uart.h</a>&gt;</span></div>
 <div class="line"> </div>
+<div class="line"><span class="keyword">const</span> uint8_t *cid2 = &amp;chip_id;</div>
+<div class="line">uint8_t cid[<a class="code hl_define" href="group__chip__id.html#ga909ec39ac520a4448627b2d9aa61d016">CHIP_ID_SIZE</a>];</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> print_chip_id(<span class="keyword">const</span> uint8_t *chip_id)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">for</span>(uint8_t i = 0; i &lt; <a class="code hl_define" href="group__chip__id.html#ga909ec39ac520a4448627b2d9aa61d016">CHIP_ID_SIZE</a>; i++)</div>
+<div class="line">    {</div>
+<div class="line">        printf_tiny(<span class="stringliteral">&quot;%x&quot;</span>, chip_id[i]);</div>
+<div class="line">    }</div>
+<div class="line">    printf_tiny(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line">}</div>
+<div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> main()</div>
 <div class="line">{</div>
 <div class="line">    <a class="code hl_define" href="group__uart.html#gaaf582a05f613b72c7255c5cd838879fd">uart1_init</a>(9600);</div>
 <div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="group__chip__id.html#ga73068c6cf5d5b5fd06172a8e60a066a1">get_chipid</a>(cid);</div>
+<div class="line"> </div>
 <div class="line">    <span class="keywordflow">while</span> (1)</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keyword">const</span> uint8_t *cid2 = &amp;chip_id;</div>
-<div class="line">        <span class="keywordflow">for</span>(uint8_t i = 0; i &lt; <a class="code hl_define" href="group__chip__id.html#ga909ec39ac520a4448627b2d9aa61d016">CHIP_ID_SIZE</a>; i++)</div>
-<div class="line">        {</div>
-<div class="line">            printf_tiny(<span class="stringliteral">&quot;%x&quot;</span>, cid2[i]);</div>
-<div class="line">        }</div>
-<div class="line">        printf_tiny(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line">        printf_tiny(<span class="stringliteral">&quot;   chip_id bytes: &quot;</span>);</div>
+<div class="line">        print_chip_id(cid2);</div>
+<div class="line"> </div>
+<div class="line">        printf_tiny(<span class="stringliteral">&quot;get_chipid bytes: &quot;</span>);</div>
+<div class="line">        print_chip_id(cid);</div>
 <div class="line">    }</div>
 <div class="line">    </div>
 <div class="line">}</div>
 <div class="ttc" id="achip__id_8h_html"><div class="ttname"><a href="chip__id_8h.html">chip_id.h</a></div></div>
+<div class="ttc" id="agroup__chip__id_html_ga73068c6cf5d5b5fd06172a8e60a066a1"><div class="ttname"><a href="group__chip__id.html#ga73068c6cf5d5b5fd06172a8e60a066a1">get_chipid</a></div><div class="ttdeci">#define get_chipid(cid)</div><div class="ttdoc">Get chip id as array. Array size is ID_SIZE.</div><div class="ttdef"><b>Definition:</b> chip_id.h:50</div></div>
 <div class="ttc" id="agroup__uart_html_gaaf582a05f613b72c7255c5cd838879fd"><div class="ttname"><a href="group__uart.html#gaaf582a05f613b72c7255c5cd838879fd">uart1_init</a></div><div class="ttdeci">#define uart1_init(uart_baudrate)</div><div class="ttdoc">Initiazlize UART1.</div><div class="ttdef"><b>Definition:</b> uart.h:24</div></div>
 <div class="ttc" id="auart_8h_html"><div class="ttname"><a href="uart_8h.html">uart.h</a></div></div>
 </div><!-- fragment --> 
