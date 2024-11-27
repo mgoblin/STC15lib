@@ -1,3 +1,6 @@
+/** 
+ * How to get chip id
+ */
 #include <chip_id.h>
 
 #include <stdio.h>
