@@ -68,7 +68,8 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 
 Next releases todo
 * TODO Verify examples
-* TODO Optimize and refactor is_... ..._enabled(enable) routines 
+* TODO Optimize and refactor is_... ..._enabled(enable) routines
+* TODO Describe wrapping to function technique for multiple macro decl calls  
 * TODO Enhance description of project for indexing in google/yandex and so on search engines
 * TODO Implement times to ticks part of aux module
 * TODO Add example links to module documentation 
