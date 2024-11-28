@@ -274,7 +274,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define enable_int2_interrupt() (bit_set(INT_CLKO, 4))
+#define enable_int2_interrupt() (bit_set(INT_CLKO, SBIT4))
 
 /**
  * @brief Disable INT2 interrupt
