@@ -16,11 +16,15 @@
  * @brief Set MCU idle mode
  * @details Shuts off 
  * clock to CPU, but clock to Timers, Interrupts, Serial Ports, and 
- * Analog Peripherals are still active  
+ * Analog Peripherals are still active. 
+ * The CPU status is preserved in its entirety: 
+ * the RAM, Stack Pointer, Program Counter, Program Status Word, 
+ * Accumulator, and all other registers maintain their data during Idle. 
+ * The port pins hold the logical states they had at the time Idle was activated.  
  * 
  * @ingroup power_management
  */
-#define idle() (bit_set(PCON, CBTI0))
+#define idle() (bit_set(PCON, SBIT0))
 
 /**
  * @brief Set MCU power down mode
@@ -28,6 +32,6 @@
  * 
  * @ingroup power_management
  */
-#define power_down() (bit_set(PCON, CBIT1))
+#define power_down() (bit_set(PCON, SBIT1))
 
 #endif
