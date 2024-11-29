@@ -30,6 +30,6 @@ var searchData=
   ['is_5ftimer2_5fmode0_5fp30_5foutput_5fenabled_27',['is_timer2_mode0_P30_output_enabled',['../group__timer2__mode0.html#ga25d6eb799c19b1f8a5a95202256f4129',1,'timer2_mode0.h']]],
   ['is_5ftimer2_5fmode0_5fstarted_28',['is_timer2_mode0_started',['../group__timer2__mode0.html#ga3ed7e8910a209208306bebcc62975d2b',1,'timer2_mode0.h']]],
   ['is_5fuart1_5finterrupt_5fenabled_29',['is_uart1_interrupt_enabled',['../group__interrupts.html#gae4d7cee935888f8c3b25ae5697d868b5',1,'interrupt.h']]],
-  ['is_5fwdt_5fflag_5fon_30',['is_wdt_flag_on',['../group__mcu__reset.html#gac1c4fb7f1f59ef6ad7b431fa6c64c058',1,'reset.h']]],
-  ['is_5fwdt_5fstarted_31',['is_wdt_started',['../group__mcu__reset.html#ga843c35409dc0a28f62bb961488dfd62c',1,'reset.h']]]
+  ['is_5fwdt_5fflag_5fon_30',['is_wdt_flag_on',['../group__wdt.html#gac1c4fb7f1f59ef6ad7b431fa6c64c058',1,'wdt.h']]],
+  ['is_5fwdt_5fstarted_31',['is_wdt_started',['../group__wdt.html#ga843c35409dc0a28f62bb961488dfd62c',1,'wdt.h']]]
 ];

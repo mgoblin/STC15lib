@@ -16,6 +16,5 @@ var searchData=
   ['enable_5ftimer2_5finterrupt_13',['enable_timer2_interrupt',['../group__interrupts.html#ga6ba6fe72d49d266c76ca27b31bcb0395',1,'interrupt.h']]],
   ['enable_5ftimer2_5fmode0_5fas_5fuart1_5fbaud_5frate_14',['enable_timer2_mode0_as_uart1_baud_rate',['../group__timer2__mode0.html#ga5e0b856f8e94d20b6b19ba48117c6c56',1,'timer2_mode0.h']]],
   ['enable_5fuart1_5finterrupt_15',['enable_uart1_interrupt',['../group__interrupts.html#ga650e12d0892198b3a63c1a8c382b9c12',1,'interrupt.h']]],
-  ['enable_5fwdt_5fin_5fidle_16',['enable_wdt_in_idle',['../group__mcu__reset.html#ga27ea2780d1228b5e65c152a19a9f9c1e',1,'reset.h']]],
-  ['external_5finterrupt_5ftrigger_5ft_17',['external_interrupt_trigger_t',['../group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7',1,'interrupt.h']]]
+  ['external_5finterrupt_5ftrigger_5ft_16',['external_interrupt_trigger_t',['../group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7',1,'interrupt.h']]]
 ];
