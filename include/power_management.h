@@ -28,7 +28,10 @@
 
 /**
  * @brief Set MCU power down mode
- * @details 
+ * @details In the Stop/Power-Down mode, the on-chip oscillator 
+ * and the Flash memory are stopped in order to minimize power consumption. 
+ * Only the power-on circuitry will continue to draw power during Stop/Power-Down. 
+ * The contents of on-chip RAM and SFRs are maintained.
  * 
  * @ingroup power_management
  */

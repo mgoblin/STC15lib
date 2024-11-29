@@ -73,9 +73,8 @@ Macros</h2></td></tr>
 <tr class="memitem:ga89e1b35bd6cbaf15cc0d33631acac076"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#ga89e1b35bd6cbaf15cc0d33631acac076">idle</a>()&#160;&#160;&#160;(bit_set(PCON, SBIT0))</td></tr>
 <tr class="memdesc:ga89e1b35bd6cbaf15cc0d33631acac076"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MCU idle mode.  <a href="group__power__management.html#ga89e1b35bd6cbaf15cc0d33631acac076">More...</a><br /></td></tr>
 <tr class="separator:ga89e1b35bd6cbaf15cc0d33631acac076"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1e0d38ad57d2078db65a84e857f5e5b6"><td class="memItemLeft" align="right" valign="top"><a id="ga1e0d38ad57d2078db65a84e857f5e5b6" name="ga1e0d38ad57d2078db65a84e857f5e5b6"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>power_down</b>()&#160;&#160;&#160;(bit_set(PCON, SBIT1))</td></tr>
-<tr class="memdesc:ga1e0d38ad57d2078db65a84e857f5e5b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MCU power down mode. <br /></td></tr>
+<tr class="memitem:ga1e0d38ad57d2078db65a84e857f5e5b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#ga1e0d38ad57d2078db65a84e857f5e5b6">power_down</a>()&#160;&#160;&#160;(bit_set(PCON, SBIT1))</td></tr>
+<tr class="memdesc:ga1e0d38ad57d2078db65a84e857f5e5b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MCU power down mode.  <a href="group__power__management.html#ga1e0d38ad57d2078db65a84e857f5e5b6">More...</a><br /></td></tr>
 <tr class="separator:ga1e0d38ad57d2078db65a84e857f5e5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -99,6 +98,26 @@ Macros</h2></td></tr>
 <p>Set MCU idle mode. </p>
 <p >Shuts off clock to CPU, but clock to Timers, Interrupts, Serial Ports, and Analog Peripherals are still active. The CPU status is preserved in its entirety: the RAM, Stack Pointer, Program Counter, Program Status Word, Accumulator, and all other registers maintain their data during Idle. The port pins hold the logical states they had at the time Idle was activated. <br  />
  </p>
+
+</div>
+</div>
+<a id="ga1e0d38ad57d2078db65a84e857f5e5b6" name="ga1e0d38ad57d2078db65a84e857f5e5b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1e0d38ad57d2078db65a84e857f5e5b6">&#9670;&nbsp;</a></span>power_down</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define power_down</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(bit_set(PCON, SBIT1))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set MCU power down mode. </p>
+<p >In the Stop/Power-Down mode, the on-chip oscillator and the Flash memory are stopped in order to minimize power consumption. Only the power-on circuitry will continue to draw power during Stop/Power-Down. The contents of on-chip RAM and SFRs are maintained. </p>
 
 </div>
 </div>
