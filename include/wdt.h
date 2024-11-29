@@ -83,7 +83,7 @@
  * 
  * @ingroup wdt
  */
-#define wdt_reset_flag() (bit_clr(WDT_CONTR, CBIT7))
+#define wdt_flag_reset() (bit_clr(WDT_CONTR, CBIT7))
 
 /**
  * @brief Enable WDT in MCU idle mode

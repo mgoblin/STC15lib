@@ -71,7 +71,8 @@
     /*bit_clr(AUXR, 4); // clear T2 run flag */                         \
     /*bit_clr(AUXR, 3); // clear T/C flag for set timer mode */         \
     /*bit_set(AUXR, SBIT2); // set T2 T2x12 flag for set 1T mode */     \
-    AUXR &= 0xE7;/*0b11100111;*/                                        \
+    bit_clr(AUXR, CBIT3);                                               \
+    bit_clr(AUXR, CBIT4);                                               \
     bit_set(AUXR, SBIT2);                                               \
 }
 ///@}
@@ -125,10 +126,10 @@
  */
 #define timer2_mode0_start(ticks)                           \
 {                                                           \
-    timer2_mode0_reload(ticks);                             \
+    /*timer2_mode0_reload(ticks);*/                         \
                                                             \
-    bit_set(AUXR, SBIT4); /* set T2 run flag */             \
-} 
+    bit_set(AUXR, SBIT4);                                   \
+}
 
 /**
  * @brief Stop timer2 mode0.
@@ -158,11 +159,10 @@
  * 
  * @ingroup timer2_mode0
  */
-#define timer2_mode0_reload(ticks) {                            \
-    uint16_t value = 0xffff - ticks;                            \
-    /* Load timer high and low bytes value */                   \
-    T2L = value & 0xff;                                         \
-    T2H = (value >> 8) & 0xff;                                  \
+#define timer2_mode0_reload(ticks)                              \
+{                                                               \
+    T2L = (0xffff - ticks) & 0xff;                              \
+    T2H = ((0xffff - ticks) >> 8) & 0xff;                       \
 }
 
 ///@}
