@@ -1,11 +1,11 @@
 /**
  * How to use idle.
  * 
- * Start timer0 that change is_idle_required flag.
- * In main routine LED blink and idle if is_idle_required = true. 
+ * Start timer0 that wake up from idle mode.
+ * In main routine LED blink. 
  * Idle freeze main until timer0 interrupt arrived.
  * 
- * As a result LED blink some period of time and pause blinking until timer interrupt.  
+ * As a result LED blink not with delay 250 ms period but on timer period.  
  */
 #include <power_management.h>
 
@@ -15,13 +15,10 @@
 
 
 #define LED P10
-#define OFF 1
-
-static bool is_idle_required = false;
 
 void timerISR() __interrupt(1)
 {
-    is_idle_required = !is_idle_required;
+
 }
 
 void main()
@@ -34,10 +31,7 @@ void main()
     {
         LED = !LED;
         delay_ms(250);
-        if (is_idle_required)
-        {
-            LED = OFF;
-            idle();
-        }
+        
+        idle();
     }
 }
