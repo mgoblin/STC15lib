@@ -111,7 +111,7 @@
  * 
  * @ingroup timer0_mode0
  */
-#define is_timer0_mode0_gate_opened() (test_if_bit_cleared(TMOD, 3))
+#define is_timer0_mode0_gate_opened() (test_if_bit_cleared(TMOD, SBIT3))
 
 ///@}
 //============================== Timer0 get mode, divider, pins declarations end =======
