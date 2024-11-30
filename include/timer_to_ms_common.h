@@ -29,7 +29,7 @@
  * 
  * @ingroup timer_to_ms
  */
-#define timer_uint16_ticks_to_freq100(ticks, timer_clock_divider, frequency_divider_scale) ((100 * get_master_clock_frequency() / ((timer_clock_divider << 1) * (1 + (uint32_t)ticks))) >> frequency_divider_scale)
+#define timer_uint16_ticks_to_freq100(ticks, timer_clock_divider, frequency_divider_scale) ((100 * get_master_clock_frequency() / (timer_clock_divider * (1 + (uint32_t)ticks))) >> frequency_divider_scale)
 
 /**
  * @brief Convert timer frequency to ticks (unsafe operation)

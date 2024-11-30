@@ -63,7 +63,7 @@
  * 
  * @ingroup timer0_to_ms
  */
-#define timer2_ticks_to_ms_usafe(ticks) (timer_ticks_to_ms_usafe(ticks, get_timer0_clock_divider(), get_frequency_divider_scale()))
+#define timer2_ticks_to_ms_usafe(ticks) (timer_ticks_to_ms_usafe(ticks, get_timer2_clock_divider(), get_frequency_divider_scale()))
 
 ///@}
 
@@ -86,7 +86,7 @@
  * |     1    | 19200      |  0x90     |
  * |     1    | 38400      |  0x48     |
  * |     1    | 57600      |  0x30     |
- * |     1    | 74880      |  0x25     |
+ * |     1    | 74880      |  0x24     |
  * |     1    | 115200     |  0x18     |
  * |     1    | 230400     |  0x0C     |
  * |     1    | 250000     |  0x0B     |

@@ -315,8 +315,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">{                                                               \</div>
-<div class="line">    T2L = (0xffff - ticks) &amp; 0xff;                              \</div>
-<div class="line">    T2H = ((0xffff - ticks) &gt;&gt; 8) &amp; 0xff;                       \</div>
+<div class="line">    uint16_t value = 0xffff - ticks;                            \</div>
+<div class="line">    T2L = value &amp; 0xff;                                         \</div>
+<div class="line">    T2H = (value &gt;&gt; 8) &amp; 0xff;                                  \</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p>Reload timer2 ticks on the fly. </p>
@@ -346,7 +347,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">{                                                           \</div>
-<div class="line">    <span class="comment">/*timer2_mode0_reload(ticks);*/</span>                         \</div>
+<div class="line">    timer2_mode0_reload(ticks);                             \</div>
 <div class="line">                                                            \</div>
 <div class="line">    bit_set(AUXR, SBIT4);                                   \</div>
 <div class="line">}</div>

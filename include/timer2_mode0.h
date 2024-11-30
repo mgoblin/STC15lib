@@ -126,7 +126,7 @@
  */
 #define timer2_mode0_start(ticks)                           \
 {                                                           \
-    /*timer2_mode0_reload(ticks);*/                         \
+    timer2_mode0_reload(ticks);                             \
                                                             \
     bit_set(AUXR, SBIT4);                                   \
 }
@@ -161,8 +161,9 @@
  */
 #define timer2_mode0_reload(ticks)                              \
 {                                                               \
-    T2L = (0xffff - ticks) & 0xff;                              \
-    T2H = ((0xffff - ticks) >> 8) & 0xff;                       \
+    uint16_t value = 0xffff - ticks;                            \
+    T2L = value & 0xff;                                         \
+    T2H = (value >> 8) & 0xff;                                  \
 }
 
 ///@}

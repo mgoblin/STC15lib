@@ -19,6 +19,7 @@ void main()
 
     uint16_t ticks = timer2_mode0_baudrate_to_ticks(UART_BAUDRATE);
     
+    
     while (1)
     {
         printf_tiny("Calulated timer2 ticks value is 0x%x\n", ticks);

@@ -114,7 +114,7 @@ $(function() {
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga4896ed979b875120c708dee3dc0db480">  127</a></span><span class="preprocessor">#define timer2_mode0_start(ticks)                           \</span></div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">{                                                           \</span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">    </span><span class="comment">/*timer2_mode0_reload(ticks);*/</span><span class="preprocessor">                         \</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">    timer2_mode0_reload(ticks);                             \</span></div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">                                                            \</span></div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="preprocessor">    bit_set(AUXR, SBIT4);                                   \</span></div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">}</span></div>
@@ -127,18 +127,19 @@ $(function() {
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga607a922d8faac666c2dcddd233e0bab1">  162</a></span><span class="preprocessor">#define timer2_mode0_reload(ticks)                              \</span></div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="preprocessor">{                                                               \</span></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="preprocessor">    T2L = (0xffff - ticks) &amp; 0xff;                              \</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">    T2H = ((0xffff - ticks) &gt;&gt; 8) &amp; 0xff;                       \</span></div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="preprocessor">}</span></div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga5e0b856f8e94d20b6b19ba48117c6c56">  183</a></span><span class="preprocessor">#define enable_timer2_mode0_as_uart1_baud_rate(enabled) (enabled? bit_set(AUXR, SBIT0) : bit_clr(AUXR, CBIT0))</span></div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga75c4c92ed456a4bc546e14de00d340e4">  193</a></span><span class="preprocessor">#define is_timer2_mode0_as_uart1_baud_rate_enabled() (test_if_bit_set(AUXR, SBIT0))</span></div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="preprocessor">    uint16_t value = 0xffff - ticks;                            \</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">    T2L = value &amp; 0xff;                                         \</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="preprocessor">    T2H = (value &gt;&gt; 8) &amp; 0xff;                                  \</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga5e0b856f8e94d20b6b19ba48117c6c56">  184</a></span><span class="preprocessor">#define enable_timer2_mode0_as_uart1_baud_rate(enabled) (enabled? bit_set(AUXR, SBIT0) : bit_clr(AUXR, CBIT0))</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga75c4c92ed456a4bc546e14de00d340e4">  194</a></span><span class="preprocessor">#define is_timer2_mode0_as_uart1_baud_rate_enabled() (test_if_bit_set(AUXR, SBIT0))</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="ainterrupt_8h_html"><div class="ttname"><a href="interrupt_8h.html">interrupt.h</a></div></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
