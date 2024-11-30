@@ -29,7 +29,7 @@
  * 
  * @ingroup timer_common
  */
-#define get_timer0_clock_divider() (test_if_bit_cleared(AUXR, 7) ? T12 : T1)
+#define get_timer0_clock_divider() (test_if_bit_cleared(AUXR, SBIT7) ? T12 : T1)
 
 /**
  * @brief Enable output of meandr with timer interval on P3.5 pin.
@@ -56,6 +56,6 @@
  * 
  * @ingroup timer_common
  */
-#define get_timer2_clock_divider() (test_if_bit_cleared(AUXR, 2) ? T12 : T1)
+#define get_timer2_clock_divider() (test_if_bit_cleared(AUXR, SBIT2) ? T12 : T1)
 
 #endif

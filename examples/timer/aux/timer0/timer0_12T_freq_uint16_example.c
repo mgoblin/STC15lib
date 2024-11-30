@@ -16,12 +16,12 @@ void timerISR() __interrupt(1)
 
 void main()
 {    
+    set_frequency_divider_scale(7);
+
     timer0_mode0_12T_init();
     timer0_mode0_enable_P35_output(true);
 
-    set_frequency_divider_scale(7);
     uint32_t timer_frequency = timer0_uint16_ticks_to_freq100(TICKS);
-    set_frequency_divider_scale(0);
 
     char fstr[32];
     __ultoa(timer_frequency, fstr, 10);

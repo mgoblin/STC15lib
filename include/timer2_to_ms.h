@@ -1,5 +1,5 @@
-#ifndef STC15_TIMER0_TO_MSH
-#define STC15_TIMER0_TO_MSH
+#ifndef STC15_TIMER2_TO_MSH
+#define STC15_TIMER2_TO_MSH
 
 /**
  * @file timer2_to_ms.h

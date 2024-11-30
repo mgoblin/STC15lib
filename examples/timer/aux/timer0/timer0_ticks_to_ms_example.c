@@ -1,5 +1,7 @@
+/** 
+ * How to calulate P3.5 HIGH time in ms for timer0
+ */
 #include <timer0_to_ms.h>
-#include <timer2_mode0.h>
 
 #include <uart.h>
 #include <stdio.h>
@@ -17,9 +19,9 @@ void main()
    
    timer0_mode0_start(TICKS);
 
-   uint32_t ms = timer_ticks_to_ms_usafe(TICKS, get_timer0_clock_divider(), get_frequency_divider());
+   uint32_t ms = timer0_ticks_to_ms_usafe(TICKS);
 
    while (1) {
-        printf_fast("P35 time is %lu ms\n", ms);
+        printf_fast("P3.5 time is %lu ms\n", ms); // 5 ms
    }
 }

@@ -66,6 +66,6 @@
  * 
  * @ingroup timer_to_ms
  */
-#define timer_ticks_to_ms_usafe(ticks, timer_divider, frequency_divider_scale) (((1UL + (uint32_t)ticks) / ((get_master_clock_frequency_high_part() / timer_divider) >> frequency_divider_scale) >> 1))
+#define timer_ticks_to_ms_usafe(ticks, timer_divider, frequency_divider_scale) (((1UL + (uint32_t)ticks) / ((get_master_clock_frequency_high_part() / timer_divider) >> frequency_divider_scale)))
 
 #endif
