@@ -18,7 +18,8 @@
         "stdlib.h": "c",
         "timer0_to_ms.h": "c",
         "reset.h": "c",
-        "wdt.h": "c"
+        "wdt.h": "c",
+        "timer2_to_ms.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
