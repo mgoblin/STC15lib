@@ -1,6 +1,6 @@
 #include <power_management.h>
 
-#include <reset.h>
+#include <interrupt.h>
 #include <delay.h>
 
 #define LED P10
@@ -14,29 +14,17 @@ void delay(uint16_t ms)
 
 void main()
 {
-    if (!is_wdt_started())
-    {
-        wdt_init(5); // 4 sec
-        wdt_start();
-    }
-    else
-    {
-        reset_wdt_flag();
-    }
-
-    while (1)
-    {
-        delay(250);
-        wdt_clear();
-        LED = ON;
-        
-        delay(250);
-        wdt_clear();
-        LED = OFF;
-
-        wdt_clear();
-
-        power_down();
-    }
+    delay(250);
+    LED = ON;
     
+    delay(250);
+    LED = OFF;
+    
+    WKTCL = 0xff;
+    WKTCH = 0x9f;
+
+    power_down();
+    __asm__("nop");
+    __asm__("nop");
+    __asm__("nop");
 }
