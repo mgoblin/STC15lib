@@ -68,6 +68,7 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 
 Next releases todo
 * TODO Verify examples
+* TODO Implement WakeUp timer
 * TODO Docs that WDT is biased by freq_divider
 * TODO Optimize and refactor is_... ..._enabled(enable) routines
 * TODO Describe wrapping to function technique for multiple macro decl calls  
