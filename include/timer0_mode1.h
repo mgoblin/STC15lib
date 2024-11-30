@@ -93,7 +93,7 @@
  * 
  * @ingroup timer0_mode1
  */
-#define is_timer0_mode1_gate_opened() (test_if_bit_cleared(TMOD, 3))
+#define is_timer0_mode1_gate_opened() (test_if_bit_cleared(TMOD, SBIT3))
 
 ///@}
 
