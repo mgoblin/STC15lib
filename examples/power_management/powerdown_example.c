@@ -1,3 +1,6 @@
+/** 
+ * How to use power_down mode with wakeup timer
+ */
 #include <power_management.h>
 
 #include <interrupt.h>
