@@ -1,10 +1,14 @@
-#include <sys.h>
+/**
+ * How to get timer0 mode and divider
+ * 
+ */
 #include <timer_common.h>
 #include <timer0_mode0.h>
 #include <timer0_mode1.h>
-#include <delay.h>
-#include <uart.h>
 
+#include <delay.h>
+
+#include <uart.h>
 #include <stdio.h>
 
 #define LED P10
