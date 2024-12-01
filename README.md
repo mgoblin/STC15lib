@@ -67,9 +67,9 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 * Use bitmask as a constant in bits.h to avoid unnessary bit operations in test_if_bit_set and test_if_bit_cleared
 
 Next releases todo
-* TODO Verify examples
-* TODO Implement WakeUp timer
+* TODO Documenting and verify examples for WDT
 * TODO Docs that WDT is biased by freq_divider
+* TODO Implement WakeUp timer
 * TODO Optimize and refactor is_... ..._enabled(enable) routines
 * TODO Describe wrapping to function technique for multiple macro decl calls  
 * TODO Enhance description of project for indexing in google/yandex and so on search engines
