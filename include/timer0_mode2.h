@@ -214,21 +214,12 @@
  */
 #define timer0_mode2_delay(ticks)                                       \
 {                                                                       \
-    bool is_gate_opened = is_timer0_mode2_gate_opened();                \
-                                                                        \
-    timer0_mode2_open_gate();                                           \
-                                                                        \
     timer0_mode2_start(ticks);                                          \
     /* Waiting for timer overloaded (timer overload flag set to 1) */   \
     while(!TF0)                                                         \
     {                                                                   \
     }                                                                   \
     timer0_mode2_stop();                                                \
-                                                                        \
-    if (!is_gate_opened)                                                \
-    {                                                                   \
-        timer0_mode2_close_gate();                                      \
-    }                                                                   \
 }
 ///@}
 //============================== Timer0 run once declarations end =========================

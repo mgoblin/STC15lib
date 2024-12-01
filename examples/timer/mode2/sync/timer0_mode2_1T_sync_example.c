@@ -1,7 +1,15 @@
+/**
+ * How to delay with timer0 in mode2
+ */
 #include <timer0_mode2.h>
 
 #define LED P10
 #define TIMER_CYCLES_MULTIPLIER 10000
+
+void timerISR() __interrupt(1)
+{
+
+}
 
 void main()
 {
@@ -9,7 +17,8 @@ void main()
 
     while(1)
     {
-        for(uint16_t i = 0; i < TIMER_CYCLES_MULTIPLIER; i++) {
+        for(uint16_t i = 0; i < TIMER_CYCLES_MULTIPLIER; i++) 
+        {
             timer0_mode2_delay(0xff);
         }
         

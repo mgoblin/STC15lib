@@ -19,7 +19,9 @@
         "timer0_to_ms.h": "c",
         "reset.h": "c",
         "wdt.h": "c",
-        "timer2_to_ms.h": "c"
+        "timer2_to_ms.h": "c",
+        "timer0_mode2.h": "c",
+        "compare": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
