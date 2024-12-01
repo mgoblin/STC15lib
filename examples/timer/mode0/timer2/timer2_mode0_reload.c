@@ -5,17 +5,17 @@
  */
 #include <timer2_mode0.h>
 #include <delay.h>
+#include <frequency.h>
 
 #define LED P10
-#define BLINK_COUNTS 5
 #define TICKS_ARRAY_SIZE 3
 
-const uint16_t ticks[TICKS_ARRAY_SIZE] = {0xffff, 0x7FFF, 0x3FFF};
-uint8_t interrupt_counter = BLINK_COUNTS;
+const uint16_t ticks[TICKS_ARRAY_SIZE] = {0xFFFF, 0x07FFF, 0x03FFF};
 
-static 
 void main()
 {
+    set_frequency_divider_scale(2);
+
     timer2_mode0_12T_init();
     timer2_mode0_start(ticks[0]);
 
@@ -24,6 +24,7 @@ void main()
         for(uint8_t idx = 0; idx < TICKS_ARRAY_SIZE; idx++)
         {
             timer2_mode0_reload(ticks[idx]);
+            LED = 1; // LED Off
             delay_ms((TICKS_ARRAY_SIZE - idx) * 1000);
         }
     }
@@ -31,9 +32,5 @@ void main()
 
 void timerISR() __interrupt(12)
 {
-    if (interrupt_counter-- == 0)
-    {
-        interrupt_counter = BLINK_COUNTS;
-        LED = !LED;
-    }
+    LED = !LED;
 }

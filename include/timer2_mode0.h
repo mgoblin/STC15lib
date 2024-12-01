@@ -64,6 +64,7 @@
 {                                                                       \
     enable_mcu_interrupts();                                            \
     enable_timer2_interrupt();                                          \
+    AUXR &= 0xE2;                                                       \
     AUXR |= 0x05;                                                       \
 }   
 ///@}
