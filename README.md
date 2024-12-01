@@ -62,7 +62,7 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 * Watchdog timer routines implemented
 * delay_ms now is define again
 * Idle power managment routine implemented
-* Power down mode implemented
+* Power down mode implemented with initial wakeup timer support
 * Use bitmask as a constant in bits.h to avoid unnessary bit operations in bit_set and bit_clr
 * Use bitmask as a constant in bits.h to avoid unnessary bit operations in test_if_bit_set and test_if_bit_cleared
 
