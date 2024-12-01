@@ -1,4 +1,6 @@
-#include <sys.h>
+/**
+ * How to start timer0
+ */
 #include <timer0_mode0.h>
 
 #define LED P10

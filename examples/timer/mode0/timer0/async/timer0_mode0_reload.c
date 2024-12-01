@@ -1,21 +1,23 @@
 /**
  * Demostrate reloading timer0 on the fly.
- * ticks array contains timer ticks series that cyclic rotates 
- * with timer0_reload call after timer start.
+ * 
+ * Ticks array contains timer ticks series that cyclic rotates 
+ * and timer0_reload call change timings on the fly.
+ * 
+ * LED should blinks more and more faster
  */
 #include <timer0_mode0.h>
 #include <delay.h>
 
 #define LED P10
-#define BLINK_COUNTS 5
-#define TICKS_ARRAY_SIZE 3
+#define TICKS_ARRAY_SIZE 4
 
-const uint16_t ticks[TICKS_ARRAY_SIZE] = {0xffff, 0x7FFF, 0x3FFF};
-uint8_t interrupt_counter = BLINK_COUNTS;
+const uint16_t ticks[TICKS_ARRAY_SIZE] = {0xFFFF, 0x7FFF, 0x3FFF, 0x0FFF};
 
-static 
 void main()
 {
+    set_frequency_divider_scale(2);
+
     timer0_mode0_12T_init();
     timer0_mode0_start(ticks[0]);
 
@@ -31,9 +33,5 @@ void main()
 
 void timerISR() __interrupt(1)
 {
-    if (interrupt_counter-- == 0)
-    {
-        interrupt_counter = BLINK_COUNTS;
-        LED = !LED;
-    }
+    LED = !LED;
 }
