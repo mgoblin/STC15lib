@@ -9,6 +9,13 @@
 
 #define LED P10
 
+void print_timer0_mode_and_divider()
+{
+    uint8_t mode = get_timer0_mode();
+    timer_clock_divider_t divider =  get_timer0_clock_divider();
+    printf_tiny("Timer mode is %d and divider is %d\n", mode, divider);
+}
+
 void main()
 {
     uart1_init(9600);
@@ -18,23 +25,16 @@ void main()
         printf_tiny("========================\n");
 
         timer0_mode0_12T_init();
-        uint8_t mode = get_timer0_mode();
-        timer_clock_divider_t divider =  get_timer0_clock_divider();
-        printf_tiny("Timer mode is %d and divider is %d\n", mode, divider);
+        print_timer0_mode_and_divider();
 
         timer0_mode0_1T_init();
-        mode = get_timer0_mode();
-        divider =  get_timer0_clock_divider();
-        printf_tiny("Timer mode is %d and divider is %d\n", mode, divider);
+        print_timer0_mode_and_divider();
         
         timer0_mode1_12T_init();
-        mode = get_timer0_mode();
-        divider =  get_timer0_clock_divider();
-        printf_tiny("Timer mode is %d and divider is %d\n", mode, divider);
+        print_timer0_mode_and_divider();
         
         printf_tiny("========================\n");
 
-        delay_ms(5000);
-
+        delay_ms(2000);
     }
 }
