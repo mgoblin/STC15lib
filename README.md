@@ -66,6 +66,9 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 * Use bitmask as a constant in bits.h to avoid unnessary bit operations in bit_set and bit_clr
 * Use bitmask as a constant in bits.h to avoid unnessary bit operations in test_if_bit_set and test_if_bit_cleared
 
+0.8
+*
+
 Next releases todo
 * TODO Documenting and verify examples for WDT
 * TODO Docs that WDT is biased by freq_divider
