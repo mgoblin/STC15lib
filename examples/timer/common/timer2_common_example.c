@@ -1,4 +1,6 @@
-#include <sys.h>
+/**
+ * How to get timer2 mode and divider
+ */
 #include <timer_common.h>
 #include <timer2_mode0.h>
 
