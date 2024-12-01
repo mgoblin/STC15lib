@@ -1,10 +1,9 @@
-#include <sys.h>
+/** 
+ * How to delay with timer0 in mode1
+ */
 #include <timer0_mode1.h>
 
-#include <stdint.h>
-
 #define LED P10
-#define TIMER_CYCLES_MULTIPLIER 10
 
 void main()
 {
@@ -12,9 +11,7 @@ void main()
 
     while(1)
     {
-        for(uint8_t i = 0; i < TIMER_CYCLES_MULTIPLIER; i++) {
-            timer0_mode1_delay(0xffff);
-        }
+        timer0_mode1_delay(0xffff);
         
         LED = !LED;
     }
