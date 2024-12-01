@@ -1,9 +1,10 @@
+/**
+ * How to pause/resume timer0 in mode3 
+ */
 #include <timer0_mode3.h>
 #include <delay.h>
 
 #define LED P10
-#define LIGHT 0
-#define DARK 1
 
 #define INT0 P32
 
@@ -24,7 +25,7 @@ void main()
             delay_ms(2000);
             
             timer0_mode3_close_gate();
-            LED = DARK;
+            LED = 1; // LED off
             delay_ms(2000);
     }
 }

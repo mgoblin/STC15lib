@@ -1,19 +1,14 @@
-#include <sys.h>
+/** 
+ * How to start and stop timer0 in mode3
+ */
 #include <delay.h>
 #include <timer0_mode3.h>
 
 #define LED P10
 
-uint8_t interrupt_counter = 0; // interrupt counter. 
-
 void timer0ISR(void) __interrupt(1) __using(1)
 {
-    // Every 12th interrupt call switch LED state and reset counter
-    if (interrupt_counter++ == 12)
-    {
-        interrupt_counter = 0;
-        LED = !LED;
-    }
+    LED = !LED;
 }
 
 void delay(uint16_t ms)
@@ -23,14 +18,16 @@ void delay(uint16_t ms)
 
 void main()
 {
+    set_frequency_divider_scale(4);
+
     timer0_mode3_1T_init();
 
     // LED blinking during 1 second 
     timer0_mode3_start(0xffff);
     delay(1000);
+    LED = 1; // LED off
 
-    // Not LED blinking during 2 seconds
+    // LED not blinking during 2 seconds
     timer0_mode3_stop();
-    interrupt_counter = 0;
     delay(2000);
 }
