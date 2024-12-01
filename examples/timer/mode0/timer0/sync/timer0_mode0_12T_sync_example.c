@@ -1,10 +1,9 @@
-#include <sys.h>
+/**
+ * How to delay main program using timer0_mode0_delay on 12T timer closk divider 
+ */
 #include <timer0_mode0.h>
 
-#include <stdint.h>
-
 #define LED P10
-#define TIMER_CYCLES_MULTIPLIER 10
 
 void main()
 {
@@ -12,9 +11,7 @@ void main()
 
     while(1)
     {
-        for(uint8_t i = 0; i < TIMER_CYCLES_MULTIPLIER; i++) {
-            timer0_mode0_delay(0xffff);
-        }
+        timer0_mode0_delay(0xffff);
         
         LED = !LED;
     }

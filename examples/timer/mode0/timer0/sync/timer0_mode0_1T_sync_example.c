@@ -1,7 +1,7 @@
-#include <sys.h>
+/**
+ * How to delay main program using timer0_mode0_delay on 1T timer closk divider 
+ */
 #include <timer0_mode0.h>
-
-#include <stdint.h>
 
 #define LED P10
 
