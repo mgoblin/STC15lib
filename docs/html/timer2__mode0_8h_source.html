@@ -86,60 +86,51 @@ $(function() {
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">{                                                                       \</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">    enable_mcu_interrupts();                                            \</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">    enable_timer2_interrupt();                                          \</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">    </span><span class="comment">/* bit_clr(AUXR, 4); clear T2 run flag */</span><span class="preprocessor">                           \</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">    </span><span class="comment">/* bit_clr(AUXR, 3); // clear T/C flag for set timer mode */</span><span class="preprocessor">        \</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">    </span><span class="comment">/* bit_clr(AUXR, 2); // clear T2 T2x12 flag for set 12T mode */</span><span class="preprocessor">     \</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">    AUXR &amp;= 0xE3; </span><span class="comment">/* 0b11100011 */</span><span class="preprocessor">                                      \</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">                                                                        \</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">}</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#gadf419f934a3f374993349e6a257ed29d">   67</a></span><span class="preprocessor">#define timer2_mode0_1T_init()                                          \</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">{                                                                       \</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">    enable_mcu_interrupts();                                            \</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">    enable_timer2_interrupt();                                          \</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">    </span><span class="comment">/*bit_clr(AUXR, 4); // clear T2 run flag */</span><span class="preprocessor">                         \</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">    </span><span class="comment">/*bit_clr(AUXR, 3); // clear T/C flag for set timer mode */</span><span class="preprocessor">         \</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">    </span><span class="comment">/*bit_set(AUXR, SBIT2); // set T2 T2x12 flag for set 1T mode */</span><span class="preprocessor">     \</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">    bit_clr(AUXR, CBIT3);                                               \</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">    bit_clr(AUXR, CBIT4);                                               \</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">    bit_set(AUXR, SBIT2);                                               \</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">}</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#gafbbdd131ce0efa3e2d8d7d27c285aceb">   93</a></span><span class="preprocessor">#define timer2_mode0_enable_P30_output(enable) (enable ? bit_set(INT_CLKO, SBIT2) : bit_clr(INT_CLKO, CBIT2))</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">    AUXR &amp;= 0xE2;                                                       \</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#gadf419f934a3f374993349e6a257ed29d">   63</a></span><span class="preprocessor">#define timer2_mode0_1T_init()                                          \</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">{                                                                       \</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">    enable_mcu_interrupts();                                            \</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">    enable_timer2_interrupt();                                          \</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">    AUXR |= 0x05;                                                       \</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">}   </span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#gafbbdd131ce0efa3e2d8d7d27c285aceb">   84</a></span><span class="preprocessor">#define timer2_mode0_enable_P30_output(enable) (enable ? bit_set(INT_CLKO, SBIT2) : bit_clr(INT_CLKO, CBIT2))</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga25d6eb799c19b1f8a5a95202256f4129">   93</a></span><span class="preprocessor">#define is_timer2_mode0_P30_output_enabled() (test_if_bit_set(INT_CLKO, SBIT2))</span></div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga25d6eb799c19b1f8a5a95202256f4129">  102</a></span><span class="preprocessor">#define is_timer2_mode0_P30_output_enabled() (test_if_bit_set(INT_CLKO, SBIT2))</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga4896ed979b875120c708dee3dc0db480">  127</a></span><span class="preprocessor">#define timer2_mode0_start(ticks)                           \</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">{                                                           \</span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">    timer2_mode0_reload(ticks);                             \</span></div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">                                                            \</span></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="preprocessor">    bit_set(AUXR, SBIT4);                                   \</span></div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">}</span></div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga86d1f3d5c229e55f341ed316b21e71ab">  140</a></span><span class="preprocessor">#define timer2_mode0_stop() {                               \</span></div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="preprocessor">    bit_clr(AUXR, CBIT4); </span><span class="comment">/* clear T2 run flag */</span><span class="preprocessor">           \</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga4896ed979b875120c708dee3dc0db480">  118</a></span><span class="preprocessor">#define timer2_mode0_start(ticks)                           \</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">{                                                           \</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">    timer2_mode0_reload(ticks);                             \</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">                                                            \</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="preprocessor">    bit_set(AUXR, SBIT4);                                   \</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga86d1f3d5c229e55f341ed316b21e71ab">  131</a></span><span class="preprocessor">#define timer2_mode0_stop() {                               \</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">    bit_clr(AUXR, CBIT4); </span><span class="comment">/* clear T2 run flag */</span><span class="preprocessor">           \</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga3ed7e8910a209208306bebcc62975d2b">  142</a></span><span class="preprocessor">#define is_timer2_mode0_started() (test_if_bit_set(AUXR, SBIT4))</span></div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga3ed7e8910a209208306bebcc62975d2b">  151</a></span><span class="preprocessor">#define is_timer2_mode0_started() (test_if_bit_set(AUXR, SBIT4))</span></div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga607a922d8faac666c2dcddd233e0bab1">  162</a></span><span class="preprocessor">#define timer2_mode0_reload(ticks)                              \</span></div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="preprocessor">{                                                               \</span></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="preprocessor">    uint16_t value = 0xffff - ticks;                            \</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">    T2L = value &amp; 0xff;                                         \</span></div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="preprocessor">    T2H = (value &gt;&gt; 8) &amp; 0xff;                                  \</span></div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="preprocessor">}</span></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga5e0b856f8e94d20b6b19ba48117c6c56">  184</a></span><span class="preprocessor">#define enable_timer2_mode0_as_uart1_baud_rate(enabled) (enabled? bit_set(AUXR, SBIT0) : bit_clr(AUXR, CBIT0))</span></div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga75c4c92ed456a4bc546e14de00d340e4">  194</a></span><span class="preprocessor">#define is_timer2_mode0_as_uart1_baud_rate_enabled() (test_if_bit_set(AUXR, SBIT0))</span></div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga607a922d8faac666c2dcddd233e0bab1">  153</a></span><span class="preprocessor">#define timer2_mode0_reload(ticks)                              \</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="preprocessor">{                                                               \</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="preprocessor">    uint16_t value = 0xffff - ticks;                            \</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="preprocessor">    T2L = value &amp; 0xff;                                         \</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="preprocessor">    T2H = (value &gt;&gt; 8) &amp; 0xff;                                  \</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga5e0b856f8e94d20b6b19ba48117c6c56">  175</a></span><span class="preprocessor">#define enable_timer2_mode0_as_uart1_baud_rate(enabled) (enabled? bit_set(AUXR, SBIT0) : bit_clr(AUXR, CBIT0))</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga75c4c92ed456a4bc546e14de00d340e4">  185</a></span><span class="preprocessor">#define is_timer2_mode0_as_uart1_baud_rate_enabled() (test_if_bit_set(AUXR, SBIT0))</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="ainterrupt_8h_html"><div class="ttname"><a href="interrupt_8h.html">interrupt.h</a></div></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

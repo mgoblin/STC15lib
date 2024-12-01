@@ -49,11 +49,7 @@
 {                                                                       \
     enable_mcu_interrupts();                                            \
     enable_timer2_interrupt();                                          \
-    /* bit_clr(AUXR, 4); clear T2 run flag */                           \
-    /* bit_clr(AUXR, 3); // clear T/C flag for set timer mode */        \
-    /* bit_clr(AUXR, 2); // clear T2 T2x12 flag for set 12T mode */     \
-    AUXR &= 0xE3; /* 0b11100011 */                                      \
-                                                                        \
+    AUXR &= 0xE2;                                                       \
 }
 
 /**
@@ -68,13 +64,8 @@
 {                                                                       \
     enable_mcu_interrupts();                                            \
     enable_timer2_interrupt();                                          \
-    /*bit_clr(AUXR, 4); // clear T2 run flag */                         \
-    /*bit_clr(AUXR, 3); // clear T/C flag for set timer mode */         \
-    /*bit_set(AUXR, SBIT2); // set T2 T2x12 flag for set 1T mode */     \
-    bit_clr(AUXR, CBIT3);                                               \
-    bit_clr(AUXR, CBIT4);                                               \
-    bit_set(AUXR, SBIT2);                                               \
-}
+    AUXR |= 0x05;                                                       \
+}   
 ///@}
 
 /** @name config

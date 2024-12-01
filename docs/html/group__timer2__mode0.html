@@ -230,11 +230,7 @@ $(function() {
 <b>Value:</b><div class="fragment"><div class="line">{                                                                       \</div>
 <div class="line">    enable_mcu_interrupts();                                            \</div>
 <div class="line">    enable_timer2_interrupt();                                          \</div>
-<div class="line">    <span class="comment">/* bit_clr(AUXR, 4); clear T2 run flag */</span>                           \</div>
-<div class="line">    <span class="comment">/* bit_clr(AUXR, 3); // clear T/C flag for set timer mode */</span>        \</div>
-<div class="line">    <span class="comment">/* bit_clr(AUXR, 2); // clear T2 T2x12 flag for set 12T mode */</span>     \</div>
-<div class="line">    AUXR &amp;= 0xE3; <span class="comment">/* 0b11100011 */</span>                                      \</div>
-<div class="line">                                                                        \</div>
+<div class="line">    AUXR &amp;= 0xE2;                                                       \</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p>Initialize mode0 12T for timer2. </p>
@@ -259,12 +255,7 @@ $(function() {
 <b>Value:</b><div class="fragment"><div class="line">{                                                                       \</div>
 <div class="line">    enable_mcu_interrupts();                                            \</div>
 <div class="line">    enable_timer2_interrupt();                                          \</div>
-<div class="line">    <span class="comment">/*bit_clr(AUXR, 4); // clear T2 run flag */</span>                         \</div>
-<div class="line">    <span class="comment">/*bit_clr(AUXR, 3); // clear T/C flag for set timer mode */</span>         \</div>
-<div class="line">    <span class="comment">/*bit_set(AUXR, SBIT2); // set T2 T2x12 flag for set 1T mode */</span>     \</div>
-<div class="line">    bit_clr(AUXR, CBIT3);                                               \</div>
-<div class="line">    bit_clr(AUXR, CBIT4);                                               \</div>
-<div class="line">    bit_set(AUXR, SBIT2);                                               \</div>
+<div class="line">    AUXR |= 0x05;                                                       \</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p>Initialize mode0 1T for timer2. </p>
