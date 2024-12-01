@@ -139,7 +139,7 @@
 #define timer0_mode2_reload(ticks)                          \
 {                                                           \
     /* Load timer high and low bytes value */               \
-    TL0 = (0xff - ticks) >> get_frequency_divider_scale();  \
+    TL0 = (0xff - ticks);                                   \
 }
 
 /**

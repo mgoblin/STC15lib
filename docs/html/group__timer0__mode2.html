@@ -377,9 +377,8 @@ $(function() {
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">{                                                           \</div>
 <div class="line">    <span class="comment">/* Load timer high and low bytes value */</span>               \</div>
-<div class="line">    TL0 = (0xff - ticks) &gt;&gt; <a class="code hl_define" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>();  \</div>
+<div class="line">    TL0 = (0xff - ticks);                                   \</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__freq_html_ga2282854ce7886421e523f6d8f8467fae"><div class="ttname"><a href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a></div><div class="ttdeci">#define get_frequency_divider_scale()</div><div class="ttdef"><b>Definition:</b> frequency.h:63</div></div>
 </div><!-- fragment -->
 <p>Reload timer0 mode2 ticks on the fly. </p>
 <p >Reload is available in modes 0, 2, 3.</p>

@@ -1,3 +1,6 @@
+/** 
+ * How to start timer0 in mode2
+ */
 #include <timer0_mode2.h>
 
 #define LED P10
@@ -18,7 +21,7 @@ void main()
 {
     timer0_mode2_12T_init();
 
-    // LED blinking during 1 second 
+    // LED blinking 
     timer0_mode2_start(0xff);
 
     while(1) {}
