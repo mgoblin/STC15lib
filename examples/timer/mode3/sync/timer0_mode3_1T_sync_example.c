@@ -1,20 +1,20 @@
-#include <sys.h>
+/**
+ * How to use delay with timer0 mode3
+ */
 #include <timer0_mode3.h>
-
-#include <stdint.h>
+#include <frequency.h>
 
 #define LED P10
 
 void main()
 {
+    set_frequency_divider_scale(4);
+
     timer0_mode3_1T_init();
 
     while(1)
     {
-        for (uint8_t i = 0; i < 12; i++)
-        {
-            timer0_mode3_delay(0xffff);
-        }
+        timer0_mode3_delay(0xffff);
         LED = !LED;
     }
 }
