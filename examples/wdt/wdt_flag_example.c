@@ -22,6 +22,7 @@ void main()
     wdt_flag_reset();
 
     wdt_init(0x05);
+    wdt_start();
     while(1)
     {
         printf_tiny("WDT flag is %d\n", is_wdt_flag_on());

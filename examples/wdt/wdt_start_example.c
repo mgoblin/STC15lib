@@ -20,6 +20,7 @@ void delay(uint16_t ms)
 void main()
 {
     wdt_init(0x06); // 4.19 sec
+    wdt_start();
 
     delay(3000);
 

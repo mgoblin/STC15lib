@@ -100,9 +100,9 @@ $(function() {
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures related WDT</p>
 <p >WDT - Watchdog timer is purposed for reset MCU on program hang up.</p>
-<p >First step is init with scale. Scale determine WDT overflow time. Init WDT assume it started. Separate <a class="el" href="group__wdt.html#ga1ff5051835023e879151f4a8df3504e0" title="Start WDT.">wdt_start()</a> / wdt_stop routines is used for explicitly start and stop WDT.</p>
-<p >After <a class="el" href="group__wdt.html#ga4b2fd1f627e92c1af1acf116abc95180" title="Init WDT.">wdt_init()</a> call wdt_clear should be periodically called to restart WDT.</p>
-<p >If wdt_clear not called before WDT overflow MCU reset occurs.</p>
+<p >First step is init with scale. Scale determine WDT overflow time. Init WDT assume it not started. Separate <a class="el" href="group__wdt.html#ga1ff5051835023e879151f4a8df3504e0" title="Start WDT.">wdt_start()</a> / wdt_stop routines is used for explicitly start and stop WDT.</p>
+<p >After <a class="el" href="group__wdt.html#ga1ff5051835023e879151f4a8df3504e0" title="Start WDT.">wdt_start()</a> call wdt_clear should be periodically called to restart WDT.</p>
+<p >If <a class="el" href="group__wdt.html#ga355eee3da94d468a19c60aa13744567e" title="clear WDT to prevent restart">wdt_clear()</a> not called before WDT overflow MCU reset occurs.</p>
 <p >If restart reason is WDT overflow then <a class="el" href="group__wdt.html#gac1c4fb7f1f59ef6ad7b431fa6c64c058" title="Get reset by WDT flag.">is_wdt_flag_on()</a> return true. <a class="el" href="group__wdt.html#gaa3751ab04e7763af22c69382f8966264" title="Reset WDT flag.">wdt_flag_reset()</a> could be called to clear wdt_flag.</p>
 <p >By default WDT is disabled in idle mode. <a class="el" href="group__wdt.html#gabed26af57acc1be0704b07e50a6b8e32" title="Enable WDT in MCU idle mode.">wdt_enable_in_idle()</a> change this.</p>
 <p >WDT timings biased by MCU frequency change (frequency divider).</p>
@@ -247,7 +247,7 @@ $(function() {
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">{                                               \</div>
 <div class="line">    WDT_CONTR = 0;                              \</div>
-<div class="line">    WDT_CONTR |= ( 0x20 | wdt_scale) &amp; 0x27;    \</div>
+<div class="line">    WDT_CONTR |= (wdt_scale &amp; 0x07);            \</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p>Init WDT. </p>

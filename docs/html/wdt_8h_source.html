@@ -79,7 +79,7 @@ $(function() {
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="group__wdt.html#ga4b2fd1f627e92c1af1acf116abc95180">   46</a></span><span class="preprocessor">#define wdt_init(wdt_scale)                     \</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">{                                               \</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">    WDT_CONTR = 0;                              \</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">    WDT_CONTR |= ( 0x20 | wdt_scale) &amp; 0x27;    \</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">    WDT_CONTR |= (wdt_scale &amp; 0x07);            \</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">}</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="group__wdt.html#ga1ff5051835023e879151f4a8df3504e0">   58</a></span><span class="preprocessor">#define wdt_start() (bit_set(WDT_CONTR, SBIT5)) </span></div>
