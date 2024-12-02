@@ -11,6 +11,8 @@
 
 #include <sys.h>
 #include <bits.h>
+#include <stdint.h>
+#include <stdbool.h>
 
 /**
  * @brief Set MCU idle mode
@@ -36,5 +38,10 @@
  * @ingroup power_management
  */
 #define power_down() (bit_set(PCON, SBIT1))
+
+void wakeup_timer_init(uint16_t ticks);
+void wakeup_timer_start();
+void wakeup_timer_stop();
+bool is_wakeup_timer_started();
 
 #endif
