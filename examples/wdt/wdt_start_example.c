@@ -12,12 +12,14 @@
 #define ON 0
 #define OFF 1
 
-void delay(uint16_t ms);
+void delay(uint16_t ms)
+{
+    delay_ms(ms);
+}
 
 void main()
 {
     wdt_init(0x06); // 4.19 sec
-    wdt_start();
 
     delay(3000);
 
@@ -26,9 +28,4 @@ void main()
         LED = !LED;
         delay(250);
     }
-}
-
-void delay(uint16_t ms)
-{
-    delay_ms(ms);
 }

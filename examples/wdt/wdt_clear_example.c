@@ -1,9 +1,8 @@
 /**
  * How to use WDT with clear
  * 
- * WDT started with 4 sec period and clear every second. 
+ * WDT started with 4 sec period and clear every 500ms. 
  * MCU not restarted and LED will blinking.  
- * 
  */
 #include <wdt.h>
 

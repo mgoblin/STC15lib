@@ -43,11 +43,10 @@
  * 
  * @ingroup wdt
  */
-#define wdt_init(wdt_scale)             \
-{                                       \
-    WDT_CONTR = 0;                      \
-    WDT_CONTR |= (wdt_scale & 0x07);    \
-    wdt_start();                        \
+#define wdt_init(wdt_scale)                     \
+{                                               \
+    WDT_CONTR = 0;                              \
+    WDT_CONTR |= ( 0x20 | wdt_scale) & 0x27;    \
 }
 
 /**

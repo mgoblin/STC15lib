@@ -245,10 +245,9 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                       \</div>
-<div class="line">    WDT_CONTR = 0;                      \</div>
-<div class="line">    WDT_CONTR |= (wdt_scale &amp; 0x07);    \</div>
-<div class="line">    wdt_start();                        \</div>
+<b>Value:</b><div class="fragment"><div class="line">{                                               \</div>
+<div class="line">    WDT_CONTR = 0;                              \</div>
+<div class="line">    WDT_CONTR |= ( 0x20 | wdt_scale) &amp; 0x27;    \</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p>Init WDT. </p>

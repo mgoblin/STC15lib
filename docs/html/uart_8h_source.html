@@ -79,17 +79,18 @@ $(function() {
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="group__uart.html#gaaf582a05f613b72c7255c5cd838879fd">   24</a></span><span class="preprocessor">#define uart1_init(uart_baudrate)                                       \</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">{                                                                       \</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">    SCON = 0x50; </span><span class="comment">/* Set Mode1: 8-Bit UART with Variable Baud Rate */</span><span class="preprocessor">    \</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">    timer2_mode0_1T_init();                                             \</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">    timer2_mode0_start(timer2_mode0_baudrate_to_ticks(uart_baudrate));  \</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">}</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__uart.html#gaee0e2768c65fa6dfe5e87991f729c6d0">uart1_send_byte</a>(uint8_t data);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>uint8_t <a class="code hl_function" href="group__uart.html#ga5f66ea2c05ce23684284f338d9067179">uart1_receive_byte</a>();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keywordtype">int</span> <a class="code hl_function" href="group__uart.html#ga07036e93939040c563e862a6a31b65bc">putchar</a>(<span class="keywordtype">int</span> ch);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keywordtype">int</span> <a class="code hl_function" href="group__uart.html#ga3e29caa20f7cffe18f410f01278905a8">getchar</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">    timer2_mode0_reload(timer2_mode0_baudrate_to_ticks(uart_baudrate)); \</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">    AUXR &amp;= 0xE2;                                                       \</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">    AUXR |= 0x15;                                                       \</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__uart.html#gaee0e2768c65fa6dfe5e87991f729c6d0">uart1_send_byte</a>(uint8_t data);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>uint8_t <a class="code hl_function" href="group__uart.html#ga5f66ea2c05ce23684284f338d9067179">uart1_receive_byte</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keywordtype">int</span> <a class="code hl_function" href="group__uart.html#ga07036e93939040c563e862a6a31b65bc">putchar</a>(<span class="keywordtype">int</span> ch);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keywordtype">int</span> <a class="code hl_function" href="group__uart.html#ga3e29caa20f7cffe18f410f01278905a8">getchar</a>(<span class="keywordtype">void</span>);</div>
 <div class="ttc" id="agroup__uart_html_ga07036e93939040c563e862a6a31b65bc"><div class="ttname"><a href="group__uart.html#ga07036e93939040c563e862a6a31b65bc">putchar</a></div><div class="ttdeci">int putchar(int ch)</div><div class="ttdoc">Send character to UART1.</div><div class="ttdef"><b>Definition:</b> uart.c:17</div></div>
 <div class="ttc" id="agroup__uart_html_ga3e29caa20f7cffe18f410f01278905a8"><div class="ttname"><a href="group__uart.html#ga3e29caa20f7cffe18f410f01278905a8">getchar</a></div><div class="ttdeci">int getchar(void)</div><div class="ttdoc">Receive character from UART1.</div><div class="ttdef"><b>Definition:</b> uart.c:23</div></div>
 <div class="ttc" id="agroup__uart_html_ga5f66ea2c05ce23684284f338d9067179"><div class="ttname"><a href="group__uart.html#ga5f66ea2c05ce23684284f338d9067179">uart1_receive_byte</a></div><div class="ttdeci">uint8_t uart1_receive_byte()</div><div class="ttdoc">Receive byte from UART1.</div><div class="ttdef"><b>Definition:</b> uart.c:10</div></div>

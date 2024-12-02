@@ -109,8 +109,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">{                                                                       \</div>
 <div class="line">    SCON = 0x50; <span class="comment">/* Set Mode1: 8-Bit UART with Variable Baud Rate */</span>    \</div>
-<div class="line">    timer2_mode0_1T_init();                                             \</div>
-<div class="line">    timer2_mode0_start(<a class="code hl_define" href="group__timer2__to__ms.html#gabf526ab4e81d771f1cc410df02be173f">timer2_mode0_baudrate_to_ticks</a>(uart_baudrate));  \</div>
+<div class="line">    timer2_mode0_reload(<a class="code hl_define" href="group__timer2__to__ms.html#gabf526ab4e81d771f1cc410df02be173f">timer2_mode0_baudrate_to_ticks</a>(uart_baudrate)); \</div>
+<div class="line">    AUXR &amp;= 0xE2;                                                       \</div>
+<div class="line">    AUXR |= 0x15;                                                       \</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__timer2__to__ms_html_gabf526ab4e81d771f1cc410df02be173f"><div class="ttname"><a href="group__timer2__to__ms.html#gabf526ab4e81d771f1cc410df02be173f">timer2_mode0_baudrate_to_ticks</a></div><div class="ttdeci">#define timer2_mode0_baudrate_to_ticks(uart_baudrate)</div><div class="ttdoc">Calculate timer2 ticks for UART baudrate.</div><div class="ttdef"><b>Definition:</b> timer2_to_ms.h:126</div></div>
 </div><!-- fragment -->
