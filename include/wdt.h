@@ -2,11 +2,27 @@
 #define STC15_WDTH
 
 #include <sys.h>
+#include <bits.h>
 
 /**
  * @file wdt.h
  * @defgroup wdt Watchdog timer
  * @details Functions and data structures related WDT
+ * 
+ * WDT - Watchdog timer is purposed for reset MCU on program hang up.
+ * 
+ * First step is init with scale. Scale determine WDT overflow time.
+ * Init WDT assume it started. Separate wdt_start() / wdt_stop routines is 
+ * used for explicitly start and stop WDT.
+ * 
+ * After wdt_init() call wdt_clear should be periodically called to restart WDT.
+ * 
+ * If wdt_clear not called before WDT overflow MCU reset occurs. 
+ * 
+ * If restart reason is WDT overflow then is_wdt_flag_on() return true.
+ * wdt_flag_reset() could be called to clear wdt_flag.
+ * 
+ * By default WDT is disabled in idle mode. wdt_enable_in_idle() change this.
  * 
  * WDT timings biased by MCU frequency change (frequency divider).
  *  
@@ -31,6 +47,7 @@
 {                                       \
     WDT_CONTR = 0;                      \
     WDT_CONTR |= (wdt_scale & 0x07);    \
+    wdt_start();                        \
 }
 
 /**
