@@ -27,7 +27,4 @@ void main()
     WKTCH = 0x9f;
 
     power_down();
-    __asm__("nop");
-    __asm__("nop");
-    __asm__("nop");
 }

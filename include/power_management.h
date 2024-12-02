@@ -37,7 +37,13 @@
  * 
  * @ingroup power_management
  */
-#define power_down() (bit_set(PCON, SBIT1))
+#define power_down()            \
+{                               \
+    bit_set(PCON, SBIT1);       \
+    __asm__("nop");             \
+    __asm__("nop");             \
+    __asm__("nop");             \
+}
 
 void wakeup_timer_init(uint16_t ticks);
 void wakeup_timer_start();
