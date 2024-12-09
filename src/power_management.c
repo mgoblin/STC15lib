@@ -2,9 +2,8 @@
 
 void wakeup_timer_init(uint16_t ticks)
 {
-    uint16_t t = ticks & CBIT7;
-    WKTCH = (t >> 8) & 0xff;
-    WKTCL = t & 0xff;
+    WKTCH = (ticks >> 8) & 0x7f;
+    WKTCL = 0x01;
 }
 
 void wakeup_timer_start()
