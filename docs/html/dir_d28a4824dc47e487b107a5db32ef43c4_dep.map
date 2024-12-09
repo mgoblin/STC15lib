@@ -1,24 +1,25 @@
 <map id="examples" name="examples">
-<area shape="rect" id="node2" href="dir_cfcc1510566ad3deac88d4f5f34ac519.html" title="bits" alt="" coords="997,27,1069,75"/>
-<area shape="rect" id="node12" href="dir_d44c64559bbebec7f509842c48db8b23.html" title="include" alt="" coords="524,123,596,171"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000005_000011.html" title="2" alt="" coords="610,147,619,161"/>
-<area shape="rect" id="node3" href="dir_3d912f430f8f20417cc587910e4b8eb6.html" title="chip_id" alt="" coords="901,27,973,75"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000006_000011.html" title="2" alt="" coords="610,144,619,158"/>
-<area shape="rect" id="node4" href="dir_a077256fa57d221b8243921f3a5dc181.html" title="delay" alt="" coords="805,27,877,75"/>
-<area shape="rect" id="edge3-headlabel" href="dir_000008_000011.html" title="2" alt="" coords="611,138,620,153"/>
-<area shape="rect" id="node5" href="dir_022c70a4c242b590c6b5b9f5062478fb.html" title="frequency" alt="" coords="694,27,781,75"/>
-<area shape="rect" id="edge4-headlabel" href="dir_000010_000011.html" title="6" alt="" coords="612,121,621,136"/>
-<area shape="rect" id="node6" href="dir_c1db52a656d3093099d376eb28786d44.html" title="interrupt" alt="" coords="591,27,670,75"/>
-<area shape="rect" id="edge5-headlabel" href="dir_000012_000011.html" title="3" alt="" coords="590,106,600,121"/>
-<area shape="rect" id="node7" href="dir_b1f420cbc16285bdb739e86a837de2c8.html" title="power_management" alt="" coords="411,27,567,75"/>
-<area shape="rect" id="edge6-headlabel" href="dir_000017_000011.html" title="6" alt="" coords="534,96,543,110"/>
-<area shape="rect" id="node8" href="dir_f5d028e692faabaaf12586e002fe5fd6.html" title="reset" alt="" coords="315,27,387,75"/>
-<area shape="rect" id="edge7-headlabel" href="dir_000018_000011.html" title="2" alt="" coords="504,113,513,128"/>
-<area shape="rect" id="node9" href="dir_e7ce32aeeb928923d1462842b69c3a0e.html" title="timer" alt="" coords="219,27,291,75"/>
-<area shape="rect" id="edge8-headlabel" href="dir_000024_000011.html" title="73" alt="" coords="498,123,516,138"/>
-<area shape="rect" id="node10" href="dir_76fe44c6ca20bab07ba4bcccb4a1a186.html" title="uart" alt="" coords="123,27,195,75"/>
-<area shape="rect" id="edge9-headlabel" href="dir_000029_000011.html" title="3" alt="" coords="502,128,511,142"/>
-<area shape="rect" id="node11" href="dir_3b6283f0b2293a623dfa8ab8fc5e9db4.html" title="wdt" alt="" coords="27,27,99,75"/>
-<area shape="rect" id="edge10-headlabel" href="dir_000031_000011.html" title="7" alt="" coords="501,130,510,145"/>
-<area shape="rect" id="clust1" href="dir_d28a4824dc47e487b107a5db32ef43c4.html" alt="" coords="16,16,1192,85"/>
+<area shape="rect" id="node2" href="dir_cfcc1510566ad3deac88d4f5f34ac519.html" title="bits" alt="" coords="1156,27,1228,75"/>
+<area shape="rect" id="node13" href="dir_d44c64559bbebec7f509842c48db8b23.html" title="include" alt="" coords="603,123,675,171"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000005_000011.html" title="2" alt="" coords="689,143,698,158"/>
+<area shape="rect" id="node3" href="dir_3d912f430f8f20417cc587910e4b8eb6.html" title="chip_id" alt="" coords="1060,27,1132,75"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000006_000011.html" title="2" alt="" coords="689,146,698,161"/>
+<area shape="rect" id="node4" href="dir_a077256fa57d221b8243921f3a5dc181.html" title="delay" alt="" coords="964,27,1036,75"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000008_000011.html" title="2" alt="" coords="689,143,698,158"/>
+<area shape="rect" id="node5" href="dir_022c70a4c242b590c6b5b9f5062478fb.html" title="frequency" alt="" coords="853,27,939,75"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000010_000011.html" title="6" alt="" coords="690,134,699,149"/>
+<area shape="rect" id="node6" href="dir_c1db52a656d3093099d376eb28786d44.html" title="interrupt" alt="" coords="750,27,829,75"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000012_000011.html" title="3" alt="" coords="690,115,700,129"/>
+<area shape="rect" id="node7" href="dir_7a336d219b38a61a3a5a67c2533344af.html" title="memory_dumper" alt="" coords="591,27,726,75"/>
+<area shape="rect" id="node8" href="dir_b1f420cbc16285bdb739e86a837de2c8.html" title="power_management" alt="" coords="411,27,567,75"/>
+<area shape="rect" id="edge6-headlabel" href="dir_000018_000011.html" title="6" alt="" coords="587,99,596,113"/>
+<area shape="rect" id="node9" href="dir_f5d028e692faabaaf12586e002fe5fd6.html" title="reset" alt="" coords="315,27,387,75"/>
+<area shape="rect" id="edge7-headlabel" href="dir_000019_000011.html" title="2" alt="" coords="581,122,591,136"/>
+<area shape="rect" id="node10" href="dir_e7ce32aeeb928923d1462842b69c3a0e.html" title="timer" alt="" coords="219,27,291,75"/>
+<area shape="rect" id="edge8-headlabel" href="dir_000025_000011.html" title="73" alt="" coords="576,127,594,142"/>
+<area shape="rect" id="node11" href="dir_76fe44c6ca20bab07ba4bcccb4a1a186.html" title="uart" alt="" coords="123,27,195,75"/>
+<area shape="rect" id="edge9-headlabel" href="dir_000030_000011.html" title="3" alt="" coords="580,130,589,145"/>
+<area shape="rect" id="node12" href="dir_3b6283f0b2293a623dfa8ab8fc5e9db4.html" title="wdt" alt="" coords="27,27,99,75"/>
+<area shape="rect" id="edge10-headlabel" href="dir_000032_000011.html" title="7" alt="" coords="580,127,589,141"/>
+<area shape="rect" id="clust1" href="dir_d28a4824dc47e487b107a5db32ef43c4.html" alt="" coords="16,16,1351,85"/>
 </map>

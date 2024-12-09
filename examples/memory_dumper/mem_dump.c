@@ -1,3 +1,8 @@
+/**
+ * Dump memory from 0x00 to 0xFF to UART
+ * 
+ * UART baud rate is 115200 
+ */
 #include <stdint.h>
 #include <stdlib.h>
 
@@ -8,6 +13,7 @@
 
 #define ROW_LENGTH 16
 
+/** Dont clear memory */
 void _mcs51_genRAMCLEAR() {}
 
 void hex_to_string(uint8_t hex, char str_buffer[3])
