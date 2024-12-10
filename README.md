@@ -72,14 +72,14 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 
 Next releases todo
 * TODO Implement WakeUp timer
+* TODO Implement times to ticks part of aux module
 * TODO Docs should be included to platformio package
 * TODO Compile examples as a step of build 
 * TODO Optimize and refactor is_... ..._enabled(enable) routines
 * TODO Describe wrapping to function technique for multiple macro decl calls  
 * TODO Enhance description of project for indexing in google/yandex and so on search engines
-* TODO Implement times to ticks part of aux module
 * TODO Add example links to module documentation 
-* TODO Implements counters
+* TODO Implement counters
 * TODO Optimize timer2 baud rate calculation. Use precalculated array of baudrates
 * TODO Implement P5.4 as MCU reset source
 
