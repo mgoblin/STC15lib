@@ -2,8 +2,9 @@
 
 void wakeup_timer_init(uint16_t ticks)
 {
-    WKTCH = (ticks >> 8) & 0x7f;
-    WKTCL = 0x01;
+    uint16_t value = 32768 - (ticks & 0x7fff);
+    WKTCH = value >> 8;
+    WKTCL = value & 0xff;
 }
 
 void wakeup_timer_start()
@@ -18,5 +19,5 @@ void wakeup_timer_stop()
 
 bool is_wakeup_timer_started()
 {
-    return test_if_any_bit_set(WKTCH, SBIT7);
+    return test_if_bit_set(WKTCH, SBIT7);
 }
