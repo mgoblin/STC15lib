@@ -71,7 +71,6 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 * 
 
 Next releases todo
-* TODO powerdown_example.c Describe time to ticks formula
 * TODO Implement WakeUp timer
 * TODO Docs should be included to platformio package
 * TODO Compile examples as a step of build 

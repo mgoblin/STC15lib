@@ -1,7 +1,6 @@
 #include <power_management.h>
 
 #define WIRC_H_ADDRESS 0xf8
-
 #define WIRC_L_ADDRESS 0xf9
 
 void wakeup_timer_init(uint16_t ticks)

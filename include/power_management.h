@@ -45,8 +45,37 @@
     __asm__("nop");             \
 }
 
+/**
+ * @brief Init and run wakeup timer
+ * @details 
+ * Wakeup time is calculated as (10^6/wakeup_timer_internal_clock_frequency) * 16 * ticks
+ * 
+ * @see wakeup_timer_internal_clk_freq()
+ * 
+ * @param ticks uint16_t wakeup timer ticks count
+ * 
+ * @ingroup power_management
+ */
 void wakeup_timer_init(uint16_t ticks);
 
+/**
+ * @brief Get wakeup timer internal clock frequency
+ * 
+ * @details wakeup timer internal clock frequency after MCU powerup is placed
+ * in RAM __idata 0xf8-0xf9 adresses. 
+ * 
+ * By default SDCC compiler generate firmware part that before main() call
+ * clear RAM and 0xf8-0xf9 contains 0x00 values.
+ * 
+ * To avoid memory clearing implement empty   
+ * void _mcs51_genRAMCLEAR() {} routine. Otherwise routine call return result 0x00.
+ * 
+ * Default value is 0x8c0a = 35850Hz.
+ * 
+ * @return uint16_t wakeup timer internal clock frequency from 0xf8-0xf9 RAM 
+ * 
+ * @ingroup power_management
+ */
 uint16_t wakeup_timer_internal_clk_freq();
 
 #endif

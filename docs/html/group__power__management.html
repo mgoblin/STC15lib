@@ -63,7 +63,8 @@ $(function() {
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Power management</div></div>
 </div><!--header-->
 <div class="contents">
@@ -76,6 +77,15 @@ Macros</h2></td></tr>
 <tr class="memitem:ga1e0d38ad57d2078db65a84e857f5e5b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#ga1e0d38ad57d2078db65a84e857f5e5b6">power_down</a>()</td></tr>
 <tr class="memdesc:ga1e0d38ad57d2078db65a84e857f5e5b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MCU power down mode.  <a href="group__power__management.html#ga1e0d38ad57d2078db65a84e857f5e5b6">More...</a><br /></td></tr>
 <tr class="separator:ga1e0d38ad57d2078db65a84e857f5e5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gad065f706bff0883cb08354bdfe211cdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#gad065f706bff0883cb08354bdfe211cdf">wakeup_timer_init</a> (uint16_t ticks)</td></tr>
+<tr class="memdesc:gad065f706bff0883cb08354bdfe211cdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init and run wakeup timer.  <a href="group__power__management.html#gad065f706bff0883cb08354bdfe211cdf">More...</a><br /></td></tr>
+<tr class="separator:gad065f706bff0883cb08354bdfe211cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga337c44a8acbd7295f76bb63226b3feab"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#ga337c44a8acbd7295f76bb63226b3feab">wakeup_timer_internal_clk_freq</a> ()</td></tr>
+<tr class="memdesc:ga337c44a8acbd7295f76bb63226b3feab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wakeup timer internal clock frequency.  <a href="group__power__management.html#ga337c44a8acbd7295f76bb63226b3feab">More...</a><br /></td></tr>
+<tr class="separator:ga337c44a8acbd7295f76bb63226b3feab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures related for MCU power management </p><dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
@@ -124,6 +134,60 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Set MCU power down mode. </p>
 <p >In the Stop/Power-Down mode, the on-chip oscillator and the Flash memory are stopped in order to minimize power consumption. Only the power-on circuitry will continue to draw power during Stop/Power-Down. The contents of on-chip RAM and SFRs are maintained. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gad065f706bff0883cb08354bdfe211cdf" name="gad065f706bff0883cb08354bdfe211cdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad065f706bff0883cb08354bdfe211cdf">&#9670;&nbsp;</a></span>wakeup_timer_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wakeup_timer_init </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>ticks</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Init and run wakeup timer. </p>
+<p >Wakeup time is calculated as (10^6/wakeup_timer_internal_clock_frequency) * 16 * ticks</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__power__management.html#ga337c44a8acbd7295f76bb63226b3feab" title="Get wakeup timer internal clock frequency.">wakeup_timer_internal_clk_freq()</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ticks</td><td>uint16_t wakeup timer ticks count </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga337c44a8acbd7295f76bb63226b3feab" name="ga337c44a8acbd7295f76bb63226b3feab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga337c44a8acbd7295f76bb63226b3feab">&#9670;&nbsp;</a></span>wakeup_timer_internal_clk_freq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t wakeup_timer_internal_clk_freq </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get wakeup timer internal clock frequency. </p>
+<p >wakeup timer internal clock frequency after MCU powerup is placed in RAM __idata 0xf8-0xf9 adresses.</p>
+<p >By default SDCC compiler generate firmware part that before main() call clear RAM and 0xf8-0xf9 contains 0x00 values.</p>
+<p >To avoid memory clearing implement empty <br  />
+ void _mcs51_genRAMCLEAR() {} routine. Otherwise routine call return result 0x00.</p>
+<p >Default value is 0x8c0a = 35850Hz.</p>
+<dl class="section return"><dt>Returns</dt><dd>uint16_t wakeup timer internal clock frequency from 0xf8-0xf9 RAM </dd></dl>
 
 </div>
 </div>
