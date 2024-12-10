@@ -1,23 +1,18 @@
 #include <power_management.h>
 
+#define WIRC_H_ADDRESS 0xf8
+
+#define WIRC_L_ADDRESS 0xf9
+
 void wakeup_timer_init(uint16_t ticks)
 {
-    uint16_t value = 32768 - (ticks & 0x7fff);
-    WKTCH = value >> 8;
-    WKTCL = value & 0xff;
+    WKTCH = (ticks >> 8) | 0x80;
+    WKTCL = ticks & 0xff;
 }
 
-void wakeup_timer_start()
+uint16_t wakeup_timer_internal_clk_freq()
 {
-    bit_set(WKTCH, SBIT7);
-}
-
-void wakeup_timer_stop()
-{
-    bit_clr(WKTCH, CBIT7);
-}
-
-bool is_wakeup_timer_started()
-{
-    return test_if_bit_set(WKTCH, SBIT7);
+    volatile __idata uint8_t * const wirc_h_ptr = (__idata uint8_t *) WIRC_H_ADDRESS;
+    volatile __idata uint8_t * const wirc_l_ptr = (__idata uint8_t *) WIRC_L_ADDRESS;
+    return ((uint16_t)*wirc_h_ptr << 8) | *wirc_l_ptr;
 }

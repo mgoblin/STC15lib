@@ -46,8 +46,7 @@
 }
 
 void wakeup_timer_init(uint16_t ticks);
-void wakeup_timer_start();
-void wakeup_timer_stop();
-bool is_wakeup_timer_started();
+
+uint16_t wakeup_timer_internal_clk_freq();
 
 #endif

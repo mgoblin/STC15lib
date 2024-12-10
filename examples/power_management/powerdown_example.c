@@ -1,31 +1,35 @@
+/**
+ * Power down and wakeup timer example
+ * 
+ * Init wakeup timer and in cycle power down and change LED state.
+ * As a result LED is blinking. Frequency of blinking is depends on WAKEUP_TIMER_TICKS value.
+ * 
+ * Second part of example demostrate reading wakeup timer internal frequency.
+ * The frequency uint16_t value is available in RAM on 0xf8 and 0xf9 addresses
+ * SDCC compiler before call main() method clear all RAM bytes. To avoid RAM clearing by 
+ * SDCC compiler _mcs51_genRAMCLEAR() implemented as empty routine.
+ */
 #include <power_management.h>
 
-#include <delay.h>
-
+#include <uart.h>
+#include <stdio.h>
 
 #define LED P10
-#define OFF 1
-#define ON 0
+#define WAKEUP_TIMER_TICKS 0x07ff
 
-/** Dont clear memory */
 void _mcs51_genRAMCLEAR() {}
-
-
-void delay(uint16_t ms)
-{
-    delay_ms(ms);
-}
 
 void main()
 {
-   delay(250);
-   LED = ON;
-    
-   delay(250);
-   LED = OFF;
+    uart1_init(9600);
 
-    wakeup_timer_init(0xffff);
-    wakeup_timer_start();
+    wakeup_timer_init(WAKEUP_TIMER_TICKS);
 
-    power_down();
+    while(1)
+    {
+        power_down();
+        LED = !LED;
+
+        printf_tiny("Wakeup freq %uHz\n", wakeup_timer_internal_clk_freq());
+    }
 }
