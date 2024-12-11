@@ -81,8 +81,15 @@ $(function() {
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="group__timer__to__ms.html#ga04bab4b7d5d973413e6933044bdd9865">   69</a></span><span class="preprocessor">#define timer_ticks_to_ms_usafe(ticks, timer_divider, frequency_divider_scale) (((1UL + (uint32_t)ticks) / ((get_master_clock_frequency_high_part() / timer_divider) &gt;&gt; frequency_divider_scale)))</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">// 1T mode timer0 mode0 - ticks = time * SysClk - 1</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">// for 0.1 ms (10^-3) = get_master_clock_frequency_high_part()/10 - 1 = 11059 - 1 = 11058 = 0x2b32</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">// measurement is 0x2b4d, delta = 27</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">// get_master_clock_frequency_high_part()/10 + 26</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>uint16_t timer_ms_to_ticks(uint16_t ms, <a class="code hl_enumeration" href="group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a> timer_clock_divider);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="afrequency_8h_html"><div class="ttname"><a href="frequency_8h.html">frequency.h</a></div></div>
+<div class="ttc" id="agroup__timer__common_html_gaf044d39b4f1cbe40ca04353b2852a21d"><div class="ttname"><a href="group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a></div><div class="ttdeci">timer_clock_divider_t</div><div class="ttdoc">Timer clock divider values enum.</div><div class="ttdef"><b>Definition:</b> timer_structs.h:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
