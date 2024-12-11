@@ -56,7 +56,12 @@
  * 
  * @ingroup power_management
  */
-void wakeup_timer_init(uint16_t ticks);
+#define wakeup_timer_init(ticks)                        \
+{                                                       \
+    WKTCH = (ticks >> 8) | 0x80;                        \
+    WKTCL = ticks & 0xff;                               \
+}
+//void wakeup_timer_init(uint16_t ticks);
 
 /**
  * @brief Get wakeup timer internal clock frequency

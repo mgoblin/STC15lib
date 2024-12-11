@@ -3,12 +3,6 @@
 #define WIRC_H_ADDRESS 0xf8
 #define WIRC_L_ADDRESS 0xf9
 
-void wakeup_timer_init(uint16_t ticks)
-{
-    WKTCH = (ticks >> 8) | 0x80;
-    WKTCL = ticks & 0xff;
-}
-
 uint16_t wakeup_timer_internal_clk_freq()
 {
     volatile __idata uint8_t * const wirc_h_ptr = (__idata uint8_t *) WIRC_H_ADDRESS;

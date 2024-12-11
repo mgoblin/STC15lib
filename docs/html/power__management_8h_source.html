@@ -87,13 +87,17 @@ $(function() {
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    __asm__(&quot;nop&quot;);             \</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__power__management.html#gad065f706bff0883cb08354bdfe211cdf">wakeup_timer_init</a>(uint16_t ticks);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>uint16_t <a class="code hl_function" href="group__power__management.html#ga337c44a8acbd7295f76bb63226b3feab">wakeup_timer_internal_clk_freq</a>();</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="group__power__management.html#gadd59513e05eeefc7f94d3b4d47993c9e">   59</a></span><span class="preprocessor">#define wakeup_timer_init(ticks)                        \</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">{                                                       \</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">    WKTCH = (ticks &gt;&gt; 8) | 0x80;                        \</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">    WKTCL = ticks &amp; 0xff;                               \</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">//void wakeup_timer_init(uint16_t ticks);</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>uint16_t <a class="code hl_function" href="group__power__management.html#ga337c44a8acbd7295f76bb63226b3feab">wakeup_timer_internal_clk_freq</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="agroup__power__management_html_ga337c44a8acbd7295f76bb63226b3feab"><div class="ttname"><a href="group__power__management.html#ga337c44a8acbd7295f76bb63226b3feab">wakeup_timer_internal_clk_freq</a></div><div class="ttdeci">uint16_t wakeup_timer_internal_clk_freq()</div><div class="ttdoc">Get wakeup timer internal clock frequency.</div><div class="ttdef"><b>Definition:</b> power_management.c:12</div></div>
-<div class="ttc" id="agroup__power__management_html_gad065f706bff0883cb08354bdfe211cdf"><div class="ttname"><a href="group__power__management.html#gad065f706bff0883cb08354bdfe211cdf">wakeup_timer_init</a></div><div class="ttdeci">void wakeup_timer_init(uint16_t ticks)</div><div class="ttdoc">Init and run wakeup timer.</div><div class="ttdef"><b>Definition:</b> power_management.c:6</div></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
