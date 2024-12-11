@@ -77,27 +77,33 @@ $(function() {
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="group__power__management.html#ga89e1b35bd6cbaf15cc0d33631acac076">   29</a></span><span class="preprocessor">#define idle() (bit_set(PCON, SBIT0))</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="group__power__management.html#gacae7914e25fb794eb0d55b0162f8f8f6">   22</a></span><span class="preprocessor">#define WIRC_H_ADDRESS 0xf8</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="group__power__management.html#ga82e21440e9b642907b03b4f1d111ca7b">   29</a></span><span class="preprocessor">#define WIRC_L_ADDRESS 0xf9</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="group__power__management.html#ga1e0d38ad57d2078db65a84e857f5e5b6">   40</a></span><span class="preprocessor">#define power_down()            \</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">{                               \</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">    bit_set(PCON, SBIT1);       \</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">    __asm__(&quot;nop&quot;</span>);             \</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    __asm__(&quot;nop&quot;);             \</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    __asm__(&quot;nop&quot;);             \</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="group__power__management.html#gadd59513e05eeefc7f94d3b4d47993c9e">   59</a></span><span class="preprocessor">#define wakeup_timer_init(ticks)                        \</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">{                                                       \</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">    WKTCH = (ticks &gt;&gt; 8) | 0x80;                        \</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">    WKTCL = ticks &amp; 0xff;                               \</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">}</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">//void wakeup_timer_init(uint16_t ticks);</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>uint16_t <a class="code hl_function" href="group__power__management.html#ga337c44a8acbd7295f76bb63226b3feab">wakeup_timer_internal_clk_freq</a>();</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="agroup__power__management_html_ga337c44a8acbd7295f76bb63226b3feab"><div class="ttname"><a href="group__power__management.html#ga337c44a8acbd7295f76bb63226b3feab">wakeup_timer_internal_clk_freq</a></div><div class="ttdeci">uint16_t wakeup_timer_internal_clk_freq()</div><div class="ttdoc">Get wakeup timer internal clock frequency.</div><div class="ttdef"><b>Definition:</b> power_management.c:12</div></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="group__power__management.html#ga89e1b35bd6cbaf15cc0d33631acac076">   43</a></span><span class="preprocessor">#define idle() (bit_set(PCON, SBIT0))</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="group__power__management.html#ga1e0d38ad57d2078db65a84e857f5e5b6">   54</a></span><span class="preprocessor">#define power_down()            \</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">{                               \</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">    bit_set(PCON, SBIT1);       \</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">    __asm__(&quot;nop&quot;</span>);             \</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    __asm__(&quot;nop&quot;);             \</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    __asm__(&quot;nop&quot;);             \</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="group__power__management.html#gadd59513e05eeefc7f94d3b4d47993c9e">   73</a></span><span class="preprocessor">#define wakeup_timer_init(ticks)                        \</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">{                                                       \</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">    WKTCH = (ticks &gt;&gt; 8) | 0x80;                        \</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">    WKTCL = ticks &amp; 0xff;                               \</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">static</span> <span class="keyword">volatile</span> __idata uint8_t * <span class="keyword">const</span> wirc_h_ptr = (__idata uint8_t *) <a class="code hl_define" href="group__power__management.html#gacae7914e25fb794eb0d55b0162f8f8f6">WIRC_H_ADDRESS</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keyword">static</span> <span class="keyword">volatile</span> __idata uint8_t * <span class="keyword">const</span> wirc_l_ptr = (__idata uint8_t *) <a class="code hl_define" href="group__power__management.html#ga82e21440e9b642907b03b4f1d111ca7b">WIRC_L_ADDRESS</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="group__power__management.html#ga91ea0552ad4f4846e01e2ae59adce627">   99</a></span><span class="preprocessor">#define wakeup_timer_internal_clk_freq() (((uint16_t)*wirc_h_ptr &lt;&lt; 8) | *wirc_l_ptr)</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__power__management_html_ga82e21440e9b642907b03b4f1d111ca7b"><div class="ttname"><a href="group__power__management.html#ga82e21440e9b642907b03b4f1d111ca7b">WIRC_L_ADDRESS</a></div><div class="ttdeci">#define WIRC_L_ADDRESS</div><div class="ttdoc">Wakeup timer internal clock frequency value low byte address.</div><div class="ttdef"><b>Definition:</b> power_management.h:29</div></div>
+<div class="ttc" id="agroup__power__management_html_gacae7914e25fb794eb0d55b0162f8f8f6"><div class="ttname"><a href="group__power__management.html#gacae7914e25fb794eb0d55b0162f8f8f6">WIRC_H_ADDRESS</a></div><div class="ttdeci">#define WIRC_H_ADDRESS</div><div class="ttdoc">Wakeup timer internal clock frequency value high byte address.</div><div class="ttdef"><b>Definition:</b> power_management.h:22</div></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

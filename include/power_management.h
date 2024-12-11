@@ -15,6 +15,20 @@
 #include <stdbool.h>
 
 /**
+ * @brief Wakeup timer internal clock frequency value high byte address
+ * 
+ * @ingroup power_management
+ */
+#define WIRC_H_ADDRESS 0xf8
+
+/**
+ * @brief Wakeup timer internal clock frequency value low byte address
+ * 
+ * @ingroup power_management
+ */
+#define WIRC_L_ADDRESS 0xf9
+
+/**
  * @brief Set MCU idle mode
  * @details Shuts off 
  * clock to CPU, but clock to Timers, Interrupts, Serial Ports, and 
@@ -61,8 +75,9 @@
     WKTCH = (ticks >> 8) | 0x80;                        \
     WKTCL = ticks & 0xff;                               \
 }
-//void wakeup_timer_init(uint16_t ticks);
 
+static volatile __idata uint8_t * const wirc_h_ptr = (__idata uint8_t *) WIRC_H_ADDRESS;
+static volatile __idata uint8_t * const wirc_l_ptr = (__idata uint8_t *) WIRC_L_ADDRESS;
 /**
  * @brief Get wakeup timer internal clock frequency
  * 
@@ -81,6 +96,6 @@
  * 
  * @ingroup power_management
  */
-uint16_t wakeup_timer_internal_clk_freq();
+#define wakeup_timer_internal_clk_freq() (((uint16_t)*wirc_h_ptr << 8) | *wirc_l_ptr)
 
 #endif

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['wakeup_5ftimer_5finit_0',['wakeup_timer_init',['../group__power__management.html#gadd59513e05eeefc7f94d3b4d47993c9e',1,'power_management.h']]],
-  ['wakeup_5ftimer_5finternal_5fclk_5ffreq_1',['wakeup_timer_internal_clk_freq',['../group__power__management.html#ga337c44a8acbd7295f76bb63226b3feab',1,'wakeup_timer_internal_clk_freq():&#160;power_management.c'],['../group__power__management.html#ga337c44a8acbd7295f76bb63226b3feab',1,'wakeup_timer_internal_clk_freq():&#160;power_management.c']]],
+  ['wakeup_5ftimer_5finternal_5fclk_5ffreq_1',['wakeup_timer_internal_clk_freq',['../group__power__management.html#ga91ea0552ad4f4846e01e2ae59adce627',1,'power_management.h']]],
   ['watchdog_20timer_2',['Watchdog timer',['../group__wdt.html',1,'']]],
   ['wdt_2eh_3',['wdt.h',['../wdt_8h.html',1,'']]],
   ['wdt_5fclear_4',['wdt_clear',['../group__wdt.html#ga355eee3da94d468a19c60aa13744567e',1,'wdt.h']]],
@@ -10,5 +10,7 @@ var searchData=
   ['wdt_5fflag_5freset_7',['wdt_flag_reset',['../group__wdt.html#gaa3751ab04e7763af22c69382f8966264',1,'wdt.h']]],
   ['wdt_5finit_8',['wdt_init',['../group__wdt.html#ga4b2fd1f627e92c1af1acf116abc95180',1,'wdt.h']]],
   ['wdt_5fstart_9',['wdt_start',['../group__wdt.html#ga1ff5051835023e879151f4a8df3504e0',1,'wdt.h']]],
-  ['wdt_5fstop_10',['wdt_stop',['../group__wdt.html#ga27cbee9012a32bab0784e5d7a7c4d713',1,'wdt.h']]]
+  ['wdt_5fstop_10',['wdt_stop',['../group__wdt.html#ga27cbee9012a32bab0784e5d7a7c4d713',1,'wdt.h']]],
+  ['wirc_5fh_5faddress_11',['WIRC_H_ADDRESS',['../group__power__management.html#gacae7914e25fb794eb0d55b0162f8f8f6',1,'power_management.h']]],
+  ['wirc_5fl_5faddress_12',['WIRC_L_ADDRESS',['../group__power__management.html#ga82e21440e9b642907b03b4f1d111ca7b',1,'power_management.h']]]
 ];

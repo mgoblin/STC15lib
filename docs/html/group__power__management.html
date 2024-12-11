@@ -63,14 +63,21 @@ $(function() {
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">Power management</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:gacae7914e25fb794eb0d55b0162f8f8f6"><td class="memItemLeft" align="right" valign="top"><a id="gacae7914e25fb794eb0d55b0162f8f8f6" name="gacae7914e25fb794eb0d55b0162f8f8f6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIRC_H_ADDRESS</b>&#160;&#160;&#160;0xf8</td></tr>
+<tr class="memdesc:gacae7914e25fb794eb0d55b0162f8f8f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wakeup timer internal clock frequency value high byte address. <br /></td></tr>
+<tr class="separator:gacae7914e25fb794eb0d55b0162f8f8f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga82e21440e9b642907b03b4f1d111ca7b"><td class="memItemLeft" align="right" valign="top"><a id="ga82e21440e9b642907b03b4f1d111ca7b" name="ga82e21440e9b642907b03b4f1d111ca7b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIRC_L_ADDRESS</b>&#160;&#160;&#160;0xf9</td></tr>
+<tr class="memdesc:ga82e21440e9b642907b03b4f1d111ca7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wakeup timer internal clock frequency value low byte address. <br /></td></tr>
+<tr class="separator:ga82e21440e9b642907b03b4f1d111ca7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga89e1b35bd6cbaf15cc0d33631acac076"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#ga89e1b35bd6cbaf15cc0d33631acac076">idle</a>()&#160;&#160;&#160;(bit_set(PCON, SBIT0))</td></tr>
 <tr class="memdesc:ga89e1b35bd6cbaf15cc0d33631acac076"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MCU idle mode.  <a href="group__power__management.html#ga89e1b35bd6cbaf15cc0d33631acac076">More...</a><br /></td></tr>
 <tr class="separator:ga89e1b35bd6cbaf15cc0d33631acac076"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -80,12 +87,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gadd59513e05eeefc7f94d3b4d47993c9e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#gadd59513e05eeefc7f94d3b4d47993c9e">wakeup_timer_init</a>(ticks)</td></tr>
 <tr class="memdesc:gadd59513e05eeefc7f94d3b4d47993c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init and run wakeup timer.  <a href="group__power__management.html#gadd59513e05eeefc7f94d3b4d47993c9e">More...</a><br /></td></tr>
 <tr class="separator:gadd59513e05eeefc7f94d3b4d47993c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ga337c44a8acbd7295f76bb63226b3feab"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#ga337c44a8acbd7295f76bb63226b3feab">wakeup_timer_internal_clk_freq</a> ()</td></tr>
-<tr class="memdesc:ga337c44a8acbd7295f76bb63226b3feab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wakeup timer internal clock frequency.  <a href="group__power__management.html#ga337c44a8acbd7295f76bb63226b3feab">More...</a><br /></td></tr>
-<tr class="separator:ga337c44a8acbd7295f76bb63226b3feab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga91ea0552ad4f4846e01e2ae59adce627"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#ga91ea0552ad4f4846e01e2ae59adce627">wakeup_timer_internal_clk_freq</a>()&#160;&#160;&#160;(((uint16_t)*wirc_h_ptr &lt;&lt; 8) | *wirc_l_ptr)</td></tr>
+<tr class="memdesc:ga91ea0552ad4f4846e01e2ae59adce627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wakeup timer internal clock frequency.  <a href="group__power__management.html#ga91ea0552ad4f4846e01e2ae59adce627">More...</a><br /></td></tr>
+<tr class="separator:ga91ea0552ad4f4846e01e2ae59adce627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures related for MCU power management </p><dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
@@ -159,7 +163,7 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 <p>Init and run wakeup timer. </p>
 <p >Wakeup time is calculated as (10^6/wakeup_timer_internal_clock_frequency) * 16 * ticks</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__power__management.html#ga337c44a8acbd7295f76bb63226b3feab" title="Get wakeup timer internal clock frequency.">wakeup_timer_internal_clk_freq()</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__power__management.html#ga91ea0552ad4f4846e01e2ae59adce627" title="Get wakeup timer internal clock frequency.">wakeup_timer_internal_clk_freq()</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ticks</td><td>uint16_t wakeup timer ticks count </td></tr>
@@ -169,18 +173,17 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ga337c44a8acbd7295f76bb63226b3feab" name="ga337c44a8acbd7295f76bb63226b3feab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga337c44a8acbd7295f76bb63226b3feab">&#9670;&nbsp;</a></span>wakeup_timer_internal_clk_freq()</h2>
+<a id="ga91ea0552ad4f4846e01e2ae59adce627" name="ga91ea0552ad4f4846e01e2ae59adce627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga91ea0552ad4f4846e01e2ae59adce627">&#9670;&nbsp;</a></span>wakeup_timer_internal_clk_freq</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t wakeup_timer_internal_clk_freq </td>
+          <td class="memname">#define wakeup_timer_internal_clk_freq</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td>&#160;&#160;&#160;(((uint16_t)*wirc_h_ptr &lt;&lt; 8) | *wirc_l_ptr)</td>
         </tr>
       </table>
 </div><div class="memdoc">

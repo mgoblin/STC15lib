@@ -68,10 +68,9 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 
 0.8
 * Add memory dump example
-* 
+* WakeUp timer implemented
 
 Next releases todo
-* TODO Implement WakeUp timer
 * TODO Implement times to ticks part of aux module
 * TODO Docs should be included to platformio package
 * TODO Compile examples as a step of build 
