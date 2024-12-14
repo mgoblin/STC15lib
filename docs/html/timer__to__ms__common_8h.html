@@ -67,8 +67,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">timer_to_ms_common.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -115,12 +114,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga04bab4b7d5d973413e6933044bdd9865"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#ga04bab4b7d5d973413e6933044bdd9865">timer_ticks_to_ms_usafe</a>(ticks,  timer_divider,  frequency_divider_scale)&#160;&#160;&#160;(((1UL + (uint32_t)ticks) / ((<a class="el" href="group__freq.html#ga2c1fe9860e17f13e1bcc3f5c46d420c8">get_master_clock_frequency_high_part</a>() / timer_divider) &gt;&gt; frequency_divider_scale)))</td></tr>
 <tr class="memdesc:ga04bab4b7d5d973413e6933044bdd9865"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert ticks count to ms.  <a href="group__timer__to__ms.html#ga04bab4b7d5d973413e6933044bdd9865">More...</a><br /></td></tr>
 <tr class="separator:ga04bab4b7d5d973413e6933044bdd9865"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:gab094675112fd2b0c411fa7cd881c648a"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#gab094675112fd2b0c411fa7cd881c648a">timer_ms_to_ticks_usafe</a> (uint16_t ms, <a class="el" href="group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a> timer_clock_divider)</td></tr>
-<tr class="memdesc:gab094675112fd2b0c411fa7cd881c648a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert milliseconds to timer ticks.  <a href="group__timer__to__ms.html#gab094675112fd2b0c411fa7cd881c648a">More...</a><br /></td></tr>
-<tr class="separator:gab094675112fd2b0c411fa7cd881c648a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga57965a4fbee4f1ad9ca1ad75bf98fd38"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#ga57965a4fbee4f1ad9ca1ad75bf98fd38">timer_ms_to_ticks_usafe</a>(ms,  timer_clock_divider)&#160;&#160;&#160;(ms * ((<a class="el" href="group__freq.html#ga2c1fe9860e17f13e1bcc3f5c46d420c8">get_master_clock_frequency_high_part</a>() + 26) &gt;&gt; <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()) / timer_clock_divider)</td></tr>
+<tr class="memdesc:ga57965a4fbee4f1ad9ca1ad75bf98fd38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert milliseconds to timer ticks.  <a href="group__timer__to__ms.html#ga57965a4fbee4f1ad9ca1ad75bf98fd38">More...</a><br /></td></tr>
+<tr class="separator:ga57965a4fbee4f1ad9ca1ad75bf98fd38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
