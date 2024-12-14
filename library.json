@@ -21,6 +21,12 @@
     "homepage": "https://github.com/mgoblin/STC15lib",
     "dependencies": {
     },
+    "export": {
+      "include":
+      [
+        "docs/html/*"
+      ]
+    },
     "frameworks": "*",
     "platforms": "intel_mcs51"
   }
