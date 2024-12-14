@@ -69,13 +69,16 @@
 #define timer_ticks_to_ms_usafe(ticks, timer_divider, frequency_divider_scale) (((1UL + (uint32_t)ticks) / ((get_master_clock_frequency_high_part() / timer_divider) >> frequency_divider_scale)))
 
 // 1T mode timer0 mode0 - ticks = time * SysClk - 1
-// for 0.1 ms (10^-3) = get_master_clock_frequency_high_part()/10 - 1 = 11059 - 1 = 11058 = 0x2b32
+// for 1 ms (10^-3) = get_master_clock_frequency_high_part()/10 - 1 = 11059 - 1 = 11058 = 0x2b32
 // measurement is 0x2b4d, delta = 27
 // get_master_clock_frequency_high_part()/10 + 26
 
 /**
  * @brief Convert milliseconds to timer ticks.
- * @details
+ * @details 
+ * 1 ms = ((get_master_clock_frequency_high_part() + 26) >> get_frequency_divider_scale()) / timer_clock_divider
+ * 
+ * This routine doesnt check overflows. Its unsafe.
  * 
  * @param ms uint16_t ms to convert
  * @param timer_clock_divider timer clock divider
@@ -84,6 +87,6 @@
  * 
  * @ingroup timer_to_ms
  */
-uint16_t timer_ms_to_ticks(uint16_t ms, timer_clock_divider_t timer_clock_divider);
+uint16_t timer_ms_to_ticks_usafe(uint16_t ms, timer_clock_divider_t timer_clock_divider);
 
 #endif
