@@ -68,6 +68,22 @@
  */
 #define timer0_ticks_to_ms_usafe(ticks) (timer_ticks_to_ms_usafe(ticks, get_timer0_clock_divider(), get_frequency_divider_scale()))
 
+/**
+ * @brief Convert milliseconds to timer0 ticks.
+ * @details 
+ * 1 ms = ((get_master_clock_frequency_high_part() + 26) >> get_frequency_divider_scale()) / timer_clock_divider
+ * 
+ * This routine doesnt check overflows. Its unsafe.
+ * 
+ * @param ms uint16_t ms to convert
+ * 
+ * @return uint16_t ticks count for milliseconds
+ * 
+ * 
+ * @ingroup timer0_to_ms
+ */
+#define timer0_ms_to_ticks_usafe(ms) (timer_ms_to_ticks_usafe(ms, get_timer0_clock_divider()))
+
 ///@}
 
 #endif

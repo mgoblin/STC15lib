@@ -125,6 +125,22 @@
  */
 #define timer2_mode0_baudrate_to_ticks(uart_baudrate) ((get_master_clock_frequency() >> get_frequency_divider_scale())/4/uart_baudrate)
 
+/**
+ * @brief Convert milliseconds to timer2 ticks.
+ * @details 
+ * 1 ms = ((get_master_clock_frequency_high_part() + 26) >> get_frequency_divider_scale()) / timer_clock_divider
+ * 
+ * This routine doesnt check overflows. Its unsafe.
+ * 
+ * @param ms uint16_t ms to convert
+ * 
+ * @return uint16_t ticks count for milliseconds
+ * 
+ * 
+ * @ingroup timer0_to_ms
+ */
+#define timer2_ms_to_ticks_usafe(ms) (timer_ms_to_ticks_usafe(ms, get_timer2_clock_divider()))
+
 ///@}
 
 #endif

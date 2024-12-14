@@ -1,5 +1,5 @@
 #include <timer0_mode0.h>
-#include <timer_to_ms_common.h>
+#include <timer0_to_ms.h>
 
 #include <uart.h>
 #include <stdio.h>
@@ -15,7 +15,7 @@ void main()
     timer0_mode0_1T_init();
     timer0_mode0_enable_P35_output(true);
 
-    uint16_t ticks = timer_ms_to_ticks_usafe(3, T1);
+    uint16_t ticks = timer0_ms_to_ticks_usafe(3);
     timer0_mode0_start(ticks);   
     
     uart1_init(9600);

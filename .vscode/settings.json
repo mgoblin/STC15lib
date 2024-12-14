@@ -23,7 +23,8 @@
         "timer0_mode2.h": "c",
         "compare": "c",
         "compiler.h": "c",
-        "power_management.h": "c"
+        "power_management.h": "c",
+        "timer_to_ms_common.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
