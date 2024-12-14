@@ -63,7 +63,8 @@ $(function() {
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Timer Aux common</div></div>
 </div><!--header-->
 <div class="contents">
@@ -79,6 +80,12 @@ Macros</h2></td></tr>
 <tr class="memitem:ga04bab4b7d5d973413e6933044bdd9865"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#ga04bab4b7d5d973413e6933044bdd9865">timer_ticks_to_ms_usafe</a>(ticks,  timer_divider,  frequency_divider_scale)&#160;&#160;&#160;(((1UL + (uint32_t)ticks) / ((<a class="el" href="group__freq.html#ga2c1fe9860e17f13e1bcc3f5c46d420c8">get_master_clock_frequency_high_part</a>() / timer_divider) &gt;&gt; frequency_divider_scale)))</td></tr>
 <tr class="memdesc:ga04bab4b7d5d973413e6933044bdd9865"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert ticks count to ms.  <a href="group__timer__to__ms.html#ga04bab4b7d5d973413e6933044bdd9865">More...</a><br /></td></tr>
 <tr class="separator:ga04bab4b7d5d973413e6933044bdd9865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga5ab2b4bf0769213acddacbb4949e6570"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#ga5ab2b4bf0769213acddacbb4949e6570">timer_ms_to_ticks</a> (uint16_t ms, <a class="el" href="group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a> timer_clock_divider)</td></tr>
+<tr class="memdesc:ga5ab2b4bf0769213acddacbb4949e6570"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert milliseconds to timer ticks.  <a href="group__timer__to__ms.html#ga5ab2b4bf0769213acddacbb4949e6570">More...</a><br /></td></tr>
+<tr class="separator:ga5ab2b4bf0769213acddacbb4949e6570"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Functions and data structures for converting timer ticks to frequency and times for timers.</p>
@@ -223,6 +230,45 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>uint32_t frequency multiplied by 100 corresponding to ticks count </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga5ab2b4bf0769213acddacbb4949e6570" name="ga5ab2b4bf0769213acddacbb4949e6570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5ab2b4bf0769213acddacbb4949e6570">&#9670;&nbsp;</a></span>timer_ms_to_ticks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t timer_ms_to_ticks </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a>&#160;</td>
+          <td class="paramname"><em>timer_clock_divider</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert milliseconds to timer ticks. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ms</td><td>uint16_t ms to convert </td></tr>
+    <tr><td class="paramname">timer_clock_divider</td><td>timer clock divider</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>uint16_t ticks count for milliseconds </dd></dl>
 
 </div>
 </div>

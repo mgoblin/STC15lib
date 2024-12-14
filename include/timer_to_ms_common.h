@@ -72,6 +72,18 @@
 // for 0.1 ms (10^-3) = get_master_clock_frequency_high_part()/10 - 1 = 11059 - 1 = 11058 = 0x2b32
 // measurement is 0x2b4d, delta = 27
 // get_master_clock_frequency_high_part()/10 + 26
+
+/**
+ * @brief Convert milliseconds to timer ticks.
+ * @details
+ * 
+ * @param ms uint16_t ms to convert
+ * @param timer_clock_divider timer clock divider
+ * 
+ * @return uint16_t ticks count for milliseconds
+ * 
+ * @ingroup timer_to_ms
+ */
 uint16_t timer_ms_to_ticks(uint16_t ms, timer_clock_divider_t timer_clock_divider);
 
 #endif
