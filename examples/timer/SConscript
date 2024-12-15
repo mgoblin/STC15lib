@@ -1,3 +1,4 @@
 Import("env")
 
 SConscript('aux/SConscript', exports = 'env', variant_dir='timer')
+SConscript('common/SConscript', exports = 'env', variant_dir='timer/common')
