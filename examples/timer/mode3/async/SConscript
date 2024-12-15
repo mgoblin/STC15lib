@@ -1,0 +1,19 @@
+Import('env')
+
+env.Default(
+    env.Object(
+        source = 'timer0_mode3_1T_interrupt_example.c',
+        target = 'timer0_mode3_1T_interrupt_example.rel'
+    ),
+
+    env.Object(
+        source = 'timer0_mode3_pause_by_gate_example.c',
+        target = 'timer0_mode3_pause_by_gate_example.rel'
+    ),
+
+    env.Object(
+        source = 'timer0_mode3_reload_example.c',
+        target = 'timer0_mode3_reload_example.rel'
+    ),
+
+)
