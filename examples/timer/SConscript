@@ -1,0 +1,3 @@
+Import("env")
+
+SConscript('aux/SConscript', exports = 'env', variant_dir='timer')
