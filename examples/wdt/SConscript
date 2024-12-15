@@ -1,0 +1,19 @@
+Import('env')
+
+env.Default(
+    env.Object(
+        source = 'wdt_clear_example.c',
+        target = 'wdt_clear_example.rel'
+    ),
+
+    env.Object(
+        source = 'wdt_flag_example.c',
+        target = 'wdt_flag_example.rel'
+    ),
+
+    env.Object(
+        source = 'wdt_start_example.c',
+        target = 'wdt_start_example.rel'
+    ),
+
+)

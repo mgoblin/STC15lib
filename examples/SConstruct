@@ -36,3 +36,5 @@ SConscript('memory_dumper/SConscript', exports = 'env', variant_dir='build/memor
 SConscript('power_management/SConscript', exports = 'env', variant_dir='build/power_management')
 SConscript('reset/SConscript', exports = 'env', variant_dir='build/reset')
 SConscript('timer/SConscript', exports = 'env', variant_dir='build/timer')
+SConscript('uart/SConscript', exports = 'env', variant_dir='build/uart')
+SConscript('wdt/SConscript', exports = 'env', variant_dir='build/wdt')
