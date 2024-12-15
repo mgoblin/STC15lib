@@ -30,3 +30,6 @@ env.Append(
 SConscript('bits/SConscript', exports = 'env', variant_dir='build/bits')
 SConscript('chip_id/SConscript', exports = 'env', variant_dir='build/chip_id')
 SConscript('delay/SConscript', exports = 'env', variant_dir='build/delay')
+SConscript('frequency/SConscript', exports = 'env', variant_dir='build/frequency')
+SConscript('interrupt/SConscript', exports = 'env', variant_dir='build/interrupt')
+SConscript('memory_dumper/SConscript', exports = 'env', variant_dir='build/memory_dumper')
