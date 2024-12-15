@@ -1,0 +1,9 @@
+Import('env')
+
+env.Default(
+    env.Object(
+        source = 'timer0_mode2_12T_interrupt_example.c',
+        target = 'timer0_mode2_12T_interrupt_example.rel'
+    ),
+
+)
