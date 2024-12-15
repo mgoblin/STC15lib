@@ -1,29 +1,29 @@
-Import("env")
+Import('env')
 
-env.Default (
+env.Default(
     env.Object(
-        source = 'timer0_1T_freq_uint16_example.c', 
+        source = 'timer0_1T_freq_uint16_example.c',
         target = 'timer0_1T_freq_uint16_example.rel'
     ),
-
+    
     env.Object(
-        source = 'timer0_12T_freq_uint8_example.c', 
+        source = 'timer0_12T_freq_uint8_example.c',
         target = 'timer0_12T_freq_uint8_example.rel'
-    ),
+    ),    
 
     env.Object(
-        source = 'timer0_12T_freq_uint16_example.c', 
+        source = 'timer0_12T_freq_uint16_example.c',
         target = 'timer0_12T_freq_uint16_example.rel'
-    ),
+    ),  
 
     env.Object(
-        source = 'timer0_12T_ticks_example.c', 
-        target = 'timer0_12T_ticks_example.rel'
-    ),
+        source = 'timer0_12T_ticks_example.c',
+        target = 'timer0_12T_ticks_uint8_example.rel'
+    ),    
 
     env.Object(
-        source = 'timer0_ticks_to_ms_example.c', 
+        source = 'timer0_ticks_to_ms_example.c',
         target = 'timer0_ticks_to_ms_example.rel'
-    ),
+    ),    
 
 )
