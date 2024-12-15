@@ -1,0 +1,19 @@
+Import("env")
+
+env.Default (
+    env.Object(
+        source = 'timer2_12T_freq_uint16_example.c', 
+        target = 'timer2_12T_freq_uint16_example.rel'
+    ),
+
+    env.Object(
+        source = 'timer2_ticks_to_ms_example.c', 
+        target = 'timer2_ticks_to_ms_example.rel'
+    ),
+
+    env.Object(
+        source = 'timer2_uart_baud_rate_example.c', 
+        target = 'timer2_uart_baud_rate_example.rel'
+    ),
+
+)
