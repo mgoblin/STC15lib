@@ -74,9 +74,9 @@ This C-library contains code for interaction with STC15W408AS. STC15W408AS is a 
 
 Next releases todo
 * TODO Compile examples as a step of build 
+* TODO Enhance description of project for indexing in google/yandex and so on search engines
 * TODO Optimize and refactor is_... ..._enabled(enable) routines
 * TODO Describe wrapping to function technique for multiple macro decl calls  
-* TODO Enhance description of project for indexing in google/yandex and so on search engines
 * TODO Add example links to module documentation 
 * TODO Implement counters
 * TODO Optimize timer2 baud rate calculation. Use precalculated array of baudrates

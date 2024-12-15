@@ -1,0 +1,8 @@
+Import("env")
+
+env.Default (
+    env.Object(
+        source = Glob('*.c'), 
+        target = 'chip_id.rel'
+    )
+)
