@@ -6,8 +6,6 @@
  * @defgroup chip_id ChipID
  * @details Functions and data structures related to chip id
  * 
- * @example chip_id_example.c
- * 
  * @author Michael Golovanov
  */
 
@@ -32,8 +30,6 @@
  * @brief First byte of chip id in flash. 
  * 
  * @details Size of chip id is CHIP_ID_SIZE
- * 
- * Example: @include chip_id_example.c
  * 
  * @ingroup chip_id
  */

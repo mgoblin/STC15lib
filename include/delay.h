@@ -5,6 +5,7 @@
  * @file delay.h
  * @defgroup delays Delay
  * @details Functions and data structures related to delaying program flow
+ * 
  * @author Michael Golovanov
  */
 
@@ -12,7 +13,7 @@
 #include <frequency.h>
 
 /**
- * Ticks for 1ms delay
+ * @brief Ticks for 1ms delay
  * 
  * @ingroup delays 
  */

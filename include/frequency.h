@@ -6,6 +6,7 @@
  * @defgroup freq Frequency
  * @details Functions and data structures for get chip CPU frequency.
  * Chip CPU frequency defined in sys.h as a MAIN_Fosc constant. 
+ * 
  * @author Michael Golovanov
  */
 
@@ -14,16 +15,17 @@
 #include <bits.h>
 
 /**
- * Get MAIN_Fosc value
+ * @brief Get MAIN_Fosc value
  * 
  * @return MAIN_Fosc value
  * 
  * @ingroup freq
+ * 
  */
 #define get_master_clock_frequency() (MAIN_Fosc)
 
 /**
- * Get high part of MAIN_Fosc defined as MAIN_FoscH in sys.h
+ * @brief Get high part of MAIN_Fosc defined as MAIN_FoscH in sys.h
  * 
  * @return MAIN_FoscH
  * 
@@ -32,7 +34,7 @@
 #define get_master_clock_frequency_high_part() (MAIN_FoscH)
 
 /**
- * Get low part of MAIN_Fosc defined as MAIN_FoscL in sys.h
+ * @brief Get low part of MAIN_Fosc defined as MAIN_FoscL in sys.h
  * 
  * @return MAIN_FoscL
  * 
@@ -41,7 +43,7 @@
 #define get_master_clock_frequency_low_part() (MAIN_FoscL)
 
 /**
- * Get master clock frequency divider (1 << CLK_DIV bits [0..2])
+ * @brief Get master clock frequency divider (1 << CLK_DIV bits [0..2])
  * 
  * @return master clock frequency divider. Divider values range is from 1 to 128.
  * 
@@ -52,7 +54,7 @@
 #define get_frequency_divider() (1 << (CLK_DIV & 0x07))
 
 /**
- * Get master clock frequency divider scale (CLK_DIV bits [0..2])
+ * @brief Get master clock frequency divider scale (CLK_DIV bits [0..2])
  * 
  * @return master clock frequency divider scale. Divider scale range is from 0 to 7.
  * 
@@ -81,17 +83,17 @@
 }
 
 /**
- * Enable master clock output. By default output set to P5.4 pin.
+ * @brief Enable master clock output. By default output set to P5.4 pin.
  * 
  * @see disable_master_clock_output()
- * @see set_master_clock_output_pin(master_clock_output_pin pin)    
+ * @see set_master_clock_output_pin(master_clock_output_pin pin)  
  * 
  * @ingroup freq
  */
 #define enable_master_clock_output_div1() (CLK_DIV |= 0x40)
 
 /**
- * Enable (master clock output)/2. By default output set to P5.4 pin.
+ * @brief Enable (master clock output)/2. By default output set to P5.4 pin.
  * 
  * @see disable_master_clock_output()
  * @see set_master_clock_output_pin(master_clock_output_pin pin)    
@@ -101,7 +103,7 @@
 #define enable_master_clock_output_div2() (CLK_DIV |= 0x80)
 
 /**
- * Enable (master clock output)/4. By default output set to P5.4 pin.
+ * @brief Enable (master clock output)/4. By default output set to P5.4 pin.
  * 
  * @see disable_master_clock_output()
  * @see set_master_clock_output_pin(master_clock_output_pin pin)    
@@ -111,14 +113,20 @@
 #define enable_master_clock_output_div4() (CLK_DIV |= 0xC0)
 
 /**
- * Disable master clock output
+ * @brief Disable master clock output
+ * 
+ * @see enable_master_clock_output_div1() 
+ * @see enable_master_clock_output_div2()
+ * @see enable_master_clock_output_div4()  
  * 
  * @ingroup freq
  */
 #define disable_master_clock_output() (CLK_DIV &= 0x3f)
 
 /**
- * Master clock output pins enumeration
+ * @brief Master clock output pins enumeration
+ * 
+ * @ingroup freq
  */
 typedef enum 
 {
@@ -131,7 +139,7 @@ typedef enum
 } master_clock_output_pin_t;
 
 /**
- * Get master clock output
+ * @brief Get master clock output
  * 
  * @return info about current master clock output
  * 
@@ -140,7 +148,7 @@ typedef enum
 #define get_master_clock_output_pin() ((CLK_DIV & 0xC0) == 0 ? NONE : (CLK_DIV & 0x08) == 0 ? P5_4 : P1_6)
 
 /**
- * Set master clock output pin
+ * @brief Set master clock output pin
  * 
  * @param pin master_clock_output_pin_t pin to set output
  * 
