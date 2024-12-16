@@ -18,5 +18,5 @@ This code is published as [Platformio](https://platformio.org/) library named ST
 [Docs](https://mgoblin.github.io/STC15lib/docs/html/modules.html)
 
 # Version history
-![Version history](VERSION_HISTORY.md)
+[Version history](https://mgoblin.github.io/STC15lib/VERSION_HISTORY.html)
 
