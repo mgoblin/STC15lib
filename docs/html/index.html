@@ -94,12 +94,44 @@ Low level STC15 prorgamming</h2>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Use SFR declaration to change MCU state here</span></div>
 <div class="line"> </div>
-<div class="line">    P10 = 0; <span class="comment">// As example put LED on</span></div>
+<div class="line">    P10 = 0; <span class="comment">// As example put LED on. Pin P1.0 connected to onboard LED</span></div>
 <div class="line">}</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md4"></a>
 Use STC15 HAL functions</h2>
-<p >This library provides hardware astraction laywer for high level development tasks. Please read the docs for library modules.</p>
-<h1><a class="anchor" id="autotoc_md5"></a>
+<p >This library provides hardware astraction laywer (HAL) for high level development tasks. Please read the docs for library modules in Library documentation section (see the docs link).</p>
+<p >Most of HAL functionality is C-macros.</p>
+<p >The advantage is small firmware code size because macroses are expanded into application.</p>
+<p >C-Macroses have some drawbacks.</p>
+<ol type="1">
+<li>No compiler typechecks</li>
+<li>No function call optimizations. Macroses code inlined.</li>
+</ol>
+<p >If you need to use one HAL macros many times the good idea is to wrap macros by C-function.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="delay_8h.html">delay.h</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define LED P10</span></div>
+<div class="line"><span class="preprocessor">#define ON 0</span></div>
+<div class="line"><span class="preprocessor">#define OFF 1</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Wrap delay_ms HAL macros call to C-function</span></div>
+<div class="line"><span class="keywordtype">void</span> f_delay_ms(uint16_t ms)</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_define" href="group__delays.html#ga389926e6490f1d3db0f0896e8b0f5f2e">delay_ms</a>(ms); <span class="comment">// This is a macros </span></div>
+<div class="line">} </div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">while</span>(1)</div>
+<div class="line">    {</div>
+<div class="line">        LED = ON;</div>
+<div class="line">        f_delay_ms(500);</div>
+<div class="line">        LED = OFF;</div>
+<div class="line">        f_delay_ms(1000);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="adelay_8h_html"><div class="ttname"><a href="delay_8h.html">delay.h</a></div></div>
+<div class="ttc" id="agroup__delays_html_ga389926e6490f1d3db0f0896e8b0f5f2e"><div class="ttname"><a href="group__delays.html#ga389926e6490f1d3db0f0896e8b0f5f2e">delay_ms</a></div><div class="ttdeci">#define delay_ms(ms)</div><div class="ttdoc">Delays program flow using CPU nop.</div><div class="ttdef"><b>Definition:</b> delay.h:29</div></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
 Library modules maturity</h1>
 <h1><a class="anchor" id="autotoc_md6"></a>
 Library documentation</h1>

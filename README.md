@@ -41,13 +41,50 @@ void main()
 {
     // Use SFR declaration to change MCU state here
 
-    P10 = 0; // As example put LED on
+    P10 = 0; // As example put LED on. Pin P1.0 connected to onboard LED
 }
 ```
 
 ## Use STC15 HAL functions
-This library provides hardware astraction laywer for high level development tasks.
-Please read the docs for library modules.
+This library provides hardware astraction laywer (HAL) for high level development tasks.
+Please read the docs for library modules in Library documentation section (see the docs link).
+
+Most of HAL functionality is C-macros. 
+
+The advantage is small firmware code size because 
+macroses are expanded into application.
+
+C-Macroses have some drawbacks.
+
+1. No compiler typechecks
+2. No function call optimizations. Macroses code inlined.
+
+If you need to use one HAL macros many times the good idea is to wrap macros by C-function.
+
+```C
+#include <delay.h>
+
+#define LED P10
+#define ON 0
+#define OFF 1
+
+// Wrap delay_ms HAL macros call to C-function
+void f_delay_ms(uint16_t ms)
+{
+    delay_ms(ms); // This is a macros 
+} 
+
+void main()
+{
+    while(1)
+    {
+        LED = ON;
+        f_delay_ms(500);
+        LED = OFF;
+        f_delay_ms(1000);
+    }
+}
+```
 
 # Library modules maturity
 
