@@ -87,6 +87,21 @@ void main()
 ```
 
 # Library modules maturity
+| Module name  | Description                      | Maturity           |
+|------------- |----------------------------------|--------------------|
+| ChipID       | Get chip id from ROM             | READY              |
+| Delay        | CPU cycles based delay           | READY              |
+| CPU frequency| CPU frequency slowdown           | READY              |
+| Interrupt    | Enable and disable interrupts    | READY              |
+| Power management | idle, powerdown and wakeup timer        | READY              |
+| Reset        | Software reset                   | READY              |
+| Timer*       | Timer control routines           | EXPERIMENTAL       |
+| UART         | Serial port routines             | INITIAL SUPPORT    |
+| Watchdog timer | Watchdog timer routines        | READY              |
+
+Other modules does not implemented yet.
+
+See examples in [https://github.com/mgoblin/STC15lib/tree/main/examples](https://github.com/mgoblin/STC15lib/tree/main/examples)
 
 # Library documentation
 [Docs](https://mgoblin.github.io/STC15lib/docs/html/modules.html)
@@ -94,3 +109,8 @@ void main()
 # Version history
 [Version history](https://mgoblin.github.io/STC15lib/VERSION_HISTORY.html)
 
+# References
+
+* STC datasheets: [http://stcmicro.com/sjsc.html](http://stcmicro.com/sjsc.html)
+* SDCC User Guide (PDF): [http://sdcc.sourceforge.net/doc/sdccman.pdf](http://sdcc.sourceforge.net/doc/sdccman.pdf)
+* STC programmator [https://github.com/mgoblin/STC-programmatorhttps://github.com/mgoblin/STC-programmator](https://github.com/mgoblin/STC-programmatorhttps://github.com/mgoblin/STC-programmator)
