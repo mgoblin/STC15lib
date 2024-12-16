@@ -28,9 +28,26 @@ lib_deps = https://github.com/mgoblin/STC15lib#0.7.0
 
 Where is 0.7.0 STC15 hardware library github tag version.
 
+Each released library version has the tag in github repository. 
+
 ## Low level STC15 prorgamming
+You can directly manipulate to MCU registers from C-code. 
+STC15Fxx.h should be included. 
+
+```C
+#include <STC15Fxx.h> // MCU SFR declarations 
+
+void main()
+{
+    // Use SFR declaration to change MCU state here
+
+    P10 = 0; // As example put LED on
+}
+```
 
 ## Use STC15 HAL functions
+This library provides hardware astraction laywer for high level development tasks.
+Please read the docs for library modules.
 
 # Library modules maturity
 

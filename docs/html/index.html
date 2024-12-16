@@ -84,10 +84,21 @@ Add library to your project</h2>
 <div class="line">board = STC15W408AS</div>
 <div class="line">lib_deps = https://github.com/mgoblin/STC15lib#0.7.0</div>
 </div><!-- fragment --><p >Where is 0.7.0 STC15 hardware library github tag version.</p>
+<p >Each released library version has the tag in github repository.</p>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Low level STC15 prorgamming</h2>
-<h2><a class="anchor" id="autotoc_md4"></a>
+<p >You can directly manipulate to MCU registers from C-code. <a class="el" href="STC15Fxx_8h_source.html">STC15Fxx.h</a> should be included.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;STC15Fxx.h&gt;</span> <span class="comment">// MCU SFR declarations </span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Use SFR declaration to change MCU state here</span></div>
+<div class="line"> </div>
+<div class="line">    P10 = 0; <span class="comment">// As example put LED on</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md4"></a>
 Use STC15 HAL functions</h2>
+<p >This library provides hardware astraction laywer for high level development tasks. Please read the docs for library modules.</p>
 <h1><a class="anchor" id="autotoc_md5"></a>
 Library modules maturity</h1>
 <h1><a class="anchor" id="autotoc_md6"></a>
