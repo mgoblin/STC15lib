@@ -73,7 +73,6 @@
 * Enhanced description of project for indexing in google/yandex and so on search engines
 
 Next releases todo
-* TODO Add example links to module documentation  
 * TODO Optimize and refactor is_... ..._enabled(enable) routines 
 * TODO Implement counters
 * TODO Optimize timer2 baud rate calculation. Use precalculated array of baudrates
