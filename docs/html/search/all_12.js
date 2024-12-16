@@ -11,6 +11,7 @@ var searchData=
   ['wdt_5finit_8',['wdt_init',['../group__wdt.html#ga4b2fd1f627e92c1af1acf116abc95180',1,'wdt.h']]],
   ['wdt_5fstart_9',['wdt_start',['../group__wdt.html#ga1ff5051835023e879151f4a8df3504e0',1,'wdt.h']]],
   ['wdt_5fstop_10',['wdt_stop',['../group__wdt.html#ga27cbee9012a32bab0784e5d7a7c4d713',1,'wdt.h']]],
-  ['wirc_5fh_5faddress_11',['WIRC_H_ADDRESS',['../group__power__management.html#gacae7914e25fb794eb0d55b0162f8f8f6',1,'power_management.h']]],
-  ['wirc_5fl_5faddress_12',['WIRC_L_ADDRESS',['../group__power__management.html#ga82e21440e9b642907b03b4f1d111ca7b',1,'power_management.h']]]
+  ['what_20it_20is_11',['What it is',['../index.html',1,'']]],
+  ['wirc_5fh_5faddress_12',['WIRC_H_ADDRESS',['../group__power__management.html#gacae7914e25fb794eb0d55b0162f8f8f6',1,'power_management.h']]],
+  ['wirc_5fl_5faddress_13',['WIRC_L_ADDRESS',['../group__power__management.html#ga82e21440e9b642907b03b4f1d111ca7b',1,'power_management.h']]]
 ];

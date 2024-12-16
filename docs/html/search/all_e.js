@@ -12,6 +12,5 @@ var searchData=
   ['set_5fspi_5finterrupt_5fpriority_9',['set_spi_interrupt_priority',['../group__interrupts.html#ga7f4ce2c83eea0366ba67f8cc956aab8f',1,'interrupt.h']]],
   ['set_5ftimer0_5finterrupt_5fpriority_10',['set_timer0_interrupt_priority',['../group__interrupts.html#ga592af19616ab5d4dfa15bc48c451ffe6',1,'interrupt.h']]],
   ['set_5fuart1_5finterrupt_5fpriority_11',['set_uart1_interrupt_priority',['../group__interrupts.html#ga82ffad64559fd095450b0c283004b8ac',1,'interrupt.h']]],
-  ['stc15w408as_20library_12',['STC15W408AS library',['../index.html',1,'']]],
-  ['sys_2eh_13',['sys.h',['../sys_8h.html',1,'']]]
+  ['sys_2eh_12',['sys.h',['../sys_8h.html',1,'']]]
 ];
