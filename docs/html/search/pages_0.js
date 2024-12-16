@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['versions_20history_0',['Versions history',['../md_VERSION_HISTORY.html',1,'']]]
+  ['version_20history_0',['Version history',['../md_VERSION_HISTORY.html',1,'']]]
 ];

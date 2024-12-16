@@ -72,6 +72,18 @@ How to use it</h1>
 <p >This code is published as <a href="https://platformio.org/">Platformio</a> library named STC15 hardware.</p>
 <h2><a class="anchor" id="autotoc_md2"></a>
 Add library to your project</h2>
+<p >After create Platformio project for STC15408AS add to platformio.ini line with library depandency</p>
+<div class="fragment"><div class="line">[env:STC15W408AS]</div>
+<div class="line">platform = intel_mcs51</div>
+<div class="line">board = STC15W408AS</div>
+<div class="line">lib_deps = mgoblin/STC15 hardware@^0.7.0</div>
+</div><!-- fragment --><p> Where is 0.7.0 STC15 hardware library version.</p>
+<p >As alternative in lib_deps line github link could be used.</p>
+<div class="fragment"><div class="line">[env:STC15W408AS]</div>
+<div class="line">platform = intel_mcs51</div>
+<div class="line">board = STC15W408AS</div>
+<div class="line">lib_deps = https://github.com/mgoblin/STC15lib#0.7.0</div>
+</div><!-- fragment --><p >Where is 0.7.0 STC15 hardware library github tag version.</p>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Low level STC15 prorgamming</h2>
 <h2><a class="anchor" id="autotoc_md4"></a>

@@ -1,4 +1,4 @@
-# Versions history
+# Version history
 0.1.0 
 * first version
 * system sfr headers support
@@ -73,9 +73,9 @@
 
 Next releases todo
 * TODO Enhance description of project for indexing in google/yandex and so on search engines
-* TODO Describe wrapping to function technique for multiple macro decl calls 
+* TODO Describe wrapping to function technique for multiple macro decl calls
+* TODO Add example links to module documentation  
 * TODO Optimize and refactor is_... ..._enabled(enable) routines 
-* TODO Add example links to module documentation 
 * TODO Implement counters
 * TODO Optimize timer2 baud rate calculation. Use precalculated array of baudrates
 * TODO Implement P5.4 as MCU reset source
