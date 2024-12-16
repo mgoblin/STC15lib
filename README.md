@@ -15,7 +15,7 @@ This code is published as ![Platformio](https://platformio.org/) library named S
 # Library modules maturity
 
 # Library documentation
-![Docs](docs/html/index.html)
+![Docs](https://mgoblin.github.io/STC15lib/docs/html/modules.html)
 
 # Version history
 ![Version history](VERSION_HISTORY.md)
