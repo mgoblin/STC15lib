@@ -24,7 +24,7 @@ void main()
     
     // Init, configure and start timer0 in mode2
     timer0_mode2_12T_init();
-    timer0_mode2_enable_P35_output(true);
+    timer0_mode2_enable_P35_output();
 
     // Calculate P35 signal frequency * 100 for 0xff ticks count.
     // 0xff is a maximum value for ticks count in timer mode2. 

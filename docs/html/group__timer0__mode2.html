@@ -79,9 +79,14 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader">config</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p >Timer configuration functions </p>
 </td></tr>
-<tr class="memitem:ga9078534f96c317ccdf8a4dd7c3f4120a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2.html#ga9078534f96c317ccdf8a4dd7c3f4120a">timer0_mode2_enable_P35_output</a>(enable)&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, SBIT0) : bit_clr(INT_CLKO, CBIT0))</td></tr>
-<tr class="memdesc:ga9078534f96c317ccdf8a4dd7c3f4120a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable P35 meandr output.  <a href="group__timer0__mode2.html#ga9078534f96c317ccdf8a4dd7c3f4120a">More...</a><br /></td></tr>
-<tr class="separator:ga9078534f96c317ccdf8a4dd7c3f4120a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0cd6fafd982186c2f36292a7a7dfdfc2"><td class="memItemLeft" align="right" valign="top"><a id="ga0cd6fafd982186c2f36292a7a7dfdfc2" name="ga0cd6fafd982186c2f36292a7a7dfdfc2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>timer0_mode2_enable_P35_output</b>()&#160;&#160;&#160;(bit_set(INT_CLKO, SBIT0))</td></tr>
+<tr class="memdesc:ga0cd6fafd982186c2f36292a7a7dfdfc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable P35 meander output. <br /></td></tr>
+<tr class="separator:ga0cd6fafd982186c2f36292a7a7dfdfc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga54103292724f19e71f23f0cb679456e8"><td class="memItemLeft" align="right" valign="top"><a id="ga54103292724f19e71f23f0cb679456e8" name="ga54103292724f19e71f23f0cb679456e8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>timer0_mode2_disable_P35_output</b>()&#160;&#160;&#160;(bit_clr(INT_CLKO, CBIT0))</td></tr>
+<tr class="memdesc:ga54103292724f19e71f23f0cb679456e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable P35 meander output. <br /></td></tr>
+<tr class="separator:ga54103292724f19e71f23f0cb679456e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga85404a5d6de7a47f0e898f61cbedba9c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2.html#ga85404a5d6de7a47f0e898f61cbedba9c">is_timer0_mode2_P35_output_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, SBIT0))</td></tr>
 <tr class="memdesc:ga85404a5d6de7a47f0e898f61cbedba9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get output to pin P3.5 output flag enabled value.  <a href="group__timer0__mode2.html#ga85404a5d6de7a47f0e898f61cbedba9c">More...</a><br /></td></tr>
 <tr class="separator:ga85404a5d6de7a47f0e898f61cbedba9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -295,32 +300,6 @@ $(function() {
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ticks</td><td>uint8_t timer ticks count. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ga9078534f96c317ccdf8a4dd7c3f4120a" name="ga9078534f96c317ccdf8a4dd7c3f4120a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9078534f96c317ccdf8a4dd7c3f4120a">&#9670;&nbsp;</a></span>timer0_mode2_enable_P35_output</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define timer0_mode2_enable_P35_output</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">enable</td><td>)</td>
-          <td>&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, SBIT0) : bit_clr(INT_CLKO, CBIT0))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enable P35 meandr output. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">enable</td><td>bool true if enabled and false if not </td></tr>
   </table>
   </dd>
 </dl>
