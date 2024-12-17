@@ -25,7 +25,7 @@ void main()
     set_frequency_divider_scale(7);
 
     timer2_mode0_12T_init();
-    timer2_mode0_enable_P30_output(true);
+    timer2_mode0_enable_P30_output();
     
     volatile uint32_t timer_frequency = timer2_uint16_ticks_to_freq100(TICKS);
 

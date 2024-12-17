@@ -75,14 +75,19 @@
 ///@{
 
 /**
- * @brief Enable output of meandr with timer times on P3.0 pin.
+ * @brief Enable output of meander with timer times on P3.0 pin.
  * @details By default output is disabled
- * 
- * @param enable bool if true output is enabled otherwise output is disabled 
  * 
  * @ingroup timer2_mode0
  */
-#define timer2_mode0_enable_P30_output(enable) (enable ? bit_set(INT_CLKO, SBIT2) : bit_clr(INT_CLKO, CBIT2))
+#define timer2_mode0_enable_P30_output() (bit_set(INT_CLKO, SBIT2))
+
+/**
+ * @brief Disable output of meander with timer times on P3.0 pin.
+ * 
+ * @ingroup timer2_mode0
+ */
+#define timer2_mode0_disable_P30_output() (bit_clr(INT_CLKO, CBIT2))
 
 /**
  * Get output to pin P3.0 output flag enabled value
@@ -166,14 +171,20 @@
 ///@{
 
 /**
- * @brief select/unselect timer2 as uart1 baud rate generator
+ * @brief Select timer2 as uart1 baud rate generator
  * @details by default timer0 used as UART1 baud rate generator
- * 
- * @param enabled bool true - select, false - unselect
  * 
  * @ingroup timer2_mode0
  */
-#define enable_timer2_mode0_as_uart1_baud_rate(enabled) (enabled? bit_set(AUXR, SBIT0) : bit_clr(AUXR, CBIT0))
+#define timer2_mode0_enable_as_uart1_baud_rate() (bit_set(AUXR, SBIT0))
+
+/**
+ * @brief Unselect timer2 as uart1 baud rate generator
+ * @details by default timer0 used as UART1 baud rate generator
+ * 
+ * @ingroup timer2_mode0
+ */
+#define timer2_mode0_disable_as_uart1_baud_rate() (bit_clr(AUXR, CBIT0))
 
 /**
  * @brief Is timer0 used as UART1 baud rate generator?

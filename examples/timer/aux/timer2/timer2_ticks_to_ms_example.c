@@ -23,7 +23,7 @@ void timerISR() __interrupt(12)
 void main()
 {
    timer2_mode0_1T_init();
-   timer2_mode0_enable_P30_output(true);
+   timer2_mode0_enable_P30_output();
    
    volatile uint32_t ms = timer2_ticks_to_ms_usafe(TICKS);
 

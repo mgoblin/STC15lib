@@ -79,9 +79,14 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader">config</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p >Timer configuration functions </p>
 </td></tr>
-<tr class="memitem:gaa2c26ad586dc4efa8ec758b343136bf3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode3.html#gaa2c26ad586dc4efa8ec758b343136bf3">timer0_mode3_enable_P35_output</a>(enable)&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, SBIT0) : bit_clr(INT_CLKO, CBIT0))</td></tr>
-<tr class="memdesc:gaa2c26ad586dc4efa8ec758b343136bf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable P35 meandr output.  <a href="group__timer0__mode3.html#gaa2c26ad586dc4efa8ec758b343136bf3">More...</a><br /></td></tr>
-<tr class="separator:gaa2c26ad586dc4efa8ec758b343136bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8ace46a84a250659d744d7aaf2543d02"><td class="memItemLeft" align="right" valign="top"><a id="ga8ace46a84a250659d744d7aaf2543d02" name="ga8ace46a84a250659d744d7aaf2543d02"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>timer0_mode3_enable_P35_output</b>()&#160;&#160;&#160;(bit_set(INT_CLKO, SBIT0))</td></tr>
+<tr class="memdesc:ga8ace46a84a250659d744d7aaf2543d02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable P35 meander output. <br /></td></tr>
+<tr class="separator:ga8ace46a84a250659d744d7aaf2543d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0b028423e19aeb135904704384022a9d"><td class="memItemLeft" align="right" valign="top"><a id="ga0b028423e19aeb135904704384022a9d" name="ga0b028423e19aeb135904704384022a9d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>timer0_mode3_disable_P35_output</b>()&#160;&#160;&#160;(bit_clr(INT_CLKO, CBIT0))</td></tr>
+<tr class="memdesc:ga0b028423e19aeb135904704384022a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable P35 meander output. <br /></td></tr>
+<tr class="separator:ga0b028423e19aeb135904704384022a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5531c418c37ba9debf04ef1ecb713670"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode3.html#ga5531c418c37ba9debf04ef1ecb713670">is_timer0_mode3_P35_output_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, SBIT0))</td></tr>
 <tr class="memdesc:ga5531c418c37ba9debf04ef1ecb713670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get output to pin P3.5 output flag enabled value.  <a href="group__timer0__mode3.html#ga5531c418c37ba9debf04ef1ecb713670">More...</a><br /></td></tr>
 <tr class="separator:ga5531c418c37ba9debf04ef1ecb713670"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -296,9 +301,9 @@ $(function() {
 <div class="line">        timer0_mode3_close_gate();                                      \</div>
 <div class="line">    }                                                                   \</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__timer0__mode3_html_ga164988a97d7aa1ca3e415a663ad5ecd3"><div class="ttname"><a href="group__timer0__mode3.html#ga164988a97d7aa1ca3e415a663ad5ecd3">is_timer0_mode3_gate_opened</a></div><div class="ttdeci">#define is_timer0_mode3_gate_opened()</div><div class="ttdoc">Get timer starting gate state.</div><div class="ttdef"><b>Definition:</b> timer0_mode3.h:117</div></div>
-<div class="ttc" id="agroup__timer0__mode3_html_ga4eef8d197453f432b66f3c5fe10d0fdc"><div class="ttname"><a href="group__timer0__mode3.html#ga4eef8d197453f432b66f3c5fe10d0fdc">timer0_mode3_open_gate</a></div><div class="ttdeci">#define timer0_mode3_open_gate()</div><div class="ttdoc">Open timer starting gate.</div><div class="ttdef"><b>Definition:</b> timer0_mode3.h:108</div></div>
-<div class="ttc" id="agroup__timer0__mode3_html_ga998ffba506f9bf9d1e252b861d6bece8"><div class="ttname"><a href="group__timer0__mode3.html#ga998ffba506f9bf9d1e252b861d6bece8">timer0_mode3_start</a></div><div class="ttdeci">#define timer0_mode3_start(ticks)</div><div class="ttdoc">Run timer0.</div><div class="ttdef"><b>Definition:</b> timer0_mode3.h:162</div></div>
+<div class="ttc" id="agroup__timer0__mode3_html_ga164988a97d7aa1ca3e415a663ad5ecd3"><div class="ttname"><a href="group__timer0__mode3.html#ga164988a97d7aa1ca3e415a663ad5ecd3">is_timer0_mode3_gate_opened</a></div><div class="ttdeci">#define is_timer0_mode3_gate_opened()</div><div class="ttdoc">Get timer starting gate state.</div><div class="ttdef"><b>Definition:</b> timer0_mode3.h:122</div></div>
+<div class="ttc" id="agroup__timer0__mode3_html_ga4eef8d197453f432b66f3c5fe10d0fdc"><div class="ttname"><a href="group__timer0__mode3.html#ga4eef8d197453f432b66f3c5fe10d0fdc">timer0_mode3_open_gate</a></div><div class="ttdeci">#define timer0_mode3_open_gate()</div><div class="ttdoc">Open timer starting gate.</div><div class="ttdef"><b>Definition:</b> timer0_mode3.h:113</div></div>
+<div class="ttc" id="agroup__timer0__mode3_html_ga998ffba506f9bf9d1e252b861d6bece8"><div class="ttname"><a href="group__timer0__mode3.html#ga998ffba506f9bf9d1e252b861d6bece8">timer0_mode3_start</a></div><div class="ttdeci">#define timer0_mode3_start(ticks)</div><div class="ttdoc">Run timer0.</div><div class="ttdef"><b>Definition:</b> timer0_mode3.h:167</div></div>
 </div><!-- fragment -->
 <p>Run timer0 mode3 once and wait with program flow blocking timer not finished. </p>
 <p >Before run timer0_mode3_12T_init or timer0_mode3_1T_init should be called.</p>
@@ -307,32 +312,6 @@ $(function() {
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ticks</td><td>uint16_t timer ticks count. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="gaa2c26ad586dc4efa8ec758b343136bf3" name="gaa2c26ad586dc4efa8ec758b343136bf3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa2c26ad586dc4efa8ec758b343136bf3">&#9670;&nbsp;</a></span>timer0_mode3_enable_P35_output</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define timer0_mode3_enable_P35_output</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">enable</td><td>)</td>
-          <td>&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, SBIT0) : bit_clr(INT_CLKO, CBIT0))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enable P35 meandr output. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">enable</td><td>bool true if enabled and false if not </td></tr>
   </table>
   </dd>
 </dl>

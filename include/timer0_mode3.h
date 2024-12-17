@@ -74,13 +74,18 @@
  */
 ///@{
 /**
- * @brief Enable P35 meandr output
- * 
- * @param enable bool true if enabled and false if not
+ * @brief Enable P35 meander output
  * 
  * @ingroup timer0_mode3
  */
-#define timer0_mode3_enable_P35_output(enable) (enable ? bit_set(INT_CLKO, SBIT0) : bit_clr(INT_CLKO, CBIT0))
+#define timer0_mode3_enable_P35_output() (bit_set(INT_CLKO, SBIT0))
+
+/**
+ * @brief Disable P35 meander output
+ * 
+ * @ingroup timer0_mode3
+ */
+#define timer0_mode3_disable_P35_output() (bit_clr(INT_CLKO, CBIT0))
 
 /**
  * @brief Get output to pin P3.5 output flag enabled value
