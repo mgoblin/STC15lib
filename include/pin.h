@@ -72,4 +72,24 @@ typedef enum
     bit_clr(port ## M0, ~(1 << port_pin));                      \
 }
 
+/**
+ * @brief Init pin in in PUSH-PULL mode
+ * @details 
+ * Push-pull output(strong pull-up output，current can be up to 20mA, 
+ * resistors need to be added to restrict current 
+ * 
+ * Set mode for pin in port. For example for pin P10 call this routine with 
+ * P1, 0 arguments 
+ * 
+ * @port pin port for example P1, P3 and etc
+ * 
+ * @ingroup pin
+ */
+#define pin_push_pull_init(port, port_pin)                      \
+{                                                               \
+    bit_clr(port ## M1, ~(1 << port_pin));                      \
+    bit_set(port ## M0, 1 << port_pin);                         \
+}
+
+
 #endif

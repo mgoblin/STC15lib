@@ -5,4 +5,9 @@ env.Default(
         source = 'pin_quasi_bidiretional_init_example.c',
         target = 'pin_quasi_bidiretional_init_example.rel'
     ),
+
+    env.Object(
+        source = 'pin_push_pull_init_example.c',
+        target = 'pin_push_pull_init_example.rel'
+    ),
 )

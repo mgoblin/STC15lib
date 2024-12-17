@@ -92,7 +92,14 @@ $(function() {
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">    bit_clr(port ## M0, ~(1 &lt;&lt; port_pin));                      \</span></div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">}</span></div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="group__pin.html#ga2c7e5cb2a19518afffd55e46270f2e41">   88</a></span><span class="preprocessor">#define pin_push_pull_init(port, port_pin)                      \</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">{                                                               \</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">    bit_clr(port ## M1, ~(1 &lt;&lt; port_pin));                      \</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">    bit_set(port ## M0, 1 &lt;&lt; port_pin);                         \</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="agroup__pin_html_ga77fecc1883f27c095012fbe56345c4db"><div class="ttname"><a href="group__pin.html#ga77fecc1883f27c095012fbe56345c4db">pin_mode_t</a></div><div class="ttdeci">pin_mode_t</div><div class="ttdoc">Pin in/out modes enum.</div><div class="ttdef"><b>Definition:</b> pin.h:23</div></div>
 <div class="ttc" id="agroup__pin_html_gga77fecc1883f27c095012fbe56345c4dba0a465cd42328f5aa68187ef48068f28f"><div class="ttname"><a href="group__pin.html#gga77fecc1883f27c095012fbe56345c4dba0a465cd42328f5aa68187ef48068f28f">QUASI_BIDIRECTIONAL</a></div><div class="ttdeci">@ QUASI_BIDIRECTIONAL</div><div class="ttdoc">Quasi bidirectional mode.</div><div class="ttdef"><b>Definition:</b> pin.h:32</div></div>
 <div class="ttc" id="agroup__pin_html_gga77fecc1883f27c095012fbe56345c4dba43f7bf0671721675491951f22119e4ff"><div class="ttname"><a href="group__pin.html#gga77fecc1883f27c095012fbe56345c4dba43f7bf0671721675491951f22119e4ff">INPUT_ONLY</a></div><div class="ttdeci">@ INPUT_ONLY</div><div class="ttdoc">input-only (high-impedance)</div><div class="ttdef"><b>Definition:</b> pin.h:46</div></div>
