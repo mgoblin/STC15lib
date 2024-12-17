@@ -11,6 +11,8 @@
  */
 
 #include <sys.h>
+#include <bits.h>
+#include <stdint.h>
 
 /**
  * @brief Pin in/out modes enum
@@ -52,6 +54,22 @@ typedef enum
     OPEN_DRAIN
 } pin_mode_t;
 
-void pinMode(__sbit pin, pin_mode_t mode);
+/**
+ * @brief Init pin in in QUASI_BIDIRECTIONAL mode
+ * @details QUASI_BIDIRECTIONAL mode is default pin mode and set after
+ * MCU power on 
+ * 
+ * Set mode for pin in port. For example for pin P10 call this routine with 
+ * P1, 0 arguments 
+ * 
+ * @port pin port for example P1, P3 and etc
+ * 
+ * @ingroup pin
+ */
+#define pin_quasi_bidiretional_init(port, port_pin)             \
+{                                                               \
+    bit_clr(port ## M1, ~(1 << port_pin));                      \
+    bit_clr(port ## M0, ~(1 << port_pin));                      \
+}
 
 #endif
