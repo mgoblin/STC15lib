@@ -20,7 +20,7 @@ void main()
     // set mcu sysclk frequency divider scaler to 2-x slowdown
     set_frequency_divider_scale(1); 
 
-    uart1_init(9600);
+    //uart1_init(9600);
     
     // Init, configure and start timer0 in mode2
     timer0_mode2_12T_init();

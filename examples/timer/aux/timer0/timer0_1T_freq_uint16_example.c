@@ -22,7 +22,7 @@ void main()
     uart1_init(9600);
     
     timer0_mode0_1T_init();
-    timer0_mode0_enable_P35_output(true);
+    timer0_mode0_enable_P35_output();
 
     // For ticks = 0xffff calc result is 84.37 Hz, measurament is 84.517 Hz
     // For ticks = 0x0000 calc result is 5.529600 MHz, measurament is 5.538 MHz

@@ -117,9 +117,14 @@ Macros</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">config</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p >Timer configuration functions </p>
 </div></td></tr>
-<tr class="memitem:ga82468838c1126b5958d076bd856d8664"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode0.html#ga82468838c1126b5958d076bd856d8664">timer0_mode0_enable_P35_output</a>(enable)&#160;&#160;&#160;(enable ? bit_set(INT_CLKO, SBIT0) : bit_clr(INT_CLKO, CBIT0))</td></tr>
-<tr class="memdesc:ga82468838c1126b5958d076bd856d8664"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable P35 meandr output.  <a href="group__timer0__mode0.html#ga82468838c1126b5958d076bd856d8664">More...</a><br /></td></tr>
-<tr class="separator:ga82468838c1126b5958d076bd856d8664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab7055c569495505b534447e4373fc235"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>timer0_mode0_enable_P35_output</b>()&#160;&#160;&#160;bit_set(INT_CLKO, SBIT0)</td></tr>
+<tr class="memdesc:gab7055c569495505b534447e4373fc235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable P35 meander output. <br /></td></tr>
+<tr class="separator:gab7055c569495505b534447e4373fc235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3cf89bffa4f3a519f079a02c3da2fce0"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>timer0_mode0_disable_P35_output</b>()&#160;&#160;&#160;bit_clr(INT_CLKO, CBIT0)</td></tr>
+<tr class="memdesc:ga3cf89bffa4f3a519f079a02c3da2fce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable P35 meander output. <br /></td></tr>
+<tr class="separator:ga3cf89bffa4f3a519f079a02c3da2fce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabca5c0f95450276da6bfdc9e2d95b30d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode0.html#gabca5c0f95450276da6bfdc9e2d95b30d">is_timer0_mode0_P35_output_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, SBIT0))</td></tr>
 <tr class="memdesc:gabca5c0f95450276da6bfdc9e2d95b30d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get output to pin P3.5 output flag enabled value.  <a href="group__timer0__mode0.html#gabca5c0f95450276da6bfdc9e2d95b30d">More...</a><br /></td></tr>
 <tr class="separator:gabca5c0f95450276da6bfdc9e2d95b30d"><td class="memSeparator" colspan="2">&#160;</td></tr>

@@ -27,7 +27,7 @@ void main()
 
     // Init timer and set timer output to P35 (pin P3.5)
     timer0_mode0_12T_init();
-    timer0_mode0_enable_P35_output(true);
+    timer0_mode0_enable_P35_output();
 
     // Calculate ticks count to frequency 2.5 kHz. Value is 0x5C
     uint16_t ticks = timer0_frequency_to_ticks_unsafe(2500);
