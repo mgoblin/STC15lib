@@ -1,10 +1,10 @@
 var indexSectionsWithContent =
 {
-  0: "_cdefghilmnoprstuvw",
+  0: "_cdefghilmnopqrstuvw",
   1: "cdfiprstuw",
   2: "_gpu",
-  3: "eimt",
-  4: "hlnoprt",
+  3: "eimpt",
+  4: "hilnopqrt",
   5: "m",
   6: "cdfiprtuw",
   7: "vw"

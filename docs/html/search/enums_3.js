@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['timer_5fclock_5fdivider_5ft_0',['timer_clock_divider_t',['../group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d',1,'timer_structs.h']]]
+  ['pin_5fmode_5ft_0',['pin_mode_t',['../group__pin.html#ga77fecc1883f27c095012fbe56345c4db',1,'pin.h']]]
 ];
