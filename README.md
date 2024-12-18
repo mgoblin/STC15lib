@@ -95,7 +95,7 @@ void main()
 | Interrupt    | Enable and disable interrupts    | READY              |
 | Power management | idle, powerdown and wakeup timer        | READY              |
 | Reset        | Software reset                   | READY              |
-| Timer*       | Timer control routines           | EXPERIMENTAL       |
+| Timer        | Timer control routines           | EXPERIMENTAL       |
 | UART         | Serial port routines             | INITIAL SUPPORT    |
 | Watchdog timer | Watchdog timer routines        | READY              |
 | Pin          | Pin as digital in/out routines   | INITIAL SUPPORT    |
