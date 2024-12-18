@@ -71,9 +71,9 @@
 * Docs are included to platformio package
 * Examples compilation is a step of build
 * Enhanced description of project for indexing in google/yandex and so on search engines
+* Pin module implemented
 
 Next releases todo
-* TODO Implement pin module
 * TODO Implememnt timer_modeX_direct_init(TxH, TxL) for direct set TLx, THx registers
 * TODO Ыuppress compiler output for examples on non verbose build 
 * TODO Implement counters

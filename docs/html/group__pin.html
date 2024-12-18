@@ -63,8 +63,7 @@ $(function() {
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">Pin</div></div>
 </div><!--header-->
 <div class="contents">
@@ -83,21 +82,147 @@ Macros</h2></td></tr>
 <tr class="memitem:gaa910c8f32cf6f9311e1cba9490d14e1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pin.html#gaa910c8f32cf6f9311e1cba9490d14e1e">pin_open_drain_init</a>(port,  port_pin)</td></tr>
 <tr class="memdesc:gaa910c8f32cf6f9311e1cba9490d14e1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init pin in in OPEN_DRAIN mode.  <a href="group__pin.html#gaa910c8f32cf6f9311e1cba9490d14e1e">More...</a><br /></td></tr>
 <tr class="separator:gaa910c8f32cf6f9311e1cba9490d14e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:ga77fecc1883f27c095012fbe56345c4db"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pin.html#ga77fecc1883f27c095012fbe56345c4db">pin_mode_t</a> { <a class="el" href="group__pin.html#gga77fecc1883f27c095012fbe56345c4dba0a465cd42328f5aa68187ef48068f28f">QUASI_BIDIRECTIONAL</a>
-, <a class="el" href="group__pin.html#gga77fecc1883f27c095012fbe56345c4dbaea46e9bba1ef3eb31a3fbce1b54ef028">PUSH_PULL</a>
-, <a class="el" href="group__pin.html#gga77fecc1883f27c095012fbe56345c4dba43f7bf0671721675491951f22119e4ff">INPUT_ONLY</a>
-, <a class="el" href="group__pin.html#gga77fecc1883f27c095012fbe56345c4dbaa90b62c376675b218528e2b0b0a7f123">OPEN_DRAIN</a>
- }</td></tr>
-<tr class="memdesc:ga77fecc1883f27c095012fbe56345c4db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pin in/out modes enum.  <a href="group__pin.html#ga77fecc1883f27c095012fbe56345c4db">More...</a><br /></td></tr>
-<tr class="separator:ga77fecc1883f27c095012fbe56345c4db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ce65960da81e2096cef7951b22e3f92"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pin.html#ga1ce65960da81e2096cef7951b22e3f92">is_pin_mode_quasi_bidiretional</a>(port,  port_pin)&#160;&#160;&#160;( ((port ## M1 &amp; (1 &lt;&lt; port_pin)) == 0) &amp;&amp; ((port ## M0 &amp; (1 &lt;&lt; port_pin)) == 0 ) )</td></tr>
+<tr class="memdesc:ga1ce65960da81e2096cef7951b22e3f92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert pin in quasy-bidirectional mode.  <a href="group__pin.html#ga1ce65960da81e2096cef7951b22e3f92">More...</a><br /></td></tr>
+<tr class="separator:ga1ce65960da81e2096cef7951b22e3f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5393080f6642943ff3dad636e34ba999"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pin.html#ga5393080f6642943ff3dad636e34ba999">is_pin_mode_push_pull</a>(port,  port_pin)&#160;&#160;&#160;( ((port ## M1 &amp; (1 &lt;&lt; port_pin)) == 0) &amp;&amp; ((port ## M0 &amp; (1 &lt;&lt; port_pin)) != 0) )</td></tr>
+<tr class="memdesc:ga5393080f6642943ff3dad636e34ba999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert pin in push-pull mode.  <a href="group__pin.html#ga5393080f6642943ff3dad636e34ba999">More...</a><br /></td></tr>
+<tr class="separator:ga5393080f6642943ff3dad636e34ba999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c965893e34bbd35c674a74c16fcbbee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pin.html#ga3c965893e34bbd35c674a74c16fcbbee">is_pin_mode_input_only</a>(port,  port_pin)&#160;&#160;&#160;( ((port ## M1 &amp; (1 &lt;&lt; port_pin)) != 0) &amp;&amp; ((port ## M0 &amp; (1 &lt;&lt; port_pin)) == 0) )</td></tr>
+<tr class="memdesc:ga3c965893e34bbd35c674a74c16fcbbee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert pin in input-only mode.  <a href="group__pin.html#ga3c965893e34bbd35c674a74c16fcbbee">More...</a><br /></td></tr>
+<tr class="separator:ga3c965893e34bbd35c674a74c16fcbbee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae99dd668582e93526f0305c36bf58bcc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pin.html#gae99dd668582e93526f0305c36bf58bcc">is_pin_mode_open_drain</a>(port,  port_pin)&#160;&#160;&#160;( ((port ## M1 &amp; (1 &lt;&lt; port_pin)) != 0) &amp;&amp; ((port ## M0 &amp; (1 &lt;&lt; port_pin)) != 0) )</td></tr>
+<tr class="memdesc:gae99dd668582e93526f0305c36bf58bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert pin in open-drain mode.  <a href="group__pin.html#gae99dd668582e93526f0305c36bf58bcc">More...</a><br /></td></tr>
+<tr class="separator:gae99dd668582e93526f0305c36bf58bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Pin modes data structures and routines</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga3c965893e34bbd35c674a74c16fcbbee" name="ga3c965893e34bbd35c674a74c16fcbbee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3c965893e34bbd35c674a74c16fcbbee">&#9670;&nbsp;</a></span>is_pin_mode_input_only</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define is_pin_mode_input_only</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">port, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">port_pin&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;( ((port ## M1 &amp; (1 &lt;&lt; port_pin)) != 0) &amp;&amp; ((port ## M0 &amp; (1 &lt;&lt; port_pin)) == 0) )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Assert pin in input-only mode. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if pin in input-only mode, otherwise false </dd></dl>
+
+</div>
+</div>
+<a id="gae99dd668582e93526f0305c36bf58bcc" name="gae99dd668582e93526f0305c36bf58bcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae99dd668582e93526f0305c36bf58bcc">&#9670;&nbsp;</a></span>is_pin_mode_open_drain</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define is_pin_mode_open_drain</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">port, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">port_pin&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;( ((port ## M1 &amp; (1 &lt;&lt; port_pin)) != 0) &amp;&amp; ((port ## M0 &amp; (1 &lt;&lt; port_pin)) != 0) )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Assert pin in open-drain mode. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if pin in open-drain mode, otherwise false </dd></dl>
+
+</div>
+</div>
+<a id="ga5393080f6642943ff3dad636e34ba999" name="ga5393080f6642943ff3dad636e34ba999"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5393080f6642943ff3dad636e34ba999">&#9670;&nbsp;</a></span>is_pin_mode_push_pull</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define is_pin_mode_push_pull</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">port, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">port_pin&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;( ((port ## M1 &amp; (1 &lt;&lt; port_pin)) == 0) &amp;&amp; ((port ## M0 &amp; (1 &lt;&lt; port_pin)) != 0) )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Assert pin in push-pull mode. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if pin in push-pull mode, otherwise false </dd></dl>
+
+</div>
+</div>
+<a id="ga1ce65960da81e2096cef7951b22e3f92" name="ga1ce65960da81e2096cef7951b22e3f92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ce65960da81e2096cef7951b22e3f92">&#9670;&nbsp;</a></span>is_pin_mode_quasi_bidiretional</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define is_pin_mode_quasi_bidiretional</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">port, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">port_pin&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;( ((port ## M1 &amp; (1 &lt;&lt; port_pin)) == 0) &amp;&amp; ((port ## M0 &amp; (1 &lt;&lt; port_pin)) == 0 ) )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Assert pin in quasy-bidirectional mode. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if pin in quasy-bidirectional mode, otherwise false </dd></dl>
+
+</div>
+</div>
 <a id="gaa9bc772c77d463f878e1292351883126" name="gaa9bc772c77d463f878e1292351883126"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaa9bc772c77d463f878e1292351883126">&#9670;&nbsp;</a></span>pin_input_only_init</h2>
 
@@ -267,36 +392,6 @@ Enumerations</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="ga77fecc1883f27c095012fbe56345c4db" name="ga77fecc1883f27c095012fbe56345c4db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga77fecc1883f27c095012fbe56345c4db">&#9670;&nbsp;</a></span>pin_mode_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="group__pin.html#ga77fecc1883f27c095012fbe56345c4db">pin_mode_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Pin in/out modes enum. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga77fecc1883f27c095012fbe56345c4dba0a465cd42328f5aa68187ef48068f28f" name="gga77fecc1883f27c095012fbe56345c4dba0a465cd42328f5aa68187ef48068f28f"></a>QUASI_BIDIRECTIONAL&#160;</td><td class="fielddoc"><p >Quasi bidirectional mode. </p>
-<p >Pin can be used for read and write digital data. Sink Current up to 20mA, pull-up Current is 270μA. Because of manufactured error, the actual pull-up current is 270uA ~ 150uA </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga77fecc1883f27c095012fbe56345c4dbaea46e9bba1ef3eb31a3fbce1b54ef028" name="gga77fecc1883f27c095012fbe56345c4dbaea46e9bba1ef3eb31a3fbce1b54ef028"></a>PUSH_PULL&#160;</td><td class="fielddoc"><p >Strong pull-up output. </p>
-<p >Current can be up to 20mA, resistors need to be added to restrict current </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga77fecc1883f27c095012fbe56345c4dba43f7bf0671721675491951f22119e4ff" name="gga77fecc1883f27c095012fbe56345c4dba43f7bf0671721675491951f22119e4ff"></a>INPUT_ONLY&#160;</td><td class="fielddoc"><p >input-only (high-impedance) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga77fecc1883f27c095012fbe56345c4dbaa90b62c376675b218528e2b0b0a7f123" name="gga77fecc1883f27c095012fbe56345c4dbaa90b62c376675b218528e2b0b0a7f123"></a>OPEN_DRAIN&#160;</td><td class="fielddoc"><p >Open drain mode. </p>
-<p >Internal pull-up resistors should be disabled and external pull-up resistors need to join </p>
-</td></tr>
-</table>
 
 </div>
 </div>

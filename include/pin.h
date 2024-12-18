@@ -13,46 +13,7 @@
 #include <sys.h>
 #include <bits.h>
 #include <stdint.h>
-
-/**
- * @brief Pin in/out modes enum
- * 
- * @ingroup pin
- */
-typedef enum
-{
-    /**  
-     * @brief Quasi bidirectional mode. 
-     * @details 
-     * Pin can be used for read and write digital data.
-     * Sink Current up to 20mA, pull-up Current is 270μA. 
-     * Because of manufactured error, the actual pull-up current is 270uA ~ 150uA
-     *  
-     * */
-    QUASI_BIDIRECTIONAL,
-
-    /**
-     * @brief Strong pull-up output 
-     * @details 
-     * Current can be up to 20mA, 
-     * resistors need to be added to restrict current
-     */
-    PUSH_PULL,
-
-    /**
-     * @brief input-only (high-impedance)
-     * 
-     */
-    INPUT_ONLY,
-
-    /**  
-     * @brief Open drain mode. 
-     * @details 
-     * Internal pull-up resistors should be disabled and external 
-     * pull-up resistors need to join 
-     * */
-    OPEN_DRAIN
-} pin_mode_t;
+#include <stdbool.h>
 
 /**
  * @brief Init pin in in QUASI_BIDIRECTIONAL mode
@@ -129,4 +90,41 @@ typedef enum
     bit_set(port ## M1, 1 << port_pin);                         \
     bit_set(port ## M0, 1 << port_pin);                         \
 }
+
+/**
+ * @brief Assert pin in quasy-bidirectional mode
+ * 
+ * @return true if pin in quasy-bidirectional mode, otherwise false
+ * 
+ * @ingroup pin
+ */
+#define is_pin_mode_quasi_bidiretional(port, port_pin)  ( ((port ## M1 & (1 << port_pin)) == 0) && ((port ## M0 & (1 << port_pin)) == 0 ) )
+
+/**
+ * @brief Assert pin in push-pull mode
+ * 
+ * @return true if pin in push-pull mode, otherwise false
+ * 
+ * @ingroup pin
+ */
+#define is_pin_mode_push_pull(port, port_pin)           ( ((port ## M1 & (1 << port_pin)) == 0) && ((port ## M0 & (1 << port_pin)) != 0) )
+
+/**
+ * @brief Assert pin in input-only mode
+ * 
+ * @return true if pin in input-only mode, otherwise false
+ * 
+ * @ingroup pin
+ */
+#define is_pin_mode_input_only(port, port_pin)          ( ((port ## M1 & (1 << port_pin)) != 0) && ((port ## M0 & (1 << port_pin)) == 0) )
+
+/**
+ * @brief Assert pin in open-drain mode
+ * 
+ * @return true if pin in open-drain mode, otherwise false
+ * 
+ * @ingroup pin
+ */
+#define is_pin_mode_open_drain(port, port_pin)          ( ((port ## M1 & (1 << port_pin)) != 0) && ((port ## M0 & (1 << port_pin)) != 0) )
+
 #endif

@@ -20,4 +20,10 @@ env.Default(
         source = 'pin_open_drain_init_example.c',
         target = 'pin_open_drain_init_example.rel'
     ),
+
+    env.Object(
+        source = 'pin_mode_example.c',
+        target = 'pin_mode_example.rel'
+    ),
+
 )

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['none_0',['NONE',['../group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2',1,'frequency.h']]]
+  ['only_5ffalling_5fedge_0',['ONLY_FALLING_EDGE',['../group__interrupts.html#gga97fc91f85abe6139a7f24fbdff35c7e7a80874c2f638b4611a7d53723ff1f6c3d',1,'interrupt.h']]]
 ];

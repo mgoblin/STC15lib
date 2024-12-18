@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['only_5ffalling_5fedge_0',['ONLY_FALLING_EDGE',['../group__interrupts.html#gga97fc91f85abe6139a7f24fbdff35c7e7a80874c2f638b4611a7d53723ff1f6c3d',1,'interrupt.h']]],
-  ['open_5fdrain_1',['OPEN_DRAIN',['../group__pin.html#gga77fecc1883f27c095012fbe56345c4dbaa90b62c376675b218528e2b0b0a7f123',1,'pin.h']]]
+  ['p1_5f6_0',['P1_6',['../group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d',1,'frequency.h']]],
+  ['p5_5f4_1',['P5_4',['../group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050',1,'frequency.h']]]
 ];

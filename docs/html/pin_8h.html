@@ -67,23 +67,24 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">pin.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="sys_8h_source.html">sys.h</a>&gt;</code><br />
 <code>#include &lt;bits.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for pin.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="pin_8h__incl.png" border="0" usemap="#ainclude_2pin_8h" alt=""/></div>
 <map name="ainclude_2pin_8h" id="ainclude_2pin_8h">
-<area shape="rect" title=" " alt="" coords="83,5,189,32"/>
+<area shape="rect" title=" " alt="" coords="127,5,233,32"/>
 <area shape="rect" href="sys_8h.html" title=" " alt="" coords="27,80,83,107"/>
 <area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="107,80,165,107"/>
 <area shape="rect" title=" " alt="" coords="190,80,261,107"/>
+<area shape="rect" title=" " alt="" coords="285,80,368,107"/>
 <area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="5,155,104,181"/>
 <area shape="rect" title=" " alt="" coords="9,229,100,256"/>
 </map>
@@ -105,16 +106,18 @@ Macros</h2></td></tr>
 <tr class="memitem:gaa910c8f32cf6f9311e1cba9490d14e1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pin.html#gaa910c8f32cf6f9311e1cba9490d14e1e">pin_open_drain_init</a>(port,  port_pin)</td></tr>
 <tr class="memdesc:gaa910c8f32cf6f9311e1cba9490d14e1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init pin in in OPEN_DRAIN mode.  <a href="group__pin.html#gaa910c8f32cf6f9311e1cba9490d14e1e">More...</a><br /></td></tr>
 <tr class="separator:gaa910c8f32cf6f9311e1cba9490d14e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:ga77fecc1883f27c095012fbe56345c4db"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pin.html#ga77fecc1883f27c095012fbe56345c4db">pin_mode_t</a> { <a class="el" href="group__pin.html#gga77fecc1883f27c095012fbe56345c4dba0a465cd42328f5aa68187ef48068f28f">QUASI_BIDIRECTIONAL</a>
-, <a class="el" href="group__pin.html#gga77fecc1883f27c095012fbe56345c4dbaea46e9bba1ef3eb31a3fbce1b54ef028">PUSH_PULL</a>
-, <a class="el" href="group__pin.html#gga77fecc1883f27c095012fbe56345c4dba43f7bf0671721675491951f22119e4ff">INPUT_ONLY</a>
-, <a class="el" href="group__pin.html#gga77fecc1883f27c095012fbe56345c4dbaa90b62c376675b218528e2b0b0a7f123">OPEN_DRAIN</a>
- }</td></tr>
-<tr class="memdesc:ga77fecc1883f27c095012fbe56345c4db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pin in/out modes enum.  <a href="group__pin.html#ga77fecc1883f27c095012fbe56345c4db">More...</a><br /></td></tr>
-<tr class="separator:ga77fecc1883f27c095012fbe56345c4db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ce65960da81e2096cef7951b22e3f92"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pin.html#ga1ce65960da81e2096cef7951b22e3f92">is_pin_mode_quasi_bidiretional</a>(port,  port_pin)&#160;&#160;&#160;( ((port ## M1 &amp; (1 &lt;&lt; port_pin)) == 0) &amp;&amp; ((port ## M0 &amp; (1 &lt;&lt; port_pin)) == 0 ) )</td></tr>
+<tr class="memdesc:ga1ce65960da81e2096cef7951b22e3f92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert pin in quasy-bidirectional mode.  <a href="group__pin.html#ga1ce65960da81e2096cef7951b22e3f92">More...</a><br /></td></tr>
+<tr class="separator:ga1ce65960da81e2096cef7951b22e3f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5393080f6642943ff3dad636e34ba999"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pin.html#ga5393080f6642943ff3dad636e34ba999">is_pin_mode_push_pull</a>(port,  port_pin)&#160;&#160;&#160;( ((port ## M1 &amp; (1 &lt;&lt; port_pin)) == 0) &amp;&amp; ((port ## M0 &amp; (1 &lt;&lt; port_pin)) != 0) )</td></tr>
+<tr class="memdesc:ga5393080f6642943ff3dad636e34ba999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert pin in push-pull mode.  <a href="group__pin.html#ga5393080f6642943ff3dad636e34ba999">More...</a><br /></td></tr>
+<tr class="separator:ga5393080f6642943ff3dad636e34ba999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c965893e34bbd35c674a74c16fcbbee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pin.html#ga3c965893e34bbd35c674a74c16fcbbee">is_pin_mode_input_only</a>(port,  port_pin)&#160;&#160;&#160;( ((port ## M1 &amp; (1 &lt;&lt; port_pin)) != 0) &amp;&amp; ((port ## M0 &amp; (1 &lt;&lt; port_pin)) == 0) )</td></tr>
+<tr class="memdesc:ga3c965893e34bbd35c674a74c16fcbbee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert pin in input-only mode.  <a href="group__pin.html#ga3c965893e34bbd35c674a74c16fcbbee">More...</a><br /></td></tr>
+<tr class="separator:ga3c965893e34bbd35c674a74c16fcbbee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae99dd668582e93526f0305c36bf58bcc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pin.html#gae99dd668582e93526f0305c36bf58bcc">is_pin_mode_open_drain</a>(port,  port_pin)&#160;&#160;&#160;( ((port ## M1 &amp; (1 &lt;&lt; port_pin)) != 0) &amp;&amp; ((port ## M0 &amp; (1 &lt;&lt; port_pin)) != 0) )</td></tr>
+<tr class="memdesc:gae99dd668582e93526f0305c36bf58bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert pin in open-drain mode.  <a href="group__pin.html#gae99dd668582e93526f0305c36bf58bcc">More...</a><br /></td></tr>
+<tr class="separator:gae99dd668582e93526f0305c36bf58bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
