@@ -62,7 +62,8 @@ typedef enum
  * Set mode for pin in port. For example for pin P10 call this routine with 
  * P1, 0 arguments 
  * 
- * @port pin port for example P1, P3 and etc
+ * @param port pin port for example P1, P3 and etc
+ * @param port_pin uint8_t pin mumber in port 0..7 
  * 
  * @ingroup pin
  */
@@ -73,7 +74,7 @@ typedef enum
 }
 
 /**
- * @brief Init pin in in PUSH-PULL mode
+ * @brief Init pin in in PUSH_PULL mode
  * @details 
  * Push-pull output(strong pull-up output，current can be up to 20mA, 
  * resistors need to be added to restrict current 
@@ -81,7 +82,8 @@ typedef enum
  * Set mode for pin in port. For example for pin P10 call this routine with 
  * P1, 0 arguments 
  * 
- * @port pin port for example P1, P3 and etc
+ * @param port pin port for example P1, P3 and etc
+ * @param port_pin uint8_t pin mumber in port 0..7 
  * 
  * @ingroup pin
  */
@@ -91,5 +93,22 @@ typedef enum
     bit_set(port ## M0, 1 << port_pin);                         \
 }
 
+/**
+ * @brief Init pin in in INPUT_ONLY mode
+ * @details Input only output have high impedance 
+ * 
+ * Set mode for pin in port. For example for pin P10 call this routine with 
+ * P1, 0 arguments 
+ * 
+ * @param port pin port for example P1, P3 and etc
+ * @param port_pin uint8_t pin mumber in port 0..7 
+ * 
+ * @ingroup pin
+ */
+#define pin_input_only_init(port, port_pin)                     \
+{                                                               \
+    bit_set(port ## M1, 1 << port_pin);                         \
+    bit_clr(port ## M0, ~(1 << port_pin));                      \
+}
 
 #endif
