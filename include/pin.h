@@ -111,4 +111,22 @@ typedef enum
     bit_clr(port ## M0, ~(1 << port_pin));                      \
 }
 
+/**
+ * @brief Init pin in in OPEN_DRAIN mode
+ * @details internal pull-up resistors should be disabled 
+ * and external pull-up resistors need to join. 
+ * 
+ * Set mode for pin in port. For example for pin P10 call this routine with 
+ * P1, 0 arguments 
+ * 
+ * @param port pin port for example P1, P3 and etc
+ * @param port_pin uint8_t pin mumber in port 0..7 
+ * 
+ * @ingroup pin
+ */
+#define pin_open_drain_init(port, port_pin)                     \
+{                                                               \
+    bit_set(port ## M1, 1 << port_pin);                         \
+    bit_set(port ## M0, 1 << port_pin);                         \
+}
 #endif

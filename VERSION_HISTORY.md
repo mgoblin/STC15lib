@@ -74,7 +74,8 @@
 
 Next releases todo
 * TODO Implement pin module
-* TODO Implememnt timer_modeX_direct_init(TxH, TxL) for direct set TLx, THx registers 
+* TODO Implememnt timer_modeX_direct_init(TxH, TxL) for direct set TLx, THx registers
+* TODO Ыuppress compiler output for examples on non verbose build 
 * TODO Implement counters
 * TODO Optimize timer2 baud rate calculation. Use precalculated array of baudrates
 * TODO Implement P5.4 as MCU reset source
