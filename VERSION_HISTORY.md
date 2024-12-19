@@ -78,6 +78,7 @@ Next releases todo
 * TODO Does not recompile examples every time. Compile only when it changed.
 * TODO Suppress compiler output for examples on non verbose build 
 * TODO Implement counters
+* TODO Implement UART
 * TODO Optimize timer2 baud rate calculation. Use precalculated array of baudrates
 * TODO Implement P5.4 as MCU reset source
 

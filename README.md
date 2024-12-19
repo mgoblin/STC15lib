@@ -98,7 +98,7 @@ void main()
 | Timer        | Timer control routines           | EXPERIMENTAL       |
 | UART         | Serial port routines             | INITIAL SUPPORT    |
 | Watchdog timer | Watchdog timer routines        | READY              |
-| Pin          | Pin as digital in/out routines   | INITIAL SUPPORT    |
+| Pin          | Pin as digital in/out routines   | READY              |
 
 Other modules does not implemented yet.
 
