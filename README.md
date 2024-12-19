@@ -26,7 +26,7 @@ board = STC15W408AS
 lib_deps = https://github.com/mgoblin/STC15lib#0.8.0
 ```
 
-Where is 0.7.0 STC15 hardware library github tag version.
+Where is 0.8.0 STC15 hardware library github tag version.
 
 Each released library version has the tag in github repository. 
 
