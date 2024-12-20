@@ -73,6 +73,9 @@
 * Enhanced description of project for indexing in google/yandex and so on search engines
 * Pin module implemented
 
+0.9
+* 
+
 Next releases todo
 * TODO Implement timer_modeX_direct_init(TxH, TxL) for direct set TLx, THx registers
 * TODO Does not recompile examples every time. Compile only when it changed.

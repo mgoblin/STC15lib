@@ -1,6 +1,6 @@
 {
     "name": "STC15 hardware",
-    "version": "0.8.0",
+    "version": "0.9.0",
     "description": "Hardware abstractions library for STC15 MCU series. Contains C headers described MCU and methods for bits manipulation, delay, uart and etc",
     "keywords": "8051, STC15, intel_mcs51",
     "repository":
