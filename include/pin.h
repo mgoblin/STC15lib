@@ -127,4 +127,56 @@
  */
 #define is_pin_mode_open_drain(port, port_pin)          ( ((port ## M1 & (1 << port_pin)) != 0) && ((port ## M0 & (1 << port_pin)) != 0) )
 
+/**
+ * @brief Set quasy-bidirectional mode for all port pins
+ * 
+ * @param port pin port for example P1, P3 and etc
+ * 
+ * @ingroup pin
+ */
+#define port_mode_quasi_bidiretional(port)  \
+{                                           \
+    port ## M1 = 0x00;                      \
+    port ## M0 = 0x00;                      \
+}
+
+/**
+ * @brief Set pull-push mode for all port pins
+ * 
+ * @param port pin port for example P1, P3 and etc
+ * 
+ * @ingroup pin
+ */
+#define port_mode_pull_push(port)           \
+{                                           \
+    port ## M1 = 0x00;                      \
+    port ## M0 = 0xff;                      \
+}
+
+/**
+ * @brief Set input-only mode for all port pins
+ * 
+ * @param port pin port for example P1, P3 and etc
+ * 
+ * @ingroup pin
+ */
+#define port_mode_input_only(port)          \
+{                                           \
+    port ## M1 = 0xff;                      \
+    port ## M0 = 0x00;                      \
+}
+
+/**
+ * @brief Set open-drain mode for all port pins
+ * 
+ * @param port pin port for example P1, P3 and etc
+ * 
+ * @ingroup pin
+ */
+#define port_mode_open_drain(port)          \
+{                                           \
+    port ## M1 = 0xff;                      \
+    port ## M0 = 0xff;                      \
+}
+
 #endif

@@ -74,7 +74,7 @@
 * Pin module implemented
 
 0.9
-* 
+* TODO implement pin module set port mode routines 
 
 Next releases todo
 * TODO Implement timer_modeX_direct_init(TxH, TxL) for direct set TLx, THx registers
