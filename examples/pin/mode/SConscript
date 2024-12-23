@@ -26,4 +26,9 @@ env.Default(
         target = 'pin_mode_example.rel'
     ),
 
+    env.Object(
+        source = 'port_mode_init_example.c',
+        target = 'port_mode_init_example.rel'
+    ),
+
 )
