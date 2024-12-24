@@ -26,4 +26,9 @@ env.Default(
         target = 'timer0_mode0_reload_example.rel'
     ),
 
+    env.Object(
+        source = 'timer0_mode0_direct_start_example.c',
+        target = 'timer0_mode0_direct_start_example.rel'
+    ),
+
 )

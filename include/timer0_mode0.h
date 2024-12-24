@@ -169,7 +169,7 @@
  * 
  * Timer rerun after overloaded and interupt handler called. 
  * 
- * Dont mix call timer0__mode0_start call with 
+ * Dont mix call timer0_mode0_start call with 
  * void timer0_mode0_delay call
  * 
  * @param ticks uint16_t timer ticks count. 
@@ -183,6 +183,32 @@
     TF0 = 0; /* clear timer overload flag */                                            \
     TR0 = 1; /* set run timer flag */                                                   \
 } 
+
+/**
+ * @brief Run timer0 with direct set of TL0, TH0 registers.
+ * @details Before run timer0_mode0_12T_init or timer0_mode0_1T_init should be called.
+ * 
+ * After run program flow not blocked and interrupt will raised when timer is overloaded.
+ * Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code.
+ * Interrupt is raised when TH0 = TL0 = 0xff + 1 (TH0, TL0 overload)
+ * 
+ * Timer rerun after overloaded and interupt handler called. 
+ * 
+ * Dont mix call timer0_mode0_direct_start call with 
+ * void timer0_mode0_delay call
+ * 
+ * @param th0 uint8_t TH0 value
+ * @param tl0 uint8_t TL0 value
+ * 
+ * @ingroup timer0_mode0
+ */
+#define timer0_mode0_direct_start(th0, tl0)                                             \
+{                                                                                       \
+    timer0_mode0_direct_reload(th0, tl0);                                               \
+                                                                                        \
+    TF0 = 0;                                                                            \
+    TR0 = 1;                                                                            \
+}
 
 /**
  * @brief Stop timer0.

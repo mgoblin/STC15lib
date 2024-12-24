@@ -112,6 +112,9 @@ $(function() {
 <tr class="memitem:ga7574c9933d116e0d9de0bf3c00f8c088"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode0.html#ga7574c9933d116e0d9de0bf3c00f8c088">timer0_mode0_start</a>(ticks)</td></tr>
 <tr class="memdesc:ga7574c9933d116e0d9de0bf3c00f8c088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0.  <a href="group__timer0__mode0.html#ga7574c9933d116e0d9de0bf3c00f8c088">More...</a><br /></td></tr>
 <tr class="separator:ga7574c9933d116e0d9de0bf3c00f8c088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c076c9153c196138ca3f338c433b9b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode0.html#ga5c076c9153c196138ca3f338c433b9b0">timer0_mode0_direct_start</a>(th0,  tl0)</td></tr>
+<tr class="memdesc:ga5c076c9153c196138ca3f338c433b9b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0 with direct set of TL0, TH0 registers.  <a href="group__timer0__mode0.html#ga5c076c9153c196138ca3f338c433b9b0">More...</a><br /></td></tr>
+<tr class="separator:ga5c076c9153c196138ca3f338c433b9b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga19069e53f93e22f625f23ced218d6fef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode0.html#ga19069e53f93e22f625f23ced218d6fef">timer0_mode0_stop</a>()</td></tr>
 <tr class="memdesc:ga19069e53f93e22f625f23ced218d6fef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop timer0.  <a href="group__timer0__mode0.html#ga19069e53f93e22f625f23ced218d6fef">More...</a><br /></td></tr>
 <tr class="separator:ga19069e53f93e22f625f23ced218d6fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -360,6 +363,53 @@ $(function() {
 
 </div>
 </div>
+<a id="ga5c076c9153c196138ca3f338c433b9b0" name="ga5c076c9153c196138ca3f338c433b9b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5c076c9153c196138ca3f338c433b9b0">&#9670;&nbsp;</a></span>timer0_mode0_direct_start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer0_mode0_direct_start</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">th0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">tl0&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                                                                       \</div>
+<div class="line">    timer0_mode0_direct_reload(th0, tl0);                                               \</div>
+<div class="line">                                                                                        \</div>
+<div class="line">    TF0 = 0;                                                                            \</div>
+<div class="line">    TR0 = 1;                                                                            \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Run timer0 with direct set of TL0, TH0 registers. </p>
+<p >Before run timer0_mode0_12T_init or timer0_mode0_1T_init should be called.</p>
+<p >After run program flow not blocked and interrupt will raised when timer is overloaded. Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code. Interrupt is raised when TH0 = TL0 = 0xff + 1 (TH0, TL0 overload)</p>
+<p >Timer rerun after overloaded and interupt handler called.</p>
+<p >Dont mix call timer0_mode0_direct_start call with void timer0_mode0_delay call</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">th0</td><td>uint8_t TH0 value </td></tr>
+    <tr><td class="paramname">tl0</td><td>uint8_t TL0 value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="gac46b16166e317f423687b0b744310035" name="gac46b16166e317f423687b0b744310035"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gac46b16166e317f423687b0b744310035">&#9670;&nbsp;</a></span>timer0_mode0_open_gate</h2>
 
@@ -440,7 +490,7 @@ $(function() {
 <p >Before run timer0_mode0_12T_init or timer0_mode0_1T_init should be called.</p>
 <p >After run program flow not blocked and interrupt will raised when timer is overloaded. Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code.</p>
 <p >Timer rerun after overloaded and interupt handler called.</p>
-<p >Dont mix call timer0__mode0_start call with void timer0_mode0_delay call</p>
+<p >Dont mix call timer0_mode0_start call with void timer0_mode0_delay call</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ticks</td><td>uint16_t timer ticks count. </td></tr>
