@@ -143,8 +143,8 @@
  */
 #define timer0_mode2_reload(ticks)                          \
 {                                                           \
-    /* Load timer high and low bytes value */               \
-    TL0 = (0xff - ticks);                                   \
+    /* Load timer value */                                  \
+    TH0 = (0xff - ticks);                                   \
 }
 
 /**
