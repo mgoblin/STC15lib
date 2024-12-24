@@ -29,8 +29,8 @@ void led_off()
 
 void main()
 {
-    port_mode_input_only_init(P1);
-    port_mode_input_only_init(P3);
+    pin_port_input_only_init(P1);
+    pin_port_input_only_init(P3);
 
     while (1)
     {

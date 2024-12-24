@@ -6,4 +6,24 @@ env.Default(
         target = 'timer0_mode0_1T_interrupt_example.rel'
     ),
 
+    env.Object(
+        source = 'timer0_mode0_12T_interrupt_example.c',
+        target = 'timer0_mode0_12T_interrupt_example.rel'
+    ),
+
+    env.Object(
+        source = 'timer0_mode0_direct_reload_example.c',
+        target = 'timer0_mode0_direct_reload_example.rel'
+    ),
+
+    env.Object(
+        source = 'timer0_mode0_pause_by_gate_example.c',
+        target = 'timer0_mode0_pause_by_gate_example.rel'
+    ),
+
+    env.Object(
+        source = 'timer0_mode0_reload_example.c',
+        target = 'timer0_mode0_reload_example.rel'
+    ),
+
 )

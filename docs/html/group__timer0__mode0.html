@@ -106,6 +106,9 @@ $(function() {
 <tr class="memitem:ga066d9b7d58ad51887708842a84aea36d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode0.html#ga066d9b7d58ad51887708842a84aea36d">timer0_mode0_reload</a>(ticks)</td></tr>
 <tr class="memdesc:ga066d9b7d58ad51887708842a84aea36d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload timer0 mode0 ticks on the fly.  <a href="group__timer0__mode0.html#ga066d9b7d58ad51887708842a84aea36d">More...</a><br /></td></tr>
 <tr class="separator:ga066d9b7d58ad51887708842a84aea36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac8d1c30034fad4f9c65ee70de6e1d6c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode0.html#gac8d1c30034fad4f9c65ee70de6e1d6c2">timer0_mode0_direct_reload</a>(th0,  tl0)</td></tr>
+<tr class="memdesc:gac8d1c30034fad4f9c65ee70de6e1d6c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload timer0 mode0 timer TL0 and TH0 on the fly.  <a href="group__timer0__mode0.html#gac8d1c30034fad4f9c65ee70de6e1d6c2">More...</a><br /></td></tr>
+<tr class="separator:gac8d1c30034fad4f9c65ee70de6e1d6c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7574c9933d116e0d9de0bf3c00f8c088"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode0.html#ga7574c9933d116e0d9de0bf3c00f8c088">timer0_mode0_start</a>(ticks)</td></tr>
 <tr class="memdesc:ga7574c9933d116e0d9de0bf3c00f8c088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0.  <a href="group__timer0__mode0.html#ga7574c9933d116e0d9de0bf3c00f8c088">More...</a><br /></td></tr>
 <tr class="separator:ga7574c9933d116e0d9de0bf3c00f8c088"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -299,7 +302,7 @@ $(function() {
 <div class="line">    }                                                                   \</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__timer0__mode0_html_ga2a99233df8668e561f71da8db499f4b0"><div class="ttname"><a href="group__timer0__mode0.html#ga2a99233df8668e561f71da8db499f4b0">is_timer0_mode0_gate_opened</a></div><div class="ttdeci">#define is_timer0_mode0_gate_opened()</div><div class="ttdoc">Get timer starting gate state.</div><div class="ttdef"><b>Definition:</b> timer0_mode0.h:119</div></div>
-<div class="ttc" id="agroup__timer0__mode0_html_ga7574c9933d116e0d9de0bf3c00f8c088"><div class="ttname"><a href="group__timer0__mode0.html#ga7574c9933d116e0d9de0bf3c00f8c088">timer0_mode0_start</a></div><div class="ttdeci">#define timer0_mode0_start(ticks)</div><div class="ttdoc">Run timer0.</div><div class="ttdef"><b>Definition:</b> timer0_mode0.h:164</div></div>
+<div class="ttc" id="agroup__timer0__mode0_html_ga7574c9933d116e0d9de0bf3c00f8c088"><div class="ttname"><a href="group__timer0__mode0.html#ga7574c9933d116e0d9de0bf3c00f8c088">timer0_mode0_start</a></div><div class="ttdeci">#define timer0_mode0_start(ticks)</div><div class="ttdoc">Run timer0.</div><div class="ttdef"><b>Definition:</b> timer0_mode0.h:179</div></div>
 <div class="ttc" id="agroup__timer0__mode0_html_gac46b16166e317f423687b0b744310035"><div class="ttname"><a href="group__timer0__mode0.html#gac46b16166e317f423687b0b744310035">timer0_mode0_open_gate</a></div><div class="ttdeci">#define timer0_mode0_open_gate()</div><div class="ttdoc">Open timer starting gate.</div><div class="ttdef"><b>Definition:</b> timer0_mode0.h:110</div></div>
 </div><!-- fragment -->
 <p>Run timer0 mode0 once and wait with program flow blocking timer not finished. </p>
@@ -309,6 +312,48 @@ $(function() {
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ticks</td><td>uint16_t timer ticks count. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gac8d1c30034fad4f9c65ee70de6e1d6c2" name="gac8d1c30034fad4f9c65ee70de6e1d6c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac8d1c30034fad4f9c65ee70de6e1d6c2">&#9670;&nbsp;</a></span>timer0_mode0_direct_reload</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer0_mode0_direct_reload</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">th0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">tl0&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                                           \</div>
+<div class="line">    TL0 = tl0;                                              \</div>
+<div class="line">    TH0 = th0;                                              \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Reload timer0 mode0 timer TL0 and TH0 on the fly. </p>
+<p >Reload is available in modes 0, 2, 3.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">th0</td><td>uint8_t TH0 value </td></tr>
+    <tr><td class="paramname">tl0</td><td>uint8_t TL0 value </td></tr>
   </table>
   </dd>
 </dl>
