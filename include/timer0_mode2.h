@@ -186,7 +186,32 @@
                                                                                         \
     TF0 = 0; /* clear timer overload flag */                                            \
     TR0 = 1; /* set run timer flag */                                                   \
-} 
+}
+
+/**
+ * @brief Run timer0 with direct set timer value.
+ * @details Before run timer0_mode2_12T_init or timer0_mode2_1T_init should be called.
+ * 
+ * After run program flow not blocked and interrupt will raised when timer is overloaded.
+ * Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code.
+ * 
+ * Timer rerun after overloaded and interupt handler called. 
+ * Timer overload occurs on timer value is 0xff + 1.
+ * 
+ * Dont mix call timer0__mode2_start call with 
+ * void timer0_mode2_delay call
+ * 
+ * @param th0 uint8_t timer value
+ * 
+ * @ingroup timer0_mode2
+ */
+#define timer0_mode2_direct_start(th0)                                                  \
+{                                                                                       \
+    timer0_mode2_direct_reload(th0);                                                           \
+                                                                                        \
+    TF0 = 0;                                                                            \
+    TR0 = 1;                                                                            \
+}
 
 /**
  * @brief Stop timer0.

@@ -10,4 +10,9 @@ env.Default(
         source = 'timer0_mode2_direct_reload_example.c',
         target = 'timer0_mode2_direct_reload_example.rel'
     ),
+
+    env.Object(
+        source = 'timer0_mode2_direct_start_example.c',
+        target = 'timer0_mode2_direct_start_example.rel'
+    ),
 )

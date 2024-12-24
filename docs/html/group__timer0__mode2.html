@@ -112,6 +112,9 @@ $(function() {
 <tr class="memitem:gac955f4bae81d5251a493473220638405"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2.html#gac955f4bae81d5251a493473220638405">timer0_mode2_start</a>(ticks)</td></tr>
 <tr class="memdesc:gac955f4bae81d5251a493473220638405"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0.  <a href="group__timer0__mode2.html#gac955f4bae81d5251a493473220638405">More...</a><br /></td></tr>
 <tr class="separator:gac955f4bae81d5251a493473220638405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb6eee48c3c80af72744b41c2826fa3c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2.html#gaeb6eee48c3c80af72744b41c2826fa3c">timer0_mode2_direct_start</a>(th0)</td></tr>
+<tr class="memdesc:gaeb6eee48c3c80af72744b41c2826fa3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0 with direct set timer value.  <a href="group__timer0__mode2.html#gaeb6eee48c3c80af72744b41c2826fa3c">More...</a><br /></td></tr>
+<tr class="separator:gaeb6eee48c3c80af72744b41c2826fa3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1e408d252eb1ee56b5711c4de2b63775"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2.html#ga1e408d252eb1ee56b5711c4de2b63775">timer0_mode2_stop</a>()</td></tr>
 <tr class="memdesc:ga1e408d252eb1ee56b5711c4de2b63775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop timer0.  <a href="group__timer0__mode2.html#ga1e408d252eb1ee56b5711c4de2b63775">More...</a><br /></td></tr>
 <tr class="separator:ga1e408d252eb1ee56b5711c4de2b63775"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -327,6 +330,42 @@ $(function() {
 
 <p>Reload timer0 mode2 TL0 on the fly. </p>
 <p >Reload is available in modes 0, 2, 3.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">th0</td><td>uint8_t timer value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaeb6eee48c3c80af72744b41c2826fa3c" name="gaeb6eee48c3c80af72744b41c2826fa3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeb6eee48c3c80af72744b41c2826fa3c">&#9670;&nbsp;</a></span>timer0_mode2_direct_start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer0_mode2_direct_start</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">th0</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                                                                       \</div>
+<div class="line">    timer0_mode2_direct_reload(th0);                                                           \</div>
+<div class="line">                                                                                        \</div>
+<div class="line">    TF0 = 0;                                                                            \</div>
+<div class="line">    TR0 = 1;                                                                            \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Run timer0 with direct set timer value. </p>
+<p >Before run timer0_mode2_12T_init or timer0_mode2_1T_init should be called.</p>
+<p >After run program flow not blocked and interrupt will raised when timer is overloaded. Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code.</p>
+<p >Timer rerun after overloaded and interupt handler called. Timer overload occurs on timer value is 0xff + 1.</p>
+<p >Dont mix call timer0__mode2_start call with void timer0_mode2_delay call</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">th0</td><td>uint8_t timer value </td></tr>
