@@ -148,6 +148,16 @@
 }
 
 /**
+ * @brief Reload timer0 mode2 TL0 on the fly
+ * @details Reload is available in modes 0, 2, 3.
+ * 
+ * @param th0 uint8_t timer value
+ * 
+ * @ingroup timer0_mode2
+ */
+#define timer0_mode2_direct_reload(th0) (TH0 = th0)
+
+/**
  * @brief Run timer0.
  * @details Before run timer0_mode2_12T_init or timer0_mode2_1T_init should be called.
  *  

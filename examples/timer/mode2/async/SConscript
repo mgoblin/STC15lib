@@ -6,4 +6,8 @@ env.Default(
         target = 'timer0_mode2_12T_interrupt_example.rel'
     ),
 
+    env.Object(
+        source = 'timer0_mode2_direct_reload_example.c',
+        target = 'timer0_mode2_direct_reload_example.rel'
+    ),
 )
