@@ -163,6 +163,21 @@
     T2H = (value >> 8) & 0xff;                                  \
 }
 
+/**
+ * @brief Reload timer2 T2H and T2L registers on the fly
+ * @details Reload is available in mode 0 only
+ * 
+ * @param th2 uint8_t T2H value
+ * @param tl2 uint8_t T2L value
+ * 
+ * @ingroup timer2_mode0
+ */
+#define timer2_mode0_direct_reload(th2, tl2)                    \
+{                                                               \
+    T2H = th2;                                                  \
+    T2L = tl2;                                                  \
+}
+
 ///@}
 
 /** @name baud rate enable/disable

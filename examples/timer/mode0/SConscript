@@ -1,3 +1,4 @@
 Import("env")
 
 SConscript('timer0/SConscript', exports = 'env')
+SConscript('timer2/SConscript', exports = 'env')

@@ -14,7 +14,7 @@ void main()
 {
     timer2_mode0_12T_init(); // init timer2
     // enable output of timer to P3.0 pin. The signal is _|‾|_|‾|_
-    timer2_mode0_enable_P30_output(true); 
+    timer2_mode0_enable_P30_output(); 
 
     timer2_mode0_start(0xffff); //start timer
 

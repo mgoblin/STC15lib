@@ -1,0 +1,21 @@
+Import("env")
+
+SConscript('uart1_baud_rate/SConscript', exports = 'env')
+
+env.Default(
+    env.Object(
+        source = 'timer2_mode0_1T_interrupt_example.c',
+        target = 'timer2_mode0_1T_interrupt_example.rel'
+    ),
+
+    env.Object(
+        source = 'timer2_mode0_P30_output_example.c',
+        target = 'timer2_mode0_P30_output_example.rel'
+    ),
+
+    env.Object(
+        source = 'timer2_mode0_reload_example.c',
+        target = 'timer2_mode0_reload_example.rel'
+    ),
+
+)

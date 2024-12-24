@@ -14,7 +14,7 @@ void main()
 
     while (1)
     {
-        enable_timer2_mode0_as_uart1_baud_rate(!LED);
+        timer2_mode0_enable_as_uart1_baud_rate();
         LED = is_timer2_mode0_as_uart1_baud_rate_enabled();
         delay_ms(1000);
     }

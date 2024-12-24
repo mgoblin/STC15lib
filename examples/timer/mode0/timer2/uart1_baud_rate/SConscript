@@ -1,0 +1,8 @@
+Import("env")
+
+env.Default(
+    env.Object(
+        source = 'timer2_mode0_uart1_baud_rate.c',
+        target = 'timer2_mode0_uart1_baud_rate.rel'
+    ),
+)
