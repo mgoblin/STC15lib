@@ -18,4 +18,9 @@ env.Default(
         target = 'timer2_mode0_reload_example.rel'
     ),
 
+    env.Object(
+        source = 'timer2_mode0_direct_reload_example.c',
+        target = 'timer2_mode0_direct_reload_example.rel'
+    ),    
+
 )
