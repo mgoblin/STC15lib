@@ -134,7 +134,7 @@
  * 
  * @ingroup pin
  */
-#define port_mode_quasi_bidiretional_init(port)     \
+#define pin_port_quasi_bidiretional_init(port)      \
 {                                                   \
     port ## M1 = 0x00;                              \
     port ## M0 = 0x00;                              \
@@ -147,7 +147,7 @@
  * 
  * @ingroup pin
  */
-#define port_mode_pull_push_init(port)             \
+#define pin_port_pull_push_init(port)              \
 {                                                  \
     port ## M1 = 0x00;                             \
     port ## M0 = 0xff;                             \
@@ -160,7 +160,7 @@
  * 
  * @ingroup pin
  */
-#define port_mode_input_only_init(port)             \
+#define pin_port_input_only_init(port)              \
 {                                                   \
     port ## M1 = 0xff;                              \
     port ## M0 = 0x00;                              \
@@ -173,7 +173,7 @@
  * 
  * @ingroup pin
  */
-#define port_mode_open_drain_init(port)             \
+#define pin_port_open_drain_init(port)              \
 {                                                   \
     port ## M1 = 0xff;                              \
     port ## M0 = 0xff;                              \
