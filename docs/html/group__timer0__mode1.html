@@ -341,7 +341,7 @@ Macros</h2></td></tr>
 <p >Before run timer0_mode1_12T_init or timer0_mode1_1T_init should be called.</p>
 <p >After run program flow not blocked and interrupt will raised when timer is overloaded. Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code.</p>
 <p >Timer rerun after overloaded and interupt handler called. Timer overload occurs on [TH0, TL0] = 0xff + 1.</p>
-<p >Dont mix call timer0__mode1_start call with void timer0_mode1_delay call</p>
+<p >Dont mix call timer0__mode1_direct_start call with void timer0_mode1_delay call</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">th0</td><td>uint8_t TH0 value </td></tr>

@@ -365,7 +365,7 @@ $(function() {
 <p >Before run timer0_mode2_12T_init or timer0_mode2_1T_init should be called.</p>
 <p >After run program flow not blocked and interrupt will raised when timer is overloaded. Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code.</p>
 <p >Timer rerun after overloaded and interupt handler called. Timer overload occurs on timer value is 0xff + 1.</p>
-<p >Dont mix call timer0__mode2_start call with void timer0_mode2_delay call</p>
+<p >Dont mix call timer0_direct_mode2_start call with void timer0_mode2_delay call</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">th0</td><td>uint8_t timer value </td></tr>
@@ -453,7 +453,7 @@ $(function() {
 <p >Before run timer0_mode2_12T_init or timer0_mode2_1T_init should be called.</p>
 <p >After run program flow not blocked and interrupt will raised when timer is overloaded. Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code.</p>
 <p >Timer rerun after overloaded and interupt handler called.</p>
-<p >Dont mix call timer0__mode2_start call with void timer0_mode2_delay call</p>
+<p >Dont mix call timer0_mode2_start call with void timer0_mode2_delay call</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ticks</td><td>uint8_t timer ticks count. </td></tr>

@@ -173,7 +173,7 @@
  * 
  * Timer rerun after overloaded and interupt handler called. 
  * 
- * Dont mix call timer0__mode2_start call with 
+ * Dont mix call timer0_mode2_start call with 
  * void timer0_mode2_delay call
  * 
  * @param ticks uint8_t timer ticks count. 
@@ -198,7 +198,7 @@
  * Timer rerun after overloaded and interupt handler called. 
  * Timer overload occurs on timer value is 0xff + 1.
  * 
- * Dont mix call timer0__mode2_start call with 
+ * Dont mix call timer0_direct_mode2_start call with 
  * void timer0_mode2_delay call
  * 
  * @param th0 uint8_t timer value

@@ -145,7 +145,7 @@
  * Timer rerun after overloaded and interupt handler called. 
  * Timer overload occurs on [TH0, TL0] = 0xff + 1.
  * 
- * Dont mix call timer0__mode1_start call with 
+ * Dont mix call timer0__mode1_direct_start call with 
  * void timer0_mode1_delay call
  * 
  * @param th0 uint8_t TH0 value
