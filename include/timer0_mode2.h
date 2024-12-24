@@ -34,6 +34,13 @@
 
 #include <timer_structs.h>
 
+/** 
+ * @brief INT0 pin definition
+ * 
+ * @ingroup timer0_mode1
+ */
+#define INT0 P32
+
 //============================== Timer0 mode2 declarations begin ==========================
 /** @name init
  *  Timer initializaion functions 

@@ -77,9 +77,9 @@
 * Pin module set port mode routines implemented
 * Fix examples/mode0/timer2 compilation
 * Fix timer0_mode2_reload - TH0 value should be set, now used TL0
+* Fix INT0 should be defined in timer0 modes
 
 Next releases todo
-* Fix INT0 should be defined in timer module headers
 * TODO Implement timer_modeX_direct_*(TxH, TxL) for direct set TLx, THx registers
 * TODO Does not recompile examples every time. Compile only when it changed.
 * TODO Suppress compiler output for examples on non verbose build 

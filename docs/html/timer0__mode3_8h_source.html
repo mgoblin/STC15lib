@@ -81,102 +81,104 @@ $(function() {
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;timer_structs.h&gt;</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">//============================== Timer0 mode3 declarations begin ==========================</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"></span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga64d8ded0575b2d210373ea3ea27f3b18">   46</a></span><span class="preprocessor">#define timer0_mode3_12T_init()                 \</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">{                                               \</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">    enable_mcu_interrupts();                    \</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">    enable_timer0_interrupt();                  \</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">    TMOD &amp;= 0xf0;                               \</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">    TMOD |= 0x03;                               \</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">    bit_clr(AUXR, CBIT7);                       \</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">}</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga09998d2758eb5e87895a41551f3d6a31">   60</a></span><span class="preprocessor">#define timer0_mode3_1T_init()                  \</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">{                                               \</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">    enable_mcu_interrupts();                    \</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">    enable_timer0_interrupt();                  \</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">    TMOD &amp;= 0xf0;                               \</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">    TMOD |= 0x03;                               \</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">    bit_set(AUXR, SBIT7);                       \</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">}</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">//============================== Timer0 mode3 declarations end ============================</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga8ace46a84a250659d744d7aaf2543d02">   81</a></span><span class="preprocessor">#define timer0_mode3_enable_P35_output() (bit_set(INT_CLKO, SBIT0))</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga0b028423e19aeb135904704384022a9d">   88</a></span><span class="preprocessor">#define timer0_mode3_disable_P35_output() (bit_clr(INT_CLKO, CBIT0))</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="group__timer0__mode1.html#ga7521122e23c8d5c83b2a033b2505c86c">   41</a></span><span class="preprocessor">#define INT0 P32</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">//============================== Timer0 mode3 declarations begin ==========================</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment"></span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga64d8ded0575b2d210373ea3ea27f3b18">   53</a></span><span class="preprocessor">#define timer0_mode3_12T_init()                 \</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">{                                               \</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">    enable_mcu_interrupts();                    \</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">    enable_timer0_interrupt();                  \</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">    TMOD &amp;= 0xf0;                               \</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">    TMOD |= 0x03;                               \</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">    bit_clr(AUXR, CBIT7);                       \</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga09998d2758eb5e87895a41551f3d6a31">   67</a></span><span class="preprocessor">#define timer0_mode3_1T_init()                  \</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">{                                               \</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">    enable_mcu_interrupts();                    \</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">    enable_timer0_interrupt();                  \</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">    TMOD &amp;= 0xf0;                               \</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">    TMOD |= 0x03;                               \</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">    bit_set(AUXR, SBIT7);                       \</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">//============================== Timer0 mode3 declarations end ============================</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga8ace46a84a250659d744d7aaf2543d02">   88</a></span><span class="preprocessor">#define timer0_mode3_enable_P35_output() (bit_set(INT_CLKO, SBIT0))</span></div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga5531c418c37ba9debf04ef1ecb713670">   97</a></span><span class="preprocessor">#define is_timer0_mode3_P35_output_enabled() (test_if_bit_set(INT_CLKO, SBIT0))</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga7af0c5c41cf587331fc73b7cdd1df5f2">  105</a></span><span class="preprocessor">#define timer0_mode3_close_gate() (bit_set(TMOD, SBIT3))</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga4eef8d197453f432b66f3c5fe10d0fdc">  113</a></span><span class="preprocessor">#define timer0_mode3_open_gate() (bit_clr(TMOD, CBIT3))</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga164988a97d7aa1ca3e415a663ad5ecd3">  122</a></span><span class="preprocessor">#define is_timer0_mode3_gate_opened() (test_if_bit_cleared(TMOD, SBIT3))</span></div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment">//============================== Timer0 get mode, divider, pins declarations end =======</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment">//============================== Timer0 run/stop declarations start =====================</span></div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment"></span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga0b028423e19aeb135904704384022a9d">   95</a></span><span class="preprocessor">#define timer0_mode3_disable_P35_output() (bit_clr(INT_CLKO, CBIT0))</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga5531c418c37ba9debf04ef1ecb713670">  104</a></span><span class="preprocessor">#define is_timer0_mode3_P35_output_enabled() (test_if_bit_set(INT_CLKO, SBIT0))</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga7af0c5c41cf587331fc73b7cdd1df5f2">  112</a></span><span class="preprocessor">#define timer0_mode3_close_gate() (bit_set(TMOD, SBIT3))</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga4eef8d197453f432b66f3c5fe10d0fdc">  120</a></span><span class="preprocessor">#define timer0_mode3_open_gate() (bit_clr(TMOD, CBIT3))</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga164988a97d7aa1ca3e415a663ad5ecd3">  129</a></span><span class="preprocessor">#define is_timer0_mode3_gate_opened() (test_if_bit_cleared(TMOD, SBIT3))</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment">//============================== Timer0 get mode, divider, pins declarations end =======</span></div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#gac1d1b26c8977897b0c67e7a3b2f2b632">  143</a></span><span class="preprocessor">#define timer0_mode3_reload(ticks)                          \</span></div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="preprocessor">{                                                           \</span></div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="preprocessor">    uint16_t value = 0xffff - ticks;                        \</span></div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="preprocessor">    </span><span class="comment">/* Load timer high and low bytes value */</span><span class="preprocessor">               \</span></div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="preprocessor">    TL0 = value &amp; 0xff;                                     \</span></div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">    TH0 = (value &gt;&gt; 8) &amp; 0xff;                              \</span></div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="preprocessor">}</span></div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga1ed67291255f2927797d4d6eb7a1a1ee">  160</a></span><span class="preprocessor">#define timer0_mode3_direct_reload(th0, tl0)                \</span></div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="preprocessor">{                                                           \</span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="preprocessor">    TH0 = th0;                                              \</span></div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="preprocessor">    TL0 = tl0;                                              \</span></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="preprocessor">}</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga998ffba506f9bf9d1e252b861d6bece8">  182</a></span><span class="preprocessor">#define timer0_mode3_start(ticks)                                                       \</span></div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="preprocessor">{                                                                                       \</span></div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="preprocessor">    timer0_mode3_reload(ticks);                                                         \</span></div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="preprocessor">                                                                                        \</span></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="preprocessor">    TF0 = 0; </span><span class="comment">/* clear timer overload flag */</span><span class="preprocessor">                                            \</span></div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="preprocessor">    TR0 = 1; </span><span class="comment">/* set run timer flag */</span><span class="preprocessor">                                                   \</span></div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="preprocessor">} </span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga839eddc877098991cce7ecfa3db28f68">  198</a></span><span class="preprocessor">#define timer0_mode3_stop()                                 \</span></div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="preprocessor">{                                                           \</span></div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="preprocessor">    TR0 = 0; </span><span class="comment">/* clear run timer flag */</span><span class="preprocessor">                     \</span></div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="preprocessor">    TF0 = 0; </span><span class="comment">/* clear timer overload flag */</span><span class="preprocessor">                \</span></div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="preprocessor">}</span></div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#gabf95428e5822aa5534d2a5ad5f46bb10">  211</a></span><span class="preprocessor">#define is_timer0_mode3_started() (TR0 == 1 &amp;&amp; (is_timer0_mode3_gate_opened() || INT0 == 1))</span></div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="comment">//============================== Timer0 run/stop declarations end =======================</span></div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="comment">//============================== Timer0 run once declarations start =====================</span></div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="comment"></span> </div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#gad14aa9ea995bf75a4aa4422be1ef0af7">  236</a></span><span class="preprocessor">#define timer0_mode3_delay(ticks)                                       \</span></div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="preprocessor">{                                                                       \</span></div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="preprocessor">    bool is_gate_opened = is_timer0_mode3_gate_opened();                \</span></div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="preprocessor">                                                                        \</span></div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="preprocessor">    timer0_mode3_open_gate();                                           \</span></div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="preprocessor">                                                                        \</span></div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="preprocessor">    timer0_mode3_start(ticks);                                          \</span></div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="preprocessor">    </span><span class="comment">/* Waiting for timer overloaded (timer overload flag set to 1) */</span><span class="preprocessor">   \</span></div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="preprocessor">    while(!TF0)                                                         \</span></div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="preprocessor">    {                                                                   \</span></div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><span class="preprocessor">    }                                                                   \</span></div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="preprocessor">    timer0_mode3_stop();                                                \</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment">//============================== Timer0 run/stop declarations start =====================</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment"></span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#gac1d1b26c8977897b0c67e7a3b2f2b632">  150</a></span><span class="preprocessor">#define timer0_mode3_reload(ticks)                          \</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">{                                                           \</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">    uint16_t value = 0xffff - ticks;                        \</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="preprocessor">    </span><span class="comment">/* Load timer high and low bytes value */</span><span class="preprocessor">               \</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="preprocessor">    TL0 = value &amp; 0xff;                                     \</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="preprocessor">    TH0 = (value &gt;&gt; 8) &amp; 0xff;                              \</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga1ed67291255f2927797d4d6eb7a1a1ee">  167</a></span><span class="preprocessor">#define timer0_mode3_direct_reload(th0, tl0)                \</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="preprocessor">{                                                           \</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="preprocessor">    TH0 = th0;                                              \</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">    TL0 = tl0;                                              \</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga998ffba506f9bf9d1e252b861d6bece8">  189</a></span><span class="preprocessor">#define timer0_mode3_start(ticks)                                                       \</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="preprocessor">{                                                                                       \</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="preprocessor">    timer0_mode3_reload(ticks);                                                         \</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="preprocessor">                                                                                        \</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="preprocessor">    TF0 = 0; </span><span class="comment">/* clear timer overload flag */</span><span class="preprocessor">                                            \</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="preprocessor">    TR0 = 1; </span><span class="comment">/* set run timer flag */</span><span class="preprocessor">                                                   \</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="preprocessor">} </span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga839eddc877098991cce7ecfa3db28f68">  205</a></span><span class="preprocessor">#define timer0_mode3_stop()                                 \</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="preprocessor">{                                                           \</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">    TR0 = 0; </span><span class="comment">/* clear run timer flag */</span><span class="preprocessor">                     \</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor">    TF0 = 0; </span><span class="comment">/* clear timer overload flag */</span><span class="preprocessor">                \</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#gabf95428e5822aa5534d2a5ad5f46bb10">  218</a></span><span class="preprocessor">#define is_timer0_mode3_started() (TR0 == 1 &amp;&amp; (is_timer0_mode3_gate_opened() || INT0 == 1))</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="comment">//============================== Timer0 run/stop declarations end =======================</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="comment">//============================== Timer0 run once declarations start =====================</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="comment"></span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#gad14aa9ea995bf75a4aa4422be1ef0af7">  243</a></span><span class="preprocessor">#define timer0_mode3_delay(ticks)                                       \</span></div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="preprocessor">{                                                                       \</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="preprocessor">    bool is_gate_opened = is_timer0_mode3_gate_opened();                \</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><span class="preprocessor">                                                                        \</span></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="preprocessor">    timer0_mode3_open_gate();                                           \</span></div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="preprocessor">                                                                        \</span></div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="preprocessor">    if (!is_gate_opened)                                                \</span></div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="preprocessor">    {                                                                   \</span></div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="preprocessor">        timer0_mode3_close_gate();                                      \</span></div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="preprocessor">    }                                                                   \</span></div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="preprocessor">}</span></div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="comment">//============================== Timer0 run once declarations end =========================</span></div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="preprocessor">    timer0_mode3_start(ticks);                                          \</span></div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="preprocessor">    </span><span class="comment">/* Waiting for timer overloaded (timer overload flag set to 1) */</span><span class="preprocessor">   \</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="preprocessor">    while(!TF0)                                                         \</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="preprocessor">    {                                                                   \</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="preprocessor">    }                                                                   \</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="preprocessor">    timer0_mode3_stop();                                                \</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="preprocessor">                                                                        \</span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="preprocessor">    if (!is_gate_opened)                                                \</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="preprocessor">    {                                                                   \</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="preprocessor">        timer0_mode3_close_gate();                                      \</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="preprocessor">    }                                                                   \</span></div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="comment">//============================== Timer0 run once declarations end =========================</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="ainterrupt_8h_html"><div class="ttname"><a href="interrupt_8h.html">interrupt.h</a></div></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
