@@ -11,4 +11,9 @@ env.Default(
         target = 'timer0_mode1_pause_by_gate_example.rel'
     ),
 
+    env.Object(
+        source = 'timer0_mode1_direct_start_example.c',
+        target = 'timer0_mode1_direct_start_example.rel'
+    ),
+
 )
