@@ -149,6 +149,21 @@
 }
 
 /**
+ * @brief Reload timer0 mode3 TH0 and TL0 on the fly
+ * @details Reload is available in modes 0, 2, 3.
+ * 
+ * @param th0 uint8_t TH0 value
+ * @param tl0 uint8_t TL0 value
+ * 
+ * @ingroup timer0_mode3
+ */
+#define timer0_mode3_direct_reload(th0, tl0)                \
+{                                                           \
+    TH0 = th0;                                              \
+    TL0 = tl0;                                              \
+}
+
+/**
  * @brief Run timer0.
  * @details Before run timer0_mode3_12T_init or timer0_mode3_1T_init should be called.
  *  
