@@ -19,8 +19,6 @@ void timerISR() __interrupt(1)
 
 void main()
 {    
-    uart1_init(9600);
-    
     timer0_mode0_1T_init();
     timer0_mode0_enable_P35_output();
 
@@ -30,6 +28,7 @@ void main()
 
     timer0_mode0_start(TICKS);
 
+    uart1_init(9600);
     while (1) 
     {
        printf_fast("100 * timer frequency is %lu Hz\n", timer_frequency); 

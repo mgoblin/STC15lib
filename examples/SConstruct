@@ -1,41 +1,22 @@
-import sys
-from os.path import join
-
-from SCons.Script import ARGUMENTS, AlwaysBuild, Default, DefaultEnvironment
-
-env = DefaultEnvironment()
-
-env.Replace(
-    AR="sdar",
-    AS="sdas8051",
-    CC="sdcc",
-    LD="sdld",
-    RANLIB="sdranlib",
-    OBJCOPY="sdobjcopy",
-    OBJSUFFIX=".rel",
-    LIBSUFFIX=".lib",
-    PROGNAME="firmware",
-    PROGSUFFIX=".hex",
-)
+Import("env")
 
 env.Append(
-    CFLAGS=["--std-sdcc11"],
     CCFLAGS=[
-        "--opt-code-size",  # optimize for size
-        "--peep-return",  # peephole optimization for return instructions
-        "-I../include"
+        "-Iinclude"
     ]
 )
 
-SConscript('bits/SConscript', exports = 'env', variant_dir='build/bits')
-SConscript('chip_id/SConscript', exports = 'env', variant_dir='build/chip_id')
-SConscript('delay/SConscript', exports = 'env', variant_dir='build/delay')
-SConscript('frequency/SConscript', exports = 'env', variant_dir='build/frequency')
-SConscript('interrupt/SConscript', exports = 'env', variant_dir='build/interrupt')
-SConscript('memory_dumper/SConscript', exports = 'env', variant_dir='build/memory_dumper')
-SConscript('power_management/SConscript', exports = 'env', variant_dir='build/power_management')
-SConscript('reset/SConscript', exports = 'env', variant_dir='build/reset')
-SConscript('timer/SConscript', exports = 'env', variant_dir='build/timer')
-SConscript('uart/SConscript', exports = 'env', variant_dir='build/uart')
-SConscript('wdt/SConscript', exports = 'env', variant_dir='build/wdt')
-SConscript('pin/SConscript', exports = 'env', variant_dir='build/pin')
+base_dir = env.subst("$BUILD_DIR") + "/examples"
+
+SConscript('bits/SConscript', exports = 'env', variant_dir= base_dir + "/bits")
+SConscript('chip_id/SConscript', exports = 'env', variant_dir= base_dir + '/chip_id')
+SConscript('delay/SConscript', exports = 'env', variant_dir= base_dir + '/delay')
+SConscript('frequency/SConscript', exports = 'env', variant_dir= base_dir + '/frequency')
+SConscript('interrupt/SConscript', exports = 'env', variant_dir= base_dir + '/interrupt')
+SConscript('memory_dumper/SConscript', exports = 'env', variant_dir= base_dir + '/memory_dumper')
+SConscript('power_management/SConscript', exports = 'env', variant_dir= base_dir + '/power_management')
+SConscript('reset/SConscript', exports = 'env', variant_dir= base_dir + '/reset')
+SConscript('timer/SConscript', exports = 'env', variant_dir= base_dir + '/timer')
+SConscript('uart/SConscript', exports = 'env', variant_dir= base_dir + '/uart')
+SConscript('wdt/SConscript', exports = 'env', variant_dir= base_dir + '/wdt')
+SConscript('pin/SConscript', exports = 'env', variant_dir= base_dir + '/pin')
