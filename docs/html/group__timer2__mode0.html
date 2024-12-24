@@ -95,6 +95,9 @@ $(function() {
 <tr class="memitem:ga4896ed979b875120c708dee3dc0db480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga4896ed979b875120c708dee3dc0db480">timer2_mode0_start</a>(ticks)</td></tr>
 <tr class="memdesc:ga4896ed979b875120c708dee3dc0db480"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer2 mode0 with interrupt support.  <a href="group__timer2__mode0.html#ga4896ed979b875120c708dee3dc0db480">More...</a><br /></td></tr>
 <tr class="separator:ga4896ed979b875120c708dee3dc0db480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafacdcb23b05aa235b8bafaa3d2832a47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#gafacdcb23b05aa235b8bafaa3d2832a47">timer2_mode0_direct_start</a>(th0,  tl0)</td></tr>
+<tr class="memdesc:gafacdcb23b05aa235b8bafaa3d2832a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer2 mode0 with direct set of TH0 and TL0 registers.  <a href="group__timer2__mode0.html#gafacdcb23b05aa235b8bafaa3d2832a47">More...</a><br /></td></tr>
+<tr class="separator:gafacdcb23b05aa235b8bafaa3d2832a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga86d1f3d5c229e55f341ed316b21e71ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga86d1f3d5c229e55f341ed316b21e71ab">timer2_mode0_stop</a>()</td></tr>
 <tr class="memdesc:ga86d1f3d5c229e55f341ed316b21e71ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop timer2 mode0.  <a href="group__timer2__mode0.html#ga86d1f3d5c229e55f341ed316b21e71ab">More...</a><br /></td></tr>
 <tr class="separator:ga86d1f3d5c229e55f341ed316b21e71ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -283,6 +286,51 @@ $(function() {
   <table class="params">
     <tr><td class="paramname">th2</td><td>uint8_t T2H value </td></tr>
     <tr><td class="paramname">tl2</td><td>uint8_t T2L value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gafacdcb23b05aa235b8bafaa3d2832a47" name="gafacdcb23b05aa235b8bafaa3d2832a47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafacdcb23b05aa235b8bafaa3d2832a47">&#9670;&nbsp;</a></span>timer2_mode0_direct_start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer2_mode0_direct_start</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">th0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">tl0&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                                           \</div>
+<div class="line">    timer2_mode0_direct_reload(th0, tl0);                   \</div>
+<div class="line">                                                            \</div>
+<div class="line">    bit_set(AUXR, SBIT4);                                   \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Run timer2 mode0 with direct set of TH0 and TL0 registers. </p>
+<p >Before run timer2_mode0_12T_init or timer2_mode0_1T_init should be called.</p>
+<p >After run program flow not blocked and interrupt will raised when timer is overloaded. Interrupt handler void timer2ISR(void) __interrupt(12) should be defined in user code.</p>
+<p >Timer rerun occurs after overloading and interuppt handler calling. Timer overloading occurs when [TH0, TL0] = 0xff + 1</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">th0</td><td>uint8_t TH0 value </td></tr>
+    <tr><td class="paramname">tl0</td><td>uint8_t TL0 value </td></tr>
   </table>
   </dd>
 </dl>

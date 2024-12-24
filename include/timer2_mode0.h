@@ -129,6 +129,29 @@
 }
 
 /**
+ * @brief Run timer2 mode0 with direct set of TH0 and TL0 registers.
+ * @details 
+ * Before run timer2_mode0_12T_init or timer2_mode0_1T_init should be called.
+ * 
+ * After run program flow not blocked and interrupt will raised when timer is overloaded.
+ * Interrupt handler void timer2ISR(void) __interrupt(12) should be defined in user code.
+ * 
+ * Timer rerun occurs after overloading and interuppt handler calling. 
+ * Timer overloading occurs when [TH0, TL0] = 0xff + 1
+ * 
+ * @param th0 uint8_t TH0 value
+ * @param tl0 uint8_t TL0 value
+ * 
+ * @ingroup timer2_mode0
+ */
+#define timer2_mode0_direct_start(th0, tl0)                 \
+{                                                           \
+    timer2_mode0_direct_reload(th0, tl0);                   \
+                                                            \
+    bit_set(AUXR, SBIT4);                                   \
+}
+
+/**
  * @brief Stop timer2 mode0.
  * @details Before stop timer2_mode0_start should be called. 
  * 
