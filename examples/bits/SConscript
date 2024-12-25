@@ -1,8 +1,12 @@
 Import("env")
 
+def pre_update_print(target, level, status, update, dependencies):
+    print("PreUpdate")
+
 env.Default (
     env.Object(
         source = Glob('*.c'), 
-        target = 'bits.rel'
+        target = 'bits.rel',
+        pre_update = pre_update_print
     )
 )

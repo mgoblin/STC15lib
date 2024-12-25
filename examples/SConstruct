@@ -5,6 +5,10 @@ env.Append(
         "-Iinclude"
     ]
 )
+verbose = int(ARGUMENTS.get('PIOVERBOSE', 0))
+
+if verbose == 0:
+    env.SetOption('silent', 1)
 
 base_dir = env.subst("$BUILD_DIR") + "/examples"
 
