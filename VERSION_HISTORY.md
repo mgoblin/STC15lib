@@ -83,7 +83,10 @@
 * Compiler output suppressed for examples building in non verbose mode
 
 1.0
-* Fix compilation on Windows OS. Rename aux to auxiliary 
+* Fix compilation on Windows OS. Rename aux to auxiliary
+* Fix doxygen warnings
+* Wrap multiline macro with do .. while(0) - in work
+* Update lib version in README.md - in work  
 
 Next releases todo
 * TODO Implement counters
