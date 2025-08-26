@@ -1,8 +1,13 @@
 <map id="include/interrupt.h" name="include/interrupt.h">
-<area shape="rect" id="node1" title=" " alt="" coords="69,5,211,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,88,107"/>
-<area shape="rect" id="node3" href="$sys_8h.html" title=" " alt="" coords="112,80,168,107"/>
-<area shape="rect" id="node6" href="$bits_8h_source.html" title=" " alt="" coords="192,80,251,107"/>
-<area shape="rect" id="node4" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="91,155,189,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="95,229,185,256"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="69,5,211,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,88,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,33,74,72,71,68,123,29"/>
+<area shape="rect" id="Node000003" href="$sys_8h.html" title=" " alt="" coords="112,79,168,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="143,31,143,65,137,65,137,31"/>
+<area shape="rect" id="Node000006" href="$bits_8h_source.html" title=" " alt="" coords="192,79,251,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="155,29,200,68,196,72,151,33"/>
+<area shape="rect" id="Node000004" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="91,152,189,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="143,104,143,138,137,138,137,104"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="95,225,185,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="143,178,143,212,137,212,137,178"/>
 </map>

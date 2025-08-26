@@ -1,9 +1,16 @@
 <map id="include/delay.h" name="include/delay.h">
-<area shape="rect" id="node1" title=" " alt="" coords="24,5,143,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,155,76,181"/>
-<area shape="rect" id="node3" href="$frequency_8h.html" title=" " alt="" coords="79,80,176,107"/>
-<area shape="rect" id="node4" href="$sys_8h.html" title=" " alt="" coords="101,155,157,181"/>
-<area shape="rect" id="node7" href="$bits_8h_source.html" title=" " alt="" coords="181,155,239,181"/>
-<area shape="rect" id="node5" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="79,229,178,256"/>
-<area shape="rect" id="node6" title=" " alt="" coords="83,304,174,331"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="24,5,143,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,152,76,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,32,51,139,45,138,77,30"/>
+<area shape="rect" id="Node000003" href="$frequency_8h.html" title=" " alt="" coords="79,79,176,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="93,30,115,66,111,68,88,32"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="115,106,67,145,64,141,112,102"/>
+<area shape="rect" id="Node000004" href="$sys_8h.html" title=" " alt="" coords="101,152,157,177"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="130,104,131,138,126,139,125,104"/>
+<area shape="rect" id="Node000007" href="$bits_8h_source.html" title=" " alt="" coords="181,152,239,177"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="142,102,188,141,184,145,139,106"/>
+<area shape="rect" id="Node000005" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="79,225,178,251"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="131,178,131,212,126,212,126,178"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="83,299,174,324"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="131,251,131,285,126,285,126,251"/>
 </map>

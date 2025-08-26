@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['delay_0',['Delay',['../group__delays.html',1,'']]]
+  ['chipid_0',['ChipID',['../group__chip__id.html',1,'']]],
+  ['common_1',['common',['../group__timer__to__ms.html',1,'Timer Aux common'],['../group__timer__common.html',1,'Timer common']]]
 ];

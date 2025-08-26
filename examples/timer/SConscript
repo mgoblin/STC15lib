@@ -1,6 +1,6 @@
 Import("env")
 
-SConscript('aux/SConscript', exports = 'env')
+SConscript('auxiliary/SConscript', exports = 'env')
 SConscript('common/SConscript', exports = 'env')
 SConscript('mode0/SConscript', exports = 'env')
 SConscript('mode1/SConscript', exports = 'env')

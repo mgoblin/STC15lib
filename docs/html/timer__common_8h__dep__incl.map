@@ -1,6 +1,9 @@
 <map id="include/timer_common.h" name="include/timer_common.h">
-<area shape="rect" id="node1" title=" " alt="" coords="99,5,283,32"/>
-<area shape="rect" id="node2" href="$timer0__to__ms_8h.html" title=" " alt="" coords="5,80,180,107"/>
-<area shape="rect" id="node3" href="$timer2__to__ms_8h.html" title=" " alt="" coords="204,80,379,107"/>
-<area shape="rect" id="node4" href="$uart_8h.html" title=" " alt="" coords="236,155,347,181"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="99,5,283,31"/>
+<area shape="rect" id="Node000002" href="$timer0__to__ms_8h.html" title=" " alt="" coords="5,79,180,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,41,110,81,107,76,163,36"/>
+<area shape="rect" id="Node000003" href="$timer2__to__ms_8h.html" title=" " alt="" coords="204,79,379,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="220,36,277,76,273,81,217,41"/>
+<area shape="rect" id="Node000004" href="$uart_8h.html" title=" " alt="" coords="236,152,347,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="294,118,294,152,289,152,289,118"/>
 </map>

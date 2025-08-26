@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['reset_0',['Reset',['../group__mcu__reset.html',1,'']]]
+  ['management_0',['Power management',['../group__power__management.html',1,'']]],
+  ['mode0_1',['mode0',['../group__timer0__mode0.html',1,'Timer0 Mode0'],['../group__timer2__mode0.html',1,'Timer2 Mode0']]],
+  ['mode1_2',['Timer0 Mode1',['../group__timer0__mode1.html',1,'']]],
+  ['mode2_3',['Timer0 Mode2',['../group__timer0__mode2.html',1,'']]],
+  ['mode3_4',['Timer0 Mode3',['../group__timer0__mode3.html',1,'']]]
 ];

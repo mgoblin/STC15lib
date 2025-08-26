@@ -1,8 +1,13 @@
 <map id="include/frequency.h" name="include/frequency.h">
-<area shape="rect" id="node1" title=" " alt="" coords="55,5,203,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,76,107"/>
-<area shape="rect" id="node3" href="$sys_8h.html" title=" " alt="" coords="101,80,157,107"/>
-<area shape="rect" id="node6" href="$bits_8h_source.html" title=" " alt="" coords="181,80,239,107"/>
-<area shape="rect" id="node4" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="79,155,178,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="83,229,174,256"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="55,5,203,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,76,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,33,67,72,64,68,113,29"/>
+<area shape="rect" id="Node000003" href="$sys_8h.html" title=" " alt="" coords="101,79,157,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="131,31,131,65,126,65,126,31"/>
+<area shape="rect" id="Node000006" href="$bits_8h_source.html" title=" " alt="" coords="181,79,239,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="143,29,188,68,185,72,140,33"/>
+<area shape="rect" id="Node000004" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="79,152,178,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="131,104,131,138,126,138,126,104"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="83,225,174,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="131,178,131,212,126,212,126,178"/>
 </map>

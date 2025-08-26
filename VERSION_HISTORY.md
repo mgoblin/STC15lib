@@ -80,7 +80,10 @@
 * Fix INT0 should be defined in timer0 modes
 * timerX_modeX_direct_{reload, start}(TxH, TxL) for direct set TLx, THx registers implemented
 * Does not recompile examples every time. Compile only when it changed
-* Compiler output suppressed for examples building in non verbose mode 
+* Compiler output suppressed for examples building in non verbose mode
+
+1.0
+* Fix compilation on Windows OS. Rename aux to auxiliary 
 
 Next releases todo
 * TODO Implement counters

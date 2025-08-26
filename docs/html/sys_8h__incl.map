@@ -1,5 +1,7 @@
 <map id="include/sys.h" name="include/sys.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,112,32"/>
-<area shape="rect" id="node2" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="9,80,108,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="13,155,104,181"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,112,31"/>
+<area shape="rect" id="Node000002" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="9,79,108,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,31,61,65,56,65,56,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="13,152,104,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="61,104,61,138,56,138,56,104"/>
 </map>
