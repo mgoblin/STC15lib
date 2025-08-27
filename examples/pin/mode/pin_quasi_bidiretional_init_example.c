@@ -17,6 +17,6 @@ void main()
 
     while (1)
     {
-        printf_tiny("PxM1 = 0x%x, PxM0 = 0x%x\n", P3M1, P3M0); // P3M1 = P3M0 = 0xFD
+        printf_tiny("PxM1 = 0x%x, PxM0 = 0x%x\r\n", P3M1, P3M0); // P3M1 = P3M0 = 0xFD
     }
 }
