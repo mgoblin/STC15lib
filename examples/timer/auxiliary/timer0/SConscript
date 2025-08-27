@@ -16,14 +16,14 @@ env.Default(
         ['timer0_12T_freq_uint16_example.c', 'uart.c']
     ),  
 
-    env.Object(
-        source = 'timer0_12T_ticks_example.c',
-        target = 'timer0_12T_ticks_example.rel'
+    env.Program(
+        'timer0_12T_ticks_example',
+        ['timer0_12T_ticks_example.c', 'uart.c']
     ),    
 
-    env.Object(
-        source = 'timer0_ticks_to_ms_example.c',
-        target = 'timer0_ticks_to_ms_example.rel'
+    env.Program(
+        'timer0_ticks_to_ms_example',
+        ['timer0_ticks_to_ms_example.c', 'uart.c']
     ),    
 
 )

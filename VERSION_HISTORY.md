@@ -99,7 +99,7 @@
     * timer
         * aux timer0
 * Wrap multiline macro with do .. while(0) - in work
-* Fix examples/timer/auxiliary/timer0/timer0_12T_freq_uint16_example.c. Its print garbage.
+* Fix examples/timer/auxiliary/timer0/timer0_12T_freq_uint16_example.c. Its print garbage. And fix other freq and ticks - incorrect calculation.
 * Update lib version in README.md - in work  
 
 Next releases todo

@@ -42,7 +42,7 @@ void main()
     uart1_init(9600);
     while(1) 
     {
-        printf_tiny("Ticks for 2500 Hz and freq_divider %u is 0x%x\n", freq_divider, ticks);
-        printf_fast("Vice versa 100 * frequency is %lu\n", freq);
+        printf_tiny("Ticks for 2500 Hz and freq_divider %u is 0x%x\r\n", freq_divider, ticks);
+        printf_fast("Vice versa 100 * frequency is %lu\r\n", freq);
     }
 }
