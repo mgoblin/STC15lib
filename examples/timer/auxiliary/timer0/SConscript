@@ -11,9 +11,9 @@ env.Default(
         ['timer0_12T_freq_uint8_example.c', 'uart.c']
     ),    
 
-    env.Object(
-        source = 'timer0_12T_freq_uint16_example.c',
-        target = 'timer0_12T_freq_uint16_example.rel'
+    env.Program(
+        'timer0_12T_freq_uint16_example',
+        ['timer0_12T_freq_uint16_example.c', 'uart.c']
     ),  
 
     env.Object(
