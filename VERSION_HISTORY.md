@@ -83,7 +83,7 @@
 * Compiler output suppressed for examples building in non verbose mode
 
 0.10.0
-* Fix compilation on Windows OS. Rename aux to auxiliary
+* Fix compilation on Windows OS. Rename folder from aux to auxiliary
 * Fix doxygen warnings
 * Build examples hex
     * bits_example
