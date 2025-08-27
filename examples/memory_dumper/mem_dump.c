@@ -56,7 +56,7 @@ void main()
         char str_buffer[3];
 
         // print dump header
-        print_str("      0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F\n");
+        print_str("      0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F\r\n");
 
         for(uint8_t row = 0; row < row_count; row++)
         {
@@ -73,10 +73,10 @@ void main()
                 print_str(str_buffer);
                 address++;
             }
-            print_str("|\n");
+            print_str("|\r\n");
         }
 
         // print dump footer
-        print_str("      0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F\n");
+        print_str("      0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F\r\n");
     }
 } 

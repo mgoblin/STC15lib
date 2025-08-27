@@ -1,9 +1,5 @@
 Import("env")
 
 env.Default (
-    # env.Object(
-    #     source = Glob('*.c'), 
-    #     target = 'interrupt.rel'
-    # )
     env.Program('interrupt_example', ['interrupt_example.c'])
 )

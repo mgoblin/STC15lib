@@ -91,6 +91,7 @@
     * delay
     * frequency
     * interrupt
+    * memory dumper
 * Wrap multiline macro with do .. while(0) - in work
 * Update lib version in README.md - in work  
 
