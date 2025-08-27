@@ -11,9 +11,9 @@ env.Default(
         ['pin_push_pull_init_example.c', 'uart.c']
     ),
 
-    env.Object(
-        source = 'pin_input_only_init_example.c',
-        target = 'pin_input_only_init_example.rel'
+    env.Program(
+        'pin_input_only_init_example',
+        ['pin_input_only_init_example.c', 'uart.c']
     ),
 
     env.Object(
