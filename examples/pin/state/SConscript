@@ -1,8 +1,0 @@
-Import("env")
-
-env.Default(
-    env.Object(
-        source = "pin_read_state_example.c",
-        target = "pin_read_state_example.rel"
-    ),
-)

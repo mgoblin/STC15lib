@@ -1,0 +1,8 @@
+Import("env")
+
+env.Default(
+    env.Program(
+        "pin_read_value_example",
+        ["pin_read_value_example.c", 'uart.c']
+    ),
+)
