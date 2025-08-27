@@ -82,9 +82,11 @@
 * Does not recompile examples every time. Compile only when it changed
 * Compiler output suppressed for examples building in non verbose mode
 
-1.0
+0.10.0
 * Fix compilation on Windows OS. Rename aux to auxiliary
 * Fix doxygen warnings
+* Build examples hex
+    * bits_example
 * Wrap multiline macro with do .. while(0) - in work
 * Update lib version in README.md - in work  
 

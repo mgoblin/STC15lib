@@ -35,10 +35,10 @@ void main()
     uart1_init(9600);
     while(1)
     {
-        printf_tiny("original_byte = 0x%x\n", original_byte);
-        printf_tiny("bit_shift_left(original_byte, 1) = 0x%x\n", shifted_left_byte);
-        printf_tiny("bit_shift_right(original_byte, 1) = 0x%x\n", shifted_right_byte);
-        printf_tiny("bit_mask(2) = 0x%x\n", bit_mask_2);
+        printf_tiny("original_byte = 0x%x\r\n", original_byte);
+        printf_tiny("bit_shift_left(original_byte, 1) = 0x%x\r\n", shifted_left_byte);
+        printf_tiny("bit_shift_right(original_byte, 1) = 0x%x\r\n", shifted_right_byte);
+        printf_tiny("bit_mask(2) = 0x%x\r\n", bit_mask_2);
 
         delay_ms(1000);
     }

@@ -4,9 +4,5 @@ def pre_update_print(target, level, status, update, dependencies):
     print("PreUpdate")
 
 env.Default (
-    env.Object(
-        source = Glob('*.c'), 
-        target = 'bits.rel',
-        pre_update = pre_update_print
-    )
+    env.Program('bits_example', ['bits_example.c', 'uart.c'])
 )
