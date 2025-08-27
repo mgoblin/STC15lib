@@ -1,8 +1,5 @@
 Import("env")
 
 env.Default (
-    env.Object(
-        source = Glob('*.c'), 
-        target = 'delay.rel'
-    )
+    env.Program('delay_example', ['delay_example.c'])
 )
