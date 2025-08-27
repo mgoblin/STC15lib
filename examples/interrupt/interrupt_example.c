@@ -1,3 +1,8 @@
+/**
+ * How to use interrupt
+ * 
+ * This example blink LED using int0.
+ */
 #include <sys.h>
 #include <delay.h>
 #include <interrupt.h>

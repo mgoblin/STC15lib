@@ -227,7 +227,7 @@ Macros</h2></td></tr>
 <tr class="memitem:gaae1d82dd8aa3ed51e31de9cdf4d03eaa" id="r_gaae1d82dd8aa3ed51e31de9cdf4d03eaa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaae1d82dd8aa3ed51e31de9cdf4d03eaa">get_timer0_interrupt_priority</a>()&#160;&#160;&#160;(PT0)</td></tr>
 <tr class="memdesc:gaae1d82dd8aa3ed51e31de9cdf4d03eaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer0 interrupt priority.  <br /></td></tr>
 <tr class="separator:gaae1d82dd8aa3ed51e31de9cdf4d03eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7f4ce2c83eea0366ba67f8cc956aab8f" id="r_ga7f4ce2c83eea0366ba67f8cc956aab8f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga7f4ce2c83eea0366ba67f8cc956aab8f">set_spi_interrupt_priority</a>(priority)&#160;&#160;&#160;(priority == HIGH ? bit_set(IP2, SBIT1) : bit_clr(IP2, CBIT1))</td></tr>
+<tr class="memitem:ga7f4ce2c83eea0366ba67f8cc956aab8f" id="r_ga7f4ce2c83eea0366ba67f8cc956aab8f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga7f4ce2c83eea0366ba67f8cc956aab8f">set_spi_interrupt_priority</a>(priority)&#160;&#160;&#160;(priority == <a class="el" href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893">HIGH</a> ? bit_set(IP2, SBIT1) : bit_clr(IP2, CBIT1))</td></tr>
 <tr class="memdesc:ga7f4ce2c83eea0366ba67f8cc956aab8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set SPI interrupt priority.  <br /></td></tr>
 <tr class="separator:ga7f4ce2c83eea0366ba67f8cc956aab8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaacd1dbc81fe112ce6b25b664d07f2924" id="r_gaacd1dbc81fe112ce6b25b664d07f2924"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaacd1dbc81fe112ce6b25b664d07f2924">get_spi_interrupt_priority</a>()&#160;&#160;&#160;(test_if_bit_set(IP2, SBIT1))</td></tr>
@@ -1431,7 +1431,7 @@ Enumerations</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">priority</td><td>)</td>
-          <td>&#160;&#160;&#160;(priority == HIGH ? bit_set(IP2, SBIT1) : bit_clr(IP2, CBIT1))</td>
+          <td>&#160;&#160;&#160;(priority == <a class="el" href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893">HIGH</a> ? bit_set(IP2, SBIT1) : bit_clr(IP2, CBIT1))</td>
         </tr>
       </table>
 </div><div class="memdoc">
