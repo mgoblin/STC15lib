@@ -3,7 +3,7 @@
  * 
  * Start timer0 that wake up from idle mode.
  * In main routine LED blink. 
- * Idle freeze main until timer0 interrupt arrived.
+ * Idle freeze main routine until timer0 interrupt arrived.
  * 
  * As a result LED blink not with delay 250 ms period but on timer period.  
  */

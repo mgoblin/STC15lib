@@ -31,6 +31,6 @@ void main()
         LED = !LED;
 
         uint16_t clk_freq = wakeup_timer_internal_clk_freq();
-        printf_tiny("Wakeup freq %uHz\n", clk_freq);
+        printf_tiny("Wakeup freq %uHz\r\n", clk_freq);
     }
 }

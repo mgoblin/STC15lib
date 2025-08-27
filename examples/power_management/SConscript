@@ -1,12 +1,12 @@
 Import("env")
 
 env.Default (
-    env.Object(
-        source = 'powerdown_example.c', 
-        target = 'powerdown.rel'
+    env.Program(
+        'powerdown_example', 
+        ['powerdown_example.c', 'uart.c']
     ),
-    env.Object(
-        source = 'idle_example.c', 
-        target = 'idle.rel'
+    env.Program(
+        'idle_example', 
+        ['idle_example.c', 'uart.c']
     )
 )
