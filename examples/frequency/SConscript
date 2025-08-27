@@ -1,13 +1,14 @@
 Import("env")
 
 env.Default(
-    env.Object(
-        source = 'master_clock_output_example.c', 
-        target = 'master_clock_output.rel'
-    ),
+    # env.Object(
+    #     source = 'slowdown_example.c', 
+    #     target = 'slowdown.rel'
+    # ),
 
-    env.Object(
-        source = 'slowdown_example.c', 
-        target = 'slowdown.rel'
-    )
+    env.Program(
+        'master_clock_output_example', 
+        ['master_clock_output_example.c', 'uart.c']),
+
+    env.Program('slowdown_example', ['slowdown_example.c'])    
 )

@@ -8,9 +8,29 @@
 
 #define LED P10
 
-// functions forward declaration
-void _delay_ms_(uint16_t ms); // wrap delay_ms macro to reduce firmware size
-void print_master_clock_output_pin(); // print selected master clock output pin to UART1
+void _delay_ms_(uint16_t ms)
+{
+    delay_ms(ms);
+}
+
+void print_master_clock_output_pin()
+{
+    master_clock_output_pin_t pin = get_master_clock_output_pin();
+    switch (pin)
+    {
+        case P5_4:
+            printf_tiny("Master clock output pin 5.4\r\n");
+            break;
+
+        case P1_6:
+            printf_tiny("Master clock output pin 1.6\r\n");
+            break;    
+        
+        default:
+            printf_tiny("Master clock output pin disabled\r\n");
+            break;
+    }    
+}
 
 void main()
 {
@@ -35,28 +55,3 @@ void main()
         LED = !LED; // only for see that firmware is alive
     }
 }
-
-void _delay_ms_(uint16_t ms)
-{
-    delay_ms(ms);
-}
-
-void print_master_clock_output()
-{
-    master_clock_output_pin_t pin = get_master_clock_output_pin();
-    switch (pin)
-    {
-        case P5_4:
-            printf_tiny("Master clock output pin 5.4\r\n");
-            break;
-
-        case P1_6:
-            printf_tiny("Master clock output pin 1.6\r\n");
-            break;    
-        
-        default:
-            printf_tiny("Master clock output pin disabled\r\n");
-            break;
-    }    
-}
-
