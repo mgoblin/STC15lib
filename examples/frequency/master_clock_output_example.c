@@ -47,15 +47,15 @@ void print_master_clock_output()
     switch (pin)
     {
         case P5_4:
-            printf_tiny("Master clock output pin 5.4\n");
+            printf_tiny("Master clock output pin 5.4\r\n");
             break;
 
         case P1_6:
-            printf_tiny("Master clock output pin 1.6\n");
+            printf_tiny("Master clock output pin 1.6\r\n");
             break;    
         
         default:
-            printf_tiny("Master clock output pin disabled\n");
+            printf_tiny("Master clock output pin disabled\r\n");
             break;
     }    
 }
