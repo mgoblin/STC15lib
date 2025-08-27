@@ -21,14 +21,8 @@ env.Default(
         ['pin_open_drain_init_example.c', 'uart.c']
     ),
 
-    env.Object(
-        source = 'pin_mode_example.c',
-        target = 'pin_mode_example.rel'
+    env.Program(
+        'pin_mode_example',
+        ['pin_mode_example.c', 'uart.c']
     ),
-
-    env.Object(
-        source = 'port_mode_init_example.c',
-        target = 'port_mode_init_example.rel'
-    ),
-
 )

@@ -14,7 +14,7 @@ void print_pin_mode()
     bool is_push_pull = is_pin_mode_push_pull(P1, 0);
     bool is_input_only = is_pin_mode_input_only(P1, 0);
     bool is_open_drain = is_pin_mode_open_drain(P1, 0);
-    printf_tiny("q-bi: %d, push-pull: %d, input-only: %d, open-drain: %d\n", 
+    printf_tiny("q-bi: %d, push-pull: %d, input-only: %d, open-drain: %d\r\n", 
         is_quasi_bidiretional, 
         is_push_pull,
         is_input_only,
@@ -32,27 +32,27 @@ void main()
     while (1)
     {
         pin_quasi_bidiretional_init(P1, 0);
-        printf_tiny("Set q-bi mode\n");
+        printf_tiny("Set q-bi mode\r\n");
         print_pin_mode();
         f_delay_ms(200);
 
         pin_push_pull_init(P1, 0);
-        printf_tiny("Set push-pull mode\n");
+        printf_tiny("Set push-pull mode\r\n");
         print_pin_mode();
         f_delay_ms(200);
 
         pin_input_only_init(P1, 0);
-        printf_tiny("Set input-only mode\n");
+        printf_tiny("Set input-only mode\r\n");
         print_pin_mode();
         f_delay_ms(200);
 
         pin_open_drain_init(P1, 0);
-        printf_tiny("Set open-drain mode\n");
+        printf_tiny("Set open-drain mode\r\n");
         print_pin_mode();
         f_delay_ms(200);
 
         f_delay_ms(3000);
-        printf_tiny("\n");
+        printf_tiny("\r\n");
     }
     
 }
