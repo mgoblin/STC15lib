@@ -1,8 +1,5 @@
 Import("env")
 
 env.Default (
-    env.Object(
-        source = Glob('*.c'), 
-        target = 'chip_id.rel'
-    )
+    env.Program('chip_id', ['chip_id_example.c', 'uart.c'])
 )

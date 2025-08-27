@@ -15,7 +15,7 @@ void print_chip_id(const uint8_t *chip_id)
     {
         printf_tiny("%x", chip_id[i]);
     }
-    printf_tiny("\n");
+    printf_tiny("\r\n");
 }
 
 void main()

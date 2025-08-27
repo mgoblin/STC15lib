@@ -21,5 +21,5 @@ var searchData=
   ['get_5ftimer2_5fclock_5fdivider_18',['get_timer2_clock_divider',['../group__timer__common.html#ga4259384552df325973b81bd5425b7f4a',1,'timer_common.h']]],
   ['get_5ftimer2_5fmode_19',['get_timer2_mode',['../group__timer__common.html#ga68b53855ca88473c1f21651184ee2cc8',1,'timer_common.h']]],
   ['get_5fuart1_5finterrupt_5fpriority_20',['get_uart1_interrupt_priority',['../group__interrupts.html#ga856d0becba655d45b38340f214e0c82a',1,'interrupt.h']]],
-  ['getchar_21',['getchar',['../group__uart.html#ga3e29caa20f7cffe18f410f01278905a8',1,'getchar(void):&#160;uart.c'],['../group__uart.html#ga3e29caa20f7cffe18f410f01278905a8',1,'getchar(void):&#160;uart.c'],['../group__uart.html#ga3e29caa20f7cffe18f410f01278905a8',1,'getchar(void):&#160;uart.c']]]
+  ['getchar_21',['getchar',['../group__uart.html#ga3e29caa20f7cffe18f410f01278905a8',1,'getchar(void):&#160;uart.c'],['../group__uart.html#ga3e29caa20f7cffe18f410f01278905a8',1,'getchar(void):&#160;uart.c'],['../group__uart.html#ga3e29caa20f7cffe18f410f01278905a8',1,'getchar(void):&#160;uart.c'],['../group__uart.html#ga3e29caa20f7cffe18f410f01278905a8',1,'getchar(void):&#160;uart.c']]]
 ];
