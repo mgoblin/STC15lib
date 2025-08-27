@@ -96,6 +96,8 @@
     * pin value
     * power management
     * reset
+    * timer
+        * aux timer0
 * Wrap multiline macro with do .. while(0) - in work
 * Update lib version in README.md - in work  
 
