@@ -6,9 +6,9 @@ env.Default(
         ['pin_quasi_bidiretional_init_example.c', 'uart.c']
     ),
 
-    env.Object(
-        source = 'pin_push_pull_init_example.c',
-        target = 'pin_push_pull_init_example.rel'
+    env.Program(
+        'pin_push_pull_init_example',
+        ['pin_push_pull_init_example.c', 'uart.c']
     ),
 
     env.Object(
