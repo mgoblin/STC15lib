@@ -16,9 +16,9 @@ env.Default(
         ['pin_input_only_init_example.c', 'uart.c']
     ),
 
-    env.Object(
-        source = 'pin_open_drain_init_example.c',
-        target = 'pin_open_drain_init_example.rel'
+    env.Program(
+        'pin_open_drain_init_example',
+        ['pin_open_drain_init_example.c', 'uart.c']
     ),
 
     env.Object(
