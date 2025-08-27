@@ -1,8 +1,8 @@
 Import("env")
 
 env.Default (
-    env.Object(
-        source = Glob('*.c'), 
-        target = 'reset.rel'
+    env.Program(
+        'reset_example', 
+        ['reset_example.c']
     )
 )
