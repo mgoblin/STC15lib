@@ -21,6 +21,6 @@ void main()
     uart1_init(9600);
     while (1) 
     {
-        printf_tiny("Ticks is %x\n", ticks);
+        printf_tiny("Ticks is %x\r\n", ticks); // 81E7
     }
 }
