@@ -11,9 +11,9 @@ env.Default (
         ['timer2_ticks_to_ms_example.c', 'uart.c']
     ),
 
-    env.Object(
-        source = 'timer2_uart_baud_rate_example.c', 
-        target = 'timer2_uart_baud_rate_example.rel'
+    env.Program(
+        'timer2_uart_baud_rate_example', 
+        ['timer2_uart_baud_rate_example.c', 'uart.c']
     ),
 
 )

@@ -10,7 +10,7 @@
 
 #include <delay.h>
 
-#define UART_BAUDRATE 74880
+#define UART_BAUDRATE 9600
 
 void main()
 {
@@ -22,7 +22,7 @@ void main()
     
     while (1)
     {
-        printf_tiny("Calulated timer2 ticks value is 0x%x\n", ticks);
+        printf_tiny("Calulated timer2 ticks value is 0x%x\r\n", ticks); //0x120
         delay_ms(500);
     }
     
