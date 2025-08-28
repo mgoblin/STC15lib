@@ -15,7 +15,7 @@ void print_timer2_mode_and_divider()
     timer_clock_divider_t divider =  get_timer2_clock_divider();
     
     uart1_init(9600); // reinit uart because timer2 is used for uart timings
-    printf_tiny("Timer mode is %d and divider is %d\n", mode, divider);
+    printf_tiny("Timer mode is %d and divider is %d\r\n", mode, divider);
 }
 
 void timerISR() __interrupt(12)
