@@ -1,9 +1,9 @@
 Import("env")
 
 env.Default (
-    env.Object(
-        source = 'timer2_12T_freq_uint16_example.c', 
-        target = 'timer2_12T_freq_uint16_example.rel'
+    env.Program(
+        'timer2_12T_freq_uint16_example', 
+        ['timer2_12T_freq_uint16_example.c', 'uart.c']
     ),
 
     env.Object(
