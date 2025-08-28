@@ -1,5 +1,9 @@
 /**
- * How to start and stop timer0
+ * How to start and stop timer0.
+ * 
+ * Timer0 started with interrupt handler. Interrupt hanlder doing LED blinking.
+ * Main program stop and start timer0 using delay calls to freeze blinking.
+ * LED blinks during 1 second and then blinks during 2 seconds.  
  */
 
 #include <delay.h>
