@@ -6,9 +6,9 @@ env.Default (
         ['timer2_12T_freq_uint16_example.c', 'uart.c']
     ),
 
-    env.Object(
-        source = 'timer2_ticks_to_ms_example.c', 
-        target = 'timer2_ticks_to_ms_example.rel'
+    env.Program(
+        'timer2_ticks_to_ms_example', 
+        ['timer2_ticks_to_ms_example.c', 'uart.c']
     ),
 
     env.Object(

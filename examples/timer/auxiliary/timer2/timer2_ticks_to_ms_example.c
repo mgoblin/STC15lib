@@ -32,6 +32,6 @@ void main()
 
    uart1_init(9600);
    while (1) {
-        printf_fast("P30 time is %lu ms\n", ms);
+        printf_fast("P30 time is %lu ms\r\n", ms); // 5ms
    }
 }
