@@ -359,10 +359,10 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                       \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                    \</div>
 <div class="line">    CLK_DIV &amp;= 0xf8;                                    \</div>
 <div class="line">    CLK_DIV |= (divider_scale &amp; 0x07);                  \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Update and get master clock frequency divider (CLK_DIV bits [0..2]) </p>
 <p>Before setting divider value validate if divider scale is out of range 0..7.</p>
@@ -392,7 +392,7 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    {          \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                \</div>
 <div class="line">    if (pin == <a class="code hl_enumvalue" href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a>)                                \</div>
 <div class="line">    {                                               \</div>
 <div class="line">        disable_master_clock_output();              \</div>
@@ -405,7 +405,7 @@ Enumerations</h2></td></tr>
 <div class="line">    {                                               \</div>
 <div class="line">        bit_set(CLK_DIV, SBIT3);                    \</div>
 <div class="line">    }                                               \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 <div class="ttc" id="agroup__freq_html_ggae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d"><div class="ttname"><a href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d">P1_6</a></div><div class="ttdeci">@ P1_6</div><div class="ttdoc">output to pin 1.6</div><div class="ttdef"><b>Definition</b> frequency.h:138</div></div>
 <div class="ttc" id="agroup__freq_html_ggae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050"><div class="ttname"><a href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050">P5_4</a></div><div class="ttdeci">@ P5_4</div><div class="ttdoc">output to pin 5.4</div><div class="ttdef"><b>Definition</b> frequency.h:136</div></div>
 <div class="ttc" id="agroup__freq_html_ggae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2"><div class="ttname"><a href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a></div><div class="ttdeci">@ NONE</div><div class="ttdoc">output disabled</div><div class="ttdef"><b>Definition</b> frequency.h:134</div></div>

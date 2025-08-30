@@ -77,10 +77,10 @@
  * @ingroup freq
  */
 #define set_frequency_divider_scale(divider_scale)      \
-{                                                       \
+do {                                                    \
     CLK_DIV &= 0xf8;                                    \
     CLK_DIV |= (divider_scale & 0x07);                  \
-}
+} while(0)
 
 /**
  * @brief Enable master clock output. By default output set to P5.4 pin.
@@ -156,7 +156,8 @@ typedef enum
  */
 #pragma save
 #pragma disable_warning 126
-#define set_master_clock_output_pin(pin) {          \
+#define set_master_clock_output_pin(pin)            \
+do {                                                \
     if (pin == NONE)                                \
     {                                               \
         disable_master_clock_output();              \
@@ -169,7 +170,7 @@ typedef enum
     {                                               \
         bit_set(CLK_DIV, SBIT3);                    \
     }                                               \
-}
+} while(0)
 #pragma restore
 
 #endif 
