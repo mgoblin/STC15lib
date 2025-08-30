@@ -1,13 +1,13 @@
 Import('env')
 
 env.Default(
-    env.Object(
-        source = 'timer0_mode1_1T_sync_example.c',
-        target = 'timer0_mode1_1T_sync_example.rel'
+    env.Program(
+        'timer0_mode1_1T_sync_example',
+        ['timer0_mode1_1T_sync_example.c']
     ),
 
-    env.Object(
-        source = 'timer0_mode1_12T_sync_example.c',
-        target = 'timer0_mode1_12T_sync_example.rel'
+    env.Program(
+        'timer0_mode1_12T_sync_example',
+        ['timer0_mode1_12T_sync_example.c']
     ),
 )
