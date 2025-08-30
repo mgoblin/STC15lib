@@ -1,5 +1,7 @@
 /**
  * How to pause/resume timer0 using gate in mode1
+ * 
+ * LED blinking using gate open/close as delay
  */
 #include <timer0_mode1.h>
 #include <delay.h>
