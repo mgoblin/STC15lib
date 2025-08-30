@@ -113,11 +113,13 @@
         * mode3
             * async
             * sync
-    * uart                
+    * uart
+    * wdt               
 * Wrap multiline macro with do .. while(0) - in work
 * Fix examples/timer/auxiliary/timer0/timer0_12T_freq_uint16_example.c. Its print garbage. And fix other freq and ticks - incorrect calculation.
 * Fix direct setting TMOD. timer init should be used.
-* Update lib version in README.md - in work  
+* Review watch dog timer routines. Current init with ticks have not intuitively understandable
+* Update lib version in README.md  
 
 Next releases todo
 * TODO Implement counters
