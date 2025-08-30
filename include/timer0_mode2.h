@@ -52,13 +52,13 @@
  * @ingroup timer0_mode2
  */
 #define timer0_mode2_12T_init()                 \
-{                                               \
+do {                                            \
     enable_mcu_interrupts();                    \
     enable_timer0_interrupt();                  \
     TMOD &= 0xf0;                               \
     TMOD |= 0x02;                               \
     bit_clr(AUXR, CBIT7);                       \
-}
+} while(0)
 
 /**
  * @brief Initialize mode2 1T for timer0.
@@ -66,13 +66,13 @@
  * @ingroup timer0_mode2
  */
 #define timer0_mode2_1T_init()                  \
-{                                               \
+do {                                            \
     enable_mcu_interrupts();                    \
     enable_timer0_interrupt();                  \
     TMOD &= 0xf0;                               \
     TMOD |= 0x02;                               \
     bit_set(AUXR, SBIT7);                       \
-}
+} while(0)
 ///@}
 //============================== Timer0 mode2 declarations end ============================
 
@@ -149,10 +149,10 @@
  * @ingroup timer0_mode2
  */
 #define timer0_mode2_reload(ticks)                          \
-{                                                           \
+do {                                                        \
     /* Load timer value */                                  \
     TH0 = (0xff - ticks);                                   \
-}
+} while(0)
 
 /**
  * @brief Reload timer0 mode2 TL0 on the fly
@@ -181,12 +181,12 @@
  * @ingroup timer0_mode2
  */
 #define timer0_mode2_start(ticks)                                                       \
-{                                                                                       \
+do {                                                                                    \
     timer0_mode2_reload(ticks);                                                         \
                                                                                         \
     TF0 = 0; /* clear timer overload flag */                                            \
     TR0 = 1; /* set run timer flag */                                                   \
-}
+} while(0)
 
 /**
  * @brief Run timer0 with direct set timer value.
@@ -206,12 +206,12 @@
  * @ingroup timer0_mode2
  */
 #define timer0_mode2_direct_start(th0)                                                  \
-{                                                                                       \
+do {                                                                                    \
     timer0_mode2_direct_reload(th0);                                                           \
                                                                                         \
     TF0 = 0;                                                                            \
     TR0 = 1;                                                                            \
-}
+} while(0)
 
 /**
  * @brief Stop timer0.
@@ -222,10 +222,10 @@
  * @ingroup timer0_mode2
  */
 #define timer0_mode2_stop()                                 \
-{                                                           \
+do {                                                        \
     TR0 = 0; /* clear run timer flag */                     \
     TF0 = 0; /* clear timer overload flag */                \
-}
+} while(0)
 
 /** 
  * @brief Get timer0 mode2 started status
@@ -260,14 +260,14 @@
  * @ingroup timer0_mode2
  */
 #define timer0_mode2_delay(ticks)                                       \
-{                                                                       \
+do {                                                                    \
     timer0_mode2_start(ticks);                                          \
     /* Waiting for timer overloaded (timer overload flag set to 1) */   \
     while(!TF0)                                                         \
     {                                                                   \
     }                                                                   \
     timer0_mode2_stop();                                                \
-}
+} while(0)
 ///@}
 //============================== Timer0 run once declarations end =========================
 

@@ -223,13 +223,13 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                               \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                            \</div>
 <div class="line">    enable_mcu_interrupts();                    \</div>
 <div class="line">    enable_timer0_interrupt();                  \</div>
 <div class="line">    TMOD &amp;= 0xf0;                               \</div>
 <div class="line">    TMOD |= 0x02;                               \</div>
 <div class="line">    bit_clr(AUXR, CBIT7);                       \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Initialize mode2 12T for timer0. </p>
 
@@ -249,13 +249,13 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                               \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                            \</div>
 <div class="line">    enable_mcu_interrupts();                    \</div>
 <div class="line">    enable_timer0_interrupt();                  \</div>
 <div class="line">    TMOD &amp;= 0xf0;                               \</div>
 <div class="line">    TMOD |= 0x02;                               \</div>
 <div class="line">    bit_set(AUXR, SBIT7);                       \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Initialize mode2 1T for timer0. </p>
 
@@ -297,14 +297,14 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                                       \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                    \</div>
 <div class="line">    timer0_mode2_start(ticks);                                          \</div>
 <div class="line">    <span class="comment">/* Waiting for timer overloaded (timer overload flag set to 1) */</span>   \</div>
 <div class="line">    while(!TF0)                                                         \</div>
 <div class="line">    {                                                                   \</div>
 <div class="line">    }                                                                   \</div>
 <div class="line">    timer0_mode2_stop();                                                \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Run timer0 mode2 once and wait with program flow blocking timer not finished. </p>
 <p>Before run timer0_mode2_12T_init or timer0_mode2_1T_init should be called.</p>
@@ -361,12 +361,12 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                                                       \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                                    \</div>
 <div class="line">    timer0_mode2_direct_reload(th0);                                                           \</div>
 <div class="line">                                                                                        \</div>
 <div class="line">    TF0 = 0;                                                                            \</div>
 <div class="line">    TR0 = 1;                                                                            \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Run timer0 with direct set timer value. </p>
 <p>Before run timer0_mode2_12T_init or timer0_mode2_1T_init should be called.</p>
@@ -418,10 +418,10 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                           \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                        \</div>
 <div class="line">    <span class="comment">/* Load timer value */</span>                                  \</div>
 <div class="line">    TH0 = (0xff - ticks);                                   \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Reload timer0 mode2 ticks on the fly. </p>
 <p>Reload is available in modes 0, 2, 3.</p>
@@ -449,12 +449,12 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                                                       \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                                    \</div>
 <div class="line">    timer0_mode2_reload(ticks);                                                         \</div>
 <div class="line">                                                                                        \</div>
 <div class="line">    TF0 = 0; <span class="comment">/* clear timer overload flag */</span>                                            \</div>
 <div class="line">    TR0 = 1; <span class="comment">/* set run timer flag */</span>                                                   \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Run timer0. </p>
 <p>Before run timer0_mode2_12T_init or timer0_mode2_1T_init should be called.</p>
@@ -484,10 +484,10 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                           \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                        \</div>
 <div class="line">    TR0 = 0; <span class="comment">/* clear run timer flag */</span>                     \</div>
 <div class="line">    TF0 = 0; <span class="comment">/* clear timer overload flag */</span>                \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Stop timer0. </p>
 <p>Before stop timer2_start should be called. Dont mix timer0_mode2_stop call with timer0_mode2_delay call </p>
