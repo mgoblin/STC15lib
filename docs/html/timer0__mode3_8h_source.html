@@ -99,24 +99,24 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="foldopen" id="foldopen00053" data-start="" data-end="">
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga64d8ded0575b2d210373ea3ea27f3b18">   53</a></span><span class="preprocessor">#define timer0_mode3_12T_init()                 \</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">{                                               \</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">do {                                            \</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">    enable_mcu_interrupts();                    \</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">    enable_timer0_interrupt();                  \</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">    TMOD &amp;= 0xf0;                               \</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">    TMOD |= 0x03;                               \</span></div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">    bit_clr(AUXR, CBIT7);                       \</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">} while(0)</span></div>
 </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="foldopen" id="foldopen00067" data-start="" data-end="">
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga09998d2758eb5e87895a41551f3d6a31">   67</a></span><span class="preprocessor">#define timer0_mode3_1T_init()                  \</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">{                                               \</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">do {                                            \</span></div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">    enable_mcu_interrupts();                    \</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">    enable_timer0_interrupt();                  \</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">    TMOD &amp;= 0xf0;                               \</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">    TMOD |= 0x03;                               \</span></div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">    bit_set(AUXR, SBIT7);                       \</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">} while(0)</span></div>
 </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">//============================== Timer0 mode3 declarations end ============================</span></div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
@@ -142,48 +142,48 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
 <div class="foldopen" id="foldopen00150" data-start="" data-end="">
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#gac1d1b26c8977897b0c67e7a3b2f2b632">  150</a></span><span class="preprocessor">#define timer0_mode3_reload(ticks)                          \</span></div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">{                                                           \</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">do {                                                        \</span></div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">    uint16_t value = 0xffff - ticks;                        \</span></div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="preprocessor">    </span><span class="comment">/* Load timer high and low bytes value */</span><span class="preprocessor">               \</span></div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="preprocessor">    TL0 = value &amp; 0xff;                                     \</span></div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="preprocessor">    TH0 = (value &gt;&gt; 8) &amp; 0xff;                              \</span></div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="preprocessor">} while(0)</span></div>
 </div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
 <div class="foldopen" id="foldopen00167" data-start="" data-end="">
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga1ed67291255f2927797d4d6eb7a1a1ee">  167</a></span><span class="preprocessor">#define timer0_mode3_direct_reload(th0, tl0)                \</span></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="preprocessor">{                                                           \</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="preprocessor">do {                                                        \</span></div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="preprocessor">    TH0 = th0;                                              \</span></div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">    TL0 = tl0;                                              \</span></div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="preprocessor">} while(0)</span></div>
 </div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
 <div class="foldopen" id="foldopen00189" data-start="" data-end="">
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga998ffba506f9bf9d1e252b861d6bece8">  189</a></span><span class="preprocessor">#define timer0_mode3_start(ticks)                                                       \</span></div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="preprocessor">{                                                                                       \</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="preprocessor">do {                                                                                    \</span></div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="preprocessor">    timer0_mode3_reload(ticks);                                                         \</span></div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="preprocessor">                                                                                        \</span></div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="preprocessor">    TF0 = 0; </span><span class="comment">/* clear timer overload flag */</span><span class="preprocessor">                                            \</span></div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="preprocessor">    TR0 = 1; </span><span class="comment">/* set run timer flag */</span><span class="preprocessor">                                                   \</span></div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="preprocessor">} </span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="preprocessor">} while(0)</span></div>
 </div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
 <div class="foldopen" id="foldopen00215" data-start="" data-end="">
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#gaf86d17d56a895afb54bc6ca490643ac7">  215</a></span><span class="preprocessor">#define timer0_mode3_direct_start(th0, tl0)                                             \</span></div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="preprocessor">{                                                                                       \</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="preprocessor">do {                                                                                    \</span></div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="preprocessor">    timer0_mode3_direct_reload(th0, tl0);                                               \</span></div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="preprocessor">                                                                                        \</span></div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="preprocessor">    TF0 = 0;                                                                            \</span></div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="preprocessor">    TR0 = 1;                                                                            \</span></div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="preprocessor">} while(0)</span></div>
 </div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
 <div class="foldopen" id="foldopen00231" data-start="" data-end="">
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#ga839eddc877098991cce7ecfa3db28f68">  231</a></span><span class="preprocessor">#define timer0_mode3_stop()                                 \</span></div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="preprocessor">{                                                           \</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="preprocessor">do {                                                        \</span></div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="preprocessor">    TR0 = 0; </span><span class="comment">/* clear run timer flag */</span><span class="preprocessor">                     \</span></div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="preprocessor">    TF0 = 0; </span><span class="comment">/* clear timer overload flag */</span><span class="preprocessor">                \</span></div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="preprocessor">} while(0)</span></div>
 </div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#gabf95428e5822aa5534d2a5ad5f46bb10">  244</a></span><span class="preprocessor">#define is_timer0_mode3_started() (TR0 == 1 &amp;&amp; (is_timer0_mode3_gate_opened() || INT0 == 1))</span></div>
@@ -194,7 +194,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
 <div class="foldopen" id="foldopen00269" data-start="" data-end="">
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno"><a class="line" href="group__timer0__mode3.html#gad14aa9ea995bf75a4aa4422be1ef0af7">  269</a></span><span class="preprocessor">#define timer0_mode3_delay(ticks)                                       \</span></div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="preprocessor">{                                                                       \</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="preprocessor">do {                                                                    \</span></div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="preprocessor">    bool is_gate_opened = is_timer0_mode3_gate_opened();                \</span></div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="preprocessor">                                                                        \</span></div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="preprocessor">    timer0_mode3_open_gate();                                           \</span></div>
@@ -210,7 +210,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><span class="preprocessor">    {                                                                   \</span></div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="preprocessor">        timer0_mode3_close_gate();                                      \</span></div>
 <div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="preprocessor">    }                                                                   \</span></div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="preprocessor">} while(0)</span></div>
 </div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="comment">//============================== Timer0 run once declarations end =========================</span></div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
