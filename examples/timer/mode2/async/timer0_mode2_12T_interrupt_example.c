@@ -1,5 +1,7 @@
 /** 
  * How to start timer0 in mode2
+ * 
+ * LED blinking using timer0 interrupt
  */
 #include <timer0_mode2.h>
 
