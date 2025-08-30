@@ -1,3 +1,10 @@
+/** 
+ * How to direct start timer0
+ * 
+ * Load timer ticks directly to MCU regisrers and start 
+ * timer with interrupt handler.
+ * Interrupt handler do LED blinking.
+ */
 #include <timer0_mode3.h>
 #include <frequency.h>
 
