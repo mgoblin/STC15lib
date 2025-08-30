@@ -1,5 +1,7 @@
 /** 
- * How to start and stop timer0 in mode3
+ * How to start and stop timer0 in mode3.
+ * 
+ * LED blinking 1 second after timer started and then 2 seconds not blinking.
  */
 #include <delay.h>
 #include <timer0_mode3.h>

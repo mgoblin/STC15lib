@@ -109,7 +109,9 @@
             * sync
         * mode2
             * async
-            * sync    
+            * sync
+        * mode3
+            * async        
 * Wrap multiline macro with do .. while(0) - in work
 * Fix examples/timer/auxiliary/timer0/timer0_12T_freq_uint16_example.c. Its print garbage. And fix other freq and ticks - incorrect calculation.
 * Fix direct setting TMOD. timer init should be used.
