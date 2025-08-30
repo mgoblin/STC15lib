@@ -121,10 +121,12 @@
     * delay.h
     * frequency.h
     * pin.h
+    * power_management.h
 
 * Fix examples/timer/auxiliary/timer0/timer0_12T_freq_uint16_example.c. Its print garbage. And fix other freq and ticks - incorrect calculation.
 * Fix direct setting TMOD. timer init should be used.
-* Review watch dog timer routines. Current init with ticks have not intuitively understandable
+* Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms
+* Review wakeup timer routines. Move from ticks to ms
 * Update lib version in README.md  
 
 Next releases todo

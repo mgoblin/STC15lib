@@ -136,12 +136,12 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                               \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                            \</div>
 <div class="line">    bit_set(PCON, SBIT1);       \</div>
 <div class="line">    __asm__(<span class="stringliteral">&quot;nop&quot;</span>);             \</div>
 <div class="line">    __asm__(<span class="stringliteral">&quot;nop&quot;</span>);             \</div>
 <div class="line">    __asm__(<span class="stringliteral">&quot;nop&quot;</span>);             \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Set MCU power down mode. </p>
 <p>In the Stop/Power-Down mode, the on-chip oscillator and the Flash memory are stopped in order to minimize power consumption. Only the power-on circuitry will continue to draw power during Stop/Power-Down. The contents of on-chip RAM and SFRs are maintained. </p>
@@ -163,10 +163,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                       \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                    \</div>
 <div class="line">    WKTCH = (ticks &gt;&gt; 8) | 0x80;                        \</div>
 <div class="line">    WKTCL = ticks &amp; 0xff;                               \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Init and run wakeup timer. </p>
 <p>Wakeup time is calculated as (10^6/wakeup_timer_internal_clock_frequency) * 16 * ticks</p>

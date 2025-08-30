@@ -52,12 +52,12 @@
  * @ingroup power_management
  */
 #define power_down()            \
-{                               \
+do {                            \
     bit_set(PCON, SBIT1);       \
     __asm__("nop");             \
     __asm__("nop");             \
     __asm__("nop");             \
-}
+} while(0)
 
 /**
  * @brief Init and run wakeup timer
@@ -71,10 +71,10 @@
  * @ingroup power_management
  */
 #define wakeup_timer_init(ticks)                        \
-{                                                       \
+do {                                                    \
     WKTCH = (ticks >> 8) | 0x80;                        \
     WKTCL = ticks & 0xff;                               \
-}
+} while(0)
 
 static volatile __idata uint8_t * const wirc_h_ptr = (__idata uint8_t *) WIRC_H_ADDRESS;
 static volatile __idata uint8_t * const wirc_l_ptr = (__idata uint8_t *) WIRC_L_ADDRESS;
