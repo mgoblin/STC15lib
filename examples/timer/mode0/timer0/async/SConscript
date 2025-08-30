@@ -16,9 +16,9 @@ env.Default(
         ['timer0_mode0_direct_reload_example.c']
     ),
 
-    env.Object(
-        source = 'timer0_mode0_pause_by_gate_example.c',
-        target = 'timer0_mode0_pause_by_gate_example.rel'
+    env.Program(
+        'timer0_mode0_pause_by_gate_example',
+        ['timer0_mode0_pause_by_gate_example.c']
     ),
 
     env.Object(
