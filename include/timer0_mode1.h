@@ -50,13 +50,13 @@
  * @ingroup timer0_mode1
  */
 #define timer0_mode1_12T_init()                         \
-{                                                       \
+do {                                                    \
     enable_mcu_interrupts();                            \
     enable_timer0_interrupt();                          \
     TMOD &= 0xf0;                                       \
     bit_set(TMOD, SBIT0);                               \
     bit_clr(AUXR, CBIT7);                               \
-}
+} while(0)
 
 /**
  * @brief Initialize mode1 1T for timer0. 
@@ -64,13 +64,13 @@
  * @ingroup timer0_mode1
  */
 #define timer0_mode1_1T_init()                          \
-{                                                       \
+do {                                                    \
     enable_mcu_interrupts();                            \
     enable_timer0_interrupt();                          \
     TMOD &= 0xf0;                                       \
     bit_set(TMOD, SBIT0);                               \
     bit_set(AUXR, SBIT7);                               \
-}
+} while(0)
 ///@}
 
 /** @name config
@@ -125,7 +125,7 @@
  * @ingroup timer0_mode1
  */
 #define timer0_mode1_start(ticks)                           \
-{                                                           \
+do {                                                        \
     uint16_t value = 0xffff - ticks;                        \
     /* Load timer high and low bytes value */               \
     TL0 = value & 0xff;                                     \
@@ -133,7 +133,7 @@
                                                             \
     TF0 = 0; /* clear timer overload flag */                \
     TR0 = 1; /* set run timer flag */                       \
-} 
+} while(0)
 
 /**
  * @brief Run timer0 in mode1 with direct set of TH0 and TL0 registers.
@@ -154,13 +154,13 @@
  * @ingroup timer0_mode1
  */
 #define timer0_mode1_direct_start(th0, tl0)                 \
-{                                                           \
+do {                                                        \
     TH0 = th0;                                              \
     TL0 - tl0;                                              \
                                                             \
     TF0 = 0;                                                \
     TR0 = 1;                                                \
-}
+} while(0)
 
 /**
  * @brief Stop timer0.
@@ -171,10 +171,10 @@
  * @ingroup timer0_mode1
  */
 #define timer0_mode1_stop()                                 \
-{                                                           \
+do {                                                        \
     TR0 = 0; /* clear run timer flag */                     \
     TF0 = 0; /* clear timer overload flag */                \
-}
+} while(0)
 
 /** 
  * @brief Get timer0 mode1 started status
@@ -208,7 +208,7 @@
  * @ingroup timer0_mode1
  */
 #define timer0_mode1_delay(ticks)                                       \
-{                                                                       \
+do {                                                                    \
     bool is_gate_opened = is_timer0_mode1_gate_opened();                \
                                                                         \
     timer0_mode1_open_gate();                                           \
@@ -224,7 +224,7 @@
     {                                                                   \
         timer0_mode1_close_gate();                                      \
     }                                                                   \
-}
+} while(0)
 ///@}
 
 #endif

@@ -203,13 +203,13 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                       \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                    \</div>
 <div class="line">    enable_mcu_interrupts();                            \</div>
 <div class="line">    enable_timer0_interrupt();                          \</div>
 <div class="line">    TMOD &amp;= 0xf0;                                       \</div>
 <div class="line">    bit_set(TMOD, SBIT0);                               \</div>
 <div class="line">    bit_clr(AUXR, CBIT7);                               \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Initialize mode1 12T for timer0. </p>
 
@@ -229,13 +229,13 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                       \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                    \</div>
 <div class="line">    enable_mcu_interrupts();                            \</div>
 <div class="line">    enable_timer0_interrupt();                          \</div>
 <div class="line">    TMOD &amp;= 0xf0;                                       \</div>
 <div class="line">    bit_set(TMOD, SBIT0);                               \</div>
 <div class="line">    bit_set(AUXR, SBIT7);                               \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Initialize mode1 1T for timer0. </p>
 
@@ -277,7 +277,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                                       \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                    \</div>
 <div class="line">    <span class="keywordtype">bool</span> is_gate_opened = <a class="code hl_define" href="group__timer0__mode1.html#ga7f6cceb0066689cb9d212b43417719df">is_timer0_mode1_gate_opened</a>();                \</div>
 <div class="line">                                                                        \</div>
 <div class="line">    timer0_mode1_open_gate();                                           \</div>
@@ -293,7 +293,7 @@ Macros</h2></td></tr>
 <div class="line">    {                                                                   \</div>
 <div class="line">        timer0_mode1_close_gate();                                      \</div>
 <div class="line">    }                                                                   \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 <div class="ttc" id="agroup__timer0__mode1_html_ga7f6cceb0066689cb9d212b43417719df"><div class="ttname"><a href="group__timer0__mode1.html#ga7f6cceb0066689cb9d212b43417719df">is_timer0_mode1_gate_opened</a></div><div class="ttdeci">#define is_timer0_mode1_gate_opened()</div><div class="ttdoc">Get timer starting gate state.</div><div class="ttdef"><b>Definition</b> timer0_mode1.h:103</div></div>
 </div><!-- fragment -->
 <p>Run timer0 mode1 once and wait with program flow blocking timer not finished. </p>
@@ -334,13 +334,13 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                           \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                        \</div>
 <div class="line">    TH0 = th0;                                              \</div>
 <div class="line">    TL0 - tl0;                                              \</div>
 <div class="line">                                                            \</div>
 <div class="line">    TF0 = 0;                                                \</div>
 <div class="line">    TR0 = 1;                                                \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Run timer0 in mode1 with direct set of TH0 and TL0 registers. </p>
 <p>Before run timer0_mode1_12T_init or timer0_mode1_1T_init should be called.</p>
@@ -393,7 +393,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                           \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                        \</div>
 <div class="line">    uint16_t value = 0xffff - ticks;                        \</div>
 <div class="line">    <span class="comment">/* Load timer high and low bytes value */</span>               \</div>
 <div class="line">    TL0 = value &amp; 0xff;                                     \</div>
@@ -401,7 +401,7 @@ Macros</h2></td></tr>
 <div class="line">                                                            \</div>
 <div class="line">    TF0 = 0; <span class="comment">/* clear timer overload flag */</span>                \</div>
 <div class="line">    TR0 = 1; <span class="comment">/* set run timer flag */</span>                       \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Run timer0 in mode1. </p>
 <p>Before run timer0_mode1_12T_init or timer0_mode1_1T_init should be called.</p>
@@ -431,10 +431,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                           \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                        \</div>
 <div class="line">    TR0 = 0; <span class="comment">/* clear run timer flag */</span>                     \</div>
 <div class="line">    TF0 = 0; <span class="comment">/* clear timer overload flag */</span>                \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Stop timer0. </p>
 <p>Before stop timer1_start should be called. Dont mix timer1_stop call with timer0_mode1_delay call </p>
