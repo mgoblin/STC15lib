@@ -1,5 +1,7 @@
 /**
- * How to pause/resume timer0 in mode3 
+ * How to pause/resume timer0 in mode3
+ * 
+ * LED blinking starts and stop using open/close the timer0 gate 
  */
 #include <timer0_mode3.h>
 #include <delay.h>

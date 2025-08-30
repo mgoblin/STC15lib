@@ -6,9 +6,9 @@ env.Default(
         ['timer0_mode3_1T_interrupt_example.c']
     ),
 
-    env.Object(
-        source = 'timer0_mode3_pause_by_gate_example.c',
-        target = 'timer0_mode3_pause_by_gate_example.rel'
+    env.Program(
+        'timer0_mode3_pause_by_gate_example',
+        ['timer0_mode3_pause_by_gate_example.c']
     ),
 
     env.Object(
