@@ -43,12 +43,13 @@ __code __at(CHIP_ID_ADDR_ROM) uint8_t chip_id;
  * 
  * @ingroup chip_id
  */
-#define get_chipid(cid) {                       \
+#define get_chipid(cid) do {                    \
     const uint8_t *id = &chip_id;               \
     for(uint8_t i = 0; i < CHIP_ID_SIZE; i++)   \
     {                                           \
         cid[i] = id[i];                         \
     }                                           \
-}
+} while(0)
+
 
 #endif

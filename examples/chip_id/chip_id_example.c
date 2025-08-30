@@ -1,5 +1,5 @@
 /** 
- * How to get chip id
+ * How to get chip id using chip_id reference
  */
 #include <chip_id.h>
 

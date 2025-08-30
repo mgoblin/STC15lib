@@ -131,13 +131,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    {                       \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> {                    \</div>
 <div class="line">    <span class="keyword">const</span> uint8_t *<span class="keywordtype">id</span> = &amp;chip_id;               \</div>
 <div class="line">    for(uint8_t i = 0; i &lt; <a class="code hl_define" href="group__chip__id.html#ga909ec39ac520a4448627b2d9aa61d016">CHIP_ID_SIZE</a>; i++)   \</div>
 <div class="line">    {                                           \</div>
 <div class="line">        cid[i] = <span class="keywordtype">id</span>[i];                         \</div>
 <div class="line">    }                                           \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 <div class="ttc" id="agroup__chip__id_html_ga909ec39ac520a4448627b2d9aa61d016"><div class="ttname"><a href="group__chip__id.html#ga909ec39ac520a4448627b2d9aa61d016">CHIP_ID_SIZE</a></div><div class="ttdeci">#define CHIP_ID_SIZE</div><div class="ttdoc">Size of chip id array.</div><div class="ttdef"><b>Definition</b> chip_id.h:20</div></div>
 </div><!-- fragment -->
 <p>Get chip id as array. Array size is ID_SIZE. </p>

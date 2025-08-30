@@ -115,7 +115,10 @@
             * sync
     * uart
     * wdt               
-* Wrap multiline macro with do .. while(0) - in work
+
+* Wrap multiline macro with do .. while(0)
+    * chip_id.h
+
 * Fix examples/timer/auxiliary/timer0/timer0_12T_freq_uint16_example.c. Its print garbage. And fix other freq and ticks - incorrect calculation.
 * Fix direct setting TMOD. timer init should be used.
 * Review watch dog timer routines. Current init with ticks have not intuitively understandable

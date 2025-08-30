@@ -94,16 +94,17 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="group__chip__id.html#gaf797f652068877217b527fa8d320bb43">   36</a></span>__code <a class="code hl_function" href="group__chip__id.html#gaf797f652068877217b527fa8d320bb43">__at</a>(<a class="code hl_define" href="group__chip__id.html#gade5a33c9ca0579ba754154984706deff">CHIP_ID_ADDR_ROM</a>) uint8_t chip_id;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="foldopen" id="foldopen00046" data-start="" data-end="">
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="group__chip__id.html#ga73068c6cf5d5b5fd06172a8e60a066a1">   46</a></span><span class="preprocessor">#define get_chipid(cid) {                       \</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="group__chip__id.html#ga73068c6cf5d5b5fd06172a8e60a066a1">   46</a></span><span class="preprocessor">#define get_chipid(cid) do {                    \</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">    const uint8_t *id = &amp;chip_id;               \</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">    for(uint8_t i = 0; i &lt; CHIP_ID_SIZE; i++)   \</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">    {                                           \</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">        cid[i] = id[i];                         \</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">    }                                           \</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">} while(0)</span></div>
 </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="agroup__chip__id_html_gade5a33c9ca0579ba754154984706deff"><div class="ttname"><a href="group__chip__id.html#gade5a33c9ca0579ba754154984706deff">CHIP_ID_ADDR_ROM</a></div><div class="ttdeci">#define CHIP_ID_ADDR_ROM</div><div class="ttdoc">Chip id address in flash memory.</div><div class="ttdef"><b>Definition</b> chip_id.h:27</div></div>
 <div class="ttc" id="agroup__chip__id_html_gaf797f652068877217b527fa8d320bb43"><div class="ttname"><a href="group__chip__id.html#gaf797f652068877217b527fa8d320bb43">__at</a></div><div class="ttdeci">__code __at(CHIP_ID_ADDR_ROM) uint8_t chip_id</div><div class="ttdoc">First byte of chip id in flash.</div></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
