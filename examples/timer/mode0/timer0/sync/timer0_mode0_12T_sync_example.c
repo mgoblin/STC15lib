@@ -1,5 +1,7 @@
 /**
  * How to delay main program using timer0_mode0_delay on 12T timer closk divider 
+ * 
+ * LED blinking using timer0_mode0_delay
  */
 #include <timer0_mode0.h>
 
