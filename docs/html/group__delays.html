@@ -104,21 +104,19 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                                   \</div>
-<div class="line">    {                                                               \</div>
-<div class="line">        uint16_t ms_div = ms &gt;&gt; <a class="code hl_define" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>();      \</div>
-<div class="line">        <span class="keywordflow">do</span>                                                          \</div>
-<div class="line">        {                                                           \</div>
-<div class="line">            uint16_t d = <a class="code hl_define" href="group__delays.html#ga499034192b4237f672ab00681dbb41ba">TICKS_DELAY_1ms</a>;                           \</div>
-<div class="line">            <span class="keywordflow">do</span>                                                      \</div>
-<div class="line">            {                                                       \</div>
-<div class="line">                __asm NOP __endasm;                                 \</div>
-<div class="line">                __asm NOP __endasm;                                 \</div>
-<div class="line">                __asm NOP __endasm;                                 \</div>
-<div class="line">            } <span class="keywordflow">while</span> (d--);                                          \</div>
-<div class="line">        } <span class="keywordflow">while</span> (ms_div--);                                         \</div>
-<div class="line">    }                                                               \</div>
-<div class="line">}</div>
+<b>Value:</b><div class="fragment"><div class="line">{                                                               \</div>
+<div class="line">    uint16_t ms_div = ms &gt;&gt; <a class="code hl_define" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>();      \</div>
+<div class="line">    <span class="keywordflow">do</span>                                                          \</div>
+<div class="line">    {                                                           \</div>
+<div class="line">        uint16_t d = <a class="code hl_define" href="group__delays.html#ga499034192b4237f672ab00681dbb41ba">TICKS_DELAY_1ms</a>;                           \</div>
+<div class="line">        <span class="keywordflow">do</span>                                                      \</div>
+<div class="line">        {                                                       \</div>
+<div class="line">            __asm NOP __endasm;                                 \</div>
+<div class="line">            __asm NOP __endasm;                                 \</div>
+<div class="line">            __asm NOP __endasm;                                 \</div>
+<div class="line">        } <span class="keywordflow">while</span> (d--);                                          \</div>
+<div class="line">    } <span class="keywordflow">while</span> (ms_div--);                                         \</div>
+<div class="line">}                                                               \</div>
 <div class="ttc" id="agroup__delays_html_ga499034192b4237f672ab00681dbb41ba"><div class="ttname"><a href="group__delays.html#ga499034192b4237f672ab00681dbb41ba">TICKS_DELAY_1ms</a></div><div class="ttdeci">#define TICKS_DELAY_1ms</div><div class="ttdoc">Ticks for 1ms delay.</div><div class="ttdef"><b>Definition</b> delay.h:20</div></div>
 <div class="ttc" id="agroup__freq_html_ga2282854ce7886421e523f6d8f8467fae"><div class="ttname"><a href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a></div><div class="ttdeci">#define get_frequency_divider_scale()</div><div class="ttdoc">Get master clock frequency divider scale (CLK_DIV bits [0..2])</div><div class="ttdef"><b>Definition</b> frequency.h:65</div></div>
 </div><!-- fragment -->
