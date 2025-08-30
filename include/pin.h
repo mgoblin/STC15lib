@@ -29,10 +29,10 @@
  * @ingroup pin
  */
 #define pin_quasi_bidiretional_init(port, port_pin)             \
-{                                                               \
+do {                                                            \
     bit_clr(port ## M1, ~(1 << port_pin));                      \
     bit_clr(port ## M0, ~(1 << port_pin));                      \
-}
+} while(0)
 
 /**
  * @brief Init pin in in PUSH_PULL mode
@@ -49,10 +49,10 @@
  * @ingroup pin
  */
 #define pin_push_pull_init(port, port_pin)                      \
-{                                                               \
+do {                                                            \
     bit_clr(port ## M1, ~(1 << port_pin));                      \
     bit_set(port ## M0, 1 << port_pin);                         \
-}
+} while(0)
 
 /**
  * @brief Init pin in in INPUT_ONLY mode
@@ -67,10 +67,10 @@
  * @ingroup pin
  */
 #define pin_input_only_init(port, port_pin)                     \
-{                                                               \
+do {                                                            \
     bit_set(port ## M1, 1 << port_pin);                         \
     bit_clr(port ## M0, ~(1 << port_pin));                      \
-}
+} while(0)
 
 /**
  * @brief Init pin in in OPEN_DRAIN mode
@@ -86,10 +86,10 @@
  * @ingroup pin
  */
 #define pin_open_drain_init(port, port_pin)                     \
-{                                                               \
+do {                                                            \
     bit_set(port ## M1, 1 << port_pin);                         \
     bit_set(port ## M0, 1 << port_pin);                         \
-}
+} while(0)
 
 /**
  * @brief Assert pin in quasy-bidirectional mode
@@ -135,10 +135,10 @@
  * @ingroup pin
  */
 #define pin_port_quasi_bidiretional_init(port)      \
-{                                                   \
+do {                                                \
     port ## M1 = 0x00;                              \
     port ## M0 = 0x00;                              \
-}
+} while(0)
 
 /**
  * @brief Set pull-push mode for all port pins
@@ -148,10 +148,10 @@
  * @ingroup pin
  */
 #define pin_port_pull_push_init(port)              \
-{                                                  \
+do {                                               \
     port ## M1 = 0x00;                             \
     port ## M0 = 0xff;                             \
-}
+} while(0)
 
 /**
  * @brief Set input-only mode for all port pins
@@ -161,10 +161,10 @@
  * @ingroup pin
  */
 #define pin_port_input_only_init(port)              \
-{                                                   \
+do {                                                \
     port ## M1 = 0xff;                              \
     port ## M0 = 0x00;                              \
-}
+} while(0)
 
 /**
  * @brief Set open-drain mode for all port pins
@@ -174,9 +174,9 @@
  * @ingroup pin
  */
 #define pin_port_open_drain_init(port)              \
-{                                                   \
+do {                                                \
     port ## M1 = 0xff;                              \
     port ## M0 = 0xff;                              \
-}
+} while(0)
 
 #endif

@@ -267,10 +267,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                               \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                            \</div>
 <div class="line">    bit_set(port ## M1, 1 &lt;&lt; port_pin);                         \</div>
 <div class="line">    bit_clr(port ## M0, ~(1 &lt;&lt; port_pin));                      \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Init pin in in INPUT_ONLY mode. </p>
 <p>Input only output have high impedance</p>
@@ -310,10 +310,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                               \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                            \</div>
 <div class="line">    bit_set(port ## M1, 1 &lt;&lt; port_pin);                         \</div>
 <div class="line">    bit_set(port ## M0, 1 &lt;&lt; port_pin);                         \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Init pin in in OPEN_DRAIN mode. </p>
 <p>internal pull-up resistors should be disabled and external pull-up resistors need to join.</p>
@@ -343,10 +343,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                   \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                \</div>
 <div class="line">    port ## M1 = 0xff;                              \</div>
 <div class="line">    port ## M0 = 0x00;                              \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Set input-only mode for all port pins. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -373,10 +373,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                   \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                \</div>
 <div class="line">    port ## M1 = 0xff;                              \</div>
 <div class="line">    port ## M0 = 0xff;                              \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Set open-drain mode for all port pins. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -403,10 +403,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                  \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                               \</div>
 <div class="line">    port ## M1 = 0x00;                             \</div>
 <div class="line">    port ## M0 = 0xff;                             \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Set pull-push mode for all port pins. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -433,10 +433,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                   \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                \</div>
 <div class="line">    port ## M1 = 0x00;                              \</div>
 <div class="line">    port ## M0 = 0x00;                              \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Set quasy-bidirectional mode for all port pins. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -473,10 +473,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                               \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                            \</div>
 <div class="line">    bit_clr(port ## M1, ~(1 &lt;&lt; port_pin));                      \</div>
 <div class="line">    bit_set(port ## M0, 1 &lt;&lt; port_pin);                         \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Init pin in in PUSH_PULL mode. </p>
 <p>Push-pull output(strong pull-up output，current can be up to 20mA, resistors need to be added to restrict current</p>
@@ -516,10 +516,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                               \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                            \</div>
 <div class="line">    bit_clr(port ## M1, ~(1 &lt;&lt; port_pin));                      \</div>
 <div class="line">    bit_clr(port ## M0, ~(1 &lt;&lt; port_pin));                      \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Init pin in in QUASI_BIDIRECTIONAL mode. </p>
 <p>QUASI_BIDIRECTIONAL mode is default pin mode and set after MCU power on</p>
