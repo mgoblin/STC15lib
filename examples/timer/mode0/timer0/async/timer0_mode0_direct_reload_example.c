@@ -1,5 +1,7 @@
 /**
- * How to use direct reload
+ * How to use direct reload timer ticks registers.
+ * 
+ * After timer starting change its ticks on the fly.
  */
 
 #include <timer0_mode0.h>

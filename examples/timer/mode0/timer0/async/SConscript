@@ -11,9 +11,9 @@ env.Default(
         ['timer0_mode0_12T_interrupt_example.c']
     ),
 
-    env.Object(
-        source = 'timer0_mode0_direct_reload_example.c',
-        target = 'timer0_mode0_direct_reload_example.rel'
+    env.Program(
+        'timer0_mode0_direct_reload_example',
+        ['timer0_mode0_direct_reload_example.c']
     ),
 
     env.Object(
