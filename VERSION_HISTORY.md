@@ -122,6 +122,7 @@
     * frequency.h
     * pin.h
     * power_management.h
+    * timer0_mode0.h
 
 * Fix examples/timer/auxiliary/timer0/timer0_12T_freq_uint16_example.c. Its print garbage. And fix other freq and ticks - incorrect calculation.
 * Fix direct setting TMOD. timer init should be used.

@@ -50,12 +50,12 @@
  * @ingroup timer0_mode0
  */
 #define timer0_mode0_12T_init()                 \
-{                                               \
+do {                                            \
     enable_mcu_interrupts();                    \
     enable_timer0_interrupt();                  \
     TMOD &= 0xf0;                               \
     bit_clr(AUXR, CBIT7);                       \
-}
+} while(0)
 
 /**
  * @brief Initialize mode0 1T for timer0.
@@ -63,12 +63,12 @@
  * @ingroup timer0_mode0
  */
 #define timer0_mode0_1T_init()                  \
-{                                               \
+do {                                            \
     enable_mcu_interrupts();                    \
     enable_timer0_interrupt();                  \
     TMOD &= 0xf0;                               \
     bit_set(AUXR, SBIT7);                       \
-}
+} while(0)
 ///@}
 //============================== Timer0 mode0 declarations end ============================
 
@@ -145,12 +145,12 @@
  * @ingroup timer0_mode0
  */
 #define timer0_mode0_reload(ticks)                          \
-{                                                           \
+do {                                                        \
     uint16_t value = 0xffff - ticks;                        \
     /* Load timer high and low bytes value */               \
     TL0 = value & 0xff;                                     \
     TH0 = (value >> 8) & 0xff;                              \
-}
+} while(0)
 
 /**
  * @brief Reload timer0 mode0 timer TL0 and TH0 on the fly
@@ -162,10 +162,10 @@
  * @ingroup timer0_mode0
  */
 #define timer0_mode0_direct_reload(th0, tl0)                \
-{                                                           \
+do {                                                        \
     TL0 = tl0;                                              \
     TH0 = th0;                                              \
-}
+} while(0)
 
 /**
  * @brief Run timer0.
@@ -184,12 +184,12 @@
  * @ingroup timer0_mode0
  */
 #define timer0_mode0_start(ticks)                                                       \
-{                                                                                       \
+do {                                                                                    \
     timer0_mode0_reload(ticks);                                                         \
                                                                                         \
     TF0 = 0; /* clear timer overload flag */                                            \
     TR0 = 1; /* set run timer flag */                                                   \
-} 
+} while(0)
 
 /**
  * @brief Run timer0 with direct set of TL0, TH0 registers.
@@ -210,12 +210,12 @@
  * @ingroup timer0_mode0
  */
 #define timer0_mode0_direct_start(th0, tl0)                                             \
-{                                                                                       \
+do {                                                                                       \
     timer0_mode0_direct_reload(th0, tl0);                                               \
                                                                                         \
     TF0 = 0;                                                                            \
     TR0 = 1;                                                                            \
-}
+} while(0)
 
 /**
  * @brief Stop timer0.
@@ -226,10 +226,10 @@
  * @ingroup timer0_mode0
  */
 #define timer0_mode0_stop()                                 \
-{                                                           \
+do {                                                        \
     TR0 = 0; /* clear run timer flag */                     \
     TF0 = 0; /* clear timer overload flag */                \
-}
+} while(0)
 
 /** 
  * @brief Get timer0 mode0 started status
@@ -264,7 +264,7 @@
  * @ingroup timer0_mode0
  */
 #define timer0_mode0_delay(ticks)                                       \
-{                                                                       \
+do {                                                                    \
     bool is_gate_opened = is_timer0_mode0_gate_opened();                \
                                                                         \
     timer0_mode0_open_gate();                                           \
@@ -280,7 +280,7 @@
     {                                                                   \
         timer0_mode0_close_gate();                                      \
     }                                                                   \
-}
+} while(0)
 ///@}
 //============================== Timer0 run once declarations end =========================
 
