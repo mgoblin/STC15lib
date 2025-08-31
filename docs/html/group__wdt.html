@@ -252,10 +252,10 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                               \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                            \</div>
 <div class="line">    WDT_CONTR = 0;                              \</div>
 <div class="line">    WDT_CONTR |= (wdt_scale &amp; 0x07);            \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Init WDT. </p>
 <p>WDT overflow time = (12 * wdt_scale * 32768) / MainFosc</p>

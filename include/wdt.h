@@ -44,10 +44,10 @@
  * @ingroup wdt
  */
 #define wdt_init(wdt_scale)                     \
-{                                               \
+do {                                            \
     WDT_CONTR = 0;                              \
     WDT_CONTR |= (wdt_scale & 0x07);            \
-}
+} while(0)
 
 /**
  * @brief Start WDT
