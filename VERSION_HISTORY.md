@@ -130,7 +130,7 @@
     * wdt.h
 * Fix timer0 mode2 timer0_mode2_delay(ticks). timer0_mode2_delay(ticks) disable timer0 interrupts. 
 * Fix examples/timer/auxiliary/timer0/timer0_12T_freq_uint16_example.c. Its was print garbage. 
-* TODO Update lib version in README.md  
+* Update lib version in README.md  
 
 Next releases todo
 * TODO Implement counters

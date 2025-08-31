@@ -13,9 +13,9 @@ After create Platformio project for STC15408AS add to platformio.ini line with l
 [env:STC15W408AS]
 platform = intel_mcs51
 board = STC15W408AS
-lib_deps = mgoblin/STC15 hardware@^0.8.0
+lib_deps = mgoblin/STC15 hardware@^0.10.0
 ```
-Where is 0.7.0 STC15 hardware library version.
+Where is 0.10.0 STC15 hardware library version.
 
 As alternative in lib_deps line github link could be used.
 
@@ -23,10 +23,10 @@ As alternative in lib_deps line github link could be used.
 [env:STC15W408AS]
 platform = intel_mcs51
 board = STC15W408AS
-lib_deps = https://github.com/mgoblin/STC15lib#0.8.0
+lib_deps = https://github.com/mgoblin/STC15lib#0.10.0
 ```
 
-Where is 0.8.0 STC15 hardware library github tag version.
+Where is 0.10.0 STC15 hardware library github tag version.
 
 Each released library version has the tag in github repository. 
 
