@@ -22,12 +22,12 @@
  * @ingroup uart
  */
 #define uart1_init(uart_baudrate)                                       \
-{                                                                       \
+do {                                                                    \
     SCON = 0x50; /* Set Mode1: 8-Bit UART with Variable Baud Rate */    \
     timer2_mode0_reload(timer2_mode0_baudrate_to_ticks(uart_baudrate)); \
     AUXR &= 0xE2;                                                       \
     AUXR |= 0x15;                                                       \
-}
+} while(0)
 
 /**
  * Send byte to UART
