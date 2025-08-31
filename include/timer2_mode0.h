@@ -46,11 +46,11 @@
  * @ingroup timer2_mode0
  */
 #define timer2_mode0_12T_init()                                         \
-{                                                                       \
+do {                                                                    \
     enable_mcu_interrupts();                                            \
     enable_timer2_interrupt();                                          \
     AUXR &= 0xE2;                                                       \
-}
+} while(0)
 
 /**
  * @brief Initialize mode0 1T for timer2. 
@@ -61,12 +61,12 @@
  * @ingroup timer2_mode0
  */
 #define timer2_mode0_1T_init()                                          \
-{                                                                       \
+do {                                                                    \
     enable_mcu_interrupts();                                            \
     enable_timer2_interrupt();                                          \
     AUXR &= 0xE2;                                                       \
     AUXR |= 0x05;                                                       \
-}   
+} while(0)  
 ///@}
 
 /** @name config
@@ -122,11 +122,11 @@
  * @ingroup timer2_mode0
  */
 #define timer2_mode0_start(ticks)                           \
-{                                                           \
+do {                                                        \
     timer2_mode0_reload(ticks);                             \
                                                             \
     bit_set(AUXR, SBIT4);                                   \
-}
+} while(0)
 
 /**
  * @brief Run timer2 mode0 with direct set of TH0 and TL0 registers.
@@ -145,11 +145,11 @@
  * @ingroup timer2_mode0
  */
 #define timer2_mode0_direct_start(th0, tl0)                 \
-{                                                           \
+do {                                                        \
     timer2_mode0_direct_reload(th0, tl0);                   \
                                                             \
     bit_set(AUXR, SBIT4);                                   \
-}
+} while(0)
 
 /**
  * @brief Stop timer2 mode0.
@@ -180,11 +180,11 @@
  * @ingroup timer2_mode0
  */
 #define timer2_mode0_reload(ticks)                              \
-{                                                               \
+do {                                                            \
     uint16_t value = 0xffff - ticks;                            \
     T2L = value & 0xff;                                         \
     T2H = (value >> 8) & 0xff;                                  \
-}
+} while(0)
 
 /**
  * @brief Reload timer2 T2H and T2L registers on the fly
@@ -196,10 +196,10 @@
  * @ingroup timer2_mode0
  */
 #define timer2_mode0_direct_reload(th2, tl2)                    \
-{                                                               \
+do {                                                            \
     T2H = th2;                                                  \
     T2L = tl2;                                                  \
-}
+} while(0)
 
 ///@}
 

@@ -96,21 +96,21 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="foldopen" id="foldopen00048" data-start="" data-end="">
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga3f16895698879dc595d6ae71974dba2e">   48</a></span><span class="preprocessor">#define timer2_mode0_12T_init()                                         \</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">{                                                                       \</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">do {                                                                    \</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">    enable_mcu_interrupts();                                            \</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">    enable_timer2_interrupt();                                          \</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">    AUXR &amp;= 0xE2;                                                       \</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">} while(0)</span></div>
 </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="foldopen" id="foldopen00063" data-start="" data-end="">
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#gadf419f934a3f374993349e6a257ed29d">   63</a></span><span class="preprocessor">#define timer2_mode0_1T_init()                                          \</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">{                                                                       \</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">do {                                                                    \</span></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">    enable_mcu_interrupts();                                            \</span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">    enable_timer2_interrupt();                                          \</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">    AUXR &amp;= 0xE2;                                                       \</span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">    AUXR |= 0x05;                                                       \</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">}   </span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">} while(0)  </span></div>
 </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
@@ -124,20 +124,20 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
 <div class="foldopen" id="foldopen00124" data-start="" data-end="">
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga4896ed979b875120c708dee3dc0db480">  124</a></span><span class="preprocessor">#define timer2_mode0_start(ticks)                           \</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">{                                                           \</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">do {                                                        \</span></div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">    timer2_mode0_reload(ticks);                             \</span></div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">                                                            \</span></div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">    bit_set(AUXR, SBIT4);                                   \</span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">} while(0)</span></div>
 </div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
 <div class="foldopen" id="foldopen00147" data-start="" data-end="">
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#gafacdcb23b05aa235b8bafaa3d2832a47">  147</a></span><span class="preprocessor">#define timer2_mode0_direct_start(th0, tl0)                 \</span></div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">{                                                           \</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">do {                                                        \</span></div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="preprocessor">    timer2_mode0_direct_reload(th0, tl0);                   \</span></div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="preprocessor">                                                            \</span></div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">    bit_set(AUXR, SBIT4);                                   \</span></div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">} while(0)</span></div>
 </div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
 <div class="foldopen" id="foldopen00160" data-start="" data-end="">
@@ -150,19 +150,19 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
 <div class="foldopen" id="foldopen00182" data-start="" data-end="">
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga607a922d8faac666c2dcddd233e0bab1">  182</a></span><span class="preprocessor">#define timer2_mode0_reload(ticks)                              \</span></div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="preprocessor">{                                                               \</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="preprocessor">do {                                                            \</span></div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="preprocessor">    uint16_t value = 0xffff - ticks;                            \</span></div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="preprocessor">    T2L = value &amp; 0xff;                                         \</span></div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="preprocessor">    T2H = (value &gt;&gt; 8) &amp; 0xff;                                  \</span></div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="preprocessor">} while(0)</span></div>
 </div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
 <div class="foldopen" id="foldopen00198" data-start="" data-end="">
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga1b181803664f16990f382369c1900bd0">  198</a></span><span class="preprocessor">#define timer2_mode0_direct_reload(th2, tl2)                    \</span></div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="preprocessor">{                                                               \</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="preprocessor">do {                                                            \</span></div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="preprocessor">    T2H = th2;                                                  \</span></div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="preprocessor">    T2L = tl2;                                                  \</span></div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="preprocessor">} while(0)</span></div>
 </div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>

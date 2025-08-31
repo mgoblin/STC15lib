@@ -220,11 +220,11 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                                       \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                    \</div>
 <div class="line">    enable_mcu_interrupts();                                            \</div>
 <div class="line">    enable_timer2_interrupt();                                          \</div>
 <div class="line">    AUXR &amp;= 0xE2;                                                       \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Initialize mode0 12T for timer2. </p>
 <p>Timer2 could be used for UART. This method init timer2 as general purpose timer in mode0 with input from sysClk/12. Using timer2 in this mode disable UART capability. </p>
@@ -245,12 +245,12 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                                       \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                    \</div>
 <div class="line">    enable_mcu_interrupts();                                            \</div>
 <div class="line">    enable_timer2_interrupt();                                          \</div>
 <div class="line">    AUXR &amp;= 0xE2;                                                       \</div>
 <div class="line">    AUXR |= 0x05;                                                       \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Initialize mode0 1T for timer2. </p>
 <p>Timer2 could be used for UART. This method init timer2 as general purpose timer in mode0 with input from sysClk/1. Using timer2 in this mode disable UART capability. </p>
@@ -282,10 +282,10 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                               \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                            \</div>
 <div class="line">    T2H = th2;                                                  \</div>
 <div class="line">    T2L = tl2;                                                  \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Reload timer2 T2H and T2L registers on the fly. </p>
 <p>Reload is available in mode 0 only</p>
@@ -324,11 +324,11 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                           \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                        \</div>
 <div class="line">    timer2_mode0_direct_reload(th0, tl0);                   \</div>
 <div class="line">                                                            \</div>
 <div class="line">    bit_set(AUXR, SBIT4);                                   \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Run timer2 mode0 with direct set of TH0 and TL0 registers. </p>
 <p>Before run timer2_mode0_12T_init or timer2_mode0_1T_init should be called.</p>
@@ -419,11 +419,11 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                               \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                            \</div>
 <div class="line">    uint16_t value = 0xffff - ticks;                            \</div>
 <div class="line">    T2L = value &amp; 0xff;                                         \</div>
 <div class="line">    T2H = (value &gt;&gt; 8) &amp; 0xff;                                  \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Reload timer2 ticks on the fly. </p>
 <p>Reload is available in mode 0 only</p>
@@ -451,11 +451,11 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                           \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                        \</div>
 <div class="line">    timer2_mode0_reload(ticks);                             \</div>
 <div class="line">                                                            \</div>
 <div class="line">    bit_set(AUXR, SBIT4);                                   \</div>
-<div class="line">}</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Run timer2 mode0 with interrupt support. </p>
 <p>Before run timer2_mode0_12T_init or timer2_mode0_1T_init should be called.</p>
