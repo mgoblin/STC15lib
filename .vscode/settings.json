@@ -24,7 +24,8 @@
         "compare": "c",
         "compiler.h": "c",
         "power_management.h": "c",
-        "timer_to_ms_common.h": "c"
+        "timer_to_ms_common.h": "c",
+        "cstdint": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

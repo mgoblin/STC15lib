@@ -8,6 +8,7 @@
 
 #define LED P10
 #define TICKS 0xffff
+char fstr[32];
 
 void timerISR() __interrupt(1)
 {
@@ -16,20 +17,17 @@ void timerISR() __interrupt(1)
 
 void main()
 {    
-    set_frequency_divider_scale(7);
+    set_frequency_divider_scale(3);
+    
+    uart1_init(9600);
 
     timer0_mode0_12T_init();
     timer0_mode0_enable_P35_output();
+    timer0_mode0_start(TICKS);
 
     uint32_t timer_frequency = timer0_uint16_ticks_to_freq100(TICKS);
-
-    char fstr[32];
     __ultoa(timer_frequency, fstr, 10);
 
-    uart1_init(9600);
-
-    timer0_mode0_start(TICKS);
-    
     while (1) {
         delay_ms(200);
         // For TICKS = 0xffff and mcu clock divider 128 print 5 / 100 Hz
