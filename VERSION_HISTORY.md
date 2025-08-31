@@ -115,7 +115,6 @@
             * sync
     * uart
     * wdt               
-
 * Wrap multiline macro with do .. while(0)
     * chip_id.h
     * delay.h
@@ -129,16 +128,17 @@
     * timer2_mode0.h
     * uart.h
     * wdt.h
+* Fix timer0 mode2 timer0_mode2_delay(ticks). timer0_mode2_delay(ticks) disable timer0 interrupts. 
 
-* Fix examples/timer/auxiliary/timer0/timer0_12T_freq_uint16_example.c. Its print garbage. And fix other freq and ticks - incorrect calculation.
-* Fix direct setting TMOD. timer init should be used.
-* Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms
-* Review wakeup timer routines. Move from ticks to ms
-* Update lib version in README.md  
+* TODO Fix examples/timer/auxiliary/timer0/timer0_12T_freq_uint16_example.c. Its print garbage. And fix other freq and ticks - incorrect calculation.
+* TODO Update lib version in README.md  
 
 Next releases todo
 * TODO Implement counters
 * TODO Implement UART
 * TODO Optimize timer2 baud rate calculation. Use precalculated array of baudrates
 * TODO Implement P5.4 as MCU reset source
+* TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms
+* TODO Review wakeup timer routines. Move from ticks to ms
+
 

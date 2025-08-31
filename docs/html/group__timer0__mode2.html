@@ -298,6 +298,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                    \</div>
+<div class="line">    disable_timer0_interrupt();                                         \</div>
 <div class="line">    timer0_mode2_start(ticks);                                          \</div>
 <div class="line">    <span class="comment">/* Waiting for timer overloaded (timer overload flag set to 1) */</span>   \</div>
 <div class="line">    while(!TF0)                                                         \</div>
@@ -308,7 +309,8 @@ $(function() {
 </div><!-- fragment -->
 <p>Run timer0 mode2 once and wait with program flow blocking timer not finished. </p>
 <p>Before run timer0_mode2_12T_init or timer0_mode2_1T_init should be called.</p>
-<p>After run program flow blocked until timer does not overloaded.</p>
+<p>After call timer0_mode2_delay program flow is blocked until timer does not overloaded.</p>
+<p>Call timer0_mode2_delay is disable interrupt0.</p>
 <p>Dont mix call of timer0_mode2_delay with timer0_mode2_open_gate/timer0_mode2_close_gate calls.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

@@ -250,7 +250,10 @@ do {                                                        \
  * @details 
  * Before run timer0_mode2_12T_init or timer0_mode2_1T_init should be called. 
  * 
- * After run program flow blocked until timer does not overloaded.
+ * After call timer0_mode2_delay program flow is blocked 
+ * until timer does not overloaded.
+ * 
+ * Call timer0_mode2_delay is disable interrupt0.
  * 
  * Dont mix call of timer0_mode2_delay with
  * timer0_mode2_open_gate/timer0_mode2_close_gate calls.
@@ -261,6 +264,7 @@ do {                                                        \
  */
 #define timer0_mode2_delay(ticks)                                       \
 do {                                                                    \
+    disable_timer0_interrupt();                                         \
     timer0_mode2_start(ticks);                                          \
     /* Waiting for timer overloaded (timer overload flag set to 1) */   \
     while(!TF0)                                                         \

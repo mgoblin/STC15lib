@@ -6,11 +6,6 @@
 #define LED P10
 #define TIMER_CYCLES_MULTIPLIER 10000
 
-void timerISR() __interrupt(1)
-{
-
-}
-
 void main()
 {
     timer0_mode2_1T_init();
