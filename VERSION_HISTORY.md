@@ -132,8 +132,11 @@
 * Fix examples/timer/auxiliary/timer0/timer0_12T_freq_uint16_example.c. Its was print garbage. 
 * Update lib version in README.md  
 
-Next releases todo
+
+0.11.0
 * TODO Implement counters
+
+Next releases todo
 * TODO Implement UART
 * TODO Optimize timer2 baud rate calculation. Use precalculated array of baudrates
 * TODO Implement P5.4 as MCU reset source
