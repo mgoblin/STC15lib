@@ -1,12 +1,5 @@
 #include <counter0_mode0.h>
 
-void counter0_mode0_start(uint16_t value)
-{
-    counter0_mode0_set_value(value);
-    TF0 = 0;
-    TR0 = 1;
-}
-
 void counter0_mode0_set_value(uint16_t value)
 {
     TH0 = (uint8_t)(value >> 8);

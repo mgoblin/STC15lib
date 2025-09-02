@@ -85,15 +85,15 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader">run</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>Counter run/stop/reload functions </p>
 </td></tr>
-<tr class="memitem:gaa6337cda0b98bfdfba6320a7a67a4a84" id="r_gaa6337cda0b98bfdfba6320a7a67a4a84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode0.html#gaa6337cda0b98bfdfba6320a7a67a4a84">counter0_mode0_start</a> (uint16_t value)</td></tr>
-<tr class="memdesc:gaa6337cda0b98bfdfba6320a7a67a4a84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run counter0.  <br /></td></tr>
-<tr class="separator:gaa6337cda0b98bfdfba6320a7a67a4a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4255e9bfaf4a9422339c3c24a07cba84" id="r_ga4255e9bfaf4a9422339c3c24a07cba84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode0.html#ga4255e9bfaf4a9422339c3c24a07cba84">counter0_mode0_stop</a> ()</td></tr>
 <tr class="memdesc:ga4255e9bfaf4a9422339c3c24a07cba84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop counter0.  <br /></td></tr>
 <tr class="separator:ga4255e9bfaf4a9422339c3c24a07cba84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3ae10d517806187a40cf4fa8e2a78291" id="r_ga3ae10d517806187a40cf4fa8e2a78291"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode0.html#ga3ae10d517806187a40cf4fa8e2a78291">is_counter0_mode0_started</a> ()</td></tr>
 <tr class="memdesc:ga3ae10d517806187a40cf4fa8e2a78291"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get counter0 mode0 started status.  <br /></td></tr>
 <tr class="separator:ga3ae10d517806187a40cf4fa8e2a78291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6303fc5dfc8f4b0dafd341940e35f417" id="r_ga6303fc5dfc8f4b0dafd341940e35f417"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode0.html#ga6303fc5dfc8f4b0dafd341940e35f417">counter0_mode0_start</a>(value)</td></tr>
+<tr class="memdesc:ga6303fc5dfc8f4b0dafd341940e35f417"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run counter0.  <br /></td></tr>
+<tr class="separator:ga6303fc5dfc8f4b0dafd341940e35f417"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">read/write</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>Counter get and set value functions </p>
@@ -148,6 +148,39 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="ga6303fc5dfc8f4b0dafd341940e35f417" name="ga6303fc5dfc8f4b0dafd341940e35f417"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6303fc5dfc8f4b0dafd341940e35f417">&#9670;&#160;</a></span>counter0_mode0_start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define counter0_mode0_start</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">value</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                            \</div>
+<div class="line">    counter0_mode0_set_value(value);            \</div>
+<div class="line">                                                \</div>
+<div class="line">    TF0 = 0;                                    \</div>
+<div class="line">    TR0 = 1;                                    \</div>
+<div class="line">} <span class="keywordflow">while</span> (0);</div>
+</div><!-- fragment -->
+<p>Run counter0. </p>
+<p>Before run counter0_mode0_init should be called. After run counter0 is counted T0 pin state change. Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>uint16_t initial counter value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga42467eb9e90747636f52d8e3564058c6" name="ga42467eb9e90747636f52d8e3564058c6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga42467eb9e90747636f52d8e3564058c6">&#9670;&#160;</a></span>counter0_mode0_get_value()</h2>
@@ -190,33 +223,6 @@ Macros</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>uint16_t counter value to set </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="gaa6337cda0b98bfdfba6320a7a67a4a84" name="gaa6337cda0b98bfdfba6320a7a67a4a84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa6337cda0b98bfdfba6320a7a67a4a84">&#9670;&#160;</a></span>counter0_mode0_start()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void counter0_mode0_start </td>
-          <td>(</td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Run counter0. </p>
-<p>Before run counter0_mode0_init should be called. After run counter0 is counted T0 pin state change. Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>uint16_t initial counter value </td></tr>
   </table>
   </dd>
 </dl>

@@ -67,7 +67,14 @@ do {                                            \
  * 
  * @ingroup counter0_mode0
  */
-void counter0_mode0_start(uint16_t value);
+#define counter0_mode0_start(value)             \
+do {                                            \
+    counter0_mode0_set_value(value);            \
+                                                \
+    TF0 = 0;                                    \
+    TR0 = 1;                                    \
+} while (0);
+
 /**
  * @brief Stop counter0
  * @details Stop count T0 pin state changes. 
