@@ -134,7 +134,12 @@
 
 
 0.11.0
-* TODO Implement counters
+* Implement counters
+    * First implementation as C-code
+    * Documentation
+    * TODO Examples
+    * TODO Header based first implementation
+    * TODO Final version
 
 Next releases todo
 * TODO Implement UART

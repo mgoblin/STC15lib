@@ -4,5 +4,12 @@ var searchData=
   ['chip_5fid_5faddr_5from_1',['CHIP_ID_ADDR_ROM',['../group__chip__id.html#gade5a33c9ca0579ba754154984706deff',1,'chip_id.h']]],
   ['chip_5fid_5fsize_2',['CHIP_ID_SIZE',['../group__chip__id.html#ga909ec39ac520a4448627b2d9aa61d016',1,'chip_id.h']]],
   ['chipid_3',['ChipID',['../group__chip__id.html',1,'']]],
-  ['common_4',['common',['../group__timer__to__ms.html',1,'Timer Aux common'],['../group__timer__common.html',1,'Timer common']]]
+  ['common_4',['common',['../group__timer__to__ms.html',1,'Timer Aux common'],['../group__timer__common.html',1,'Timer common']]],
+  ['counter0_20mode0_5',['Counter0 Mode0',['../group__counter0__mode0.html',1,'']]],
+  ['counter0_5fmode0_2eh_6',['counter0_mode0.h',['../counter0__mode0_8h.html',1,'']]],
+  ['counter0_5fmode0_5fget_5fvalue_7',['counter0_mode0_get_value',['../group__counter0__mode0.html#ga42467eb9e90747636f52d8e3564058c6',1,'counter0_mode0_get_value():&#160;counter0_mode0.c'],['../group__counter0__mode0.html#ga42467eb9e90747636f52d8e3564058c6',1,'counter0_mode0_get_value():&#160;counter0_mode0.c']]],
+  ['counter0_5fmode0_5finit_8',['counter0_mode0_init',['../group__counter0__mode0.html#gaf4c7e1c7447cf6f1cb3ed3e82919e70c',1,'counter0_mode0_init():&#160;counter0_mode0.c'],['../group__counter0__mode0.html#gaf4c7e1c7447cf6f1cb3ed3e82919e70c',1,'counter0_mode0_init():&#160;counter0_mode0.c']]],
+  ['counter0_5fmode0_5fset_5fvalue_9',['counter0_mode0_set_value',['../group__counter0__mode0.html#ga1cda70b1351ff8d39df94b388eb79151',1,'counter0_mode0_set_value(uint16_t value):&#160;counter0_mode0.c'],['../group__counter0__mode0.html#ga1cda70b1351ff8d39df94b388eb79151',1,'counter0_mode0_set_value(uint16_t value):&#160;counter0_mode0.c']]],
+  ['counter0_5fmode0_5fstart_10',['counter0_mode0_start',['../group__counter0__mode0.html#gaa6337cda0b98bfdfba6320a7a67a4a84',1,'counter0_mode0_start(uint16_t value):&#160;counter0_mode0.c'],['../group__counter0__mode0.html#gaa6337cda0b98bfdfba6320a7a67a4a84',1,'counter0_mode0_start(uint16_t value):&#160;counter0_mode0.c']]],
+  ['counter0_5fmode0_5fstop_11',['counter0_mode0_stop',['../group__counter0__mode0.html#ga4255e9bfaf4a9422339c3c24a07cba84',1,'counter0_mode0_stop():&#160;counter0_mode0.c'],['../group__counter0__mode0.html#ga4255e9bfaf4a9422339c3c24a07cba84',1,'counter0_mode0_stop():&#160;counter0_mode0.c']]]
 ];

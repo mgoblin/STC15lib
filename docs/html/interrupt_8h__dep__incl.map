@@ -1,6 +1,6 @@
 <map id="include/interrupt.h" name="include/interrupt.h">
 <area shape="rect" id="Node000001" title=" " alt="" coords="549,5,691,31"/>
-<area shape="rect" id="Node000002" href="$counter0__mode0_8h_source.html" title=" " alt="" coords="5,79,200,104"/>
+<area shape="rect" id="Node000002" href="$counter0__mode0_8h.html" title=" " alt="" coords="5,79,200,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="536,34,186,81,186,76,535,28"/>
 <area shape="rect" id="Node000003" href="$timer0__mode0_8h.html" title=" " alt="" coords="225,79,405,104"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="558,36,365,81,364,76,557,31"/>

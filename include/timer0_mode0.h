@@ -7,7 +7,8 @@
  * @details Functions and data structures for timer0 mode0.
  * 
  * This module supports general purpose timer0.
- * Timer can work as COUNTER or TIMER. 
+ * Timer can work as COUNTER or TIMER. You can not use counter0 
+ * and timer0 at the same time. 
  * 
  * Counter increments on external singnal (like pin 1/0 change state). 
  * 

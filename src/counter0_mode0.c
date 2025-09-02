@@ -1,13 +1,4 @@
 #include <counter0_mode0.h>
-#include <pin.h>
-
-#include <delay.h>
-
-#include <uart.h>
-#include <stdio.h>
-
-#define LED P10
-#define COUNTER_INIT_VALUE 65435U
 
 void counter0_mode0_init()
 {
@@ -19,12 +10,12 @@ void counter0_mode0_init()
     // TMOD.1/M1 timer0 = 0; 
     // TMOD.0/M0 timer0= 0;
     TMOD |= 0x04; // init Counter0
-
-    counter0_mode0_set_value(0x00);
 }
 
-void counter0_mode0_start()
+void counter0_mode0_start(uint16_t value)
 {
+    counter0_mode0_set_value(value);
+    TF0 = 0;
     TR0 = 1;
 }
 
@@ -44,29 +35,7 @@ void counter0_mode0_stop()
     TR0 = 0;
 }
 
-void timer0ISR(void) __interrupt(1)
+bool is_counter0_mode0_started()
 {
-    LED = !LED;
-}
-
-void main()
-{
-    uart1_init(9600);
-
-    counter0_mode0_init();
-    counter0_mode0_set_value(COUNTER_INIT_VALUE);
-    counter0_mode0_start();
-    
-    pin_quasi_bidiretional_init(P3, 4);
-
-    while (1) {
-        T0 = !T0;
-        delay_ms(50);
-        if (!T0)
-        {
-            printf_tiny(
-                "Tick %u\r\n", 
-                counter0_mode0_get_value() - COUNTER_INIT_VALUE);
-        }
-    }
+    return TR0 == 1;
 }
