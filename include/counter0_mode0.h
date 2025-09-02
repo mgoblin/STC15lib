@@ -95,7 +95,7 @@ do {                                            \
  * 
  * @ingroup counter0_mode0
  */
-bool is_counter0_mode0_started();
+#define is_counter0_mode0_started() (TR0 == 1)
 ///@}
 
 /** @name read/write
