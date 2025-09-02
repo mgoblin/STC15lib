@@ -1,0 +1,3 @@
+Import("env")
+
+SConscript('mode0/SConscript', exports = 'env')

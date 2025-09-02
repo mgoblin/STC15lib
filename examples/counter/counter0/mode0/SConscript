@@ -1,0 +1,12 @@
+Import("env")
+
+env.Default (
+    env.Program(
+        'counter0_mode0_example', 
+        [
+            'counter0_mode0_example.c', 
+            'counter0_mode0.c',
+            'uart.c'
+        ]
+    )
+)
