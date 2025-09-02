@@ -110,7 +110,7 @@ do {                                            \
  * 
  * @ingroup counter0_mode0
  */
-uint16_t counter0_mode0_get_value();
+#define counter0_mode0_get_value() ((((uint16_t) TH0) << 8) | TL0)
 
 /**
  * @brief set counter0 value in mode0
