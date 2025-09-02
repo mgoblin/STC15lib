@@ -105,7 +105,7 @@ Other modules does not implemented yet.
 See examples in [https://github.com/mgoblin/STC15lib/tree/main/examples](https://github.com/mgoblin/STC15lib/tree/main/examples)
 
 # Library documentation
-[Docs](https://mgoblin.github.io/STC15lib/docs/html/modules.html)
+[Docs](https://mgoblin.github.io/STC15lib/docs/html/index.html)
 
 # Version history
 [Version history](https://mgoblin.github.io/STC15lib/VERSION_HISTORY.html)
