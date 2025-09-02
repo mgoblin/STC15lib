@@ -1,17 +1,5 @@
 #include <counter0_mode0.h>
 
-void counter0_mode0_init()
-{
-    enable_mcu_interrupts();
-    enable_timer0_interrupt();
-
-    // TMOD.3/GATE = 0;
-    // TMOD.2/(Timer or Counter mode) = 1;
-    // TMOD.1/M1 timer0 = 0; 
-    // TMOD.0/M0 timer0= 0;
-    TMOD |= 0x04; // init Counter0
-}
-
 void counter0_mode0_start(uint16_t value)
 {
     counter0_mode0_set_value(value);
