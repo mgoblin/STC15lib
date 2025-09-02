@@ -82,7 +82,11 @@ do {                                            \
  * 
  * @ingroup counter0_mode0
  */
-void counter0_mode0_stop();
+#define counter0_mode0_stop()                   \
+do {                                            \
+    TR0 = 0;                                    \
+} while (0)
+
 
 /**
  * @brief Get counter0 mode0 started status.
