@@ -1,3 +1,15 @@
+/**
+ * How to use counter0 in mode0.
+ * 
+ * This example configures counter0 to count from COUNTER_INIT_VALUE
+ * to 65535 (100 counts).
+ * Pin T0 used as an input for counter0. 
+ * 
+ * After init T0 programmatically changed 
+ * and current counter0 value is printed to UART.
+ * 
+ * After counter overflow LED is change it state.  
+ */
 #include <counter0_mode0.h>
 #include <pin.h>
 
@@ -7,7 +19,7 @@
 #include <stdio.h>
 
 #define LED P10
-#define COUNTER_INIT_VALUE 65435U
+#define COUNTER_INIT_VALUE 65435U // Initial counter value
 
 void timer0ISR(void) __interrupt(1)
 {
@@ -26,7 +38,7 @@ void main()
     while (1) {
         T0 = !T0;
         delay_ms(50);
-        if (!T0)
+        if (!T0) // react on T0 pin change to low value only
         {
             printf_tiny(
                 "Tick %u\r\n", 

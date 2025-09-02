@@ -135,11 +135,16 @@
 
 0.11.0
 * Implement counters
-    * First implementation as C-code
-    * Documentation
-    * TODO Examples
-    * TODO Header based first implementation
-    * TODO Final version
+    * First implementation as C-code for counter0 mode0
+    * Documentation for counter0 mode0
+    * Examples for counter0 mode0
+    * TODO Header based first implementation for counter0 mode0
+    * TODO Final version for counter0 mode0
+    * TODO Header based implementation for counter0 mode1
+    * TODO Header based implementation for counter0 mode2
+    * TODO Header based implementation for counter0 mode3
+    * TODO counter2 implementation
+    
 
 Next releases todo
 * TODO Implement UART
