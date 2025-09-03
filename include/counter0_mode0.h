@@ -7,6 +7,7 @@
  * @details Functions and data structures for counter0 mode0.
  * 
  * This module supports general purpose counter0.
+ * Mode0 is auto reload 16-bit counter.
  * 
  * Counter0 increments its value on T0 pin change state  from 0 to 1. 
  * Once the counter reaches its maximum value of 65535, 
