@@ -138,7 +138,7 @@
     * First implementation as C-code for counter0 mode0
     * Documentation for counter0 mode0
     * Examples for counter0 mode0
-    * TODO Header based first implementation for counter0 mode0
+    * Header based first implementation for counter0 mode0
     * TODO Final version for counter0 mode0
     * TODO Header based implementation for counter0 mode1
     * TODO Header based implementation for counter0 mode2

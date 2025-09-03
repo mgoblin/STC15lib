@@ -5,7 +5,6 @@ env.Default (
         'counter0_mode0_example', 
         [
             'counter0_mode0_example.c', 
-            'counter0_mode0.c',
             'uart.c'
         ]
     )

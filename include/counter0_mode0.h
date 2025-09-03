@@ -121,7 +121,10 @@ do {                                            \
  * 
  * @ingroup counter0_mode0
  */
-void counter0_mode0_set_value(uint16_t value);
-
+#define counter0_mode0_set_value(value)         \
+do {                                            \
+    TH0 = (uint8_t)(value >> 8);                \
+    TL0 = (uint8_t)(value & 0xff);              \
+} while(0)
 ///@}
 #endif
