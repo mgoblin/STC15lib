@@ -6,7 +6,7 @@ var searchData=
   ['management_3',['Power management',['../group__power__management.html',1,'']]],
   ['master_5fclock_5foutput_5fpin_5ft_4',['master_clock_output_pin_t',['../group__freq.html#gae5d505beabdbd466d648cb5dccf4b6d2',1,'frequency.h']]],
   ['maturity_5',['Library modules maturity',['../index.html#autotoc_md5',1,'']]],
-  ['mode0_6',['mode0',['../group__counter0__mode0.html',1,'Counter0 Mode0'],['../group__timer0__mode0.html',1,'Timer0 Mode0'],['../group__timer2__mode0.html',1,'Timer2 Mode0']]],
+  ['mode0_6',['mode0',['../group__counter0__mode0.html',1,'Counter0 Mode0'],['../group__counter2__mode0.html',1,'Counter2 Mode0'],['../group__timer0__mode0.html',1,'Timer0 Mode0'],['../group__timer2__mode0.html',1,'Timer2 Mode0']]],
   ['mode1_7',['Timer0 Mode1',['../group__timer0__mode1.html',1,'']]],
   ['mode2_8',['Timer0 Mode2',['../group__timer0__mode2.html',1,'']]],
   ['mode3_9',['Timer0 Mode3',['../group__timer0__mode3.html',1,'']]],

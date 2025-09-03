@@ -1,0 +1,19 @@
+<map id="include/counter2_mode0.h" name="include/counter2_mode0.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="58,5,253,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,76,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,33,72,74,70,69,136,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="63,152,146,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="154,32,116,140,111,138,149,30"/>
+<area shape="rect" id="Node000004" href="$interrupt_8h.html" title=" " alt="" coords="151,79,242,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="164,30,185,65,181,68,160,32"/>
+<area shape="rect" id="Node000008" href="$bits_8h_source.html" title=" " alt="" coords="250,152,309,177"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="188,28,223,48,256,77,272,107,279,138,274,139,267,109,252,80,220,52,185,33"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="184,106,132,146,129,141,180,102"/>
+<area shape="rect" id="Node000005" href="$sys_8h.html" title=" " alt="" coords="170,152,226,177"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="200,104,200,138,195,139,194,104"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="212,102,257,141,254,145,208,106"/>
+<area shape="rect" id="Node000006" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="149,225,247,251"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="201,178,201,212,195,212,195,178"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="153,299,243,324"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="201,251,201,285,195,285,195,251"/>
+</map>

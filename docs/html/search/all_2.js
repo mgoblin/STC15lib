@@ -13,5 +13,14 @@ var searchData=
   ['counter0_5fmode0_5finit_10',['counter0_mode0_init',['../group__counter0__mode0.html#ga91c9a1b9a89def2cb319b1eca4177de5',1,'counter0_mode0.h']]],
   ['counter0_5fmode0_5fset_5fvalue_11',['counter0_mode0_set_value',['../group__counter0__mode0.html#gaacabd9f5df806591acaf4d072e6abf91',1,'counter0_mode0.h']]],
   ['counter0_5fmode0_5fstart_12',['counter0_mode0_start',['../group__counter0__mode0.html#ga6303fc5dfc8f4b0dafd341940e35f417',1,'counter0_mode0.h']]],
-  ['counter0_5fmode0_5fstop_13',['counter0_mode0_stop',['../group__counter0__mode0.html#ga0529c8b6076e792659c29d8b1f39c9b0',1,'counter0_mode0.h']]]
+  ['counter0_5fmode0_5fstop_13',['counter0_mode0_stop',['../group__counter0__mode0.html#ga0529c8b6076e792659c29d8b1f39c9b0',1,'counter0_mode0.h']]],
+  ['counter2_20mode0_14',['Counter2 Mode0',['../group__counter2__mode0.html',1,'']]],
+  ['counter2_5fmode0_2eh_15',['counter2_mode0.h',['../counter2__mode0_8h.html',1,'']]],
+  ['counter2_5fmode0_5fdisable_5fp30_5foutput_16',['counter2_mode0_disable_P30_output',['../group__counter2__mode0.html#ga5c357d609580d05b38949c515167f0b9',1,'counter2_mode0.h']]],
+  ['counter2_5fmode0_5fenable_5fp30_5foutput_17',['counter2_mode0_enable_P30_output',['../group__counter2__mode0.html#ga6228c30868b5729072c444e93bd72877',1,'counter2_mode0.h']]],
+  ['counter2_5fmode0_5fget_5fvalue_18',['counter2_mode0_get_value',['../group__counter2__mode0.html#ga359b791bb6456edbcb590926595f45be',1,'counter2_mode0.h']]],
+  ['counter2_5fmode0_5finit_19',['counter2_mode0_init',['../group__counter2__mode0.html#gabd917590ea8dc28e142d08f397f9b2fa',1,'counter2_mode0.h']]],
+  ['counter2_5fmode0_5fset_5fvalue_20',['counter2_mode0_set_value',['../group__counter2__mode0.html#gac76600212f6455bb2044da36c310ddf6',1,'counter2_mode0.h']]],
+  ['counter2_5fmode0_5fstart_21',['counter2_mode0_start',['../group__counter2__mode0.html#gadeb71948175275b25a1255598c32ef50',1,'counter2_mode0.h']]],
+  ['counter2_5fmode0_5fstop_22',['counter2_mode0_stop',['../group__counter2__mode0.html#gab6d6c1c5304526bf5abe5ff2931b0c2b',1,'counter2_mode0.h']]]
 ];

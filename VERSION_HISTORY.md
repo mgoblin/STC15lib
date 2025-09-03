@@ -134,18 +134,13 @@
 
 
 0.11.0
-* Implement counter routines
-    * First implementation as C-code for counter0 mode0
-    * Documentation for counter0 mode0
-    * Examples for counter0 mode0
-    * Header based first implementation for counter0 mode0
-    * Final version for counter0 mode0
-        * P3.5 output enable/disable routines
-        * TODO Gate enable/disable routines
-    * TODO counter2 mode0 implementation    
-    * TODO Header based implementation for counter0 mode1
-    * TODO Header based implementation for counter0 mode2
-    * TODO Header based implementation for counter0 mode3
+* Counter0 mode0 routines implemented
+    * TODO Gate enable/disable routines
+* Counter2 mode0 routines implemented
+    * TODO counter2 mode0 examples    
+* TODO Header based implementation for counter0 mode1
+* TODO Header based implementation for counter0 mode2
+* TODO Header based implementation for counter0 mode3
 
 Next releases todo
 * TODO Implement UART
