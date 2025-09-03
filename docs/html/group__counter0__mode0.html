@@ -111,6 +111,19 @@ Macros</h2></td></tr>
 <tr class="memitem:gaacabd9f5df806591acaf4d072e6abf91" id="r_gaacabd9f5df806591acaf4d072e6abf91"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode0.html#gaacabd9f5df806591acaf4d072e6abf91">counter0_mode0_set_value</a>(value)</td></tr>
 <tr class="memdesc:gaacabd9f5df806591acaf4d072e6abf91"><td class="mdescLeft">&#160;</td><td class="mdescRight">set counter0 value in mode0  <br /></td></tr>
 <tr class="separator:gaacabd9f5df806591acaf4d072e6abf91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">config</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>Counter0 pin output and gate config functions </p>
+</td></tr>
+<tr class="memitem:gae405fc1390dc5469617d2f862d77a33e" id="r_gae405fc1390dc5469617d2f862d77a33e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode0.html#gae405fc1390dc5469617d2f862d77a33e">counter0_mode0_enable_P35_output</a>()&#160;&#160;&#160;(bit_set(INT_CLKO, SBIT0))</td></tr>
+<tr class="memdesc:gae405fc1390dc5469617d2f862d77a33e"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable output to P3.5  <br /></td></tr>
+<tr class="separator:gae405fc1390dc5469617d2f862d77a33e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga28e73dbb30c38e09d4611427813e6175" id="r_ga28e73dbb30c38e09d4611427813e6175"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode0.html#ga28e73dbb30c38e09d4611427813e6175">counter0_mode0_disable_P35_output</a>()&#160;&#160;&#160;(bit_clr(INT_CLKO, CBIT0))</td></tr>
+<tr class="memdesc:ga28e73dbb30c38e09d4611427813e6175"><td class="mdescLeft">&#160;</td><td class="mdescRight">disable output to P3.5  <br /></td></tr>
+<tr class="separator:ga28e73dbb30c38e09d4611427813e6175"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga022eafb39b56b648d863b4eecc89ffa4" id="r_ga022eafb39b56b648d863b4eecc89ffa4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode0.html#ga022eafb39b56b648d863b4eecc89ffa4">is_counter0_mode0_P35_output_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, SBIT0))</td></tr>
+<tr class="memdesc:ga022eafb39b56b648d863b4eecc89ffa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">get pin P3.5 output state to P3.5  <br /></td></tr>
+<tr class="separator:ga022eafb39b56b648d863b4eecc89ffa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions and data structures for counter0 mode0.</p>
@@ -118,6 +131,46 @@ Macros</h2></td></tr>
 <p>Counter0 increments its value on T0 pin change state from 0 to 1. Once the counter reaches its maximum value of 65535, the counter is reset to zero at the next increment. On counter overflow reset interrupt 1 is raised.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga28e73dbb30c38e09d4611427813e6175" name="ga28e73dbb30c38e09d4611427813e6175"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga28e73dbb30c38e09d4611427813e6175">&#9670;&#160;</a></span>counter0_mode0_disable_P35_output</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define counter0_mode0_disable_P35_output</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(bit_clr(INT_CLKO, CBIT0))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>disable output to P3.5 </p>
+<p>Disable pin P.3.5 state changes on counter0 overflow. By default P3.5 output is disabled </p>
+
+</div>
+</div>
+<a id="gae405fc1390dc5469617d2f862d77a33e" name="gae405fc1390dc5469617d2f862d77a33e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae405fc1390dc5469617d2f862d77a33e">&#9670;&#160;</a></span>counter0_mode0_enable_P35_output</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define counter0_mode0_enable_P35_output</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(bit_set(INT_CLKO, SBIT0))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>enable output to P3.5 </p>
+<p>Enable pin P.3.5 state changes on counter0 overflow. By default P3.5 output is disabled </p>
+
+</div>
+</div>
 <a id="gaaab5c77175ed786722627dc5a77e1933" name="gaaab5c77175ed786722627dc5a77e1933"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaaab5c77175ed786722627dc5a77e1933">&#9670;&#160;</a></span>counter0_mode0_get_value</h2>
 
@@ -252,6 +305,26 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Stop counter0. </p>
 <p>Stop count T0 pin state changes. Before stop counter0_start should be called. </p>
+
+</div>
+</div>
+<a id="ga022eafb39b56b648d863b4eecc89ffa4" name="ga022eafb39b56b648d863b4eecc89ffa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga022eafb39b56b648d863b4eecc89ffa4">&#9670;&#160;</a></span>is_counter0_mode0_P35_output_enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define is_counter0_mode0_P35_output_enabled</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, SBIT0))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get pin P3.5 output state to P3.5 </p>
+<dl class="section return"><dt>Returns</dt><dd>true if P3.5 output enabled otherwise false </dd></dl>
 
 </div>
 </div>

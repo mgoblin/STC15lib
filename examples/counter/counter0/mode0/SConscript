@@ -7,5 +7,10 @@ env.Default (
             'counter0_mode0_example.c', 
             'uart.c'
         ]
+    ), 
+
+    env.Program(
+        'counter0_mode0_p35_output_example',
+        ['counter0_mode0_p35_output_example.c']
     )
 )

@@ -139,7 +139,9 @@
     * Documentation for counter0 mode0
     * Examples for counter0 mode0
     * Header based first implementation for counter0 mode0
-    * TODO Final version for counter0 mode0
+    * Final version for counter0 mode0
+        * P3.5 output enable/disable routines
+        * TODO Gate enable/disable routines
     * TODO Header based implementation for counter0 mode1
     * TODO Header based implementation for counter0 mode2
     * TODO Header based implementation for counter0 mode3

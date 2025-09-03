@@ -127,4 +127,39 @@ do {                                            \
     TL0 = (uint8_t)(value & 0xff);              \
 } while(0)
 ///@}
+
+/** @name config
+ *  Counter0 pin output and gate config functions 
+ */
+///@{
+/**
+ * @brief enable output to P3.5
+ * 
+ * @details Enable pin P.3.5 state changes on counter0 overflow.
+ * By default P3.5 output is disabled
+ * 
+ * @ingroup counter0_mode0
+ */
+#define counter0_mode0_enable_P35_output()   (bit_set(INT_CLKO, SBIT0))
+
+/**
+ * @brief disable output to P3.5
+ * 
+ * @details Disable pin P.3.5 state changes on counter0 overflow.
+ * By default P3.5 output is disabled
+ * 
+ * @ingroup counter0_mode0
+ */
+#define counter0_mode0_disable_P35_output()   (bit_clr(INT_CLKO, CBIT0))
+
+/**
+ * @brief get pin P3.5 output state to P3.5
+ * 
+ * @returns true if P3.5 output enabled otherwise false
+ * 
+ * @ingroup counter0_mode0
+ */
+#define is_counter0_mode0_P35_output_enabled()   (test_if_bit_set(INT_CLKO, SBIT0))
+///@}
+
 #endif
