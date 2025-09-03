@@ -1,3 +1,12 @@
+/** 
+ * How to enable and disable counter0 mode0 pin P3.5 output.
+ * 
+ * Counter0 start counting from COUNTER_INIT_VALUE to 65535.
+ * 
+ * After counter0 overflow LED is blinks and P3.5 change it state.
+ * At pin P3.5 meander signal generated.
+ * 
+ */
 #include <counter0_mode0.h>
 #include <delay.h>
 
