@@ -135,7 +135,8 @@
 
 0.11.0
 * Counter0 mode0 routines implemented
-    * TODO Gate enable/disable routines
+    * Gate enable/disable routines
+    * Gate enable/disable example
 * Counter2 mode0 routines implemented
     * TODO counter2 mode0 examples    
 * TODO Header based implementation for counter0 mode1

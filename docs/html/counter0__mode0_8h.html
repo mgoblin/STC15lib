@@ -128,7 +128,7 @@ Macros</h2></td></tr>
 <tr class="memitem:ga0529c8b6076e792659c29d8b1f39c9b0" id="r_ga0529c8b6076e792659c29d8b1f39c9b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode0.html#ga0529c8b6076e792659c29d8b1f39c9b0">counter0_mode0_stop</a>()</td></tr>
 <tr class="memdesc:ga0529c8b6076e792659c29d8b1f39c9b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop counter0.  <br /></td></tr>
 <tr class="separator:ga0529c8b6076e792659c29d8b1f39c9b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga09f7a0a3b902569e4fab5b1886cc81a7" id="r_ga09f7a0a3b902569e4fab5b1886cc81a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode0.html#ga09f7a0a3b902569e4fab5b1886cc81a7">is_counter0_mode0_started</a>()&#160;&#160;&#160;(TR0 == 1)</td></tr>
+<tr class="memitem:ga09f7a0a3b902569e4fab5b1886cc81a7" id="r_ga09f7a0a3b902569e4fab5b1886cc81a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode0.html#ga09f7a0a3b902569e4fab5b1886cc81a7">is_counter0_mode0_started</a>()&#160;&#160;&#160;(TR0 == 1 &amp;&amp; (<a class="el" href="group__counter0__mode0.html#ga61940bbdb94810b77e79cca1e59ba600">is_counter0_mode0_gate_opened</a>() || <a class="el" href="group__timer0__mode1.html#ga7521122e23c8d5c83b2a033b2505c86c">INT0</a> == 1) )</td></tr>
 <tr class="memdesc:ga09f7a0a3b902569e4fab5b1886cc81a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get counter0 mode0 started status.  <br /></td></tr>
 <tr class="separator:ga09f7a0a3b902569e4fab5b1886cc81a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">read/write</div></td></tr>
@@ -152,6 +152,15 @@ Macros</h2></td></tr>
 <tr class="memitem:ga022eafb39b56b648d863b4eecc89ffa4" id="r_ga022eafb39b56b648d863b4eecc89ffa4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode0.html#ga022eafb39b56b648d863b4eecc89ffa4">is_counter0_mode0_P35_output_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, SBIT0))</td></tr>
 <tr class="memdesc:ga022eafb39b56b648d863b4eecc89ffa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">get pin P3.5 output state to P3.5  <br /></td></tr>
 <tr class="separator:ga022eafb39b56b648d863b4eecc89ffa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaab9659f40d1d1fce7e1e2ebe968bf3e9" id="r_gaab9659f40d1d1fce7e1e2ebe968bf3e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode0.html#gaab9659f40d1d1fce7e1e2ebe968bf3e9">counter0_mode0_open_gate</a>()&#160;&#160;&#160;(bit_clr(TMOD, CBIT3))</td></tr>
+<tr class="memdesc:gaab9659f40d1d1fce7e1e2ebe968bf3e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open counter0 gate.  <br /></td></tr>
+<tr class="separator:gaab9659f40d1d1fce7e1e2ebe968bf3e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac970c3b8dc2857f39ca8d51dd785a29f" id="r_gac970c3b8dc2857f39ca8d51dd785a29f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode0.html#gac970c3b8dc2857f39ca8d51dd785a29f">counter0_mode0_close_gate</a>()&#160;&#160;&#160;(bit_set(TMOD, SBIT3))</td></tr>
+<tr class="memdesc:gac970c3b8dc2857f39ca8d51dd785a29f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close counter0 gate.  <br /></td></tr>
+<tr class="separator:gac970c3b8dc2857f39ca8d51dd785a29f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61940bbdb94810b77e79cca1e59ba600" id="r_ga61940bbdb94810b77e79cca1e59ba600"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode0.html#ga61940bbdb94810b77e79cca1e59ba600">is_counter0_mode0_gate_opened</a>()&#160;&#160;&#160;(test_if_bit_cleared(TMOD, SBIT3))</td></tr>
+<tr class="memdesc:ga61940bbdb94810b77e79cca1e59ba600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get gate state.  <br /></td></tr>
+<tr class="separator:ga61940bbdb94810b77e79cca1e59ba600"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
