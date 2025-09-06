@@ -44,6 +44,7 @@
  * - TMOD.2 = 1
  * - TMOD.3 = 0
  * 
+ * @attention Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code.
  * 
  * @ingroup counter0_mode1
  */
@@ -54,6 +55,26 @@ do {                                            \
                                                 \
     TMOD = (TMOD & 0xF0) | 0x01;                \
 } while(0)    
+
+
+/**
+ * @brief Starts Counter 0 in Mode 1 with a specified initial value.
+ * 
+ * @details Loads the initial 16-bit value into Counter 0 registers and starts the counter.
+ * 
+ * @attention Before calling this function, counter0_mode1_init() should be called.
+ * 
+ * @param value 16-bit unsigned integer specifying the initial counter count
+ * 
+ * @ingroup counter0_mode1
+ */
+#define counter0_mode1_start(value)             \
+do {                                            \
+    TH0 = value >> 8;                           \
+    TL0 = value & 0xFF;                         \
+                                                \
+    TR0 = 1;                                    \
+} while(0)
 
 ///@}
 

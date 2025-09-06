@@ -79,12 +79,15 @@ $(function() {
 <tr class="memitem:gae25012f2830105f130d2f29688ac06be" id="r_gae25012f2830105f130d2f29688ac06be"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode1.html#gae25012f2830105f130d2f29688ac06be">counter0_mode1_init</a>()</td></tr>
 <tr class="memdesc:gae25012f2830105f130d2f29688ac06be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize mode1 for counter0.  <br /></td></tr>
 <tr class="separator:gae25012f2830105f130d2f29688ac06be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga884dd0b68e80c9981a5c9d11b59d6461" id="r_ga884dd0b68e80c9981a5c9d11b59d6461"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode1.html#ga884dd0b68e80c9981a5c9d11b59d6461">counter0_mode1_start</a>(value)</td></tr>
+<tr class="memdesc:ga884dd0b68e80c9981a5c9d11b59d6461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts Counter 0 in Mode 1 with a specified initial value.  <br /></td></tr>
+<tr class="separator:ga884dd0b68e80c9981a5c9d11b59d6461"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Counter0 mode 1 routines.</p>
 <p>This module supports general purpose counter0. Timer can work as COUNTER or TIMER.</p>
 <p>Counter increments on T0 pin change state.</p>
-<p>Counter0 Mode1 is 16-bit counter without reloading and P35 pin output features. Mode1 is like mode0 but without timer reloading and P35 pin output features.</p>
+<p>Counter0 Mode1 is 16-bit counter. Mode1 is like mode0 but without reloading and P35 pin output features.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="gae25012f2830105f130d2f29688ac06be" name="gae25012f2830105f130d2f29688ac06be"></a>
@@ -114,8 +117,43 @@ $(function() {
 <li>TMOD.0 = 1</li>
 <li>TMOD.1 = 0</li>
 <li>TMOD.2 = 1</li>
-<li>TMOD.3 = 0 </li>
+<li>TMOD.3 = 0</li>
 </ul>
+<dl class="section attention"><dt>Attention</dt><dd>Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code. </dd></dl>
+
+</div>
+</div>
+<a id="ga884dd0b68e80c9981a5c9d11b59d6461" name="ga884dd0b68e80c9981a5c9d11b59d6461"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga884dd0b68e80c9981a5c9d11b59d6461">&#9670;&#160;</a></span>counter0_mode1_start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define counter0_mode1_start</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">value</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                            \</div>
+<div class="line">    TH0 = value &gt;&gt; 8;                           \</div>
+<div class="line">    TL0 = value &amp; 0xFF;                         \</div>
+<div class="line">                                                \</div>
+<div class="line">    TR0 = 1;                                    \</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
+</div><!-- fragment -->
+<p>Starts Counter 0 in Mode 1 with a specified initial value. </p>
+<p>Loads the initial 16-bit value into Counter 0 registers and starts the counter.</p>
+<dl class="section attention"><dt>Attention</dt><dd>Before calling this function, <a class="el" href="group__counter0__mode1.html#gae25012f2830105f130d2f29688ac06be" title="Initialize mode1 for counter0.">counter0_mode1_init()</a> should be called.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>16-bit unsigned integer specifying the initial counter count </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
