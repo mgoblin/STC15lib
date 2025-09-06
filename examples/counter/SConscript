@@ -1,3 +1,4 @@
 Import("env")
 
 SConscript('counter0/SConscript', exports = 'env')
+SConscript('counter2/SConscript', exports = 'env')

@@ -78,7 +78,8 @@ $(function() {
   <div class="headertitle"><div class="title">counter2_mode0.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="interrupt_8h_source.html">interrupt.h</a>&gt;</code><br />
 <code>#include &lt;bits.h&gt;</code><br />
@@ -87,23 +88,25 @@ Include dependency graph for counter2_mode0.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="counter2__mode0_8h__incl.png" border="0" usemap="#ainclude_2counter2__mode0_8h" alt=""/></div>
 <map name="ainclude_2counter2__mode0_8h" id="ainclude_2counter2__mode0_8h">
-<area shape="rect" title=" " alt="" coords="58,5,253,31"/>
-<area shape="rect" title=" " alt="" coords="5,79,76,104"/>
-<area shape="poly" title=" " alt="" coords="138,33,72,74,70,69,136,28"/>
-<area shape="rect" title=" " alt="" coords="63,152,146,177"/>
-<area shape="poly" title=" " alt="" coords="154,32,116,140,111,138,149,30"/>
-<area shape="rect" href="interrupt_8h.html" title=" " alt="" coords="151,79,242,104"/>
-<area shape="poly" title=" " alt="" coords="164,30,185,65,181,68,160,32"/>
-<area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="250,152,309,177"/>
-<area shape="poly" title=" " alt="" coords="188,28,223,48,256,77,272,107,279,138,274,139,267,109,252,80,220,52,185,33"/>
-<area shape="poly" title=" " alt="" coords="184,106,132,146,129,141,180,102"/>
-<area shape="rect" href="sys_8h.html" title=" " alt="" coords="170,152,226,177"/>
-<area shape="poly" title=" " alt="" coords="200,104,200,138,195,139,194,104"/>
-<area shape="poly" title=" " alt="" coords="212,102,257,141,254,145,208,106"/>
-<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="149,225,247,251"/>
-<area shape="poly" title=" " alt="" coords="201,178,201,212,195,212,195,178"/>
-<area shape="rect" title=" " alt="" coords="153,299,243,324"/>
-<area shape="poly" title=" " alt="" coords="201,251,201,285,195,285,195,251"/>
+<area shape="rect" title=" " alt="" coords="116,5,311,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,80,104"/>
+<area shape="poly" title=" " alt="" coords="187,33,84,76,82,71,185,28"/>
+<area shape="rect" title=" " alt="" coords="105,79,175,104"/>
+<area shape="poly" title=" " alt="" coords="203,33,164,71,160,67,199,29"/>
+<area shape="rect" title=" " alt="" coords="163,152,245,177"/>
+<area shape="poly" title=" " alt="" coords="215,31,208,138,203,138,210,31"/>
+<area shape="rect" href="interrupt_8h.html" title=" " alt="" coords="251,79,341,104"/>
+<area shape="poly" title=" " alt="" coords="228,29,274,67,270,72,225,33"/>
+<area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="349,152,408,177"/>
+<area shape="poly" title=" " alt="" coords="269,28,315,46,336,60,355,77,372,107,379,138,374,139,367,109,351,80,333,64,312,51,268,33"/>
+<area shape="poly" title=" " alt="" coords="283,106,231,146,228,141,280,102"/>
+<area shape="rect" href="sys_8h.html" title=" " alt="" coords="269,152,325,177"/>
+<area shape="poly" title=" " alt="" coords="299,104,300,138,294,139,294,104"/>
+<area shape="poly" title=" " alt="" coords="311,102,356,141,353,145,308,106"/>
+<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="248,225,347,251"/>
+<area shape="poly" title=" " alt="" coords="300,178,300,212,295,212,295,178"/>
+<area shape="rect" title=" " alt="" coords="252,299,343,324"/>
+<area shape="poly" title=" " alt="" coords="300,251,300,285,295,285,295,251"/>
 </map>
 </div>
 </div>
@@ -136,7 +139,7 @@ Macros</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">read/write</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Counter2 get and set value functions </p>
 </div></td></tr>
-<tr class="memitem:ga359b791bb6456edbcb590926595f45be" id="r_ga359b791bb6456edbcb590926595f45be"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter2__mode0.html#ga359b791bb6456edbcb590926595f45be">counter2_mode0_get_value</a>()&#160;&#160;&#160;((((uint16_t) TH2) &lt;&lt; 8) | TL2)</td></tr>
+<tr class="memitem:ga359b791bb6456edbcb590926595f45be" id="r_ga359b791bb6456edbcb590926595f45be"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter2__mode0.html#ga359b791bb6456edbcb590926595f45be">counter2_mode0_get_value</a>()&#160;&#160;&#160;((((uint16_t) T2H) &lt;&lt; 8) | T2L)</td></tr>
 <tr class="memdesc:ga359b791bb6456edbcb590926595f45be"><td class="mdescLeft">&#160;</td><td class="mdescRight">get counter2 value in mode0  <br /></td></tr>
 <tr class="separator:ga359b791bb6456edbcb590926595f45be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac76600212f6455bb2044da36c310ddf6" id="r_gac76600212f6455bb2044da36c310ddf6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter2__mode0.html#gac76600212f6455bb2044da36c310ddf6">counter2_mode0_set_value</a>(value)</td></tr>

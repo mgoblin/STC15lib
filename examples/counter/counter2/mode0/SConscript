@@ -1,0 +1,8 @@
+Import("env")
+
+env.Default (
+    Program(
+        'counter2_mode0_example',
+        ['counter2_mode0_example.c'],
+    )
+)

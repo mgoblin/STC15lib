@@ -16,6 +16,7 @@
  * 
  * @author Michael Golovanov
 */
+#include <assert.h>
 #include <stdint.h>
 #include <stdbool.h>
 
@@ -108,7 +109,7 @@ do {                                            \
  * 
  * @ingroup counter2_mode0
  */
-#define counter2_mode0_get_value() ((((uint16_t) TH2) << 8) | TL2)
+#define counter2_mode0_get_value() ((((uint16_t) T2H) << 8) | T2L)
 
 /**
  * @brief set counter2 value in mode0
@@ -121,8 +122,10 @@ do {                                            \
  */
 #define counter2_mode0_set_value(value)         \
 do {                                            \
-    TH2 = (uint8_t)(value >> 8);                \
-    TL2 = (uint8_t)(value & 0xff);              \
+    static_assert(value <= 0xffff, "value to large"); \
+    const uint16_t _val = (value);              \
+    T2H = (uint8_t)(_val >> 8);                 \
+    T2L = (uint8_t)(_val & 0xff);               \
 } while(0)
 ///@}
 

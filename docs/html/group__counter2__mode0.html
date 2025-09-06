@@ -105,7 +105,7 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader">read/write</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>Counter2 get and set value functions </p>
 </td></tr>
-<tr class="memitem:ga359b791bb6456edbcb590926595f45be" id="r_ga359b791bb6456edbcb590926595f45be"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter2__mode0.html#ga359b791bb6456edbcb590926595f45be">counter2_mode0_get_value</a>()&#160;&#160;&#160;((((uint16_t) TH2) &lt;&lt; 8) | TL2)</td></tr>
+<tr class="memitem:ga359b791bb6456edbcb590926595f45be" id="r_ga359b791bb6456edbcb590926595f45be"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter2__mode0.html#ga359b791bb6456edbcb590926595f45be">counter2_mode0_get_value</a>()&#160;&#160;&#160;((((uint16_t) T2H) &lt;&lt; 8) | T2L)</td></tr>
 <tr class="memdesc:ga359b791bb6456edbcb590926595f45be"><td class="mdescLeft">&#160;</td><td class="mdescRight">get counter2 value in mode0  <br /></td></tr>
 <tr class="separator:ga359b791bb6456edbcb590926595f45be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac76600212f6455bb2044da36c310ddf6" id="r_gac76600212f6455bb2044da36c310ddf6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter2__mode0.html#gac76600212f6455bb2044da36c310ddf6">counter2_mode0_set_value</a>(value)</td></tr>
@@ -181,7 +181,7 @@ Macros</h2></td></tr>
           <td class="memname">#define counter2_mode0_get_value</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;((((uint16_t) TH2) &lt;&lt; 8) | TL2)</td>
+          <td>&#160;&#160;&#160;((((uint16_t) T2H) &lt;&lt; 8) | T2L)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -234,8 +234,10 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                            \</div>
-<div class="line">    TH2 = (uint8_t)(value &gt;&gt; 8);                \</div>
-<div class="line">    TL2 = (uint8_t)(value &amp; 0xff);              \</div>
+<div class="line">    static_assert(value &lt;= 0xffff, <span class="stringliteral">&quot;value to large&quot;</span>); \</div>
+<div class="line">    <span class="keyword">const</span> uint16_t _val = (value);              \</div>
+<div class="line">    T2H = (uint8_t)(_val &gt;&gt; 8);                 \</div>
+<div class="line">    T2L = (uint8_t)(_val &amp; 0xff);               \</div>
 <div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>set counter2 value in mode0 </p>
