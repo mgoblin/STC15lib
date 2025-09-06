@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['t0_0',['T0',['../group__counter0__mode0.html#gad41b89d4eb6d63a0def5e5fd2a5ab326',1,'counter0_mode0.h']]],
+  ['t0_0',['t0',['../group__counter0__mode0.html#gad41b89d4eb6d63a0def5e5fd2a5ab326',1,'T0:&#160;counter0_mode0.h'],['../group__counter0__mode0.html#gad41b89d4eb6d63a0def5e5fd2a5ab326',1,'T0:&#160;counter0_mode1.h']]],
   ['t1_1',['T1',['../group__timer__common.html#ggaf044d39b4f1cbe40ca04353b2852a21da623238751deb7764bdebf4799fe30f07',1,'timer_structs.h']]],
   ['t12_2',['T12',['../group__timer__common.html#ggaf044d39b4f1cbe40ca04353b2852a21da5c3a2baea537d57bba309aa892a7926c',1,'timer_structs.h']]],
   ['t2_3',['T2',['../group__counter2__mode0.html#ga259c2993ee45e06a4ea8150451a7a70e',1,'counter2_mode0.h']]],

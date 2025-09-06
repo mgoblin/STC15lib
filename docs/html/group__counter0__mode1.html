@@ -72,11 +72,53 @@ $(function() {
   <div class="headertitle"><div class="title">Counter0 mode 1</div></div>
 </div><!--header-->
 <div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">init</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>Counter initializaion functions </p>
+</td></tr>
+<tr class="memitem:gae25012f2830105f130d2f29688ac06be" id="r_gae25012f2830105f130d2f29688ac06be"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode1.html#gae25012f2830105f130d2f29688ac06be">counter0_mode1_init</a>()</td></tr>
+<tr class="memdesc:gae25012f2830105f130d2f29688ac06be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize mode1 for counter0.  <br /></td></tr>
+<tr class="separator:gae25012f2830105f130d2f29688ac06be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Counter0 mode 1 routines.</p>
 <p>This module supports general purpose counter0. Timer can work as COUNTER or TIMER.</p>
 <p>Counter increments on T0 pin change state.</p>
 <p>Counter0 Mode1 is 16-bit counter without reloading and P35 pin output features. Mode1 is like mode0 but without timer reloading and P35 pin output features.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="gae25012f2830105f130d2f29688ac06be" name="gae25012f2830105f130d2f29688ac06be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae25012f2830105f130d2f29688ac06be">&#9670;&#160;</a></span>counter0_mode1_init</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define counter0_mode1_init</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                            \</div>
+<div class="line">    enable_mcu_interrupts();                    \</div>
+<div class="line">    enable_timer0_interrupt();                  \</div>
+<div class="line">                                                \</div>
+<div class="line">    TMOD = (TMOD &amp; 0xF0) | 0x01;                \</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
+</div><!-- fragment -->
+<p>Initialize mode1 for counter0. </p>
+<p>Enable counter0 interrupt and set mode1.</p>
+<p>Mode 1 is configured as setting TMOD lowest 4 bytes:</p><ul>
+<li>TMOD.0 = 1</li>
+<li>TMOD.1 = 0</li>
+<li>TMOD.2 = 1</li>
+<li>TMOD.3 = 0 </li>
+</ul>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
