@@ -3,7 +3,7 @@
 
 /**
  * @file counter0_mode1.h
- * @defgroup counter0_mode1 Counter0 mode 1
+ * @defgroup counter0_mode1 Counter0 Mode 1
  * 
  * @details Counter0 mode 1 routines.
  * 
@@ -18,12 +18,15 @@
  * @author Michael Golovanov
  */
 
- #include <interrupt.h>
+#include <stdint.h>
+#include <assert.h>
+
+#include <interrupt.h>
 
  /**
  * @brief T0 pin definition
  * 
- * @ingroup counter0_mode0
+ * @ingroup counter0_mode1
  */
 #define T0 P34
 
@@ -44,7 +47,7 @@
  * - TMOD.2 = 1
  * - TMOD.3 = 0
  * 
- * @attention Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code.
+ * @attention Interrupt handler void counter0ISR(void) __interrupt(1) should be defined in user code.
  * 
  * @ingroup counter0_mode1
  */
@@ -53,9 +56,19 @@ do {                                            \
     enable_mcu_interrupts();                    \
     enable_timer0_interrupt();                  \
                                                 \
-    TMOD = (TMOD & 0xF0) | 0x01;                \
-} while(0)    
+    TMOD &= 0xF0;                               \
+    TMOD |= 0x05;                               \
+                                                \
+    TF0 = 0;                                    \
+    TR0 = 0;                                    \
+} while(0)   
 
+///@}
+
+/** @name start/stop
+ *  Counter0 start/stop functions 
+ */
+///@{
 
 /**
  * @brief Starts Counter 0 in Mode 1 with a specified initial value.
@@ -70,12 +83,54 @@ do {                                            \
  */
 #define counter0_mode1_start(value)             \
 do {                                            \
-    TH0 = value >> 8;                           \
-    TL0 = value & 0xFF;                         \
+    static_assert(value <= 0xffff, "value is too large"); \
                                                 \
+    const uint16_t _val = value;                \
+    TH0 = (uint8_t) (_val >> 8);                \
+    TL0 = (uint8_t) (_val & 0xFF);              \
+                                                \
+    TF0 = 0;                                    \
     TR0 = 1;                                    \
 } while(0)
 
+/**
+ * @brief Check if counter0 is started
+ * 
+ * @return true if counter0 started otherwise false
+ * 
+ * @ingroup counter0_mode1
+ * 
+ */ 
+#define is_counter0_mode1_started() (TR0 == 1)
+
+/**
+ * @brief Stop counter0
+ * 
+ * @details Stop counter0 and clear TF0 flag.
+ * 
+ * @ingroup counter0_mode1
+ */
+#define counter0_mode1_stop()                   \
+do {                                            \
+    TR0 = 0;                                    \
+    TF0 = 0;                                    \
+} while(0)
+
+///@}
+
+/** @name read
+ *  Counter read value functions 
+ */
+///@{
+
+/** 
+ * @brief Get counter0 value in mode1
+ * 
+ * @return uint16_t counter value
+ * 
+ * @ingroup counter0_mode1
+*/
+#define counter0_mode1_get_value() ((((uint16_t) TH0) << 8) | TL0)
 ///@}
 
 #endif

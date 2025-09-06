@@ -78,25 +78,31 @@ $(function() {
   <div class="headertitle"><div class="title">counter0_mode1.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="interrupt_8h_source.html">interrupt.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="interrupt_8h_source.html">interrupt.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for counter0_mode1.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="counter0__mode1_8h__incl.png" border="0" usemap="#ainclude_2counter0__mode1_8h" alt=""/></div>
 <map name="ainclude_2counter0__mode1_8h" id="ainclude_2counter0__mode1_8h">
-<area shape="rect" title=" " alt="" coords="43,5,237,31"/>
-<area shape="rect" href="interrupt_8h.html" title=" " alt="" coords="95,79,185,104"/>
-<area shape="poly" title=" " alt="" coords="143,31,143,65,137,65,137,31"/>
-<area shape="rect" title=" " alt="" coords="5,152,88,177"/>
-<area shape="poly" title=" " alt="" coords="127,106,74,146,71,141,123,102"/>
-<area shape="rect" href="sys_8h.html" title=" " alt="" coords="112,152,168,177"/>
-<area shape="poly" title=" " alt="" coords="143,104,143,138,137,138,137,104"/>
-<area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="192,152,251,177"/>
-<area shape="poly" title=" " alt="" coords="155,102,200,141,196,145,151,106"/>
-<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="91,225,189,251"/>
-<area shape="poly" title=" " alt="" coords="143,178,143,212,137,212,137,178"/>
-<area shape="rect" title=" " alt="" coords="95,299,185,324"/>
-<area shape="poly" title=" " alt="" coords="143,251,143,285,137,285,137,251"/>
+<area shape="rect" title=" " alt="" coords="41,5,235,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,76,104"/>
+<area shape="poly" title=" " alt="" coords="124,33,69,72,66,68,121,29"/>
+<area shape="rect" title=" " alt="" coords="101,79,175,104"/>
+<area shape="poly" title=" " alt="" coords="141,31,141,65,135,65,135,31"/>
+<area shape="rect" href="interrupt_8h.html" title=" " alt="" coords="199,79,290,104"/>
+<area shape="poly" title=" " alt="" coords="157,28,217,69,214,73,154,33"/>
+<area shape="rect" title=" " alt="" coords="110,152,193,177"/>
+<area shape="poly" title=" " alt="" coords="231,106,179,146,176,141,228,102"/>
+<area shape="rect" href="sys_8h.html" title=" " alt="" coords="217,152,273,177"/>
+<area shape="poly" title=" " alt="" coords="247,104,247,138,242,138,242,104"/>
+<area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="297,152,355,177"/>
+<area shape="poly" title=" " alt="" coords="259,102,304,141,301,145,256,106"/>
+<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="195,225,294,251"/>
+<area shape="poly" title=" " alt="" coords="247,178,247,212,242,212,242,178"/>
+<area shape="rect" title=" " alt="" coords="199,299,290,324"/>
+<area shape="poly" title=" " alt="" coords="247,251,247,285,242,285,242,251"/>
 </map>
 </div>
 </div>
@@ -114,9 +120,24 @@ Macros</h2></td></tr>
 <tr class="memitem:gae25012f2830105f130d2f29688ac06be" id="r_gae25012f2830105f130d2f29688ac06be"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode1.html#gae25012f2830105f130d2f29688ac06be">counter0_mode1_init</a>()</td></tr>
 <tr class="memdesc:gae25012f2830105f130d2f29688ac06be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize mode1 for counter0.  <br /></td></tr>
 <tr class="separator:gae25012f2830105f130d2f29688ac06be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">start/stop</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Counter0 start/stop functions </p>
+</div></td></tr>
 <tr class="memitem:ga884dd0b68e80c9981a5c9d11b59d6461" id="r_ga884dd0b68e80c9981a5c9d11b59d6461"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode1.html#ga884dd0b68e80c9981a5c9d11b59d6461">counter0_mode1_start</a>(value)</td></tr>
 <tr class="memdesc:ga884dd0b68e80c9981a5c9d11b59d6461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts Counter 0 in Mode 1 with a specified initial value.  <br /></td></tr>
 <tr class="separator:ga884dd0b68e80c9981a5c9d11b59d6461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaebb0f55b8e9935afa507bff8999a5551" id="r_gaebb0f55b8e9935afa507bff8999a5551"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode1.html#gaebb0f55b8e9935afa507bff8999a5551">is_counter0_mode1_started</a>()&#160;&#160;&#160;(TR0 == 1)</td></tr>
+<tr class="memdesc:gaebb0f55b8e9935afa507bff8999a5551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if counter0 is started.  <br /></td></tr>
+<tr class="separator:gaebb0f55b8e9935afa507bff8999a5551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa6d5753aac781bc2cf0efc8dce1979f3" id="r_gaa6d5753aac781bc2cf0efc8dce1979f3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode1.html#gaa6d5753aac781bc2cf0efc8dce1979f3">counter0_mode1_stop</a>()</td></tr>
+<tr class="memdesc:gaa6d5753aac781bc2cf0efc8dce1979f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop counter0.  <br /></td></tr>
+<tr class="separator:gaa6d5753aac781bc2cf0efc8dce1979f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">read</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Counter read value functions </p>
+</div></td></tr>
+<tr class="memitem:ga7b73a2e58701629927ef0ba7f3e1b47c" id="r_ga7b73a2e58701629927ef0ba7f3e1b47c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode1.html#ga7b73a2e58701629927ef0ba7f3e1b47c">counter0_mode1_get_value</a>()&#160;&#160;&#160;((((uint16_t) TH0) &lt;&lt; 8) | TL0)</td></tr>
+<tr class="memdesc:ga7b73a2e58701629927ef0ba7f3e1b47c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get counter0 value in mode1.  <br /></td></tr>
+<tr class="separator:ga7b73a2e58701629927ef0ba7f3e1b47c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
