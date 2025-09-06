@@ -144,6 +144,7 @@
 * TODO Header based implementation for counter0 mode3
 
 Next releases todo
+* Code review using AI
 * TODO Implement UART
 * TODO Optimize timer2 baud rate calculation. Use precalculated array of baudrates
 * TODO Implement P5.4 as MCU reset source

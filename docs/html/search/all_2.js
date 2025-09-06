@@ -1,28 +1,6 @@
 var searchData=
 [
-  ['chip_5fid_2eh_0',['chip_id.h',['../chip__id_8h.html',1,'']]],
-  ['chip_5fid_5faddr_5from_1',['CHIP_ID_ADDR_ROM',['../group__chip__id.html#gade5a33c9ca0579ba754154984706deff',1,'chip_id.h']]],
-  ['chip_5fid_5fsize_2',['CHIP_ID_SIZE',['../group__chip__id.html#ga909ec39ac520a4448627b2d9aa61d016',1,'chip_id.h']]],
-  ['chipid_3',['ChipID',['../group__chip__id.html',1,'']]],
-  ['common_4',['common',['../group__timer__to__ms.html',1,'Timer Aux common'],['../group__timer__common.html',1,'Timer common']]],
-  ['counter0_20mode0_5',['Counter0 Mode0',['../group__counter0__mode0.html',1,'']]],
-  ['counter0_5fmode0_2eh_6',['counter0_mode0.h',['../counter0__mode0_8h.html',1,'']]],
-  ['counter0_5fmode0_5fclose_5fgate_7',['counter0_mode0_close_gate',['../group__counter0__mode0.html#gac970c3b8dc2857f39ca8d51dd785a29f',1,'counter0_mode0.h']]],
-  ['counter0_5fmode0_5fdisable_5fp35_5foutput_8',['counter0_mode0_disable_P35_output',['../group__counter0__mode0.html#ga28e73dbb30c38e09d4611427813e6175',1,'counter0_mode0.h']]],
-  ['counter0_5fmode0_5fenable_5fp35_5foutput_9',['counter0_mode0_enable_P35_output',['../group__counter0__mode0.html#gae405fc1390dc5469617d2f862d77a33e',1,'counter0_mode0.h']]],
-  ['counter0_5fmode0_5fget_5fvalue_10',['counter0_mode0_get_value',['../group__counter0__mode0.html#gaaab5c77175ed786722627dc5a77e1933',1,'counter0_mode0.h']]],
-  ['counter0_5fmode0_5finit_11',['counter0_mode0_init',['../group__counter0__mode0.html#ga91c9a1b9a89def2cb319b1eca4177de5',1,'counter0_mode0.h']]],
-  ['counter0_5fmode0_5fopen_5fgate_12',['counter0_mode0_open_gate',['../group__counter0__mode0.html#gaab9659f40d1d1fce7e1e2ebe968bf3e9',1,'counter0_mode0.h']]],
-  ['counter0_5fmode0_5fset_5fvalue_13',['counter0_mode0_set_value',['../group__counter0__mode0.html#gaacabd9f5df806591acaf4d072e6abf91',1,'counter0_mode0.h']]],
-  ['counter0_5fmode0_5fstart_14',['counter0_mode0_start',['../group__counter0__mode0.html#ga6303fc5dfc8f4b0dafd341940e35f417',1,'counter0_mode0.h']]],
-  ['counter0_5fmode0_5fstop_15',['counter0_mode0_stop',['../group__counter0__mode0.html#ga0529c8b6076e792659c29d8b1f39c9b0',1,'counter0_mode0.h']]],
-  ['counter2_20mode0_16',['Counter2 Mode0',['../group__counter2__mode0.html',1,'']]],
-  ['counter2_5fmode0_2eh_17',['counter2_mode0.h',['../counter2__mode0_8h.html',1,'']]],
-  ['counter2_5fmode0_5fdisable_5fp30_5foutput_18',['counter2_mode0_disable_P30_output',['../group__counter2__mode0.html#ga5c357d609580d05b38949c515167f0b9',1,'counter2_mode0.h']]],
-  ['counter2_5fmode0_5fenable_5fp30_5foutput_19',['counter2_mode0_enable_P30_output',['../group__counter2__mode0.html#ga6228c30868b5729072c444e93bd72877',1,'counter2_mode0.h']]],
-  ['counter2_5fmode0_5fget_5fvalue_20',['counter2_mode0_get_value',['../group__counter2__mode0.html#ga359b791bb6456edbcb590926595f45be',1,'counter2_mode0.h']]],
-  ['counter2_5fmode0_5finit_21',['counter2_mode0_init',['../group__counter2__mode0.html#gabd917590ea8dc28e142d08f397f9b2fa',1,'counter2_mode0.h']]],
-  ['counter2_5fmode0_5fset_5fvalue_22',['counter2_mode0_set_value',['../group__counter2__mode0.html#gac76600212f6455bb2044da36c310ddf6',1,'counter2_mode0.h']]],
-  ['counter2_5fmode0_5fstart_23',['counter2_mode0_start',['../group__counter2__mode0.html#gadeb71948175275b25a1255598c32ef50',1,'counter2_mode0.h']]],
-  ['counter2_5fmode0_5fstop_24',['counter2_mode0_stop',['../group__counter2__mode0.html#gab6d6c1c5304526bf5abe5ff2931b0c2b',1,'counter2_mode0.h']]]
+  ['add_20library_20to_20your_20project_0',['Add library to your project',['../index.html#autotoc_md2',1,'']]],
+  ['aux_1',['aux',['../group__timer0__to__ms.html',1,'Timer0 Aux'],['../group__timer2__to__ms.html',1,'Timer2 Aux']]],
+  ['aux_20common_2',['Timer Aux common',['../group__timer__to__ms.html',1,'']]]
 ];

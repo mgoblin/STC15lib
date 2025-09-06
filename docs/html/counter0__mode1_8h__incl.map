@@ -1,0 +1,9 @@
+<map id="include/counter0_mode1.h" name="include/counter0_mode1.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,200,31"/>
+<area shape="rect" id="Node000002" href="$sys_8h.html" title=" " alt="" coords="75,79,131,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,31,105,65,100,65,100,31"/>
+<area shape="rect" id="Node000003" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="53,152,152,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,104,105,138,100,138,100,104"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="57,225,148,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="105,178,105,212,100,212,100,178"/>
+</map>
