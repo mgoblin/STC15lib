@@ -140,7 +140,7 @@
 * Counter2 mode0 routines implemented
     * counter2 mode0 examples    
 * Header based implementation for counter0 mode1
-    * TODO counter2 mode1 examples
+    * counter2 mode1 examples
 * TODO Header based implementation for counter0 mode2
 * TODO Header based implementation for counter0 mode3
 

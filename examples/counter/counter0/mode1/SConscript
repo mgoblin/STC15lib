@@ -1,0 +1,19 @@
+"""
+This SCons build script configures the environment to compile the 'counter0_mode1_example' program 
+from the specified source file 'counter0_mode1_example.c'. 
+
+The script sets the default build target 
+to generate the executable using the SCons environment's Program method.
+"""
+Import("env")
+
+
+env.Default(
+    env.Program(
+        'counter0_mode1_example',
+        [
+            'counter0_mode1_example.c',
+            'uart.c',
+        ]
+    ),
+)
