@@ -242,6 +242,7 @@ Macros</h2></td></tr>
 <div class="line">    <span class="comment">/* TMOD.2/(Timer or Counter mode) = 1; */</span>   \</div>
 <div class="line">    <span class="comment">/* TMOD.1/M1 timer0 = 0; */</span>                 \</div>
 <div class="line">    <span class="comment">/* TMOD.0/M0 timer0= 0; */</span>                  \</div>
+<div class="line">    TMOD &amp;= 0xF0;                               \</div>
 <div class="line">    TMOD |= 0x04; <span class="comment">/* init Counter0 */</span>           \</div>
 <div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->

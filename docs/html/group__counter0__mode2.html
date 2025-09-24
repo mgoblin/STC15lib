@@ -88,6 +88,13 @@ Macros</h2></td></tr>
 <tr class="memitem:ga7eec5fc21787c167300fc71bc5238c21" id="r_ga7eec5fc21787c167300fc71bc5238c21"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#ga7eec5fc21787c167300fc71bc5238c21">counter0_mode2_init</a>()</td></tr>
 <tr class="memdesc:ga7eec5fc21787c167300fc71bc5238c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize mode2 for counter0.  <br /></td></tr>
 <tr class="separator:ga7eec5fc21787c167300fc71bc5238c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">start/stop</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>Counter0 start/stop functions </p>
+</td></tr>
+<tr class="memitem:ga884dd0b68e80c9981a5c9d11b59d6461" id="r_ga884dd0b68e80c9981a5c9d11b59d6461"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#ga884dd0b68e80c9981a5c9d11b59d6461">counter0_mode1_start</a>(value)</td></tr>
+<tr class="memdesc:ga884dd0b68e80c9981a5c9d11b59d6461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts Counter 0 in Mode 2 with a specified initial value.  <br /></td></tr>
+<tr class="separator:ga884dd0b68e80c9981a5c9d11b59d6461"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Counter0 mode 2 routines. This module supports general purpose counter0. Timer can work as COUNTER or TIMER.</p>
@@ -95,6 +102,42 @@ Macros</h2></td></tr>
 <p>Counter0 Mode2 is 8-bit autoreloadable counter.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga884dd0b68e80c9981a5c9d11b59d6461" name="ga884dd0b68e80c9981a5c9d11b59d6461"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga884dd0b68e80c9981a5c9d11b59d6461">&#9670;&#160;</a></span>counter0_mode1_start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define counter0_mode1_start</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">value</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"> <span class="keywordflow">do</span> {                                           \</div>
+<div class="line">    static_assert(value &lt;= 0xff, <span class="stringliteral">&quot;value is too large&quot;</span>); \</div>
+<div class="line">                                                \</div>
+<div class="line">    TL0 = (uint8_t) value;                      \</div>
+<div class="line">                                                \</div>
+<div class="line">    TF0 = 0;                                    \</div>
+<div class="line">    TR0 = 1;                                    \</div>
+<div class="line"> } <span class="keywordflow">while</span>(0)</div>
+</div><!-- fragment -->
+<p>Starts Counter 0 in Mode 2 with a specified initial value. </p>
+<p>Loads the initial 8-bit value into Counter 0 registers and starts the counter.</p>
+<dl class="section attention"><dt>Attention</dt><dd>Before calling this function, <a class="el" href="group__counter0__mode2.html#ga7eec5fc21787c167300fc71bc5238c21" title="Initialize mode2 for counter0.">counter0_mode2_init()</a> should be called.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>8-bit unsigned integer specifying the initial counter count </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ga7eec5fc21787c167300fc71bc5238c21" name="ga7eec5fc21787c167300fc71bc5238c21"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga7eec5fc21787c167300fc71bc5238c21">&#9670;&#160;</a></span>counter0_mode2_init</h2>
 

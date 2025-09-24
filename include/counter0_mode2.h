@@ -63,4 +63,31 @@ do {                                            \
 
 ///@}
 
+/** @name start/stop
+ *  Counter0 start/stop functions 
+ */
+///@{
+
+/**
+ * @brief Starts Counter 0 in Mode 2 with a specified initial value.
+ * 
+ * @details Loads the initial 8-bit value into Counter 0 registers and starts the counter.
+ * 
+ * @attention Before calling this function, counter0_mode2_init() should be called.
+ * 
+ * @param value 8-bit unsigned integer specifying the initial counter count
+ * 
+ * @ingroup counter0_mode2
+ */
+ #define counter0_mode1_start(value)            \
+ do {                                           \
+    static_assert(value <= 0xff, "value is too large"); \
+                                                \
+    TL0 = (uint8_t) value;                      \
+                                                \
+    TF0 = 0;                                    \
+    TR0 = 1;                                    \
+ } while(0)   
+///@}
+
 #endif

@@ -48,6 +48,7 @@ do {                                            \
     /* TMOD.2/(Timer or Counter mode) = 1; */   \
     /* TMOD.1/M1 timer0 = 0; */                 \
     /* TMOD.0/M0 timer0= 0; */                  \
+    TMOD &= 0xF0;                               \
     TMOD |= 0x04; /* init Counter0 */           \
 } while(0)
 ///@}
