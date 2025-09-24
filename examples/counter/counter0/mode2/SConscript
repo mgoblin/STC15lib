@@ -9,4 +9,10 @@ env.Default(
             'uart.c',
         ]
     ),
+
+        env.Program(
+        'counter0_mode2_p35_output_example',
+        ['counter0_mode2_p35_output_example.c', 'uart.c'],
+    ),
+
 )

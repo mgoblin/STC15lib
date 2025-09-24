@@ -17,7 +17,7 @@
  * @author Michael Golovanov
  */
 
- #include <stdint.h>
+#include <stdint.h>
 #include <assert.h>
 
 #include <interrupt.h>
@@ -90,7 +90,7 @@ do {                                            \
  do {                                           \
     static_assert(value <= 0xff, "value is too large"); \
                                                 \
-    TL0 = (uint8_t) value;                      \
+    TH0 = (uint8_t) value;                      \
                                                 \
     TF0 = 0;                                    \
     TR0 = 1;                                    \
@@ -145,8 +145,26 @@ do {                                            \
 #define counter0_mode2_set_value(value)         \
 do {                                            \
     static_assert(value <= 0xff, "value is too large"); \
-    TL0 = value;                                \
+    TH0 = value;                                \
 } while(0)
+
+///@}
+
+/** @name config
+ *  Counter0 pin output and gate config functions 
+ */
+///@{
+
+/**
+ * @brief enable output to P3.5
+ * 
+ * @details Enable pin P.3.5 state changes on counter0 overflow.
+ * By default P3.5 output is disabled
+ * 
+ * @ingroup counter0_mode0
+ */
+#define counter0_mode2_enable_P35_output()   (bit_set(INT_CLKO, SBIT0))
+
 
 ///@}
 
