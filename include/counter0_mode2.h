@@ -4,7 +4,7 @@
 /**
  * @file counter0_mode2.h
  * 
- * @defgroup counter0_mode2 Counter0 Mode 2
+ * @defgroup counter0_mode2 Counter0 Mode2
  * 
  * @details Counter0 mode 2 routines.
  * This module supports general purpose counter0.

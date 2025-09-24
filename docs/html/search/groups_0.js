@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['1_0',['Counter0 Mode 1',['../group__counter0__mode1.html',1,'']]]
+  ['aux_0',['aux',['../group__timer0__to__ms.html',1,'Timer0 Aux'],['../group__timer2__to__ms.html',1,'Timer2 Aux']]],
+  ['aux_20common_1',['Timer Aux common',['../group__timer__to__ms.html',1,'']]]
 ];

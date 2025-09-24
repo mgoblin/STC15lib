@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>STC15W408AS library: Counter0 Mode 1</title>
+<title>STC15W408AS library: Counter0 Mode1</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -71,7 +71,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a>  </div>
-  <div class="headertitle"><div class="title">Counter0 Mode 1</div></div>
+  <div class="headertitle"><div class="title">Counter0 Mode1</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
@@ -108,13 +108,6 @@ Macros</h2></td></tr>
 <tr class="memitem:ga7b73a2e58701629927ef0ba7f3e1b47c" id="r_ga7b73a2e58701629927ef0ba7f3e1b47c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode1.html#ga7b73a2e58701629927ef0ba7f3e1b47c">counter0_mode1_get_value</a>()&#160;&#160;&#160;((((uint16_t) TH0) &lt;&lt; 8) | TL0)</td></tr>
 <tr class="memdesc:ga7b73a2e58701629927ef0ba7f3e1b47c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get counter0 value in mode1.  <br /></td></tr>
 <tr class="separator:ga7b73a2e58701629927ef0ba7f3e1b47c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">init</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p>Counter initializaion functions </p>
-</td></tr>
-<tr class="memitem:ga7eec5fc21787c167300fc71bc5238c21" id="r_ga7eec5fc21787c167300fc71bc5238c21"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode1.html#ga7eec5fc21787c167300fc71bc5238c21">counter0_mode2_init</a>()</td></tr>
-<tr class="memdesc:ga7eec5fc21787c167300fc71bc5238c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize mode2 for counter0.  <br /></td></tr>
-<tr class="separator:ga7eec5fc21787c167300fc71bc5238c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Counter0 mode 1 routines.</p>
@@ -239,43 +232,6 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Stop counter0. </p>
 <p>Stop counter0 and clear TF0 flag. </p>
-
-</div>
-</div>
-<a id="ga7eec5fc21787c167300fc71bc5238c21" name="ga7eec5fc21787c167300fc71bc5238c21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7eec5fc21787c167300fc71bc5238c21">&#9670;&#160;</a></span>counter0_mode2_init</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define counter0_mode2_init</td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                            \</div>
-<div class="line">    enable_mcu_interrupts();                    \</div>
-<div class="line">    enable_timer0_interrupt();                  \</div>
-<div class="line">                                                \</div>
-<div class="line">    TMOD &amp;= 0xF0;                               \</div>
-<div class="line">    TMOD |= 0x06;                               \</div>
-<div class="line">                                                \</div>
-<div class="line">    TF0 = 0;                                    \</div>
-<div class="line">    TR0 = 0;                                    \</div>
-<div class="line">} <span class="keywordflow">while</span>(0)</div>
-</div><!-- fragment -->
-<p>Initialize mode2 for counter0. </p>
-<p>Enable counter0 interrupt and set mode2.</p>
-<p>Mode2 is configured as setting TMOD lowest 4 bytes:</p><ul>
-<li>TMOD.0 = 0</li>
-<li>TMOD.1 = 1</li>
-<li>TMOD.2 = 1</li>
-<li>TMOD.3 = 0</li>
-</ul>
-<dl class="section attention"><dt>Attention</dt><dd>Interrupt handler void <a class="el" href="counter0__mode1__example_8c.html#a07516c1ddaf0e964bb248f2eee71f1f4" title="Counter0 interrupt service routine.">counter0ISR(void)</a> __interrupt(1) should be defined in user code. </dd></dl>
 
 </div>
 </div>

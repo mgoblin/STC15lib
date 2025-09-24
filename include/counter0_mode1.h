@@ -3,7 +3,7 @@
 
 /**
  * @file counter0_mode1.h
- * @defgroup counter0_mode1 Counter0 Mode 1
+ * @defgroup counter0_mode1 Counter0 Mode1
  * 
  * @details Counter0 mode 1 routines.
  * 
