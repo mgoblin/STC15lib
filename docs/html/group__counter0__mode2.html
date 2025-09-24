@@ -95,6 +95,22 @@ Macros</h2></td></tr>
 <tr class="memitem:gab40071d3964342fecbdad51a671a16dd" id="r_gab40071d3964342fecbdad51a671a16dd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#gab40071d3964342fecbdad51a671a16dd">counter0_mode2_start</a>(value)</td></tr>
 <tr class="memdesc:gab40071d3964342fecbdad51a671a16dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts Counter 0 in Mode 2 with a specified initial value.  <br /></td></tr>
 <tr class="separator:gab40071d3964342fecbdad51a671a16dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac6f800e3584b09ce5d6591d32613d4e2" id="r_gac6f800e3584b09ce5d6591d32613d4e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#gac6f800e3584b09ce5d6591d32613d4e2">counter0_mode2_stop</a>()</td></tr>
+<tr class="memdesc:gac6f800e3584b09ce5d6591d32613d4e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop counter0.  <br /></td></tr>
+<tr class="separator:gac6f800e3584b09ce5d6591d32613d4e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf96a61ab1387357dbffca49ad0bd0c1a" id="r_gaf96a61ab1387357dbffca49ad0bd0c1a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#gaf96a61ab1387357dbffca49ad0bd0c1a">is_counter0_mode2_started</a>()&#160;&#160;&#160;(TR0 == 1 &amp;&amp; (is_counter0_mode2_gate_opened() || <a class="el" href="group__timer0__mode1.html#ga7521122e23c8d5c83b2a033b2505c86c">INT0</a> == 1) )</td></tr>
+<tr class="memdesc:gaf96a61ab1387357dbffca49ad0bd0c1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get counter0 mode2 started status.  <br /></td></tr>
+<tr class="separator:gaf96a61ab1387357dbffca49ad0bd0c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">read/write</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>Counter get and set value functions </p>
+</td></tr>
+<tr class="memitem:gae25754a29dd7fd328479458a98467e11" id="r_gae25754a29dd7fd328479458a98467e11"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#gae25754a29dd7fd328479458a98467e11">counter0_mode2_get_value</a>()&#160;&#160;&#160;(TL0)</td></tr>
+<tr class="memdesc:gae25754a29dd7fd328479458a98467e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">get counter0 value in mode2  <br /></td></tr>
+<tr class="separator:gae25754a29dd7fd328479458a98467e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa285ca410d7eb1adbdcb32eaa8bedcc7" id="r_gaa285ca410d7eb1adbdcb32eaa8bedcc7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#gaa285ca410d7eb1adbdcb32eaa8bedcc7">counter0_mode2_set_value</a>(value)</td></tr>
+<tr class="memdesc:gaa285ca410d7eb1adbdcb32eaa8bedcc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">set counter0 value in mode2  <br /></td></tr>
+<tr class="separator:gaa285ca410d7eb1adbdcb32eaa8bedcc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Counter0 mode 2 routines. This module supports general purpose counter0. Timer can work as COUNTER or TIMER.</p>
@@ -102,6 +118,26 @@ Macros</h2></td></tr>
 <p>Counter0 Mode2 is 8-bit autoreloadable counter.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="gae25754a29dd7fd328479458a98467e11" name="gae25754a29dd7fd328479458a98467e11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae25754a29dd7fd328479458a98467e11">&#9670;&#160;</a></span>counter0_mode2_get_value</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define counter0_mode2_get_value</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(TL0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get counter0 value in mode2 </p>
+<dl class="section return"><dt>Returns</dt><dd>uint8_t counter value </dd></dl>
+
+</div>
+</div>
 <a id="ga7eec5fc21787c167300fc71bc5238c21" name="ga7eec5fc21787c167300fc71bc5238c21"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga7eec5fc21787c167300fc71bc5238c21">&#9670;&#160;</a></span>counter0_mode2_init</h2>
 
@@ -139,6 +175,37 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="gaa285ca410d7eb1adbdcb32eaa8bedcc7" name="gaa285ca410d7eb1adbdcb32eaa8bedcc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa285ca410d7eb1adbdcb32eaa8bedcc7">&#9670;&#160;</a></span>counter0_mode2_set_value</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define counter0_mode2_set_value</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">value</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                            \</div>
+<div class="line">    static_assert(value &lt;= 0xff, <span class="stringliteral">&quot;value is too large&quot;</span>); \</div>
+<div class="line">    TL0 = value;                                \</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
+</div><!-- fragment -->
+<p>set counter0 value in mode2 </p>
+<p>Call this method before counter0 started.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>uint8_t counter value to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="gab40071d3964342fecbdad51a671a16dd" name="gab40071d3964342fecbdad51a671a16dd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gab40071d3964342fecbdad51a671a16dd">&#9670;&#160;</a></span>counter0_mode2_start</h2>
 
@@ -172,6 +239,49 @@ Macros</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="gac6f800e3584b09ce5d6591d32613d4e2" name="gac6f800e3584b09ce5d6591d32613d4e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac6f800e3584b09ce5d6591d32613d4e2">&#9670;&#160;</a></span>counter0_mode2_stop</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define counter0_mode2_stop</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                            \</div>
+<div class="line">    TR0 = 0;                                    \</div>
+<div class="line">} <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+<p>Stop counter0. </p>
+<p>Stop count T0 pin state changes. Before stop counter0_mode2_start should be called. </p>
+
+</div>
+</div>
+<a id="gaf96a61ab1387357dbffca49ad0bd0c1a" name="gaf96a61ab1387357dbffca49ad0bd0c1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf96a61ab1387357dbffca49ad0bd0c1a">&#9670;&#160;</a></span>is_counter0_mode2_started</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define is_counter0_mode2_started</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(TR0 == 1 &amp;&amp; (is_counter0_mode2_gate_opened() || <a class="el" href="group__timer0__mode1.html#ga7521122e23c8d5c83b2a033b2505c86c">INT0</a> == 1) )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get counter0 mode2 started status. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool true if started otherwise false </dd></dl>
 
 </div>
 </div>

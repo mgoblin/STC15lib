@@ -39,7 +39,7 @@ void main()
         {
             printf_tiny(
                 "Tick %u\r\n", 
-                0 //counter0_mode0_get_value()
+                counter0_mode2_get_value()
             );
         }
     }

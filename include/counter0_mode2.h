@@ -87,7 +87,60 @@ do {                                            \
                                                 \
     TF0 = 0;                                    \
     TR0 = 1;                                    \
- } while(0)   
+ } while(0)
+ 
+ /**
+ * @brief Stop counter0
+ * @details Stop count T0 pin state changes. 
+ * Before stop counter0_mode2_start should be called.
+ * 
+ * @ingroup counter0_mode2
+ */
+#define counter0_mode2_stop()                   \
+do {                                            \
+    TR0 = 0;                                    \
+} while (0)
+
+/**
+ * @brief Get counter0 mode2 started status.
+ * 
+ * @return bool true if started otherwise false
+ * 
+ * @ingroup counter0_mode2
+ */
+#define is_counter0_mode2_started() (TR0 == 1 && (is_counter0_mode2_gate_opened() || INT0 == 1) )
+
+///@}
+
+/** @name read/write
+ *  Counter get and set value functions 
+ */
+///@{
+
+/**
+ * @brief get counter0 value in mode2
+ * 
+ * @return uint8_t counter value
+ * 
+ * @ingroup counter0_mode2
+ */
+#define counter0_mode2_get_value() (TL0)
+
+/**
+ * @brief set counter0 value in mode2
+ * 
+ * @details Call this method before counter0 started.
+ * 
+ * @param value uint8_t counter value to set
+ * 
+ * @ingroup counter0_mode2
+ */
+#define counter0_mode2_set_value(value)         \
+do {                                            \
+    static_assert(value <= 0xff, "value is too large"); \
+    TL0 = value;                                \
+} while(0)
+
 ///@}
 
 #endif
