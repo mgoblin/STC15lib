@@ -161,7 +161,7 @@ do {                                            \
  * @details Enable pin P.3.5 state changes on counter0 overflow.
  * By default P3.5 output is disabled
  * 
- * @ingroup counter0_mode0
+ * @ingroup counter0_mode2
  */
 #define counter0_mode2_enable_P35_output()   (bit_set(INT_CLKO, SBIT0))
 

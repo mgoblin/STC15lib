@@ -115,6 +115,13 @@ Macros</h2></td></tr>
 <tr class="memitem:gaa285ca410d7eb1adbdcb32eaa8bedcc7" id="r_gaa285ca410d7eb1adbdcb32eaa8bedcc7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#gaa285ca410d7eb1adbdcb32eaa8bedcc7">counter0_mode2_set_value</a>(value)</td></tr>
 <tr class="memdesc:gaa285ca410d7eb1adbdcb32eaa8bedcc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">set counter0 value in mode2  <br /></td></tr>
 <tr class="separator:gaa285ca410d7eb1adbdcb32eaa8bedcc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">config</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>Counter0 pin output and gate config functions </p>
+</td></tr>
+<tr class="memitem:ga36e21a2294faf593b873cb9475d837b6" id="r_ga36e21a2294faf593b873cb9475d837b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#ga36e21a2294faf593b873cb9475d837b6">counter0_mode2_enable_P35_output</a>()&#160;&#160;&#160;(bit_set(INT_CLKO, SBIT0))</td></tr>
+<tr class="memdesc:ga36e21a2294faf593b873cb9475d837b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable output to P3.5  <br /></td></tr>
+<tr class="separator:ga36e21a2294faf593b873cb9475d837b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Counter0 mode 2 routines. This module supports general purpose counter0. Timer can work as COUNTER or TIMER.</p>
@@ -122,6 +129,26 @@ Macros</h2></td></tr>
 <p>Counter0 Mode2 is 8-bit autoreloadable counter.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga36e21a2294faf593b873cb9475d837b6" name="ga36e21a2294faf593b873cb9475d837b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga36e21a2294faf593b873cb9475d837b6">&#9670;&#160;</a></span>counter0_mode2_enable_P35_output</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define counter0_mode2_enable_P35_output</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(bit_set(INT_CLKO, SBIT0))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>enable output to P3.5 </p>
+<p>Enable pin P.3.5 state changes on counter0 overflow. By default P3.5 output is disabled </p>
+
+</div>
+</div>
 <a id="gae25754a29dd7fd328479458a98467e11" name="gae25754a29dd7fd328479458a98467e11"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gae25754a29dd7fd328479458a98467e11">&#9670;&#160;</a></span>counter0_mode2_get_value</h2>
 
