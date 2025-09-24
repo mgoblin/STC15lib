@@ -30,6 +30,12 @@
  */
 #define T0 P34
 
+/**
+ * @brief INT0 pin definition
+ * 
+ * @ingroup counter0_mode1
+ */
+#define INT0 P32
 
 /** @name init
  *  Counter initializaion functions 
