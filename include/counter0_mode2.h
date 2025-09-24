@@ -79,7 +79,7 @@ do {                                            \
  * 
  * @ingroup counter0_mode2
  */
- #define counter0_mode1_start(value)            \
+ #define counter0_mode2_start(value)            \
  do {                                           \
     static_assert(value <= 0xff, "value is too large"); \
                                                 \
