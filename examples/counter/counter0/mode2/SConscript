@@ -14,5 +14,9 @@ env.Default(
         'counter0_mode2_p35_output_example',
         ['counter0_mode2_p35_output_example.c', 'uart.c'],
     ),
+   env.Program(
+        'counter0_mode2_gate_example',
+        ['counter0_mode2_gate_example.c']
+    )
 
 )

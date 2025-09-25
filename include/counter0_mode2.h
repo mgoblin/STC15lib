@@ -184,6 +184,34 @@ do {                                            \
  */
 #define is_counter0_mode2_P35_output_enabled()   (test_if_bit_set(INT_CLKO, SBIT0))
 
+/**
+ * @brief Open counter0 gate.
+ * 
+ * @details When gate is opened counter0 will count.
+ * By default after init gate is opened. 
+ * This routine explicitly open the gate.  
+ * 
+ * @ingroup counter0_mode2
+ */
+#define counter0_mode2_open_gate() (bit_clr(TMOD, CBIT3))
+
+/**
+ * @brief Close counter0 gate.
+ * 
+ * @details Closing gate stop counter0.
+ * 
+ * @ingroup counter0_mode2
+ */
+#define counter0_mode2_close_gate() (bit_set(TMOD, SBIT3))
+
+/**
+ * @brief Get gate state
+ * 
+ * @details returns bool. True if gate is opened and false if gate is closed  
+ * 
+ * @ingroup counter0_mode2
+ */
+#define is_counter0_mode2_gate_opened() (test_if_bit_cleared(TMOD, SBIT3))
 
 ///@}
 

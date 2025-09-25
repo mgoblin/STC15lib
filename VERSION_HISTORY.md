@@ -135,17 +135,14 @@
 
 0.11.0
 * Counter0 mode0 routines implemented
-    * Gate enable/disable routines
-    * Gate enable/disable example
 * Counter2 mode0 routines implemented
-    * counter2 mode0 examples    
 * Header based implementation for counter0 mode1
-    * counter2 mode1 examples
-* TODO Header based implementation for counter0 mode2
+* Header based implementation for counter0 mode2
 * TODO Header based implementation for counter0 mode3
 
 Next releases todo
 * Code review using AI
+* use asserts and static_assert
 * TODO Implement UART
 * TODO Optimize timer2 baud rate calculation. Use precalculated array of baudrates
 * TODO Implement P5.4 as MCU reset source

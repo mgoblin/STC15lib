@@ -102,7 +102,7 @@ Macros</h2></td></tr>
 <tr class="memitem:gac6f800e3584b09ce5d6591d32613d4e2" id="r_gac6f800e3584b09ce5d6591d32613d4e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#gac6f800e3584b09ce5d6591d32613d4e2">counter0_mode2_stop</a>()</td></tr>
 <tr class="memdesc:gac6f800e3584b09ce5d6591d32613d4e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop counter0.  <br /></td></tr>
 <tr class="separator:gac6f800e3584b09ce5d6591d32613d4e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf96a61ab1387357dbffca49ad0bd0c1a" id="r_gaf96a61ab1387357dbffca49ad0bd0c1a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#gaf96a61ab1387357dbffca49ad0bd0c1a">is_counter0_mode2_started</a>()&#160;&#160;&#160;(TR0 == 1 &amp;&amp; (is_counter0_mode2_gate_opened() || <a class="el" href="group__counter0__mode0.html#ga7521122e23c8d5c83b2a033b2505c86c">INT0</a> == 1) )</td></tr>
+<tr class="memitem:gaf96a61ab1387357dbffca49ad0bd0c1a" id="r_gaf96a61ab1387357dbffca49ad0bd0c1a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#gaf96a61ab1387357dbffca49ad0bd0c1a">is_counter0_mode2_started</a>()&#160;&#160;&#160;(TR0 == 1 &amp;&amp; (<a class="el" href="group__counter0__mode2.html#ga784d83adf71a2edcde26971f5f83192a">is_counter0_mode2_gate_opened</a>() || <a class="el" href="group__counter0__mode0.html#ga7521122e23c8d5c83b2a033b2505c86c">INT0</a> == 1) )</td></tr>
 <tr class="memdesc:gaf96a61ab1387357dbffca49ad0bd0c1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get counter0 mode2 started status.  <br /></td></tr>
 <tr class="separator:gaf96a61ab1387357dbffca49ad0bd0c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -128,6 +128,15 @@ Macros</h2></td></tr>
 <tr class="memitem:ga74f3b1292ad43a3c31b5373bda136229" id="r_ga74f3b1292ad43a3c31b5373bda136229"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#ga74f3b1292ad43a3c31b5373bda136229">is_counter0_mode2_P35_output_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, SBIT0))</td></tr>
 <tr class="memdesc:ga74f3b1292ad43a3c31b5373bda136229"><td class="mdescLeft">&#160;</td><td class="mdescRight">get pin P3.5 output state to P3.5  <br /></td></tr>
 <tr class="separator:ga74f3b1292ad43a3c31b5373bda136229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9c6a7fdbdeee7be0f208465ce8a4bbbe" id="r_ga9c6a7fdbdeee7be0f208465ce8a4bbbe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#ga9c6a7fdbdeee7be0f208465ce8a4bbbe">counter0_mode2_open_gate</a>()&#160;&#160;&#160;(bit_clr(TMOD, CBIT3))</td></tr>
+<tr class="memdesc:ga9c6a7fdbdeee7be0f208465ce8a4bbbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open counter0 gate.  <br /></td></tr>
+<tr class="separator:ga9c6a7fdbdeee7be0f208465ce8a4bbbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga071ffc4e64408ac7dd838403a308a192" id="r_ga071ffc4e64408ac7dd838403a308a192"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#ga071ffc4e64408ac7dd838403a308a192">counter0_mode2_close_gate</a>()&#160;&#160;&#160;(bit_set(TMOD, SBIT3))</td></tr>
+<tr class="memdesc:ga071ffc4e64408ac7dd838403a308a192"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close counter0 gate.  <br /></td></tr>
+<tr class="separator:ga071ffc4e64408ac7dd838403a308a192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga784d83adf71a2edcde26971f5f83192a" id="r_ga784d83adf71a2edcde26971f5f83192a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#ga784d83adf71a2edcde26971f5f83192a">is_counter0_mode2_gate_opened</a>()&#160;&#160;&#160;(test_if_bit_cleared(TMOD, SBIT3))</td></tr>
+<tr class="memdesc:ga784d83adf71a2edcde26971f5f83192a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get gate state.  <br /></td></tr>
+<tr class="separator:ga784d83adf71a2edcde26971f5f83192a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Counter0 mode 2 routines. This module supports general purpose counter0. Timer can work as COUNTER or TIMER.</p>
@@ -135,6 +144,26 @@ Macros</h2></td></tr>
 <p>Counter0 Mode2 is 8-bit autoreloadable counter.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga071ffc4e64408ac7dd838403a308a192" name="ga071ffc4e64408ac7dd838403a308a192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga071ffc4e64408ac7dd838403a308a192">&#9670;&#160;</a></span>counter0_mode2_close_gate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define counter0_mode2_close_gate</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(bit_set(TMOD, SBIT3))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Close counter0 gate. </p>
+<p>Closing gate stop counter0. </p>
+
+</div>
+</div>
 <a id="ga3193180188b4c556b455749f3e30227a" name="ga3193180188b4c556b455749f3e30227a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga3193180188b4c556b455749f3e30227a">&#9670;&#160;</a></span>counter0_mode2_disable_P35_output</h2>
 
@@ -232,6 +261,27 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="ga9c6a7fdbdeee7be0f208465ce8a4bbbe" name="ga9c6a7fdbdeee7be0f208465ce8a4bbbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9c6a7fdbdeee7be0f208465ce8a4bbbe">&#9670;&#160;</a></span>counter0_mode2_open_gate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define counter0_mode2_open_gate</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(bit_clr(TMOD, CBIT3))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open counter0 gate. </p>
+<p>When gate is opened counter0 will count. By default after init gate is opened. This routine explicitly open the gate. <br  />
+ </p>
+
+</div>
+</div>
 <a id="gaa285ca410d7eb1adbdcb32eaa8bedcc7" name="gaa285ca410d7eb1adbdcb32eaa8bedcc7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaa285ca410d7eb1adbdcb32eaa8bedcc7">&#9670;&#160;</a></span>counter0_mode2_set_value</h2>
 
@@ -322,6 +372,27 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="ga784d83adf71a2edcde26971f5f83192a" name="ga784d83adf71a2edcde26971f5f83192a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga784d83adf71a2edcde26971f5f83192a">&#9670;&#160;</a></span>is_counter0_mode2_gate_opened</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define is_counter0_mode2_gate_opened</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(test_if_bit_cleared(TMOD, SBIT3))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get gate state. </p>
+<p>returns bool. True if gate is opened and false if gate is closed <br  />
+ </p>
+
+</div>
+</div>
 <a id="ga74f3b1292ad43a3c31b5373bda136229" name="ga74f3b1292ad43a3c31b5373bda136229"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga74f3b1292ad43a3c31b5373bda136229">&#9670;&#160;</a></span>is_counter0_mode2_P35_output_enabled</h2>
 
@@ -352,7 +423,7 @@ Macros</h2></td></tr>
           <td class="memname">#define is_counter0_mode2_started</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(TR0 == 1 &amp;&amp; (is_counter0_mode2_gate_opened() || <a class="el" href="group__counter0__mode0.html#ga7521122e23c8d5c83b2a033b2505c86c">INT0</a> == 1) )</td>
+          <td>&#160;&#160;&#160;(TR0 == 1 &amp;&amp; (<a class="el" href="group__counter0__mode2.html#ga784d83adf71a2edcde26971f5f83192a">is_counter0_mode2_gate_opened</a>() || <a class="el" href="group__counter0__mode0.html#ga7521122e23c8d5c83b2a033b2505c86c">INT0</a> == 1) )</td>
         </tr>
       </table>
 </div><div class="memdoc">

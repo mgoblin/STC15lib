@@ -151,9 +151,14 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="group__counter0__mode2.html#ga74f3b1292ad43a3c31b5373bda136229">  185</a></span><span class="preprocessor">#define is_counter0_mode2_P35_output_enabled()   (test_if_bit_set(INT_CLKO, SBIT0))</span></div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="group__counter0__mode2.html#ga9c6a7fdbdeee7be0f208465ce8a4bbbe">  196</a></span><span class="preprocessor">#define counter0_mode2_open_gate() (bit_clr(TMOD, CBIT3))</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="group__counter0__mode2.html#ga071ffc4e64408ac7dd838403a308a192">  205</a></span><span class="preprocessor">#define counter0_mode2_close_gate() (bit_set(TMOD, SBIT3))</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="group__counter0__mode2.html#ga784d83adf71a2edcde26971f5f83192a">  214</a></span><span class="preprocessor">#define is_counter0_mode2_gate_opened() (test_if_bit_cleared(TMOD, SBIT3))</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="ainterrupt_8h_html"><div class="ttname"><a href="interrupt_8h.html">interrupt.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
