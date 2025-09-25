@@ -122,6 +122,12 @@ Macros</h2></td></tr>
 <tr class="memitem:ga36e21a2294faf593b873cb9475d837b6" id="r_ga36e21a2294faf593b873cb9475d837b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#ga36e21a2294faf593b873cb9475d837b6">counter0_mode2_enable_P35_output</a>()&#160;&#160;&#160;(bit_set(INT_CLKO, SBIT0))</td></tr>
 <tr class="memdesc:ga36e21a2294faf593b873cb9475d837b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable output to P3.5  <br /></td></tr>
 <tr class="separator:ga36e21a2294faf593b873cb9475d837b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3193180188b4c556b455749f3e30227a" id="r_ga3193180188b4c556b455749f3e30227a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#ga3193180188b4c556b455749f3e30227a">counter0_mode2_disable_P35_output</a>()&#160;&#160;&#160;(bit_clr(INT_CLKO, CBIT0))</td></tr>
+<tr class="memdesc:ga3193180188b4c556b455749f3e30227a"><td class="mdescLeft">&#160;</td><td class="mdescRight">disable output to P3.5  <br /></td></tr>
+<tr class="separator:ga3193180188b4c556b455749f3e30227a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga74f3b1292ad43a3c31b5373bda136229" id="r_ga74f3b1292ad43a3c31b5373bda136229"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#ga74f3b1292ad43a3c31b5373bda136229">is_counter0_mode2_P35_output_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, SBIT0))</td></tr>
+<tr class="memdesc:ga74f3b1292ad43a3c31b5373bda136229"><td class="mdescLeft">&#160;</td><td class="mdescRight">get pin P3.5 output state to P3.5  <br /></td></tr>
+<tr class="separator:ga74f3b1292ad43a3c31b5373bda136229"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Counter0 mode 2 routines. This module supports general purpose counter0. Timer can work as COUNTER or TIMER.</p>
@@ -129,6 +135,26 @@ Macros</h2></td></tr>
 <p>Counter0 Mode2 is 8-bit autoreloadable counter.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga3193180188b4c556b455749f3e30227a" name="ga3193180188b4c556b455749f3e30227a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3193180188b4c556b455749f3e30227a">&#9670;&#160;</a></span>counter0_mode2_disable_P35_output</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define counter0_mode2_disable_P35_output</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(bit_clr(INT_CLKO, CBIT0))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>disable output to P3.5 </p>
+<p>Disable pin P.3.5 state changes on counter0 overflow. By default P3.5 output is disabled </p>
+
+</div>
+</div>
 <a id="ga36e21a2294faf593b873cb9475d837b6" name="ga36e21a2294faf593b873cb9475d837b6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga36e21a2294faf593b873cb9475d837b6">&#9670;&#160;</a></span>counter0_mode2_enable_P35_output</h2>
 
@@ -293,6 +319,26 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Stop counter0. </p>
 <p>Stop count T0 pin state changes. Before stop counter0_mode2_start should be called. </p>
+
+</div>
+</div>
+<a id="ga74f3b1292ad43a3c31b5373bda136229" name="ga74f3b1292ad43a3c31b5373bda136229"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga74f3b1292ad43a3c31b5373bda136229">&#9670;&#160;</a></span>is_counter0_mode2_P35_output_enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define is_counter0_mode2_P35_output_enabled</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, SBIT0))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get pin P3.5 output state to P3.5 </p>
+<dl class="section return"><dt>Returns</dt><dd>true if P3.5 output enabled otherwise false </dd></dl>
 
 </div>
 </div>
