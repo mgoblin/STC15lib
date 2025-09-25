@@ -136,8 +136,8 @@
 0.11.0
 * Counter0 mode0 routines implemented
 * Counter2 mode0 routines implemented
-* Header based implementation for counter0 mode1
-* Header based implementation for counter0 mode2
+* Counter0 mode1 routines implemented
+* Counter0 mode2 routines implemented
 * TODO Header based implementation for counter0 mode3
 
 Next releases todo
