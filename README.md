@@ -96,6 +96,7 @@ void main()
 | Power management | idle, powerdown and wakeup timer        | READY              |
 | Reset        | Software reset                   | READY              |
 | Timer        | Timer control routines           | READY              |
+| Counter      | Counter control routines         | READY              |
 | UART         | Serial port routines             | INITIAL SUPPORT    |
 | Watchdog timer | Watchdog timer routines        | READY              |
 | Pin          | Pin as digital in/out routines   | READY              |

@@ -44,6 +44,8 @@
  */
 #define counter0_mode3_init()                   \
 do {                                            \
+    enable_mcu_interrupts();                    \
+    enable_timer0_interrupt();                  \
     /* TMOD.3/GATE = 0; */                      \
     /* TMOD.2/(Timer or Counter mode) = 1; */   \
     /* TMOD.1/M1 timer0 = 1; */                 \

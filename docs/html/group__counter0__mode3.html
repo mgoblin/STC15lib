@@ -238,6 +238,8 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                            \</div>
+<div class="line">    enable_mcu_interrupts();                    \</div>
+<div class="line">    enable_timer0_interrupt();                  \</div>
 <div class="line">    <span class="comment">/* TMOD.3/GATE = 0; */</span>                      \</div>
 <div class="line">    <span class="comment">/* TMOD.2/(Timer or Counter mode) = 1; */</span>   \</div>
 <div class="line">    <span class="comment">/* TMOD.1/M1 timer0 = 1; */</span>                 \</div>
