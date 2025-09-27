@@ -79,6 +79,16 @@ $(function() {
 <tr class="memitem:gaf5419d2ce198432d12affc50bb9f567c" id="r_gaf5419d2ce198432d12affc50bb9f567c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode0.html#gaf5419d2ce198432d12affc50bb9f567c">uart1_mode0_init</a> ()</td></tr>
 <tr class="memdesc:gaf5419d2ce198432d12affc50bb9f567c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes UART1 in Mode 0.  <br /></td></tr>
 <tr class="separator:gaf5419d2ce198432d12affc50bb9f567c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">send and receive</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>UART1 send and receive byte functions </p>
+</td></tr>
+<tr class="memitem:ga337ab921b8215fd076d12728c7b0454b" id="r_ga337ab921b8215fd076d12728c7b0454b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode0.html#ga337ab921b8215fd076d12728c7b0454b">uart1_mode0_send_byte</a> (uint8_t byte)</td></tr>
+<tr class="memdesc:ga337ab921b8215fd076d12728c7b0454b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a single byte over UART1 in Mode 0.  <br /></td></tr>
+<tr class="separator:ga337ab921b8215fd076d12728c7b0454b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga90ab3ce7b678adb5a2d1e71c64f240f2" id="r_ga90ab3ce7b678adb5a2d1e71c64f240f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode0.html#ga90ab3ce7b678adb5a2d1e71c64f240f2">uart1_mode0_receive_byte</a> (uint8_t *byte)</td></tr>
+<tr class="memdesc:ga90ab3ce7b678adb5a2d1e71c64f240f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives a single byte from UART1.  <br /></td></tr>
+<tr class="separator:ga90ab3ce7b678adb5a2d1e71c64f240f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions and data structures for UART1 communication in Mode 0.</p>
@@ -105,6 +115,70 @@ $(function() {
 <dl class="section note"><dt>Note</dt><dd>Assumes system clock is already configured. </dd>
 <dd>
 Modifies UART1 control and status registers. </dd></dl>
+
+</div>
+</div>
+<a id="ga90ab3ce7b678adb5a2d1e71c64f240f2" name="ga90ab3ce7b678adb5a2d1e71c64f240f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga90ab3ce7b678adb5a2d1e71c64f240f2">&#9670;&#160;</a></span>uart1_mode0_receive_byte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uart1_mode0_receive_byte </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>byte</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Receives a single byte from UART1. </p>
+<p>Waits until a byte is received via UART1 and stores it in the provided memory location.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">byte</td><td>Pointer to a uint8_t where the received data will be stored.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This function blocks until a byte is received. </dd>
+<dd>
+Requires UART1 to be initialized with uart_mode0_init() prior to use. </dd>
+<dd>
+Assumes UART1 is configured with 8 data bits, no parity, 1 stop bit. </dd></dl>
+
+</div>
+</div>
+<a id="ga337ab921b8215fd076d12728c7b0454b" name="ga337ab921b8215fd076d12728c7b0454b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga337ab921b8215fd076d12728c7b0454b">&#9670;&#160;</a></span>uart1_mode0_send_byte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uart1_mode0_send_byte </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>byte</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sends a single byte over UART1 in Mode 0. </p>
+<p>Transmits the specified 8-bit data byte through UART1 configured in Mode 0. The function blocks until the byte is fully transmitted.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">byte</td><td>The 8-bit data value to be sent (0-255).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Requires UART1 to be previously initialized with uart_mode0_init(). </dd>
+<dd>
+Uses polling (blocking) method for transmission. </dd>
+<dd>
+Assumes UART1 is configured with 8 data bits, no parity, 1 stop bit. </dd></dl>
 
 </div>
 </div>
