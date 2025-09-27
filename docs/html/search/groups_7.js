@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['reset_0',['Reset',['../group__mcu__reset.html',1,'']]]
+  ['pin_0',['Pin',['../group__pin.html',1,'']]],
+  ['power_20management_1',['Power management',['../group__power__management.html',1,'']]]
 ];

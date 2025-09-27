@@ -138,7 +138,8 @@
 * Counter2 mode0 routines implemented
 * Counter0 mode1 routines implemented
 * Counter0 mode2 routines implemented
-* TODO Header based implementation for counter0 mode3
+* Counter0 mode3 routines implemented
+* TODO UART1 mode0 routines implemented
 
 Next releases todo
 * Code review using AI

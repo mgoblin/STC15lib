@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['uart1_0',['UART1',['../group__uart.html',1,'']]]
+  ['watchdog_20timer_0',['Watchdog timer',['../group__wdt.html',1,'']]]
 ];
