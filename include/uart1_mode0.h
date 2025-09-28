@@ -42,6 +42,8 @@ typedef enum {
  * 
  * Must be called before any UART communication is initiated.
  * 
+ * @param baudRate BaudRate_t The desired baud rate.
+ * 
  * @note Assumes system clock is already configured.
  * @note Modifies UART1 control and status registers.
  * 

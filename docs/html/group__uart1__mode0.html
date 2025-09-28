@@ -121,6 +121,12 @@ Enumerations</h2></td></tr>
 
 <p>Initializes UART1 in Mode 0. </p>
 <p>Must be called before any UART communication is initiated.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">baudRate</td><td>BaudRate_t The desired baud rate.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section note"><dt>Note</dt><dd>Assumes system clock is already configured. </dd>
 <dd>
 Modifies UART1 control and status registers. </dd></dl>
