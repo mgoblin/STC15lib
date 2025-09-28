@@ -1,16 +1,14 @@
 Import('env')
 
-env.Command("uart1_mode0.c", "#src/uart1_mode0.c", Copy("$TARGET", "$SOURCE"))
-
 env.Default(
     env.Program(
         'uart1_mode0_send_example',
-        ['uart1_mode0_send_example.c', 'uart1_mode0.c']
+        ['uart1_mode0_send_example.c']
     ),
 
     env.Program(
         'uart1_mode0_baud_rates_example',
-        ['uart1_mode0_baud_rates_example.c', 'uart1_mode0.c']
+        ['uart1_mode0_baud_rates_example.c']
     ),
 
 )

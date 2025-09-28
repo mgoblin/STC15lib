@@ -98,23 +98,32 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__uart1__mode0.html#ga2b6a703706c7a2495c169024073865fc">uart1_mode0_init</a>(<a class="code hl_enumeration" href="group__uart1__mode0.html#ga86cfbfba63ce1413f5efb3cbabe8495b">BaudRate_t</a> baudRate);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="foldopen" id="foldopen00081" data-start="" data-end="">
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="group__uart1__mode0.html#ga6dea4d767d12fb9d0a9f065d6a9de542">   81</a></span><span class="preprocessor">#define uart1_mode0_send_byte(byte)             \</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">do                                              \</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">{                                               \</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">    SBUF = byte;                                \</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">    while (!TI);                                \</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">    TI = 0;                                     \</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">} while (0)</span></div>
+<div class="foldopen" id="foldopen00055" data-start="" data-end="">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="group__uart1__mode0.html#gae9db2cd5aef3ace87c9ca6ff9cd83970">   55</a></span><span class="preprocessor">#define uart1_mode0_init(baudRate)                  \</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">do                                                  \</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">{                                                   \</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">    PCON &amp;= 0x3F;                                   \</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">    SCON = 0;                                       \</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">    baudRate == UART_BaudRate_921600 ?              \</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">        bit_clr(AUXR, CBIT5) : bit_set(AUXR, SBIT5);\</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">    disable_uart1_interrupt();                      \</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">} while (0)</span></div>
 </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="agroup__uart1__mode0_html_ga2b6a703706c7a2495c169024073865fc"><div class="ttname"><a href="group__uart1__mode0.html#ga2b6a703706c7a2495c169024073865fc">uart1_mode0_init</a></div><div class="ttdeci">void uart1_mode0_init(BaudRate_t baudRate)</div><div class="ttdoc">Initializes UART1 in Mode 0.</div><div class="ttdef"><b>Definition</b> uart1_mode0.c:3</div></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="foldopen" id="foldopen00089" data-start="" data-end="">
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="group__uart1__mode0.html#ga6dea4d767d12fb9d0a9f065d6a9de542">   89</a></span><span class="preprocessor">#define uart1_mode0_send_byte(byte)             \</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">do                                              \</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">{                                               \</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">    SBUF = byte;                                \</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">    while (!TI);                                \</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">    TI = 0;                                     \</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">} while (0)</span></div>
+</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="agroup__uart1__mode0_html_ga86cfbfba63ce1413f5efb3cbabe8495b"><div class="ttname"><a href="group__uart1__mode0.html#ga86cfbfba63ce1413f5efb3cbabe8495b">BaudRate_t</a></div><div class="ttdeci">BaudRate_t</div><div class="ttdoc">UART1 baud rate enumeration.</div><div class="ttdef"><b>Definition</b> uart1_mode0.h:33</div></div>
 <div class="ttc" id="ainterrupt_8h_html"><div class="ttname"><a href="interrupt_8h.html">interrupt.h</a></div></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>

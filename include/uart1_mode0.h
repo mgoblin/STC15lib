@@ -52,7 +52,15 @@ typedef enum {
  * 
  * @ingroup uart1_mode0
  */
-void uart1_mode0_init(BaudRate_t baudRate);
+#define uart1_mode0_init(baudRate)                  \
+do                                                  \
+{                                                   \
+    PCON &= 0x3F;                                   \
+    SCON = 0;                                       \
+    baudRate == UART_BaudRate_921600 ?              \
+        bit_clr(AUXR, CBIT5) : bit_set(AUXR, SBIT5);\
+    disable_uart1_interrupt();                      \
+} while (0)
 ///@}
 
 /** @name send and receive

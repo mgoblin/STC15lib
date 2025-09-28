@@ -86,9 +86,9 @@ Enumerations</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader">init</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>UART1 initializaion functions </p>
 </td></tr>
-<tr class="memitem:ga2b6a703706c7a2495c169024073865fc" id="r_ga2b6a703706c7a2495c169024073865fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode0.html#ga2b6a703706c7a2495c169024073865fc">uart1_mode0_init</a> (<a class="el" href="group__uart1__mode0.html#ga86cfbfba63ce1413f5efb3cbabe8495b">BaudRate_t</a> baudRate)</td></tr>
-<tr class="memdesc:ga2b6a703706c7a2495c169024073865fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes UART1 in Mode 0.  <br /></td></tr>
-<tr class="separator:ga2b6a703706c7a2495c169024073865fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae9db2cd5aef3ace87c9ca6ff9cd83970" id="r_gae9db2cd5aef3ace87c9ca6ff9cd83970"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode0.html#gae9db2cd5aef3ace87c9ca6ff9cd83970">uart1_mode0_init</a>(baudRate)</td></tr>
+<tr class="memdesc:gae9db2cd5aef3ace87c9ca6ff9cd83970"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes UART1 in Mode 0.  <br /></td></tr>
+<tr class="separator:gae9db2cd5aef3ace87c9ca6ff9cd83970"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">send and receive</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>UART1 send and receive byte functions </p>
@@ -104,6 +104,44 @@ Enumerations</h2></td></tr>
 <p>This module routines does not support UART1 interrupts.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="gae9db2cd5aef3ace87c9ca6ff9cd83970" name="gae9db2cd5aef3ace87c9ca6ff9cd83970"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae9db2cd5aef3ace87c9ca6ff9cd83970">&#9670;&#160;</a></span>uart1_mode0_init</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define uart1_mode0_init</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">baudRate</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span>                                                  \</div>
+<div class="line">{                                                   \</div>
+<div class="line">    PCON &amp;= 0x3F;                                   \</div>
+<div class="line">    SCON = 0;                                       \</div>
+<div class="line">    baudRate == UART_BaudRate_921600 ?              \</div>
+<div class="line">        bit_clr(AUXR, CBIT5) : bit_set(AUXR, SBIT5);\</div>
+<div class="line">    disable_uart1_interrupt();                      \</div>
+<div class="line">} <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+<p>Initializes UART1 in Mode 0. </p>
+<p>Must be called before any UART communication is initiated.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">baudRate</td><td>BaudRate_t The desired baud rate.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Assumes system clock is already configured. </dd>
+<dd>
+Modifies UART1 control and status registers. Disables UART1 interrupt. </dd></dl>
+
+</div>
+</div>
 <a id="ga6dea4d767d12fb9d0a9f065d6a9de542" name="ga6dea4d767d12fb9d0a9f065d6a9de542"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga6dea4d767d12fb9d0a9f065d6a9de542">&#9670;&#160;</a></span>uart1_mode0_send_byte</h2>
 
@@ -140,37 +178,6 @@ Enumerations</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Requires UART1 to be previously initialized with uart_mode0_init(). </dd>
 <dd>
 Uses polling (blocking) method for transmission. </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ga2b6a703706c7a2495c169024073865fc" name="ga2b6a703706c7a2495c169024073865fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2b6a703706c7a2495c169024073865fc">&#9670;&#160;</a></span>uart1_mode0_init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void uart1_mode0_init </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__uart1__mode0.html#ga86cfbfba63ce1413f5efb3cbabe8495b">BaudRate_t</a>&#160;</td>
-          <td class="paramname"><em>baudRate</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initializes UART1 in Mode 0. </p>
-<p>Must be called before any UART communication is initiated.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">baudRate</td><td>BaudRate_t The desired baud rate.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Assumes system clock is already configured. </dd>
-<dd>
-Modifies UART1 control and status registers. Disables UART1 interrupt. </dd></dl>
 
 </div>
 </div>

@@ -139,7 +139,7 @@
 * Counter0 mode1 routines implemented
 * Counter0 mode2 routines implemented
 * Counter0 mode3 routines implemented
-* UART1 mode0 send routines implemented as C-code 
+* UART1 mode0 send routines implemented 
 
 Next releases todo
 * Code review using AI
