@@ -1,8 +1,4 @@
-Import('env')
+Import("env")
 
-env.Default(
-    env.Program(
-        'uart_example',
-        ['uart_example.c', 'uart.c']
-    ),
-)
+SConscript('legacy/SConscript', exports = 'env')
+SConscript('mode0/SConscript', exports = 'env')
