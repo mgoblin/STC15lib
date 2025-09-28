@@ -8,6 +8,8 @@ void uart1_mode0_init(BaudRate_t baudRate)
 
     baudRate == UART_BaudRate_921600 ? 
         bit_clr(AUXR, CBIT5) : bit_set(AUXR, SBIT5);
+
+    disable_uart1_interrupt();
 }
 
 

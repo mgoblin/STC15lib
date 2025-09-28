@@ -2,7 +2,7 @@
 
 void uart1_send_byte(uint8_t data)
 {
-        SBUF = data;
+    SBUF = data;
 	while(TI==0);
 	TI=0;
 }

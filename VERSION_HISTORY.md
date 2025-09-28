@@ -139,10 +139,7 @@
 * Counter0 mode1 routines implemented
 * Counter0 mode2 routines implemented
 * Counter0 mode3 routines implemented
-* UART1 mode0 send routines implemented
-    * TODO Interrupt support
-    * SysClk/12 and SysClk/2 baud rate support
-    * TODO Change UART1 pins support 
+* UART1 mode0 send routines implemented as C-code 
 
 Next releases todo
 * Code review using AI

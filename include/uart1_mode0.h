@@ -5,6 +5,7 @@
 
 #include <sys.h>
 #include <bits.h>
+#include <interrupt.h>
 
 /**
  * @file uart1_mode0.h
@@ -17,6 +18,8 @@
  * Serial data enters and exits through RxD. TxD outputs the shift clock. 
  * Eight data bits are transmitted/received with the least-significant (LSB) first. 
  * The baud rate is fixed at 1/12 (or 1/2) the System clock cycle.
+ * 
+ * This module routines does not support UART1 interrupts.
  * 
  * @author Michael Golovanov
  * 
@@ -45,7 +48,7 @@ typedef enum {
  * @param baudRate BaudRate_t The desired baud rate.
  * 
  * @note Assumes system clock is already configured.
- * @note Modifies UART1 control and status registers.
+ * @note Modifies UART1 control and status registers. Disables UART1 interrupt.
  * 
  * @ingroup uart1_mode0
  */

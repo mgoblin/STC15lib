@@ -1,25 +1,27 @@
 <map id="include/interrupt.h" name="include/interrupt.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="844,5,985,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="951,5,1092,31"/>
 <area shape="rect" id="Node000002" href="$counter0__mode0_8h.html" title=" " alt="" coords="5,79,200,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="830,29,219,81,200,83,200,78,218,76,830,24"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="937,28,621,50,219,81,200,83,200,78,218,76,621,44,937,22"/>
 <area shape="rect" id="Node000003" href="$counter0__mode1_8h.html" title=" " alt="" coords="789,225,984,251"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="830,23,676,28,498,38,344,55,292,67,265,81,257,94,259,107,269,119,288,131,347,154,426,174,519,191,615,206,790,226,789,231,615,211,518,197,425,179,345,159,285,136,265,123,254,109,252,93,261,77,290,62,343,50,497,33,676,23,830,18"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="937,22,758,25,546,34,446,42,361,52,298,65,277,72,265,80,257,94,258,106,269,119,287,131,346,154,426,174,518,191,615,205,789,225,789,231,614,211,517,196,425,179,345,159,285,136,265,123,254,109,252,93,261,77,274,68,296,60,360,46,446,36,546,29,758,20,937,17"/>
 <area shape="rect" id="Node000005" href="$counter0__mode2_8h.html" title=" " alt="" coords="275,79,469,104"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="830,33,459,81,459,76,830,28"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="937,31,470,82,469,77,937,26"/>
 <area shape="rect" id="Node000006" href="$counter0__mode3_8h.html" title=" " alt="" coords="493,79,688,104"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="850,36,644,81,643,76,849,31"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="939,36,660,81,660,76,938,30"/>
 <area shape="rect" id="Node000007" href="$counter2__mode0_8h.html" title=" " alt="" coords="712,79,907,104"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="888,41,828,81,825,76,885,36"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="975,37,845,81,843,76,974,32"/>
 <area shape="rect" id="Node000008" href="$timer0__mode0_8h.html" title=" " alt="" coords="931,79,1111,104"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="944,36,1005,76,1002,81,942,40"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1024,44,1024,79,1019,79,1019,44"/>
 <area shape="rect" id="Node000010" href="$timer0__mode1_8h.html" title=" " alt="" coords="1135,79,1315,104"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="978,31,1176,76,1174,81,977,36"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1068,33,1193,76,1191,81,1066,38"/>
 <area shape="rect" id="Node000011" href="$timer0__mode2_8h.html" title=" " alt="" coords="1339,79,1519,104"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="1000,28,1347,76,1346,81,999,34"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="1101,30,1364,76,1363,81,1100,36"/>
 <area shape="rect" id="Node000012" href="$timer0__mode3_8h.html" title=" " alt="" coords="1543,79,1723,104"/>
-<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="999,24,1532,76,1544,77,1543,83,1532,81,999,30"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="1106,26,1543,77,1543,82,1105,32"/>
 <area shape="rect" id="Node000013" href="$timer2__mode0_8h.html" title=" " alt="" coords="1747,79,1927,104"/>
-<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="999,22,1323,43,1736,76,1748,77,1747,82,1736,81,1322,48,999,27"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="1106,23,1386,45,1736,76,1748,77,1747,82,1736,81,1386,50,1106,28"/>
+<area shape="rect" id="Node000016" href="$uart1__mode0_8h.html" title=" " alt="" coords="1952,79,2123,104"/>
+<area shape="poly" id="edge17_Node000001_Node000016" title=" " alt="" coords="1106,21,1469,41,1940,76,1952,77,1952,82,1940,81,1469,46,1106,26"/>
 <area shape="rect" id="Node000004" href="$counter0__mode1__example_8c.html" title=" " alt="" coords="845,299,1104,339"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="911,258,955,297,952,301,908,262"/>
 <area shape="rect" id="Node000009" href="$timer0__to__ms_8h.html" title=" " alt="" coords="934,152,1109,177"/>

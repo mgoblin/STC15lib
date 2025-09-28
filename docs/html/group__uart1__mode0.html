@@ -101,6 +101,7 @@ Enumerations</h2></td></tr>
 <p>Functions and data structures for UART1 communication in Mode 0.</p>
 <p>Mode 0 provides synchronous communication with fixed baud rate.</p>
 <p>Serial data enters and exits through RxD. TxD outputs the shift clock. Eight data bits are transmitted/received with the least-significant (LSB) first. The baud rate is fixed at 1/12 (or 1/2) the System clock cycle.</p>
+<p>This module routines does not support UART1 interrupts.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga2b6a703706c7a2495c169024073865fc" name="ga2b6a703706c7a2495c169024073865fc"></a>
@@ -129,7 +130,7 @@ Enumerations</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Assumes system clock is already configured. </dd>
 <dd>
-Modifies UART1 control and status registers. </dd></dl>
+Modifies UART1 control and status registers. Disables UART1 interrupt. </dd></dl>
 
 </div>
 </div>
