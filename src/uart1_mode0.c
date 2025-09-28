@@ -11,11 +11,3 @@ void uart1_mode0_init(BaudRate_t baudRate)
 
     disable_uart1_interrupt();
 }
-
-
-void uart1_mode0_send_byte(uint8_t byte)
-{
-    SBUF = byte;
-    while (!TI);
-    TI = 0;
-}

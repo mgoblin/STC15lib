@@ -9,15 +9,21 @@
 #include <uart1_mode0.h>
 #include <delay.h>
 
+void send_byte(uint8_t byte) __naked
+{
+    uart1_mode0_send_byte(byte);
+    __asm ret __endasm;
+}
+
 void main()
 {
 	while(1)   {
         
         uart1_mode0_init(UART_BaudRate_921600);
-        uart1_mode0_send_byte(0x75);
+        send_byte(0x75);
         
         uart1_mode0_init(UART_BaudRate_5529600);
-        uart1_mode0_send_byte(0x75);
+        send_byte(0x75);
         
         delay_ms(1);
     }

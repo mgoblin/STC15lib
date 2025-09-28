@@ -70,7 +70,7 @@ void uart1_mode0_init(BaudRate_t baudRate);
  * RxD and TxD pins state diagram are pictured at 
  * @image html UART1_mode0.png
  * 
- * @param byte The 8-bit data value to be sent (0-255).
+ * @param byte uintT8_t the 8-bit data value to be sent (0-255).
  * 
  * @note Requires UART1 to be previously initialized with uart_mode0_init().
  * @note Uses polling (blocking) method for transmission.
@@ -78,7 +78,14 @@ void uart1_mode0_init(BaudRate_t baudRate);
  * 
  * @ingroup uart1_mode0
  */
-void uart1_mode0_send_byte(uint8_t byte);
+#define uart1_mode0_send_byte(byte)             \
+do                                              \
+{                                               \
+    SBUF = byte;                                \
+    while (!TI);                                \
+    TI = 0;                                     \
+} while (0)
+
 
 ///@}
 
