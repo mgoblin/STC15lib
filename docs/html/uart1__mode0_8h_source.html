@@ -87,17 +87,26 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;<a class="code" href="sys_8h.html">sys.h</a>&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__uart1__mode0.html#gaf5419d2ce198432d12affc50bb9f567c">uart1_mode0_init</a>();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__uart1__mode0.html#ga337ab921b8215fd076d12728c7b0454b">uart1_mode0_send_byte</a>(uint8_t <span class="keywordtype">byte</span>);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="agroup__uart1__mode0_html_ga337ab921b8215fd076d12728c7b0454b"><div class="ttname"><a href="group__uart1__mode0.html#ga337ab921b8215fd076d12728c7b0454b">uart1_mode0_send_byte</a></div><div class="ttdeci">void uart1_mode0_send_byte(uint8_t byte)</div><div class="ttdoc">Sends a single byte over UART1 in Mode 0.</div><div class="ttdef"><b>Definition</b> uart1_mode0.c:11</div></div>
-<div class="ttc" id="agroup__uart1__mode0_html_gaf5419d2ce198432d12affc50bb9f567c"><div class="ttname"><a href="group__uart1__mode0.html#gaf5419d2ce198432d12affc50bb9f567c">uart1_mode0_init</a></div><div class="ttdeci">void uart1_mode0_init()</div><div class="ttdoc">Initializes UART1 in Mode 0.</div><div class="ttdef"><b>Definition</b> uart1_mode0.c:3</div></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;bits.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="group__uart1__mode0.html#ga86cfbfba63ce1413f5efb3cbabe8495b">   30</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    UART_BaudRate_921600 = 921600U,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    UART_BaudRate_5529600 = 5529600U</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>} <a class="code hl_enumeration" href="group__uart1__mode0.html#ga86cfbfba63ce1413f5efb3cbabe8495b">BaudRate_t</a>;</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__uart1__mode0.html#ga2b6a703706c7a2495c169024073865fc">uart1_mode0_init</a>(<a class="code hl_enumeration" href="group__uart1__mode0.html#ga86cfbfba63ce1413f5efb3cbabe8495b">BaudRate_t</a> baudRate);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__uart1__mode0.html#ga337ab921b8215fd076d12728c7b0454b">uart1_mode0_send_byte</a>(uint8_t <span class="keywordtype">byte</span>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__uart1__mode0_html_ga2b6a703706c7a2495c169024073865fc"><div class="ttname"><a href="group__uart1__mode0.html#ga2b6a703706c7a2495c169024073865fc">uart1_mode0_init</a></div><div class="ttdeci">void uart1_mode0_init(BaudRate_t baudRate)</div><div class="ttdoc">Initializes UART1 in Mode 0.</div><div class="ttdef"><b>Definition</b> uart1_mode0.c:3</div></div>
+<div class="ttc" id="agroup__uart1__mode0_html_ga337ab921b8215fd076d12728c7b0454b"><div class="ttname"><a href="group__uart1__mode0.html#ga337ab921b8215fd076d12728c7b0454b">uart1_mode0_send_byte</a></div><div class="ttdeci">void uart1_mode0_send_byte(uint8_t byte)</div><div class="ttdoc">Sends a single byte over UART1 in Mode 0.</div><div class="ttdef"><b>Definition</b> uart1_mode0.c:14</div></div>
+<div class="ttc" id="agroup__uart1__mode0_html_ga86cfbfba63ce1413f5efb3cbabe8495b"><div class="ttname"><a href="group__uart1__mode0.html#ga86cfbfba63ce1413f5efb3cbabe8495b">BaudRate_t</a></div><div class="ttdeci">BaudRate_t</div><div class="ttdoc">UART1 baud rate enumeration.</div><div class="ttdef"><b>Definition</b> uart1_mode0.h:30</div></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

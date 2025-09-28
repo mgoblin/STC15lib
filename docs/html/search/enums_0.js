@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['external_5finterrupt_5ftrigger_5ft_0',['external_interrupt_trigger_t',['../group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7',1,'interrupt.h']]]
+  ['baudrate_5ft_0',['BaudRate_t',['../group__uart1__mode0.html#ga86cfbfba63ce1413f5efb3cbabe8495b',1,'uart1_mode0.h']]]
 ];

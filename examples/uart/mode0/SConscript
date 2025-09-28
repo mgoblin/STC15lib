@@ -7,4 +7,10 @@ env.Default(
         'uart1_mode0_send_example',
         ['uart1_mode0_send_example.c', 'uart1_mode0.c']
     ),
+
+    env.Program(
+        'uart1_mode0_baud_rates_example',
+        ['uart1_mode0_baud_rates_example.c', 'uart1_mode0.c']
+    ),
+
 )

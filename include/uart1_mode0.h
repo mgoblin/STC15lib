@@ -4,6 +4,7 @@
 #include <stdint.h>
 
 #include <sys.h>
+#include <bits.h>
 
 /**
  * @file uart1_mode0.h
@@ -21,6 +22,16 @@
  * 
 */
 
+/**
+ * @brief UART1 baud rate enumeration
+ * 
+ * @ingroup uart1_mode0
+ */
+typedef enum {
+    UART_BaudRate_921600 = 921600U,
+    UART_BaudRate_5529600 = 5529600U
+} BaudRate_t;
+
 /** @name init
  *  UART1 initializaion functions
  */
@@ -36,7 +47,7 @@
  * 
  * @ingroup uart1_mode0
  */
-void uart1_mode0_init();
+void uart1_mode0_init(BaudRate_t baudRate);
 ///@}
 
 /** @name send and receive

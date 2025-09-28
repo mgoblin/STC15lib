@@ -11,7 +11,7 @@
 
 void main()
 {
-	uart1_mode0_init();
+	uart1_mode0_init(UART_BaudRate_921600);
 	
     while(1)
     {

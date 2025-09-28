@@ -27,7 +27,8 @@
         "timer_to_ms_common.h": "c",
         "cstdint": "c",
         "counter0_mode0.h": "c",
-        "counter2_mode0.h": "c"
+        "counter2_mode0.h": "c",
+        "uart1_mode0.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

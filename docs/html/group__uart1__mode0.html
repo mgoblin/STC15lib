@@ -69,16 +69,26 @@ $(function() {
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle"><div class="title">UART1 Mode 0</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga86cfbfba63ce1413f5efb3cbabe8495b" id="r_ga86cfbfba63ce1413f5efb3cbabe8495b"><td class="memItemLeft" align="right" valign="top"><a id="ga86cfbfba63ce1413f5efb3cbabe8495b" name="ga86cfbfba63ce1413f5efb3cbabe8495b"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode0.html#ga86cfbfba63ce1413f5efb3cbabe8495b">BaudRate_t</a> { <b>UART_BaudRate_921600</b> = 921600U
+, <b>UART_BaudRate_5529600</b> = 5529600U
+ }</td></tr>
+<tr class="memdesc:ga86cfbfba63ce1413f5efb3cbabe8495b"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART1 baud rate enumeration. <br /></td></tr>
+<tr class="separator:ga86cfbfba63ce1413f5efb3cbabe8495b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">init</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>UART1 initializaion functions </p>
 </td></tr>
-<tr class="memitem:gaf5419d2ce198432d12affc50bb9f567c" id="r_gaf5419d2ce198432d12affc50bb9f567c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode0.html#gaf5419d2ce198432d12affc50bb9f567c">uart1_mode0_init</a> ()</td></tr>
-<tr class="memdesc:gaf5419d2ce198432d12affc50bb9f567c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes UART1 in Mode 0.  <br /></td></tr>
-<tr class="separator:gaf5419d2ce198432d12affc50bb9f567c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2b6a703706c7a2495c169024073865fc" id="r_ga2b6a703706c7a2495c169024073865fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode0.html#ga2b6a703706c7a2495c169024073865fc">uart1_mode0_init</a> (<a class="el" href="group__uart1__mode0.html#ga86cfbfba63ce1413f5efb3cbabe8495b">BaudRate_t</a> baudRate)</td></tr>
+<tr class="memdesc:ga2b6a703706c7a2495c169024073865fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes UART1 in Mode 0.  <br /></td></tr>
+<tr class="separator:ga2b6a703706c7a2495c169024073865fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">send and receive</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>UART1 send and receive byte functions </p>
@@ -93,8 +103,8 @@ $(function() {
 <p>Serial data enters and exits through RxD. TxD outputs the shift clock. Eight data bits are transmitted/received with the least-significant (LSB) first. The baud rate is fixed at 1/12 (or 1/2) the System clock cycle.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gaf5419d2ce198432d12affc50bb9f567c" name="gaf5419d2ce198432d12affc50bb9f567c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf5419d2ce198432d12affc50bb9f567c">&#9670;&#160;</a></span>uart1_mode0_init()</h2>
+<a id="ga2b6a703706c7a2495c169024073865fc" name="ga2b6a703706c7a2495c169024073865fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2b6a703706c7a2495c169024073865fc">&#9670;&#160;</a></span>uart1_mode0_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -102,7 +112,8 @@ $(function() {
         <tr>
           <td class="memname">void uart1_mode0_init </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="group__uart1__mode0.html#ga86cfbfba63ce1413f5efb3cbabe8495b">BaudRate_t</a>&#160;</td>
+          <td class="paramname"><em>baudRate</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
