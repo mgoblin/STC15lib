@@ -139,12 +139,13 @@
 * Counter0 mode1 routines implemented
 * Counter0 mode2 routines implemented
 * Counter0 mode3 routines implemented
-* UART1 mode0 send routines implemented 
+* UART1 mode0 send routines implemented
+* TODO UART1 mode1 with timer2 as baud rate generator send routines implemented 
 
 Next releases todo
+* TODO Implement UART
 * Code review using AI
 * use asserts and static_assert
-* TODO Implement UART
 * TODO Optimize timer2 baud rate calculation. Use precalculated array of baudrates
 * TODO Implement P5.4 as MCU reset source
 * TODO Review and fix freq and ticks - incorrect calculation.
