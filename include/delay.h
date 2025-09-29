@@ -32,7 +32,7 @@ do {                                                            \
     uint16_t ms_div = ms >> get_frequency_divider_scale();      \
     do                                                          \
     {                                                           \
-        uint16_t d = TICKS_DELAY_1ms >> 1;                      \
+        uint16_t d = TICKS_DELAY_1ms;                           \
         do                                                      \
         {                                                       \
             __asm NOP __endasm;                                 \

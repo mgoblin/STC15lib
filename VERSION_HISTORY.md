@@ -143,6 +143,7 @@
 * TODO UART1 mode1 with timer2 as baud rate generator send routines implemented 
 
 Next releases todo
+* Fix delay_ms. On small ms delays it works correctly, but on seconds delay it doubled.
 * TODO Implement UART
 * Code review using AI
 * use asserts and static_assert
