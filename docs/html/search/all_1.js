@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_5f_5fat_0',['__at',['../group__chip__id.html#gaf797f652068877217b527fa8d320bb43',1,'chip_id.h']]]
+  ['1_20with_20timer2_2012t_0',['UART1 Mode 1 with Timer2 12T',['../group__uart1__mode1__timer2__12T.html',1,'']]],
+  ['12t_1',['UART1 Mode 1 with Timer2 12T',['../group__uart1__mode1__timer2__12T.html',1,'']]]
 ];

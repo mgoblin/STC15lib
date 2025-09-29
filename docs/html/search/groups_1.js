@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['aux_0',['aux',['../group__timer0__to__ms.html',1,'Timer0 Aux'],['../group__timer2__to__ms.html',1,'Timer2 Aux']]],
-  ['aux_20common_1',['Timer Aux common',['../group__timer__to__ms.html',1,'']]]
+  ['1_20with_20timer2_2012t_0',['UART1 Mode 1 with Timer2 12T',['../group__uart1__mode1__timer2__12T.html',1,'']]],
+  ['12t_1',['UART1 Mode 1 with Timer2 12T',['../group__uart1__mode1__timer2__12T.html',1,'']]]
 ];
