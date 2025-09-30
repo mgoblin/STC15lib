@@ -77,11 +77,11 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ga86cfbfba63ce1413f5efb3cbabe8495b" id="r_ga86cfbfba63ce1413f5efb3cbabe8495b"><td class="memItemLeft" align="right" valign="top"><a id="ga86cfbfba63ce1413f5efb3cbabe8495b" name="ga86cfbfba63ce1413f5efb3cbabe8495b"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode0.html#ga86cfbfba63ce1413f5efb3cbabe8495b">BaudRate_t</a> { <b>UART_BaudRate_921600</b> = 921600U
-, <b>UART_BaudRate_5529600</b> = 5529600U
+<tr class="memitem:ga840b04aa551a0bec3b74c44e7042505a" id="r_ga840b04aa551a0bec3b74c44e7042505a"><td class="memItemLeft" align="right" valign="top"><a id="ga840b04aa551a0bec3b74c44e7042505a" name="ga840b04aa551a0bec3b74c44e7042505a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode0.html#ga840b04aa551a0bec3b74c44e7042505a">uart1_mode0_baudrate_t</a> { <b>baudrate_921600</b> = 921600U
+, <b>baudrate_5529600</b> = 5529600U
  }</td></tr>
-<tr class="memdesc:ga86cfbfba63ce1413f5efb3cbabe8495b"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART1 baud rate enumeration. <br /></td></tr>
-<tr class="separator:ga86cfbfba63ce1413f5efb3cbabe8495b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:ga840b04aa551a0bec3b74c44e7042505a"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART1 baud rate enumeration. <br /></td></tr>
+<tr class="separator:ga840b04aa551a0bec3b74c44e7042505a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">init</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>UART1 initializaion functions </p>
@@ -123,7 +123,7 @@ Enumerations</h2></td></tr>
 <div class="line">{                                                   \</div>
 <div class="line">    PCON &amp;= 0x3F;                                   \</div>
 <div class="line">    SCON = 0;                                       \</div>
-<div class="line">    baudRate == UART_BaudRate_921600 ?              \</div>
+<div class="line">    baudRate == baudrate_921600 ?                   \</div>
 <div class="line">        bit_clr(AUXR, CBIT5) : bit_set(AUXR, SBIT5);\</div>
 <div class="line">    disable_uart1_interrupt();                      \</div>
 <div class="line">} <span class="keywordflow">while</span> (0)</div>

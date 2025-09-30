@@ -54,7 +54,7 @@ void uart1_mode1_timer2_start(const uart1_mode1_timer2_12t_baudrate_t baudrate)
 void uart1_mode1_timer2_stop()
 {
     // To stop timer T2R = 0;
-    // Befrore stopping the timer, we need waiting for the last byte to be sent
+    bit_clr(AUXR, CBIT4);
 }
 
 void main()

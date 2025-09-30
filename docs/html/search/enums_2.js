@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['interrupt_5fpriority_5ft_0',['interrupt_priority_t',['../group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964',1,'interrupt.h']]]
+  ['master_5fclock_5foutput_5fpin_5ft_0',['master_clock_output_pin_t',['../group__freq.html#gae5d505beabdbd466d648cb5dccf4b6d2',1,'frequency.h']]]
 ];

@@ -101,7 +101,24 @@ typedef enum
  */
 void uart1_mode1_timer2_init(uart1_pins_t pins);
 
+/**
+ * @brief Start UART1 communication with standart baudrate value
+ * 
+ * @ingroup uart1_mode1_timer2_12T
+ * 
+ * @param baudrate uart1_mode1_timer2_12t_baudrate_t Baudrate selection from uart1_mode1_timer2_12t_baudrate_t enum
+ * 
+ * @note Before calling this function, uart1_mode1_timer2_init() must be called.
+ * @note Enum contains standard baudrates with precalculated THTL values for 12T mode
+ */
 void uart1_mode1_timer2_start(const uart1_mode1_timer2_12t_baudrate_t baudrate);
+/**
+ * @brief Stop UART1 communication and disable Timer2
+ * 
+ * @ingroup uart1_mode1_timer2_12T
+ * 
+ * @warning Calling this function will terminate any ongoing communication
+ */
 void uart1_mode1_timer2_stop();
 
 #endif

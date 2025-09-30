@@ -19,10 +19,10 @@ void main()
 {
 	while(1)   {
         
-        uart1_mode0_init(UART_BaudRate_921600);
+        uart1_mode0_init(baudrate_921600);
         send_byte(0x75);
         
-        uart1_mode0_init(UART_BaudRate_5529600);
+        uart1_mode0_init(baudrate_5529600);
         send_byte(0x75);
         
         delay_ms(1);

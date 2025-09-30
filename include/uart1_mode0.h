@@ -31,9 +31,9 @@
  * @ingroup uart1_mode0
  */
 typedef enum {
-    UART_BaudRate_921600 = 921600U,
-    UART_BaudRate_5529600 = 5529600U
-} BaudRate_t;
+    baudrate_921600 = 921600U,
+    baudrate_5529600 = 5529600U
+} uart1_mode0_baudrate_t;
 
 /** @name init
  *  UART1 initializaion functions
@@ -57,7 +57,7 @@ do                                                  \
 {                                                   \
     PCON &= 0x3F;                                   \
     SCON = 0;                                       \
-    baudRate == UART_BaudRate_921600 ?              \
+    baudRate == baudrate_921600 ?                   \
         bit_clr(AUXR, CBIT5) : bit_set(AUXR, SBIT5);\
     disable_uart1_interrupt();                      \
 } while (0)

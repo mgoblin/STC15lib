@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['timer_5fclock_5fdivider_5ft_0',['timer_clock_divider_t',['../group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d',1,'timer_structs.h']]]
+  ['uart1_5fmode0_5fbaudrate_5ft_0',['uart1_mode0_baudrate_t',['../group__uart1__mode0.html#ga840b04aa551a0bec3b74c44e7042505a',1,'uart1_mode0.h']]],
+  ['uart1_5fmode1_5ftimer2_5f12t_5fbaudrate_5ft_1',['uart1_mode1_timer2_12t_baudrate_t',['../group__uart1__mode1__timer2__12T.html#ga041bfeb3611dd3a99d7c742e0d770844',1,'uart1_mode1_timer2_12T.h']]],
+  ['uart1_5fpins_5ft_2',['uart1_pins_t',['../group__uart1__mode1__timer2__12T.html#gaed599bf26e2baa98c2d108a072d02337',1,'uart1_mode1_timer2_12T.h']]]
 ];
