@@ -1,10 +1,12 @@
 #include <uart1_mode1_timer2_12T.h>
 
-#include <uart.h>
-#include <stdio.h>
 #include <delay.h>
 
 #define LED P10
+
+// TODO Support double baud rate
+// TODO MCU clock frequency can be divided. 
+
 void uart1_mode1_timer2_init(uart1_pins_t pins)
 {
     PCON &= 0x3F;
@@ -33,7 +35,7 @@ void uart1_mode1_timer2_start(const uart1_mode1_timer2_12t_baudrate_t baudrate)
 {
     // TODO MCU clock frequency can be divided. 
     
-    // TODO Baud rate = ((Sysclk/12)/(65535 - THTL))/4
+    // Baud rate = ((Sysclk/12)/(65535 - THTL))/4
     // 4 * baudrate = (Sysclk/12)/(65535 - THTL)
     // (4 * baudrate) * (65535 - THTL) = Sysclk/12
     // 65535 - THTL = (Sysclk/12)/(4 * baudrate)
@@ -57,6 +59,20 @@ void uart1_mode1_timer2_stop()
     bit_clr(AUXR, CBIT4);
 }
 
+void uart1_mode1_timer2_send_byte(uint8_t data)
+{
+    SBUF = data;
+	while(!TI);
+	TI=0;
+}
+
+void uart1_mode1_timer2_receive_byte(uint8_t *data)
+{
+	while(!RI);
+	*data = SBUF;
+    RI=0;
+}
+
 void main()
 {
     uart1_mode1_timer2_init(RxD_P30_TxD_P31);
@@ -66,8 +82,15 @@ void main()
     {
         LED = !LED;
 
-        printf_tiny("Ok\r\n");
-        printf_tiny("AUXR1 0x%x\r\n", AUXR1);
+        uint8_t data;
+        uart1_mode1_timer2_receive_byte(&data);
+        uart1_mode1_timer2_send_byte(data);
+
+        uart1_mode1_timer2_send_byte(' ');
+        uart1_mode1_timer2_send_byte('O');
+        uart1_mode1_timer2_send_byte('k');
+        uart1_mode1_timer2_send_byte('\r');
+        uart1_mode1_timer2_send_byte('\n');
 
         delay_ms(2000);
     }

@@ -121,4 +121,8 @@ void uart1_mode1_timer2_start(const uart1_mode1_timer2_12t_baudrate_t baudrate);
  */
 void uart1_mode1_timer2_stop();
 
+void uart1_mode1_timer2_send_byte(uint8_t data);
+
+void uart1_mode1_timer2_receive_byte(uint8_t *data);
+
 #endif
