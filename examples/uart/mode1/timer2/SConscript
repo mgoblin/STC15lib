@@ -1,14 +1,8 @@
 Import('env')
 
-env.Command(
-    'uart1_mode1_timer2_12T.c', 
-    '#src/uart1_mode1_timer2_12T.c',
-    Copy("$TARGET", "$SOURCE")
-    )
-
 env.Default(
     env.Program(
         'uart1_mode1_timer2_12T_example',
-        ['uart1_mode1_timer2_12T_example.c', 'uart1_mode1_timer2_12T.c']
+        ['uart1_mode1_timer2_12T_example.c']
     ),
 )

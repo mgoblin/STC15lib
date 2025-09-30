@@ -48,8 +48,7 @@
 
 #include <sys.h>
 #include <bits.h>
-#include <timer2_mode0.h>
-
+#include <interrupt.h>
 /**
  * @brief UART1 RxD/TxD pins enum
  * 
@@ -99,19 +98,49 @@ typedef enum
  * 
  * @ingroup uart1_mode1_timer2_12T
  */
-void uart1_mode1_timer2_12T_init(uart1_pins_t pins);
+#define uart1_mode1_timer2_12T_init(pins)   \
+do {                                        \
+    PCON &= 0x3F;                           \
+    SCON = 0x50;                            \
+                                            \
+    /* The clock source of Timer 2 is SYSclk/12. AUXR.T2x12 = 0 */  \
+    /* No double baud rate. AUXR.UART_M0x6 = 0 */                   \
+    /* Timer2 is not started. AUXR.T2R = 0 */                       \
+    /* Timer2 are used as timer. AUXR.T2_C/T = 0 */                 \
+    AUXR &= 0xC2;                           \
+                                            \
+    /* Select Timer2 as UART1 baud rate generator. AUXR.S1ST2 = 1; */ \
+    bit_set(AUXR, SBIT0);                   \
+                                            \
+    disable_timer2_interrupt();             \
+                                            \
+    bit_clr(CLK_DIV, CBIT4);                \
+                                            \
+    /* Set AUXR1 bits 6, 7 to select RxD/TxD pins */                 \
+    AUXR1 &= 0x3F;                          \
+    AUXR1 |= pins;                          \
+} while(0)    
 
 /**
  * @brief Start UART1 communication with standart baudrate value
  * 
  * @ingroup uart1_mode1_timer2_12T
  * 
- * @param baudrate uart1_mode1_timer2_12t_baudrate_t Baudrate selection from uart1_mode1_timer2_12t_baudrate_t enum
+ * @param baudrate const uart1_mode1_timer2_12t_baudrate_t Baudrate selection from uart1_mode1_timer2_12t_baudrate_t enum
  * 
  * @note Before calling this function, uart1_mode1_timer2_init() must be called.
  * @note Enum contains standard baudrates with precalculated THTL values for 12T mode
  */
-void uart1_mode1_timer2_12T_start(const uart1_mode1_timer2_12t_baudrate_t baudrate);
+#define uart1_mode1_timer2_12T_start(baudrate)          \
+do {                                                    \
+    /* Set TH TL values */                              \
+    T2L = baudrate & 0xFF;                              \
+    T2H = baudrate >> 8;                                \
+                                                        \
+    /* Start Timer2 */                                  \
+    bit_set(AUXR, SBIT4);                               \
+} while(0)
+
 /**
  * @brief Stop UART1 communication and disable Timer2
  * 
@@ -119,22 +148,28 @@ void uart1_mode1_timer2_12T_start(const uart1_mode1_timer2_12t_baudrate_t baudra
  * 
  * @warning Calling this function will terminate any ongoing communication
  */
-void uart1_mode1_timer2_12T_stop();
+#define uart1_mode1_timer2_12T_stop (bit_clr(AUXR, CBIT4))
 
 /**
  * @brief Send a single byte of data via UART1 in Mode1
  * 
  * @ingroup uart1_mode1_timer2_12T
  * 
- * @param data 8-bit data to transmit (LSB first)
+ * @param data uint8_t 8-bit data to transmit (LSB first)
  * 
  * @note Function blocks until the byte is fully transmitted
  * @note Automatically handles start/stop bit generation
  * 
  * @warning Should not be called from interrupt service routines
  */
-void uart1_mode1_timer2_12T_send_byte(uint8_t data);
-
+#define uart1_mode1_timer2_12T_send_byte(data)          \
+do {                                                    \
+    SBUF = data;                                        \
+    /* Wait for byte to be transmitted */               \
+    while (!TI);                                        \
+    /* Clear TI flag */                                 \
+    TI = 0;                                             \
+} while(0)
 /**
  * @brief Receive a single byte of data via UART1 in Mode1
  * 
@@ -147,6 +182,14 @@ void uart1_mode1_timer2_12T_send_byte(uint8_t data);
  * 
  * @warning Should not be called from interrupt service routines due to blocking nature
  */
-void uart1_mode1_timer2_12T_receive_byte(uint8_t *data);
+#define uart1_mode1_timer2_12T_receive_byte(data)        \
+do {                                                     \
+    /* Wait for byte to be received */                   \
+    while (!RI);                                         \
+    /* Store received byte */                            \
+    *data = SBUF;                                        \
+    /* Clear RI flag */                                  \
+    RI = 0;                                              \
+} while(0)    
 
 #endif
