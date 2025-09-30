@@ -84,6 +84,13 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gaed599bf26e2baa98c2d108a072d02337"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART1 RxD/TxD pins enum.  <a href="group__uart1__mode1__timer2__12T.html#gaed599bf26e2baa98c2d108a072d02337">More...</a><br /></td></tr>
 <tr class="separator:gaed599bf26e2baa98c2d108a072d02337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga041bfeb3611dd3a99d7c742e0d770844" id="r_ga041bfeb3611dd3a99d7c742e0d770844"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode1__timer2__12T.html#ga041bfeb3611dd3a99d7c742e0d770844">uart1_mode1_timer2_12t_baudrate_t</a> { <a class="el" href="group__uart1__mode1__timer2__12T.html#gga041bfeb3611dd3a99d7c742e0d770844a718705004fa5695de866d32509ca3b39">baudrate_1200</a> = 0xFF3F
+, <a class="el" href="group__uart1__mode1__timer2__12T.html#gga041bfeb3611dd3a99d7c742e0d770844a33660d8ce254b79993809e238a915f00">baudrate_2400</a> = 0xFF9F
+, <a class="el" href="group__uart1__mode1__timer2__12T.html#gga041bfeb3611dd3a99d7c742e0d770844ac3012764c007764284487b2cbee4b550">baudrate_4800</a> = 0xFFCF
+, <a class="el" href="group__uart1__mode1__timer2__12T.html#gga041bfeb3611dd3a99d7c742e0d770844a920ff2bd65ec0264e548c65f9beeeebe">baudrate_9600</a> = 0xFFE7
+ }</td></tr>
+<tr class="memdesc:ga041bfeb3611dd3a99d7c742e0d770844"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART1 precalculated baudrates.  <a href="group__uart1__mode1__timer2__12T.html#ga041bfeb3611dd3a99d7c742e0d770844">More...</a><br /></td></tr>
+<tr class="separator:ga041bfeb3611dd3a99d7c742e0d770844"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -100,16 +107,43 @@ Functions</h2></td></tr>
 <p>THTL value is precalulated for standard baudrates.</p>
 <p>In UART1 Mode 1, three sets of RxD/TxD pins can be used: RxD on P3.0/TxD on P3.1, RxD on P3.6/TxD on P3.7 and RxD on P1.6/TxD on P1.7.</p>
 <p>Typical usage: </p><div class="fragment"><div class="line"><a class="code hl_function" href="group__uart1__mode1__timer2__12T.html#gaf482564a74d90c5f12a8050fc602649d">uart1_mode1_timer2_init</a>(<a class="code hl_enumvalue" href="group__uart1__mode1__timer2__12T.html#ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47">RxD_P30_TxD_P31</a>);</div>
-<div class="line">uart1_mode1_timer2_start(9600);</div>
+<div class="line">uart1_mode1_timer2_start(<a class="code hl_enumvalue" href="group__uart1__mode1__timer2__12T.html#gga041bfeb3611dd3a99d7c742e0d770844a920ff2bd65ec0264e548c65f9beeeebe">baudrate_9600</a>);</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordflow">for</span> (;;)</div>
 <div class="line">{</div>
 <div class="line"> <span class="comment">// Send or receive data</span></div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__uart1__mode1__timer2__12T_html_gaf482564a74d90c5f12a8050fc602649d"><div class="ttname"><a href="group__uart1__mode1__timer2__12T.html#gaf482564a74d90c5f12a8050fc602649d">uart1_mode1_timer2_init</a></div><div class="ttdeci">void uart1_mode1_timer2_init(uart1_pins_t pins)</div><div class="ttdoc">Initialize UART1 in Mode 1 with Timer2 12T configuration.</div><div class="ttdef"><b>Definition</b> uart1_mode1_timer2_12T.c:8</div></div>
+<div class="ttc" id="agroup__uart1__mode1__timer2__12T_html_gga041bfeb3611dd3a99d7c742e0d770844a920ff2bd65ec0264e548c65f9beeeebe"><div class="ttname"><a href="group__uart1__mode1__timer2__12T.html#gga041bfeb3611dd3a99d7c742e0d770844a920ff2bd65ec0264e548c65f9beeeebe">baudrate_9600</a></div><div class="ttdeci">@ baudrate_9600</div><div class="ttdoc">9600 baudrate</div><div class="ttdef"><b>Definition</b> uart1_mode1_timer2_12T.h:84</div></div>
 <div class="ttc" id="agroup__uart1__mode1__timer2__12T_html_ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47"><div class="ttname"><a href="group__uart1__mode1__timer2__12T.html#ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47">RxD_P30_TxD_P31</a></div><div class="ttdeci">@ RxD_P30_TxD_P31</div><div class="ttdoc">RxD on P3.0 and TxD on P3.1 pins.</div><div class="ttdef"><b>Definition</b> uart1_mode1_timer2_12T.h:62</div></div>
 </div><!-- fragment --><dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga041bfeb3611dd3a99d7c742e0d770844" name="ga041bfeb3611dd3a99d7c742e0d770844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga041bfeb3611dd3a99d7c742e0d770844">&#9670;&#160;</a></span>uart1_mode1_timer2_12t_baudrate_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__uart1__mode1__timer2__12T.html#ga041bfeb3611dd3a99d7c742e0d770844">uart1_mode1_timer2_12t_baudrate_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UART1 precalculated baudrates. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga041bfeb3611dd3a99d7c742e0d770844a718705004fa5695de866d32509ca3b39" name="gga041bfeb3611dd3a99d7c742e0d770844a718705004fa5695de866d32509ca3b39"></a>baudrate_1200&#160;</td><td class="fielddoc"><p>1200 baudrate </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga041bfeb3611dd3a99d7c742e0d770844a33660d8ce254b79993809e238a915f00" name="gga041bfeb3611dd3a99d7c742e0d770844a33660d8ce254b79993809e238a915f00"></a>baudrate_2400&#160;</td><td class="fielddoc"><p>2400 baudrate </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga041bfeb3611dd3a99d7c742e0d770844ac3012764c007764284487b2cbee4b550" name="gga041bfeb3611dd3a99d7c742e0d770844ac3012764c007764284487b2cbee4b550"></a>baudrate_4800&#160;</td><td class="fielddoc"><p>4800 baudrate </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga041bfeb3611dd3a99d7c742e0d770844a920ff2bd65ec0264e548c65f9beeeebe" name="gga041bfeb3611dd3a99d7c742e0d770844a920ff2bd65ec0264e548c65f9beeeebe"></a>baudrate_9600&#160;</td><td class="fielddoc"><p>9600 baudrate </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="gaed599bf26e2baa98c2d108a072d02337" name="gaed599bf26e2baa98c2d108a072d02337"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaed599bf26e2baa98c2d108a072d02337">&#9670;&#160;</a></span>uart1_pins_t</h2>
 

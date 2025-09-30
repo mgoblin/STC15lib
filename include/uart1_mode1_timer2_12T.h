@@ -32,7 +32,7 @@
  * Typical usage:
  * ```c
  * uart1_mode1_timer2_init(RxD_P30_TxD_P31);
- * uart1_mode1_timer2_start(9600);
+ * uart1_mode1_timer2_start(baudrate_9600);
  * 
  * for (;;)
  * {
@@ -68,6 +68,23 @@ typedef enum
 } uart1_pins_t;
 
 /**
+ * @brief UART1 precalculated baudrates
+ * 
+ * @ingroup uart1_mode1_timer2_12T
+ */
+typedef enum 
+{
+    /** @brief 1200 baudrate */
+    baudrate_1200 = 0xFF3F,
+    /** @brief 2400 baudrate */
+    baudrate_2400 = 0xFF9F,
+    /** @brief 4800 baudrate */
+    baudrate_4800 = 0xFFCF,
+    /** @brief 9600 baudrate */
+    baudrate_9600 = 0xFFE7,
+} uart1_mode1_timer2_12t_baudrate_t;
+
+/**
  * @brief Initialize UART1 in Mode 1 with Timer2 12T configuration
  * 
  * @details
@@ -84,7 +101,7 @@ typedef enum
  */
 void uart1_mode1_timer2_init(uart1_pins_t pins);
 
-void uart1_mode1_timer2_start(const uint32_t baudrate);
+void uart1_mode1_timer2_start(const uart1_mode1_timer2_12t_baudrate_t baudrate);
 void uart1_mode1_timer2_stop();
 
 #endif

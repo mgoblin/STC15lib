@@ -29,7 +29,7 @@ void uart1_mode1_timer2_init(uart1_pins_t pins)
     AUXR1 |= pins; 
 }
 
-void uart1_mode1_timer2_start(const uint32_t baudrate)
+void uart1_mode1_timer2_start(const uart1_mode1_timer2_12t_baudrate_t baudrate)
 {
     // TODO MCU clock frequency can be divided. 
     
@@ -44,10 +44,10 @@ void uart1_mode1_timer2_start(const uint32_t baudrate)
     // THTL = 65535 - (11059200/12)/(4 * 9600)
     // THTL = 65535 - 921600/38400
     // THTL = 65535 - 24 = 65511 = 0xFFE7
-    T2H = 0xFF;
-    T2L = 0xE7;
+    T2H = baudrate >> 8;
+    T2L = baudrate & 0xFF;
 
-    // To start Timer2 T2R = 1;
+    // Set T2R = 1 to start Timer2
     bit_set(AUXR, SBIT4);
 }
 
@@ -60,7 +60,7 @@ void uart1_mode1_timer2_stop()
 void main()
 {
     uart1_mode1_timer2_init(RxD_P30_TxD_P31);
-    uart1_mode1_timer2_start(9600);
+    uart1_mode1_timer2_start(baudrate_9600);
 
     while (1)
     {
