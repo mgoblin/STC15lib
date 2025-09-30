@@ -94,7 +94,28 @@ do                                              \
     TI = 0;                                     \
 } while (0)
 
-
+/**
+ * @brief Receives a single byte over UART1 in Mode 0.
+ * 
+ * @details 
+ * Receives the specified 8-bit data byte through UART1 configured in Mode 0.
+ * The function blocks until the byte is fully received.
+ * 
+ * 
+ * @param byte_ptr byte* uintT8_t the 8-bit data value to be received (0-255).
+ * 
+ * @note Requires UART1 to be previously initialized with uart_mode0_init().
+ * @note Uses polling (blocking) method for receveive.
+ *
+ * 
+ * @ingroup uart1_mode0
+ */
+#define uart1_mode0_receive_byte(byte_ptr)      \
+do {                                            \
+	while(!RI);                                 \
+    *byte_ptr = SBUF;                           \
+	RI=0;                                       \
+} while (0)
 ///@}
 
 #endif

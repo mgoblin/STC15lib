@@ -96,6 +96,9 @@ Enumerations</h2></td></tr>
 <tr class="memitem:ga6dea4d767d12fb9d0a9f065d6a9de542" id="r_ga6dea4d767d12fb9d0a9f065d6a9de542"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode0.html#ga6dea4d767d12fb9d0a9f065d6a9de542">uart1_mode0_send_byte</a>(byte)</td></tr>
 <tr class="memdesc:ga6dea4d767d12fb9d0a9f065d6a9de542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a single byte over UART1 in Mode 0.  <br /></td></tr>
 <tr class="separator:ga6dea4d767d12fb9d0a9f065d6a9de542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4bcacafe7c349c38d85e5ddbd16b8039" id="r_ga4bcacafe7c349c38d85e5ddbd16b8039"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode0.html#ga4bcacafe7c349c38d85e5ddbd16b8039">uart1_mode0_receive_byte</a>(byte_ptr)</td></tr>
+<tr class="memdesc:ga4bcacafe7c349c38d85e5ddbd16b8039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives a single byte over UART1 in Mode 0.  <br /></td></tr>
+<tr class="separator:ga4bcacafe7c349c38d85e5ddbd16b8039"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions and data structures for UART1 communication in Mode 0.</p>
@@ -139,6 +142,41 @@ Enumerations</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Assumes system clock is already configured. </dd>
 <dd>
 Modifies UART1 control and status registers. Disables UART1 interrupt. </dd></dl>
+
+</div>
+</div>
+<a id="ga4bcacafe7c349c38d85e5ddbd16b8039" name="ga4bcacafe7c349c38d85e5ddbd16b8039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4bcacafe7c349c38d85e5ddbd16b8039">&#9670;&#160;</a></span>uart1_mode0_receive_byte</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define uart1_mode0_receive_byte</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">byte_ptr</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                            \</div>
+<div class="line">    while(!RI);                                 \</div>
+<div class="line">    *byte_ptr = SBUF;                           \</div>
+<div class="line">    RI=0;                                       \</div>
+<div class="line">} <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+<p>Receives a single byte over UART1 in Mode 0. </p>
+<p>Receives the specified 8-bit data byte through UART1 configured in Mode 0. The function blocks until the byte is fully received.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">byte_ptr</td><td>byte* uintT8_t the 8-bit data value to be received (0-255).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Requires UART1 to be previously initialized with uart_mode0_init(). </dd>
+<dd>
+Uses polling (blocking) method for receveive. </dd></dl>
 
 </div>
 </div>
