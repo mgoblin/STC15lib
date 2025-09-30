@@ -70,7 +70,8 @@ $(function() {
 
 <div class="header">
   <div class="summary">
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">UART1 Mode 1 with Timer2 12T</div></div>
 </div><!--header-->
 <div class="contents">
@@ -83,16 +84,31 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gaed599bf26e2baa98c2d108a072d02337"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART1 RxD/TxD pins enum.  <a href="group__uart1__mode1__timer2__12T.html#gaed599bf26e2baa98c2d108a072d02337">More...</a><br /></td></tr>
 <tr class="separator:gaed599bf26e2baa98c2d108a072d02337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gaf482564a74d90c5f12a8050fc602649d" id="r_gaf482564a74d90c5f12a8050fc602649d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode1__timer2__12T.html#gaf482564a74d90c5f12a8050fc602649d">uart1_mode1_timer2_init</a> (<a class="el" href="group__uart1__mode1__timer2__12T.html#gaed599bf26e2baa98c2d108a072d02337">uart1_pins_t</a> pins)</td></tr>
+<tr class="memdesc:gaf482564a74d90c5f12a8050fc602649d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize UART1 in Mode 1 with Timer2 12T configuration.  <br /></td></tr>
+<tr class="separator:gaf482564a74d90c5f12a8050fc602649d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Functions and data structures for UART1 communication in Mode 1 with Timer2 12T as baudrate generator.</p>
+<p>Functions and data structures for UART1 communication in Mode 1 with Timer2 12T as baudrate generator. Dont use Timer2 for other purposes.</p>
 <p>This module implements UART1 point-to-point communication. Relay and broadcast features are not supported by this module.</p>
 <p>UART1 Mode 1 provides 8-bit asynchronous communication with variable baud rate. Sent data is transmitted to the TxD pin, and received data is read from the RxD pin. The frame data includes one start bit, 8 data bits, and one stop bit.</p>
 <p>UART1 baudrate is determined by the T2 overflow rate. T2 overflow rate is configured by setting T2H and T2L registers.</p>
 <p>THTL = 65535 - (Sysclk/12)/(4 * baudrate). Sysclk = master clock frequency / frequency divder.</p>
 <p>THTL value is precalulated for standard baudrates.</p>
 <p>In UART1 Mode 1, three sets of RxD/TxD pins can be used: RxD on P3.0/TxD on P3.1, RxD on P3.6/TxD on P3.7 and RxD on P1.6/TxD on P1.7.</p>
-<dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
+<p>Typical usage: </p><div class="fragment"><div class="line"><a class="code hl_function" href="group__uart1__mode1__timer2__12T.html#gaf482564a74d90c5f12a8050fc602649d">uart1_mode1_timer2_init</a>(<a class="code hl_enumvalue" href="group__uart1__mode1__timer2__12T.html#ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47">RxD_P30_TxD_P31</a>);</div>
+<div class="line">uart1_mode1_timer2_start(9600);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">for</span> (;;)</div>
+<div class="line">{</div>
+<div class="line"> <span class="comment">// Send or receive data</span></div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__uart1__mode1__timer2__12T_html_gaf482564a74d90c5f12a8050fc602649d"><div class="ttname"><a href="group__uart1__mode1__timer2__12T.html#gaf482564a74d90c5f12a8050fc602649d">uart1_mode1_timer2_init</a></div><div class="ttdeci">void uart1_mode1_timer2_init(uart1_pins_t pins)</div><div class="ttdoc">Initialize UART1 in Mode 1 with Timer2 12T configuration.</div><div class="ttdef"><b>Definition</b> uart1_mode1_timer2_12T.c:8</div></div>
+<div class="ttc" id="agroup__uart1__mode1__timer2__12T_html_ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47"><div class="ttname"><a href="group__uart1__mode1__timer2__12T.html#ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47">RxD_P30_TxD_P31</a></div><div class="ttdeci">@ RxD_P30_TxD_P31</div><div class="ttdoc">RxD on P3.0 and TxD on P3.1 pins.</div><div class="ttdef"><b>Definition</b> uart1_mode1_timer2_12T.h:62</div></div>
+</div><!-- fragment --><dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="gaed599bf26e2baa98c2d108a072d02337" name="gaed599bf26e2baa98c2d108a072d02337"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaed599bf26e2baa98c2d108a072d02337">&#9670;&#160;</a></span>uart1_pins_t</h2>
@@ -115,6 +131,35 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="ggaed599bf26e2baa98c2d108a072d02337a21147eba9db31edf831bc27da595c909" name="ggaed599bf26e2baa98c2d108a072d02337a21147eba9db31edf831bc27da595c909"></a>RxD_P16_TxD_P17&#160;</td><td class="fielddoc"><p>RxD on P1.6 and TxD on P1.7 pins. </p>
 </td></tr>
 </table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gaf482564a74d90c5f12a8050fc602649d" name="gaf482564a74d90c5f12a8050fc602649d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf482564a74d90c5f12a8050fc602649d">&#9670;&#160;</a></span>uart1_mode1_timer2_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uart1_mode1_timer2_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__uart1__mode1__timer2__12T.html#gaed599bf26e2baa98c2d108a072d02337">uart1_pins_t</a>&#160;</td>
+          <td class="paramname"><em>pins</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize UART1 in Mode 1 with Timer2 12T configuration. </p>
+<p>The clock source of Timer2 is SYSclk/12. AUXR.T2x12 = 0. No double baud rate. AUXR.UART_M0x6 = 0. Timer2 are used as timer. AUXR.T2_C/T = 0. Timer2 is not started. AUXR.T2R = 0.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pins</td><td>Pin configuration from uart1_pins_t enum</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Must be called before starting UART communication </dd></dl>
 
 </div>
 </div>

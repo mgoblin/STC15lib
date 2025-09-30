@@ -7,7 +7,8 @@
  * 
  * @details 
  * Functions and data structures for UART1 communication in Mode 1 
- * with Timer2 12T as baudrate generator.
+ * with Timer2 12T as baudrate generator. 
+ * Dont use Timer2 for other purposes.
  * 
  * This module implements UART1 point-to-point communication.
  * Relay and broadcast features are not supported by this module.
@@ -27,6 +28,18 @@
  * In UART1 Mode 1, three sets of RxD/TxD pins can be used: 
  * RxD on P3.0/TxD on P3.1, RxD on P3.6/TxD on P3.7 and 
  * RxD on P1.6/TxD on P1.7.
+ * 
+ * Typical usage:
+ * ```c
+ * uart1_mode1_timer2_init(RxD_P30_TxD_P31);
+ * uart1_mode1_timer2_start(9600);
+ * 
+ * for (;;)
+ * {
+ *  // Send or receive data
+ * }
+ * 
+ * ``` 
  * 
  * @author Michael Golovanov
  */
@@ -54,6 +67,21 @@ typedef enum
 
 } uart1_pins_t;
 
+/**
+ * @brief Initialize UART1 in Mode 1 with Timer2 12T configuration
+ * 
+ * @details
+ * The clock source of Timer2 is SYSclk/12. AUXR.T2x12 = 0.
+ * No double baud rate. AUXR.UART_M0x6 = 0.
+ * Timer2 are used as timer. AUXR.T2_C/T = 0.
+ * Timer2 is not started. AUXR.T2R = 0.
+ * 
+ * @param pins Pin configuration from uart1_pins_t enum
+ * 
+ * @note Must be called before starting UART communication
+ * 
+ * @ingroup uart1_mode1_timer2_12T
+ */
 void uart1_mode1_timer2_init(uart1_pins_t pins);
 
 void uart1_mode1_timer2_start(const uint32_t baudrate);
