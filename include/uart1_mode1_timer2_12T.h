@@ -31,8 +31,8 @@
  * 
  * Typical usage:
  * ```c
- * uart1_mode1_timer2_init(RxD_P30_TxD_P31);
- * uart1_mode1_timer2_start(baudrate_9600);
+ * uart1_mode1_timer2_12T_init(RxD_P30_TxD_P31);
+ * uart1_mode1_timer2_12T_start(baudrate_9600);
  * 
  * for (;;)
  * {
@@ -99,7 +99,7 @@ typedef enum
  * 
  * @ingroup uart1_mode1_timer2_12T
  */
-void uart1_mode1_timer2_init(uart1_pins_t pins);
+void uart1_mode1_timer2_12T_init(uart1_pins_t pins);
 
 /**
  * @brief Start UART1 communication with standart baudrate value
@@ -111,7 +111,7 @@ void uart1_mode1_timer2_init(uart1_pins_t pins);
  * @note Before calling this function, uart1_mode1_timer2_init() must be called.
  * @note Enum contains standard baudrates with precalculated THTL values for 12T mode
  */
-void uart1_mode1_timer2_start(const uart1_mode1_timer2_12t_baudrate_t baudrate);
+void uart1_mode1_timer2_12T_start(const uart1_mode1_timer2_12t_baudrate_t baudrate);
 /**
  * @brief Stop UART1 communication and disable Timer2
  * 
@@ -119,10 +119,34 @@ void uart1_mode1_timer2_start(const uart1_mode1_timer2_12t_baudrate_t baudrate);
  * 
  * @warning Calling this function will terminate any ongoing communication
  */
-void uart1_mode1_timer2_stop();
+void uart1_mode1_timer2_12T_stop();
 
-void uart1_mode1_timer2_send_byte(uint8_t data);
+/**
+ * @brief Send a single byte of data via UART1 in Mode1
+ * 
+ * @ingroup uart1_mode1_timer2_12T
+ * 
+ * @param data 8-bit data to transmit (LSB first)
+ * 
+ * @note Function blocks until the byte is fully transmitted
+ * @note Automatically handles start/stop bit generation
+ * 
+ * @warning Should not be called from interrupt service routines
+ */
+void uart1_mode1_timer2_12T_send_byte(uint8_t data);
 
-void uart1_mode1_timer2_receive_byte(uint8_t *data);
+/**
+ * @brief Receive a single byte of data via UART1 in Mode1
+ * 
+ * @ingroup uart1_mode1_timer2_12T
+ * 
+ * @param data uint8_t* Pointer to uint8_t where received data will be stored
+ * 
+ * @note Function blocks until a complete byte is received (including stop bit)
+ * @note Automatically handles start/stop bit detection and data extraction
+ * 
+ * @warning Should not be called from interrupt service routines due to blocking nature
+ */
+void uart1_mode1_timer2_12T_receive_byte(uint8_t *data);
 
 #endif

@@ -2,3 +2,4 @@ Import("env")
 
 SConscript('legacy/SConscript', exports = 'env')
 SConscript('mode0/SConscript', exports = 'env')
+SConscript('mode1/SConscript', exports = 'env')

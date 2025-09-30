@@ -231,12 +231,17 @@ $(function() {
 <li>Counter0 mode2 routines implemented</li>
 <li>Counter0 mode3 routines implemented</li>
 <li>UART1 mode0 send routines implemented</li>
-<li>TODO UART1 mode1 with timer2 as baud rate generator send routines implemented</li>
+<li>TODO UART1 mode1 with timer2 12T as baud rate generator send routines implemented<ul>
+<li>TODO Support double baud rate</li>
+<li>TODO MCU clock frequency bias compensation.</li>
+<li>TODO Support UART1 relay and broadcast mode</li>
+<li>TODO Support UART1 interrupt mode</li>
+</ul>
+</li>
 </ul>
 <p>Next releases todo</p><ul>
 <li>Fix delay_ms. On small ms delays it works correctly, but on seconds delay it doubled.</li>
 <li>TODO Implement UART</li>
-<li>Code review using AI</li>
 <li>use asserts and static_assert</li>
 <li>TODO Optimize timer2 baud rate calculation. Use precalculated array of baudrates</li>
 <li>TODO Implement P5.4 as MCU reset source</li>

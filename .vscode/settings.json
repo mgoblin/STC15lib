@@ -28,7 +28,8 @@
         "cstdint": "c",
         "counter0_mode0.h": "c",
         "counter2_mode0.h": "c",
-        "uart1_mode0.h": "c"
+        "uart1_mode0.h": "c",
+        "uart1_mode1_timer2_12t.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
