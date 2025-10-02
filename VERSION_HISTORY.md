@@ -140,7 +140,7 @@
 * Counter0 mode2 routines implemented
 * Counter0 mode3 routines implemented
 * UART1 mode0 send routines implemented
-* TODO UART1 mode1 with timer2 12T as baud rate generator send routines implemented
+* UART1 mode1 with timer2 12T as baud rate generator send routines implemented
     * TODO Support double baud rate
     * TODO MCU clock frequency bias compensation.
     * TODO Support UART1 relay and broadcast mode
