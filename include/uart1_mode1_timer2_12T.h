@@ -46,6 +46,8 @@
  * @see is_uart1_send_byte_complete()
  * @see is_uart1_receive_byte_complete()
  * 
+ * @warning UART1 mode1 in this module is biased by frequency divider.
+ * 
  * @author Michael Golovanov
  */
 

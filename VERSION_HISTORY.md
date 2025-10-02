@@ -142,11 +142,10 @@
 * UART1 mode0 send routines implemented
 * UART1 mode1 with timer2 12T as baud rate generator send routines implemented
     * TODO Support double baud rate
-    * TODO MCU clock frequency bias compensation.
-    * TODO Support UART1 relay and broadcast mode
 
 
 Next releases todo
+* TODO Support UART1 relay and broadcast mode
 * Fix delay_ms. On small ms delays it works correctly, but on seconds delay it doubled.
 * TODO Implement UART
 * use asserts and static_assert

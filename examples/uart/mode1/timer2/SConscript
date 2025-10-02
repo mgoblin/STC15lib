@@ -11,4 +11,9 @@ env.Default(
         ['uart1_mode1_timer2_12T_interrupt_example.c']
     ),
 
+    env.Program(
+        'uart1_mode1_timer2_12T_freq_bias_example',
+        ['uart1_mode1_timer2_12T_freq_bias_example.c']
+    ),
+
 )
