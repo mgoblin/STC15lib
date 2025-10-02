@@ -67,7 +67,6 @@ do                                                  \
     SCON = 0;                                       \
     baudRate == baudrate_921600 ?                   \
         bit_clr(AUXR, CBIT5) : bit_set(AUXR, SBIT5);\
-    disable_uart1_interrupt();                      \
 } while (0)
 ///@}
 

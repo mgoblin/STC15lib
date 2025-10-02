@@ -127,7 +127,6 @@ Enumerations</h2></td></tr>
 <div class="line">    SCON = 0;                                       \</div>
 <div class="line">    baudRate == baudrate_921600 ?                   \</div>
 <div class="line">        bit_clr(AUXR, CBIT5) : bit_set(AUXR, SBIT5);\</div>
-<div class="line">    disable_uart1_interrupt();                      \</div>
 <div class="line">} <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
 <p>Initializes UART1 in Mode 0. </p>
