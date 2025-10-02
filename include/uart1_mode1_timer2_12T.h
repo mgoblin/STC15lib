@@ -59,23 +59,6 @@
 #include <uart1_shared.h>
 
 /**
- * @brief UART1 RxD/TxD pins enum
- * 
- * @ingroup uart1_mode1_timer2_12T
- */
-typedef enum 
-{
-    
-    /** @brief RxD on P3.0 and TxD on P3.1 pins */
-    RxD_P30_TxD_P31 = 0x00,
-    /** @brief RxD on P3.6 and TxD on P3.7 pins */
-    RxD_P36_TxD_P37 = 0x40,
-    /** @brief RxD on P1.6 and TxD on P1.7 pins */
-    RxD_P16_TxD_P17 = 0x80,
-
-} uart1_pins_t;
-
-/**
  * @brief UART1 precalculated baudrates
  * 
  * @ingroup uart1_mode1_timer2_12T
@@ -100,6 +83,8 @@ typedef enum
  * No double baud rate. AUXR.UART_M0x6 = 0.
  * Timer2 are used as timer. AUXR.T2_C/T = 0.
  * Timer2 is not started. AUXR.T2R = 0.
+ * 
+ * @see uart1_pins_t
  * 
  * @param pins Pin configuration from uart1_pins_t enum
  * 

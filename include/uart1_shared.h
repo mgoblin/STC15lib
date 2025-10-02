@@ -14,6 +14,24 @@
  * @author Michael Golovanov
  */
 
+ /**
+ * @brief UART1 RxD/TxD pins enum
+ * 
+ * @ingroup uart1_shared
+ */
+typedef enum 
+{
+    
+    /** @brief RxD on P3.0 and TxD on P3.1 pins */
+    RxD_P30_TxD_P31 = 0x00,
+    /** @brief RxD on P3.6 and TxD on P3.7 pins */
+    RxD_P36_TxD_P37 = 0x40,
+    /** @brief RxD on P1.6 and TxD on P1.7 pins */
+    RxD_P16_TxD_P17 = 0x80,
+
+} uart1_pins_t;
+
+
 /**
  * @brief Sends a single byte over UART1.
  * 
