@@ -126,7 +126,7 @@ do {                                        \
  * 
  * @param baudrate const uart1_mode1_timer2_12t_baudrate_t Baudrate selection from uart1_mode1_timer2_12t_baudrate_t enum
  * 
- * @note Before calling this function, uart1_mode1_timer2_init() must be called.
+ * @note Before calling this function, uart1_mode1_timer2_12T_init() must be called.
  * @note Enum contains standard baudrates with precalculated THTL values for 12T mode
  */
 #define uart1_mode1_timer2_12T_start(baudrate)          \

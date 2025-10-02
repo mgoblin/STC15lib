@@ -20,7 +20,7 @@
  * UART1 baudrate is determined by the T2 overflow rate.
  * T2 overflow rate is configured by setting T2H and T2L registers.
  * 
- * THTL = 65535 - Sysclk/(4 * baudrate).
+ * THTL = 65536 - Sysclk/(4 * baudrate).
  * Sysclk = master clock frequency / frequency divder.
  * 
  * THTL value is precalulated for standard baudrates with none freq divider.
@@ -57,6 +57,32 @@
 #include <bits.h>
 #include <interrupt.h>
 #include <uart1_shared.h>
+
+/**
+ * @brief UART1 precalculated baudrates
+ * 
+ * @ingroup uart1_mode1_timer2_1T
+ */
+typedef enum 
+{
+    /** @brief 1200 baudrate */
+    baudrate_1200 = 0xF6FF,
+    /** @brief 2400 baudrate */
+    baudrate_2400 = 0xFB80,
+    /** @brief 4800 baudrate */
+    baudrate_4800 = 0xFDC0,
+    /** @brief 9600 baudrate */
+    baudrate_9600 = 0xFEE0,
+    /** @brief 19200 baudrate */
+    baudrate_19200 = 0xFF70,
+    /** @brief 38400 baudrate */
+    baudrate_38400 = 0xFFB8,
+    /** @brief 57600 baudrate */
+    baudrate_57600 = 0xFFD0,
+    /** @brief 115200 baudrate */
+    baudrate_115200 = 0xFFE8
+} uart1_mode1_timer2_1t_baudrate_t;
+
 
 /**
  * @brief Initialize UART1 in Mode 1 with Timer2 1T configuration
@@ -102,6 +128,27 @@ do {                                        \
     /* Set AUXR1 bits 6, 7 to select RxD/TxD pins */                 \
     AUXR1 &= 0x3F;                          \
     AUXR1 |= pins;                          \
-} while(0)    
+} while(0)
+
+/**
+ * @brief Start UART1 communication with standart baudrate value
+ * 
+ * @ingroup uart1_mode1_timer2_1T
+ * 
+ * @param baudrate const uart1_mode1_timer2_1t_baudrate_t Baudrate selection from uart1_mode1_timer2_1t_baudrate_t enum
+ * 
+ * @note Before calling this function, uart1_mode1_timer2_1T_init() must be called.
+ * @note Enum contains standard baudrates with precalculated THTL values for 1T mode
+ */
+#define uart1_mode1_timer2_1T_start(baudrate)           \
+do {                                                    \
+    /* Set TH TL values */                              \
+    T2L = baudrate & 0xFF;                              \
+    T2H = baudrate >> 8;                                \
+                                                        \
+    /* Start Timer2 */                                  \
+    bit_set(AUXR, SBIT4);                               \
+} while(0)
+
 
 #endif
