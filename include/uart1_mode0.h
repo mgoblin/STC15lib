@@ -61,6 +61,8 @@ typedef enum {
 #define uart1_mode0_init(baudRate)                  \
 do                                                  \
 {                                                   \
+    enable_mcu_interrupts();                        \
+    enable_uart1_interrupt();                       \
     PCON &= 0x3F;                                   \
     SCON = 0;                                       \
     baudRate == baudrate_921600 ?                   \

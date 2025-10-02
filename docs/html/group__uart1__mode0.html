@@ -121,6 +121,8 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span>                                                  \</div>
 <div class="line">{                                                   \</div>
+<div class="line">    enable_mcu_interrupts();                        \</div>
+<div class="line">    enable_uart1_interrupt();                       \</div>
 <div class="line">    PCON &amp;= 0x3F;                                   \</div>
 <div class="line">    SCON = 0;                                       \</div>
 <div class="line">    baudRate == baudrate_921600 ?                   \</div>
