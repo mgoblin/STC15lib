@@ -144,7 +144,6 @@
     * TODO Support double baud rate
     * TODO MCU clock frequency bias compensation.
     * TODO Support UART1 relay and broadcast mode
-    * TODO Support UART1 interrupt mode
 
 
 Next releases todo
