@@ -73,8 +73,7 @@ do                                                  \
  * @brief Sends a single byte over UART1 in Mode 0.
  * 
  * @details 
- * Transmits the specified 8-bit data byte through UART1 configured in Mode 0.
- * The function blocks until the byte is fully transmitted.
+ * Alias for @ref uart1_send_byte().
  * 
  * RxD and TxD pins state diagram are pictured at 
  * @image html UART1_mode0.png
@@ -97,13 +96,11 @@ do                                              \
  * @brief Receives a single byte over UART1 in Mode 0.
  * 
  * @details 
- * Receives the specified 8-bit data byte through UART1 configured in Mode 0.
- * The function blocks until the byte is fully received.
- * 
+ * Alias for @ref uart1_receive_byte().
  * 
  * @param byte_ptr byte* uintT8_t the 8-bit data value to be received (0-255).
  * 
- * @note Requires UART1 to be previously initialized with uart_mode0_init().
+ * @note Requires UART1 to be previously initialized and started.
  * @note Uses polling (blocking) method for receveive.
  *
  * 

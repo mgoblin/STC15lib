@@ -165,14 +165,14 @@ Modifies UART1 control and status registers. Disables UART1 interrupt. </dd></dl
 <div class="line">} <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
 <p>Receives a single byte over UART1 in Mode 0. </p>
-<p>Receives the specified 8-bit data byte through UART1 configured in Mode 0. The function blocks until the byte is fully received.</p>
+<p>Alias for <a class="el" href="group__uart.html#ga1940b2ddaaec617feb9c59d4a544e939">uart1_receive_byte()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">byte_ptr</td><td>byte* uintT8_t the 8-bit data value to be received (0-255).</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Requires UART1 to be previously initialized with uart_mode0_init(). </dd>
+<dl class="section note"><dt>Note</dt><dd>Requires UART1 to be previously initialized and started. </dd>
 <dd>
 Uses polling (blocking) method for receveive. </dd></dl>
 
@@ -199,7 +199,7 @@ Uses polling (blocking) method for receveive. </dd></dl>
 <div class="line">} <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
 <p>Sends a single byte over UART1 in Mode 0. </p>
-<p>Transmits the specified 8-bit data byte through UART1 configured in Mode 0. The function blocks until the byte is fully transmitted.</p>
+<p>Alias for <a class="el" href="group__uart.html#gad9c16ff3593511fc868323e3718ecc1d">uart1_send_byte()</a>.</p>
 <p>RxD and TxD pins state diagram are pictured at </p><div class="image">
 <img src="UART1_mode0.png" alt=""/>
 </div>

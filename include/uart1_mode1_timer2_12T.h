@@ -155,6 +155,9 @@ do {                                                    \
 /**
  * @brief Send a single byte of data via UART1 in Mode1
  * 
+ * @details
+ * Alias for uart1_send_byte()
+ * 
  * @ingroup uart1_mode1_timer2_12T
  * 
  * @param data uint8_t 8-bit data to transmit (LSB first)
@@ -168,8 +171,12 @@ do {                                                    \
 do {                                                    \
     uart1_send_byte(data);                              \
 } while(0)
+
 /**
  * @brief Receive a single byte of data via UART1 in Mode1
+ * 
+ * @details
+ * Alias for uart1_receive_byte()
  * 
  * @ingroup uart1_mode1_timer2_12T
  * 
