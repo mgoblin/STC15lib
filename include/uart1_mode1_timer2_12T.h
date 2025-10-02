@@ -49,6 +49,8 @@
 #include <sys.h>
 #include <bits.h>
 #include <interrupt.h>
+#include <uart1_shared.h>
+
 /**
  * @brief UART1 RxD/TxD pins enum
  * 
@@ -164,11 +166,7 @@ do {                                                    \
  */
 #define uart1_mode1_timer2_12T_send_byte(data)          \
 do {                                                    \
-    SBUF = data;                                        \
-    /* Wait for byte to be transmitted */               \
-    while (!TI);                                        \
-    /* Clear TI flag */                                 \
-    TI = 0;                                             \
+    uart1_send_byte(data);                              \
 } while(0)
 /**
  * @brief Receive a single byte of data via UART1 in Mode1
@@ -184,12 +182,7 @@ do {                                                    \
  */
 #define uart1_mode1_timer2_12T_receive_byte(data)        \
 do {                                                     \
-    /* Wait for byte to be received */                   \
-    while (!RI);                                         \
-    /* Store received byte */                            \
-    *data = SBUF;                                        \
-    /* Clear RI flag */                                  \
-    RI = 0;                                              \
+    uart1_receive_byte(data);                            \
 } while(0)    
 
 #endif

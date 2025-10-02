@@ -6,6 +6,7 @@
 #include <sys.h>
 #include <bits.h>
 #include <interrupt.h>
+#include <uart1_shared.h>
 
 /**
  * @file uart1_mode0.h
@@ -89,9 +90,7 @@ do                                                  \
 #define uart1_mode0_send_byte(byte)             \
 do                                              \
 {                                               \
-    SBUF = byte;                                \
-    while (!TI);                                \
-    TI = 0;                                     \
+    uart1_send_byte(byte);                      \
 } while (0)
 
 /**
@@ -112,9 +111,7 @@ do                                              \
  */
 #define uart1_mode0_receive_byte(byte_ptr)      \
 do {                                            \
-	while(!RI);                                 \
-    *byte_ptr = SBUF;                           \
-	RI=0;                                       \
+	uart1_receive_byte(byte_ptr);               \
 } while (0)
 ///@}
 

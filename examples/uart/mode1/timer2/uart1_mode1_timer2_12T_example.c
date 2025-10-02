@@ -20,14 +20,14 @@ void main()
         LED = !LED;
 
         uint8_t data;
-        uart1_mode1_timer2_12T_receive_byte(&data);
-        uart1_mode1_timer2_12T_send_byte(data);
+        uart1_receive_byte(&data);
+        uart1_send_byte(data);
 
-        uart1_mode1_timer2_12T_send_byte(' ');
-        uart1_mode1_timer2_12T_send_byte('O');
-        uart1_mode1_timer2_12T_send_byte('k');
-        uart1_mode1_timer2_12T_send_byte('\r');
-        uart1_mode1_timer2_12T_send_byte('\n');
+        uart1_send_byte(' ');
+        uart1_send_byte('O');
+        uart1_send_byte('k');
+        uart1_send_byte('\r');
+        uart1_send_byte('\n');
 
         delay_ms(2000);
     }

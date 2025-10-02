@@ -15,7 +15,7 @@ void main()
 	
     while(1)
     {
-        uart1_mode0_send_byte(0x75);
+        uart1_send_byte(0x75);
         delay_ms(1);
     }
 }

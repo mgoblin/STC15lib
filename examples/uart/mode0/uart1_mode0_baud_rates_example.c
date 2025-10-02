@@ -11,7 +11,7 @@
 
 void send_byte(uint8_t byte) __naked
 {
-    uart1_mode0_send_byte(byte);
+    uart1_send_byte(byte);
     __asm ret __endasm;
 }
 

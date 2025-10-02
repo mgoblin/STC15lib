@@ -1,13 +1,15 @@
 <map id="include/uart1_mode1_timer2_12T.h" name="include/uart1_mode1_timer2_12T.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="76,5,235,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="117,5,276,45"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,93,76,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,48,70,88,67,83,126,43"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,48,77,89,75,85,158,43"/>
 <area shape="rect" id="Node000003" href="$sys_8h.html" title=" " alt="" coords="75,167,131,192"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="151,47,114,154,109,153,146,45"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="179,47,142,95,126,125,114,155,109,153,121,123,137,92,175,44"/>
 <area shape="rect" id="Node000006" href="$bits_8h_source.html" title=" " alt="" coords="262,167,321,192"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="195,43,227,64,256,92,275,122,287,153,282,155,270,125,252,95,223,68,192,48"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="218,44,256,92,285,152,280,155,252,95,214,48"/>
 <area shape="rect" id="Node000007" href="$interrupt_8h.html" title=" " alt="" coords="151,93,242,119"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="168,44,186,80,182,82,163,47"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="199,46,199,79,194,79,194,46"/>
+<area shape="rect" id="Node000009" href="$uart1__shared_8h_source.html" title=" " alt="" coords="317,93,436,119"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="241,43,339,85,337,90,239,48"/>
 <area shape="rect" id="Node000004" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="54,240,153,265"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="106,192,106,226,101,226,101,192"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="58,313,149,339"/>

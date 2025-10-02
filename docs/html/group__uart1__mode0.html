@@ -161,9 +161,7 @@ Modifies UART1 control and status registers. Disables UART1 interrupt. </dd></dl
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                            \</div>
-<div class="line">    while(!RI);                                 \</div>
-<div class="line">    *byte_ptr = SBUF;                           \</div>
-<div class="line">    RI=0;                                       \</div>
+<div class="line">    uart1_receive_byte(byte_ptr);               \</div>
 <div class="line">} <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
 <p>Receives a single byte over UART1 in Mode 0. </p>
@@ -197,9 +195,7 @@ Uses polling (blocking) method for receveive. </dd></dl>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span>                                              \</div>
 <div class="line">{                                               \</div>
-<div class="line">    SBUF = byte;                                \</div>
-<div class="line">    while (!TI);                                \</div>
-<div class="line">    TI = 0;                                     \</div>
+<div class="line">    uart1_send_byte(<span class="keywordtype">byte</span>);                      \</div>
 <div class="line">} <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
 <p>Sends a single byte over UART1 in Mode 0. </p>
