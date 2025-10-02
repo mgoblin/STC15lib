@@ -13,5 +13,6 @@ var searchData=
   ['mode1_10',['mode1',['../group__counter0__mode1.html',1,'Counter0 Mode1'],['../group__timer0__mode1.html',1,'Timer0 Mode1']]],
   ['mode2_11',['mode2',['../group__counter0__mode2.html',1,'Counter0 Mode2'],['../group__timer0__mode2.html',1,'Timer0 Mode2']]],
   ['mode3_12',['mode3',['../group__counter0__mode3.html',1,'Counter0 Mode3'],['../group__timer0__mode3.html',1,'Timer0 Mode3']]],
-  ['modules_20maturity_13',['Library modules maturity',['../index.html#autotoc_md5',1,'']]]
+  ['modes_13',['UART1 all modes',['../group__uart1__shared.html',1,'']]],
+  ['modules_20maturity_14',['Library modules maturity',['../index.html#autotoc_md5',1,'']]]
 ];

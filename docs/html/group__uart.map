@@ -1,0 +1,4 @@
+<map id="UART1" name="UART1">
+<area shape="rect" id="Node000001" title="Sends a single byte over UART1." alt="" coords="236,5,301,31"/>
+<area shape="rect" id="Node000002" href="$group__uart1__shared.html" title=" " alt="" coords="5,5,188,31"/>
+</map>

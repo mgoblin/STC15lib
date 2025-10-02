@@ -2,8 +2,14 @@
 
 /**
  * @file uart.h
- * @defgroup uart UART1
+ * @defgroup uart Simple UART1
  * @details Functions and data structures related to exchange data thru UART1
+ * 
+ * @see uart1_send_byte()
+ * @see uart1_receive_byte()
+ * @see is_uart1_send_byte_complete()
+ * @see is_uart1_receive_byte_complete()
+ * 
  * @author Michael Golovanov
  */
 #include <sys.h>

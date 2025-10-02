@@ -41,6 +41,11 @@
  * 
  * ``` 
  * 
+ * @see uart1_send_byte()
+ * @see uart1_receive_byte()
+ * @see is_uart1_send_byte_complete()
+ * @see is_uart1_receive_byte_complete()
+ * 
  * @author Michael Golovanov
  */
 
@@ -102,6 +107,11 @@ typedef enum
  */
 #define uart1_mode1_timer2_12T_init(pins)   \
 do {                                        \
+                                            \
+    enable_mcu_interrupts();                \
+    enable_uart1_interrupt();               \
+    disable_timer2_interrupt();             \
+                                            \
     PCON &= 0x3F;                           \
     SCON = 0x50;                            \
                                             \
@@ -113,8 +123,6 @@ do {                                        \
                                             \
     /* Select Timer2 as UART1 baud rate generator. AUXR.S1ST2 = 1; */ \
     bit_set(AUXR, SBIT0);                   \
-                                            \
-    disable_timer2_interrupt();             \
                                             \
     bit_clr(CLK_DIV, CBIT4);                \
                                             \
@@ -151,45 +159,5 @@ do {                                                    \
  * @warning Calling this function will terminate any ongoing communication
  */
 #define uart1_mode1_timer2_12T_stop (bit_clr(AUXR, CBIT4))
-
-/**
- * @brief Send a single byte of data via UART1 in Mode1
- * 
- * @details
- * Alias for uart1_send_byte()
- * 
- * @ingroup uart1_mode1_timer2_12T
- * 
- * @param data uint8_t 8-bit data to transmit (LSB first)
- * 
- * @note Function blocks until the byte is fully transmitted
- * @note Automatically handles start/stop bit generation
- * 
- * @warning Should not be called from interrupt service routines
- */
-#define uart1_mode1_timer2_12T_send_byte(data)          \
-do {                                                    \
-    uart1_send_byte(data);                              \
-} while(0)
-
-/**
- * @brief Receive a single byte of data via UART1 in Mode1
- * 
- * @details
- * Alias for uart1_receive_byte()
- * 
- * @ingroup uart1_mode1_timer2_12T
- * 
- * @param data uint8_t* Pointer to uint8_t where received data will be stored
- * 
- * @note Function blocks until a complete byte is received (including stop bit)
- * @note Automatically handles start/stop bit detection and data extraction
- * 
- * @warning Should not be called from interrupt service routines due to blocking nature
- */
-#define uart1_mode1_timer2_12T_receive_byte(data)        \
-do {                                                     \
-    uart1_receive_byte(data);                            \
-} while(0)    
 
 #endif

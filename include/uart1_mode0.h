@@ -22,6 +22,11 @@
  * 
  * This module routines does not support UART1 interrupts.
  * 
+ * @see uart1_send_byte()
+ * @see uart1_receive_byte()
+ * @see is_uart1_send_byte_complete()
+ * @see is_uart1_receive_byte_complete()
+ * 
  * @author Michael Golovanov
  * 
 */
@@ -64,52 +69,5 @@ do                                                  \
 } while (0)
 ///@}
 
-/** @name send and receive
- *  UART1 send and receive byte functions
- */
-///@{
-
-/**
- * @brief Sends a single byte over UART1 in Mode 0.
- * 
- * @details 
- * Alias for @ref uart1_send_byte().
- * 
- * RxD and TxD pins state diagram are pictured at 
- * @image html UART1_mode0.png
- * 
- * @param byte uintT8_t the 8-bit data value to be sent (0-255).
- * 
- * @note Requires UART1 to be previously initialized with uart_mode0_init().
- * @note Uses polling (blocking) method for transmission.
- *
- * 
- * @ingroup uart1_mode0
- */
-#define uart1_mode0_send_byte(byte)             \
-do                                              \
-{                                               \
-    uart1_send_byte(byte);                      \
-} while (0)
-
-/**
- * @brief Receives a single byte over UART1 in Mode 0.
- * 
- * @details 
- * Alias for @ref uart1_receive_byte().
- * 
- * @param byte_ptr byte* uintT8_t the 8-bit data value to be received (0-255).
- * 
- * @note Requires UART1 to be previously initialized and started.
- * @note Uses polling (blocking) method for receveive.
- *
- * 
- * @ingroup uart1_mode0
- */
-#define uart1_mode0_receive_byte(byte_ptr)      \
-do {                                            \
-	uart1_receive_byte(byte_ptr);               \
-} while (0)
-///@}
 
 #endif

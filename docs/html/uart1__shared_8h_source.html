@@ -81,30 +81,33 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">uart1_shared.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef STC15_UART1SHAREDH</span></div>
+<a href="uart1__shared_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef STC15_UART1SHAREDH</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define STC15_UART1SHAREDH</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="foldopen" id="foldopen00019" data-start="" data-end="">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="group__uart.html#gad9c16ff3593511fc868323e3718ecc1d">   19</a></span><span class="preprocessor">#define uart1_send_byte(byte)                   \</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">do                                              \</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">{                                               \</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">    SBUF = byte;                                \</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">    while (!TI);                                \</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">    TI = 0;                                     \</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">} while (0)</span></div>
+<div class="foldopen" id="foldopen00034" data-start="" data-end="">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="group__uart1__shared.html#gad9c16ff3593511fc868323e3718ecc1d">   34</a></span><span class="preprocessor">#define uart1_send_byte(byte)                   \</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">do                                              \</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">{                                               \</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">    SBUF = byte;                                \</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">    while (!TI);                                \</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">    TI = 0;                                     \</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">} while (0)</span></div>
 </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="foldopen" id="foldopen00042" data-start="" data-end="">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="group__uart.html#ga1940b2ddaaec617feb9c59d4a544e939">   42</a></span><span class="preprocessor">#define uart1_receive_byte(byte_ptr)            \</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">do {                                            \</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">    while(!RI);                                 \</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">    *byte_ptr = SBUF;                           \</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">    RI=0;                                       \</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">} while (0)</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="group__uart1__shared.html#gaff248c97ad442c4fc9931d4baa5e9854">   49</a></span><span class="preprocessor">#define is_uart1_send_byte_complete() (TI) </span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="foldopen" id="foldopen00067" data-start="" data-end="">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="group__uart1__shared.html#ga1940b2ddaaec617feb9c59d4a544e939">   67</a></span><span class="preprocessor">#define uart1_receive_byte(byte_ptr)            \</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">do {                                            \</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">    while(!RI);                                 \</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">    *byte_ptr = SBUF;                           \</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">    RI=0;                                       \</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">} while (0)</span></div>
 </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="group__uart1__shared.html#gaa39515c87bdffa2f34570162da6d6d1a">   81</a></span><span class="preprocessor">#define is_uart1_receive_byte_complete() (RI)</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

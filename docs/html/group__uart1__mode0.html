@@ -89,22 +89,19 @@ Enumerations</h2></td></tr>
 <tr class="memitem:gae9db2cd5aef3ace87c9ca6ff9cd83970" id="r_gae9db2cd5aef3ace87c9ca6ff9cd83970"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode0.html#gae9db2cd5aef3ace87c9ca6ff9cd83970">uart1_mode0_init</a>(baudRate)</td></tr>
 <tr class="memdesc:gae9db2cd5aef3ace87c9ca6ff9cd83970"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes UART1 in Mode 0.  <br /></td></tr>
 <tr class="separator:gae9db2cd5aef3ace87c9ca6ff9cd83970"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">send and receive</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p>UART1 send and receive byte functions </p>
-</td></tr>
-<tr class="memitem:ga6dea4d767d12fb9d0a9f065d6a9de542" id="r_ga6dea4d767d12fb9d0a9f065d6a9de542"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode0.html#ga6dea4d767d12fb9d0a9f065d6a9de542">uart1_mode0_send_byte</a>(byte)</td></tr>
-<tr class="memdesc:ga6dea4d767d12fb9d0a9f065d6a9de542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a single byte over UART1 in Mode 0.  <br /></td></tr>
-<tr class="separator:ga6dea4d767d12fb9d0a9f065d6a9de542"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4bcacafe7c349c38d85e5ddbd16b8039" id="r_ga4bcacafe7c349c38d85e5ddbd16b8039"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode0.html#ga4bcacafe7c349c38d85e5ddbd16b8039">uart1_mode0_receive_byte</a>(byte_ptr)</td></tr>
-<tr class="memdesc:ga4bcacafe7c349c38d85e5ddbd16b8039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives a single byte over UART1 in Mode 0.  <br /></td></tr>
-<tr class="separator:ga4bcacafe7c349c38d85e5ddbd16b8039"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions and data structures for UART1 communication in Mode 0.</p>
 <p>Mode 0 provides synchronous communication with fixed baud rate.</p>
 <p>Serial data enters and exits through RxD. TxD outputs the shift clock. Eight data bits are transmitted/received with the least-significant (LSB) first. The baud rate is fixed at 1/12 (or 1/2) the System clock cycle.</p>
 <p>This module routines does not support UART1 interrupts.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__uart1__shared.html#gad9c16ff3593511fc868323e3718ecc1d" title="Sends a single byte over UART1.">uart1_send_byte()</a> </dd>
+<dd>
+<a class="el" href="group__uart1__shared.html#ga1940b2ddaaec617feb9c59d4a544e939" title="Receives a single byte over UART1.">uart1_receive_byte()</a> </dd>
+<dd>
+<a class="el" href="group__uart1__shared.html#gaff248c97ad442c4fc9931d4baa5e9854" title="Checks if UART1 send byte operation is complete.">is_uart1_send_byte_complete()</a> </dd>
+<dd>
+<a class="el" href="group__uart1__shared.html#gaa39515c87bdffa2f34570162da6d6d1a" title="Checks if UART1 receive byte operation is complete.">is_uart1_receive_byte_complete()</a></dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="gae9db2cd5aef3ace87c9ca6ff9cd83970" name="gae9db2cd5aef3ace87c9ca6ff9cd83970"></a>
@@ -142,76 +139,6 @@ Enumerations</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Assumes system clock is already configured. </dd>
 <dd>
 Modifies UART1 control and status registers. Disables UART1 interrupt. </dd></dl>
-
-</div>
-</div>
-<a id="ga4bcacafe7c349c38d85e5ddbd16b8039" name="ga4bcacafe7c349c38d85e5ddbd16b8039"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4bcacafe7c349c38d85e5ddbd16b8039">&#9670;&#160;</a></span>uart1_mode0_receive_byte</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define uart1_mode0_receive_byte</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">byte_ptr</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                            \</div>
-<div class="line">    uart1_receive_byte(byte_ptr);               \</div>
-<div class="line">} <span class="keywordflow">while</span> (0)</div>
-</div><!-- fragment -->
-<p>Receives a single byte over UART1 in Mode 0. </p>
-<p>Alias for <a class="el" href="group__uart.html#ga1940b2ddaaec617feb9c59d4a544e939">uart1_receive_byte()</a>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">byte_ptr</td><td>byte* uintT8_t the 8-bit data value to be received (0-255).</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Requires UART1 to be previously initialized and started. </dd>
-<dd>
-Uses polling (blocking) method for receveive. </dd></dl>
-
-</div>
-</div>
-<a id="ga6dea4d767d12fb9d0a9f065d6a9de542" name="ga6dea4d767d12fb9d0a9f065d6a9de542"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6dea4d767d12fb9d0a9f065d6a9de542">&#9670;&#160;</a></span>uart1_mode0_send_byte</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define uart1_mode0_send_byte</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">byte</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span>                                              \</div>
-<div class="line">{                                               \</div>
-<div class="line">    uart1_send_byte(<span class="keywordtype">byte</span>);                      \</div>
-<div class="line">} <span class="keywordflow">while</span> (0)</div>
-</div><!-- fragment -->
-<p>Sends a single byte over UART1 in Mode 0. </p>
-<p>Alias for <a class="el" href="group__uart.html#gad9c16ff3593511fc868323e3718ecc1d">uart1_send_byte()</a>.</p>
-<p>RxD and TxD pins state diagram are pictured at </p><div class="image">
-<img src="UART1_mode0.png" alt=""/>
-</div>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">byte</td><td>uintT8_t the 8-bit data value to be sent (0-255).</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Requires UART1 to be previously initialized with uart_mode0_init(). </dd>
-<dd>
-Uses polling (blocking) method for transmission. </dd></dl>
 
 </div>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>STC15W408AS library: UART1</title>
+<title>STC15W408AS library: Simple UART1</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -72,7 +72,7 @@ $(function() {
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">UART1</div></div>
+  <div class="headertitle"><div class="title">Simple UART1</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
@@ -81,12 +81,6 @@ Macros</h2></td></tr>
 <tr class="memitem:gaaf582a05f613b72c7255c5cd838879fd" id="r_gaaf582a05f613b72c7255c5cd838879fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart.html#gaaf582a05f613b72c7255c5cd838879fd">uart1_init</a>(uart_baudrate)</td></tr>
 <tr class="memdesc:gaaf582a05f613b72c7255c5cd838879fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiazlize UART1.  <br /></td></tr>
 <tr class="separator:gaaf582a05f613b72c7255c5cd838879fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad9c16ff3593511fc868323e3718ecc1d" id="r_gad9c16ff3593511fc868323e3718ecc1d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart.html#gad9c16ff3593511fc868323e3718ecc1d">uart1_send_byte</a>(byte)</td></tr>
-<tr class="memdesc:gad9c16ff3593511fc868323e3718ecc1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a single byte over UART1.  <br /></td></tr>
-<tr class="separator:gad9c16ff3593511fc868323e3718ecc1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1940b2ddaaec617feb9c59d4a544e939" id="r_ga1940b2ddaaec617feb9c59d4a544e939"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart.html#ga1940b2ddaaec617feb9c59d4a544e939">uart1_receive_byte</a>(byte_ptr)</td></tr>
-<tr class="memdesc:ga1940b2ddaaec617feb9c59d4a544e939"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives a single byte over UART1.  <br /></td></tr>
-<tr class="separator:ga1940b2ddaaec617feb9c59d4a544e939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -98,7 +92,15 @@ Functions</h2></td></tr>
 <tr class="separator:ga3e29caa20f7cffe18f410f01278905a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Functions and data structures related to exchange data thru UART1 </p><dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
+<p>Functions and data structures related to exchange data thru UART1</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__uart1__shared.html#gad9c16ff3593511fc868323e3718ecc1d" title="Sends a single byte over UART1.">uart1_send_byte()</a> </dd>
+<dd>
+<a class="el" href="group__uart1__shared.html#ga1940b2ddaaec617feb9c59d4a544e939" title="Receives a single byte over UART1.">uart1_receive_byte()</a> </dd>
+<dd>
+<a class="el" href="group__uart1__shared.html#gaff248c97ad442c4fc9931d4baa5e9854" title="Checks if UART1 send byte operation is complete.">is_uart1_send_byte_complete()</a> </dd>
+<dd>
+<a class="el" href="group__uart1__shared.html#gaa39515c87bdffa2f34570162da6d6d1a" title="Checks if UART1 receive byte operation is complete.">is_uart1_receive_byte_complete()</a></dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="gaaf582a05f613b72c7255c5cd838879fd" name="gaaf582a05f613b72c7255c5cd838879fd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaaf582a05f613b72c7255c5cd838879fd">&#9670;&#160;</a></span>uart1_init</h2>
@@ -128,77 +130,6 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">uart_baudrate</td><td>uint32_t uart baudrate, like 9600 and etc </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ga1940b2ddaaec617feb9c59d4a544e939" name="ga1940b2ddaaec617feb9c59d4a544e939"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1940b2ddaaec617feb9c59d4a544e939">&#9670;&#160;</a></span>uart1_receive_byte</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define uart1_receive_byte</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">byte_ptr</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                            \</div>
-<div class="line">    while(!RI);                                 \</div>
-<div class="line">    *byte_ptr = SBUF;                           \</div>
-<div class="line">    RI=0;                                       \</div>
-<div class="line">} <span class="keywordflow">while</span> (0)</div>
-</div><!-- fragment -->
-<p>Receives a single byte over UART1. </p>
-<p>Receives byte through UART1 configured. The function blocks until the byte is fully received.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">byte_ptr</td><td>byte* uintT8_t the 8-bit data value to be received (0-255).</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Requires UART1 to be previously initialized and started. </dd>
-<dd>
-Uses polling (blocking) method for receveive. </dd></dl>
-
-</div>
-</div>
-<a id="gad9c16ff3593511fc868323e3718ecc1d" name="gad9c16ff3593511fc868323e3718ecc1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad9c16ff3593511fc868323e3718ecc1d">&#9670;&#160;</a></span>uart1_send_byte</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define uart1_send_byte</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">byte</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span>                                              \</div>
-<div class="line">{                                               \</div>
-<div class="line">    SBUF = byte;                                \</div>
-<div class="line">    while (!TI);                                \</div>
-<div class="line">    TI = 0;                                     \</div>
-<div class="line">} <span class="keywordflow">while</span> (0)</div>
-</div><!-- fragment -->
-<p>Sends a single byte over UART1. </p>
-<p>Transmits the specified byte through UART1. The function blocks until the byte is fully transmitted.</p>
-<dl class="section note"><dt>Note</dt><dd>Requires UART1 to be previously initialized and started. </dd>
-<dd>
-Uses polling (blocking) method for transmission.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">byte</td><td>uint8_t byte to be sent </td></tr>
   </table>
   </dd>
 </dl>

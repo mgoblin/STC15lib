@@ -2,6 +2,19 @@
 #define STC15_UART1SHAREDH
 
 /**
+ * @file uart1_shared.h
+ * 
+ * @defgroup uart1_shared UART1 all modes
+ * 
+ * @details UART1 routines used in all UART1 modes.
+ * 
+ * This header file included in all UART1 mode headers and 
+ * do not need to be included explicitly.
+ * 
+ * @author Michael Golovanov
+ */
+
+/**
  * @brief Sends a single byte over UART1.
  * 
  * @details 
@@ -14,7 +27,9 @@
  * 
  * @param byte uint8_t byte to be sent
  * 
- * @ingroup uart
+ * @warning Should not be called from interrupt service routines
+ * 
+ * @ingroup uart1_shared
  */
 #define uart1_send_byte(byte)                   \
 do                                              \
@@ -23,6 +38,15 @@ do                                              \
     while (!TI);                                \
     TI = 0;                                     \
 } while (0)
+
+/**
+ * @brief Checks if UART1 send byte operation is complete.
+ * 
+ * @attention Use this function only in UART 1interrupt service routine.
+ * 
+ * @ingroup uart1_shared
+ */
+#define is_uart1_send_byte_complete() (TI) 
 
 /**
  * @brief Receives a single byte over UART1.
@@ -36,8 +60,9 @@ do                                              \
  * @note Requires UART1 to be previously initialized and started.
  * @note Uses polling (blocking) method for receveive.
  *
+ * @warning Should not be called from interrupt service routines
  * 
- * @ingroup uart
+ * @ingroup uart1_shared
  */
 #define uart1_receive_byte(byte_ptr)            \
 do {                                            \
@@ -46,5 +71,13 @@ do {                                            \
 	RI=0;                                       \
 } while (0)
 
+/**
+ * @brief Checks if UART1 receive byte operation is complete.
+ * 
+ * @attention Use this function only in UART 1interrupt service routine.
+ * 
+ * @ingroup uart1_shared
+ */
+#define is_uart1_receive_byte_complete() (RI)
 
 #endif

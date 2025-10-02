@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['watchdog_20timer_0',['Watchdog timer',['../group__wdt.html',1,'']]],
-  ['with_20timer2_2012t_1',['UART1 Mode 1 with Timer2 12T',['../group__uart1__mode1__timer2__12T.html',1,'']]]
+  ['uart1_0',['Simple UART1',['../group__uart.html',1,'']]],
+  ['uart1_20all_20modes_1',['UART1 all modes',['../group__uart1__shared.html',1,'']]],
+  ['uart1_20mode_200_2',['UART1 Mode 0',['../group__uart1__mode0.html',1,'']]],
+  ['uart1_20mode_201_20with_20timer2_2012t_3',['UART1 Mode 1 with Timer2 12T',['../group__uart1__mode1__timer2__12T.html',1,'']]]
 ];
