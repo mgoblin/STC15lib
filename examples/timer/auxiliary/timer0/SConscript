@@ -1,5 +1,7 @@
 Import('env')
 
+env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
+
 env.Default(
     env.Program(
         'timer0_1T_freq_uint16_example',

@@ -1,5 +1,7 @@
 Import('env')
 
+env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
+
 env.Default(
     env.Program(
         'uart_example',

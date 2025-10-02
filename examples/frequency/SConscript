@@ -1,10 +1,12 @@
 Import("env")
 
+env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
+
 env.Default(
-    # env.Object(
-    #     source = 'slowdown_example.c', 
-    #     target = 'slowdown.rel'
-    # ),
+    env.Object(
+        source = 'slowdown_example.c', 
+        target = 'slowdown.rel'
+    ),
 
     env.Program(
         'master_clock_output_example', 

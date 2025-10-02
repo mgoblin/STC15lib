@@ -1,7 +1,6 @@
 Import("env")
 
-def pre_update_print(target, level, status, update, dependencies):
-    print("PreUpdate")
+env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
 
 env.Default (
     env.Program('bits_example', ['bits_example.c', 'uart.c'])
