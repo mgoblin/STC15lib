@@ -84,30 +84,40 @@ $(function() {
 <code>#include &lt;bits.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="interrupt_8h_source.html">interrupt.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="uart1__shared_8h_source.html">uart1_shared.h</a>&gt;</code><br />
+<code>#include &lt;uart1_mode1_timer2_12T_ext.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for uart1_mode1_timer2_12T.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="uart1__mode1__timer2__12T_8h__incl.png" border="0" usemap="#ainclude_2uart1__mode1__timer2__12T_8h" alt=""/></div>
 <map name="ainclude_2uart1__mode1__timer2__12T_8h" id="ainclude_2uart1__mode1__timer2__12T_8h">
-<area shape="rect" title=" " alt="" coords="117,5,276,45"/>
-<area shape="rect" title=" " alt="" coords="5,93,76,119"/>
-<area shape="poly" title=" " alt="" coords="160,48,77,89,75,85,158,43"/>
-<area shape="rect" href="sys_8h.html" title=" " alt="" coords="75,167,131,192"/>
-<area shape="poly" title=" " alt="" coords="179,47,142,95,126,125,114,155,109,153,121,123,137,92,175,44"/>
-<area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="262,167,321,192"/>
-<area shape="poly" title=" " alt="" coords="218,44,256,92,285,152,280,155,252,95,214,48"/>
-<area shape="rect" href="interrupt_8h.html" title=" " alt="" coords="151,93,242,119"/>
-<area shape="poly" title=" " alt="" coords="199,46,199,79,194,79,194,46"/>
-<area shape="rect" href="uart1__shared_8h.html" title=" " alt="" coords="317,93,436,119"/>
-<area shape="poly" title=" " alt="" coords="241,43,339,85,337,90,239,48"/>
-<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="54,240,153,265"/>
-<area shape="poly" title=" " alt="" coords="106,192,106,226,101,226,101,192"/>
-<area shape="rect" title=" " alt="" coords="58,313,149,339"/>
-<area shape="poly" title=" " alt="" coords="106,266,106,300,101,300,101,266"/>
-<area shape="poly" title=" " alt="" coords="183,121,131,160,128,156,180,117"/>
-<area shape="poly" title=" " alt="" coords="213,117,266,156,263,160,210,121"/>
-<area shape="rect" title=" " alt="" coords="155,167,238,192"/>
-<area shape="poly" title=" " alt="" coords="199,119,199,153,194,153,194,119"/>
+<area shape="rect" title=" " alt="" coords="211,5,369,45"/>
+<area shape="rect" title=" " alt="" coords="5,255,76,280"/>
+<area shape="poly" title=" " alt="" coords="211,39,107,61,64,77,37,95,28,112,21,130,19,170,24,209,34,241,29,243,19,210,13,170,16,129,23,110,33,92,61,72,105,56,210,34"/>
+<area shape="rect" href="sys_8h.html" title=" " alt="" coords="174,255,230,280"/>
+<area shape="poly" title=" " alt="" coords="289,46,272,118,259,163,242,208,221,244,216,242,237,206,254,162,267,117,284,45"/>
+<area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="279,255,338,280"/>
+<area shape="poly" title=" " alt="" coords="294,45,309,241,304,241,289,46"/>
+<area shape="rect" href="interrupt_8h.html" title=" " alt="" coords="353,181,443,207"/>
+<area shape="poly" title=" " alt="" coords="305,44,336,92,385,168,381,171,332,95,301,47"/>
+<area shape="rect" href="uart1__shared_8h.html" title=" " alt="" coords="404,101,523,126"/>
+<area shape="poly" title=" " alt="" coords="329,43,429,92,427,97,327,48"/>
+<area shape="rect" href="uart1__mode1__timer2__12T__ext_8h_source.html" title=" " alt="" coords="48,93,207,133"/>
+<area shape="poly" title=" " alt="" coords="256,48,176,89,174,85,253,43"/>
+<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="153,328,251,353"/>
+<area shape="poly" title=" " alt="" coords="205,280,205,314,199,314,199,280"/>
+<area shape="rect" title=" " alt="" coords="157,401,247,427"/>
+<area shape="poly" title=" " alt="" coords="205,354,205,388,199,388,199,354"/>
+<area shape="poly" title=" " alt="" coords="367,209,244,254,242,249,366,204"/>
+<area shape="poly" title=" " alt="" coords="385,209,336,248,332,244,382,205"/>
+<area shape="rect" title=" " alt="" coords="362,255,445,280"/>
+<area shape="poly" title=" " alt="" coords="402,207,404,241,399,241,396,207"/>
+<area shape="poly" title=" " alt="" coords="119,135,56,244,52,241,114,133"/>
+<area shape="poly" title=" " alt="" coords="122,134,113,169,114,188,119,205,138,229,163,246,160,251,135,233,114,208,108,189,108,168,117,133"/>
+<area shape="rect" href="frequency_8h.html" title=" " alt="" coords="129,181,227,207"/>
+<area shape="poly" title=" " alt="" coords="142,132,165,168,161,171,137,135"/>
+<area shape="poly" title=" " alt="" coords="157,209,76,251,74,246,155,204"/>
+<area shape="poly" title=" " alt="" coords="184,206,196,241,191,242,179,208"/>
+<area shape="poly" title=" " alt="" coords="200,204,277,246,274,250,198,209"/>
 </map>
 </div>
 </div>
@@ -121,6 +131,8 @@ Macros</h2></td></tr>
 <tr class="memitem:ga91ed1c9321da0e9a14fa8c4fafda2c98" id="r_ga91ed1c9321da0e9a14fa8c4fafda2c98"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode1__timer2__12T.html#ga91ed1c9321da0e9a14fa8c4fafda2c98">uart1_mode1_timer2_12T_start</a>(baudrate)</td></tr>
 <tr class="memdesc:ga91ed1c9321da0e9a14fa8c4fafda2c98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start UART1 communication with standart baudrate value.  <br /></td></tr>
 <tr class="separator:ga91ed1c9321da0e9a14fa8c4fafda2c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38fb94ce6a7d4bf7d6835a531aafd51d" id="r_a38fb94ce6a7d4bf7d6835a531aafd51d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart1__mode1__timer2__12T_8h.html#a38fb94ce6a7d4bf7d6835a531aafd51d">uart1_mode1_timer2_12T_start_ext</a>(baudrate)</td></tr>
+<tr class="separator:a38fb94ce6a7d4bf7d6835a531aafd51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0f7f362bf73a2082040e35d19577c68e" id="r_ga0f7f362bf73a2082040e35d19577c68e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode1__timer2__12T.html#ga0f7f362bf73a2082040e35d19577c68e">uart1_mode1_timer2_12T_stop</a>&#160;&#160;&#160;(bit_clr(AUXR, CBIT4))</td></tr>
 <tr class="memdesc:ga0f7f362bf73a2082040e35d19577c68e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop UART1 communication and disable Timer2.  <br /></td></tr>
 <tr class="separator:ga0f7f362bf73a2082040e35d19577c68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,6 +150,35 @@ Enumerations</h2></td></tr>
 <tr class="memdesc:ga041bfeb3611dd3a99d7c742e0d770844"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART1 precalculated baudrates.  <a href="group__uart1__mode1__timer2__12T.html#ga041bfeb3611dd3a99d7c742e0d770844">More...</a><br /></td></tr>
 <tr class="separator:ga041bfeb3611dd3a99d7c742e0d770844"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a38fb94ce6a7d4bf7d6835a531aafd51d" name="a38fb94ce6a7d4bf7d6835a531aafd51d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38fb94ce6a7d4bf7d6835a531aafd51d">&#9670;&#160;</a></span>uart1_mode1_timer2_12T_start_ext</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define uart1_mode1_timer2_12T_start_ext</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">baudrate</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                            \</div>
+<div class="line">    <span class="keyword">const</span> uint16_t ticks = uart1_mode1_timer2_12T_ticks(baudrate);\</div>
+<div class="line">                                                                \</div>
+<div class="line">    <span class="comment">/* Set TH TL values */</span>                                      \</div>
+<div class="line">    T2L = ticks &amp; 0xFF;                                         \</div>
+<div class="line">    T2H = ticks &gt;&gt; 8;                                           \</div>
+<div class="line">                                                                \</div>
+<div class="line">    <span class="comment">/* Start Timer2 */</span>                                          \</div>
+<div class="line">    bit_set(AUXR, SBIT4);                                       \</div>
+<div class="line">} <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

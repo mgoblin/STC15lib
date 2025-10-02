@@ -20,7 +20,7 @@
  * UART1 baudrate is determined by the T2 overflow rate.
  * T2 overflow rate is configured by setting T2H and T2L registers.
  * 
- * THTL = 65535 - (Sysclk/12)/(4 * baudrate).
+ * THTL = 65536 - (Sysclk/12)/(4 * baudrate).
  * Sysclk = master clock frequency / frequency divder.
  * 
  * THTL value is precalulated for standard baudrates with none freq divider.
@@ -57,6 +57,7 @@
 #include <bits.h>
 #include <interrupt.h>
 #include <uart1_shared.h>
+#include <uart1_mode1_timer2_12T_ext.h>
 
 /**
  * @brief UART1 precalculated baudrates
@@ -138,6 +139,18 @@ do {                                                    \
     /* Start Timer2 */                                  \
     bit_set(AUXR, SBIT4);                               \
 } while(0)
+
+#define uart1_mode1_timer2_12T_start_ext(baudrate)              \
+do {                                                            \
+    const uint16_t ticks = uart1_mode1_timer2_12T_ticks(baudrate);\
+                                                                \
+    /* Set TH TL values */                                      \
+    T2L = ticks & 0xFF;                                         \
+    T2H = ticks >> 8;                                           \
+                                                                \
+    /* Start Timer2 */                                          \
+    bit_set(AUXR, SBIT4);                                       \
+} while (0)
 
 /**
  * @brief Stop UART1 communication and disable Timer2
