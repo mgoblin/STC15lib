@@ -1,5 +1,5 @@
-#ifndef STC15_UART1MODE1H
-#define STC15_UART1MODE1H
+#ifndef STC15_UART1MODE1_T212H
+#define STC15_UART1MODE1_T212H
 
 /**
  * @file uart1_mode1_timer2_12T.h
