@@ -80,7 +80,7 @@ typedef enum
  * 
  * @details
  * The clock source of Timer2 is SYSclk/12. AUXR.T2x12 = 0.
- * No double baud rate. AUXR.UART_M0x6 = 0.
+ * AUXR.UART_M0x6 = 0.
  * Timer2 are used as timer. AUXR.T2_C/T = 0.
  * Timer2 is not started. AUXR.T2R = 0.
  * 

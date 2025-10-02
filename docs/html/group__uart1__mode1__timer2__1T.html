@@ -69,9 +69,19 @@ $(function() {
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">UART1 Mode 1 with Timer2 1T</div></div>
 </div><!--header-->
 <div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga4f9374565d248b62e78dae19580744f7" id="r_ga4f9374565d248b62e78dae19580744f7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode1__timer2__1T.html#ga4f9374565d248b62e78dae19580744f7">uart1_mode1_timer2_1T_init</a>(pins)</td></tr>
+<tr class="memdesc:ga4f9374565d248b62e78dae19580744f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize UART1 in Mode 1 with Timer2 1T configuration.  <br /></td></tr>
+<tr class="separator:ga4f9374565d248b62e78dae19580744f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions and data structures for UART1 communication in Mode 1 with Timer2 1T as baudrate generator. Dont use Timer2 for other purposes.</p>
 <p>This module implements UART1 point-to-point communication. Relay and broadcast features are not supported by this module.</p>
 <p>UART1 Mode 1 provides 8-bit asynchronous communication with variable baud rate. Sent data is transmitted to the TxD pin, and received data is read from the RxD pin. The frame data includes one start bit, 8 data bits, and one stop bit.</p>
@@ -79,7 +89,7 @@ $(function() {
 <p>THTL = 65535 - Sysclk/(4 * baudrate). Sysclk = master clock frequency / frequency divder.</p>
 <p>THTL value is precalulated for standard baudrates with none freq divider.</p>
 <p>In UART1 Mode 1, three sets of RxD/TxD pins can be used: RxD on P3.0/TxD on P3.1, RxD on P3.6/TxD on P3.7 and RxD on P1.6/TxD on P1.7.</p>
-<p>Typical usage: </p><div class="fragment"><div class="line">uart1_mode1_timer2_1T_init(<a class="code hl_enumvalue" href="group__uart1__shared.html#ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47">RxD_P30_TxD_P31</a>);</div>
+<p>Typical usage: </p><div class="fragment"><div class="line"><a class="code hl_define" href="group__uart1__mode1__timer2__1T.html#ga4f9374565d248b62e78dae19580744f7">uart1_mode1_timer2_1T_init</a>(<a class="code hl_enumvalue" href="group__uart1__shared.html#ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47">RxD_P30_TxD_P31</a>);</div>
 <div class="line">uart1_mode1_timer2_1T_start(<a class="code hl_enumvalue" href="group__uart1__mode1__timer2__12T.html#gga041bfeb3611dd3a99d7c742e0d770844a920ff2bd65ec0264e548c65f9beeeebe">baudrate_9600</a>);</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordflow">for</span> (;;)</div>
@@ -87,6 +97,7 @@ $(function() {
 <div class="line"> <span class="comment">// Send or receive data</span></div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__uart1__mode1__timer2__12T_html_gga041bfeb3611dd3a99d7c742e0d770844a920ff2bd65ec0264e548c65f9beeeebe"><div class="ttname"><a href="group__uart1__mode1__timer2__12T.html#gga041bfeb3611dd3a99d7c742e0d770844a920ff2bd65ec0264e548c65f9beeeebe">baudrate_9600</a></div><div class="ttdeci">@ baudrate_9600</div><div class="ttdoc">9600 baudrate</div><div class="ttdef"><b>Definition</b> uart1_mode1_timer2_12T.h:75</div></div>
+<div class="ttc" id="agroup__uart1__mode1__timer2__1T_html_ga4f9374565d248b62e78dae19580744f7"><div class="ttname"><a href="group__uart1__mode1__timer2__1T.html#ga4f9374565d248b62e78dae19580744f7">uart1_mode1_timer2_1T_init</a></div><div class="ttdeci">#define uart1_mode1_timer2_1T_init(pins)</div><div class="ttdoc">Initialize UART1 in Mode 1 with Timer2 1T configuration.</div><div class="ttdef"><b>Definition</b> uart1_mode1_timer2_1T.h:78</div></div>
 <div class="ttc" id="agroup__uart1__shared_html_ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47"><div class="ttname"><a href="group__uart1__shared.html#ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47">RxD_P30_TxD_P31</a></div><div class="ttdeci">@ RxD_P30_TxD_P31</div><div class="ttdoc">RxD on P3.0 and TxD on P3.1 pins.</div><div class="ttdef"><b>Definition</b> uart1_shared.h:26</div></div>
 </div><!-- fragment --><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__uart1__shared.html#gad9c16ff3593511fc868323e3718ecc1d" title="Sends a single byte over UART1.">uart1_send_byte()</a> </dd>
 <dd>
@@ -97,6 +108,63 @@ $(function() {
 <a class="el" href="group__uart1__shared.html#gaa39515c87bdffa2f34570162da6d6d1a" title="Checks if UART1 receive byte operation is complete.">is_uart1_receive_byte_complete()</a></dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>UART1 mode1 in this module is biased by frequency divider.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga4f9374565d248b62e78dae19580744f7" name="ga4f9374565d248b62e78dae19580744f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4f9374565d248b62e78dae19580744f7">&#9670;&#160;</a></span>uart1_mode1_timer2_1T_init</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define uart1_mode1_timer2_1T_init</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pins</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                        \</div>
+<div class="line">                                            \</div>
+<div class="line">    enable_mcu_interrupts();                \</div>
+<div class="line">    enable_uart1_interrupt();               \</div>
+<div class="line">    disable_timer2_interrupt();             \</div>
+<div class="line">                                            \</div>
+<div class="line">    PCON &amp;= 0x3F;                           \</div>
+<div class="line">    SCON = 0x50;                            \</div>
+<div class="line">                                            \</div>
+<div class="line">    <span class="comment">/* The clock source of Timer 2 is SYSclk/12. AUXR.T2x12 = 0 */</span>  \</div>
+<div class="line">    <span class="comment">/* AUXR.UART_M0x6 = 0 */</span>                                        \</div>
+<div class="line">    <span class="comment">/* Timer2 is not started. AUXR.T2R = 0 */</span>                       \</div>
+<div class="line">    <span class="comment">/* Timer2 are used as timer. AUXR.T2_C/T = 0 */</span>                 \</div>
+<div class="line">    AUXR &amp;= 0xC2;                           \</div>
+<div class="line">                                            \</div>
+<div class="line">    <span class="comment">/* Select Timer2 as UART1 baud rate generator. AUXR.S1ST2 = 1; */</span> \</div>
+<div class="line">    bit_set(AUXR, SBIT0);                   \</div>
+<div class="line">    <span class="comment">/* The clock source of Timer 2 is SYSclk. AUXR.T2x12 = 1 */</span>       \</div>
+<div class="line">    bit_set(AUXR, SBIT2);                   \</div>
+<div class="line">                                            \</div>
+<div class="line">    <span class="comment">/* Point-to-point mode */</span>               \</div>
+<div class="line">    bit_clr(CLK_DIV, CBIT4);                \</div>
+<div class="line">                                            \</div>
+<div class="line">    <span class="comment">/* Set AUXR1 bits 6, 7 to select RxD/TxD pins */</span>                 \</div>
+<div class="line">    AUXR1 &amp;= 0x3F;                          \</div>
+<div class="line">    AUXR1 |= pins;                          \</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
+</div><!-- fragment -->
+<p>Initialize UART1 in Mode 1 with Timer2 1T configuration. </p>
+<p>The clock source of Timer2 is SYSclk. AUXR.T2x12 = 1. AUXR.UART_M0x6 = 0. Timer2 are used as timer. AUXR.T2_C/T = 0. Timer2 is not started. AUXR.T2R = 0.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__uart1__shared.html#gaed599bf26e2baa98c2d108a072d02337" title="UART1 RxD/TxD pins enum.">uart1_pins_t</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pins</td><td>Pin configuration from uart1_pins_t enum</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Must be called before starting UART communication </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

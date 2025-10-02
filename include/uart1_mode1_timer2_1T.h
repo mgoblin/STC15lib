@@ -51,5 +51,57 @@
  * @author Michael Golovanov
  */
 
+#include <stdint.h>
+
+#include <sys.h>
+#include <bits.h>
+#include <interrupt.h>
+#include <uart1_shared.h>
+
+/**
+ * @brief Initialize UART1 in Mode 1 with Timer2 1T configuration
+ * 
+ * @details
+ * The clock source of Timer2 is SYSclk. AUXR.T2x12 = 1.
+ * AUXR.UART_M0x6 = 0.
+ * Timer2 are used as timer. AUXR.T2_C/T = 0.
+ * Timer2 is not started. AUXR.T2R = 0.
+ * 
+ * @see uart1_pins_t
+ * 
+ * @param pins Pin configuration from uart1_pins_t enum
+ * 
+ * @note Must be called before starting UART communication
+ * 
+ * @ingroup uart1_mode1_timer2_1T
+ */
+#define uart1_mode1_timer2_1T_init(pins)   \
+do {                                        \
+                                            \
+    enable_mcu_interrupts();                \
+    enable_uart1_interrupt();               \
+    disable_timer2_interrupt();             \
+                                            \
+    PCON &= 0x3F;                           \
+    SCON = 0x50;                            \
+                                            \
+    /* The clock source of Timer 2 is SYSclk/12. AUXR.T2x12 = 0 */  \
+    /* AUXR.UART_M0x6 = 0 */                                        \
+    /* Timer2 is not started. AUXR.T2R = 0 */                       \
+    /* Timer2 are used as timer. AUXR.T2_C/T = 0 */                 \
+    AUXR &= 0xC2;                           \
+                                            \
+    /* Select Timer2 as UART1 baud rate generator. AUXR.S1ST2 = 1; */ \
+    bit_set(AUXR, SBIT0);                   \
+    /* The clock source of Timer 2 is SYSclk. AUXR.T2x12 = 1 */       \
+    bit_set(AUXR, SBIT2);                   \
+                                            \
+    /* Point-to-point mode */               \
+    bit_clr(CLK_DIV, CBIT4);                \
+                                            \
+    /* Set AUXR1 bits 6, 7 to select RxD/TxD pins */                 \
+    AUXR1 &= 0x3F;                          \
+    AUXR1 |= pins;                          \
+} while(0)    
 
 #endif
