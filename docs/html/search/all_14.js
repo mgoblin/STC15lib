@@ -18,8 +18,6 @@ var searchData=
   ['uart1_5fmode1_5ftimer2_5f12t_5fstart_15',['uart1_mode1_timer2_12T_start',['../group__uart1__mode1__timer2__12T.html#ga91ed1c9321da0e9a14fa8c4fafda2c98',1,'uart1_mode1_timer2_12T.h']]],
   ['uart1_5fmode1_5ftimer2_5f12t_5fstop_16',['uart1_mode1_timer2_12T_stop',['../group__uart1__mode1__timer2__12T.html#ga0f7f362bf73a2082040e35d19577c68e',1,'uart1_mode1_timer2_12T.h']]],
   ['uart1_5fpins_5ft_17',['uart1_pins_t',['../group__uart1__mode1__timer2__12T.html#gaed599bf26e2baa98c2d108a072d02337',1,'uart1_mode1_timer2_12T.h']]],
-  ['uart1_5freceive_5fbyte_18',['uart1_receive_byte',['../group__uart.html#ga5f66ea2c05ce23684284f338d9067179',1,'uart1_receive_byte():&#160;uart.c'],['../group__uart.html#ga5f66ea2c05ce23684284f338d9067179',1,'uart1_receive_byte():&#160;uart.c']]],
-  ['uart1_5fsend_5fbyte_19',['uart1_send_byte',['../group__uart.html#gaee0e2768c65fa6dfe5e87991f729c6d0',1,'uart1_send_byte(uint8_t data):&#160;uart.c'],['../group__uart.html#gaee0e2768c65fa6dfe5e87991f729c6d0',1,'uart1_send_byte(uint8_t data):&#160;uart.c']]],
-  ['use_20it_20',['How to use it',['../index.html#autotoc_md1',1,'']]],
-  ['use_20stc15_20hal_20functions_21',['Use STC15 HAL functions',['../index.html#autotoc_md4',1,'']]]
+  ['use_20it_18',['How to use it',['../index.html#autotoc_md1',1,'']]],
+  ['use_20stc15_20hal_20functions_19',['Use STC15 HAL functions',['../index.html#autotoc_md4',1,'']]]
 ];

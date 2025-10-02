@@ -9,7 +9,7 @@
 
 #include<sys.h>
 #include <delay.h>
-#include<uart.h>
+#include <uart.h>
 
 void main()
 {

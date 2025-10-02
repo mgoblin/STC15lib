@@ -83,20 +83,23 @@ $(function() {
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="timer2__mode0_8h_source.html">timer2_mode0.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="timer2__to__ms_8h_source.html">timer2_to_ms.h</a>&gt;</code><br />
+<code>#include &lt;uart1_shared.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for uart.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="uart_8h__incl.png" border="0" usemap="#ainclude_2uart_8h" alt=""/></div>
 <map name="ainclude_2uart_8h" id="ainclude_2uart_8h">
-<area shape="rect" title=" " alt="" coords="241,5,351,31"/>
+<area shape="rect" title=" " alt="" coords="473,5,583,31"/>
 <area shape="rect" href="sys_8h.html" title=" " alt="" coords="27,299,83,324"/>
-<area shape="poly" title=" " alt="" coords="269,33,214,59,148,100,115,127,84,156,58,190,37,226,34,241,34,256,44,285,39,287,29,257,28,240,32,224,53,187,80,153,111,123,145,96,212,55,266,28"/>
+<area shape="poly" title=" " alt="" coords="473,31,399,48,307,73,208,108,115,154,67,183,51,200,37,226,34,241,34,256,44,285,39,287,29,257,28,240,32,224,47,197,64,179,112,150,206,103,305,68,397,42,472,26"/>
 <area shape="rect" title=" " alt="" coords="621,299,691,324"/>
-<area shape="poly" title=" " alt="" coords="352,19,427,28,516,49,561,66,604,88,643,116,677,150,693,175,699,198,698,222,692,252,675,289,670,286,687,250,693,222,694,199,688,177,673,154,640,120,601,93,559,71,514,54,426,33,351,24"/>
+<area shape="poly" title=" " alt="" coords="550,29,580,48,615,76,649,110,677,151,689,177,695,200,695,223,689,251,674,288,669,286,684,250,689,222,689,200,684,179,672,153,645,114,611,80,576,52,547,33"/>
 <area shape="rect" href="timer2__mode0_8h.html" title=" " alt="" coords="126,152,255,177"/>
-<area shape="poly" title=" " alt="" coords="290,33,209,142,205,139,285,30"/>
-<area shape="rect" href="timer2__to__ms_8h.html" title=" " alt="" coords="375,79,499,104"/>
-<area shape="poly" title=" " alt="" coords="320,28,403,70,401,75,318,33"/>
+<area shape="poly" title=" " alt="" coords="502,33,231,149,229,144,500,28"/>
+<area shape="rect" href="timer2__to__ms_8h.html" title=" " alt="" coords="466,79,590,104"/>
+<area shape="poly" title=" " alt="" coords="531,31,531,65,525,65,525,31"/>
+<area shape="rect" href="uart1__shared_8h_source.html" title=" " alt="" coords="795,79,914,104"/>
+<area shape="poly" title=" " alt="" coords="581,28,789,73,788,78,580,33"/>
 <area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="5,372,104,397"/>
 <area shape="poly" title=" " alt="" coords="57,324,57,358,52,358,52,324"/>
 <area shape="rect" title=" " alt="" coords="9,445,100,471"/>
@@ -114,14 +117,14 @@ Include dependency graph for uart.h:</div>
 <area shape="poly" title=" " alt="" coords="98,253,73,289,68,286,94,249"/>
 <area shape="poly" title=" " alt="" coords="131,248,225,291,223,295,128,253"/>
 <area shape="poly" title=" " alt="" coords="116,249,145,286,141,290,111,253"/>
-<area shape="poly" title=" " alt="" coords="500,99,590,119,628,133,653,150,669,183,675,220,672,256,666,286,661,285,667,255,669,220,664,185,649,154,626,138,588,124,499,105"/>
-<area shape="poly" title=" " alt="" coords="398,107,244,151,243,146,397,101"/>
+<area shape="poly" title=" " alt="" coords="580,102,619,120,638,133,653,151,668,184,672,221,670,256,665,286,660,285,665,256,667,221,662,186,648,153,634,137,617,124,577,107"/>
+<area shape="poly" title=" " alt="" coords="474,107,259,152,258,146,473,101"/>
 <area shape="rect" href="frequency_8h.html" title=" " alt="" coords="521,225,618,251"/>
-<area shape="poly" title=" " alt="" coords="500,91,535,96,572,107,605,124,633,151,639,169,632,188,618,205,602,219,598,215,615,201,628,185,633,169,628,153,602,129,570,112,534,101,499,96"/>
+<area shape="poly" title=" " alt="" coords="568,102,604,120,620,134,633,151,637,170,631,189,617,205,601,219,597,215,613,201,626,186,632,170,628,153,616,138,601,125,566,107"/>
 <area shape="rect" href="timer__common_8h.html" title=" " alt="" coords="280,152,413,177"/>
-<area shape="poly" title=" " alt="" coords="424,106,374,145,371,141,421,102"/>
+<area shape="poly" title=" " alt="" coords="500,107,390,149,388,144,498,102"/>
 <area shape="rect" href="timer__to__ms__common_8h.html" title=" " alt="" coords="438,152,618,177"/>
-<area shape="poly" title=" " alt="" coords="454,102,504,141,501,145,450,106"/>
+<area shape="poly" title=" " alt="" coords="531,104,531,138,525,138,525,104"/>
 <area shape="poly" title=" " alt="" coords="521,251,508,253,396,268,308,276,220,285,108,301,97,303,96,298,108,296,220,280,308,271,395,263,508,248,520,246"/>
 <area shape="poly" title=" " alt="" coords="585,249,633,288,630,292,582,253"/>
 <area shape="poly" title=" " alt="" coords="521,253,306,303,305,298,520,248"/>
@@ -153,11 +156,6 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaee0e2768c65fa6dfe5e87991f729c6d0" id="r_gaee0e2768c65fa6dfe5e87991f729c6d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart.html#gaee0e2768c65fa6dfe5e87991f729c6d0">uart1_send_byte</a> (uint8_t data)</td></tr>
-<tr class="separator:gaee0e2768c65fa6dfe5e87991f729c6d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5f66ea2c05ce23684284f338d9067179" id="r_ga5f66ea2c05ce23684284f338d9067179"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart.html#ga5f66ea2c05ce23684284f338d9067179">uart1_receive_byte</a> ()</td></tr>
-<tr class="memdesc:ga5f66ea2c05ce23684284f338d9067179"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive byte from UART1.  <br /></td></tr>
-<tr class="separator:ga5f66ea2c05ce23684284f338d9067179"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga07036e93939040c563e862a6a31b65bc" id="r_ga07036e93939040c563e862a6a31b65bc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart.html#ga07036e93939040c563e862a6a31b65bc">putchar</a> (int ch)</td></tr>
 <tr class="memdesc:ga07036e93939040c563e862a6a31b65bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send character to UART1.  <br /></td></tr>
 <tr class="separator:ga07036e93939040c563e862a6a31b65bc"><td class="memSeparator" colspan="2">&#160;</td></tr>

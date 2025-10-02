@@ -10,6 +10,7 @@
 #include <stdint.h>
 #include <timer2_mode0.h>
 #include <timer2_to_ms.h>
+#include <uart1_shared.h>
 
 /**
  * @brief Initiazlize UART1
@@ -28,27 +29,6 @@ do {                                                                    \
     AUXR &= 0xE2;                                                       \
     AUXR |= 0x15;                                                       \
 } while(0)
-
-/**
- * Send byte to UART
- * 
- * @param data byte to send
- * 
- * @ingroup uart
- */
-void uart1_send_byte(uint8_t data);
-
-/**
- * @brief Receive byte from UART1
- * 
- * @details This receive is implemented as synhcronous operation. 
- * Waiting until byte is received 
- * 
- * @return received byte
- * 
- * @ingroup uart
- */
-uint8_t uart1_receive_byte();
 
 /**
  * @brief Send character to UART1
