@@ -141,7 +141,6 @@
 * Counter0 mode3 routines implemented
 * UART1 mode0 send routines implemented
 * UART1 mode1 with timer2 12T as baud rate generator send routines implemented
-    * TODO Support double baud rate
 
 
 Next releases todo
