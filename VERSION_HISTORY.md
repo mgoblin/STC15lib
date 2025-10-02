@@ -140,7 +140,7 @@
 * Counter0 mode2 routines implemented
 * Counter0 mode3 routines implemented
 * UART1 mode0 send routines implemented
-* UART1 mode1 with timer2 (12T and 1T) as baud rate generator send routines implemented
+* UART1 mode1 with Timer2 (12T and 1T) as baud rate generator send routines implemented
 
 
 Next releases todo

@@ -19,10 +19,11 @@ var searchData=
   ['uart1_5fmode1_5ftimer2_5f1t_5fbaudrate_5ft_16',['uart1_mode1_timer2_1t_baudrate_t',['../group__uart1__mode1__timer2__1T.html#ga2e4139c472c0e5df5e673548645c252d',1,'uart1_mode1_timer2_1T.h']]],
   ['uart1_5fmode1_5ftimer2_5f1t_5finit_17',['uart1_mode1_timer2_1T_init',['../group__uart1__mode1__timer2__1T.html#ga4f9374565d248b62e78dae19580744f7',1,'uart1_mode1_timer2_1T.h']]],
   ['uart1_5fmode1_5ftimer2_5f1t_5fstart_18',['uart1_mode1_timer2_1T_start',['../group__uart1__mode1__timer2__1T.html#ga023725778d40b735ae874d71c562ecf9',1,'uart1_mode1_timer2_1T.h']]],
-  ['uart1_5fpins_5ft_19',['uart1_pins_t',['../group__uart1__shared.html#gaed599bf26e2baa98c2d108a072d02337',1,'uart1_shared.h']]],
-  ['uart1_5freceive_5fbyte_20',['uart1_receive_byte',['../group__uart1__shared.html#ga1940b2ddaaec617feb9c59d4a544e939',1,'uart1_shared.h']]],
-  ['uart1_5fsend_5fbyte_21',['uart1_send_byte',['../group__uart1__shared.html#gad9c16ff3593511fc868323e3718ecc1d',1,'uart1_shared.h']]],
-  ['uart1_5fshared_2eh_22',['uart1_shared.h',['../uart1__shared_8h.html',1,'']]],
-  ['use_20it_23',['How to use it',['../index.html#autotoc_md1',1,'']]],
-  ['use_20stc15_20hal_20functions_24',['Use STC15 HAL functions',['../index.html#autotoc_md4',1,'']]]
+  ['uart1_5fmode1_5ftimer2_5f1t_5fstop_19',['uart1_mode1_timer2_1T_stop',['../group__uart1__mode1__timer2__1T.html#ga7ddc3d5b3ec282c794ce615c738414ea',1,'uart1_mode1_timer2_1T.h']]],
+  ['uart1_5fpins_5ft_20',['uart1_pins_t',['../group__uart1__shared.html#gaed599bf26e2baa98c2d108a072d02337',1,'uart1_shared.h']]],
+  ['uart1_5freceive_5fbyte_21',['uart1_receive_byte',['../group__uart1__shared.html#ga1940b2ddaaec617feb9c59d4a544e939',1,'uart1_shared.h']]],
+  ['uart1_5fsend_5fbyte_22',['uart1_send_byte',['../group__uart1__shared.html#gad9c16ff3593511fc868323e3718ecc1d',1,'uart1_shared.h']]],
+  ['uart1_5fshared_2eh_23',['uart1_shared.h',['../uart1__shared_8h.html',1,'']]],
+  ['use_20it_24',['How to use it',['../index.html#autotoc_md1',1,'']]],
+  ['use_20stc15_20hal_20functions_25',['Use STC15 HAL functions',['../index.html#autotoc_md4',1,'']]]
 ];
