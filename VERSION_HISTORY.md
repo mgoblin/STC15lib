@@ -141,6 +141,7 @@
 * Counter0 mode3 routines implemented
 * UART1 mode0 send routines implemented
 * UART1 mode1 with Timer2 (12T and 1T) as baud rate generator send routines implemented
+* Using Timer2 as baudrate generator routines removed from timer2_mode0.h
 
 
 Next releases todo
