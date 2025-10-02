@@ -117,19 +117,6 @@ $(function() {
 <tr class="memitem:ga3ed7e8910a209208306bebcc62975d2b" id="r_ga3ed7e8910a209208306bebcc62975d2b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga3ed7e8910a209208306bebcc62975d2b">is_timer2_mode0_started</a>()&#160;&#160;&#160;(test_if_bit_set(AUXR, SBIT4))</td></tr>
 <tr class="memdesc:ga3ed7e8910a209208306bebcc62975d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer2 started status.  <br /></td></tr>
 <tr class="separator:ga3ed7e8910a209208306bebcc62975d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">baud rate enable/disable</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p>Select timer2 as UART1 baud rate generator </p>
-</td></tr>
-<tr class="memitem:ga6ea381014809f87696b7d3ea146eff03" id="r_ga6ea381014809f87696b7d3ea146eff03"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga6ea381014809f87696b7d3ea146eff03">timer2_mode0_enable_as_uart1_baud_rate</a>()&#160;&#160;&#160;(bit_set(AUXR, SBIT0))</td></tr>
-<tr class="memdesc:ga6ea381014809f87696b7d3ea146eff03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select timer2 as uart1 baud rate generator.  <br /></td></tr>
-<tr class="separator:ga6ea381014809f87696b7d3ea146eff03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga10e75bd31a51f9fc2441cd8c6d8511e5" id="r_ga10e75bd31a51f9fc2441cd8c6d8511e5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga10e75bd31a51f9fc2441cd8c6d8511e5">timer2_mode0_disable_as_uart1_baud_rate</a>()&#160;&#160;&#160;(bit_clr(AUXR, CBIT0))</td></tr>
-<tr class="memdesc:ga10e75bd31a51f9fc2441cd8c6d8511e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unselect timer2 as uart1 baud rate generator.  <br /></td></tr>
-<tr class="separator:ga10e75bd31a51f9fc2441cd8c6d8511e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga75c4c92ed456a4bc546e14de00d340e4" id="r_ga75c4c92ed456a4bc546e14de00d340e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0.html#ga75c4c92ed456a4bc546e14de00d340e4">is_timer2_mode0_as_uart1_baud_rate_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(AUXR, SBIT0))</td></tr>
-<tr class="memdesc:ga75c4c92ed456a4bc546e14de00d340e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is timer0 used as UART1 baud rate generator?  <br /></td></tr>
-<tr class="separator:ga75c4c92ed456a4bc546e14de00d340e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions and data structures for timer2 mode0.</p>
@@ -146,27 +133,6 @@ $(function() {
 <p>Timer2 mode0 can be used in sync (main prorgam flow blocked until timer overloaded) and interrupt (call interrupt handler on timer overloaded) modes.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ga75c4c92ed456a4bc546e14de00d340e4" name="ga75c4c92ed456a4bc546e14de00d340e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga75c4c92ed456a4bc546e14de00d340e4">&#9670;&#160;</a></span>is_timer2_mode0_as_uart1_baud_rate_enabled</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define is_timer2_mode0_as_uart1_baud_rate_enabled</td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(test_if_bit_set(AUXR, SBIT0))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Is timer0 used as UART1 baud rate generator? </p>
-<p>by default timer0 used as UART1 baud rate generator</p>
-<dl class="section return"><dt>Returns</dt><dd>bool true if timer0 used as UART1 baud rate generator, otherwise false </dd></dl>
-
-</div>
-</div>
 <a id="ga25d6eb799c19b1f8a5a95202256f4129" name="ga25d6eb799c19b1f8a5a95202256f4129"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga25d6eb799c19b1f8a5a95202256f4129">&#9670;&#160;</a></span>is_timer2_mode0_P30_output_enabled</h2>
 
@@ -341,46 +307,6 @@ $(function() {
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="ga10e75bd31a51f9fc2441cd8c6d8511e5" name="ga10e75bd31a51f9fc2441cd8c6d8511e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga10e75bd31a51f9fc2441cd8c6d8511e5">&#9670;&#160;</a></span>timer2_mode0_disable_as_uart1_baud_rate</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define timer2_mode0_disable_as_uart1_baud_rate</td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_clr(AUXR, CBIT0))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Unselect timer2 as uart1 baud rate generator. </p>
-<p>by default timer0 used as UART1 baud rate generator </p>
-
-</div>
-</div>
-<a id="ga6ea381014809f87696b7d3ea146eff03" name="ga6ea381014809f87696b7d3ea146eff03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6ea381014809f87696b7d3ea146eff03">&#9670;&#160;</a></span>timer2_mode0_enable_as_uart1_baud_rate</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define timer2_mode0_enable_as_uart1_baud_rate</td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_set(AUXR, SBIT0))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Select timer2 as uart1 baud rate generator. </p>
-<p>by default timer0 used as UART1 baud rate generator </p>
 
 </div>
 </div>
