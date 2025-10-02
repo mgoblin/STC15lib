@@ -23,7 +23,7 @@
  * THTL = 65535 - (Sysclk/12)/(4 * baudrate).
  * Sysclk = master clock frequency / frequency divder.
  * 
- * THTL value is precalulated for standard baudrates.
+ * THTL value is precalulated for standard baudrates with none freq divider.
  * 
  * In UART1 Mode 1, three sets of RxD/TxD pins can be used: 
  * RxD on P3.0/TxD on P3.1, RxD on P3.6/TxD on P3.7 and 
@@ -118,7 +118,7 @@ do {                                        \
     SCON = 0x50;                            \
                                             \
     /* The clock source of Timer 2 is SYSclk/12. AUXR.T2x12 = 0 */  \
-    /* No double baud rate. AUXR.UART_M0x6 = 0 */                   \
+    /* AUXR.UART_M0x6 = 0 */                                        \
     /* Timer2 is not started. AUXR.T2R = 0 */                       \
     /* Timer2 are used as timer. AUXR.T2_C/T = 0 */                 \
     AUXR &= 0xC2;                           \
@@ -126,6 +126,7 @@ do {                                        \
     /* Select Timer2 as UART1 baud rate generator. AUXR.S1ST2 = 1; */ \
     bit_set(AUXR, SBIT0);                   \
                                             \
+    /* Point-to-point mode */               \
     bit_clr(CLK_DIV, CBIT4);                \
                                             \
     /* Set AUXR1 bits 6, 7 to select RxD/TxD pins */                 \

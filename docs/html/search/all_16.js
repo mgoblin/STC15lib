@@ -14,5 +14,6 @@ var searchData=
   ['what_20it_20is_11',['What it is',['../index.html',1,'']]],
   ['wirc_5fh_5faddress_12',['WIRC_H_ADDRESS',['../group__power__management.html#gacae7914e25fb794eb0d55b0162f8f8f6',1,'power_management.h']]],
   ['wirc_5fl_5faddress_13',['WIRC_L_ADDRESS',['../group__power__management.html#ga82e21440e9b642907b03b4f1d111ca7b',1,'power_management.h']]],
-  ['with_20timer2_2012t_14',['UART1 Mode 1 with Timer2 12T',['../group__uart1__mode1__timer2__12T.html',1,'']]]
+  ['with_20timer2_2012t_14',['UART1 Mode 1 with Timer2 12T',['../group__uart1__mode1__timer2__12T.html',1,'']]],
+  ['with_20timer2_201t_15',['UART1 Mode 1 with Timer2 1T',['../group__uart1__mode1__timer2__1T.html',1,'']]]
 ];
