@@ -57,7 +57,6 @@
 #include <bits.h>
 #include <interrupt.h>
 #include <uart1_shared.h>
-#include <uart1_mode1_timer2_12T_ext.h>
 
 /**
  * @brief UART1 precalculated baudrates
@@ -139,6 +138,21 @@ do {                                                    \
     /* Start Timer2 */                                  \
     bit_set(AUXR, SBIT4);                               \
 } while(0)
+
+/**
+ * @brief Get UART1 ticks for given baudrate and frequency divider scale
+ * 
+ * @details Ticks used as input parameter for uart1_mode1_timer2_12T_start_ext()
+ * 
+ * @return uint16_t baudrate ticks 
+ * 
+ * @attention This function is not overflow safe. 
+ * The value of ((((MAIN_Fosc / 12) / baudrate) >> 2) >> get_frequency_divider_scale())
+ * should be less than 65535 (uint16_t).
+ * 
+ * @ingroup uart1_mode1_timer2_12T
+ */
+#define uart1_mode1_timer2_12T_ticks(baudrate) (65536 - ((((MAIN_Fosc / 12) / baudrate) >> 2) >> get_frequency_divider_scale()))
 
 #define uart1_mode1_timer2_12T_start_ext(baudrate)              \
 do {                                                            \

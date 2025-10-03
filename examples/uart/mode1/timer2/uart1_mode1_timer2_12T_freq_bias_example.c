@@ -14,8 +14,12 @@ void main()
 
     uart1_mode1_timer2_12T_init(RxD_P30_TxD_P31);
     
-    // Baudrate is 4800
+    /* 
+    Baudrate is 4800
     uart1_mode1_timer2_12T_start(baudrate_9600);
+    */
+
+    uart1_mode1_timer2_12T_start_ext(9600);
 
     while (1)
     {
