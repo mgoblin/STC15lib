@@ -141,16 +141,16 @@
 * Counter0 mode3 routines implemented
 * UART1 mode0 send routines implemented
 * UART1 mode1 with Timer2 (12T and 1T) as baud rate generator send routines implemented
-
-
+* Timer2 as baudrate generator routines removed from timer2_mode0.h
+* uart1 module use uart1_mode1_timer2_1T routines
 
 Next releases todo
-* TODO Using Timer2 as baudrate generator routines removed from timer2_mode0.h
+* TODO Support parity bit in uart tx/rx
+* TODO Implement UART mode 2
+* TODO Implement UART mode 3
 * TODO Support UART1 relay and broadcast mode
 * Fix delay_ms. On small ms delays it works correctly, but on seconds delay it doubled.
-* TODO Implement UART
 * use asserts and static_assert
-* TODO Optimize timer2 baud rate calculation. Use precalculated array of baudrates
 * TODO Implement P5.4 as MCU reset source
 * TODO Review and fix freq and ticks - incorrect calculation.
 * TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms

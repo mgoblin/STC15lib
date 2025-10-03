@@ -14,8 +14,7 @@
  */
 #include <sys.h>
 #include <stdint.h>
-#include <timer2_mode0.h>
-#include <timer2_to_ms.h>
+#include <uart1_mode1_timer2_1T.h>
 #include <uart1_shared.h>
 
 /**
@@ -30,10 +29,8 @@
  */
 #define uart1_init(uart_baudrate)                                       \
 do {                                                                    \
-    SCON = 0x50; /* Set Mode1: 8-Bit UART with Variable Baud Rate */    \
-    timer2_mode0_reload(timer2_mode0_baudrate_to_ticks(uart_baudrate)); \
-    AUXR &= 0xE2;                                                       \
-    AUXR |= 0x15;                                                       \
+    uart1_mode1_timer2_1T_init(RxD_P30_TxD_P31);                        \
+    uart1_mode1_timer2_1T_start_ext(uart_baudrate);                     \
 } while(0)
 
 /**

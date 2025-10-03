@@ -85,13 +85,6 @@ $(function() {
 <tr class="memitem:gae700d8698534d9f5c196d6525e27fb1e" id="r_gae700d8698534d9f5c196d6525e27fb1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__to__ms.html#gae700d8698534d9f5c196d6525e27fb1e">timer2_ticks_to_ms_usafe</a>(ticks)&#160;&#160;&#160;(<a class="el" href="group__timer__to__ms.html#ga04bab4b7d5d973413e6933044bdd9865">timer_ticks_to_ms_usafe</a>(ticks, <a class="el" href="group__timer__common.html#ga4259384552df325973b81bd5425b7f4a">get_timer2_clock_divider</a>(), <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td></tr>
 <tr class="memdesc:gae700d8698534d9f5c196d6525e27fb1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert ticks count to ms.  <br /></td></tr>
 <tr class="separator:gae700d8698534d9f5c196d6525e27fb1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">UART baud rate to ticks</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p>UART baud rate to timer ticks to overlow frequency and vice versa convertions </p>
-</td></tr>
-<tr class="memitem:gabf526ab4e81d771f1cc410df02be173f" id="r_gabf526ab4e81d771f1cc410df02be173f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__to__ms.html#gabf526ab4e81d771f1cc410df02be173f">timer2_mode0_baudrate_to_ticks</a>(uart_baudrate)&#160;&#160;&#160;((<a class="el" href="group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b">get_master_clock_frequency</a>() &gt;&gt; <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>())/4/uart_baudrate)</td></tr>
-<tr class="memdesc:gabf526ab4e81d771f1cc410df02be173f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate timer2 ticks for UART baudrate.  <br /></td></tr>
-<tr class="separator:gabf526ab4e81d771f1cc410df02be173f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad581d84ad9f122efe38ce90eb07653ab" id="r_gad581d84ad9f122efe38ce90eb07653ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__to__ms.html#gad581d84ad9f122efe38ce90eb07653ab">timer2_ms_to_ticks_usafe</a>(ms)&#160;&#160;&#160;(<a class="el" href="group__timer__to__ms.html#ga57965a4fbee4f1ad9ca1ad75bf98fd38">timer_ms_to_ticks_usafe</a>(ms, <a class="el" href="group__timer__common.html#ga4259384552df325973b81bd5425b7f4a">get_timer2_clock_divider</a>()))</td></tr>
 <tr class="memdesc:gad581d84ad9f122efe38ce90eb07653ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert milliseconds to timer2 ticks.  <br /></td></tr>
 <tr class="separator:gad581d84ad9f122efe38ce90eb07653ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,97 +120,6 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>uint16_t timer0 ticks corresponding to frequency value </dd></dl>
-
-</div>
-</div>
-<a id="gabf526ab4e81d771f1cc410df02be173f" name="gabf526ab4e81d771f1cc410df02be173f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabf526ab4e81d771f1cc410df02be173f">&#9670;&#160;</a></span>timer2_mode0_baudrate_to_ticks</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define timer2_mode0_baudrate_to_ticks</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">uart_baudrate</td><td>)</td>
-          <td>&#160;&#160;&#160;((<a class="el" href="group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b">get_master_clock_frequency</a>() &gt;&gt; <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>())/4/uart_baudrate)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Calculate timer2 ticks for UART baudrate. </p>
-<p>Adapted for use mcu frequency divider. On some baudrates get not exact values. The reasons are</p><ul>
-<li>Formula not get int values</li>
-<li>Divisions doesnt support floats and accumulate integer division errors</li>
-</ul>
-<p>freq/4 = 2764800 </p><table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Freq div   </th><th class="markdownTableHeadNone">Baudrate   </th><th class="markdownTableHeadNone">Ticks hex    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">9600   </td><td class="markdownTableBodyNone">0x120    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">19200   </td><td class="markdownTableBodyNone">0x90    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">38400   </td><td class="markdownTableBodyNone">0x48    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">57600   </td><td class="markdownTableBodyNone">0x30    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">74880   </td><td class="markdownTableBodyNone">0x24    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">115200   </td><td class="markdownTableBodyNone">0x18    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">230400   </td><td class="markdownTableBodyNone">0x0C    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">250000   </td><td class="markdownTableBodyNone">0x0B   </td></tr>
-</table>
-<p>freq / 8 = 1382400 </p><table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Freq div   </th><th class="markdownTableHeadNone">Baudrate   </th><th class="markdownTableHeadNone">Ticks hex    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">9600   </td><td class="markdownTableBodyNone">0x90    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">19200   </td><td class="markdownTableBodyNone">0x48    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">38400   </td><td class="markdownTableBodyNone">0x24    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">57600   </td><td class="markdownTableBodyNone">0x18    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">74880   </td><td class="markdownTableBodyNone">0x12    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">115200   </td><td class="markdownTableBodyNone">0x0C    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">230400   </td><td class="markdownTableBodyNone">0x06    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">250000   </td><td class="markdownTableBodyNone">0x05 0x06?   </td></tr>
-</table>
-<p>freq/16 = 691200 </p><table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Freq div   </th><th class="markdownTableHeadNone">Baudrate   </th><th class="markdownTableHeadNone">Ticks hex    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">9600   </td><td class="markdownTableBodyNone">0x48    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">19200   </td><td class="markdownTableBodyNone">0x24    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">38400   </td><td class="markdownTableBodyNone">0x12    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">57600   </td><td class="markdownTableBodyNone">0x0C    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">74880   </td><td class="markdownTableBodyNone">0x09    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">115200   </td><td class="markdownTableBodyNone">0x06    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">230400   </td><td class="markdownTableBodyNone">0x03    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">250000   </td><td class="markdownTableBodyNone">0x02-0x03?   </td></tr>
-</table>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">uart_baudrate</td><td>uint16_t UART baudrate</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>uint16_t timer2 ticks count for UART baudrate </dd></dl>
 
 </div>
 </div>

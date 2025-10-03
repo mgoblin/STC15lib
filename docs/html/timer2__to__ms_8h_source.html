@@ -97,14 +97,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="group__timer2__to__ms.html#gae700d8698534d9f5c196d6525e27fb1e">   66</a></span><span class="preprocessor">#define timer2_ticks_to_ms_usafe(ticks) (timer_ticks_to_ms_usafe(ticks, get_timer2_clock_divider(), get_frequency_divider_scale()))</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="group__timer2__to__ms.html#gabf526ab4e81d771f1cc410df02be173f">  126</a></span><span class="preprocessor">#define timer2_mode0_baudrate_to_ticks(uart_baudrate) ((get_master_clock_frequency() &gt;&gt; get_frequency_divider_scale())/4/uart_baudrate)</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="group__timer2__to__ms.html#gad581d84ad9f122efe38ce90eb07653ab">  142</a></span><span class="preprocessor">#define timer2_ms_to_ticks_usafe(ms) (timer_ms_to_ticks_usafe(ms, get_timer2_clock_divider()))</span></div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="group__timer2__to__ms.html#gad581d84ad9f122efe38ce90eb07653ab">   82</a></span><span class="preprocessor">#define timer2_ms_to_ticks_usafe(ms) (timer_ms_to_ticks_usafe(ms, get_timer2_clock_divider()))</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="afrequency_8h_html"><div class="ttname"><a href="frequency_8h.html">frequency.h</a></div></div>
 <div class="ttc" id="atimer2__mode0_8h_html"><div class="ttname"><a href="timer2__mode0_8h.html">timer2_mode0.h</a></div></div>
 <div class="ttc" id="atimer__common_8h_html"><div class="ttname"><a href="timer__common_8h.html">timer_common.h</a></div></div>

@@ -65,66 +65,6 @@
  */
 #define timer2_ticks_to_ms_usafe(ticks) (timer_ticks_to_ms_usafe(ticks, get_timer2_clock_divider(), get_frequency_divider_scale()))
 
-///@}
-
-/** @name UART baud rate to ticks
- *  UART baud rate to timer ticks to overlow frequency and vice versa convertions 
- */
-///@{
-
-/**
- * @brief Calculate timer2 ticks for UART baudrate
- * @details Adapted for use mcu frequency divider. On some baudrates get not exact values.
- * The reasons are 
- * * Formula not get int values
- * * Divisions doesnt support floats and accumulate integer division errors
- * 
- * freq/4 = 2764800
- * | Freq div | Baudrate   | Ticks hex |
- * | ---------| ---------- | --------- |
- * |     1    | 9600       |  0x120    |
- * |     1    | 19200      |  0x90     |
- * |     1    | 38400      |  0x48     |
- * |     1    | 57600      |  0x30     |
- * |     1    | 74880      |  0x24     |
- * |     1    | 115200     |  0x18     |
- * |     1    | 230400     |  0x0C     |
- * |     1    | 250000     |  0x0B     |
- 
- * freq / 8 = 1382400
- * | Freq div | Baudrate   | Ticks hex |
- * | ---------| ---------- | --------- |
- * |     2    | 9600       |  0x90     |
- * |     2    | 19200      |  0x48     |
- * |     2    | 38400      |  0x24     |
- * |     2    | 57600      |  0x18     |
- * |     2    | 74880      |  0x12     |
- * |     2    | 115200     |  0x0C     |
- * |     2    | 230400     |  0x06     |
- * |     2    | 250000     | 0x05 0x06?|
- * 
- * freq/16 = 691200
- * | Freq div | Baudrate   | Ticks hex |
- * | ---------| ---------- | --------- |
- * |     4    | 9600       |  0x48     |
- * |     4    | 19200      |  0x24     |
- * |     4    | 38400      |  0x12     |
- * |     4    | 57600      |  0x0C     |
- * |     4    | 74880      |  0x09     |
- * |     4    | 115200     |  0x06     |
- * |     4    | 230400     |  0x03     |
- * |     4    | 250000     | 0x02-0x03?|
- * 
- * 
- * 
- * @param uart_baudrate uint16_t UART baudrate
- * 
- * @return uint16_t timer2 ticks count for UART baudrate
- * 
- * @ingroup timer2_to_ms
- */
-#define timer2_mode0_baudrate_to_ticks(uart_baudrate) ((get_master_clock_frequency() >> get_frequency_divider_scale())/4/uart_baudrate)
-
 /**
  * @brief Convert milliseconds to timer2 ticks.
  * @details 

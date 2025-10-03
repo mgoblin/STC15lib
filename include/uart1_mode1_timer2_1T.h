@@ -16,6 +16,7 @@
  * UART1 Mode 1 provides 8-bit asynchronous communication with variable baud rate.
  * Sent data is transmitted to the TxD pin, and received data is read from the RxD pin.
  * The frame data includes one start bit, 8 data bits, and one stop bit.
+ * 8-N-1
  * 
  * UART1 baudrate is determined by the T2 overflow rate.
  * T2 overflow rate is configured by setting T2H and T2L registers.
@@ -53,6 +54,7 @@
 
 #include <sys.h>
 #include <bits.h>
+#include <frequency.h>
 #include <interrupt.h>
 #include <uart1_shared.h>
 

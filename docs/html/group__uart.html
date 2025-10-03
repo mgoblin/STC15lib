@@ -118,12 +118,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                    \</div>
-<div class="line">    SCON = 0x50; <span class="comment">/* Set Mode1: 8-Bit UART with Variable Baud Rate */</span>    \</div>
-<div class="line">    timer2_mode0_reload(<a class="code hl_define" href="group__timer2__to__ms.html#gabf526ab4e81d771f1cc410df02be173f">timer2_mode0_baudrate_to_ticks</a>(uart_baudrate)); \</div>
-<div class="line">    AUXR &amp;= 0xE2;                                                       \</div>
-<div class="line">    AUXR |= 0x15;                                                       \</div>
+<div class="line">    uart1_mode1_timer2_1T_init(<a class="code hl_enumvalue" href="group__uart1__shared.html#ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47">RxD_P30_TxD_P31</a>);                        \</div>
+<div class="line">    uart1_mode1_timer2_1T_start_ext(uart_baudrate);                     \</div>
 <div class="line">} <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="agroup__timer2__to__ms_html_gabf526ab4e81d771f1cc410df02be173f"><div class="ttname"><a href="group__timer2__to__ms.html#gabf526ab4e81d771f1cc410df02be173f">timer2_mode0_baudrate_to_ticks</a></div><div class="ttdeci">#define timer2_mode0_baudrate_to_ticks(uart_baudrate)</div><div class="ttdoc">Calculate timer2 ticks for UART baudrate.</div><div class="ttdef"><b>Definition</b> timer2_to_ms.h:126</div></div>
+<div class="ttc" id="agroup__uart1__shared_html_ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47"><div class="ttname"><a href="group__uart1__shared.html#ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47">RxD_P30_TxD_P31</a></div><div class="ttdeci">@ RxD_P30_TxD_P31</div><div class="ttdoc">RxD on P3.0 and TxD on P3.1 pins.</div><div class="ttdef"><b>Definition</b> uart1_shared.h:26</div></div>
 </div><!-- fragment -->
 <p>Initiazlize UART1. </p>
 <p>Initialize uart using Timer2. Set timer according to baudrate</p>
