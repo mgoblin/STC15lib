@@ -139,6 +139,8 @@ do {                                        \
  * 
  * @note Before calling this function, uart1_mode1_timer2_1T_init() must be called.
  * @note Enum contains standard baudrates with precalculated THTL values for 1T mode
+ * 
+ * @ingroup uart1_mode1_timer2_1T
  */
 #define uart1_mode1_timer2_1T_start(baudrate)           \
 do {                                                    \
@@ -149,6 +151,36 @@ do {                                                    \
     /* Start Timer2 */                                  \
     bit_set(AUXR, SBIT4);                               \
 } while(0)
+
+/**
+ * @brief Get UART1 ticks for given baudrate and frequency divider scale
+ * 
+ * @details Ticks used as input parameter for uart1_mode1_timer2_1T_start_ext()
+ * 
+ * @param baudrate uint32_t baudrate
+ * 
+ * @return uint16_t baudrate ticks 
+ * 
+ * @attention This function is not overflow safe. 
+ * The value of (((MAIN_Fosc / baudrate) >> 2) >> get_frequency_divider_scale())
+ * should be less than 65535 (uint16_t).
+ * 
+ * @ingroup uart1_mode1_timer2_1T
+ */
+#define uart1_mode1_timer2_1T_ticks(baudrate) (65536 - (((MAIN_Fosc / baudrate) >> 2) >> get_frequency_divider_scale()))
+
+#define uart1_mode1_timer2_1T_start_ext(baudrate)              \
+do {                                                            \
+    const uint16_t ticks = uart1_mode1_timer2_1T_ticks(baudrate);\
+                                                                \
+    /* Set TH TL values */                                      \
+    T2L = ticks & 0xFF;                                         \
+    T2H = ticks >> 8;                                           \
+                                                                \
+    /* Start Timer2 */                                          \
+    bit_set(AUXR, SBIT4);                                       \
+} while (0)
+
 
 /**
  * @brief Stop UART1 communication and disable Timer2

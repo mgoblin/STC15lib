@@ -279,6 +279,12 @@ Enum contains standard baudrates with precalculated THTL values for 12T mode </d
 
 <p>Get UART1 ticks for given baudrate and frequency divider scale. </p>
 <p>Ticks used as input parameter for uart1_mode1_timer2_12T_start_ext()</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">baudrate</td><td>uint32_t baudrate</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>uint16_t baudrate ticks</dd></dl>
 <dl class="section attention"><dt>Attention</dt><dd>This function is not overflow safe. The value of ((((MAIN_Fosc / 12) / baudrate) &gt;&gt; 2) &gt;&gt; <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae" title="Get master clock frequency divider scale (CLK_DIV bits [0..2])">get_frequency_divider_scale()</a>) should be less than 65535 (uint16_t). </dd></dl>
 

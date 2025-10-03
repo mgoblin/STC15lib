@@ -144,6 +144,8 @@ do {                                                    \
  * 
  * @details Ticks used as input parameter for uart1_mode1_timer2_12T_start_ext()
  * 
+ * @param baudrate uint32_t baudrate
+ * 
  * @return uint16_t baudrate ticks 
  * 
  * @attention This function is not overflow safe. 
