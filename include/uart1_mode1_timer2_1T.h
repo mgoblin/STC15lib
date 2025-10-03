@@ -46,8 +46,6 @@
  * @see is_uart1_send_byte_complete()
  * @see is_uart1_receive_byte_complete()
  * 
- * @warning UART1 mode1 in this module is biased by frequency divider.
- * 
  * @author Michael Golovanov
  */
 
@@ -140,7 +138,7 @@ do {                                        \
  * @note Before calling this function, uart1_mode1_timer2_1T_init() must be called.
  * @note Enum contains standard baudrates with precalculated THTL values for 1T mode
  * 
- * @ingroup uart1_mode1_timer2_1T
+ * @warning UART1 mode1 in this routine is biased by frequency divider.
  */
 #define uart1_mode1_timer2_1T_start(baudrate)           \
 do {                                                    \
@@ -169,6 +167,17 @@ do {                                                    \
  */
 #define uart1_mode1_timer2_1T_ticks(baudrate) (65536 - (((MAIN_Fosc / baudrate) >> 2) >> get_frequency_divider_scale()))
 
+/**
+ * @brief Start UART1 communication with baudrate value
+ * 
+ * @ingroup uart1_mode1_timer2_1T
+ * 
+ * @param baudrate const uint32_t Baudrate value. Value may be non standard (not in 1200, 9600 etc).
+ * 
+ * @note Before calling this function, uart1_mode1_timer2_1T_init() must be called.
+ * 
+ * @attention This function is not baudrate overflow safe.
+ */
 #define uart1_mode1_timer2_1T_start_ext(baudrate)              \
 do {                                                            \
     const uint16_t ticks = uart1_mode1_timer2_1T_ticks(baudrate);\

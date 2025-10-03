@@ -30,7 +30,8 @@
         "counter2_mode0.h": "c",
         "uart1_mode0.h": "c",
         "uart1_mode1_timer2_12t.h": "c",
-        "uart1_shared.h": "c"
+        "uart1_shared.h": "c",
+        "timer2_mode0.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

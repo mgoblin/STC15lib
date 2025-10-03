@@ -124,8 +124,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga9db7e429e1e48d44ab364ed26d068772" id="r_ga9db7e429e1e48d44ab364ed26d068772"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode1__timer2__12T.html#ga9db7e429e1e48d44ab364ed26d068772">uart1_mode1_timer2_12T_ticks</a>(baudrate)&#160;&#160;&#160;(65536 - ((((<a class="el" href="sys_8h.html#aa52cf4efd75d43c7917d9eec3becd2fa">MAIN_Fosc</a> / 12) / baudrate) &gt;&gt; 2) &gt;&gt; <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td></tr>
 <tr class="memdesc:ga9db7e429e1e48d44ab364ed26d068772"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get UART1 ticks for given baudrate and frequency divider scale.  <br /></td></tr>
 <tr class="separator:ga9db7e429e1e48d44ab364ed26d068772"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38fb94ce6a7d4bf7d6835a531aafd51d" id="r_a38fb94ce6a7d4bf7d6835a531aafd51d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart1__mode1__timer2__12T_8h.html#a38fb94ce6a7d4bf7d6835a531aafd51d">uart1_mode1_timer2_12T_start_ext</a>(baudrate)</td></tr>
-<tr class="separator:a38fb94ce6a7d4bf7d6835a531aafd51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga38fb94ce6a7d4bf7d6835a531aafd51d" id="r_ga38fb94ce6a7d4bf7d6835a531aafd51d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode1__timer2__12T.html#ga38fb94ce6a7d4bf7d6835a531aafd51d">uart1_mode1_timer2_12T_start_ext</a>(baudrate)</td></tr>
+<tr class="memdesc:ga38fb94ce6a7d4bf7d6835a531aafd51d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start UART1 communication with baudrate value.  <br /></td></tr>
+<tr class="separator:ga38fb94ce6a7d4bf7d6835a531aafd51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0f7f362bf73a2082040e35d19577c68e" id="r_ga0f7f362bf73a2082040e35d19577c68e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode1__timer2__12T.html#ga0f7f362bf73a2082040e35d19577c68e">uart1_mode1_timer2_12T_stop</a>&#160;&#160;&#160;(bit_clr(AUXR, CBIT4))</td></tr>
 <tr class="memdesc:ga0f7f362bf73a2082040e35d19577c68e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop UART1 communication and disable Timer2.  <br /></td></tr>
 <tr class="separator:ga0f7f362bf73a2082040e35d19577c68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,36 +144,6 @@ Enumerations</h2></td></tr>
 <tr class="memdesc:ga041bfeb3611dd3a99d7c742e0d770844"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART1 precalculated baudrates.  <a href="group__uart1__mode1__timer2__12T.html#ga041bfeb3611dd3a99d7c742e0d770844">More...</a><br /></td></tr>
 <tr class="separator:ga041bfeb3611dd3a99d7c742e0d770844"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a38fb94ce6a7d4bf7d6835a531aafd51d" name="a38fb94ce6a7d4bf7d6835a531aafd51d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38fb94ce6a7d4bf7d6835a531aafd51d">&#9670;&#160;</a></span>uart1_mode1_timer2_12T_start_ext</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define uart1_mode1_timer2_12T_start_ext</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">baudrate</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                            \</div>
-<div class="line">    <span class="keyword">const</span> uint16_t ticks = <a class="code hl_define" href="group__uart1__mode1__timer2__12T.html#ga9db7e429e1e48d44ab364ed26d068772">uart1_mode1_timer2_12T_ticks</a>(baudrate);\</div>
-<div class="line">                                                                \</div>
-<div class="line">    <span class="comment">/* Set TH TL values */</span>                                      \</div>
-<div class="line">    T2L = ticks &amp; 0xFF;                                         \</div>
-<div class="line">    T2H = ticks &gt;&gt; 8;                                           \</div>
-<div class="line">                                                                \</div>
-<div class="line">    <span class="comment">/* Start Timer2 */</span>                                          \</div>
-<div class="line">    bit_set(AUXR, SBIT4);                                       \</div>
-<div class="line">} <span class="keywordflow">while</span> (0)</div>
-<div class="ttc" id="agroup__uart1__mode1__timer2__12T_html_ga9db7e429e1e48d44ab364ed26d068772"><div class="ttname"><a href="group__uart1__mode1__timer2__12T.html#ga9db7e429e1e48d44ab364ed26d068772">uart1_mode1_timer2_12T_ticks</a></div><div class="ttdeci">#define uart1_mode1_timer2_12T_ticks(baudrate)</div><div class="ttdoc">Get UART1 ticks for given baudrate and frequency divider scale.</div><div class="ttdef"><b>Definition</b> uart1_mode1_timer2_12T.h:157</div></div>
-</div><!-- fragment -->
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

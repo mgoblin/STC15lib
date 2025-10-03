@@ -87,6 +87,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga3f4635bb800f48ea4210a8b9c5b25454" id="r_ga3f4635bb800f48ea4210a8b9c5b25454"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode1__timer2__1T.html#ga3f4635bb800f48ea4210a8b9c5b25454">uart1_mode1_timer2_1T_ticks</a>(baudrate)&#160;&#160;&#160;(65536 - (((<a class="el" href="sys_8h.html#aa52cf4efd75d43c7917d9eec3becd2fa">MAIN_Fosc</a> / baudrate) &gt;&gt; 2) &gt;&gt; <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td></tr>
 <tr class="memdesc:ga3f4635bb800f48ea4210a8b9c5b25454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get UART1 ticks for given baudrate and frequency divider scale.  <br /></td></tr>
 <tr class="separator:ga3f4635bb800f48ea4210a8b9c5b25454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga80cdb4b511de8da89f655b19d45f022f" id="r_ga80cdb4b511de8da89f655b19d45f022f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode1__timer2__1T.html#ga80cdb4b511de8da89f655b19d45f022f">uart1_mode1_timer2_1T_start_ext</a>(baudrate)</td></tr>
+<tr class="memdesc:ga80cdb4b511de8da89f655b19d45f022f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start UART1 communication with baudrate value.  <br /></td></tr>
+<tr class="separator:ga80cdb4b511de8da89f655b19d45f022f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7ddc3d5b3ec282c794ce615c738414ea" id="r_ga7ddc3d5b3ec282c794ce615c738414ea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode1__timer2__1T.html#ga7ddc3d5b3ec282c794ce615c738414ea">uart1_mode1_timer2_1T_stop</a>&#160;&#160;&#160;(bit_clr(AUXR, CBIT4))</td></tr>
 <tr class="memdesc:ga7ddc3d5b3ec282c794ce615c738414ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop UART1 communication and disable Timer2.  <br /></td></tr>
 <tr class="separator:ga7ddc3d5b3ec282c794ce615c738414ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,9 +129,9 @@ Enumerations</h2></td></tr>
 <div class="line">{</div>
 <div class="line"> <span class="comment">// Send or receive data</span></div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__uart1__mode1__timer2__12T_html_gga041bfeb3611dd3a99d7c742e0d770844a920ff2bd65ec0264e548c65f9beeeebe"><div class="ttname"><a href="group__uart1__mode1__timer2__12T.html#gga041bfeb3611dd3a99d7c742e0d770844a920ff2bd65ec0264e548c65f9beeeebe">baudrate_9600</a></div><div class="ttdeci">@ baudrate_9600</div><div class="ttdoc">9600 baudrate</div><div class="ttdef"><b>Definition</b> uart1_mode1_timer2_12T.h:75</div></div>
-<div class="ttc" id="agroup__uart1__mode1__timer2__1T_html_ga023725778d40b735ae874d71c562ecf9"><div class="ttname"><a href="group__uart1__mode1__timer2__1T.html#ga023725778d40b735ae874d71c562ecf9">uart1_mode1_timer2_1T_start</a></div><div class="ttdeci">#define uart1_mode1_timer2_1T_start(baudrate)</div><div class="ttdoc">Start UART1 communication with standart baudrate value.</div><div class="ttdef"><b>Definition</b> uart1_mode1_timer2_1T.h:145</div></div>
-<div class="ttc" id="agroup__uart1__mode1__timer2__1T_html_ga4f9374565d248b62e78dae19580744f7"><div class="ttname"><a href="group__uart1__mode1__timer2__1T.html#ga4f9374565d248b62e78dae19580744f7">uart1_mode1_timer2_1T_init</a></div><div class="ttdeci">#define uart1_mode1_timer2_1T_init(pins)</div><div class="ttdoc">Initialize UART1 in Mode 1 with Timer2 1T configuration.</div><div class="ttdef"><b>Definition</b> uart1_mode1_timer2_1T.h:104</div></div>
+<div class="ttc" id="agroup__uart1__mode1__timer2__12T_html_gga041bfeb3611dd3a99d7c742e0d770844a920ff2bd65ec0264e548c65f9beeeebe"><div class="ttname"><a href="group__uart1__mode1__timer2__12T.html#gga041bfeb3611dd3a99d7c742e0d770844a920ff2bd65ec0264e548c65f9beeeebe">baudrate_9600</a></div><div class="ttdeci">@ baudrate_9600</div><div class="ttdoc">9600 baudrate</div><div class="ttdef"><b>Definition</b> uart1_mode1_timer2_12T.h:73</div></div>
+<div class="ttc" id="agroup__uart1__mode1__timer2__1T_html_ga023725778d40b735ae874d71c562ecf9"><div class="ttname"><a href="group__uart1__mode1__timer2__1T.html#ga023725778d40b735ae874d71c562ecf9">uart1_mode1_timer2_1T_start</a></div><div class="ttdeci">#define uart1_mode1_timer2_1T_start(baudrate)</div><div class="ttdoc">Start UART1 communication with standart baudrate value.</div><div class="ttdef"><b>Definition</b> uart1_mode1_timer2_1T.h:143</div></div>
+<div class="ttc" id="agroup__uart1__mode1__timer2__1T_html_ga4f9374565d248b62e78dae19580744f7"><div class="ttname"><a href="group__uart1__mode1__timer2__1T.html#ga4f9374565d248b62e78dae19580744f7">uart1_mode1_timer2_1T_init</a></div><div class="ttdeci">#define uart1_mode1_timer2_1T_init(pins)</div><div class="ttdoc">Initialize UART1 in Mode 1 with Timer2 1T configuration.</div><div class="ttdef"><b>Definition</b> uart1_mode1_timer2_1T.h:102</div></div>
 <div class="ttc" id="agroup__uart1__shared_html_ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47"><div class="ttname"><a href="group__uart1__shared.html#ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47">RxD_P30_TxD_P31</a></div><div class="ttdeci">@ RxD_P30_TxD_P31</div><div class="ttdoc">RxD on P3.0 and TxD on P3.1 pins.</div><div class="ttdef"><b>Definition</b> uart1_shared.h:26</div></div>
 </div><!-- fragment --><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__uart1__shared.html#gad9c16ff3593511fc868323e3718ecc1d" title="Sends a single byte over UART1.">uart1_send_byte()</a> </dd>
 <dd>
@@ -137,7 +140,6 @@ Enumerations</h2></td></tr>
 <a class="el" href="group__uart1__shared.html#gaff248c97ad442c4fc9931d4baa5e9854" title="Checks if UART1 send byte operation is complete.">is_uart1_send_byte_complete()</a> </dd>
 <dd>
 <a class="el" href="group__uart1__shared.html#gaa39515c87bdffa2f34570162da6d6d1a" title="Checks if UART1 receive byte operation is complete.">is_uart1_receive_byte_complete()</a></dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>UART1 mode1 in this module is biased by frequency divider.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ga73f223b86f254d562e09a004b379e586" name="ga73f223b86f254d562e09a004b379e586"></a>
@@ -249,7 +251,47 @@ Enumerations</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Before calling this function, <a class="el" href="group__uart1__mode1__timer2__1T.html#ga4f9374565d248b62e78dae19580744f7" title="Initialize UART1 in Mode 1 with Timer2 1T configuration.">uart1_mode1_timer2_1T_init()</a> must be called. </dd>
 <dd>
-Enum contains standard baudrates with precalculated THTL values for 1T mode </dd></dl>
+Enum contains standard baudrates with precalculated THTL values for 1T mode</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>UART1 mode1 in this routine is biased by frequency divider. </dd></dl>
+
+</div>
+</div>
+<a id="ga80cdb4b511de8da89f655b19d45f022f" name="ga80cdb4b511de8da89f655b19d45f022f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga80cdb4b511de8da89f655b19d45f022f">&#9670;&#160;</a></span>uart1_mode1_timer2_1T_start_ext</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define uart1_mode1_timer2_1T_start_ext</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">baudrate</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                            \</div>
+<div class="line">    <span class="keyword">const</span> uint16_t ticks = <a class="code hl_define" href="group__uart1__mode1__timer2__1T.html#ga3f4635bb800f48ea4210a8b9c5b25454">uart1_mode1_timer2_1T_ticks</a>(baudrate);\</div>
+<div class="line">                                                                \</div>
+<div class="line">    <span class="comment">/* Set TH TL values */</span>                                      \</div>
+<div class="line">    T2L = ticks &amp; 0xFF;                                         \</div>
+<div class="line">    T2H = ticks &gt;&gt; 8;                                           \</div>
+<div class="line">                                                                \</div>
+<div class="line">    <span class="comment">/* Start Timer2 */</span>                                          \</div>
+<div class="line">    bit_set(AUXR, SBIT4);                                       \</div>
+<div class="line">} <span class="keywordflow">while</span> (0)</div>
+<div class="ttc" id="agroup__uart1__mode1__timer2__1T_html_ga3f4635bb800f48ea4210a8b9c5b25454"><div class="ttname"><a href="group__uart1__mode1__timer2__1T.html#ga3f4635bb800f48ea4210a8b9c5b25454">uart1_mode1_timer2_1T_ticks</a></div><div class="ttdeci">#define uart1_mode1_timer2_1T_ticks(baudrate)</div><div class="ttdoc">Get UART1 ticks for given baudrate and frequency divider scale.</div><div class="ttdef"><b>Definition</b> uart1_mode1_timer2_1T.h:168</div></div>
+</div><!-- fragment -->
+<p>Start UART1 communication with baudrate value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">baudrate</td><td>const uint32_t Baudrate value. Value may be non standard (not in 1200, 9600 etc).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Before calling this function, <a class="el" href="group__uart1__mode1__timer2__1T.html#ga4f9374565d248b62e78dae19580744f7" title="Initialize UART1 in Mode 1 with Timer2 1T configuration.">uart1_mode1_timer2_1T_init()</a> must be called.</dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>This function is not baudrate overflow safe. </dd></dl>
 
 </div>
 </div>
@@ -287,7 +329,7 @@ Enum contains standard baudrates with precalculated THTL values for 1T mode </dd
 </div><div class="memdoc">
 
 <p>Get UART1 ticks for given baudrate and frequency divider scale. </p>
-<p>Ticks used as input parameter for uart1_mode1_timer2_1T_start_ext()</p>
+<p>Ticks used as input parameter for <a class="el" href="group__uart1__mode1__timer2__1T.html#ga80cdb4b511de8da89f655b19d45f022f" title="Start UART1 communication with baudrate value.">uart1_mode1_timer2_1T_start_ext()</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">baudrate</td><td>uint32_t baudrate</td></tr>
