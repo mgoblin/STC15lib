@@ -145,6 +145,8 @@
 * uart1 module use uart1_mode1_timer2_1T routines
 
 Next releases todo
+* TODO Build with Make/Cmake
+* Build without Platfromio with Scons
 * TODO Support parity bit in uart tx/rx
 * TODO Implement UART mode 2
 * TODO Implement UART mode 3
