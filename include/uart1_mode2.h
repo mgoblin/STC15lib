@@ -10,8 +10,8 @@
 #include <uart1_shared.h>
 
 typedef enum {
-    baudrate_921600 = 921600U,
-    baudrate_5529600 = 5529600U
+    baudrate_172800 = 172800U,
+    baudrate_345600 = 345600U
 } uart1_mode2_baudrate_t;
 
 void uart1_mode2_init(uart1_pins_t pins, uart1_mode2_baudrate_t baudRate);

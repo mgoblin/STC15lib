@@ -150,7 +150,8 @@
 
 
 Next releases todo
-* TODO is mode0 freq biased 
+* TODO is PCON SMOD bit really doble baud rate in mode 1, 2, 3?
+* TODO is mode0 freq biased?
 * TODO Build with Make/Cmake
 * Build without Platfromio with Scons
 * TODO Support parity bit in uart tx/rx
