@@ -144,7 +144,13 @@
 * Timer2 as baudrate generator routines removed from timer2_mode0.h
 * uart1 module use uart1_mode1_timer2_1T routines
 
+0.12.0
+* TODO UART1 mode2 routines implemented
+* TODO UART1 mode3 routines implemented
+
+
 Next releases todo
+* TODO is mode0 freq biased 
 * TODO Build with Make/Cmake
 * Build without Platfromio with Scons
 * TODO Support parity bit in uart tx/rx
