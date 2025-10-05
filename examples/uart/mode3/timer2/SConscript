@@ -1,11 +1,9 @@
 Import('env')
 
-env.Command('uart1_9bit_shared.c', '#src/uart1_9bit_shared.c', Copy('$TARGET', '$SOURCE'))
-
 env.Default(
     env.Program(
         'uart1_mode3_timer2_12T_example',
-        ['uart1_mode3_timer2_12T_example.c', 'uart1_9bit_shared.c']
+        ['uart1_mode3_timer2_12T_example.c']
     ),
 
     env.Program(
