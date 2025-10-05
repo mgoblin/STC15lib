@@ -144,10 +144,9 @@
 * Timer2 as baudrate generator routines removed from timer2_mode0.h
 * uart1 module use uart1_mode1_timer2_1T routines
 
-0.11.1
-* Fix UART1 mode 0 docs and examples. UART1 interrupt is supported
-
 0.12.0
+* Fix UART1 mode 0 docs and examples. UART1 interrupt is supported
+* Fix UART1 mode 0 docs. Baud rate is biased by frequency divider.
 * TODO UART1 mode2 routines implemented
 * TODO UART1 mode3 routines implemented
 

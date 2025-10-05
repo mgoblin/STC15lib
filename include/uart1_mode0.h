@@ -20,6 +20,8 @@
  * Eight data bits are transmitted/received with the least-significant (LSB) first. 
  * The baud rate is fixed at 1/12 (or 1/2) the System clock cycle.
  * 
+ * @attention Baud rate is biased by frequency divider
+ * 
  * @see uart1_send_byte()
  * @see uart1_receive_byte()
  * @see is_uart1_send_byte_complete()
@@ -52,7 +54,9 @@ typedef enum {
  * @param baudRate BaudRate_t The desired baud rate.
  * 
  * @note Assumes system clock is already configured.
- * @note Modifies UART1 control and status registers. Disables UART1 interrupt.
+ * @note Modifies UART1 control and status registers. 
+ * 
+ * @attention Baud rate is biased by frequency divider.
  * 
  * @ingroup uart1_mode0
  */
