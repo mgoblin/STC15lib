@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['baudrate_5f115200_0',['baudrate_115200',['../group__uart1__mode1__timer2__1T.html#gga2e4139c472c0e5df5e673548645c252dad1663f2e950272087d3567b36feced6e',1,'uart1_mode1_timer2_1T.h']]],
-  ['baudrate_5f1200_1',['baudrate_1200',['../group__uart1__mode1__timer2__12T.html#gga041bfeb3611dd3a99d7c742e0d770844a718705004fa5695de866d32509ca3b39',1,'baudrate_1200:&#160;uart1_mode1_timer2_12T.h'],['../group__uart1__mode1__timer2__1T.html#gga2e4139c472c0e5df5e673548645c252da718705004fa5695de866d32509ca3b39',1,'baudrate_1200:&#160;uart1_mode1_timer2_1T.h']]],
-  ['baudrate_5f19200_2',['baudrate_19200',['../group__uart1__mode1__timer2__1T.html#gga2e4139c472c0e5df5e673548645c252da91e02512a0976f46faa9d0fad2b9b4cf',1,'uart1_mode1_timer2_1T.h']]],
-  ['baudrate_5f2400_3',['baudrate_2400',['../group__uart1__mode1__timer2__12T.html#gga041bfeb3611dd3a99d7c742e0d770844a33660d8ce254b79993809e238a915f00',1,'baudrate_2400:&#160;uart1_mode1_timer2_12T.h'],['../group__uart1__mode1__timer2__1T.html#gga2e4139c472c0e5df5e673548645c252da33660d8ce254b79993809e238a915f00',1,'baudrate_2400:&#160;uart1_mode1_timer2_1T.h']]],
-  ['baudrate_5f38400_4',['baudrate_38400',['../group__uart1__mode1__timer2__1T.html#gga2e4139c472c0e5df5e673548645c252dabc512a56c0e90bafeb37f89b4d8c7edb',1,'uart1_mode1_timer2_1T.h']]],
-  ['baudrate_5f4800_5',['baudrate_4800',['../group__uart1__mode1__timer2__12T.html#gga041bfeb3611dd3a99d7c742e0d770844ac3012764c007764284487b2cbee4b550',1,'baudrate_4800:&#160;uart1_mode1_timer2_12T.h'],['../group__uart1__mode1__timer2__1T.html#gga2e4139c472c0e5df5e673548645c252dac3012764c007764284487b2cbee4b550',1,'baudrate_4800:&#160;uart1_mode1_timer2_1T.h']]],
-  ['baudrate_5f57600_6',['baudrate_57600',['../group__uart1__mode1__timer2__1T.html#gga2e4139c472c0e5df5e673548645c252daf6703d9466df62222f997e9d3c7700ec',1,'uart1_mode1_timer2_1T.h']]],
-  ['baudrate_5f9600_7',['baudrate_9600',['../group__uart1__mode1__timer2__12T.html#gga041bfeb3611dd3a99d7c742e0d770844a920ff2bd65ec0264e548c65f9beeeebe',1,'baudrate_9600:&#160;uart1_mode1_timer2_12T.h'],['../group__uart1__mode1__timer2__1T.html#gga2e4139c472c0e5df5e673548645c252da920ff2bd65ec0264e548c65f9beeeebe',1,'baudrate_9600:&#160;uart1_mode1_timer2_1T.h']]]
+  ['add_20library_20to_20your_20project_0',['Add library to your project',['../index.html#autotoc_md2',1,'']]],
+  ['all_20modes_1',['UART1 all modes',['../group__uart1__shared.html',1,'']]],
+  ['aux_2',['aux',['../group__timer0__to__ms.html',1,'Timer0 Aux'],['../group__timer2__to__ms.html',1,'Timer2 Aux']]],
+  ['aux_20common_3',['Timer Aux common',['../group__timer__to__ms.html',1,'']]]
 ];

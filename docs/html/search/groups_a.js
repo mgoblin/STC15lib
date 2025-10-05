@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['simple_20uart1_0',['Simple UART1',['../group__uart.html',1,'']]]
+  ['reset_0',['Reset',['../group__mcu__reset.html',1,'']]]
 ];
