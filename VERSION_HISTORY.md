@@ -153,17 +153,14 @@
 
 Next releases todo
 * TODO is PCON SMOD bit really doble baud rate in mode 1, 2, 3?
-* TODO is mode0 freq biased?
 * TODO Build with Make/Cmake
 * Build without Platfromio with Scons
 * TODO Support parity bit in uart tx/rx
-* TODO Implement UART mode 2
 * TODO Implement UART mode 3
 * TODO Support UART1 relay and broadcast mode
 * Fix delay_ms. On small ms delays it works correctly, but on seconds delay it doubled.
 * use asserts and static_assert
 * TODO Implement P5.4 as MCU reset source
-* TODO Review and fix freq and ticks - incorrect calculation.
 * TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms
 * TODO Review wakeup timer routines. Move from ticks to ms
 
