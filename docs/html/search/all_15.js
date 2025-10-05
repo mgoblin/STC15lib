@@ -32,10 +32,11 @@ var searchData=
   ['uart1_5fmode3_5ftimer2_5f12t_2eh_29',['uart1_mode3_timer2_12T.h',['../uart1__mode3__timer2__12T_8h.html',1,'']]],
   ['uart1_5fmode3_5ftimer2_5f12t_5fbaudrate_5ft_30',['uart1_mode3_timer2_12t_baudrate_t',['../group__uart1__mode3__timer2__12T.html#ga6250d834ff15b17fe8b5fa26d79b7261',1,'uart1_mode3_timer2_12T.h']]],
   ['uart1_5fmode3_5ftimer2_5f12t_5finit_31',['uart1_mode3_timer2_12T_init',['../group__uart1__mode3__timer2__12T.html#gafb69b212a14bf192c342596eaf6dbe13',1,'uart1_mode3_timer2_12T.h']]],
-  ['uart1_5fpins_5ft_32',['uart1_pins_t',['../group__uart1__shared.html#gaed599bf26e2baa98c2d108a072d02337',1,'uart1_shared.h']]],
-  ['uart1_5freceive_5fbyte_33',['uart1_receive_byte',['../group__uart1__shared.html#ga1940b2ddaaec617feb9c59d4a544e939',1,'uart1_shared.h']]],
-  ['uart1_5fsend_5fbyte_34',['uart1_send_byte',['../group__uart1__shared.html#gad9c16ff3593511fc868323e3718ecc1d',1,'uart1_shared.h']]],
-  ['uart1_5fshared_2eh_35',['uart1_shared.h',['../uart1__shared_8h.html',1,'']]],
-  ['use_20it_36',['How to use it',['../index.html#autotoc_md1',1,'']]],
-  ['use_20stc15_20hal_20functions_37',['Use STC15 HAL functions',['../index.html#autotoc_md4',1,'']]]
+  ['uart1_5fmode3_5ftimer2_5f12t_5fstart_32',['uart1_mode3_timer2_12T_start',['../group__uart1__mode3__timer2__12T.html#ga94da3e065017539d333125e86c345f74',1,'uart1_mode3_timer2_12T.h']]],
+  ['uart1_5fpins_5ft_33',['uart1_pins_t',['../group__uart1__shared.html#gaed599bf26e2baa98c2d108a072d02337',1,'uart1_shared.h']]],
+  ['uart1_5freceive_5fbyte_34',['uart1_receive_byte',['../group__uart1__shared.html#ga1940b2ddaaec617feb9c59d4a544e939',1,'uart1_shared.h']]],
+  ['uart1_5fsend_5fbyte_35',['uart1_send_byte',['../group__uart1__shared.html#gad9c16ff3593511fc868323e3718ecc1d',1,'uart1_shared.h']]],
+  ['uart1_5fshared_2eh_36',['uart1_shared.h',['../uart1__shared_8h.html',1,'']]],
+  ['use_20it_37',['How to use it',['../index.html#autotoc_md1',1,'']]],
+  ['use_20stc15_20hal_20functions_38',['Use STC15 HAL functions',['../index.html#autotoc_md4',1,'']]]
 ];

@@ -124,8 +124,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gafb69b212a14bf192c342596eaf6dbe13" id="r_gafb69b212a14bf192c342596eaf6dbe13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode3__timer2__12T.html#gafb69b212a14bf192c342596eaf6dbe13">uart1_mode3_timer2_12T_init</a>(pins)</td></tr>
 <tr class="memdesc:gafb69b212a14bf192c342596eaf6dbe13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize UART1 in Mode 1 with Timer2 12T configuration.  <br /></td></tr>
 <tr class="separator:gafb69b212a14bf192c342596eaf6dbe13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94da3e065017539d333125e86c345f74" id="r_a94da3e065017539d333125e86c345f74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart1__mode3__timer2__12T_8h.html#a94da3e065017539d333125e86c345f74">uart1_mode3_timer2_12T_start</a>(baudrate)</td></tr>
-<tr class="separator:a94da3e065017539d333125e86c345f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga94da3e065017539d333125e86c345f74" id="r_ga94da3e065017539d333125e86c345f74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode3__timer2__12T.html#ga94da3e065017539d333125e86c345f74">uart1_mode3_timer2_12T_start</a>(baudrate)</td></tr>
+<tr class="memdesc:ga94da3e065017539d333125e86c345f74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start UART1 communication with standart baudrate value.  <br /></td></tr>
+<tr class="separator:ga94da3e065017539d333125e86c345f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01159e14523c654614f68af2ea720a91" id="r_a01159e14523c654614f68af2ea720a91"><td class="memItemLeft" align="right" valign="top"><a id="a01159e14523c654614f68af2ea720a91" name="a01159e14523c654614f68af2ea720a91"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>uart1_mode3_timer2_12T_ticks</b>(baudrate)&#160;&#160;&#160;(65536 - ((((<a class="el" href="sys_8h.html#aa52cf4efd75d43c7917d9eec3becd2fa">MAIN_Fosc</a> / 12) / baudrate) &gt;&gt; 2) &gt;&gt; <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td></tr>
 <tr class="separator:a01159e14523c654614f68af2ea720a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,32 +150,6 @@ Enumerations</h2></td></tr>
 <tr class="separator:ga6250d834ff15b17fe8b5fa26d79b7261"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a94da3e065017539d333125e86c345f74" name="a94da3e065017539d333125e86c345f74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94da3e065017539d333125e86c345f74">&#9670;&#160;</a></span>uart1_mode3_timer2_12T_start</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define uart1_mode3_timer2_12T_start</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">baudrate</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                            \</div>
-<div class="line">    <span class="comment">/* Set TH TL values */</span>                                      \</div>
-<div class="line">    T2L = baudrate &amp; 0xFF;                                      \</div>
-<div class="line">    T2H = baudrate &gt;&gt; 8;                                        \</div>
-<div class="line">                                                                \</div>
-<div class="line">    <span class="comment">/* Start Timer2 */</span>                                          \</div>
-<div class="line">    bit_set(AUXR, SBIT4);                                       \</div>
-<div class="line">} <span class="keywordflow">while</span> (0)</div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="a319d6a1d21569b9e1ebfb22e452b0eaf" name="a319d6a1d21569b9e1ebfb22e452b0eaf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a319d6a1d21569b9e1ebfb22e452b0eaf">&#9670;&#160;</a></span>uart1_mode3_timer2_12T_start_ext</h2>
 
