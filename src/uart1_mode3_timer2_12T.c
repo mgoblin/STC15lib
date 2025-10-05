@@ -37,11 +37,6 @@ void uart1_mode3_timer2_12T_start(uart1_mode3_timer2_12t_baudrate_t baudrate)
     bit_set(AUXR, SBIT4);
 }
 
-void uart1_mode3_timer2_12T_start_ext(uart1_mode3_timer2_12t_baudrate_t baudrate)
-{
-
-}
-
 #define LED P10
 
 void uart1_ISTR() __interrupt(4)

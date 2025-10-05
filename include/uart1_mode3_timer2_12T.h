@@ -27,7 +27,18 @@ void uart1_mode3_timer2_12T_start(uart1_mode3_timer2_12t_baudrate_t baudrate);
 
 #define uart1_mode3_timer2_12T_ticks(baudrate) (65536 - ((((MAIN_Fosc / 12) / baudrate) >> 2) >> get_frequency_divider_scale()))
 
-void uart1_mode3_timer2_12T_start_ext(uart1_mode3_timer2_12t_baudrate_t baudrate);
+#define uart1_mode3_timer2_12T_start_ext(baudrate)              \
+do {                                                            \
+    const uint16_t ticks = uart1_mode1_timer2_12T_ticks(baudrate);\
+                                                                \
+    /* Set TH TL values */                                      \
+    T2L = ticks & 0xFF;                                         \
+    T2H = ticks >> 8;                                           \
+                                                                \
+    /* Start Timer2 */                                          \
+    bit_set(AUXR, SBIT4);                                       \
+} while (0)
+
 
 #define uart1_mode3_timer2_12T_stop (bit_clr(AUXR, CBIT4))
 

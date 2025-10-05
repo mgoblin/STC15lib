@@ -106,13 +106,24 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#define uart1_mode3_timer2_12T_ticks(baudrate) (65536 - ((((MAIN_Fosc / 12) / baudrate) &gt;&gt; 2) &gt;&gt; get_frequency_divider_scale()))</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">void</span> uart1_mode3_timer2_12T_start_ext(uart1_mode3_timer2_12t_baudrate_t baudrate);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#define uart1_mode3_timer2_12T_stop (bit_clr(AUXR, CBIT4))</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#define is_uart1_mode3_timer2_12T_started() (test_if_bit_set(AUXR, SBIT4))</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define uart1_mode3_timer2_12T_start_ext(baudrate)              \</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">do {                                                            \</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">    const uint16_t ticks = uart1_mode1_timer2_12T_ticks(baudrate);\</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">                                                                \</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">    </span><span class="comment">/* Set TH TL values */</span><span class="preprocessor">                                      \</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">    T2L = ticks &amp; 0xFF;                                         \</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">    T2H = ticks &gt;&gt; 8;                                           \</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">                                                                \</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">    </span><span class="comment">/* Start Timer2 */</span><span class="preprocessor">                                          \</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">    bit_set(AUXR, SBIT4);                                       \</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">} while (0)</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#define uart1_mode3_timer2_12T_stop (bit_clr(AUXR, CBIT4))</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#define is_uart1_mode3_timer2_12T_started() (test_if_bit_set(AUXR, SBIT4))</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="afrequency_8h_html"><div class="ttname"><a href="frequency_8h.html">frequency.h</a></div></div>
 <div class="ttc" id="agroup__uart1__mode1__timer2__12T_html_gga041bfeb3611dd3a99d7c742e0d770844a33660d8ce254b79993809e238a915f00"><div class="ttname"><a href="group__uart1__mode1__timer2__12T.html#gga041bfeb3611dd3a99d7c742e0d770844a33660d8ce254b79993809e238a915f00">baudrate_2400</a></div><div class="ttdeci">@ baudrate_2400</div><div class="ttdoc">2400 baudrate</div><div class="ttdef"><b>Definition</b> uart1_mode1_timer2_12T.h:71</div></div>
 <div class="ttc" id="agroup__uart1__mode1__timer2__12T_html_gga041bfeb3611dd3a99d7c742e0d770844a718705004fa5695de866d32509ca3b39"><div class="ttname"><a href="group__uart1__mode1__timer2__12T.html#gga041bfeb3611dd3a99d7c742e0d770844a718705004fa5695de866d32509ca3b39">baudrate_1200</a></div><div class="ttdeci">@ baudrate_1200</div><div class="ttdoc">1200 baudrate</div><div class="ttdef"><b>Definition</b> uart1_mode1_timer2_12T.h:69</div></div>
