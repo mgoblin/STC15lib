@@ -150,6 +150,8 @@
 * TODO Fix README content in subfolders
 * UART1 mode2 routines implemented
 * TODO UART1 mode3 routines implemented
+* TODO Support 9th bit
+* TODO Support parity bit in uart tx/rx
 
 
 Next releases todo
@@ -157,7 +159,6 @@ Next releases todo
 * TODO Build with Make/Cmake
 * Build without Platfromio with Scons
 * TODO Support parity bit in uart tx/rx
-* TODO Implement UART mode 3
 * TODO Support UART1 relay and broadcast mode
 * Fix delay_ms. On small ms delays it works correctly, but on seconds delay it doubled.
 * use asserts and static_assert
