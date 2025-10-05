@@ -17,10 +17,10 @@ void main()
 
     while (1)
     {
-        uart1_send_byte('O');
-        uart1_send_byte('k');
-        uart1_send_byte('\r');
-        uart1_send_byte('\n');
+        uart1_send_9bit('O', 1);
+        uart1_send_9bit('k', 1);
+        uart1_send_9bit('\r', 1);
+        uart1_send_9bit('\n', 1);
 
         // LED off
         LED = 1;

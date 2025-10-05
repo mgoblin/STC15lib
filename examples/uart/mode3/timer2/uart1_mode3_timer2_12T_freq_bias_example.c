@@ -25,11 +25,11 @@ void main()
     {
         LED = !LED;
 
-        uart1_send_byte(' ');
-        uart1_send_byte('O');
-        uart1_send_byte('k');
-        uart1_send_byte('\r');
-        uart1_send_byte('\n');
+        uart1_send_9bit(' ', 0);
+        uart1_send_9bit('O', 1);
+        uart1_send_9bit('k', 0);
+        uart1_send_9bit('\r', 1);
+        uart1_send_9bit('\n', 0);
 
         delay_ms(500);
     }
