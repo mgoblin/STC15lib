@@ -86,9 +86,9 @@ Enumerations</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader">init</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>UART1 initialization functions </p>
 </td></tr>
-<tr class="memitem:gae3a36123e422cc6b7aef7bf2145b969f" id="r_gae3a36123e422cc6b7aef7bf2145b969f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode2.html#gae3a36123e422cc6b7aef7bf2145b969f">uart1_mode2_init</a> (<a class="el" href="group__uart1__shared.html#gaed599bf26e2baa98c2d108a072d02337">uart1_pins_t</a> pins, <a class="el" href="group__uart1__mode2.html#gac02fbfac5b05a9c1971d398289296f30">uart1_mode2_baudrate_t</a> baudRate)</td></tr>
-<tr class="memdesc:gae3a36123e422cc6b7aef7bf2145b969f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes UART1 in Mode 0.  <br /></td></tr>
-<tr class="separator:gae3a36123e422cc6b7aef7bf2145b969f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b1bc90cb8810eb52c896a7cc905b04c" id="r_ga1b1bc90cb8810eb52c896a7cc905b04c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode2.html#ga1b1bc90cb8810eb52c896a7cc905b04c">uart1_mode2_init</a>(pins,  baudRate)</td></tr>
+<tr class="memdesc:ga1b1bc90cb8810eb52c896a7cc905b04c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes UART1 in Mode 0.  <br /></td></tr>
+<tr class="separator:ga1b1bc90cb8810eb52c896a7cc905b04c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions and data structures for UART1 communication in Mode 2.</p>
@@ -103,24 +103,24 @@ Enumerations</h2></td></tr>
 <dd>
 <a class="el" href="group__uart1__shared.html#gaa39515c87bdffa2f34570162da6d6d1a" title="Checks if UART1 receive byte operation is complete.">is_uart1_receive_byte_complete()</a></dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="gae3a36123e422cc6b7aef7bf2145b969f" name="gae3a36123e422cc6b7aef7bf2145b969f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae3a36123e422cc6b7aef7bf2145b969f">&#9670;&#160;</a></span>uart1_mode2_init()</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga1b1bc90cb8810eb52c896a7cc905b04c" name="ga1b1bc90cb8810eb52c896a7cc905b04c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1b1bc90cb8810eb52c896a7cc905b04c">&#9670;&#160;</a></span>uart1_mode2_init</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void uart1_mode2_init </td>
+          <td class="memname">#define uart1_mode2_init</td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group__uart1__shared.html#gaed599bf26e2baa98c2d108a072d02337">uart1_pins_t</a>&#160;</td>
-          <td class="paramname"><em>pins</em>, </td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pins, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__uart1__mode2.html#gac02fbfac5b05a9c1971d398289296f30">uart1_mode2_baudrate_t</a>&#160;</td>
-          <td class="paramname"><em>baudRate</em>&#160;</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">baudRate&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -129,7 +129,21 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                            \</div>
+<div class="line">    enable_mcu_interrupts();                                                    \</div>
+<div class="line">    enable_uart1_interrupt();                                                   \</div>
+<div class="line">                                                                                \</div>
+<div class="line">    <span class="comment">/* PCON.7 always set to 1. Is it error? */</span>                                  \</div>
+<div class="line">    baudRate == baudrate_345600 ? bit_set(PCON, SBIT7) : bit_clr(PCON, SBIT7);  \</div>
+<div class="line">                                                                                \</div>
+<div class="line">    <span class="comment">/* SM1 = 1, SM0 = 0 to select UART1 mode2 */</span>                                \</div>
+<div class="line">    SCON = 0x90;                                                                \</div>
+<div class="line">                                                                                \</div>
+<div class="line">    <span class="comment">/* Set AUXR1 bits 6, 7 to select RxD/TxD pins */</span>                            \</div>
+<div class="line">    AUXR1 &amp;= 0x3F;                                                              \</div>
+<div class="line">    AUXR1 |= pins;                                                              \</div>
+<div class="line">} <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
 <p>Initializes UART1 in Mode 0. </p>
 <p>Must be called before any UART communication is initiated.</p>
 <dl class="params"><dt>Parameters</dt><dd>

@@ -27,7 +27,7 @@ var searchData=
   ['uart1_5fmode1_5ftimer2_5f1t_5fticks_24',['uart1_mode1_timer2_1T_ticks',['../group__uart1__mode1__timer2__1T.html#ga3f4635bb800f48ea4210a8b9c5b25454',1,'uart1_mode1_timer2_1T.h']]],
   ['uart1_5fmode2_2eh_25',['uart1_mode2.h',['../uart1__mode2_8h.html',1,'']]],
   ['uart1_5fmode2_5fbaudrate_5ft_26',['uart1_mode2_baudrate_t',['../group__uart1__mode2.html#gac02fbfac5b05a9c1971d398289296f30',1,'uart1_mode2.h']]],
-  ['uart1_5fmode2_5finit_27',['uart1_mode2_init',['../group__uart1__mode2.html#gae3a36123e422cc6b7aef7bf2145b969f',1,'uart1_mode2_init(uart1_pins_t pins, uart1_mode2_baudrate_t baudRate):&#160;uart1_mode2.c'],['../group__uart1__mode2.html#gae3a36123e422cc6b7aef7bf2145b969f',1,'uart1_mode2_init(uart1_pins_t pins, uart1_mode2_baudrate_t baudRate):&#160;uart1_mode2.c']]],
+  ['uart1_5fmode2_5finit_27',['uart1_mode2_init',['../group__uart1__mode2.html#ga1b1bc90cb8810eb52c896a7cc905b04c',1,'uart1_mode2.h']]],
   ['uart1_5fpins_5ft_28',['uart1_pins_t',['../group__uart1__shared.html#gaed599bf26e2baa98c2d108a072d02337',1,'uart1_shared.h']]],
   ['uart1_5freceive_5fbyte_29',['uart1_receive_byte',['../group__uart1__shared.html#ga1940b2ddaaec617feb9c59d4a544e939',1,'uart1_shared.h']]],
   ['uart1_5fsend_5fbyte_30',['uart1_send_byte',['../group__uart1__shared.html#gad9c16ff3593511fc868323e3718ecc1d',1,'uart1_shared.h']]],

@@ -147,7 +147,7 @@
 0.12.0
 * Fix UART1 mode 0 docs and examples. UART1 interrupt is supported
 * Fix UART1 mode 0 docs. Baud rate is biased by frequency divider.
-* TODO UART1 mode2 routines implemented
+* UART1 mode2 routines implemented
 * TODO UART1 mode3 routines implemented
 
 
