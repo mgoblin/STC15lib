@@ -42,7 +42,7 @@ typedef enum {
 } uart1_mode0_baudrate_t;
 
 /** @name init
- *  UART1 initializaion functions
+ *  UART1 initialization functions
  */
 ///@{
 
@@ -51,10 +51,7 @@ typedef enum {
  * 
  * Must be called before any UART communication is initiated.
  * 
- * @param baudRate BaudRate_t The desired baud rate.
- * 
- * @note Assumes system clock is already configured.
- * @note Modifies UART1 control and status registers. 
+ * @param baudRate uart1_mode0_baudrate_t The desired baud rate.
  * 
  * @attention Baud rate is biased by frequency divider.
  * 

@@ -84,7 +84,7 @@ Enumerations</h2></td></tr>
 <tr class="separator:ga840b04aa551a0bec3b74c44e7042505a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">init</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p>UART1 initializaion functions </p>
+<tr><td class="ititle" colspan="2"><p>UART1 initialization functions </p>
 </td></tr>
 <tr class="memitem:gae9db2cd5aef3ace87c9ca6ff9cd83970" id="r_gae9db2cd5aef3ace87c9ca6ff9cd83970"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode0.html#gae9db2cd5aef3ace87c9ca6ff9cd83970">uart1_mode0_init</a>(baudRate)</td></tr>
 <tr class="memdesc:gae9db2cd5aef3ace87c9ca6ff9cd83970"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes UART1 in Mode 0.  <br /></td></tr>
@@ -133,13 +133,10 @@ Enumerations</h2></td></tr>
 <p>Must be called before any UART communication is initiated.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">baudRate</td><td>BaudRate_t The desired baud rate.</td></tr>
+    <tr><td class="paramname">baudRate</td><td>uart1_mode0_baudrate_t The desired baud rate.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Assumes system clock is already configured. </dd>
-<dd>
-Modifies UART1 control and status registers.</dd></dl>
 <dl class="section attention"><dt>Attention</dt><dd>Baud rate is biased by frequency divider. </dd></dl>
 
 </div>

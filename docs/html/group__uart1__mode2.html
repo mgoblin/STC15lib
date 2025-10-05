@@ -69,9 +69,28 @@ $(function() {
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle"><div class="title">UART1 Mode2</div></div>
 </div><!--header-->
 <div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:gac02fbfac5b05a9c1971d398289296f30" id="r_gac02fbfac5b05a9c1971d398289296f30"><td class="memItemLeft" align="right" valign="top"><a id="gac02fbfac5b05a9c1971d398289296f30" name="gac02fbfac5b05a9c1971d398289296f30"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode2.html#gac02fbfac5b05a9c1971d398289296f30">uart1_mode2_baudrate_t</a> { <b>baudrate_172800</b> = 172800U
+, <b>baudrate_345600</b> = 345600U
+ }</td></tr>
+<tr class="memdesc:gac02fbfac5b05a9c1971d398289296f30"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART1 baud rate enumeration. <br /></td></tr>
+<tr class="separator:gac02fbfac5b05a9c1971d398289296f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">init</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>UART1 initialization functions </p>
+</td></tr>
+<tr class="memitem:gae3a36123e422cc6b7aef7bf2145b969f" id="r_gae3a36123e422cc6b7aef7bf2145b969f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode2.html#gae3a36123e422cc6b7aef7bf2145b969f">uart1_mode2_init</a> (<a class="el" href="group__uart1__shared.html#gaed599bf26e2baa98c2d108a072d02337">uart1_pins_t</a> pins, <a class="el" href="group__uart1__mode2.html#gac02fbfac5b05a9c1971d398289296f30">uart1_mode2_baudrate_t</a> baudRate)</td></tr>
+<tr class="memdesc:gae3a36123e422cc6b7aef7bf2145b969f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes UART1 in Mode 0.  <br /></td></tr>
+<tr class="separator:gae3a36123e422cc6b7aef7bf2145b969f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions and data structures for UART1 communication in Mode 2.</p>
 <p>Mode 2 provides asynchronous communication with fixed baud rate and 9-bit data. 9-N-1.</p>
 <p>The baud rate is fixed at 1/32 (or 1/64) the System clock cycle.</p>
@@ -84,6 +103,46 @@ $(function() {
 <dd>
 <a class="el" href="group__uart1__shared.html#gaa39515c87bdffa2f34570162da6d6d1a" title="Checks if UART1 receive byte operation is complete.">is_uart1_receive_byte_complete()</a></dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gae3a36123e422cc6b7aef7bf2145b969f" name="gae3a36123e422cc6b7aef7bf2145b969f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae3a36123e422cc6b7aef7bf2145b969f">&#9670;&#160;</a></span>uart1_mode2_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uart1_mode2_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__uart1__shared.html#gaed599bf26e2baa98c2d108a072d02337">uart1_pins_t</a>&#160;</td>
+          <td class="paramname"><em>pins</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__uart1__mode2.html#gac02fbfac5b05a9c1971d398289296f30">uart1_mode2_baudrate_t</a>&#160;</td>
+          <td class="paramname"><em>baudRate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes UART1 in Mode 0. </p>
+<p>Must be called before any UART communication is initiated.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pins</td><td>uart1_pins_t The desired UART1 pins. </td></tr>
+    <tr><td class="paramname">baudRate</td><td>uart1_mode2_baudrate_t The desired UART1 baud rate.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section attention"><dt>Attention</dt><dd>Baud rate is biased by frequency divider. </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

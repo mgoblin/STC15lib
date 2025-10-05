@@ -29,12 +29,34 @@
  * 
  * @author Michael Golovanov
  */
-
+/**
+ * @brief UART1 baud rate enumeration
+ * 
+ * @ingroup uart1_mode2
+ */
 typedef enum {
     baudrate_172800 = 172800U,
     baudrate_345600 = 345600U
 } uart1_mode2_baudrate_t;
 
+/** @name init
+ *  UART1 initialization functions
+ */
+///@{
+
+/**
+ * @brief Initializes UART1 in Mode 0.
+ * 
+ * Must be called before any UART communication is initiated.
+ * 
+ * @param pins uart1_pins_t The desired UART1 pins.
+ * @param baudRate uart1_mode2_baudrate_t The desired UART1 baud rate.
+ * 
+ * @attention Baud rate is biased by frequency divider.
+ * 
+ * @ingroup uart1_mode2
+*/
 void uart1_mode2_init(uart1_pins_t pins, uart1_mode2_baudrate_t baudRate);
 
+///@}
 #endif
