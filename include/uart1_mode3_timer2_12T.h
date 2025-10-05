@@ -51,8 +51,8 @@
  * 
  * ``` 
  * 
- * @see uart1_send_byte()
- * @see uart1_receive_byte()
+ * @see uart1_send_9bit()
+ * @see uart1_receive_9bit()
  * @see is_uart1_send_byte_complete()
  * @see is_uart1_receive_byte_complete()
  * 

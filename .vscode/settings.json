@@ -33,7 +33,8 @@
         "uart1_shared.h": "c",
         "timer2_mode0.h": "c",
         "uart1_mode2.h": "c",
-        "stdbool.h": "c"
+        "stdbool.h": "c",
+        "uart1_9bit_shared.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
