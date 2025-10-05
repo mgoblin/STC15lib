@@ -21,9 +21,42 @@ typedef enum
     baudrate_9600 = 0xFFE7,
 } uart1_mode3_timer2_12t_baudrate_t;
 
-void uart1_mode3_timer2_12T_init(uart1_pins_t pins);
+#define uart1_mode3_timer2_12T_init(pins)                       \
+do {                                                            \
+    enable_mcu_interrupts();                                    \
+    enable_uart1_interrupt();                                   \
+    disable_timer2_interrupt();                                 \
+                                                                \
+    PCON &= 0x3F;                                               \
+    SCON = 0xD0;                                                \
+                                                                \
+    /* The clock source of Timer 2 is SYSclk/12. AUXR.T2x12 = 0 */ \
+    /* AUXR.UART_M0x6 = 0 */                                    \
+    /* Timer2 is not started. AUXR.T2R = 0 */                   \
+    /* Timer2 are used as timer. AUXR.T2_C/T = 0 */             \
+    AUXR &= 0xC2;                                               \
+                                                                \
+    /* Select Timer2 as UART1 baud rate generator. AUXR.S1ST2 = 1; */ \
+    bit_set(AUXR, SBIT0);                                       \
+                                                                \
+    /* Point-to-point mode */                                   \
+    bit_clr(CLK_DIV, CBIT4);                                    \
+                                                                \
+    /* Set AUXR1 bits 6, 7 to select RxD/TxD pins */            \
+    AUXR1 &= 0x3F;                                              \
+    AUXR1 |= pins;                                              \
+} while (0)    
 
-void uart1_mode3_timer2_12T_start(uart1_mode3_timer2_12t_baudrate_t baudrate);
+
+#define uart1_mode3_timer2_12T_start(baudrate)                  \
+do {                                                            \
+    /* Set TH TL values */                                      \
+    T2L = baudrate & 0xFF;                                      \
+    T2H = baudrate >> 8;                                        \
+                                                                \
+    /* Start Timer2 */                                          \
+    bit_set(AUXR, SBIT4);                                       \
+} while (0)
 
 #define uart1_mode3_timer2_12T_ticks(baudrate) (65536 - ((((MAIN_Fosc / 12) / baudrate) >> 2) >> get_frequency_divider_scale()))
 
