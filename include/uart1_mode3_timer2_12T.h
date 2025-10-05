@@ -76,6 +76,23 @@ typedef enum
     baudrate_9600 = 0xFFE7,
 } uart1_mode3_timer2_12t_baudrate_t;
 
+/**
+ * @brief Initialize UART1 in Mode 1 with Timer2 12T configuration
+ * 
+ * @details
+ * The clock source of Timer2 is SYSclk/12. AUXR.T2x12 = 0.
+ * AUXR.UART_M0x6 = 0.
+ * Timer2 are used as timer. AUXR.T2_C/T = 0.
+ * Timer2 is not started. AUXR.T2R = 0.
+ * 
+ * @see uart1_pins_t
+ * 
+ * @param pins Pin configuration from uart1_pins_t enum
+ * 
+ * @note Must be called before starting UART communication
+ * 
+ * @ingroup uart1_mode3_timer2_12T
+ */
 #define uart1_mode3_timer2_12T_init(pins)                       \
 do {                                                            \
     enable_mcu_interrupts();                                    \

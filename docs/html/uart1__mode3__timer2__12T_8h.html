@@ -121,8 +121,9 @@ Include dependency graph for uart1_mode3_timer2_12T.h:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:afb69b212a14bf192c342596eaf6dbe13" id="r_afb69b212a14bf192c342596eaf6dbe13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart1__mode3__timer2__12T_8h.html#afb69b212a14bf192c342596eaf6dbe13">uart1_mode3_timer2_12T_init</a>(pins)</td></tr>
-<tr class="separator:afb69b212a14bf192c342596eaf6dbe13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafb69b212a14bf192c342596eaf6dbe13" id="r_gafb69b212a14bf192c342596eaf6dbe13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode3__timer2__12T.html#gafb69b212a14bf192c342596eaf6dbe13">uart1_mode3_timer2_12T_init</a>(pins)</td></tr>
+<tr class="memdesc:gafb69b212a14bf192c342596eaf6dbe13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize UART1 in Mode 1 with Timer2 12T configuration.  <br /></td></tr>
+<tr class="separator:gafb69b212a14bf192c342596eaf6dbe13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94da3e065017539d333125e86c345f74" id="r_a94da3e065017539d333125e86c345f74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart1__mode3__timer2__12T_8h.html#a94da3e065017539d333125e86c345f74">uart1_mode3_timer2_12T_start</a>(baudrate)</td></tr>
 <tr class="separator:a94da3e065017539d333125e86c345f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01159e14523c654614f68af2ea720a91" id="r_a01159e14523c654614f68af2ea720a91"><td class="memItemLeft" align="right" valign="top"><a id="a01159e14523c654614f68af2ea720a91" name="a01159e14523c654614f68af2ea720a91"></a>
@@ -148,48 +149,6 @@ Enumerations</h2></td></tr>
 <tr class="separator:ga6250d834ff15b17fe8b5fa26d79b7261"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="afb69b212a14bf192c342596eaf6dbe13" name="afb69b212a14bf192c342596eaf6dbe13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb69b212a14bf192c342596eaf6dbe13">&#9670;&#160;</a></span>uart1_mode3_timer2_12T_init</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define uart1_mode3_timer2_12T_init</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">pins</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                            \</div>
-<div class="line">    enable_mcu_interrupts();                                    \</div>
-<div class="line">    enable_uart1_interrupt();                                   \</div>
-<div class="line">    disable_timer2_interrupt();                                 \</div>
-<div class="line">                                                                \</div>
-<div class="line">    PCON &amp;= 0x3F;                                               \</div>
-<div class="line">    SCON = 0xD0;                                                \</div>
-<div class="line">                                                                \</div>
-<div class="line">    <span class="comment">/* The clock source of Timer 2 is SYSclk/12. AUXR.T2x12 = 0 */</span> \</div>
-<div class="line">    <span class="comment">/* AUXR.UART_M0x6 = 0 */</span>                                    \</div>
-<div class="line">    <span class="comment">/* Timer2 is not started. AUXR.T2R = 0 */</span>                   \</div>
-<div class="line">    <span class="comment">/* Timer2 are used as timer. AUXR.T2_C/T = 0 */</span>             \</div>
-<div class="line">    AUXR &amp;= 0xC2;                                               \</div>
-<div class="line">                                                                \</div>
-<div class="line">    <span class="comment">/* Select Timer2 as UART1 baud rate generator. AUXR.S1ST2 = 1; */</span> \</div>
-<div class="line">    bit_set(AUXR, SBIT0);                                       \</div>
-<div class="line">                                                                \</div>
-<div class="line">    <span class="comment">/* Point-to-point mode */</span>                                   \</div>
-<div class="line">    bit_clr(CLK_DIV, CBIT4);                                    \</div>
-<div class="line">                                                                \</div>
-<div class="line">    <span class="comment">/* Set AUXR1 bits 6, 7 to select RxD/TxD pins */</span>            \</div>
-<div class="line">    AUXR1 &amp;= 0x3F;                                              \</div>
-<div class="line">    AUXR1 |= pins;                                              \</div>
-<div class="line">} <span class="keywordflow">while</span> (0)</div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="a94da3e065017539d333125e86c345f74" name="a94da3e065017539d333125e86c345f74"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a94da3e065017539d333125e86c345f74">&#9670;&#160;</a></span>uart1_mode3_timer2_12T_start</h2>
 
