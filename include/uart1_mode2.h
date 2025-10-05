@@ -6,7 +6,7 @@
 #include <sys.h>
 #include <bits.h>
 #include <interrupt.h>
-#include <uart1_shared.h>
+#include <uart1_9bit_shared.h>
 
 /**
  * @file uart1_mode2.h
@@ -21,8 +21,8 @@
  * 
  * @attention Baud rate is biased by frequency divider
  * 
- * @see uart1_send_byte()
- * @see uart1_receive_byte()
+ * @see uart1_send_9bit()
+ * @see uart1_receive_9bit()
  * @see is_uart1_send_byte_complete()
  * @see is_uart1_receive_byte_complete()
  
