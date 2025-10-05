@@ -2,12 +2,21 @@
 #define STC15_UART1MODE2H
 
 #include <stdint.h>
-#include <stdbool.h>
 
 #include <sys.h>
 #include <bits.h>
 #include <interrupt.h>
 #include <uart1_shared.h>
+
+/**
+ * @file uart1_mode2.h
+ * @defgroup uart1_mode2 UART1 Mode2
+ * 
+ * @details Functions and data structures for UART1 communication in Mode 2.
+ * 
+ * Mode 2 provides asynchronous communication with fixed baud rate and 9-bit data.
+ * 
+ */
 
 typedef enum {
     baudrate_172800 = 172800U,

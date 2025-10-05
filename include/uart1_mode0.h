@@ -20,8 +20,6 @@
  * Eight data bits are transmitted/received with the least-significant (LSB) first. 
  * The baud rate is fixed at 1/12 (or 1/2) the System clock cycle.
  * 
- * This module routines does not support UART1 interrupts.
- * 
  * @see uart1_send_byte()
  * @see uart1_receive_byte()
  * @see is_uart1_send_byte_complete()

@@ -1,0 +1,21 @@
+<map id="include/uart1_mode2.h" name="include/uart1_mode2.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="111,5,282,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,76,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,33,80,75,78,70,171,28"/>
+<area shape="rect" id="Node000003" href="$sys_8h.html" title=" " alt="" coords="75,152,131,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,33,163,54,142,80,125,110,114,140,109,138,120,108,137,77,159,50,181,29"/>
+<area shape="rect" id="Node000006" href="$bits_8h_source.html" title=" " alt="" coords="262,152,321,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="212,29,234,50,256,77,273,108,286,138,281,140,268,110,252,80,230,54,209,33"/>
+<area shape="rect" id="Node000007" href="$interrupt_8h.html" title=" " alt="" coords="151,79,242,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="199,31,199,65,194,65,194,31"/>
+<area shape="rect" id="Node000009" href="$uart1__shared_8h.html" title=" " alt="" coords="317,79,436,104"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="227,28,336,71,334,76,225,33"/>
+<area shape="rect" id="Node000004" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="54,225,153,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="106,178,106,212,101,212,101,178"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="58,299,149,324"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="106,251,106,285,101,285,101,251"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="183,106,131,146,128,141,180,102"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="213,102,266,141,263,146,210,106"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="155,152,238,177"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="199,104,199,138,194,138,194,104"/>
+</map>
