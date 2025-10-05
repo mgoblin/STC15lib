@@ -7,7 +7,7 @@
 #include <bits.h>
 #include <frequency.h>
 #include <interrupt.h>
-#include <uart1_shared.h>
+#include <uart1_9bit_shared.h>
 
 /**
  * @file uart1_mode3_timer2_12T.h
