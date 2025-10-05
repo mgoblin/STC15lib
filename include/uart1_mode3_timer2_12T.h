@@ -158,6 +158,17 @@ do {                                                            \
  */
 #define uart1_mode3_timer2_12T_ticks(baudrate) (65536 - ((((MAIN_Fosc / 12) / baudrate) >> 2) >> get_frequency_divider_scale()))
 
+/**
+ * @brief Start UART1 communication with baudrate value
+ * 
+ * @ingroup uart1_mode3_timer2_12T
+ * 
+ * @param baudrate const uint32_t Baudrate value. Value may be non standard (not in 1200, 9600 etc).
+ * 
+ * @note Before calling this function, uart1_mode3_timer2_12T_init() must be called.
+ * 
+ * @attention This function is not baudrate overflow safe.
+ */
 #define uart1_mode3_timer2_12T_start_ext(baudrate)              \
 do {                                                            \
     const uint16_t ticks = uart1_mode1_timer2_12T_ticks(baudrate);\
@@ -170,9 +181,21 @@ do {                                                            \
     bit_set(AUXR, SBIT4);                                       \
 } while (0)
 
-
+/**
+ * @brief Stop UART1 communication and disable Timer2
+ * 
+ * @ingroup uart1_mode3_timer2_12T
+ * 
+ * @warning Calling this function will terminate any ongoing communication
+ */
 #define uart1_mode3_timer2_12T_stop (bit_clr(AUXR, CBIT4))
 
+/**
+ * @brief Is UART1 started?
+ * @return bool returns true if UART1 started otherwise false.
+ * 
+ * @ingroup uart1_mode3_timer2_12T
+ */
 #define is_uart1_mode3_timer2_12T_started() (test_if_bit_set(AUXR, SBIT4))
 
 #endif

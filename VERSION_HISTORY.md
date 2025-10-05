@@ -150,8 +150,8 @@
 * TODO Fix README content in subfolders
 * UART1 mode2 routines implemented
 * TODO UART1 mode3 timer2 12T routines implemented
-    * TODO Document all routines
     * TODO Examples
+    * TODO Support 9th bit
 * TODO UART1 mode3 timer2 1T routines implemented
 * TODO Support 9th bit
 * TODO Support parity bit in uart tx/rx
