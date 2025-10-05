@@ -147,7 +147,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="foldopen" id="foldopen00172" data-start="" data-end="">
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="group__uart1__mode3__timer2__12T.html#ga319d6a1d21569b9e1ebfb22e452b0eaf">  172</a></span><span class="preprocessor">#define uart1_mode3_timer2_12T_start_ext(baudrate)              \</span></div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="preprocessor">do {                                                            \</span></div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="preprocessor">    const uint16_t ticks = uart1_mode1_timer2_12T_ticks(baudrate);\</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="preprocessor">    const uint16_t ticks = uart1_mode3_timer2_12T_ticks(baudrate);\</span></div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="preprocessor">                                                                \</span></div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="preprocessor">    </span><span class="comment">/* Set TH TL values */</span><span class="preprocessor">                                      \</span></div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="preprocessor">    T2L = ticks &amp; 0xFF;                                         \</span></div>

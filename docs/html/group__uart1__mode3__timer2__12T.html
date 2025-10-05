@@ -262,7 +262,7 @@ Enum contains standard baudrates with precalculated THTL values for 12T mode</dd
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                            \</div>
-<div class="line">    <span class="keyword">const</span> uint16_t ticks = <a class="code hl_define" href="group__uart1__mode1__timer2__12T.html#ga9db7e429e1e48d44ab364ed26d068772">uart1_mode1_timer2_12T_ticks</a>(baudrate);\</div>
+<div class="line">    <span class="keyword">const</span> uint16_t ticks = <a class="code hl_define" href="group__uart1__mode3__timer2__12T.html#ga01159e14523c654614f68af2ea720a91">uart1_mode3_timer2_12T_ticks</a>(baudrate);\</div>
 <div class="line">                                                                \</div>
 <div class="line">    <span class="comment">/* Set TH TL values */</span>                                      \</div>
 <div class="line">    T2L = ticks &amp; 0xFF;                                         \</div>
@@ -271,7 +271,7 @@ Enum contains standard baudrates with precalculated THTL values for 12T mode</dd
 <div class="line">    <span class="comment">/* Start Timer2 */</span>                                          \</div>
 <div class="line">    bit_set(AUXR, SBIT4);                                       \</div>
 <div class="line">} <span class="keywordflow">while</span> (0)</div>
-<div class="ttc" id="agroup__uart1__mode1__timer2__12T_html_ga9db7e429e1e48d44ab364ed26d068772"><div class="ttname"><a href="group__uart1__mode1__timer2__12T.html#ga9db7e429e1e48d44ab364ed26d068772">uart1_mode1_timer2_12T_ticks</a></div><div class="ttdeci">#define uart1_mode1_timer2_12T_ticks(baudrate)</div><div class="ttdoc">Get UART1 ticks for given baudrate and frequency divider scale.</div><div class="ttdef"><b>Definition</b> uart1_mode1_timer2_12T.h:159</div></div>
+<div class="ttc" id="agroup__uart1__mode3__timer2__12T_html_ga01159e14523c654614f68af2ea720a91"><div class="ttname"><a href="group__uart1__mode3__timer2__12T.html#ga01159e14523c654614f68af2ea720a91">uart1_mode3_timer2_12T_ticks</a></div><div class="ttdeci">#define uart1_mode3_timer2_12T_ticks(baudrate)</div><div class="ttdoc">Get UART1 ticks for given baudrate and frequency divider scale.</div><div class="ttdef"><b>Definition</b> uart1_mode3_timer2_12T.h:159</div></div>
 </div><!-- fragment -->
 <p>Start UART1 communication with baudrate value. </p>
 <dl class="params"><dt>Parameters</dt><dd>

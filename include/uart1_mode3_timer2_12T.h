@@ -171,7 +171,7 @@ do {                                                            \
  */
 #define uart1_mode3_timer2_12T_start_ext(baudrate)              \
 do {                                                            \
-    const uint16_t ticks = uart1_mode1_timer2_12T_ticks(baudrate);\
+    const uint16_t ticks = uart1_mode3_timer2_12T_ticks(baudrate);\
                                                                 \
     /* Set TH TL values */                                      \
     T2L = ticks & 0xFF;                                         \

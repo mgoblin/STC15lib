@@ -153,7 +153,7 @@
     * TODO Examples
     * TODO Support 9th bit
 * TODO UART1 mode3 timer2 1T routines implemented
-* TODO Support 9th bit
+* TODO Support 9th bit in mode1
 * TODO Support parity bit in uart tx/rx
 
 
