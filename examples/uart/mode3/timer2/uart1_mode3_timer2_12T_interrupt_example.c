@@ -7,7 +7,7 @@
 
 void uart1_ISTR() __interrupt(4)
 {
-    LED = !LED;
+    LED = 0;
 }
 
 void main()
