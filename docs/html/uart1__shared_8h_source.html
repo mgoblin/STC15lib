@@ -108,18 +108,18 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="group__uart1__shared.html#gaff248c97ad442c4fc9931d4baa5e9854">   67</a></span><span class="preprocessor">#define is_uart1_send_byte_complete() (TI) </span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="foldopen" id="foldopen00085" data-start="" data-end="">
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="group__uart1__shared.html#ga1940b2ddaaec617feb9c59d4a544e939">   85</a></span><span class="preprocessor">#define uart1_receive_byte(byte_ptr)            \</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">do {                                            \</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">    while(!RI);                                 \</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">    *byte_ptr = SBUF;                           \</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">    RI=0;                                       \</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">} while (0)</span></div>
+<div class="foldopen" id="foldopen00084" data-start="" data-end="">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="group__uart1__shared.html#ga1940b2ddaaec617feb9c59d4a544e939">   84</a></span><span class="preprocessor">#define uart1_receive_byte(byte_ptr)            \</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">do {                                            \</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">    while(!RI);                                 \</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">    *byte_ptr = SBUF;                           \</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">    RI=0;                                       \</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">} while (0)</span></div>
 </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="group__uart1__shared.html#gaa39515c87bdffa2f34570162da6d6d1a">   99</a></span><span class="preprocessor">#define is_uart1_receive_byte_complete() (RI)</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="group__uart1__shared.html#gaa39515c87bdffa2f34570162da6d6d1a">   98</a></span><span class="preprocessor">#define is_uart1_receive_byte_complete() (RI)</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="agroup__uart1__shared_html_gaed599bf26e2baa98c2d108a072d02337"><div class="ttname"><a href="group__uart1__shared.html#gaed599bf26e2baa98c2d108a072d02337">uart1_pins_t</a></div><div class="ttdeci">uart1_pins_t</div><div class="ttdoc">UART1 RxD/TxD pins enum.</div><div class="ttdef"><b>Definition</b> uart1_shared.h:23</div></div>
 <div class="ttc" id="agroup__uart1__shared_html_ggaed599bf26e2baa98c2d108a072d02337a21147eba9db31edf831bc27da595c909"><div class="ttname"><a href="group__uart1__shared.html#ggaed599bf26e2baa98c2d108a072d02337a21147eba9db31edf831bc27da595c909">RxD_P16_TxD_P17</a></div><div class="ttdeci">@ RxD_P16_TxD_P17</div><div class="ttdoc">RxD on P1.6 and TxD on P1.7 pins.</div><div class="ttdef"><b>Definition</b> uart1_shared.h:30</div></div>
 <div class="ttc" id="agroup__uart1__shared_html_ggaed599bf26e2baa98c2d108a072d02337a5d9bd9050fee81f933458cb44d02eed3"><div class="ttname"><a href="group__uart1__shared.html#ggaed599bf26e2baa98c2d108a072d02337a5d9bd9050fee81f933458cb44d02eed3">RxD_P36_TxD_P37</a></div><div class="ttdeci">@ RxD_P36_TxD_P37</div><div class="ttdoc">RxD on P3.6 and TxD on P3.7 pins.</div><div class="ttdef"><b>Definition</b> uart1_shared.h:28</div></div>

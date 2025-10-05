@@ -149,18 +149,15 @@
 * Fix UART1 mode 0 docs. Baud rate is biased by frequency divider.
 * TODO Fix README content in subfolders
 * UART1 mode2 routines implemented
-* TODO UART1 mode3 timer2 12T routines implemented
-    * TODO Support 9th bit
+* UART1 mode3 timer2 12T routines implemented
 * TODO UART1 mode3 timer2 1T routines implemented
-* TODO Support 9th bit in mode1
 * TODO Support parity bit in uart tx/rx
+* TODO Support UART1 frame error
 
 
 Next releases todo
 * TODO is PCON SMOD bit really doble baud rate in mode 1, 2, 3?
-* TODO UART1 Support parity bit in uart tx/rx
 * TODO Support UART1 relay and broadcast mode
-* TODO Support UART1 frame error
 * TODO Build with Make/Cmake
 * Build without Platfromio with Scons
 * Fix delay_ms. On small ms delays it works correctly, but on seconds delay it doubled.
