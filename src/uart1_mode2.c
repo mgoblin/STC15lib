@@ -17,21 +17,3 @@ void uart1_mode2_init(uart1_pins_t pins, uart1_mode2_baudrate_t baudRate)
     AUXR1 &= 0x3F;
     AUXR1 |= pins;
 }
-
-void main()
-{
-    uart1_mode2_init(RxD_P36_TxD_P37, baudrate_345600);
-
-    while (1)
-    {
-        uart1_send_byte('O');
-        uart1_send_byte('k');
-        uart1_send_byte('\r');
-        uart1_send_byte(PCON);
-        uart1_send_byte('\n');
-
-        delay_ms(1000);
-    }
-    
-}
-
