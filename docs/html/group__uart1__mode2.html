@@ -134,7 +134,7 @@ uart1_receive_9bit() </dd>
 <div class="line">    enable_uart1_interrupt();                                                   \</div>
 <div class="line">                                                                                \</div>
 <div class="line">    <span class="comment">/* PCON.7 always set to 1. Is it error? */</span>                                  \</div>
-<div class="line">    baudRate == baudrate_345600 ? bit_set(PCON, SBIT7) : bit_clr(PCON, SBIT7);  \</div>
+<div class="line">    baudRate == baudrate_172800 ? bit_set(PCON, SBIT7) : bit_clr(PCON, SBIT7);  \</div>
 <div class="line">                                                                                \</div>
 <div class="line">    <span class="comment">/* SM1 = 1, SM0 = 0 to select UART1 mode2 */</span>                                \</div>
 <div class="line">    SCON = 0x90;                                                                \</div>

@@ -27,7 +27,7 @@ void main()
     while(1)
     {
         LED = 1;
-        uart1_send_byte(0x75);
+        uart1_send_9bit('Y', 1);
         delay_ms(500);
     }
 }
