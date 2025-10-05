@@ -1,0 +1,9 @@
+Import('env')
+
+env.Default(
+    env.Program(
+        'uart1_mode3_timer2_12T_example',
+        ['uart1_mode3_timer2_12T_example.c']
+    ),
+
+)

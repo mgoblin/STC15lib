@@ -1,12 +1,13 @@
+/**
+ * How to send data with uart1 in mode3
+ * 
+ */
+
 #include <uart1_mode3_timer2_12T.h>
+
 #include <delay.h>
 
 #define LED P10
-
-void uart1_ISTR() __interrupt(4)
-{
-    LED = 0;
-}
 
 void main()
 {
@@ -15,13 +16,14 @@ void main()
 
     while (1)
     {
+        LED = !LED;
+
+        uart1_send_byte(' ');
         uart1_send_byte('O');
         uart1_send_byte('k');
-        uart1_send_byte(SCON);
         uart1_send_byte('\r');
         uart1_send_byte('\n');
 
-        LED = 1;
         delay_ms(500);
     }
 }
