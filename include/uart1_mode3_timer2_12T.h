@@ -188,7 +188,7 @@ do {                                                            \
  * 
  * @warning Calling this function will terminate any ongoing communication
  */
-#define uart1_mode3_timer2_12T_stop (bit_clr(AUXR, CBIT4))
+#define uart1_mode3_timer2_12T_stop() (bit_clr(AUXR, CBIT4))
 
 /**
  * @brief Is UART1 started?

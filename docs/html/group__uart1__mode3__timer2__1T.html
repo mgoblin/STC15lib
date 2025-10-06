@@ -90,6 +90,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gaf3ae1d671b64f49a7ebd730d1b67a7c3" id="r_gaf3ae1d671b64f49a7ebd730d1b67a7c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode3__timer2__1T.html#gaf3ae1d671b64f49a7ebd730d1b67a7c3">uart1_mode3_timer2_1T_start_ext</a>(baudrate)</td></tr>
 <tr class="memdesc:gaf3ae1d671b64f49a7ebd730d1b67a7c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start UART1 communication with baudrate value.  <br /></td></tr>
 <tr class="separator:gaf3ae1d671b64f49a7ebd730d1b67a7c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga46c9bb2951952f12c600ae894634ceaa" id="r_ga46c9bb2951952f12c600ae894634ceaa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode3__timer2__1T.html#ga46c9bb2951952f12c600ae894634ceaa">uart1_mode3_timer2_1T_stop</a>()&#160;&#160;&#160;(bit_clr(AUXR, CBIT4))</td></tr>
+<tr class="memdesc:ga46c9bb2951952f12c600ae894634ceaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop UART1 communication and disable Timer2.  <br /></td></tr>
+<tr class="separator:ga46c9bb2951952f12c600ae894634ceaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -265,6 +268,26 @@ Enum contains standard baudrates with precalculated THTL values for 1T mode</dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Before calling this function, <a class="el" href="group__uart1__mode3__timer2__1T.html#gaf27c42918e4b37c6e538fe7d43cbf482" title="Initialize UART1 in Mode 3 with Timer2 1T configuration.">uart1_mode3_timer2_1T_init()</a> must be called.</dd></dl>
 <dl class="section attention"><dt>Attention</dt><dd>This function is not baudrate overflow safe. </dd></dl>
+
+</div>
+</div>
+<a id="ga46c9bb2951952f12c600ae894634ceaa" name="ga46c9bb2951952f12c600ae894634ceaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga46c9bb2951952f12c600ae894634ceaa">&#9670;&#160;</a></span>uart1_mode3_timer2_1T_stop</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define uart1_mode3_timer2_1T_stop</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(bit_clr(AUXR, CBIT4))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stop UART1 communication and disable Timer2. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Calling this function will terminate any ongoing communication </dd></dl>
 
 </div>
 </div>

@@ -191,4 +191,14 @@ do {                                                            \
     bit_set(AUXR, SBIT4);                                       \
 } while (0)
 
+/**
+ * @brief Stop UART1 communication and disable Timer2
+ * 
+ * @ingroup uart1_mode3_timer2_1T
+ * 
+ * @warning Calling this function will terminate any ongoing communication
+ */
+#define uart1_mode3_timer2_1T_stop() (bit_clr(AUXR, CBIT4))
+
+
 #endif
