@@ -43,12 +43,14 @@ var searchData=
   ['uart1_5fmode3_5ftimer2_5f1t_2eh_40',['uart1_mode3_timer2_1T.h',['../uart1__mode3__timer2__1T_8h.html',1,'']]],
   ['uart1_5fmode3_5ftimer2_5f1t_5finit_41',['uart1_mode3_timer2_1T_init',['../group__uart1__mode3__timer2__1T.html#gaf27c42918e4b37c6e538fe7d43cbf482',1,'uart1_mode3_timer2_1T.h']]],
   ['uart1_5fmode3_5ftimer2_5f1t_5fstart_42',['uart1_mode3_timer2_1T_start',['../group__uart1__mode3__timer2__1T.html#ga5284fe2724ae565637a0476af6486814',1,'uart1_mode3_timer2_1T.h']]],
-  ['uart1_5fpins_5ft_43',['uart1_pins_t',['../group__uart1__shared.html#gaed599bf26e2baa98c2d108a072d02337',1,'uart1_shared.h']]],
-  ['uart1_5freceive_5f9bit_44',['uart1_receive_9bit',['../group__uart1__9bit__shared.html#ga5f7c607830600965823b5e57d68a280b',1,'uart1_9bit_shared.h']]],
-  ['uart1_5freceive_5fbyte_45',['uart1_receive_byte',['../group__uart1__shared.html#ga1940b2ddaaec617feb9c59d4a544e939',1,'uart1_shared.h']]],
-  ['uart1_5fsend_5f9bit_46',['uart1_send_9bit',['../group__uart1__9bit__shared.html#gae28cbb2415884fea9a736edcd3bde8fb',1,'uart1_9bit_shared.h']]],
-  ['uart1_5fsend_5fbyte_47',['uart1_send_byte',['../group__uart1__shared.html#gad9c16ff3593511fc868323e3718ecc1d',1,'uart1_shared.h']]],
-  ['uart1_5fshared_2eh_48',['uart1_shared.h',['../uart1__shared_8h.html',1,'']]],
-  ['use_20it_49',['How to use it',['../index.html#autotoc_md1',1,'']]],
-  ['use_20stc15_20hal_20functions_50',['Use STC15 HAL functions',['../index.html#autotoc_md4',1,'']]]
+  ['uart1_5fmode3_5ftimer2_5f1t_5fstart_5fext_43',['uart1_mode3_timer2_1T_start_ext',['../group__uart1__mode3__timer2__1T.html#gaf3ae1d671b64f49a7ebd730d1b67a7c3',1,'uart1_mode3_timer2_1T.h']]],
+  ['uart1_5fmode3_5ftimer2_5f1t_5fticks_44',['uart1_mode3_timer2_1T_ticks',['../group__uart1__mode3__timer2__1T.html#ga084459b3cdb99087039741b0c5158fae',1,'uart1_mode3_timer2_1T.h']]],
+  ['uart1_5fpins_5ft_45',['uart1_pins_t',['../group__uart1__shared.html#gaed599bf26e2baa98c2d108a072d02337',1,'uart1_shared.h']]],
+  ['uart1_5freceive_5f9bit_46',['uart1_receive_9bit',['../group__uart1__9bit__shared.html#ga5f7c607830600965823b5e57d68a280b',1,'uart1_9bit_shared.h']]],
+  ['uart1_5freceive_5fbyte_47',['uart1_receive_byte',['../group__uart1__shared.html#ga1940b2ddaaec617feb9c59d4a544e939',1,'uart1_shared.h']]],
+  ['uart1_5fsend_5f9bit_48',['uart1_send_9bit',['../group__uart1__9bit__shared.html#gae28cbb2415884fea9a736edcd3bde8fb',1,'uart1_9bit_shared.h']]],
+  ['uart1_5fsend_5fbyte_49',['uart1_send_byte',['../group__uart1__shared.html#gad9c16ff3593511fc868323e3718ecc1d',1,'uart1_shared.h']]],
+  ['uart1_5fshared_2eh_50',['uart1_shared.h',['../uart1__shared_8h.html',1,'']]],
+  ['use_20it_51',['How to use it',['../index.html#autotoc_md1',1,'']]],
+  ['use_20stc15_20hal_20functions_52',['Use STC15 HAL functions',['../index.html#autotoc_md4',1,'']]]
 ];

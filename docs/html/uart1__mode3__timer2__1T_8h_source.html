@@ -148,7 +148,23 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">} while (0)</span></div>
 </div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="group__uart1__mode3__timer2__1T.html#ga084459b3cdb99087039741b0c5158fae">  169</a></span><span class="preprocessor">#define uart1_mode3_timer2_1T_ticks(baudrate) (65536 - (((MAIN_Fosc / baudrate) &gt;&gt; 2) &gt;&gt; get_frequency_divider_scale()))</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="foldopen" id="foldopen00182" data-start="" data-end="">
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="group__uart1__mode3__timer2__1T.html#gaf3ae1d671b64f49a7ebd730d1b67a7c3">  182</a></span><span class="preprocessor">#define uart1_mode3_timer2_1T_start_ext(baudrate)               \</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="preprocessor">do {                                                            \</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="preprocessor">    const uint16_t ticks = uart1_mode3_timer2_1T_ticks(baudrate);\</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="preprocessor">                                                                \</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="preprocessor">    </span><span class="comment">/* Set TH TL values */</span><span class="preprocessor">                                      \</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="preprocessor">    T2L = ticks &amp; 0xFF;                                         \</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="preprocessor">    T2H = ticks &gt;&gt; 8;                                           \</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="preprocessor">                                                                \</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="preprocessor">    </span><span class="comment">/* Start Timer2 */</span><span class="preprocessor">                                          \</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="preprocessor">    bit_set(AUXR, SBIT4);                                       \</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="preprocessor">} while (0)</span></div>
+</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="afrequency_8h_html"><div class="ttname"><a href="frequency_8h.html">frequency.h</a></div></div>
 <div class="ttc" id="agroup__uart1__mode3__timer2__1T_html_ga0d176dd7c7a2c116dbf6b3488716d72d"><div class="ttname"><a href="group__uart1__mode3__timer2__1T.html#ga0d176dd7c7a2c116dbf6b3488716d72d">uart1_mode2_timer2_1t_baudrate_t</a></div><div class="ttdeci">uart1_mode2_timer2_1t_baudrate_t</div><div class="ttdoc">UART1 precalculated baudrates.</div><div class="ttdef"><b>Definition</b> uart1_mode3_timer2_1T.h:68</div></div>
 <div class="ttc" id="agroup__uart1__mode3__timer2__1T_html_gga0d176dd7c7a2c116dbf6b3488716d72da33660d8ce254b79993809e238a915f00"><div class="ttname"><a href="group__uart1__mode3__timer2__1T.html#gga0d176dd7c7a2c116dbf6b3488716d72da33660d8ce254b79993809e238a915f00">baudrate_2400</a></div><div class="ttdeci">@ baudrate_2400</div><div class="ttdoc">2400 baudrate</div><div class="ttdef"><b>Definition</b> uart1_mode3_timer2_1T.h:72</div></div>
