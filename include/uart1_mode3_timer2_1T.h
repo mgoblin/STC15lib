@@ -200,5 +200,12 @@ do {                                                            \
  */
 #define uart1_mode3_timer2_1T_stop() (bit_clr(AUXR, CBIT4))
 
+/**
+ * @brief Is UART1 started?
+ * @return bool returns true if UART1 started otherwise false.
+ * 
+ * @ingroup uart1_mode3_timer2_1T
+ */
+#define is_uart1_mode3_timer2_1T_started() (test_if_bit_set(AUXR, SBIT4))
 
 #endif

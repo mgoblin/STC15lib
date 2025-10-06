@@ -150,7 +150,7 @@
 * Fix README content in subfolders
 * UART1 mode2 routines implemented
 * UART1 mode3 timer2 12T routines implemented
-* TODO UART1 mode3 timer2 1T routines implemented
+* UART1 mode3 timer2 1T routines implemented
 * TODO Support parity bit in uart tx/rx
 * TODO Support UART1 frame error
 

@@ -51,10 +51,11 @@ var searchData=
   ['is_5fuart1_5fmode1_5ftimer2_5f12t_5fstarted_48',['is_uart1_mode1_timer2_12T_started',['../group__uart1__mode1__timer2__12T.html#gab4c05f123f30dddf1a2a9530971b01a2',1,'uart1_mode1_timer2_12T.h']]],
   ['is_5fuart1_5fmode1_5ftimer2_5f1t_5fstarted_49',['is_uart1_mode1_timer2_1T_started',['../group__uart1__mode1__timer2__1T.html#ga73f223b86f254d562e09a004b379e586',1,'uart1_mode1_timer2_1T.h']]],
   ['is_5fuart1_5fmode3_5ftimer2_5f12t_5fstarted_50',['is_uart1_mode3_timer2_12T_started',['../group__uart1__mode3__timer2__12T.html#ga9590aa2cdcef6343d26f85062278d00f',1,'uart1_mode3_timer2_12T.h']]],
-  ['is_5fuart1_5freceive_5fbyte_5fcomplete_51',['is_uart1_receive_byte_complete',['../group__uart1__shared.html#gaa39515c87bdffa2f34570162da6d6d1a',1,'uart1_shared.h']]],
-  ['is_5fuart1_5fsend_5fbyte_5fcomplete_52',['is_uart1_send_byte_complete',['../group__uart1__shared.html#gaff248c97ad442c4fc9931d4baa5e9854',1,'uart1_shared.h']]],
-  ['is_5fwdt_5fflag_5fon_53',['is_wdt_flag_on',['../group__wdt.html#gac1c4fb7f1f59ef6ad7b431fa6c64c058',1,'wdt.h']]],
-  ['is_5fwdt_5fstarted_54',['is_wdt_started',['../group__wdt.html#ga843c35409dc0a28f62bb961488dfd62c',1,'wdt.h']]],
-  ['it_55',['How to use it',['../index.html#autotoc_md1',1,'']]],
-  ['it_20is_56',['What it is',['../index.html',1,'']]]
+  ['is_5fuart1_5fmode3_5ftimer2_5f1t_5fstarted_51',['is_uart1_mode3_timer2_1T_started',['../group__uart1__mode3__timer2__1T.html#ga25231887e1d8125da12dea508a27bfeb',1,'uart1_mode3_timer2_1T.h']]],
+  ['is_5fuart1_5freceive_5fbyte_5fcomplete_52',['is_uart1_receive_byte_complete',['../group__uart1__shared.html#gaa39515c87bdffa2f34570162da6d6d1a',1,'uart1_shared.h']]],
+  ['is_5fuart1_5fsend_5fbyte_5fcomplete_53',['is_uart1_send_byte_complete',['../group__uart1__shared.html#gaff248c97ad442c4fc9931d4baa5e9854',1,'uart1_shared.h']]],
+  ['is_5fwdt_5fflag_5fon_54',['is_wdt_flag_on',['../group__wdt.html#gac1c4fb7f1f59ef6ad7b431fa6c64c058',1,'wdt.h']]],
+  ['is_5fwdt_5fstarted_55',['is_wdt_started',['../group__wdt.html#ga843c35409dc0a28f62bb961488dfd62c',1,'wdt.h']]],
+  ['it_56',['How to use it',['../index.html#autotoc_md1',1,'']]],
+  ['it_20is_57',['What it is',['../index.html',1,'']]]
 ];
