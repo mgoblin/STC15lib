@@ -1,18 +1,1 @@
-
-This directory is intended for system lib usage examples.
-For running example in target device copy it to src folder, then build and upload
-
-Each subfolder contains examples for lib module.
-
-|--bits             - bit manipulation examples
-|--chip_id          - read chip_id examples
-|--delay            - MCU cycles based delay examples 
-|--frequency        - MCU frequency read and manipulate examples
-|--interrupt        - Using MCU interrupt examples 
-|--timer
-|  |--aux           - Timer interval in ms example
-|  |--common        - Read timer mode and divider
-|  |--mode0         - Timer mode0 examples
-|  |--mode1         - Timer mode1 examples 
-|  |--shared        - int0 and output to PIN example
-|--uart             - UART examples
+Subfolders contrains STC15 library usage examples
