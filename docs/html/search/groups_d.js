@@ -9,7 +9,7 @@ var searchData=
   ['timer0_20mode2_6',['Timer0 Mode2',['../group__timer0__mode2.html',1,'']]],
   ['timer0_20mode3_7',['Timer0 Mode3',['../group__timer0__mode3.html',1,'']]],
   ['timer2_2012t_8',['timer2 12t',['../group__uart1__mode1__timer2__12T.html',1,'UART1 Mode 1 with Timer2 12T'],['../group__uart1__mode3__timer2__12T.html',1,'UART1 Mode 3 with Timer2 12T']]],
-  ['timer2_201t_9',['UART1 Mode 1 with Timer2 1T',['../group__uart1__mode1__timer2__1T.html',1,'']]],
+  ['timer2_201t_9',['timer2 1t',['../group__uart1__mode1__timer2__1T.html',1,'UART1 Mode 1 with Timer2 1T'],['../group__uart1__mode3__timer2__1T.html',1,'UART1 Mode 3 with Timer2 1T']]],
   ['timer2_20aux_10',['Timer2 Aux',['../group__timer2__to__ms.html',1,'']]],
   ['timer2_20mode0_11',['Timer2 Mode0',['../group__timer2__mode0.html',1,'']]]
 ];

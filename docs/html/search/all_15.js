@@ -67,7 +67,7 @@ var searchData=
   ['timer0_5fto_5fms_2eh_64',['timer0_to_ms.h',['../timer0__to__ms_8h.html',1,'']]],
   ['timer0_5fuint16_5fticks_5fto_5ffreq100_65',['timer0_uint16_ticks_to_freq100',['../group__timer0__to__ms.html#gac123fbb19f13962e20c7d2761f1a10a0',1,'timer0_to_ms.h']]],
   ['timer2_2012t_66',['timer2 12t',['../group__uart1__mode1__timer2__12T.html',1,'UART1 Mode 1 with Timer2 12T'],['../group__uart1__mode3__timer2__12T.html',1,'UART1 Mode 3 with Timer2 12T']]],
-  ['timer2_201t_67',['UART1 Mode 1 with Timer2 1T',['../group__uart1__mode1__timer2__1T.html',1,'']]],
+  ['timer2_201t_67',['timer2 1t',['../group__uart1__mode1__timer2__1T.html',1,'UART1 Mode 1 with Timer2 1T'],['../group__uart1__mode3__timer2__1T.html',1,'UART1 Mode 3 with Timer2 1T']]],
   ['timer2_20aux_68',['Timer2 Aux',['../group__timer2__to__ms.html',1,'']]],
   ['timer2_20mode0_69',['Timer2 Mode0',['../group__timer2__mode0.html',1,'']]],
   ['timer2_5ffrequency_5fto_5fticks_5funsafe_70',['timer2_frequency_to_ticks_unsafe',['../group__timer2__to__ms.html#ga14954bfb79088274f0a50fb2616b7046',1,'timer2_to_ms.h']]],

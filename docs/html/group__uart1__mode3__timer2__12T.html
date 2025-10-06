@@ -114,7 +114,7 @@ Enumerations</h2></td></tr>
 <p>UART1 baudrate is determined by the T2 overflow rate. T2 overflow rate is configured by setting T2H and T2L registers.</p>
 <p>THTL = 65536 - (Sysclk/12)/(4 * baudrate). Sysclk = master clock frequency / frequency divder.</p>
 <p>THTL value is precalulated for standard baudrates with none freq divider.</p>
-<p>In UART1 Mode 1, three sets of RxD/TxD pins can be used: RxD on P3.0/TxD on P3.1, RxD on P3.6/TxD on P3.7 and RxD on P1.6/TxD on P1.7.</p>
+<p>In UART1 Mode 3, three sets of RxD/TxD pins can be used: RxD on P3.0/TxD on P3.1, RxD on P3.6/TxD on P3.7 and RxD on P1.6/TxD on P1.7.</p>
 <p>Typical usage: </p><div class="fragment"><div class="line"><a class="code hl_define" href="group__uart1__mode3__timer2__12T.html#gafb69b212a14bf192c342596eaf6dbe13">uart1_mode3_timer2_12T_init</a>(<a class="code hl_enumvalue" href="group__uart1__shared.html#ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47">RxD_P30_TxD_P31</a>);</div>
 <div class="line"><a class="code hl_define" href="group__uart1__mode3__timer2__12T.html#ga94da3e065017539d333125e86c345f74">uart1_mode3_timer2_12T_start</a>(<a class="code hl_enumvalue" href="group__uart1__mode1__timer2__12T.html#gga041bfeb3611dd3a99d7c742e0d770844a920ff2bd65ec0264e548c65f9beeeebe">baudrate_9600</a>);</div>
 <div class="line"> </div>

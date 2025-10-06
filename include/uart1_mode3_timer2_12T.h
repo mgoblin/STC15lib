@@ -35,7 +35,7 @@
  * 
  * THTL value is precalulated for standard baudrates with none freq divider.
  * 
- * In UART1 Mode 1, three sets of RxD/TxD pins can be used: 
+ * In UART1 Mode 3, three sets of RxD/TxD pins can be used: 
  * RxD on P3.0/TxD on P3.1, RxD on P3.6/TxD on P3.7 and 
  * RxD on P1.6/TxD on P1.7.
  * 
