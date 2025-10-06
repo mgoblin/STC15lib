@@ -50,7 +50,14 @@ var menudata={children:[
 {text:"w",url:"globals_w.html#index_w"}]},
 {text:"Functions",url:"globals_func.html"},
 {text:"Enumerations",url:"globals_enum.html"},
-{text:"Enumerator",url:"globals_eval.html"},
+{text:"Enumerator",url:"globals_eval.html",children:[
+{text:"b",url:"globals_eval.html#index_b"},
+{text:"h",url:"globals_eval.html#index_h"},
+{text:"l",url:"globals_eval.html#index_l"},
+{text:"n",url:"globals_eval.html#index_n"},
+{text:"o",url:"globals_eval.html#index_o"},
+{text:"p",url:"globals_eval.html#index_p"},
+{text:"r",url:"globals_eval.html#index_r"}]},
 {text:"Macros",url:"globals_defs.html",children:[
 {text:"c",url:"globals_defs.html#index_c"},
 {text:"d",url:"globals_defs_d.html#index_d"},

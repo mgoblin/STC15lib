@@ -79,7 +79,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:gafb69b212a14bf192c342596eaf6dbe13" id="r_gafb69b212a14bf192c342596eaf6dbe13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode3__timer2__12T.html#gafb69b212a14bf192c342596eaf6dbe13">uart1_mode3_timer2_12T_init</a>(pins)</td></tr>
-<tr class="memdesc:gafb69b212a14bf192c342596eaf6dbe13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize UART1 in Mode 1 with Timer2 12T configuration.  <br /></td></tr>
+<tr class="memdesc:gafb69b212a14bf192c342596eaf6dbe13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize UART1 in Mode 3 with Timer2 12T configuration.  <br /></td></tr>
 <tr class="separator:gafb69b212a14bf192c342596eaf6dbe13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga94da3e065017539d333125e86c345f74" id="r_ga94da3e065017539d333125e86c345f74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode3__timer2__12T.html#ga94da3e065017539d333125e86c345f74">uart1_mode3_timer2_12T_start</a>(baudrate)</td></tr>
 <tr class="memdesc:ga94da3e065017539d333125e86c345f74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start UART1 communication with standart baudrate value.  <br /></td></tr>
@@ -124,7 +124,7 @@ Enumerations</h2></td></tr>
 <div class="line">}</div>
 <div class="ttc" id="agroup__uart1__mode1__timer2__12T_html_gga041bfeb3611dd3a99d7c742e0d770844a920ff2bd65ec0264e548c65f9beeeebe"><div class="ttname"><a href="group__uart1__mode1__timer2__12T.html#gga041bfeb3611dd3a99d7c742e0d770844a920ff2bd65ec0264e548c65f9beeeebe">baudrate_9600</a></div><div class="ttdeci">@ baudrate_9600</div><div class="ttdoc">9600 baudrate</div><div class="ttdef"><b>Definition</b> uart1_mode1_timer2_12T.h:75</div></div>
 <div class="ttc" id="agroup__uart1__mode3__timer2__12T_html_ga94da3e065017539d333125e86c345f74"><div class="ttname"><a href="group__uart1__mode3__timer2__12T.html#ga94da3e065017539d333125e86c345f74">uart1_mode3_timer2_12T_start</a></div><div class="ttdeci">#define uart1_mode3_timer2_12T_start(baudrate)</div><div class="ttdoc">Start UART1 communication with standart baudrate value.</div><div class="ttdef"><b>Definition</b> uart1_mode3_timer2_12T.h:134</div></div>
-<div class="ttc" id="agroup__uart1__mode3__timer2__12T_html_gafb69b212a14bf192c342596eaf6dbe13"><div class="ttname"><a href="group__uart1__mode3__timer2__12T.html#gafb69b212a14bf192c342596eaf6dbe13">uart1_mode3_timer2_12T_init</a></div><div class="ttdeci">#define uart1_mode3_timer2_12T_init(pins)</div><div class="ttdoc">Initialize UART1 in Mode 1 with Timer2 12T configuration.</div><div class="ttdef"><b>Definition</b> uart1_mode3_timer2_12T.h:96</div></div>
+<div class="ttc" id="agroup__uart1__mode3__timer2__12T_html_gafb69b212a14bf192c342596eaf6dbe13"><div class="ttname"><a href="group__uart1__mode3__timer2__12T.html#gafb69b212a14bf192c342596eaf6dbe13">uart1_mode3_timer2_12T_init</a></div><div class="ttdeci">#define uart1_mode3_timer2_12T_init(pins)</div><div class="ttdoc">Initialize UART1 in Mode 3 with Timer2 12T configuration.</div><div class="ttdef"><b>Definition</b> uart1_mode3_timer2_12T.h:96</div></div>
 <div class="ttc" id="agroup__uart1__shared_html_ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47"><div class="ttname"><a href="group__uart1__shared.html#ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47">RxD_P30_TxD_P31</a></div><div class="ttdeci">@ RxD_P30_TxD_P31</div><div class="ttdoc">RxD on P3.0 and TxD on P3.1 pins.</div><div class="ttdef"><b>Definition</b> uart1_shared.h:26</div></div>
 </div><!-- fragment --><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__uart1__9bit__shared.html#gae28cbb2415884fea9a736edcd3bde8fb" title="Send 9-bit data over UART1 in mode 2, 3.">uart1_send_9bit()</a> </dd>
 <dd>
@@ -195,7 +195,7 @@ Enumerations</h2></td></tr>
 <div class="line">    AUXR1 |= pins;                                              \</div>
 <div class="line">} <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
-<p>Initialize UART1 in Mode 1 with Timer2 12T configuration. </p>
+<p>Initialize UART1 in Mode 3 with Timer2 12T configuration. </p>
 <p>The clock source of Timer2 is SYSclk/12. AUXR.T2x12 = 0. AUXR.UART_M0x6 = 0. Timer2 are used as timer. AUXR.T2_C/T = 0. Timer2 is not started. AUXR.T2R = 0.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__uart1__shared.html#gaed599bf26e2baa98c2d108a072d02337" title="UART1 RxD/TxD pins enum.">uart1_pins_t</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -239,7 +239,7 @@ Enumerations</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Before calling this function, <a class="el" href="group__uart1__mode3__timer2__12T.html#gafb69b212a14bf192c342596eaf6dbe13" title="Initialize UART1 in Mode 1 with Timer2 12T configuration.">uart1_mode3_timer2_12T_init()</a> must be called. </dd>
+<dl class="section note"><dt>Note</dt><dd>Before calling this function, <a class="el" href="group__uart1__mode3__timer2__12T.html#gafb69b212a14bf192c342596eaf6dbe13" title="Initialize UART1 in Mode 3 with Timer2 12T configuration.">uart1_mode3_timer2_12T_init()</a> must be called. </dd>
 <dd>
 Enum contains standard baudrates with precalculated THTL values for 12T mode</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>UART1 mode3 in this routine is biased by frequency divider. </dd></dl>
@@ -280,7 +280,7 @@ Enum contains standard baudrates with precalculated THTL values for 12T mode</dd
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Before calling this function, <a class="el" href="group__uart1__mode3__timer2__12T.html#gafb69b212a14bf192c342596eaf6dbe13" title="Initialize UART1 in Mode 1 with Timer2 12T configuration.">uart1_mode3_timer2_12T_init()</a> must be called.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Before calling this function, <a class="el" href="group__uart1__mode3__timer2__12T.html#gafb69b212a14bf192c342596eaf6dbe13" title="Initialize UART1 in Mode 3 with Timer2 12T configuration.">uart1_mode3_timer2_12T_init()</a> must be called.</dd></dl>
 <dl class="section attention"><dt>Attention</dt><dd>This function is not baudrate overflow safe. </dd></dl>
 
 </div>

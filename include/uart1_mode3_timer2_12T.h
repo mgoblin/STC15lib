@@ -77,7 +77,7 @@ typedef enum
 } uart1_mode3_timer2_12t_baudrate_t;
 
 /**
- * @brief Initialize UART1 in Mode 1 with Timer2 12T configuration
+ * @brief Initialize UART1 in Mode 3 with Timer2 12T configuration
  * 
  * @details
  * The clock source of Timer2 is SYSclk/12. AUXR.T2x12 = 0.
