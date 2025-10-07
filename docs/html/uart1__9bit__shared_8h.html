@@ -126,21 +126,21 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a831c041d0170fee485a0b5e81b18af3a" id="r_a831c041d0170fee485a0b5e81b18af3a"><td class="memItemLeft" align="right" valign="top"><a id="a831c041d0170fee485a0b5e81b18af3a" name="a831c041d0170fee485a0b5e81b18af3a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uart1_parity_t</b> { <b>SPACE</b>
-, <b>MARK</b>
-, <b>ODD</b>
-, <b>EVEN</b>
+<tr class="memitem:a831c041d0170fee485a0b5e81b18af3a" id="r_a831c041d0170fee485a0b5e81b18af3a"><td class="memItemLeft" align="right" valign="top"><a id="a831c041d0170fee485a0b5e81b18af3a" name="a831c041d0170fee485a0b5e81b18af3a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uart1_parity_t</b> { <b>PARITY_SPACE</b>
+, <b>PARITY_MARK</b>
+, <b>PARITY_ODD</b>
+, <b>PARITY_EVEN</b>
  }</td></tr>
 <tr class="separator:a831c041d0170fee485a0b5e81b18af3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aff72271ccb15beac0fa16b0d9a6b0aae" id="r_aff72271ccb15beac0fa16b0d9a6b0aae"><td class="memItemLeft" align="right" valign="top"><a id="aff72271ccb15beac0fa16b0d9a6b0aae" name="aff72271ccb15beac0fa16b0d9a6b0aae"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>uart1_send_byte_with_parity</b> (uint8_t byte, uart1_parity_t p)</td></tr>
-<tr class="separator:aff72271ccb15beac0fa16b0d9a6b0aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb64acbd0f34b3fd677229802e411fc0" id="r_adb64acbd0f34b3fd677229802e411fc0"><td class="memItemLeft" align="right" valign="top"><a id="adb64acbd0f34b3fd677229802e411fc0" name="adb64acbd0f34b3fd677229802e411fc0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>uart1_receive_byte_with_parity</b> (uint8_t *byte, uart1_parity_t p)</td></tr>
-<tr class="separator:adb64acbd0f34b3fd677229802e411fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d5ba16d1b93a4fcb38584905dbe8342" id="r_a0d5ba16d1b93a4fcb38584905dbe8342"><td class="memItemLeft" align="right" valign="top"><a id="a0d5ba16d1b93a4fcb38584905dbe8342" name="a0d5ba16d1b93a4fcb38584905dbe8342"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>uart1_send_byte</b> (uint8_t byte, uart1_parity_t parity)</td></tr>
+<tr class="separator:a0d5ba16d1b93a4fcb38584905dbe8342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd74a76c97e8da7d75219dfb785ab8b9" id="r_acd74a76c97e8da7d75219dfb785ab8b9"><td class="memItemLeft" align="right" valign="top"><a id="acd74a76c97e8da7d75219dfb785ab8b9" name="acd74a76c97e8da7d75219dfb785ab8b9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>uart1_receive_byte</b> (uint8_t *byte, uart1_parity_t parity)</td></tr>
+<tr class="separator:acd74a76c97e8da7d75219dfb785ab8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

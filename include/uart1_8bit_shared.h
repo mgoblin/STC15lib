@@ -1,5 +1,5 @@
-#ifndef STC15_UART1SHAREDH
-#define STC15_UART1SHAREDH
+#ifndef STC15_UART18BITSHAREDH
+#define STC15_UART18BITSHAREDH
 
 #include <stdint.h>
 
