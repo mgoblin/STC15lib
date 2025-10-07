@@ -2,6 +2,7 @@
 #define STC15_UART19BITSHAREDH
 
 #include <stdint.h>
+#include <stdbool.h>
 
 #include <sys.h>
 
@@ -77,6 +78,6 @@ while (0)
 
 void uart1_send_byte(uint8_t byte, uart1_parity_t parity);
 
-void uart1_receive_byte(uint8_t *byte, uart1_parity_t parity);
+void uart1_receive_byte(uint8_t *byte, bool *is_parity_valid, uart1_parity_t parity);
 
 #endif

@@ -81,21 +81,24 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="sys_8h_source.html">sys.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for uart1_9bit_shared.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="uart1__9bit__shared_8h__incl.png" border="0" usemap="#ainclude_2uart1__9bit__shared_8h" alt=""/></div>
 <map name="ainclude_2uart1__9bit__shared_8h" id="ainclude_2uart1__9bit__shared_8h">
-<area shape="rect" title=" " alt="" coords="15,5,154,45"/>
+<area shape="rect" title=" " alt="" coords="73,5,211,45"/>
 <area shape="rect" title=" " alt="" coords="5,93,76,119"/>
-<area shape="poly" title=" " alt="" coords="76,47,56,83,52,80,72,44"/>
-<area shape="rect" href="sys_8h.html" title=" " alt="" coords="101,93,157,119"/>
-<area shape="poly" title=" " alt="" coords="98,44,118,80,113,83,93,47"/>
-<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="79,167,178,192"/>
-<area shape="poly" title=" " alt="" coords="131,119,131,153,126,153,126,119"/>
-<area shape="rect" title=" " alt="" coords="83,240,174,265"/>
-<area shape="poly" title=" " alt="" coords="131,192,131,226,126,226,126,192"/>
+<area shape="poly" title=" " alt="" coords="119,48,68,87,65,82,116,43"/>
+<area shape="rect" title=" " alt="" coords="101,93,183,119"/>
+<area shape="poly" title=" " alt="" coords="145,46,145,79,139,79,139,46"/>
+<area shape="rect" href="sys_8h.html" title=" " alt="" coords="207,93,263,119"/>
+<area shape="poly" title=" " alt="" coords="166,44,212,82,209,86,163,48"/>
+<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="186,167,285,192"/>
+<area shape="poly" title=" " alt="" coords="238,119,238,153,233,153,233,119"/>
+<area shape="rect" title=" " alt="" coords="190,240,281,265"/>
+<area shape="poly" title=" " alt="" coords="238,192,238,226,233,226,233,192"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -138,9 +141,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a0d5ba16d1b93a4fcb38584905dbe8342" id="r_a0d5ba16d1b93a4fcb38584905dbe8342"><td class="memItemLeft" align="right" valign="top"><a id="a0d5ba16d1b93a4fcb38584905dbe8342" name="a0d5ba16d1b93a4fcb38584905dbe8342"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>uart1_send_byte</b> (uint8_t byte, uart1_parity_t parity)</td></tr>
 <tr class="separator:a0d5ba16d1b93a4fcb38584905dbe8342"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd74a76c97e8da7d75219dfb785ab8b9" id="r_acd74a76c97e8da7d75219dfb785ab8b9"><td class="memItemLeft" align="right" valign="top"><a id="acd74a76c97e8da7d75219dfb785ab8b9" name="acd74a76c97e8da7d75219dfb785ab8b9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>uart1_receive_byte</b> (uint8_t *byte, uart1_parity_t parity)</td></tr>
-<tr class="separator:acd74a76c97e8da7d75219dfb785ab8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab2a12da5a6a705bac86729f8a09ec6c" id="r_aab2a12da5a6a705bac86729f8a09ec6c"><td class="memItemLeft" align="right" valign="top"><a id="aab2a12da5a6a705bac86729f8a09ec6c" name="aab2a12da5a6a705bac86729f8a09ec6c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>uart1_receive_byte</b> (uint8_t *byte, bool *is_parity_valid, uart1_parity_t parity)</td></tr>
+<tr class="separator:aab2a12da5a6a705bac86729f8a09ec6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
