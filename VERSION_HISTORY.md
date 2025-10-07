@@ -150,9 +150,10 @@
 * Fix README content in subfolders
 * UART1 mode2 routines implemented
 * UART1 mode3 timer2 (1T and 12T) routines implemented
-* TODO UART1 support parity bit in uart tx/rx
-* TODO UART1 mode 1, 2, 3 receive examples 
-* TODO UART1 support 2 stop bits on rx/rx 
+* TODO UART1 parity bit tx routine for mode 2, 3 should be a macro 
+* TODO UART1 examples parity bit for uart tx mode 3 timer 2 1T and 12T
+* TODO UART1 mode 2, 3 receive examples 9-N-1, 8-parity bit-1
+* TODO UART1 support 2 stop bits on tx/rx 
 * TODO UART1 support frame error
 
 
