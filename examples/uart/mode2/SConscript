@@ -2,7 +2,7 @@ Import('env')
 
 env.Default(
     env.Program(
-        'uart1_mode2_send_example',
-        ['uart1_mode2_send_example.c'],
+        'uart1_mode2_send_9bit_example',
+        ['uart1_mode2_send_9bit_example.c'],
     ),
 )
