@@ -2,7 +2,7 @@
  * This is an example of how to use uart1 in mode2.
  * 
  * baudrate = 345600
- * 9-N-1 equvalent to 8 bits - Mark parity - 1 stop bit
+ * 8 bits - Odd parity - 1 stop bit
  * 
  * Send Y to uart1 and delay 500 ms
  * In UART1 ISR handler LED will be turned on after transmission is complete
@@ -28,7 +28,7 @@ void main()
     while(1)
     {
         LED = 1;
-        uart1_send_9bit('Y', 1);
+        uart1_send_byte('Y', PARITY_ODD);
         delay_ms(500);
     }
 }

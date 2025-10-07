@@ -1,8 +1,15 @@
 Import('env')
 
+env.Command('uart1_9bit_shared.c', '#src/uart1_9bit_shared.c', Copy('$TARGET', '$SOURCE'))
+
 env.Default(
     env.Program(
         'uart1_mode2_send_9bit_example',
         ['uart1_mode2_send_9bit_example.c'],
+    ),
+
+    env.Program(
+        'uart1_mode2_send_odd_parity_example',
+        ['uart1_mode2_send_odd_parity_example.c', 'uart1_9bit_shared.c'],
     ),
 )

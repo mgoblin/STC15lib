@@ -21,7 +21,6 @@
  */
 typedef enum 
 {
-    
     /** @brief RxD on P3.0 and TxD on P3.1 pins */
     RxD_P30_TxD_P31 = 0x00,
     /** @brief RxD on P3.6 and TxD on P3.7 pins */
