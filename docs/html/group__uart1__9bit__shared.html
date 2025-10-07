@@ -70,7 +70,9 @@ $(function() {
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">UART1 9bit send/receive functions</div></div>
 </div><!--header-->
 <div class="contents">
@@ -83,6 +85,22 @@ Macros</h2></td></tr>
 <tr class="memitem:ga5f7c607830600965823b5e57d68a280b" id="r_ga5f7c607830600965823b5e57d68a280b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__9bit__shared.html#ga5f7c607830600965823b5e57d68a280b">uart1_receive_9bit</a>(byte_ptr,  nineth_ptr)</td></tr>
 <tr class="memdesc:ga5f7c607830600965823b5e57d68a280b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive 9-bit data over UART1 in mode 2, 3.  <br /></td></tr>
 <tr class="separator:ga5f7c607830600965823b5e57d68a280b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga831c041d0170fee485a0b5e81b18af3a" id="r_ga831c041d0170fee485a0b5e81b18af3a"><td class="memItemLeft" align="right" valign="top"><a id="ga831c041d0170fee485a0b5e81b18af3a" name="ga831c041d0170fee485a0b5e81b18af3a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__9bit__shared.html#ga831c041d0170fee485a0b5e81b18af3a">uart1_parity_t</a> { <b>PARITY_SPACE</b>
+, <b>PARITY_MARK</b>
+, <b>PARITY_ODD</b>
+, <b>PARITY_EVEN</b>
+ }</td></tr>
+<tr class="memdesc:ga831c041d0170fee485a0b5e81b18af3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART1 parity type. <br /></td></tr>
+<tr class="separator:ga831c041d0170fee485a0b5e81b18af3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga0d5ba16d1b93a4fcb38584905dbe8342" id="r_ga0d5ba16d1b93a4fcb38584905dbe8342"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__9bit__shared.html#ga0d5ba16d1b93a4fcb38584905dbe8342">uart1_send_byte</a> (uint8_t byte, <a class="el" href="group__uart1__9bit__shared.html#ga831c041d0170fee485a0b5e81b18af3a">uart1_parity_t</a> parity)</td></tr>
+<tr class="memdesc:ga0d5ba16d1b93a4fcb38584905dbe8342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send byte over UART1 in mode 2, 3 with parity bit.  <br /></td></tr>
+<tr class="separator:ga0d5ba16d1b93a4fcb38584905dbe8342"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions for sending and receiving 9-bit data in UART1 mode 2 and 3.</p>
@@ -183,6 +201,44 @@ Uses polling (blocking) method for transmission.</dd></dl>
   </dd>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>Should not be called from interrupt service routines </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga0d5ba16d1b93a4fcb38584905dbe8342" name="ga0d5ba16d1b93a4fcb38584905dbe8342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0d5ba16d1b93a4fcb38584905dbe8342">&#9670;&#160;</a></span>uart1_send_byte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uart1_send_byte </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>byte</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__uart1__9bit__shared.html#ga831c041d0170fee485a0b5e81b18af3a">uart1_parity_t</a>&#160;</td>
+          <td class="paramname"><em>parity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send byte over UART1 in mode 2, 3 with parity bit. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">byte</td><td>uint8_t byte to be sent </td></tr>
+    <tr><td class="paramname">parity</td><td>uart1_parity_t parity type </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

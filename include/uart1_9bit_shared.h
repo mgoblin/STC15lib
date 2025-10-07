@@ -20,7 +20,12 @@
  * @author Michael Golovanov
  */
 
- typedef enum {
+ /**
+  * @brief UART1 parity type
+  * 
+  * @ingroup uart1_9bit_shared
+  */
+typedef enum {
     PARITY_SPACE,
     PARITY_MARK,
     PARITY_ODD,
@@ -76,6 +81,14 @@ do {                                                        \
     RI=0;                                                   \
 while (0)
 
+/**
+ * @brief Send byte over UART1 in mode 2, 3 with parity bit
+ * 
+ * @param byte uint8_t byte to be sent
+ * @param parity uart1_parity_t parity type
+ * 
+ * @ingroup uart1_9bit_shared
+ */
 void uart1_send_byte(uint8_t byte, uart1_parity_t parity);
 
 void uart1_receive_byte(uint8_t *byte, bool *is_parity_valid, uart1_parity_t parity);

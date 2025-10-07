@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['uart1_5fmode2_5finit_0',['uart1_mode2_init',['../group__uart1__mode2.html#gae3a36123e422cc6b7aef7bf2145b969f',1,'uart1_mode2_init(uart1_pins_t pins, uart1_mode2_baudrate_t baudRate):&#160;uart1_mode2.c'],['../group__uart1__mode2.html#gae3a36123e422cc6b7aef7bf2145b969f',1,'uart1_mode2_init(uart1_pins_t pins, uart1_mode2_baudrate_t baudRate):&#160;uart1_mode2.c']]]
+  ['uart1_5fsend_5fbyte_0',['uart1_send_byte',['../group__uart1__9bit__shared.html#ga0d5ba16d1b93a4fcb38584905dbe8342',1,'uart1_send_byte(uint8_t byte, uart1_parity_t parity):&#160;uart1_9bit_shared.c'],['../group__uart1__9bit__shared.html#ga0d5ba16d1b93a4fcb38584905dbe8342',1,'uart1_send_byte(uint8_t byte, uart1_parity_t parity):&#160;uart1_9bit_shared.c']]]
 ];
