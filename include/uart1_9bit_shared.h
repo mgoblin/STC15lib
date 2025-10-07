@@ -4,7 +4,6 @@
 #include <stdint.h>
 
 #include <sys.h>
-#include <uart1_shared.h>
 
 /**
  * @file uart1_9bit_shared.h
@@ -39,7 +38,10 @@
 #define uart1_send_9bit(byte, nineth)                       \
 do {                                                        \
     TB8 = (uint8_t)(nineth & 0x01);                         \
-    uart1_send_byte(byte);                                  \
+    SBUF = byte;                                            \
+                                                            \
+    while (!TI);                                            \
+    TI = 0;                                                 \
 } while (0)
 
 /**
@@ -64,6 +66,17 @@ do {                                                        \
     *byte_ptr = SBUF;                                       \
     *nineth_ptr = (uint8_t)(RB8 & 0x01);                    \
     RI=0;                                                   \
-while (0)    
+while (0)
+
+typedef enum {
+    SPACE,
+    MARK,
+    ODD,
+    EVEN
+} uart1_parity_t;
+
+void uart1_send_byte_with_parity(uint8_t byte, uart1_parity_t p);
+
+void uart1_receive_byte_with_parity(uint8_t *byte, uart1_parity_t p);
 
 #endif

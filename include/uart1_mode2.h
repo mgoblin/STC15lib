@@ -6,6 +6,7 @@
 #include <sys.h>
 #include <bits.h>
 #include <interrupt.h>
+#include <uart1_shared.h>
 #include <uart1_9bit_shared.h>
 
 /**

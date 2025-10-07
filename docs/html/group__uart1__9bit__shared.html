@@ -164,7 +164,10 @@ Uses polling (blocking) method for receveive.</dd></dl>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                        \</div>
 <div class="line">    TB8 = (uint8_t)(nineth &amp; 0x01);                         \</div>
-<div class="line">    uart1_send_byte(<span class="keywordtype">byte</span>);                                  \</div>
+<div class="line">    SBUF = byte;                                            \</div>
+<div class="line">                                                            \</div>
+<div class="line">    while (!TI);                                            \</div>
+<div class="line">    TI = 0;                                                 \</div>
 <div class="line">} <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
 <p>Send 9-bit data over UART1 in mode 2, 3. </p>

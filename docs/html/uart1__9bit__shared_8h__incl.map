@@ -1,11 +1,9 @@
 <map id="include/uart1_9bit_shared.h" name="include/uart1_9bit_shared.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="59,5,198,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="15,5,154,45"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,93,76,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,48,66,86,62,82,106,44"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,47,56,83,52,80,72,44"/>
 <area shape="rect" id="Node000003" href="$sys_8h.html" title=" " alt="" coords="101,93,157,119"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="131,46,131,79,126,79,126,46"/>
-<area shape="rect" id="Node000006" href="$uart1__shared_8h.html" title=" " alt="" coords="181,93,300,119"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="157,43,214,83,211,87,154,48"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="98,44,118,80,113,83,93,47"/>
 <area shape="rect" id="Node000004" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="79,167,178,192"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="131,119,131,153,126,153,126,119"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="83,240,174,265"/>

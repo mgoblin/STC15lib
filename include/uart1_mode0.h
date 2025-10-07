@@ -6,7 +6,7 @@
 #include <sys.h>
 #include <bits.h>
 #include <interrupt.h>
-#include <uart1_shared.h>
+#include <uart1_8bit_shared.h>
 
 /**
  * @file uart1_mode0.h

@@ -89,39 +89,41 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;<a class="code" href="sys_8h.html">sys.h</a>&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;bits.h&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;<a class="code" href="interrupt_8h.html">interrupt.h</a>&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;<a class="code" href="uart1__9bit__shared_8h.html">uart1_9bit_shared.h</a>&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="group__uart1__mode2.html#gac02fbfac5b05a9c1971d398289296f30">   37</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    baudrate_172800 = 172800U,</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    baudrate_345600 = 345600U</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>} <a class="code hl_enumeration" href="group__uart1__mode2.html#gac02fbfac5b05a9c1971d398289296f30">uart1_mode2_baudrate_t</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;<a class="code" href="uart1__shared_8h.html">uart1_shared.h</a>&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;<a class="code" href="uart1__9bit__shared_8h.html">uart1_9bit_shared.h</a>&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="group__uart1__mode2.html#gac02fbfac5b05a9c1971d398289296f30">   38</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    baudrate_172800 = 172800U,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    baudrate_345600 = 345600U</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>} <a class="code hl_enumeration" href="group__uart1__mode2.html#gac02fbfac5b05a9c1971d398289296f30">uart1_mode2_baudrate_t</a>;</div>
 </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="foldopen" id="foldopen00059" data-start="" data-end="">
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="group__uart1__mode2.html#ga1b1bc90cb8810eb52c896a7cc905b04c">   59</a></span><span class="preprocessor">#define uart1_mode2_init(pins, baudRate)                                        \</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">do {                                                                            \</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">    enable_mcu_interrupts();                                                    \</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">    enable_uart1_interrupt();                                                   \</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">                                                                                \</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">    </span><span class="comment">/* PCON.7 always set to 1. Is it error? */</span><span class="preprocessor">                                  \</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">    baudRate == baudrate_345600 ? bit_set(PCON, SBIT7) : bit_clr(PCON, SBIT7);  \</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">                                                                                \</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">    </span><span class="comment">/* SM1 = 1, SM0 = 0 to select UART1 mode2 */</span><span class="preprocessor">                                \</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">    SCON = 0x90;                                                                \</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">                                                                                \</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">    </span><span class="comment">/* Set AUXR1 bits 6, 7 to select RxD/TxD pins */</span><span class="preprocessor">                            \</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">    AUXR1 &amp;= 0x3F;                                                              \</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">    AUXR1 |= pins;                                                              \</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">} while (0)</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="foldopen" id="foldopen00060" data-start="" data-end="">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="group__uart1__mode2.html#ga1b1bc90cb8810eb52c896a7cc905b04c">   60</a></span><span class="preprocessor">#define uart1_mode2_init(pins, baudRate)                                        \</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">do {                                                                            \</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">    enable_mcu_interrupts();                                                    \</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">    enable_uart1_interrupt();                                                   \</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">                                                                                \</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">    </span><span class="comment">/* PCON.7 always set to 1. Is it error? */</span><span class="preprocessor">                                  \</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">    baudRate == baudrate_345600 ? bit_set(PCON, SBIT7) : bit_clr(PCON, SBIT7);  \</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">                                                                                \</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">    </span><span class="comment">/* SM1 = 1, SM0 = 0 to select UART1 mode2 */</span><span class="preprocessor">                                \</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">    SCON = 0x90;                                                                \</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">                                                                                \</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">    </span><span class="comment">/* Set AUXR1 bits 6, 7 to select RxD/TxD pins */</span><span class="preprocessor">                            \</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">    AUXR1 &amp;= 0x3F;                                                              \</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">    AUXR1 |= pins;                                                              \</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">} while (0)</span></div>
 </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="agroup__uart1__mode2_html_gac02fbfac5b05a9c1971d398289296f30"><div class="ttname"><a href="group__uart1__mode2.html#gac02fbfac5b05a9c1971d398289296f30">uart1_mode2_baudrate_t</a></div><div class="ttdeci">uart1_mode2_baudrate_t</div><div class="ttdoc">UART1 baud rate enumeration.</div><div class="ttdef"><b>Definition</b> uart1_mode2.h:37</div></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__uart1__mode2_html_gac02fbfac5b05a9c1971d398289296f30"><div class="ttname"><a href="group__uart1__mode2.html#gac02fbfac5b05a9c1971d398289296f30">uart1_mode2_baudrate_t</a></div><div class="ttdeci">uart1_mode2_baudrate_t</div><div class="ttdoc">UART1 baud rate enumeration.</div><div class="ttdef"><b>Definition</b> uart1_mode2.h:38</div></div>
 <div class="ttc" id="ainterrupt_8h_html"><div class="ttname"><a href="interrupt_8h.html">interrupt.h</a></div></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
 <div class="ttc" id="auart1__9bit__shared_8h_html"><div class="ttname"><a href="uart1__9bit__shared_8h.html">uart1_9bit_shared.h</a></div></div>
+<div class="ttc" id="auart1__shared_8h_html"><div class="ttname"><a href="uart1__shared_8h.html">uart1_shared.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

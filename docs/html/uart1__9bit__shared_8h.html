@@ -74,25 +74,24 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">uart1_9bit_shared.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="sys_8h_source.html">sys.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="uart1__shared_8h_source.html">uart1_shared.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for uart1_9bit_shared.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="uart1__9bit__shared_8h__incl.png" border="0" usemap="#ainclude_2uart1__9bit__shared_8h" alt=""/></div>
 <map name="ainclude_2uart1__9bit__shared_8h" id="ainclude_2uart1__9bit__shared_8h">
-<area shape="rect" title=" " alt="" coords="59,5,198,45"/>
+<area shape="rect" title=" " alt="" coords="15,5,154,45"/>
 <area shape="rect" title=" " alt="" coords="5,93,76,119"/>
-<area shape="poly" title=" " alt="" coords="109,48,66,86,62,82,106,44"/>
+<area shape="poly" title=" " alt="" coords="76,47,56,83,52,80,72,44"/>
 <area shape="rect" href="sys_8h.html" title=" " alt="" coords="101,93,157,119"/>
-<area shape="poly" title=" " alt="" coords="131,46,131,79,126,79,126,46"/>
-<area shape="rect" href="uart1__shared_8h.html" title=" " alt="" coords="181,93,300,119"/>
-<area shape="poly" title=" " alt="" coords="157,43,214,83,211,87,154,48"/>
+<area shape="poly" title=" " alt="" coords="98,44,118,80,113,83,93,47"/>
 <area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="79,167,178,192"/>
 <area shape="poly" title=" " alt="" coords="131,119,131,153,126,153,126,119"/>
 <area shape="rect" title=" " alt="" coords="83,240,174,265"/>
@@ -124,6 +123,24 @@ Macros</h2></td></tr>
 <tr class="memitem:ga5f7c607830600965823b5e57d68a280b" id="r_ga5f7c607830600965823b5e57d68a280b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__9bit__shared.html#ga5f7c607830600965823b5e57d68a280b">uart1_receive_9bit</a>(byte_ptr,  nineth_ptr)</td></tr>
 <tr class="memdesc:ga5f7c607830600965823b5e57d68a280b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive 9-bit data over UART1 in mode 2, 3.  <br /></td></tr>
 <tr class="separator:ga5f7c607830600965823b5e57d68a280b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a831c041d0170fee485a0b5e81b18af3a" id="r_a831c041d0170fee485a0b5e81b18af3a"><td class="memItemLeft" align="right" valign="top"><a id="a831c041d0170fee485a0b5e81b18af3a" name="a831c041d0170fee485a0b5e81b18af3a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uart1_parity_t</b> { <b>SPACE</b>
+, <b>MARK</b>
+, <b>ODD</b>
+, <b>EVEN</b>
+ }</td></tr>
+<tr class="separator:a831c041d0170fee485a0b5e81b18af3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aff72271ccb15beac0fa16b0d9a6b0aae" id="r_aff72271ccb15beac0fa16b0d9a6b0aae"><td class="memItemLeft" align="right" valign="top"><a id="aff72271ccb15beac0fa16b0d9a6b0aae" name="aff72271ccb15beac0fa16b0d9a6b0aae"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>uart1_send_byte_with_parity</b> (uint8_t byte, uart1_parity_t p)</td></tr>
+<tr class="separator:aff72271ccb15beac0fa16b0d9a6b0aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb64acbd0f34b3fd677229802e411fc0" id="r_adb64acbd0f34b3fd677229802e411fc0"><td class="memItemLeft" align="right" valign="top"><a id="adb64acbd0f34b3fd677229802e411fc0" name="adb64acbd0f34b3fd677229802e411fc0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>uart1_receive_byte_with_parity</b> (uint8_t *byte, uart1_parity_t p)</td></tr>
+<tr class="separator:adb64acbd0f34b3fd677229802e411fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

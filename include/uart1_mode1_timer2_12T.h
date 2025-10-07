@@ -57,6 +57,7 @@
 #include <frequency.h>
 #include <interrupt.h>
 #include <uart1_shared.h>
+#include <uart1_8bit_shared.h>
 
 /**
  * @brief UART1 precalculated baudrates
