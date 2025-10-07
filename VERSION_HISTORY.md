@@ -149,10 +149,9 @@
 * Fix UART1 mode 0 docs. Baud rate is biased by frequency divider.
 * Fix README content in subfolders
 * UART1 mode2 routines implemented
-* UART1 mode3 timer2 12T routines implemented
-* UART1 mode3 timer2 1T routines implemented
+* UART1 mode3 timer2 (1T and 12T) routines implemented
 * TODO UART1 support parity bit in uart tx/rx
-* TODO UART1 mode 1, 2, 3 examples 
+* TODO UART1 mode 1, 2, 3 receive examples 
 * TODO UART1 support 2 stop bits on rx/rx 
 * TODO UART1 support frame error
 
