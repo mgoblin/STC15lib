@@ -63,8 +63,8 @@ do {                                                        \
  * @details
  * The function blocks until the 9bits is fully received.
  * 
- * @param byte_ptr uint8_t* the 8-bit data value to be received (0-255).
- * @param nineth_ptr uint8_t* the 9th bit of the received data. 1 or 0.
+ * @param byte uint8_t the 8-bit data value to be received (0-255).
+ * @param nineth uint8_t the 9th bit of the received data. 1 or 0.
  * 
  * @note Requires UART1 to be previously initialized and started.
  * @note Uses polling (blocking) method for receveive.
@@ -73,12 +73,12 @@ do {                                                        \
  * 
  * @ingroup uart1_9bit_shared 
  */
-#define uart1_receive_9bit(byte_ptr, nineth_ptr)            \
+#define uart1_receive_9bit(byte, nineth)                    \
 do {                                                        \
-    while(!RI);                                             \
-    *byte_ptr = SBUF;                                       \
-    *nineth_ptr = (uint8_t)(RB8 & 0x01);                    \
     RI=0;                                                   \
+    while(!RI);                                             \
+    byte = SBUF;                                            \
+    nineth = RB8;                                           \
 while (0)
 
 /**

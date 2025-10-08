@@ -110,12 +110,12 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="foldopen" id="foldopen00076" data-start="" data-end="">
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="group__uart1__9bit__shared.html#ga5f7c607830600965823b5e57d68a280b">   76</a></span><span class="preprocessor">#define uart1_receive_9bit(byte_ptr, nineth_ptr)            \</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="group__uart1__9bit__shared.html#ga56f4195c2b4015669a87850ba4d4098d">   76</a></span><span class="preprocessor">#define uart1_receive_9bit(byte, nineth)                    \</span></div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">do {                                                        \</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">    while(!RI);                                             \</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">    *byte_ptr = SBUF;                                       \</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">    *nineth_ptr = (uint8_t)(RB8 &amp; 0x01);                    \</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">    RI=0;                                                   \</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">    RI=0;                                                   \</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">    while(!RI);                                             \</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">    byte = SBUF;                                            \</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">    nineth = RB8;                                           \</span></div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">while (0)</span></div>
 </div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>

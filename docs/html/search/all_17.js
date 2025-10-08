@@ -50,7 +50,7 @@ var searchData=
   ['uart1_5fmode3_5ftimer2_5f1t_5fticks_47',['uart1_mode3_timer2_1T_ticks',['../group__uart1__mode3__timer2__1T.html#ga084459b3cdb99087039741b0c5158fae',1,'uart1_mode3_timer2_1T.h']]],
   ['uart1_5fparity_5ft_48',['uart1_parity_t',['../group__uart1__9bit__shared.html#ga831c041d0170fee485a0b5e81b18af3a',1,'uart1_9bit_shared.h']]],
   ['uart1_5fpins_5ft_49',['uart1_pins_t',['../group__uart1__shared.html#gaed599bf26e2baa98c2d108a072d02337',1,'uart1_shared.h']]],
-  ['uart1_5freceive_5f9bit_50',['uart1_receive_9bit',['../group__uart1__9bit__shared.html#ga5f7c607830600965823b5e57d68a280b',1,'uart1_9bit_shared.h']]],
+  ['uart1_5freceive_5f9bit_50',['uart1_receive_9bit',['../group__uart1__9bit__shared.html#ga56f4195c2b4015669a87850ba4d4098d',1,'uart1_9bit_shared.h']]],
   ['uart1_5freceive_5fbyte_51',['uart1_receive_byte',['../group__uart1__8bit__shared.html#ga962ae5d282cd3034d942cb54221a17ad',1,'uart1_8bit_shared.h']]],
   ['uart1_5fsend_5f9bit_52',['uart1_send_9bit',['../group__uart1__9bit__shared.html#gae28cbb2415884fea9a736edcd3bde8fb',1,'uart1_9bit_shared.h']]],
   ['uart1_5fsend_5fbyte_53',['uart1_send_byte',['../group__uart1__9bit__shared.html#ga0f576922befcccc708390578252a128f',1,'uart1_send_byte:&#160;uart1_9bit_shared.h'],['../group__uart1__8bit__shared.html#gad9c16ff3593511fc868323e3718ecc1d',1,'uart1_send_byte:&#160;uart1_8bit_shared.h']]],

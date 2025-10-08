@@ -81,9 +81,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gae28cbb2415884fea9a736edcd3bde8fb" id="r_gae28cbb2415884fea9a736edcd3bde8fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__9bit__shared.html#gae28cbb2415884fea9a736edcd3bde8fb">uart1_send_9bit</a>(byte,  nineth)</td></tr>
 <tr class="memdesc:gae28cbb2415884fea9a736edcd3bde8fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send 9-bit data over UART1 in mode 2, 3.  <br /></td></tr>
 <tr class="separator:gae28cbb2415884fea9a736edcd3bde8fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5f7c607830600965823b5e57d68a280b" id="r_ga5f7c607830600965823b5e57d68a280b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__9bit__shared.html#ga5f7c607830600965823b5e57d68a280b">uart1_receive_9bit</a>(byte_ptr,  nineth_ptr)</td></tr>
-<tr class="memdesc:ga5f7c607830600965823b5e57d68a280b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive 9-bit data over UART1 in mode 2, 3.  <br /></td></tr>
-<tr class="separator:ga5f7c607830600965823b5e57d68a280b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga56f4195c2b4015669a87850ba4d4098d" id="r_ga56f4195c2b4015669a87850ba4d4098d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__9bit__shared.html#ga56f4195c2b4015669a87850ba4d4098d">uart1_receive_9bit</a>(byte,  nineth)</td></tr>
+<tr class="memdesc:ga56f4195c2b4015669a87850ba4d4098d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive 9-bit data over UART1 in mode 2, 3.  <br /></td></tr>
+<tr class="separator:ga56f4195c2b4015669a87850ba4d4098d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0f576922befcccc708390578252a128f" id="r_ga0f576922befcccc708390578252a128f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__9bit__shared.html#ga0f576922befcccc708390578252a128f">uart1_send_byte</a>(byte,  parity)</td></tr>
 <tr class="memdesc:ga0f576922befcccc708390578252a128f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send byte over UART1 in mode 2, 3 with parity bit.  <br /></td></tr>
 <tr class="separator:ga0f576922befcccc708390578252a128f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,8 +103,8 @@ Enumerations</h2></td></tr>
 <p>This header file included in UART1 mode 2, 3 headers and do not need to be included explicitly.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ga5f7c607830600965823b5e57d68a280b" name="ga5f7c607830600965823b5e57d68a280b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5f7c607830600965823b5e57d68a280b">&#9670;&#160;</a></span>uart1_receive_9bit</h2>
+<a id="ga56f4195c2b4015669a87850ba4d4098d" name="ga56f4195c2b4015669a87850ba4d4098d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga56f4195c2b4015669a87850ba4d4098d">&#9670;&#160;</a></span>uart1_receive_9bit</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -113,13 +113,13 @@ Enumerations</h2></td></tr>
           <td class="memname">#define uart1_receive_9bit</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">byte_ptr, </td>
+          <td class="paramname">byte, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">nineth_ptr&#160;</td>
+          <td class="paramname">nineth&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -129,18 +129,18 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                        \</div>
-<div class="line">    while(!RI);                                             \</div>
-<div class="line">    *byte_ptr = SBUF;                                       \</div>
-<div class="line">    *nineth_ptr = (uint8_t)(RB8 &amp; 0x01);                    \</div>
 <div class="line">    RI=0;                                                   \</div>
+<div class="line">    while(!RI);                                             \</div>
+<div class="line">    <span class="keywordtype">byte</span> = SBUF;                                            \</div>
+<div class="line">    nineth = RB8;                                           \</div>
 <div class="line">while (0)</div>
 </div><!-- fragment -->
 <p>Receive 9-bit data over UART1 in mode 2, 3. </p>
 <p>The function blocks until the 9bits is fully received.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">byte_ptr</td><td>uint8_t* the 8-bit data value to be received (0-255). </td></tr>
-    <tr><td class="paramname">nineth_ptr</td><td>uint8_t* the 9th bit of the received data. 1 or 0.</td></tr>
+    <tr><td class="paramname">byte</td><td>uint8_t the 8-bit data value to be received (0-255). </td></tr>
+    <tr><td class="paramname">nineth</td><td>uint8_t the 9th bit of the received data. 1 or 0.</td></tr>
   </table>
   </dd>
 </dl>
