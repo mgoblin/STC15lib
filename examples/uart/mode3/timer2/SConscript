@@ -31,4 +31,9 @@ env.Default(
         ['uart1_mode3_timer2_12T_even_parity_example.c']
     ),
 
+    env.Program(
+        'uart1_mode3_timer2_1T_odd_parity_example',
+        ['uart1_mode3_timer2_1T_odd_parity_example.c']
+    ),
+
 )
