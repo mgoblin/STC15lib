@@ -101,11 +101,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="group__uart1__8bit__shared.html#gaff248c97ad442c4fc9931d4baa5e9854">   53</a></span><span class="preprocessor">#define is_uart1_send_byte_complete() (TI) </span></div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="foldopen" id="foldopen00070" data-start="" data-end="">
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="group__uart1__8bit__shared.html#ga1940b2ddaaec617feb9c59d4a544e939">   70</a></span><span class="preprocessor">#define uart1_receive_byte(byte_ptr)            \</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="group__uart1__8bit__shared.html#ga962ae5d282cd3034d942cb54221a17ad">   70</a></span><span class="preprocessor">#define uart1_receive_byte(byte)                \</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">do {                                            \</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">    while(!RI);                                 \</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">    *byte_ptr = SBUF;                           \</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">    RI=0;                                       \</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">    RI=0;                                       \</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">    while(!RI);                                 \</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">    byte = SBUF;                                \</span></div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">} while (0)</span></div>
 </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>

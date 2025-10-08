@@ -17,11 +17,15 @@ void main()
 
     while (1)
     {
-        LED = !LED;
+        LED = 0;
 
-        uint8_t data;
-        uart1_receive_byte(&data);
-        uart1_send_byte(data);
+        uint8_t byte = 0x00;
+        uart1_receive_byte(byte);
+        delay_ms(1000);
+
+        LED = 1;
+
+        uart1_send_byte(byte);
 
         uart1_send_byte(' ');
         uart1_send_byte('O');

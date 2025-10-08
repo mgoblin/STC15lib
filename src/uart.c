@@ -10,7 +10,7 @@ int putchar(int ch)
 int getchar(void)
 {
     uint8_t ch = 0;
-	uart1_receive_byte(&ch);
+	uart1_receive_byte(ch);
 	return ch;
 }
 

@@ -62,16 +62,16 @@ do                                              \
  * 
  * @note Requires UART1 to be previously initialized and started.
  * @note Uses polling (blocking) method for receveive.
- *
+ * 
  * @warning Should not be called from interrupt service routines
  * 
  * @ingroup uart1_8bit_shared
  */
-#define uart1_receive_byte(byte_ptr)            \
+#define uart1_receive_byte(byte)                \
 do {                                            \
-	while(!RI);                                 \
-    *byte_ptr = SBUF;                           \
-	RI=0;                                       \
+    RI=0;                                       \
+    while(!RI);                                 \
+    byte = SBUF;                                \
 } while (0)
 
 /**

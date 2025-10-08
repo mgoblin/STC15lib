@@ -19,8 +19,8 @@ void main()
     {
         LED = !LED;
 
-        uint8_t data;
-        uart1_receive_byte(&data);
+        uint8_t data = 0x00;
+        uart1_receive_byte(data);
         uart1_send_byte(data);
 
         uart1_send_byte(' ');
