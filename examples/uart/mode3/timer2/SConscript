@@ -25,4 +25,10 @@ env.Default(
         'uart1_mode3_timer2_1T_freq_bias_example',
         ['uart1_mode3_timer2_1T_freq_bias_example.c']
     ),
+
+    env.Program(
+        'uart1_mode3_timer2_12T_even_parity_example',
+        ['uart1_mode3_timer2_12T_even_parity_example.c']
+    ),
+
 )
