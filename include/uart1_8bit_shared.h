@@ -58,7 +58,7 @@ do                                              \
  * @details 
  * The function blocks until the byte is fully received.
  * 
- * @param byte_ptr uint8_t* the 8-bit data value to be received (0-255).
+ * @param byte uint8_t the 8-bit data value to be received (0-255).
  * 
  * @note Requires UART1 to be previously initialized and started.
  * @note Uses polling (blocking) method for receveive.
