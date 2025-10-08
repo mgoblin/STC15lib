@@ -53,7 +53,7 @@ var searchData=
   ['uart1_5freceive_5f9bit_50',['uart1_receive_9bit',['../group__uart1__9bit__shared.html#ga5f7c607830600965823b5e57d68a280b',1,'uart1_9bit_shared.h']]],
   ['uart1_5freceive_5fbyte_51',['uart1_receive_byte',['../group__uart1__8bit__shared.html#ga1940b2ddaaec617feb9c59d4a544e939',1,'uart1_8bit_shared.h']]],
   ['uart1_5fsend_5f9bit_52',['uart1_send_9bit',['../group__uart1__9bit__shared.html#gae28cbb2415884fea9a736edcd3bde8fb',1,'uart1_9bit_shared.h']]],
-  ['uart1_5fsend_5fbyte_53',['uart1_send_byte',['../group__uart1__9bit__shared.html#ga0d5ba16d1b93a4fcb38584905dbe8342',1,'uart1_send_byte(uint8_t byte, uart1_parity_t parity):&#160;uart1_9bit_shared.c'],['../group__uart1__9bit__shared.html#ga0d5ba16d1b93a4fcb38584905dbe8342',1,'uart1_send_byte(uint8_t byte, uart1_parity_t parity):&#160;uart1_9bit_shared.c'],['../group__uart1__8bit__shared.html#gad9c16ff3593511fc868323e3718ecc1d',1,'uart1_send_byte:&#160;uart1_8bit_shared.h']]],
+  ['uart1_5fsend_5fbyte_53',['uart1_send_byte',['../group__uart1__9bit__shared.html#ga0f576922befcccc708390578252a128f',1,'uart1_send_byte:&#160;uart1_9bit_shared.h'],['../group__uart1__8bit__shared.html#gad9c16ff3593511fc868323e3718ecc1d',1,'uart1_send_byte:&#160;uart1_8bit_shared.h']]],
   ['uart1_5fshared_2eh_54',['uart1_shared.h',['../uart1__shared_8h.html',1,'']]],
   ['use_20it_55',['How to use it',['../index.html#autotoc_md1',1,'']]],
   ['use_20stc15_20hal_20functions_56',['Use STC15 HAL functions',['../index.html#autotoc_md4',1,'']]]

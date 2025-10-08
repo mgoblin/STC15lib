@@ -89,7 +89,26 @@ while (0)
  * 
  * @ingroup uart1_9bit_shared
  */
-void uart1_send_byte(uint8_t byte, uart1_parity_t parity);
+#define uart1_send_byte(byte, parity)           \
+do {                                            \
+    ACC = byte;                                 \
+    if (parity == PARITY_EVEN)                  \
+    {                                           \
+        uart1_send_9bit(byte, P);               \
+    }                                           \
+    else if (parity == PARITY_ODD)              \
+    {                                           \
+        uart1_send_9bit(byte, ~P);              \
+    }                                           \
+    else if (parity == PARITY_SPACE)            \
+    {                                           \
+        uart1_send_9bit(byte, 0);               \
+    }                                           \
+    else if (parity == PARITY_MARK)             \
+    {                                           \
+        uart1_send_9bit(byte, 1);               \
+    }                                           \
+} while (0)    
 
 void uart1_receive_byte(uint8_t *byte, bool *is_parity_valid, uart1_parity_t parity);
 
