@@ -50,7 +50,7 @@ typedef enum {
   */
 #define uart1_send_9bit(byte, nineth)                       \
 do {                                                        \
-    TB8 = (uint8_t)(nineth & 0x01);                         \
+    TB8 = nineth;                                           \
     SBUF = byte;                                            \
                                                             \
     while (!TI);                                            \
@@ -110,6 +110,6 @@ do {                                            \
     }                                           \
 } while (0)    
 
-void uart1_receive_byte(uint8_t *byte, bool *is_parity_valid, uart1_parity_t parity);
+bool uart1_receive_byte(uint8_t *byte, uart1_parity_t parity);
 
 #endif

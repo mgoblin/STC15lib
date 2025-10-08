@@ -1,10 +1,30 @@
 #include <uart1_9bit_shared.h>
 
-void uart1_receive_byte(uint8_t *byte, bool *is_parity_valid, uart1_parity_t parity)
+bool uart1_receive_byte(uint8_t *byte, uart1_parity_t parity)
 {
-    // Get received 8 bits from SBUF and parity bit from RB8
-    // Check parity. 
-    // If partity is valid, store received byte in *byte and store true in *is_parity_valid
-    // If parity is not valid, store false in *is_parity_valid and do not store received byte
-    // in *byte
+    RI = 0;
+    while (!RI);
+
+    ACC = SBUF;
+    const uint8_t parity_value = P;
+
+    *byte = SBUF;
+
+    return parity_value == RB8;
+
+    // if (parity == PARITY_EVEN)
+    // {
+    //     return parity_value == RB8;
+    // } else if (parity == PARITY_ODD)
+    // {
+    //     return parity_value != RB8;
+    // } else if (parity == PARITY_SPACE) {
+    //     return parity_value == 0;
+    // } else if (parity == PARITY_MARK) 
+    // {
+    //     return parity_value == 1;
+    // } else 
+    // {
+    //     return false;
+    // }
 }

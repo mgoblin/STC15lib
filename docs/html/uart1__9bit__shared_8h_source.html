@@ -101,7 +101,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="foldopen" id="foldopen00051" data-start="" data-end="">
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="group__uart1__9bit__shared.html#gae28cbb2415884fea9a736edcd3bde8fb">   51</a></span><span class="preprocessor">#define uart1_send_9bit(byte, nineth)                       \</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">do {                                                        \</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">    TB8 = (uint8_t)(nineth &amp; 0x01);                         \</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">    TB8 = nineth;                                           \</span></div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">    SBUF = byte;                                            \</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">                                                            \</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">    while (!TI);                                            \</span></div>
@@ -142,7 +142,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">} while (0)    </span></div>
 </div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keywordtype">void</span> <a class="code hl_define" href="group__uart1__8bit__shared.html#ga962ae5d282cd3034d942cb54221a17ad">uart1_receive_byte</a>(uint8_t *<span class="keywordtype">byte</span>, <span class="keywordtype">bool</span> *is_parity_valid, <a class="code hl_enumeration" href="group__uart1__9bit__shared.html#ga831c041d0170fee485a0b5e81b18af3a">uart1_parity_t</a> parity);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keywordtype">bool</span> <a class="code hl_define" href="group__uart1__8bit__shared.html#ga962ae5d282cd3034d942cb54221a17ad">uart1_receive_byte</a>(uint8_t *<span class="keywordtype">byte</span>, <a class="code hl_enumeration" href="group__uart1__9bit__shared.html#ga831c041d0170fee485a0b5e81b18af3a">uart1_parity_t</a> parity);</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="agroup__uart1__8bit__shared_html_ga962ae5d282cd3034d942cb54221a17ad"><div class="ttname"><a href="group__uart1__8bit__shared.html#ga962ae5d282cd3034d942cb54221a17ad">uart1_receive_byte</a></div><div class="ttdeci">#define uart1_receive_byte(byte)</div><div class="ttdoc">Receives a single byte over UART1.</div><div class="ttdef"><b>Definition</b> uart1_8bit_shared.h:70</div></div>

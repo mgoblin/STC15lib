@@ -177,7 +177,7 @@ Uses polling (blocking) method for receveive.</dd></dl>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                        \</div>
-<div class="line">    TB8 = (uint8_t)(nineth &amp; 0x01);                         \</div>
+<div class="line">    TB8 = nineth;                                           \</div>
 <div class="line">    SBUF = byte;                                            \</div>
 <div class="line">                                                            \</div>
 <div class="line">    while (!TI);                                            \</div>
