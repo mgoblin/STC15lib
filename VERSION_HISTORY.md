@@ -150,7 +150,7 @@
 * Fix README content in subfolders
 * UART1 mode2 routines implemented
 * UART1 mode3 timer2 (1T and 12T) routines implemented
-* TODO UART1 mode 2, 3 uart1_send_byte shold be splitted on xxx_odd_parity, xxx_even_parity, xxx_mark_parity, xxx_space parity and uart1_parity_t enum could be removed
+* TODO UART1 mode 2, 3 uart1_receive_byte shold be splitted on xxx_odd_parity, xxx_even_parity, xxx_mark_parity, xxx_space parity
 * TODO UART1 mode 2, 3 receive examples 8-parity bit-1
 * TODO UART1 support 2 stop bits on tx/rx 
 * TODO UART1 support frame error

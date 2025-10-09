@@ -82,32 +82,59 @@ do {                                                        \
 while (0)
 
 /**
- * @brief Send byte over UART1 in mode 2, 3 with parity bit
+ * @brief Send byte over UART1 in mode 2, 3 
+ * with even parity bit
  * 
  * @param byte uint8_t byte to be sent
- * @param parity uart1_parity_t parity type
  * 
  * @ingroup uart1_9bit_shared
  */
-#define uart1_send_byte(byte, parity)           \
+#define uart1_send_byte_even_parity(byte)       \
 do {                                            \
     ACC = byte;                                 \
-    if (parity == PARITY_EVEN)                  \
-    {                                           \
-        uart1_send_9bit(byte, P);               \
-    }                                           \
-    else if (parity == PARITY_ODD)              \
-    {                                           \
-        uart1_send_9bit(byte, ~P);              \
-    }                                           \
-    else if (parity == PARITY_SPACE)            \
-    {                                           \
-        uart1_send_9bit(byte, 0);               \
-    }                                           \
-    else if (parity == PARITY_MARK)             \
-    {                                           \
-        uart1_send_9bit(byte, 1);               \
-    }                                           \
+    uart1_send_9bit(byte, P);                   \
+} while (0)    
+
+/**
+ * @brief Send byte over UART1 in mode 2, 3 
+ * with odd parity bit
+ * 
+ * @param byte uint8_t byte to be sent
+ * 
+ * @ingroup uart1_9bit_shared
+ */
+#define uart1_send_byte_odd_parity(byte)        \
+do {                                            \
+    ACC = byte;                                 \
+    uart1_send_9bit(byte, !P);                  \
+} while (0)
+
+/**
+ * @brief Send byte over UART1 in mode 2, 3 
+ * with space parity bit
+ * 
+ * @param byte uint8_t byte to be sent
+ * 
+ * @ingroup uart1_9bit_shared
+ */
+#define uart1_send_byte_space_parity(byte)      \
+do {                                            \
+    ACC = byte;                                 \
+    uart1_send_9bit(byte, 0);                   \
+} while (0)    
+
+/**
+ * @brief Send byte over UART1 in mode 2, 3 
+ * with mark parity bit
+ * 
+ * @param byte uint8_t byte to be sent
+ * 
+ * @ingroup uart1_9bit_shared
+ */
+#define uart1_send_byte_mark_parity(byte)       \
+do {                                            \
+    ACC = byte;                                 \
+    uart1_send_9bit(byte, 1);                   \
 } while (0)    
 
 bool uart1_receive_byte(uint8_t *byte, uart1_parity_t parity);

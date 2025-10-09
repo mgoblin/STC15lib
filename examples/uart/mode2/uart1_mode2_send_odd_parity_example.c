@@ -28,7 +28,7 @@ void main()
     while(1)
     {
         LED = 1;
-        uart1_send_byte('Y', PARITY_ODD);
+        uart1_send_byte_odd_parity('Y');
         delay_ms(500);
     }
 }

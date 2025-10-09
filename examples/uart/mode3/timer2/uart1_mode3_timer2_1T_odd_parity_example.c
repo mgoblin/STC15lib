@@ -17,11 +17,11 @@ void main()
     {
         LED = !LED;
 
-        uart1_send_byte(' ', PARITY_ODD);
-        uart1_send_byte('O', PARITY_ODD);
-        uart1_send_byte('k', PARITY_ODD);
-        uart1_send_byte('\r', PARITY_ODD);
-        uart1_send_byte('\n', PARITY_ODD);
+        uart1_send_byte_odd_parity(' ');
+        uart1_send_byte_odd_parity('O');
+        uart1_send_byte_odd_parity('k');
+        uart1_send_byte_odd_parity('\r');
+        uart1_send_byte_odd_parity('\n');
 
         delay_ms(500);
     }
