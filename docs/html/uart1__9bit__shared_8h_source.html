@@ -158,7 +158,25 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">} while (0)        </span></div>
 </div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="preprocessor">#endif</span></div>
+<div class="foldopen" id="foldopen00164" data-start="" data-end="">
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="group__uart1__9bit__shared.html#gac0a3b291e4aae810ca6ef70d35bf1e96">  164</a></span><span class="preprocessor">#define uart1_receive_byte_odd_parity(byte)     \</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">do {                                            \</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="preprocessor">    bool is_parity_valid = false;               \</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="preprocessor">    while (!is_parity_valid)                    \</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="preprocessor">    {                                           \</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="preprocessor">        RI = 0;                                 \</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">        while (!RI);                            \</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="preprocessor">                                                \</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="preprocessor">        byte = SBUF;                            \</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="preprocessor">                                                \</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="preprocessor">        ACC = byte;                             \</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="preprocessor">                                                \</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="preprocessor">        is_parity_valid = P != RB8;             \</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="preprocessor">    }                                           \</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="preprocessor">} while (0)       </span></div>
+</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
