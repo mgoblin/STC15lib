@@ -10,4 +10,10 @@ env.Default(
         'uart1_mode2_send_odd_parity_example',
         ['uart1_mode2_send_odd_parity_example.c'],
     ),
+
+    env.Program(
+        'uart1_mode2_receive_odd_parity_example',
+        ['uart1_mode2_receive_odd_parity_example.c'],
+    ),
+
 )

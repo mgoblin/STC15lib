@@ -135,7 +135,7 @@ do {                                            \
                                                 \
         ACC = byte;                             \
                                                 \
-        is_parity_valid = P == RB8;             \
+        is_parity_valid = P != RB8;             \
     }                                           \
 } while (0)        
 
