@@ -177,4 +177,58 @@ do {                                            \
     }                                           \
 } while (0)       
 
+/**
+ * @brief Receive byte over UART1 in mode 2, 3 with mark parity bit
+ * 
+ * @param byte uint8_t the 8-bit data value to be received (0-255).
+ * 
+ * @attention This function is blocking until the byte is fully received with 
+ * valid parity bit. Receive byte with non-valid parity bit will not 
+ * unblock the function.
+ * 
+ * @ingroup uart1_9bit_shared
+ */
+#define uart1_receive_byte_mark_parity(byte)    \
+do {                                            \
+    bool is_parity_valid = false;               \
+    while (!is_parity_valid)                    \
+    {                                           \
+        RI = 0;                                 \
+        while (!RI);                            \
+                                                \
+        byte = SBUF;                            \
+                                                \
+        ACC = byte;                             \
+                                                \
+        is_parity_valid = RB8 == 1;             \
+    }                                           \
+} while (0)       
+
+/**
+ * @brief Receive byte over UART1 in mode 2, 3 with space parity bit
+ * 
+ * @param byte uint8_t the 8-bit data value to be received (0-255).
+ * 
+ * @attention This function is blocking until the byte is fully received with 
+ * valid parity bit. Receive byte with non-valid parity bit will not 
+ * unblock the function.
+ * 
+ * @ingroup uart1_9bit_shared
+ */
+#define uart1_receive_byte_space_parity(byte)   \
+do {                                            \
+    bool is_parity_valid = false;               \
+    while (!is_parity_valid)                    \
+    {                                           \
+        RI = 0;                                 \
+        while (!RI);                            \
+                                                \
+        byte = SBUF;                            \
+                                                \
+        ACC = byte;                             \
+                                                \
+        is_parity_valid = RB8 == 0;             \
+    }                                           \
+} while (0)       
+
 #endif
