@@ -136,42 +136,10 @@ Macros</h2></td></tr>
 <tr class="memitem:ga63a555f0abe8f7511e45a322d44d0342" id="r_ga63a555f0abe8f7511e45a322d44d0342"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__9bit__shared.html#ga63a555f0abe8f7511e45a322d44d0342">uart1_send_byte_mark_parity</a>(byte)</td></tr>
 <tr class="memdesc:ga63a555f0abe8f7511e45a322d44d0342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send byte over UART1 in mode 2, 3 with mark parity bit.  <br /></td></tr>
 <tr class="separator:ga63a555f0abe8f7511e45a322d44d0342"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafdc7ac5a49e243ec8156fe2895e427b" id="r_aafdc7ac5a49e243ec8156fe2895e427b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart1__9bit__shared_8h.html#aafdc7ac5a49e243ec8156fe2895e427b">uart1_receive_byte_even_parity</a>(byte)</td></tr>
-<tr class="separator:aafdc7ac5a49e243ec8156fe2895e427b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaafdc7ac5a49e243ec8156fe2895e427b" id="r_gaafdc7ac5a49e243ec8156fe2895e427b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__9bit__shared.html#gaafdc7ac5a49e243ec8156fe2895e427b">uart1_receive_byte_even_parity</a>(byte)</td></tr>
+<tr class="memdesc:gaafdc7ac5a49e243ec8156fe2895e427b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive byte over UART1 in mode 2, 3 with even parity bit.  <br /></td></tr>
+<tr class="separator:gaafdc7ac5a49e243ec8156fe2895e427b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="aafdc7ac5a49e243ec8156fe2895e427b" name="aafdc7ac5a49e243ec8156fe2895e427b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aafdc7ac5a49e243ec8156fe2895e427b">&#9670;&#160;</a></span>uart1_receive_byte_even_parity</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define uart1_receive_byte_even_parity</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">byte</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                            \</div>
-<div class="line">    <span class="keywordtype">bool</span> is_parity_valid = <span class="keyword">false</span>;               \</div>
-<div class="line">    while (!is_parity_valid)                    \</div>
-<div class="line">    {                                           \</div>
-<div class="line">        RI = 0;                                 \</div>
-<div class="line">        while (!RI);                            \</div>
-<div class="line">                                                \</div>
-<div class="line">        <span class="keywordtype">byte</span> = SBUF;                            \</div>
-<div class="line">                                                \</div>
-<div class="line">        ACC = byte;                             \</div>
-<div class="line">                                                \</div>
-<div class="line">        is_parity_valid = P != RB8;             \</div>
-<div class="line">    }                                           \</div>
-<div class="line">} <span class="keywordflow">while</span> (0)</div>
-</div><!-- fragment -->
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

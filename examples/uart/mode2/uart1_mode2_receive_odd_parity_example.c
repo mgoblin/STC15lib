@@ -13,7 +13,7 @@
 
 void main()
 {
-    uint8_t received_byte;
+    uint8_t received_byte = 0;
     uart1_mode2_init(RxD_P30_TxD_P31, baudrate_345600);
 	
     LED = 1; // LED off
