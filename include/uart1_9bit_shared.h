@@ -21,18 +21,6 @@
  */
 
  /**
-  * @brief UART1 parity type
-  * 
-  * @ingroup uart1_9bit_shared
-  */
-typedef enum {
-    PARITY_SPACE,
-    PARITY_MARK,
-    PARITY_ODD,
-    PARITY_EVEN
-} uart1_parity_t;
-
- /**
   * @brief Send 9-bit data over UART1 in mode 2, 3
   * 
   * @details
@@ -135,6 +123,20 @@ do {                                            \
     uart1_send_9bit(byte, 1);                   \
 } while (0)    
 
-bool uart1_receive_byte(uint8_t *byte, uart1_parity_t parity);
+#define uart1_receive_byte_even_parity(byte)    \
+do {                                            \
+    bool is_parity_valid = false;               \
+    while (!is_parity_valid)                    \
+    {                                           \
+        RI = 0;                                 \
+        while (!RI);                            \
+                                                \
+        byte = SBUF;                            \
+                                                \
+        ACC = byte;                             \
+                                                \
+        is_parity_valid = P == RB8;             \
+    }                                           \
+} while (0)        
 
 #endif
