@@ -119,7 +119,6 @@ do {                                            \
  */
 #define uart1_send_byte_space_parity(byte)      \
 do {                                            \
-    ACC = byte;                                 \
     uart1_send_9bit(byte, 0);                   \
 } while (0)    
 
@@ -133,7 +132,6 @@ do {                                            \
  */
 #define uart1_send_byte_mark_parity(byte)       \
 do {                                            \
-    ACC = byte;                                 \
     uart1_send_9bit(byte, 1);                   \
 } while (0)    
 
