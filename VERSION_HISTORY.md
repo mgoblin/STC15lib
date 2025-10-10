@@ -152,6 +152,8 @@
 * UART1 mode3 timer2 (1T and 12T) routines implemented
 * TODO UART1 support 2 stop bits on tx/rx 
 * TODO UART1 support frame error
+* TODO Automatic address recognition support
+* Relay broadcast mode support
 
 
 Next releases todo

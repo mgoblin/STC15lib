@@ -229,6 +229,11 @@ do {                                            \
                                                 \
         is_parity_valid = RB8 == 0;             \
     }                                           \
-} while (0)       
+} while (0)
+
+#define uart1_send_byte_2stop_bits(byte)        \
+do {                                            \
+    uart1_send_9bit(byte, 1);                   \
+} while (0)    
 
 #endif

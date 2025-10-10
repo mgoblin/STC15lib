@@ -1,5 +1,5 @@
 /**
- * How to synchronous send and receive data with uart1 in mode3
+ * How to synchronous send data with uart1 in mode3
  */
 
 #include <uart1_mode3_timer2_1T.h>
