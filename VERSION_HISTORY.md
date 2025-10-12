@@ -151,12 +151,12 @@
 * UART1 mode2 routines implemented
 * UART1 mode3 timer2 (1T and 12T) routines implemented
 * UART1 support 2 stop bits on tx/rx in mode 2, 3 (8-N-2)
-* TODO UART1 support frame error
-* TODO Automatic address recognition support
-* TODO Relay broadcast mode support
 
 
 Next releases todo
+* TODO UART1 support frame error
+* TODO Automatic address recognition support
+* TODO Relay broadcast mode support
 * TODO is PCON SMOD bit really doble baud rate in mode 1, 2, 3?
 * TODO Support UART1 relay and broadcast mode
 * TODO Build with Make/Cmake
