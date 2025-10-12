@@ -18,6 +18,11 @@ void main()
     {
         LED = !LED;
 
+        uint8_t data = 0;
+        uart1_receive_byte_2stop_bits(data);
+
+        uart1_send_byte_2stop_bits(data);
+        
         uart1_send_byte_2stop_bits(' ');
         uart1_send_byte_2stop_bits('O');
         uart1_send_byte_2stop_bits('k');

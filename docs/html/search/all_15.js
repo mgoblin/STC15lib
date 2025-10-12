@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['send_20receive_20functions_0',['send receive functions',['../group__uart1__8bit__shared.html',1,'UART1 8-bit send/receive functions'],['../group__uart1__9bit__shared.html',1,'UART1 9bit send/receive functions']]],
+  ['send_20receive_20functions_0',['send receive functions',['../group__uart1__8bit__shared.html',1,'UART1 8-bit send/receive functions'],['../group__uart1__9bit__shared.html',1,'UART1 9bit, 8-bit with parity, 8-bit with two stop bits send/receive functions']]],
   ['set_5fadc_5finterrupt_5fpriority_1',['set_adc_interrupt_priority',['../group__interrupts.html#gac3ad7282866c58628f44b746ec2da56f',1,'interrupt.h']]],
   ['set_5ffrequency_5fdivider_5fscale_2',['set_frequency_divider_scale',['../group__freq.html#ga78fdcc336987b6447dec7b7480c4e9a8',1,'frequency.h']]],
   ['set_5fint0_5finterrupt_5fpriority_3',['set_int0_interrupt_priority',['../group__interrupts.html#gadc1f845094582635951872311de9f1f4',1,'interrupt.h']]],
@@ -16,5 +16,6 @@ var searchData=
   ['simple_20uart1_13',['Simple UART1',['../group__uart.html',1,'']]],
   ['stc15_20hal_20functions_14',['Use STC15 HAL functions',['../index.html#autotoc_md4',1,'']]],
   ['stc15_20prorgamming_15',['Low level STC15 prorgamming',['../index.html#autotoc_md3',1,'']]],
-  ['sys_2eh_16',['sys.h',['../sys_8h.html',1,'']]]
+  ['stop_20bits_20send_20receive_20functions_16',['UART1 9bit, 8-bit with parity, 8-bit with two stop bits send/receive functions',['../group__uart1__9bit__shared.html',1,'']]],
+  ['sys_2eh_17',['sys.h',['../sys_8h.html',1,'']]]
 ];

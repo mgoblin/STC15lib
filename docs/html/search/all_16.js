@@ -93,5 +93,6 @@ var searchData=
   ['timer_5fto_5fms_5fcommon_2eh_90',['timer_to_ms_common.h',['../timer__to__ms__common_8h.html',1,'']]],
   ['timer_5fuint16_5fticks_5fto_5ffreq100_91',['timer_uint16_ticks_to_freq100',['../group__timer__to__ms.html#ga05eec17c45e48cc9ceb0c238cfbe5505',1,'timer_to_ms_common.h']]],
   ['to_20use_20it_92',['How to use it',['../index.html#autotoc_md1',1,'']]],
-  ['to_20your_20project_93',['Add library to your project',['../index.html#autotoc_md2',1,'']]]
+  ['to_20your_20project_93',['Add library to your project',['../index.html#autotoc_md2',1,'']]],
+  ['two_20stop_20bits_20send_20receive_20functions_94',['UART1 9bit, 8-bit with parity, 8-bit with two stop bits send/receive functions',['../group__uart1__9bit__shared.html',1,'']]]
 ];

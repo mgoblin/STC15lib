@@ -1,7 +1,7 @@
 var searchData=
 [
   ['raising_5for_5ffalling_5fedge_0',['RAISING_OR_FALLING_EDGE',['../group__interrupts.html#gga97fc91f85abe6139a7f24fbdff35c7e7ad791487f941a47c772442d5252a819bc',1,'interrupt.h']]],
-  ['receive_20functions_1',['receive functions',['../group__uart1__8bit__shared.html',1,'UART1 8-bit send/receive functions'],['../group__uart1__9bit__shared.html',1,'UART1 9bit send/receive functions']]],
+  ['receive_20functions_1',['receive functions',['../group__uart1__8bit__shared.html',1,'UART1 8-bit send/receive functions'],['../group__uart1__9bit__shared.html',1,'UART1 9bit, 8-bit with parity, 8-bit with two stop bits send/receive functions']]],
   ['references_2',['References',['../index.html#autotoc_md8',1,'']]],
   ['reset_3',['reset',['../group__mcu__reset.html#gadff1ae9368523be49ce8ef497d4ca902',1,'reset:&#160;reset.h'],['../group__mcu__reset.html',1,'Reset']]],
   ['reset_2eh_4',['reset.h',['../reset_8h.html',1,'']]],
