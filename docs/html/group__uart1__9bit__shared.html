@@ -107,6 +107,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga628f775341d4776c1de97fcda369b91d" id="r_ga628f775341d4776c1de97fcda369b91d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__9bit__shared.html#ga628f775341d4776c1de97fcda369b91d">uart1_receive_byte_space_parity</a>(byte)</td></tr>
 <tr class="memdesc:ga628f775341d4776c1de97fcda369b91d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive byte over UART1 in mode 2, 3 with space parity bit.  <br /></td></tr>
 <tr class="separator:ga628f775341d4776c1de97fcda369b91d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf4220e997a56b3ade7d70bddf508b5ae" id="r_gaf4220e997a56b3ade7d70bddf508b5ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__9bit__shared.html#gaf4220e997a56b3ade7d70bddf508b5ae">uart1_send_byte_2stop_bits</a>(byte)</td></tr>
+<tr class="memdesc:gaf4220e997a56b3ade7d70bddf508b5ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send byte over UART1 in mode 2, 3 with 2 stop bits.  <br /></td></tr>
+<tr class="separator:gaf4220e997a56b3ade7d70bddf508b5ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions for sending and receiving 9-bit data in UART1 mode 2 and 3.</p>
@@ -371,6 +374,36 @@ Uses polling (blocking) method for transmission.</dd></dl>
   </dd>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>Should not be called from interrupt service routines </dd></dl>
+
+</div>
+</div>
+<a id="gaf4220e997a56b3ade7d70bddf508b5ae" name="gaf4220e997a56b3ade7d70bddf508b5ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf4220e997a56b3ade7d70bddf508b5ae">&#9670;&#160;</a></span>uart1_send_byte_2stop_bits</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define uart1_send_byte_2stop_bits</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">byte</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                            \</div>
+<div class="line">    uart1_send_9bit(<span class="keywordtype">byte</span>, 1);                   \</div>
+<div class="line">} <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+<p>Send byte over UART1 in mode 2, 3 with 2 stop bits. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">byte</td><td>uint8_t the 8-bit data value to be sent (0-255).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section attention"><dt>Attention</dt><dd>This function is blocking until the byte is fully sent. </dd></dl>
 
 </div>
 </div>

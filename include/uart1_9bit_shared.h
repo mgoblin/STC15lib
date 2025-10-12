@@ -231,6 +231,15 @@ do {                                            \
     }                                           \
 } while (0)
 
+/**
+ * @brief Send byte over UART1 in mode 2, 3 with 2 stop bits
+ * 
+ * @param byte uint8_t the 8-bit data value to be sent (0-255).
+ * 
+ * @attention This function is blocking until the byte is fully sent.
+ * 
+ * @ingroup uart1_9bit_shared
+ */
 #define uart1_send_byte_2stop_bits(byte)        \
 do {                                            \
     uart1_send_9bit(byte, 1);                   \

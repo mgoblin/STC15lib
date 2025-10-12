@@ -46,4 +46,9 @@ env.Default(
         ['uart1_mode3_timer2_1T_2stop_bits_example.c']
     ),
 
+    env.Program(
+        'uart1_mode3_timer2_12T_space_parity_example',
+        ['uart1_mode3_timer2_12T_space_parity_example.c']
+    ),
+
 )

@@ -12,7 +12,7 @@
 void main()
 {
     uart1_mode3_timer2_1T_init(RxD_P30_TxD_P31);
-    uart1_mode3_timer2_1T_start(baudrate_115200);
+    uart1_mode3_timer2_1T_start(baudrate_9600);
 
     while (1)
     {
