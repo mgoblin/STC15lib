@@ -152,6 +152,8 @@
 * UART1 mode3 timer2 (1T and 12T) routines implemented
 * UART1 support 2 stop bits on tx/rx in mode 2, 3 (8-N-2)
 
+0.13.0
+* Build library with cmake (not examples)
 
 Next releases todo
 * TODO UART1 support frame error
