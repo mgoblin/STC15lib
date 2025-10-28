@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title=" " alt="" coords="175,5,433,45"/>
 <area shape="rect" id="Node000002" href="$counter0__mode1_8h.html" title=" " alt="" coords="25,167,167,192"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="280,48,124,161,121,156,277,43"/>
-<area shape="rect" id="Node000011" href="$uart_8h.html" title=" " alt="" coords="350,93,410,119"/>
+<area shape="rect" id="Node000011" href="$include_2uart_8h.html" title=" " alt="" coords="350,93,410,119"/>
 <area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="324,44,361,81,357,85,320,47"/>
 <area shape="rect" id="Node000016" href="$delay_8h.html" title=" " alt="" coords="191,167,259,192"/>
 <area shape="poly" id="edge27_Node000001_Node000016" title=" " alt="" coords="296,47,240,155,235,153,292,45"/>

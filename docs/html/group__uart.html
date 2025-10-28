@@ -81,6 +81,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gaaf582a05f613b72c7255c5cd838879fd" id="r_gaaf582a05f613b72c7255c5cd838879fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart.html#gaaf582a05f613b72c7255c5cd838879fd">uart1_init</a>(uart_baudrate)</td></tr>
 <tr class="memdesc:gaaf582a05f613b72c7255c5cd838879fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiazlize UART1.  <br /></td></tr>
 <tr class="separator:gaaf582a05f613b72c7255c5cd838879fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf582a05f613b72c7255c5cd838879fd" id="r_gaaf582a05f613b72c7255c5cd838879fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart.html#gaaf582a05f613b72c7255c5cd838879fd">uart1_init</a>(uart_baudrate)</td></tr>
+<tr class="memdesc:gaaf582a05f613b72c7255c5cd838879fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiazlize UART1.  <br /></td></tr>
+<tr class="separator:gaaf582a05f613b72c7255c5cd838879fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -103,7 +106,7 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="gaaf582a05f613b72c7255c5cd838879fd" name="gaaf582a05f613b72c7255c5cd838879fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaaf582a05f613b72c7255c5cd838879fd">&#9670;&#160;</a></span>uart1_init</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaf582a05f613b72c7255c5cd838879fd">&#9670;&#160;</a></span>uart1_init <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -122,6 +125,37 @@ Functions</h2></td></tr>
 <div class="line">    uart1_mode1_timer2_1T_start_ext(uart_baudrate);                     \</div>
 <div class="line">} <span class="keywordflow">while</span>(0)</div>
 <div class="ttc" id="agroup__uart1__shared_html_ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47"><div class="ttname"><a href="group__uart1__shared.html#ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47">RxD_P30_TxD_P31</a></div><div class="ttdeci">@ RxD_P30_TxD_P31</div><div class="ttdoc">RxD on P3.0 and TxD on P3.1 pins.</div><div class="ttdef"><b>Definition</b> uart1_shared.h:25</div></div>
+</div><!-- fragment -->
+<p>Initiazlize UART1. </p>
+<p>Initialize uart using Timer2. Set timer according to baudrate</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uart_baudrate</td><td>uint32_t uart baudrate, like 9600 and etc </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaaf582a05f613b72c7255c5cd838879fd" name="gaaf582a05f613b72c7255c5cd838879fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaf582a05f613b72c7255c5cd838879fd">&#9670;&#160;</a></span>uart1_init <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define uart1_init</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">uart_baudrate</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                    \</div>
+<div class="line">    uart1_mode1_timer2_1T_init(<a class="code hl_enumvalue" href="group__uart1__shared.html#ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47">RxD_P30_TxD_P31</a>);                        \</div>
+<div class="line">    uart1_mode1_timer2_1T_start_ext(uart_baudrate);                     \</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Initiazlize UART1. </p>
 <p>Initialize uart using Timer2. Set timer according to baudrate</p>

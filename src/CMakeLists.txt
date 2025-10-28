@@ -1,9 +1,10 @@
-add_library(stc15lib STATIC
-  uart.c
+add_library(stc15lib STATIC 
+  uart.h
+  uart.c  
 ) # Create libray from uart.c
 
 # add headers to stc15lib
-target_include_directories(stc15lib 
+include_directories(stc15lib 
   PUBLIC ${CMAKE_SOURCE_DIR}/include # For public headers during build
 )
 
