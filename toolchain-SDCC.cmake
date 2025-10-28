@@ -22,7 +22,7 @@ find_program(SDCCLIB_EXECUTABLE sdar)
 set(CMAKE_AR "${SDCCLIB_EXECUTABLE}" CACHE FILEPATH "The sdcc librarian" FORCE)
 
 # Compilation flags
-set(CMAKE_C_FLAGS "-mmcs51 --model-small --std-sdcc23")
+set(CMAKE_C_FLAGS "-mmcs51 --model-small --std-c23")
 set(CMAKE_ASM_FLAGS "-lso -a -y")
 set(CMAKE_ASM_LINK_FLAGS "-niumwx -M -y")
 
