@@ -4,6 +4,6 @@ add_library(stc15lib STATIC
 
 # add headers to stc15lib
 target_include_directories(stc15lib 
-  PUBLIC $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include> # For public headers during build
+  PUBLIC ${CMAKE_SOURCE_DIR}/include # For public headers during build
 )
 
