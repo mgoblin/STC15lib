@@ -11,7 +11,16 @@ target_include_directories(stc15lib
 
 install(TARGETS stc15lib
     EXPORT stc15libTargets
-    LIBRARY DESTINATION lib
-    ARCHIVE DESTINATION lib
-    PUBLIC_HEADER DESTINATION include
+    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+)
+
+install(DIRECTORY include/
+    DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
+    FILES_MATCHING PATTERN "*.h"
+)
+
+install(EXPORT stc15libTargets
+    NAMESPACE stc15lib::
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/stc15lib
+    FILE stc15libTargets.cmake
 )
