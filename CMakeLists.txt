@@ -13,6 +13,10 @@ project(
 set(CMAKE_C_STANDARD 23)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
+# add headers to stc15lib
+include_directories(stc15lib 
+  PUBLIC ${CMAKE_SOURCE_DIR}/include # For public headers during build
+)
 
 add_subdirectory("src")
 
