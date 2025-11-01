@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['uart_2eh_0',['uart.h',['../src_2uart_8h.html',1,'(Global Namespace)'],['../include_2uart_8h.html',1,'(Global Namespace)']]],
+  ['uart_2eh_0',['uart.h',['../uart_8h.html',1,'']]],
   ['uart1_1',['Simple UART1',['../group__uart.html',1,'']]],
   ['uart1_208_20bit_20send_20receive_20functions_2',['UART1 8-bit send/receive functions',['../group__uart1__8bit__shared.html',1,'']]],
   ['uart1_209bit_208_20bit_20with_20parity_208_20bit_20with_20two_20stop_20bits_20send_20receive_20functions_3',['UART1 9bit, 8-bit with parity, 8-bit with two stop bits send/receive functions',['../group__uart1__9bit__shared.html',1,'']]],
@@ -13,7 +13,7 @@ var searchData=
   ['uart1_20mode2_10',['UART1 Mode2',['../group__uart1__mode2.html',1,'']]],
   ['uart1_5f8bit_5fshared_2eh_11',['uart1_8bit_shared.h',['../uart1__8bit__shared_8h.html',1,'']]],
   ['uart1_5f9bit_5fshared_2eh_12',['uart1_9bit_shared.h',['../uart1__9bit__shared_8h.html',1,'']]],
-  ['uart1_5finit_13',['uart1_init',['../group__uart.html#gaaf582a05f613b72c7255c5cd838879fd',1,'uart1_init:&#160;uart.h'],['../group__uart.html#gaaf582a05f613b72c7255c5cd838879fd',1,'uart1_init:&#160;uart.h']]],
+  ['uart1_5finit_13',['uart1_init',['../group__uart.html#gaaf582a05f613b72c7255c5cd838879fd',1,'uart.h']]],
   ['uart1_5fmode0_2eh_14',['uart1_mode0.h',['../uart1__mode0_8h.html',1,'']]],
   ['uart1_5fmode0_5fbaudrate_5ft_15',['uart1_mode0_baudrate_t',['../group__uart1__mode0.html#ga840b04aa551a0bec3b74c44e7042505a',1,'uart1_mode0.h']]],
   ['uart1_5fmode0_5finit_16',['uart1_mode0_init',['../group__uart1__mode0.html#gae9db2cd5aef3ace87c9ca6ff9cd83970',1,'uart1_mode0.h']]],

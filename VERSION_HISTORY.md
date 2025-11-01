@@ -154,17 +154,13 @@
 
 0.13.0
 * Build library with cmake (not examples)
+* TODO Fix delay_ms. On small ms delays it works correctly, but on seconds delay it doubled.
 
 Next releases todo
 * TODO UART1 support frame error
-* TODO Automatic address recognition support
-* TODO Relay broadcast mode support
+* TODO UART1 Automatic address recognition support
+* TODO UART1 Relay broadcast mode support
 * TODO is PCON SMOD bit really doble baud rate in mode 1, 2, 3?
-* TODO Support UART1 relay and broadcast mode
-* TODO Build with Make/Cmake
-* Build without Platfromio with Scons
-* Fix delay_ms. On small ms delays it works correctly, but on seconds delay it doubled.
-* use asserts and static_assert
 * TODO Implement P5.4 as MCU reset source
 * TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms
 * TODO Review wakeup timer routines. Move from ticks to ms

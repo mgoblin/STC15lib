@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">STC15W408AS library<span id="projectnumber">&#160;0.12.0</span>
+   <div id="projectname">STC15W408AS library<span id="projectnumber">&#160;0.13.0</span>
    </div>
   </td>
  </tr>
@@ -215,7 +215,7 @@ $(function() {
 <li><a class="el" href="timer0__mode2_8h.html">timer0_mode2.h</a></li>
 <li><a class="el" href="timer0__mode3_8h.html">timer0_mode3.h</a></li>
 <li><a class="el" href="timer2__mode0_8h.html">timer2_mode0.h</a></li>
-<li>uart.h</li>
+<li><a class="el" href="uart_8h.html">uart.h</a></li>
 <li><a class="el" href="wdt_8h.html">wdt.h</a></li>
 </ul>
 </li>
@@ -245,17 +245,13 @@ $(function() {
 </ul>
 <p>0.13.0</p><ul>
 <li>Build library with cmake (not examples)</li>
+<li>TODO Fix delay_ms. On small ms delays it works correctly, but on seconds delay it doubled.</li>
 </ul>
 <p>Next releases todo</p><ul>
 <li>TODO UART1 support frame error</li>
-<li>TODO Automatic address recognition support</li>
-<li>TODO Relay broadcast mode support</li>
+<li>TODO UART1 Automatic address recognition support</li>
+<li>TODO UART1 Relay broadcast mode support</li>
 <li>TODO is PCON SMOD bit really doble baud rate in mode 1, 2, 3?</li>
-<li>TODO Support UART1 relay and broadcast mode</li>
-<li>TODO Build with Make/Cmake</li>
-<li>Build without Platfromio with Scons</li>
-<li>Fix delay_ms. On small ms delays it works correctly, but on seconds delay it doubled.</li>
-<li>use asserts and static_assert</li>
 <li>TODO Implement P5.4 as MCU reset source</li>
 <li>TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms</li>
 <li>TODO Review wakeup timer routines. Move from ticks to ms </li>
