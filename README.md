@@ -97,7 +97,7 @@ void main()
 | Reset        | Software reset                   | READY              |
 | Timer        | Timer control routines           | READY              |
 | Counter      | Counter control routines         | READY              |
-| UART         | Serial port p-2-p routines             | PARTIAL SUPPORT (only mode 0, 1, 2)    |
+| UART         | Serial port **p-2-p** routines   | READY              |
 | Watchdog timer | Watchdog timer routines        | READY              |
 | Pin          | Pin as digital in/out routines   | READY              |
 
