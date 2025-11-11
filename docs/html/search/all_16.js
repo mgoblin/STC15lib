@@ -4,7 +4,7 @@ var searchData=
   ['t1_1',['T1',['../group__timer__common.html#ggaf044d39b4f1cbe40ca04353b2852a21da623238751deb7764bdebf4799fe30f07',1,'timer_structs.h']]],
   ['t12_2',['T12',['../group__timer__common.html#ggaf044d39b4f1cbe40ca04353b2852a21da5c3a2baea537d57bba309aa892a7926c',1,'timer_structs.h']]],
   ['t2_3',['T2',['../group__counter2__mode0.html#ga259c2993ee45e06a4ea8150451a7a70e',1,'counter2_mode0.h']]],
-  ['ticks_5fdelay_5f1ms_4',['TICKS_DELAY_1ms',['../group__delays.html#ga499034192b4237f672ab00681dbb41ba',1,'delay.h']]],
+  ['ticks_5fdelay_5f1ms_4',['TICKS_DELAY_1MS',['../group__delays.html#ga8e8a78e39b422992073fe7eb0045e9c9',1,'delay.h']]],
   ['timer_5',['Watchdog timer',['../group__wdt.html',1,'']]],
   ['timer_20aux_20common_6',['Timer Aux common',['../group__timer__to__ms.html',1,'']]],
   ['timer_20common_7',['Timer common',['../group__timer__common.html',1,'']]],

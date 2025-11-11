@@ -17,7 +17,16 @@
  * 
  * @ingroup delays 
  */
-#define TICKS_DELAY_1ms ((uint16_t) (((get_master_clock_frequency() / 1000UL) - 30UL) / 18UL))
+#define TICKS_DELAY_1MS()               \
+do {                                    \
+	volatile uint8_t i, j;              \
+	i = 5;	                            \
+	j = 79;                             \
+	do                                  \
+	{                                   \
+		while (--j);                    \
+	} while (--i);                      \
+} while(0)
 
 /** 
 *  @brief Delays program flow using CPU nop
@@ -29,17 +38,10 @@
 */
 #define delay_ms(ms)                                            \
 do {                                                            \
-    uint16_t ms_div = ms >> get_frequency_divider_scale();      \
-    do                                                          \
-    {                                                           \
-        uint16_t d = TICKS_DELAY_1ms;                           \
-        do                                                      \
-        {                                                       \
-            __asm NOP __endasm;                                 \
-            __asm NOP __endasm;                                 \
-            __asm NOP __endasm;                                 \
-        } while (d--);                                          \
-    } while (ms_div--);                                         \
+	volatile uint16_t ms_div = ms >> get_frequency_divider_scale();     \
+    do {															\
+		TICKS_DELAY_1MS();                                    	\
+	} while(--ms_div);											\
 } while(0)                                                      \
 
 #endif

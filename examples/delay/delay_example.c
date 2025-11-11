@@ -10,11 +10,11 @@
 
 void main()
 {
-    set_frequency_divider_scale(2);
+    // set_frequency_divider_scale(2);
     
     while (1)
     {
-        LED = !LED;
-        delay_ms(500);
+        LED = !LED; // 542 ns
+        delay_ms(10000); // 1000.542 micros 
     }
 }

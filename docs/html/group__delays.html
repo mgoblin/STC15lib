@@ -77,10 +77,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga499034192b4237f672ab00681dbb41ba" id="r_ga499034192b4237f672ab00681dbb41ba"><td class="memItemLeft" align="right" valign="top"><a id="ga499034192b4237f672ab00681dbb41ba" name="ga499034192b4237f672ab00681dbb41ba"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>TICKS_DELAY_1ms</b>&#160;&#160;&#160;((uint16_t) (((<a class="el" href="group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b">get_master_clock_frequency</a>() / 1000UL) - 30UL) / 18UL))</td></tr>
-<tr class="memdesc:ga499034192b4237f672ab00681dbb41ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ticks for 1ms delay. <br /></td></tr>
-<tr class="separator:ga499034192b4237f672ab00681dbb41ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8e8a78e39b422992073fe7eb0045e9c9" id="r_ga8e8a78e39b422992073fe7eb0045e9c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__delays.html#ga8e8a78e39b422992073fe7eb0045e9c9">TICKS_DELAY_1MS</a>()</td></tr>
+<tr class="memdesc:ga8e8a78e39b422992073fe7eb0045e9c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ticks for 1ms delay.  <br /></td></tr>
+<tr class="separator:ga8e8a78e39b422992073fe7eb0045e9c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga389926e6490f1d3db0f0896e8b0f5f2e" id="r_ga389926e6490f1d3db0f0896e8b0f5f2e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__delays.html#ga389926e6490f1d3db0f0896e8b0f5f2e">delay_ms</a>(ms)</td></tr>
 <tr class="memdesc:ga389926e6490f1d3db0f0896e8b0f5f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delays program flow using CPU nop.  <br /></td></tr>
 <tr class="separator:ga389926e6490f1d3db0f0896e8b0f5f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -105,19 +104,11 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                            \</div>
-<div class="line">    uint16_t ms_div = ms &gt;&gt; <a class="code hl_define" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>();      \</div>
-<div class="line">    <span class="keywordflow">do</span>                                                          \</div>
-<div class="line">    {                                                           \</div>
-<div class="line">        uint16_t d = <a class="code hl_define" href="group__delays.html#ga499034192b4237f672ab00681dbb41ba">TICKS_DELAY_1ms</a>;                           \</div>
-<div class="line">        <span class="keywordflow">do</span>                                                      \</div>
-<div class="line">        {                                                       \</div>
-<div class="line">            __asm NOP __endasm;                                 \</div>
-<div class="line">            __asm NOP __endasm;                                 \</div>
-<div class="line">            __asm NOP __endasm;                                 \</div>
-<div class="line">        } <span class="keywordflow">while</span> (d--);                                          \</div>
-<div class="line">    } <span class="keywordflow">while</span> (ms_div--);                                         \</div>
+<div class="line">    <span class="keyword">volatile</span> uint16_t ms_div = ms &gt;&gt; <a class="code hl_define" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>();     \</div>
+<div class="line">    <span class="keywordflow">do</span> {                                                            \</div>
+<div class="line">        TICKS_DELAY_1MS();                                      \</div>
+<div class="line">    } <span class="keywordflow">while</span>(--ms_div);                                          \</div>
 <div class="line">} <span class="keywordflow">while</span>(0)                                                      \</div>
-<div class="ttc" id="agroup__delays_html_ga499034192b4237f672ab00681dbb41ba"><div class="ttname"><a href="group__delays.html#ga499034192b4237f672ab00681dbb41ba">TICKS_DELAY_1ms</a></div><div class="ttdeci">#define TICKS_DELAY_1ms</div><div class="ttdoc">Ticks for 1ms delay.</div><div class="ttdef"><b>Definition</b> delay.h:20</div></div>
 <div class="ttc" id="agroup__freq_html_ga2282854ce7886421e523f6d8f8467fae"><div class="ttname"><a href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a></div><div class="ttdeci">#define get_frequency_divider_scale()</div><div class="ttdoc">Get master clock frequency divider scale (CLK_DIV bits [0..2])</div><div class="ttdef"><b>Definition</b> frequency.h:65</div></div>
 </div><!-- fragment -->
 <p>Delays program flow using CPU nop. </p>
@@ -128,6 +119,34 @@ Macros</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ga8e8a78e39b422992073fe7eb0045e9c9" name="ga8e8a78e39b422992073fe7eb0045e9c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8e8a78e39b422992073fe7eb0045e9c9">&#9670;&#160;</a></span>TICKS_DELAY_1MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TICKS_DELAY_1MS</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                    \</div>
+<div class="line">    <span class="keyword">volatile</span> uint8_t i, j;              \</div>
+<div class="line">    i = 5;                              \</div>
+<div class="line">    j = 79;                             \</div>
+<div class="line">    <span class="keywordflow">do</span>                                  \</div>
+<div class="line">    {                                   \</div>
+<div class="line">        while (--j);                    \</div>
+<div class="line">    } <span class="keywordflow">while</span> (--i);                      \</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
+</div><!-- fragment -->
+<p>Ticks for 1ms delay. </p>
 
 </div>
 </div>

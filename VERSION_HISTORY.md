@@ -153,8 +153,9 @@
 * UART1 support 2 stop bits on tx/rx in mode 2, 3 (8-N-2)
 
 0.13.0
-* Build library with cmake (not examples)
-* TODO Fix delay_ms. On small ms delays it works correctly, but on seconds delay it doubled.
+* Build library with cmake (but not examples)
+* Fix delay_ms. On small ms delays it works correctly, but on seconds delay it doubled.
+* TODO EEPROM module implemented
 
 Next releases todo
 * TODO UART1 support frame error
