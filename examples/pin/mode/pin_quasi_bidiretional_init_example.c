@@ -1,7 +1,7 @@
 /**
  * How to init pin (P31) in quasi bidiretional mode
  */
-#include <pin.h>
+#include <gpio.h>
 
 #include <uart.h>
 #include <stdio.h>

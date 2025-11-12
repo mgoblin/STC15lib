@@ -1,9 +1,9 @@
-#ifndef STC15_PINH
-#define STC15_PINH
+#ifndef STC15_GPIOH
+#define STC15_GPIOH
 /**
- * @file pin.h
+ * @file gpio.h
  * 
- * @defgroup pin Pin
+ * @defgroup gpio GPIO
  * 
  * @details Pin modes data structures and routines
  * 
@@ -26,7 +26,7 @@
  * @param port pin port for example P1, P3 and etc
  * @param port_pin uint8_t pin mumber in port 0..7 
  * 
- * @ingroup pin
+ * @ingroup gpio
  */
 #define pin_quasi_bidiretional_init(port, port_pin)             \
 do {                                                            \
@@ -46,7 +46,7 @@ do {                                                            \
  * @param port pin port for example P1, P3 and etc
  * @param port_pin uint8_t pin mumber in port 0..7 
  * 
- * @ingroup pin
+ * @ingroup gpio
  */
 #define pin_push_pull_init(port, port_pin)                      \
 do {                                                            \
@@ -64,7 +64,7 @@ do {                                                            \
  * @param port pin port for example P1, P3 and etc
  * @param port_pin uint8_t pin mumber in port 0..7 
  * 
- * @ingroup pin
+ * @ingroup gpio
  */
 #define pin_input_only_init(port, port_pin)                     \
 do {                                                            \
@@ -83,7 +83,7 @@ do {                                                            \
  * @param port pin port for example P1, P3 and etc
  * @param port_pin uint8_t pin mumber in port 0..7 
  * 
- * @ingroup pin
+ * @ingroup gpio
  */
 #define pin_open_drain_init(port, port_pin)                     \
 do {                                                            \
@@ -96,7 +96,7 @@ do {                                                            \
  * 
  * @return true if pin in quasy-bidirectional mode, otherwise false
  * 
- * @ingroup pin
+ * @ingroup gpio
  */
 #define is_pin_mode_quasi_bidiretional(port, port_pin)  ( ((port ## M1 & (1 << port_pin)) == 0) && ((port ## M0 & (1 << port_pin)) == 0 ) )
 
@@ -105,7 +105,7 @@ do {                                                            \
  * 
  * @return true if pin in push-pull mode, otherwise false
  * 
- * @ingroup pin
+ * @ingroup gpio
  */
 #define is_pin_mode_push_pull(port, port_pin)           ( ((port ## M1 & (1 << port_pin)) == 0) && ((port ## M0 & (1 << port_pin)) != 0) )
 
@@ -114,7 +114,7 @@ do {                                                            \
  * 
  * @return true if pin in input-only mode, otherwise false
  * 
- * @ingroup pin
+ * @ingroup gpio
  */
 #define is_pin_mode_input_only(port, port_pin)          ( ((port ## M1 & (1 << port_pin)) != 0) && ((port ## M0 & (1 << port_pin)) == 0) )
 
@@ -123,7 +123,7 @@ do {                                                            \
  * 
  * @return true if pin in open-drain mode, otherwise false
  * 
- * @ingroup pin
+ * @ingroup gpio
  */
 #define is_pin_mode_open_drain(port, port_pin)          ( ((port ## M1 & (1 << port_pin)) != 0) && ((port ## M0 & (1 << port_pin)) != 0) )
 
@@ -132,7 +132,7 @@ do {                                                            \
  * 
  * @param port pin port for example P1, P3 and etc
  * 
- * @ingroup pin
+ * @ingroup gpio
  */
 #define pin_port_quasi_bidiretional_init(port)      \
 do {                                                \
@@ -145,7 +145,7 @@ do {                                                \
  * 
  * @param port pin port for example P1, P3 and etc
  * 
- * @ingroup pin
+ * @ingroup gpio
  */
 #define pin_port_pull_push_init(port)              \
 do {                                               \
@@ -158,7 +158,7 @@ do {                                               \
  * 
  * @param port pin port for example P1, P3 and etc
  * 
- * @ingroup pin
+ * @ingroup gpio
  */
 #define pin_port_input_only_init(port)              \
 do {                                                \
@@ -171,7 +171,7 @@ do {                                                \
  * 
  * @param port pin port for example P1, P3 and etc
  * 
- * @ingroup pin
+ * @ingroup gpio
  */
 #define pin_port_open_drain_init(port)              \
 do {                                                \

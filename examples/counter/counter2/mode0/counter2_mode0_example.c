@@ -9,7 +9,7 @@
  * After counter overflow LED is changing it state.  
  */
 #include <counter2_mode0.h>
-#include <pin.h>
+#include <gpio.h>
 
 #include <delay.h>
 

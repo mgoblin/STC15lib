@@ -155,6 +155,8 @@
 0.13.0
 * Build library with cmake (but not examples)
 * Fix delay_ms. On small ms delays it works correctly, but on seconds delay it doubled.
+* Rename pin.h to gpio.h
+* TODO Implement P5.4 as MCU reset source
 * TODO EEPROM module implemented
 
 Next releases todo
@@ -162,7 +164,6 @@ Next releases todo
 * TODO UART1 Automatic address recognition support
 * TODO UART1 Relay broadcast mode support
 * TODO is PCON SMOD bit really doble baud rate in mode 1, 2, 3?
-* TODO Implement P5.4 as MCU reset source
 * TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms
 * TODO Review wakeup timer routines. Move from ticks to ms
 

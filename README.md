@@ -99,7 +99,7 @@ void main()
 | Counter      | Counter control routines         | READY              |
 | UART         | Serial port **p-2-p** routines   | READY              |
 | Watchdog timer | Watchdog timer routines        | READY              |
-| Pin          | Pin as digital in/out routines   | READY              |
+| GPIO          | Pin as digital in/out routines   | READY              |
 
 Other modules does not implemented yet.
 

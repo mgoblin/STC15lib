@@ -2,7 +2,7 @@
  * How to init pin (P14) in push-pull mode
  */
 
-#include <pin.h>
+#include <gpio.h>
 
 #include <uart.h>
 #include <stdio.h>

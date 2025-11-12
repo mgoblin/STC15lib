@@ -1,12 +1,12 @@
 var indexSectionsWithContent =
 {
   0: "01389_abcdefghilmnoprstuvwy",
-  1: "cdfiprstuw",
+  1: "cdfgiprstuw",
   2: "_cgmp",
   3: "eimtu",
   4: "bhlnoprt",
   5: "clm",
-  6: "01389abcdfimprstuw",
+  6: "01389abcdfgimprstuw",
   7: "hivw"
 };
 

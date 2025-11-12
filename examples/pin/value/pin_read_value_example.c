@@ -5,7 +5,7 @@
  * The button change P10 value between HIGH (button is not pressed) 
  * and LOW (when button is pressed) 
  */
-#include <pin.h>
+#include <gpio.h>
 
 #include <uart.h>
 #include <stdio.h>

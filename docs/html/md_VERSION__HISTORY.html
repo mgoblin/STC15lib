@@ -208,7 +208,7 @@ $(function() {
 <li><a class="el" href="chip__id_8h.html">chip_id.h</a></li>
 <li><a class="el" href="delay_8h.html">delay.h</a></li>
 <li><a class="el" href="frequency_8h.html">frequency.h</a></li>
-<li><a class="el" href="pin_8h.html">pin.h</a></li>
+<li>pin.h</li>
 <li><a class="el" href="power__management_8h.html">power_management.h</a></li>
 <li><a class="el" href="timer0__mode0_8h.html">timer0_mode0.h</a></li>
 <li><a class="el" href="timer0__mode1_8h.html">timer0_mode1.h</a></li>
@@ -246,6 +246,8 @@ $(function() {
 <p>0.13.0</p><ul>
 <li>Build library with cmake (but not examples)</li>
 <li>Fix delay_ms. On small ms delays it works correctly, but on seconds delay it doubled.</li>
+<li>Rename pin.h to <a class="el" href="gpio_8h.html">gpio.h</a></li>
+<li>TODO Implement P5.4 as MCU reset source</li>
 <li>TODO EEPROM module implemented</li>
 </ul>
 <p>Next releases todo</p><ul>
@@ -253,7 +255,6 @@ $(function() {
 <li>TODO UART1 Automatic address recognition support</li>
 <li>TODO UART1 Relay broadcast mode support</li>
 <li>TODO is PCON SMOD bit really doble baud rate in mode 1, 2, 3?</li>
-<li>TODO Implement P5.4 as MCU reset source</li>
 <li>TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms</li>
 <li>TODO Review wakeup timer routines. Move from ticks to ms </li>
 </ul>

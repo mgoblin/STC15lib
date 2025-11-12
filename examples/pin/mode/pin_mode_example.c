@@ -1,7 +1,7 @@
 /**
  * How to test pin mode
  */
-#include <pin.h>
+#include <gpio.h>
 
 #include <uart.h>
 #include <stdio.h>
