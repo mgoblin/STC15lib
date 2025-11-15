@@ -145,7 +145,7 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                    \</div>
 <div class="line">    <span class="comment">/* Enable IAP */</span>                                                    \</div>
 <div class="line">    bit_set(IAP_CONTR, SBIT7);                                          \</div>
-<div class="line">    <span class="comment">/* Set IAP WT2 WT1 WT0 to 011 for eeprom read wating */</span>             \</div>
+<div class="line">    <span class="comment">/* Set IAP WT2 WT1 WT0 to 011 for eeprom read waiting */</span>             \</div>
 <div class="line">    IAP_CONTR &amp;= ~0x07;                                                 \</div>
 <div class="line">    IAP_CONTR |= 0x03;                                                  \</div>
 <div class="line">                                                                        \</div>
@@ -162,7 +162,7 @@ Macros</h2></td></tr>
 <div class="line">                                                                        \</div>
 <div class="line">    <span class="comment">/* Read error status from IAP */</span>                                    \</div>
 <div class="line">    *error_ptr = get_bit(IAP_CONTR, <a class="code hl_define" href="group__eeprom.html#gafd52c5b88764693bd5793607770b9e3a">CMD_FAIL_BIT</a>);                      \</div>
-<div class="line">    <span class="comment">/* if no opertation error read data from IAP otherwise value is ERROR_VALUE */</span>\</div>
+<div class="line">    <span class="comment">/* if no operation error read data from IAP otherwise value is ERROR_VALUE */</span>\</div>
 <div class="line">    *value_ptr = *error_ptr ? <a class="code hl_define" href="group__eeprom.html#ga48e49bfe7b106d9356d27403982bcf7c">ERROR_VALUE</a> : IAP_DATA;                                              \</div>
 <div class="line">                                                                        \</div>
 <div class="line">    <span class="comment">/* Disable IAP */</span>                                                   \</div>

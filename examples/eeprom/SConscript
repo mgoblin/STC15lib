@@ -1,0 +1,5 @@
+Import("env")
+
+env.Default (
+    env.Program('eeprom_read_byte_example', ['eeprom_read_byte_example.c'])
+)
