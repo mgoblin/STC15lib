@@ -18,5 +18,6 @@ var searchData=
   ['enable_5ftimer0_5finterrupt_15',['enable_timer0_interrupt',['../group__interrupts.html#ga3ce3cdb9bf4963e75a0664964fb83c3a',1,'interrupt.h']]],
   ['enable_5ftimer2_5finterrupt_16',['enable_timer2_interrupt',['../group__interrupts.html#ga6ba6fe72d49d266c76ca27b31bcb0395',1,'interrupt.h']]],
   ['enable_5fuart1_5finterrupt_17',['enable_uart1_interrupt',['../group__interrupts.html#ga650e12d0892198b3a63c1a8c382b9c12',1,'interrupt.h']]],
-  ['external_5finterrupt_5ftrigger_5ft_18',['external_interrupt_trigger_t',['../group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7',1,'interrupt.h']]]
+  ['error_5fvalue_18',['ERROR_VALUE',['../group__eeprom.html#ga48e49bfe7b106d9356d27403982bcf7c',1,'eeprom.h']]],
+  ['external_5finterrupt_5ftrigger_5ft_19',['external_interrupt_trigger_t',['../group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7',1,'interrupt.h']]]
 ];

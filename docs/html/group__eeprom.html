@@ -87,8 +87,16 @@ Macros</h2></td></tr>
 <tr class="separator:ga85abf54747ab281115870f8a261b122a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0a26dfc479333f4125c8825ab4c9f95f" id="r_ga0a26dfc479333f4125c8825ab4c9f95f"><td class="memItemLeft" align="right" valign="top"><a id="ga0a26dfc479333f4125c8825ab4c9f95f" name="ga0a26dfc479333f4125c8825ab4c9f95f"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>READ_OP_TRIGGER_SEQ_SECOND_BYTE</b>&#160;&#160;&#160;0xA5</td></tr>
-<tr class="memdesc:ga0a26dfc479333f4125c8825ab4c9f95f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read operation trigger sequence first byte. <br /></td></tr>
+<tr class="memdesc:ga0a26dfc479333f4125c8825ab4c9f95f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read operation trigger sequence second byte. <br /></td></tr>
 <tr class="separator:ga0a26dfc479333f4125c8825ab4c9f95f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafd52c5b88764693bd5793607770b9e3a" id="r_gafd52c5b88764693bd5793607770b9e3a"><td class="memItemLeft" align="right" valign="top"><a id="gafd52c5b88764693bd5793607770b9e3a" name="gafd52c5b88764693bd5793607770b9e3a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CMD_FAIL_BIT</b>&#160;&#160;&#160;4</td></tr>
+<tr class="memdesc:gafd52c5b88764693bd5793607770b9e3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command fail error code. <br /></td></tr>
+<tr class="separator:gafd52c5b88764693bd5793607770b9e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga48e49bfe7b106d9356d27403982bcf7c" id="r_ga48e49bfe7b106d9356d27403982bcf7c"><td class="memItemLeft" align="right" valign="top"><a id="ga48e49bfe7b106d9356d27403982bcf7c" name="ga48e49bfe7b106d9356d27403982bcf7c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ERROR_VALUE</b>&#160;&#160;&#160;0xFF</td></tr>
+<tr class="memdesc:ga48e49bfe7b106d9356d27403982bcf7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error value. <br /></td></tr>
+<tr class="separator:ga48e49bfe7b106d9356d27403982bcf7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0ba0e98241d4b70f05295f997c7d0344" id="r_ga0ba0e98241d4b70f05295f997c7d0344"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__eeprom.html#ga0ba0e98241d4b70f05295f997c7d0344">eeprom_read_byte</a>(addr_high,  addr_low,  value_ptr,  error_ptr)</td></tr>
 <tr class="memdesc:ga0ba0e98241d4b70f05295f997c7d0344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads single byte from the EEPROM at the given address.  <br /></td></tr>
 <tr class="separator:ga0ba0e98241d4b70f05295f997c7d0344"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,10 +145,13 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                    \</div>
 <div class="line">    <span class="comment">/* Enable IAP */</span>                                                    \</div>
 <div class="line">    bit_set(IAP_CONTR, SBIT7);                                          \</div>
+<div class="line">    <span class="comment">/* Set IAP WT2 WT1 WT0 to 011 for eeprom read wating */</span>             \</div>
+<div class="line">    IAP_CONTR &amp;= ~0x07;                                                 \</div>
+<div class="line">    IAP_CONTR |= 0x03;                                                  \</div>
 <div class="line">                                                                        \</div>
 <div class="line">    <span class="comment">/* Set address */</span>                                                   \</div>
-<div class="line">    IAP_ADDRH = addr_high;                                              \</div>
-<div class="line">    IAP_ADDRL = addr_low;                                               \</div>
+<div class="line">    IAP_ADDRH = (addr_high);                                            \</div>
+<div class="line">    IAP_ADDRL = (addr_low);                                             \</div>
 <div class="line">                                                                        \</div>
 <div class="line">    <span class="comment">/* Set read operation */</span>                                            \</div>
 <div class="line">    IAP_CMD = <a class="code hl_define" href="group__eeprom.html#ga7abc3dd1b9abfbe87a4ebe682ee0a7fa">REAP_OP</a>;                                                  \</div>
@@ -149,22 +160,19 @@ Macros</h2></td></tr>
 <div class="line">    IAP_TRIG = <a class="code hl_define" href="group__eeprom.html#ga85abf54747ab281115870f8a261b122a">READ_OP_TRIGGER_SEQ_FIRST_BYTE</a>;                          \</div>
 <div class="line">    IAP_TRIG = <a class="code hl_define" href="group__eeprom.html#ga0a26dfc479333f4125c8825ab4c9f95f">READ_OP_TRIGGER_SEQ_SECOND_BYTE</a>;                         \</div>
 <div class="line">                                                                        \</div>
-<div class="line">    <span class="comment">/* Wait for IAP finish */</span>                                           \</div>
-<div class="line">    NOP();                                                              \</div>
-<div class="line">    NOP();                                                              \</div>
-<div class="line">    NOP();                                                              \</div>
-<div class="line">                                                                        \</div>
-<div class="line">    <span class="comment">/* Read data from IAP */</span>                                            \</div>
-<div class="line">    *value_ptr = IAP_DATA;                                              \</div>
 <div class="line">    <span class="comment">/* Read error status from IAP */</span>                                    \</div>
-<div class="line">    *error_ptr = get_bit(IAP_CONTR, 4);                                 \</div>
+<div class="line">    *error_ptr = get_bit(IAP_CONTR, <a class="code hl_define" href="group__eeprom.html#gafd52c5b88764693bd5793607770b9e3a">CMD_FAIL_BIT</a>);                      \</div>
+<div class="line">    <span class="comment">/* if no opertation error read data from IAP otherwise value is ERROR_VALUE */</span>\</div>
+<div class="line">    *value_ptr = *error_ptr ? <a class="code hl_define" href="group__eeprom.html#ga48e49bfe7b106d9356d27403982bcf7c">ERROR_VALUE</a> : IAP_DATA;                                              \</div>
 <div class="line">                                                                        \</div>
 <div class="line">    <span class="comment">/* Disable IAP */</span>                                                   \</div>
 <div class="line">    bit_clr(IAP_CONTR, CBIT7);                                          \</div>
 <div class="line">} <span class="keywordflow">while</span> (0)</div>
-<div class="ttc" id="agroup__eeprom_html_ga0a26dfc479333f4125c8825ab4c9f95f"><div class="ttname"><a href="group__eeprom.html#ga0a26dfc479333f4125c8825ab4c9f95f">READ_OP_TRIGGER_SEQ_SECOND_BYTE</a></div><div class="ttdeci">#define READ_OP_TRIGGER_SEQ_SECOND_BYTE</div><div class="ttdoc">Read operation trigger sequence first byte.</div><div class="ttdef"><b>Definition</b> eeprom.h:35</div></div>
+<div class="ttc" id="agroup__eeprom_html_ga0a26dfc479333f4125c8825ab4c9f95f"><div class="ttname"><a href="group__eeprom.html#ga0a26dfc479333f4125c8825ab4c9f95f">READ_OP_TRIGGER_SEQ_SECOND_BYTE</a></div><div class="ttdeci">#define READ_OP_TRIGGER_SEQ_SECOND_BYTE</div><div class="ttdoc">Read operation trigger sequence second byte.</div><div class="ttdef"><b>Definition</b> eeprom.h:35</div></div>
+<div class="ttc" id="agroup__eeprom_html_ga48e49bfe7b106d9356d27403982bcf7c"><div class="ttname"><a href="group__eeprom.html#ga48e49bfe7b106d9356d27403982bcf7c">ERROR_VALUE</a></div><div class="ttdeci">#define ERROR_VALUE</div><div class="ttdoc">Error value.</div><div class="ttdef"><b>Definition</b> eeprom.h:49</div></div>
 <div class="ttc" id="agroup__eeprom_html_ga7abc3dd1b9abfbe87a4ebe682ee0a7fa"><div class="ttname"><a href="group__eeprom.html#ga7abc3dd1b9abfbe87a4ebe682ee0a7fa">REAP_OP</a></div><div class="ttdeci">#define REAP_OP</div><div class="ttdoc">Read operation.</div><div class="ttdef"><b>Definition</b> eeprom.h:22</div></div>
 <div class="ttc" id="agroup__eeprom_html_ga85abf54747ab281115870f8a261b122a"><div class="ttname"><a href="group__eeprom.html#ga85abf54747ab281115870f8a261b122a">READ_OP_TRIGGER_SEQ_FIRST_BYTE</a></div><div class="ttdeci">#define READ_OP_TRIGGER_SEQ_FIRST_BYTE</div><div class="ttdoc">Read operation trigger sequence first byte.</div><div class="ttdef"><b>Definition</b> eeprom.h:29</div></div>
+<div class="ttc" id="agroup__eeprom_html_gafd52c5b88764693bd5793607770b9e3a"><div class="ttname"><a href="group__eeprom.html#gafd52c5b88764693bd5793607770b9e3a">CMD_FAIL_BIT</a></div><div class="ttdeci">#define CMD_FAIL_BIT</div><div class="ttdoc">Command fail error code.</div><div class="ttdef"><b>Definition</b> eeprom.h:42</div></div>
 </div><!-- fragment -->
 <p>Reads single byte from the EEPROM at the given address. </p>
 <p>This function performs a read operation from the EEPROM using the provided high and low bytes of the address. The data read from the EEPROM is stored in the location pointed to by 'value_ptr'. For reading from the EEPROM IAP registers are used.</p>
@@ -172,7 +180,7 @@ Macros</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">addr_high</td><td>High byte of the EEPROM address to read from. </td></tr>
     <tr><td class="paramname">addr_low</td><td>Low byte of the EEPROM address to read from. </td></tr>
-    <tr><td class="paramname">value_ptr</td><td>Pointer to a uint8_t variable where the read value will be stored. Must not be NULL. </td></tr>
+    <tr><td class="paramname">value_ptr</td><td>Pointer to a uint8_t variable where the read value will be stored. Must not be NULL. If read operation fails, the value is set to ERROR_VALUE. </td></tr>
     <tr><td class="paramname">error_ptr</td><td>Pointer to a uint8_t variable where the error status will be stored. Must not be NULL. 0 - no error, otherwise - error code </td></tr>
   </table>
   </dd>
