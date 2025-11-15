@@ -12,6 +12,7 @@
 #include <stdint.h>
 
 #include <sys.h>
+#include <bits.h>
 
 /**
  * @brief Read operation
@@ -50,11 +51,34 @@
  * 
  * @ingroup eeprom
  */
-void eeprom_read_byte(
-    uint8_t addr_high, 
-    uint8_t addr_low, 
-    uint8_t* value_ptr,
-    uint8_t* error_ptr
-);
+#define eeprom_read_byte(addr_high, addr_low, value_ptr, error_ptr)     \
+do {                                                                    \
+    /* Enable IAP */                                                    \
+    bit_set(IAP_CONTR, SBIT7);                                          \
+                                                                        \
+    /* Set address */                                                   \
+    IAP_ADDRH = addr_high;                                              \
+    IAP_ADDRL = addr_low;                                               \
+                                                                        \
+    /* Set read operation */                                            \
+    IAP_CMD = REAP_OP;                                                  \
+                                                                        \
+    /* Set start read sequence */                                       \
+    IAP_TRIG = READ_OP_TRIGGER_SEQ_FIRST_BYTE;                          \
+    IAP_TRIG = READ_OP_TRIGGER_SEQ_SECOND_BYTE;                         \
+                                                                        \
+    /* Wait for IAP finish */                                           \
+    NOP();                                                              \
+    NOP();                                                              \
+    NOP();                                                              \
+                                                                        \
+    /* Read data from IAP */                                            \
+    *value_ptr = IAP_DATA;                                              \
+    /* Read error status from IAP */                                    \
+    *error_ptr = get_bit(IAP_CONTR, 4);                                 \
+                                                                        \
+    /* Disable IAP */                                                   \
+    bit_clr(IAP_CONTR, CBIT7);                                          \
+} while (0)
 
 #endif

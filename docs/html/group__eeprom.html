@@ -70,8 +70,7 @@ $(function() {
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">EEPROM</div></div>
 </div><!--header-->
 <div class="contents">
@@ -90,46 +89,43 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>READ_OP_TRIGGER_SEQ_SECOND_BYTE</b>&#160;&#160;&#160;0xA5</td></tr>
 <tr class="memdesc:ga0a26dfc479333f4125c8825ab4c9f95f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read operation trigger sequence first byte. <br /></td></tr>
 <tr class="separator:ga0a26dfc479333f4125c8825ab4c9f95f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ga63383c146effaa0976c7dd6f5383f914" id="r_ga63383c146effaa0976c7dd6f5383f914"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__eeprom.html#ga63383c146effaa0976c7dd6f5383f914">eeprom_read_byte</a> (uint8_t addr_high, uint8_t addr_low, uint8_t *value_ptr, uint8_t *error_ptr)</td></tr>
-<tr class="memdesc:ga63383c146effaa0976c7dd6f5383f914"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads single byte from the EEPROM at the given address.  <br /></td></tr>
-<tr class="separator:ga63383c146effaa0976c7dd6f5383f914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ba0e98241d4b70f05295f997c7d0344" id="r_ga0ba0e98241d4b70f05295f997c7d0344"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__eeprom.html#ga0ba0e98241d4b70f05295f997c7d0344">eeprom_read_byte</a>(addr_high,  addr_low,  value_ptr,  error_ptr)</td></tr>
+<tr class="memdesc:ga0ba0e98241d4b70f05295f997c7d0344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads single byte from the EEPROM at the given address.  <br /></td></tr>
+<tr class="separator:ga0ba0e98241d4b70f05295f997c7d0344"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions and data structures related to EEPROM</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ga63383c146effaa0976c7dd6f5383f914" name="ga63383c146effaa0976c7dd6f5383f914"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga63383c146effaa0976c7dd6f5383f914">&#9670;&#160;</a></span>eeprom_read_byte()</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga0ba0e98241d4b70f05295f997c7d0344" name="ga0ba0e98241d4b70f05295f997c7d0344"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ba0e98241d4b70f05295f997c7d0344">&#9670;&#160;</a></span>eeprom_read_byte</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void eeprom_read_byte </td>
+          <td class="memname">#define eeprom_read_byte</td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>addr_high</em>, </td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">addr_high, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>addr_low</em>, </td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">addr_low, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>value_ptr</em>, </td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">value_ptr, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>error_ptr</em>&#160;</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">error_ptr&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -138,7 +134,38 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                    \</div>
+<div class="line">    <span class="comment">/* Enable IAP */</span>                                                    \</div>
+<div class="line">    bit_set(IAP_CONTR, SBIT7);                                          \</div>
+<div class="line">                                                                        \</div>
+<div class="line">    <span class="comment">/* Set address */</span>                                                   \</div>
+<div class="line">    IAP_ADDRH = addr_high;                                              \</div>
+<div class="line">    IAP_ADDRL = addr_low;                                               \</div>
+<div class="line">                                                                        \</div>
+<div class="line">    <span class="comment">/* Set read operation */</span>                                            \</div>
+<div class="line">    IAP_CMD = <a class="code hl_define" href="group__eeprom.html#ga7abc3dd1b9abfbe87a4ebe682ee0a7fa">REAP_OP</a>;                                                  \</div>
+<div class="line">                                                                        \</div>
+<div class="line">    <span class="comment">/* Set start read sequence */</span>                                       \</div>
+<div class="line">    IAP_TRIG = <a class="code hl_define" href="group__eeprom.html#ga85abf54747ab281115870f8a261b122a">READ_OP_TRIGGER_SEQ_FIRST_BYTE</a>;                          \</div>
+<div class="line">    IAP_TRIG = <a class="code hl_define" href="group__eeprom.html#ga0a26dfc479333f4125c8825ab4c9f95f">READ_OP_TRIGGER_SEQ_SECOND_BYTE</a>;                         \</div>
+<div class="line">                                                                        \</div>
+<div class="line">    <span class="comment">/* Wait for IAP finish */</span>                                           \</div>
+<div class="line">    NOP();                                                              \</div>
+<div class="line">    NOP();                                                              \</div>
+<div class="line">    NOP();                                                              \</div>
+<div class="line">                                                                        \</div>
+<div class="line">    <span class="comment">/* Read data from IAP */</span>                                            \</div>
+<div class="line">    *value_ptr = IAP_DATA;                                              \</div>
+<div class="line">    <span class="comment">/* Read error status from IAP */</span>                                    \</div>
+<div class="line">    *error_ptr = get_bit(IAP_CONTR, 4);                                 \</div>
+<div class="line">                                                                        \</div>
+<div class="line">    <span class="comment">/* Disable IAP */</span>                                                   \</div>
+<div class="line">    bit_clr(IAP_CONTR, CBIT7);                                          \</div>
+<div class="line">} <span class="keywordflow">while</span> (0)</div>
+<div class="ttc" id="agroup__eeprom_html_ga0a26dfc479333f4125c8825ab4c9f95f"><div class="ttname"><a href="group__eeprom.html#ga0a26dfc479333f4125c8825ab4c9f95f">READ_OP_TRIGGER_SEQ_SECOND_BYTE</a></div><div class="ttdeci">#define READ_OP_TRIGGER_SEQ_SECOND_BYTE</div><div class="ttdoc">Read operation trigger sequence first byte.</div><div class="ttdef"><b>Definition</b> eeprom.h:35</div></div>
+<div class="ttc" id="agroup__eeprom_html_ga7abc3dd1b9abfbe87a4ebe682ee0a7fa"><div class="ttname"><a href="group__eeprom.html#ga7abc3dd1b9abfbe87a4ebe682ee0a7fa">REAP_OP</a></div><div class="ttdeci">#define REAP_OP</div><div class="ttdoc">Read operation.</div><div class="ttdef"><b>Definition</b> eeprom.h:22</div></div>
+<div class="ttc" id="agroup__eeprom_html_ga85abf54747ab281115870f8a261b122a"><div class="ttname"><a href="group__eeprom.html#ga85abf54747ab281115870f8a261b122a">READ_OP_TRIGGER_SEQ_FIRST_BYTE</a></div><div class="ttdeci">#define READ_OP_TRIGGER_SEQ_FIRST_BYTE</div><div class="ttdoc">Read operation trigger sequence first byte.</div><div class="ttdef"><b>Definition</b> eeprom.h:29</div></div>
+</div><!-- fragment -->
 <p>Reads single byte from the EEPROM at the given address. </p>
 <p>This function performs a read operation from the EEPROM using the provided high and low bytes of the address. The data read from the EEPROM is stored in the location pointed to by 'value_ptr'. For reading from the EEPROM IAP registers are used.</p>
 <dl class="params"><dt>Parameters</dt><dd>
