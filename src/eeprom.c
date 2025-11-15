@@ -5,7 +5,7 @@
 #include <uart.h>
 #include <stdio.h>
 
-uint8_t eeprom_read(uint8_t addr_high, uint8_t addr_low, uint8_t* value_ptr)
+uint8_t eeprom_read_byte(uint8_t addr_high, uint8_t addr_low, uint8_t* value_ptr)
 {
     // Enable IAP
     bit_set(IAP_CONTR, SBIT7);
@@ -45,7 +45,7 @@ void main(void)
         // Read byte from EEPROM at addresses 0x00000-0x0002 via IAP
         for(uint8_t addr_low = 0; addr_low < 3; addr_low++)
         {
-            uint8_t has_error = eeprom_read(addr_high, addr_low, &byte);
+            uint8_t has_error = eeprom_read_byte(addr_high, addr_low, &byte);
             if (!has_error)
             {
                 printf_tiny("Byte on address %x %x is %x\r\n", addr_high, addr_low, byte);

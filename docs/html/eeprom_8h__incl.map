@@ -1,0 +1,11 @@
+<map id="include/eeprom.h" name="include/eeprom.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="17,5,152,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,76,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,32,57,68,53,66,75,30"/>
+<area shape="rect" id="Node000003" href="$sys_8h.html" title=" " alt="" coords="101,79,157,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="94,30,117,66,112,68,90,32"/>
+<area shape="rect" id="Node000004" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="79,152,178,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="131,104,131,138,126,138,126,104"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="83,225,174,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="131,178,131,212,126,212,126,178"/>
+</map>

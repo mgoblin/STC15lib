@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>STC15W408AS library: Globals</title>
+<title>STC15W408AS library: include/eeprom.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,7 +46,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -68,15 +67,44 @@ $(function() {
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">eeprom.h File Reference</div></div>
+</div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all documented functions with links to the documentation:</div><ul>
-<li>__at()&#160;:&#160;<a class="el" href="group__chip__id.html#gaf797f652068877217b527fa8d320bb43">chip_id.h</a></li>
-<li>counter0ISR()&#160;:&#160;<a class="el" href="counter0__mode1__example_8c.html#a07516c1ddaf0e964bb248f2eee71f1f4">counter0_mode1_example.c</a></li>
-<li>eeprom_read_byte()&#160;:&#160;<a class="el" href="group__eeprom.html#gafcf5e4cf125bb1b6fdd6328cf4535f82">eeprom.h</a></li>
-<li>getchar()&#160;:&#160;<a class="el" href="group__uart.html#ga3e29caa20f7cffe18f410f01278905a8">uart.h</a></li>
-<li>main()&#160;:&#160;<a class="el" href="counter0__mode1__example_8c.html#acdef7a1fd863a6d3770c1268cb06add3">counter0_mode1_example.c</a></li>
-<li>putchar()&#160;:&#160;<a class="el" href="group__uart.html#ga07036e93939040c563e862a6a31b65bc">uart.h</a></li>
-</ul>
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="sys_8h_source.html">sys.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for eeprom.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="eeprom_8h__incl.png" border="0" usemap="#ainclude_2eeprom_8h" alt=""/></div>
+<map name="ainclude_2eeprom_8h" id="ainclude_2eeprom_8h">
+<area shape="rect" title=" " alt="" coords="17,5,152,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,76,104"/>
+<area shape="poly" title=" " alt="" coords="80,32,57,68,53,66,75,30"/>
+<area shape="rect" href="sys_8h.html" title=" " alt="" coords="101,79,157,104"/>
+<area shape="poly" title=" " alt="" coords="94,30,117,66,112,68,90,32"/>
+<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="79,152,178,177"/>
+<area shape="poly" title=" " alt="" coords="131,104,131,138,126,138,126,104"/>
+<area shape="rect" title=" " alt="" coords="83,225,174,251"/>
+<area shape="poly" title=" " alt="" coords="131,178,131,212,126,212,126,178"/>
+</map>
+</div>
+</div>
+<p><a href="eeprom_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gafcf5e4cf125bb1b6fdd6328cf4535f82" id="r_gafcf5e4cf125bb1b6fdd6328cf4535f82"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__eeprom.html#gafcf5e4cf125bb1b6fdd6328cf4535f82">eeprom_read_byte</a> (uint8_t addr_high, uint8_t addr_low, uint8_t *value_ptr)</td></tr>
+<tr class="memdesc:gafcf5e4cf125bb1b6fdd6328cf4535f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads single byte from the EEPROM at the given address.  <br /></td></tr>
+<tr class="separator:gafcf5e4cf125bb1b6fdd6328cf4535f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
