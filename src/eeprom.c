@@ -5,7 +5,12 @@
 #include <uart.h>
 #include <stdio.h>
 
-uint8_t eeprom_read_byte(uint8_t addr_high, uint8_t addr_low, uint8_t* value_ptr)
+void eeprom_read_byte(
+    uint8_t addr_high, 
+    uint8_t addr_low, 
+    uint8_t* value_ptr, 
+    uint8_t* error_ptr
+)
 {
     // Enable IAP
     bit_set(IAP_CONTR, SBIT7);
@@ -14,25 +19,29 @@ uint8_t eeprom_read_byte(uint8_t addr_high, uint8_t addr_low, uint8_t* value_ptr
     // Addresses readed via MOVC from 2000h to 33FFh
     IAP_ADDRH = addr_high;
     IAP_ADDRL = addr_low;
-    IAP_CMD = 0x01; // Read
+    IAP_CMD = REAP_OP; // Read
 
-    IAP_TRIG = 0x5A; // Start IAP first sequence byte
-    IAP_TRIG = 0xA5; // Start IAP second sequence byte
+    // Start IAP first sequence byte
+    IAP_TRIG = READ_OP_TRIGGER_SEQ_FIRST_BYTE; 
+    // Start IAP second sequence byte
+    IAP_TRIG = READ_OP_TRIGGER_SEQ_SECOND_BYTE; 
 
     // Wait for IAP finish
     NOP();
     NOP();
     NOP();
 
+    // Read data from IAP
     *value_ptr = IAP_DATA;
+    // Read error status from IAP
+    *error_ptr = get_bit(IAP_CONTR, 4);
 
     // Disable IAP
     bit_clr(IAP_CONTR, CBIT7);
-
-    return get_bit(IAP_CONTR, 4);
 }
 
 volatile uint8_t byte = 0;
+volatile uint8_t has_error = 0;
 
 void main(void) 
 {
@@ -45,7 +54,7 @@ void main(void)
         // Read byte from EEPROM at addresses 0x00000-0x0002 via IAP
         for(uint8_t addr_low = 0; addr_low < 3; addr_low++)
         {
-            uint8_t has_error = eeprom_read_byte(addr_high, addr_low, &byte);
+            eeprom_read_byte(addr_high, addr_low, &byte, &has_error);
             if (!has_error)
             {
                 printf_tiny("Byte on address %x %x is %x\r\n", addr_high, addr_low, byte);

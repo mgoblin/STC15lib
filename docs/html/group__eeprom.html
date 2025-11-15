@@ -70,29 +70,45 @@ $(function() {
 
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">EEPROM</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga7abc3dd1b9abfbe87a4ebe682ee0a7fa" id="r_ga7abc3dd1b9abfbe87a4ebe682ee0a7fa"><td class="memItemLeft" align="right" valign="top"><a id="ga7abc3dd1b9abfbe87a4ebe682ee0a7fa" name="ga7abc3dd1b9abfbe87a4ebe682ee0a7fa"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REAP_OP</b>&#160;&#160;&#160;0x01</td></tr>
+<tr class="memdesc:ga7abc3dd1b9abfbe87a4ebe682ee0a7fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read operation. <br /></td></tr>
+<tr class="separator:ga7abc3dd1b9abfbe87a4ebe682ee0a7fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga85abf54747ab281115870f8a261b122a" id="r_ga85abf54747ab281115870f8a261b122a"><td class="memItemLeft" align="right" valign="top"><a id="ga85abf54747ab281115870f8a261b122a" name="ga85abf54747ab281115870f8a261b122a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>READ_OP_TRIGGER_SEQ_FIRST_BYTE</b>&#160;&#160;&#160;0x5A</td></tr>
+<tr class="memdesc:ga85abf54747ab281115870f8a261b122a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read operation trigger sequence first byte. <br /></td></tr>
+<tr class="separator:ga85abf54747ab281115870f8a261b122a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a26dfc479333f4125c8825ab4c9f95f" id="r_ga0a26dfc479333f4125c8825ab4c9f95f"><td class="memItemLeft" align="right" valign="top"><a id="ga0a26dfc479333f4125c8825ab4c9f95f" name="ga0a26dfc479333f4125c8825ab4c9f95f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>READ_OP_TRIGGER_SEQ_SECOND_BYTE</b>&#160;&#160;&#160;0xA5</td></tr>
+<tr class="memdesc:ga0a26dfc479333f4125c8825ab4c9f95f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read operation trigger sequence first byte. <br /></td></tr>
+<tr class="separator:ga0a26dfc479333f4125c8825ab4c9f95f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gafcf5e4cf125bb1b6fdd6328cf4535f82" id="r_gafcf5e4cf125bb1b6fdd6328cf4535f82"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__eeprom.html#gafcf5e4cf125bb1b6fdd6328cf4535f82">eeprom_read_byte</a> (uint8_t addr_high, uint8_t addr_low, uint8_t *value_ptr)</td></tr>
-<tr class="memdesc:gafcf5e4cf125bb1b6fdd6328cf4535f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads single byte from the EEPROM at the given address.  <br /></td></tr>
-<tr class="separator:gafcf5e4cf125bb1b6fdd6328cf4535f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga63383c146effaa0976c7dd6f5383f914" id="r_ga63383c146effaa0976c7dd6f5383f914"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__eeprom.html#ga63383c146effaa0976c7dd6f5383f914">eeprom_read_byte</a> (uint8_t addr_high, uint8_t addr_low, uint8_t *value_ptr, uint8_t *error_ptr)</td></tr>
+<tr class="memdesc:ga63383c146effaa0976c7dd6f5383f914"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads single byte from the EEPROM at the given address.  <br /></td></tr>
+<tr class="separator:ga63383c146effaa0976c7dd6f5383f914"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions and data structures related to EEPROM</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gafcf5e4cf125bb1b6fdd6328cf4535f82" name="gafcf5e4cf125bb1b6fdd6328cf4535f82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafcf5e4cf125bb1b6fdd6328cf4535f82">&#9670;&#160;</a></span>eeprom_read_byte()</h2>
+<a id="ga63383c146effaa0976c7dd6f5383f914" name="ga63383c146effaa0976c7dd6f5383f914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga63383c146effaa0976c7dd6f5383f914">&#9670;&#160;</a></span>eeprom_read_byte()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t eeprom_read_byte </td>
+          <td class="memname">void eeprom_read_byte </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>addr_high</em>, </td>
@@ -107,7 +123,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>value_ptr</em>&#160;</td>
+          <td class="paramname"><em>value_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>error_ptr</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -123,11 +145,11 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">addr_high</td><td>High byte of the EEPROM address to read from. </td></tr>
     <tr><td class="paramname">addr_low</td><td>Low byte of the EEPROM address to read from. </td></tr>
-    <tr><td class="paramname">value_ptr</td><td>Pointer to a uint8_t variable where the read value will be stored. Must not be NULL.</td></tr>
+    <tr><td class="paramname">value_ptr</td><td>Pointer to a uint8_t variable where the read value will be stored. Must not be NULL. </td></tr>
+    <tr><td class="paramname">error_ptr</td><td>Pointer to a uint8_t variable where the error status will be stored. Must not be NULL. 0 - no error, otherwise - error code </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Status of the read operation. Returns 0 on success, or an error code if the operation failed. </dd></dl>
 
 </div>
 </div>
