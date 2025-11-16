@@ -97,6 +97,12 @@ Macros</h2></td></tr>
 <tr class="memitem:ga91ea0552ad4f4846e01e2ae59adce627" id="r_ga91ea0552ad4f4846e01e2ae59adce627"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#ga91ea0552ad4f4846e01e2ae59adce627">wakeup_timer_internal_clk_freq</a>()&#160;&#160;&#160;(((uint16_t)*wirc_h_ptr &lt;&lt; 8) | *wirc_l_ptr)</td></tr>
 <tr class="memdesc:ga91ea0552ad4f4846e01e2ae59adce627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wakeup timer internal clock frequency.  <br /></td></tr>
 <tr class="separator:ga91ea0552ad4f4846e01e2ae59adce627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga930b8a866ce00b34528a4c24436d7c0a" id="r_ga930b8a866ce00b34528a4c24436d7c0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#ga930b8a866ce00b34528a4c24436d7c0a">power_low_voltage_flag_get</a>()&#160;&#160;&#160;(test_if_bit_set(PCON, SBIT5))</td></tr>
+<tr class="memdesc:ga930b8a866ce00b34528a4c24436d7c0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the status of the low voltage detection flag.  <br /></td></tr>
+<tr class="separator:ga930b8a866ce00b34528a4c24436d7c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9863918f1eedbe577046485380a9a3d2" id="r_ga9863918f1eedbe577046485380a9a3d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#ga9863918f1eedbe577046485380a9a3d2">power_low_voltage_flag_clear</a>()&#160;&#160;&#160;(bit_clr(PCON, CBIT5))</td></tr>
+<tr class="memdesc:ga9863918f1eedbe577046485380a9a3d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the low voltage detection flag in the PCON register.  <br /></td></tr>
+<tr class="separator:ga9863918f1eedbe577046485380a9a3d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions and data structures related for MCU power management </p><dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
@@ -145,6 +151,51 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Set MCU power down mode. </p>
 <p>In the Stop/Power-Down mode, the on-chip oscillator and the Flash memory are stopped in order to minimize power consumption. Only the power-on circuitry will continue to draw power during Stop/Power-Down. The contents of on-chip RAM and SFRs are maintained. </p>
+
+</div>
+</div>
+<a id="ga9863918f1eedbe577046485380a9a3d2" name="ga9863918f1eedbe577046485380a9a3d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9863918f1eedbe577046485380a9a3d2">&#9670;&#160;</a></span>power_low_voltage_flag_clear</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define power_low_voltage_flag_clear</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(bit_clr(PCON, CBIT5))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears the low voltage detection flag in the PCON register. </p>
+<p>This macro clears the low voltage detection flag by resetting bit 5 (CBIT5) of the PCON (Power Control) register. This flag is set when a low voltage condition is detected, and must be manually cleared by software. </p>
+
+</div>
+</div>
+<a id="ga930b8a866ce00b34528a4c24436d7c0a" name="ga930b8a866ce00b34528a4c24436d7c0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga930b8a866ce00b34528a4c24436d7c0a">&#9670;&#160;</a></span>power_low_voltage_flag_get</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define power_low_voltage_flag_get</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(test_if_bit_set(PCON, SBIT5))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the status of the low voltage detection flag. </p>
+<p>This macro reads the state of bit 5 (SBIT5) in the PCON (Power Control) register to determine if the low voltage detection flag is set. It is typically used in microcontrollers to check whether a low voltage condition has been detected during operation.</p>
+<dl class="section return"><dt>Returns</dt><dd>Returns the value of bit 5 in the PCON register:<ul>
+<li>0 if the bit is not set (no low voltage condition),</li>
+<li>1 if the bit is set (low voltage condition detected). </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>

@@ -98,8 +98,31 @@ static volatile __idata uint8_t * const wirc_l_ptr = (__idata uint8_t *) WIRC_L_
  */
 #define wakeup_timer_internal_clk_freq() (((uint16_t)*wirc_h_ptr << 8) | *wirc_l_ptr)
 
+/**
+ * @brief Retrieves the status of the low voltage detection flag.
+ *
+ * This macro reads the state of bit 5 (SBIT5) in the PCON (Power Control) register 
+ * to determine if the low voltage detection flag is set. It is typically used in 
+ * microcontrollers to check whether a low voltage condition has been detected 
+ * during operation.
+ *
+ * @return Returns the value of bit 5 in the PCON register: 
+ *         - 0 if the bit is not set (no low voltage condition),
+ *         - 1 if the bit is set (low voltage condition detected).
+ * 
+ * @ingroup power_management
+ */
 #define power_low_voltage_flag_get() (test_if_bit_set(PCON, SBIT5))
 
+/**
+ * @brief Clears the low voltage detection flag in the PCON register.
+ *
+ * This macro clears the low voltage detection flag by resetting bit 5 (CBIT5) 
+ * of the PCON (Power Control) register. This flag is set when a 
+ * low voltage condition is detected, and must be manually cleared by software.
+ * 
+ * @ingroup power_management
+ */
 #define power_low_voltage_flag_clear() (bit_clr(PCON, CBIT5))
 
 #endif

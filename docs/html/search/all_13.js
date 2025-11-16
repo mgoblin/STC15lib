@@ -13,8 +13,10 @@ var searchData=
   ['pin_5fquasi_5fbidiretional_5finit_10',['pin_quasi_bidiretional_init',['../group__gpio.html#ga76365dbd738481635f5d73183e2059d3',1,'gpio.h']]],
   ['power_20management_11',['Power management',['../group__power__management.html',1,'']]],
   ['power_5fdown_12',['power_down',['../group__power__management.html#ga1e0d38ad57d2078db65a84e857f5e5b6',1,'power_management.h']]],
-  ['power_5fmanagement_2eh_13',['power_management.h',['../power__management_8h.html',1,'']]],
-  ['project_14',['Add library to your project',['../index.html#autotoc_md2',1,'']]],
-  ['prorgamming_15',['Low level STC15 prorgamming',['../index.html#autotoc_md3',1,'']]],
-  ['putchar_16',['putchar',['../group__uart.html#ga07036e93939040c563e862a6a31b65bc',1,'putchar(int ch):&#160;uart.c'],['../group__uart.html#ga07036e93939040c563e862a6a31b65bc',1,'putchar(int ch):&#160;uart.c']]]
+  ['power_5flow_5fvoltage_5fflag_5fclear_13',['power_low_voltage_flag_clear',['../group__power__management.html#ga9863918f1eedbe577046485380a9a3d2',1,'power_management.h']]],
+  ['power_5flow_5fvoltage_5fflag_5fget_14',['power_low_voltage_flag_get',['../group__power__management.html#ga930b8a866ce00b34528a4c24436d7c0a',1,'power_management.h']]],
+  ['power_5fmanagement_2eh_15',['power_management.h',['../power__management_8h.html',1,'']]],
+  ['project_16',['Add library to your project',['../index.html#autotoc_md2',1,'']]],
+  ['prorgamming_17',['Low level STC15 prorgamming',['../index.html#autotoc_md3',1,'']]],
+  ['putchar_18',['putchar',['../group__uart.html#ga07036e93939040c563e862a6a31b65bc',1,'putchar(int ch):&#160;uart.c'],['../group__uart.html#ga07036e93939040c563e862a6a31b65bc',1,'putchar(int ch):&#160;uart.c']]]
 ];
