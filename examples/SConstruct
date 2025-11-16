@@ -25,4 +25,4 @@ SConscript('timer/SConscript', exports = 'env', variant_dir= base_dir + '/timer'
 SConscript('uart/SConscript', exports = 'env', variant_dir= base_dir + '/uart')
 SConscript('wdt/SConscript', exports = 'env', variant_dir= base_dir + '/wdt')
 SConscript('pin/SConscript', exports = 'env', variant_dir= base_dir + '/pin')
-SConscript('pin/SConscript', exports = 'env', variant_dir= base_dir + '/eeprom')
+SConscript('eeprom/SConscript', exports = 'env', variant_dir= base_dir + '/eeprom')
