@@ -128,4 +128,6 @@ do {                                                                    \
     }                                                                   \
 } while (0)
 
+void eeprom_erase_sector(uint8_t addr_high, uint8_t addr_low);
+
 #endif
