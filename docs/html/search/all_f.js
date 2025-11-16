@@ -8,5 +8,6 @@ var searchData=
   ['library_20modules_20maturity_5',['Library modules maturity',['../index.html#autotoc_md5',1,'']]],
   ['library_20to_20your_20project_6',['Add library to your project',['../index.html#autotoc_md2',1,'']]],
   ['low_7',['LOW',['../group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a6a226f4143ca3b18999551694cdb72a8',1,'interrupt.h']]],
-  ['low_20level_20stc15_20prorgamming_8',['Low level STC15 prorgamming',['../index.html#autotoc_md3',1,'']]]
+  ['low_20level_20stc15_20prorgamming_8',['Low level STC15 prorgamming',['../index.html#autotoc_md3',1,'']]],
+  ['low_5fvoltage_5ferror_9',['LOW_VOLTAGE_ERROR',['../group__eeprom.html#ga7b162d8b59db68ebc84d1371e373c44e',1,'eeprom.h']]]
 ];

@@ -36,7 +36,8 @@
         "stdbool.h": "c",
         "uart1_9bit_shared.h": "c",
         "uart1_8bit_shared.h": "c",
-        "uart1_mode1_timer2_1t.h": "c"
+        "uart1_mode1_timer2_1t.h": "c",
+        "assert.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

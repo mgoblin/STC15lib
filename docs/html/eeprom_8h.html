@@ -78,25 +78,36 @@ $(function() {
   <div class="headertitle"><div class="title">eeprom.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="sys_8h_source.html">sys.h</a>&gt;</code><br />
 <code>#include &lt;bits.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="power__management_8h_source.html">power_management.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for eeprom.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="eeprom_8h__incl.png" border="0" usemap="#ainclude_2eeprom_8h" alt=""/></div>
 <map name="ainclude_2eeprom_8h" id="ainclude_2eeprom_8h">
-<area shape="rect" title=" " alt="" coords="61,5,196,31"/>
-<area shape="rect" title=" " alt="" coords="5,79,76,104"/>
-<area shape="poly" title=" " alt="" coords="116,33,67,72,64,68,113,29"/>
-<area shape="rect" href="sys_8h.html" title=" " alt="" coords="101,79,157,104"/>
-<area shape="poly" title=" " alt="" coords="131,31,131,65,126,65,126,31"/>
-<area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="181,79,239,104"/>
-<area shape="poly" title=" " alt="" coords="143,29,188,68,185,72,140,33"/>
-<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="79,152,178,177"/>
-<area shape="poly" title=" " alt="" coords="131,104,131,138,126,138,126,104"/>
-<area shape="rect" title=" " alt="" coords="83,225,174,251"/>
-<area shape="poly" title=" " alt="" coords="131,178,131,212,126,212,126,178"/>
+<area shape="rect" title=" " alt="" coords="101,5,235,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,80,104"/>
+<area shape="poly" title=" " alt="" coords="149,33,76,74,74,69,147,28"/>
+<area shape="rect" title=" " alt="" coords="82,152,153,177"/>
+<area shape="poly" title=" " alt="" coords="166,32,128,140,123,138,161,30"/>
+<area shape="rect" href="sys_8h.html" title=" " alt="" coords="177,152,233,177"/>
+<area shape="poly" title=" " alt="" coords="174,30,202,138,196,139,168,32"/>
+<area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="372,152,431,177"/>
+<area shape="poly" title=" " alt="" coords="236,17,275,22,315,33,354,50,387,77,397,91,402,107,406,138,401,139,397,108,392,93,383,80,351,55,313,38,274,28,235,22"/>
+<area shape="rect" href="power__management_8h.html" title=" " alt="" coords="205,79,373,104"/>
+<area shape="poly" title=" " alt="" coords="189,28,259,69,257,74,186,33"/>
+<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="156,225,255,251"/>
+<area shape="poly" title=" " alt="" coords="208,178,208,212,203,212,203,178"/>
+<area shape="rect" title=" " alt="" coords="160,299,251,324"/>
+<area shape="poly" title=" " alt="" coords="208,251,208,285,203,285,203,251"/>
+<area shape="poly" title=" " alt="" coords="263,106,159,149,157,144,261,102"/>
+<area shape="poly" title=" " alt="" coords="278,106,231,145,228,141,274,102"/>
+<area shape="poly" title=" " alt="" coords="309,102,373,142,370,147,306,106"/>
+<area shape="rect" title=" " alt="" coords="257,152,340,177"/>
+<area shape="poly" title=" " alt="" coords="294,104,298,138,293,139,288,105"/>
 </map>
 </div>
 </div>
@@ -120,6 +131,18 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>CMD_FAIL_BIT</b>&#160;&#160;&#160;4</td></tr>
 <tr class="memdesc:gafd52c5b88764693bd5793607770b9e3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command fail error code. <br /></td></tr>
 <tr class="separator:gafd52c5b88764693bd5793607770b9e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa2008c1bc36d9ef42571a6ec52516d02" id="r_gaa2008c1bc36d9ef42571a6ec52516d02"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CMD_SUCCESS</b>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:gaa2008c1bc36d9ef42571a6ec52516d02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return codes. Operation success. <br /></td></tr>
+<tr class="separator:gaa2008c1bc36d9ef42571a6ec52516d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1be701873bbdcdd0be6c6694f9ce8810" id="r_ga1be701873bbdcdd0be6c6694f9ce8810"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CMD_FAIL_ERROR</b>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:ga1be701873bbdcdd0be6c6694f9ce8810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return codes. Operation fail. <br /></td></tr>
+<tr class="separator:ga1be701873bbdcdd0be6c6694f9ce8810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7b162d8b59db68ebc84d1371e373c44e" id="r_ga7b162d8b59db68ebc84d1371e373c44e"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOW_VOLTAGE_ERROR</b>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:ga7b162d8b59db68ebc84d1371e373c44e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return codes. Low voltage error. <br /></td></tr>
+<tr class="separator:ga7b162d8b59db68ebc84d1371e373c44e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga48e49bfe7b106d9356d27403982bcf7c" id="r_ga48e49bfe7b106d9356d27403982bcf7c"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>ERROR_VALUE</b>&#160;&#160;&#160;0xFF</td></tr>
 <tr class="memdesc:ga48e49bfe7b106d9356d27403982bcf7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error value. <br /></td></tr>
