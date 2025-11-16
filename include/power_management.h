@@ -98,4 +98,8 @@ static volatile __idata uint8_t * const wirc_l_ptr = (__idata uint8_t *) WIRC_L_
  */
 #define wakeup_timer_internal_clk_freq() (((uint16_t)*wirc_h_ptr << 8) | *wirc_l_ptr)
 
+#define power_low_voltage_flag_get() (test_if_bit_set(PCON, SBIT5))
+
+#define power_low_voltage_flag_clear() (bit_clr(PCON, CBIT5))
+
 #endif

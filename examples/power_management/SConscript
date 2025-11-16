@@ -10,5 +10,9 @@ env.Default (
     env.Program(
         'idle_example', 
         ['idle_example.c', 'uart.c']
-    )
+    ),
+    env.Program(
+        'low_voltage_example', 
+        ['low_voltage_example.c', 'uart.c']
+    ),
 )
