@@ -93,13 +93,14 @@ void main()
 | Delay        | CPU cycles based delay           | READY              |
 | CPU frequency| CPU frequency slowdown           | READY              |
 | Interrupt    | Enable and disable interrupts    | READY              |
-| Power management | idle, powerdown and wakeup timer        | READY              |
+| Power management | idle, powerdown and wakeup timer, low voltage flag        | READY              |
 | Reset        | Software reset                   | READY              |
 | Timer        | Timer control routines           | READY              |
 | Counter      | Counter control routines         | READY              |
 | UART         | Serial port **p-2-p** routines   | READY              |
 | Watchdog timer | Watchdog timer routines        | READY              |
-| GPIO          | Pin as digital in/out routines   | READY              |
+| GPIO          | Pin as digital in/out routines  | READY              |
+| EEPROM        | Non volatile flash memory routines   | INITIAL SUPPORT         |
 
 Other modules does not implemented yet.
 
