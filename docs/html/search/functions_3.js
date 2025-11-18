@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getchar_0',['getchar',['../group__uart.html#ga3e29caa20f7cffe18f410f01278905a8',1,'getchar(void):&#160;uart.c'],['../group__uart.html#ga3e29caa20f7cffe18f410f01278905a8',1,'getchar(void):&#160;uart.c']]]
+  ['main_0',['main',['../counter0__mode1__example_8c.html#acdef7a1fd863a6d3770c1268cb06add3',1,'counter0_mode1_example.c']]]
 ];

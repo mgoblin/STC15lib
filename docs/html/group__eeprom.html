@@ -70,8 +70,7 @@ $(function() {
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">EEPROM</div></div>
 </div><!--header-->
 <div class="contents">
@@ -114,20 +113,94 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>ERROR_VALUE</b>&#160;&#160;&#160;0xFF</td></tr>
 <tr class="memdesc:ga48e49bfe7b106d9356d27403982bcf7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error value. <br /></td></tr>
 <tr class="separator:ga48e49bfe7b106d9356d27403982bcf7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga788d9a71954050054bc2b35e49860b8f" id="r_ga788d9a71954050054bc2b35e49860b8f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__eeprom.html#ga788d9a71954050054bc2b35e49860b8f">eeprom_disable_iap</a>()</td></tr>
+<tr class="memdesc:ga788d9a71954050054bc2b35e49860b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables IAP.  <br /></td></tr>
+<tr class="separator:ga788d9a71954050054bc2b35e49860b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad66214463ff06635ed0ffbddeb1928aa" id="r_gad66214463ff06635ed0ffbddeb1928aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__eeprom.html#gad66214463ff06635ed0ffbddeb1928aa">get_eeprom_last_operation_result</a>()&#160;&#160;&#160;(get_bit(IAP_CONTR, <a class="el" href="group__eeprom.html#gafd52c5b88764693bd5793607770b9e3a">CMD_FAIL_BIT</a>) ? <a class="el" href="group__eeprom.html#ga1be701873bbdcdd0be6c6694f9ce8810">CMD_FAIL_ERROR</a> : <a class="el" href="group__eeprom.html#gaa2008c1bc36d9ef42571a6ec52516d02">CMD_SUCCESS</a>)</td></tr>
+<tr class="memdesc:gad66214463ff06635ed0ffbddeb1928aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">get last operation result  <br /></td></tr>
+<tr class="separator:gad66214463ff06635ed0ffbddeb1928aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0ba0e98241d4b70f05295f997c7d0344" id="r_ga0ba0e98241d4b70f05295f997c7d0344"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__eeprom.html#ga0ba0e98241d4b70f05295f997c7d0344">eeprom_read_byte</a>(addr_high,  addr_low,  value_ptr,  error_ptr)</td></tr>
 <tr class="memdesc:ga0ba0e98241d4b70f05295f997c7d0344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads single byte from the EEPROM at the given address.  <br /></td></tr>
 <tr class="separator:ga0ba0e98241d4b70f05295f997c7d0344"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ga99d96ebc2993699d4df327a512ee8db9" id="r_ga99d96ebc2993699d4df327a512ee8db9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__eeprom.html#ga99d96ebc2993699d4df327a512ee8db9">eeprom_erase_sector</a> (uint8_t sector_start_addr, uint8_t *error_ptr)</td></tr>
-<tr class="memdesc:ga99d96ebc2993699d4df327a512ee8db9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erases a sector in the EEPROM starting from a specified address.  <br /></td></tr>
-<tr class="separator:ga99d96ebc2993699d4df327a512ee8db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga562e9de4699c3fa5a8d1d5b1f94ae4a5" id="r_ga562e9de4699c3fa5a8d1d5b1f94ae4a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__eeprom.html#ga562e9de4699c3fa5a8d1d5b1f94ae4a5">eeprom_erase_sector</a>(sector_start_addr,  error_ptr)</td></tr>
+<tr class="memdesc:ga562e9de4699c3fa5a8d1d5b1f94ae4a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erases a sector in the EEPROM starting from a specified address.  <br /></td></tr>
+<tr class="separator:ga562e9de4699c3fa5a8d1d5b1f94ae4a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions and data structures related to EEPROM</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga788d9a71954050054bc2b35e49860b8f" name="ga788d9a71954050054bc2b35e49860b8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga788d9a71954050054bc2b35e49860b8f">&#9670;&#160;</a></span>eeprom_disable_iap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define eeprom_disable_iap</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                            \</div>
+<div class="line">        <span class="comment">/* Disable IAP */</span>                       \</div>
+<div class="line">        bit_clr(IAP_CONTR, CBIT7);              \</div>
+<div class="line">        IAP_CMD = 0x00;                         \</div>
+<div class="line">        IAP_TRIG = 0x00;                        \</div>
+<div class="line">        IAP_ADDRH = 0xFF;                       \</div>
+<div class="line">        IAP_ADDRL = 0xFF;                       \</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
+</div><!-- fragment -->
+<p>Disables IAP. </p>
+<p>This function disables EEPROM operation via IAP registers and clear it. </p>
+
+</div>
+</div>
+<a id="ga562e9de4699c3fa5a8d1d5b1f94ae4a5" name="ga562e9de4699c3fa5a8d1d5b1f94ae4a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga562e9de4699c3fa5a8d1d5b1f94ae4a5">&#9670;&#160;</a></span>eeprom_erase_sector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define eeprom_erase_sector</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sector_start_addr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">error_ptr&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Erases a sector in the EEPROM starting from a specified address. </p>
+<p>This function performs an erase operation on a 512 bytes sector of the EEPROM memory. The sector is identified by its starting address. The function updates the error status via the provided error pointer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sector_start_addr</td><td>uint8_t The starting address of the EEPROM sector to be erased. Must be a valid sector start address. </td></tr>
+    <tr><td class="paramname">error_ptr</td><td>Pointer to a uint8_t variable where the error status will be stored. Must not be NULL. 0 - no error, otherwise - error code. Error codes:<ul>
+<li>CMD_FAIL_ERROR - read operation failed,</li>
+<li>LOW_VOLTAGE_ERROR - low voltage error</li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function modifies EEPROM contents; ensure data integrity requirements are met before calling it. </dd></dl>
+
+</div>
+</div>
 <a id="ga0ba0e98241d4b70f05295f997c7d0344" name="ga0ba0e98241d4b70f05295f997c7d0344"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga0ba0e98241d4b70f05295f997c7d0344">&#9670;&#160;</a></span>eeprom_read_byte</h2>
 
@@ -184,47 +257,23 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ga99d96ebc2993699d4df327a512ee8db9" name="ga99d96ebc2993699d4df327a512ee8db9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga99d96ebc2993699d4df327a512ee8db9">&#9670;&#160;</a></span>eeprom_erase_sector()</h2>
+<a id="gad66214463ff06635ed0ffbddeb1928aa" name="gad66214463ff06635ed0ffbddeb1928aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad66214463ff06635ed0ffbddeb1928aa">&#9670;&#160;</a></span>get_eeprom_last_operation_result</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void eeprom_erase_sector </td>
+          <td class="memname">#define get_eeprom_last_operation_result</td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>sector_start_addr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>error_ptr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(get_bit(IAP_CONTR, <a class="el" href="group__eeprom.html#gafd52c5b88764693bd5793607770b9e3a">CMD_FAIL_BIT</a>) ? <a class="el" href="group__eeprom.html#ga1be701873bbdcdd0be6c6694f9ce8810">CMD_FAIL_ERROR</a> : <a class="el" href="group__eeprom.html#gaa2008c1bc36d9ef42571a6ec52516d02">CMD_SUCCESS</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Erases a sector in the EEPROM starting from a specified address. </p>
-<p>This function performs an erase operation on a 512 bytes sector of the EEPROM memory. The sector is identified by its starting address. The function updates the error status via the provided error pointer.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">sector_start_addr</td><td>uint8_t The starting address of the EEPROM sector to be erased. Must be a valid sector start address. </td></tr>
-    <tr><td class="paramname">error_ptr</td><td>Pointer to a uint8_t variable where the error status will be stored. Must not be NULL. 0 - no error, otherwise - error code. Error codes:<ul>
-<li>CMD_FAIL_ERROR - read operation failed,</li>
-<li>LOW_VOLTAGE_ERROR - low voltage error</li>
-</ul>
-</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>This function modifies EEPROM contents; ensure data integrity requirements are met before calling it. </dd></dl>
+<p>get last operation result </p>
+<p>Last operation result is stored in IAP_CONTR register and dont changed on low voltage error </p>
 
 </div>
 </div>

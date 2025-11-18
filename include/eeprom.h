@@ -79,6 +79,34 @@
 #define ERROR_VALUE 0xFF
 
 /**
+ * @brief Disables IAP
+ * 
+ * @details This function disables EEPROM operation via IAP
+ * registers and clear it.
+ * 
+ * @ingroup eeprom
+ */
+#define eeprom_disable_iap()                    \
+do {                                            \
+        /* Disable IAP */                       \
+        bit_clr(IAP_CONTR, CBIT7);              \
+        IAP_CMD = 0x00;                         \
+        IAP_TRIG = 0x00;                        \
+        IAP_ADDRH = 0xFF;                       \
+        IAP_ADDRL = 0xFF;                       \
+} while(0)
+
+/**
+ * @brief get last operation result
+ * 
+ * @details Last operation result is stored in IAP_CONTR register and dont 
+ * changed on low voltage error
+ * 
+ * @ingroup eeprom
+ */
+#define get_eeprom_last_operation_result() (get_bit(IAP_CONTR, CMD_FAIL_BIT) ? CMD_FAIL_ERROR : CMD_SUCCESS)    
+
+/**
  * @brief Reads single byte from the EEPROM at the given address
  * 
  * This function performs a read operation from the EEPROM using the provided
@@ -128,12 +156,11 @@ do {                                                                    \
         NOP();                                                          \
                                                                         \
         /* Read error status from IAP */                                \
-        *error_ptr = get_bit(IAP_CONTR, CMD_FAIL_BIT);                  \
+        *error_ptr = get_eeprom_last_operation_result();                \
         /* if no operation error read data from IAP otherwise value is ERROR_VALUE */ \
-        *value_ptr = *error_ptr != CMD_SUCCESS ? ERROR_VALUE : IAP_DATA;\
+        *value_ptr = (*error_ptr) ? ERROR_VALUE : IAP_DATA;             \
                                                                         \
-        /* Disable IAP */                                               \
-        bit_clr(IAP_CONTR, CBIT7);                                      \
+        eeprom_disable_iap();                                           \
     }                                                                   \
 } while (0)
 
@@ -157,9 +184,40 @@ do {                                                                    \
  * 
  * @ingroup eeprom
  */
-void eeprom_erase_sector(
-    uint8_t sector_start_addr, 
-    uint8_t *error_ptr
-);
+#define eeprom_erase_sector(sector_start_addr, error_ptr)       \
+do {                                                            \
+    if (power_low_voltage_flag_get())                           \
+    {                                                           \
+        *error_ptr = LOW_VOLTAGE_ERROR;                         \
+    }                                                           \
+    else                                                        \
+    {                                                           \
+        /* Set address */                                       \
+        IAP_ADDRH = sector_start_addr;                          \
+        IAP_ADDRL = 0x00;                                       \
+                                                                \
+        /* Set erase operation waiting */                       \
+        IAP_CONTR &= ~0x07;                                     \
+        IAP_CONTR |= 0x03;                                      \
+                                                                \
+        /* Enable IAP */                                        \
+        bit_set(IAP_CONTR, SBIT7);                              \
+                                                                \
+        /* Set erase operation */                               \
+        IAP_CMD = ERASE_OP;                                     \
+                                                                \
+        /* Set start operation sequence */                      \
+        IAP_TRIG = OP_TRIGGER_SEQ_FIRST_BYTE;                   \
+        IAP_TRIG = OP_TRIGGER_SEQ_SECOND_BYTE;                  \
+                                                                \
+        /* Wait for operation to complete */                    \
+        NOP();                                                  \
+                                                                \
+        /* Read error status from IAP */                        \
+        *error_ptr = get_eeprom_last_operation_result();        \
+                                                                \
+        eeprom_disable_iap();                                   \
+    }                                                           \
+} while(0)
 
 #endif
