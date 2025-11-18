@@ -154,6 +154,8 @@ do {                                                                    \
  *
  * @warning This function modifies EEPROM contents; ensure data integrity requirements
  *          are met before calling it.
+ * 
+ * @ingroup eeprom
  */
 void eeprom_erase_sector(
     uint8_t sector_start_addr, 

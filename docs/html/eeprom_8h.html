@@ -158,54 +158,10 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a99d96ebc2993699d4df327a512ee8db9" id="r_a99d96ebc2993699d4df327a512ee8db9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eeprom_8h.html#a99d96ebc2993699d4df327a512ee8db9">eeprom_erase_sector</a> (uint8_t sector_start_addr, uint8_t *error_ptr)</td></tr>
-<tr class="memdesc:a99d96ebc2993699d4df327a512ee8db9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erases a sector in the EEPROM starting from a specified address.  <br /></td></tr>
-<tr class="separator:a99d96ebc2993699d4df327a512ee8db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99d96ebc2993699d4df327a512ee8db9" id="r_ga99d96ebc2993699d4df327a512ee8db9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__eeprom.html#ga99d96ebc2993699d4df327a512ee8db9">eeprom_erase_sector</a> (uint8_t sector_start_addr, uint8_t *error_ptr)</td></tr>
+<tr class="memdesc:ga99d96ebc2993699d4df327a512ee8db9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erases a sector in the EEPROM starting from a specified address.  <br /></td></tr>
+<tr class="separator:ga99d96ebc2993699d4df327a512ee8db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a99d96ebc2993699d4df327a512ee8db9" name="a99d96ebc2993699d4df327a512ee8db9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99d96ebc2993699d4df327a512ee8db9">&#9670;&#160;</a></span>eeprom_erase_sector()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void eeprom_erase_sector </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>sector_start_addr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>error_ptr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Erases a sector in the EEPROM starting from a specified address. </p>
-<p>This function performs an erase operation on a 512 bytes sector of the EEPROM memory. The sector is identified by its starting address. The function updates the error status via the provided error pointer.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">sector_start_addr</td><td>uint8_t The starting address of the EEPROM sector to be erased. Must be a valid sector start address. </td></tr>
-    <tr><td class="paramname">error_ptr</td><td>Pointer to a uint8_t variable where the error status will be stored. Must not be NULL. 0 - no error, otherwise - error code. Error codes:<ul>
-<li>CMD_FAIL_ERROR - read operation failed,</li>
-<li>LOW_VOLTAGE_ERROR - low voltage error</li>
-</ul>
-</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>This function modifies EEPROM contents; ensure data integrity requirements are met before calling it. </dd></dl>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
