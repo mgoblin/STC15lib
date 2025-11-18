@@ -23,6 +23,11 @@
  */
 #define REAP_OP 0x01
 
+/**
+ * @brief Erase operation
+ * 
+ * @ingroup eeprom
+ */
 #define ERASE_OP 0x03
 
 /**
@@ -81,8 +86,8 @@
  * in the location pointed to by 'value_ptr'. 
  * For reading from the EEPROM IAP registers are used.
  *
- * @param addr_high High byte of the EEPROM address to read from.
- * @param addr_low  Low byte of the EEPROM address to read from.
+ * @param addr_high uint8_t High byte of the EEPROM address to read from.
+ * @param addr_low  uint8_t Low byte of the EEPROM address to read from.
  * @param value_ptr Pointer to a uint8_t variable where the read value will be stored.
  *                  Must not be NULL. If read operation fails, the value is set to ERROR_VALUE.
  * @param error_ptr Pointer to a uint8_t variable where the error status will be stored.
@@ -132,6 +137,24 @@ do {                                                                    \
     }                                                                   \
 } while (0)
 
+/**
+ * @brief Erases a sector in the EEPROM starting from a specified address.
+ *
+ * This function performs an erase operation on a 512 bytes sector of the EEPROM memory.
+ * The sector is identified by its starting address. 
+ * The function updates the error status via the provided error pointer.
+ *
+ * @param sector_start_addr uint8_t The starting address of the EEPROM sector to be erased.
+ *                          Must be a valid sector start address.
+ * @param error_ptr         Pointer to a uint8_t variable where the error status will be stored.
+ *                          Must not be NULL. 0 - no error, otherwise - error code.
+ *                          Error codes: 
+ *                              - CMD_FAIL_ERROR - read operation failed, 
+ *                              - LOW_VOLTAGE_ERROR - low voltage error
+ *
+ * @warning This function modifies EEPROM contents; ensure data integrity requirements
+ *          are met before calling it.
+ */
 void eeprom_erase_sector(
     uint8_t sector_start_addr, 
     uint8_t *error_ptr

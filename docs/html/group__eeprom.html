@@ -81,6 +81,10 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>REAP_OP</b>&#160;&#160;&#160;0x01</td></tr>
 <tr class="memdesc:ga7abc3dd1b9abfbe87a4ebe682ee0a7fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read operation. <br /></td></tr>
 <tr class="separator:ga7abc3dd1b9abfbe87a4ebe682ee0a7fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4a387682bbda598022c3e89444092d55" id="r_ga4a387682bbda598022c3e89444092d55"><td class="memItemLeft" align="right" valign="top"><a id="ga4a387682bbda598022c3e89444092d55" name="ga4a387682bbda598022c3e89444092d55"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ERASE_OP</b>&#160;&#160;&#160;0x03</td></tr>
+<tr class="memdesc:ga4a387682bbda598022c3e89444092d55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase operation. <br /></td></tr>
+<tr class="separator:ga4a387682bbda598022c3e89444092d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9f1718d5accb3325f94e33b543be7992" id="r_ga9f1718d5accb3325f94e33b543be7992"><td class="memItemLeft" align="right" valign="top"><a id="ga9f1718d5accb3325f94e33b543be7992" name="ga9f1718d5accb3325f94e33b543be7992"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>OP_TRIGGER_SEQ_FIRST_BYTE</b>&#160;&#160;&#160;0x5A</td></tr>
 <tr class="memdesc:ga9f1718d5accb3325f94e33b543be7992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read operation trigger sequence first byte. <br /></td></tr>
@@ -159,8 +163,8 @@ Macros</h2></td></tr>
 <p>This function performs a read operation from the EEPROM using the provided high and low bytes of the address. The data read from the EEPROM is stored in the location pointed to by 'value_ptr'. For reading from the EEPROM IAP registers are used.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">addr_high</td><td>High byte of the EEPROM address to read from. </td></tr>
-    <tr><td class="paramname">addr_low</td><td>Low byte of the EEPROM address to read from. </td></tr>
+    <tr><td class="paramname">addr_high</td><td>uint8_t High byte of the EEPROM address to read from. </td></tr>
+    <tr><td class="paramname">addr_low</td><td>uint8_t Low byte of the EEPROM address to read from. </td></tr>
     <tr><td class="paramname">value_ptr</td><td>Pointer to a uint8_t variable where the read value will be stored. Must not be NULL. If read operation fails, the value is set to ERROR_VALUE. </td></tr>
     <tr><td class="paramname">error_ptr</td><td>Pointer to a uint8_t variable where the error status will be stored. Must not be NULL. 0 - no error, otherwise - error code. Error codes:<ul>
 <li>CMD_FAIL_ERROR - read operation failed,</li>

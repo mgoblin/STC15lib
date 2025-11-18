@@ -3,8 +3,6 @@
 #include <uart.h>
 #include <stdio.h>
 
-#include <delay.h>
-
 #define SECTOR_START_ADDR 0x00
 
 void eeprom_erase_sector(uint8_t sector_start_addr, uint8_t* error_ptr)
@@ -36,10 +34,9 @@ void eeprom_erase_sector(uint8_t sector_start_addr, uint8_t* error_ptr)
         /* Wait for operation to complete */
         NOP();
 
-        delay_ms(1000);
-
         /* Read error status from IAP */
-        *error_ptr = get_bit(IAP_CONTR, CMD_FAIL_BIT);
+        *error_ptr = get_bit(IAP_CONTR, CMD_FAIL_BIT) ? 
+                        CMD_FAIL_ERROR : CMD_SUCCESS;
 
         /* Disable IAP */
         bit_clr(IAP_CONTR, CBIT7);

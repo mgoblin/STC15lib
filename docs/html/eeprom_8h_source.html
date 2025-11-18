@@ -93,68 +93,69 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="group__eeprom.html#ga7abc3dd1b9abfbe87a4ebe682ee0a7fa">   24</a></span><span class="preprocessor">#define REAP_OP 0x01</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define ERASE_OP 0x03</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="group__eeprom.html#ga9f1718d5accb3325f94e33b543be7992">   33</a></span><span class="preprocessor">#define OP_TRIGGER_SEQ_FIRST_BYTE 0x5A</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="group__eeprom.html#gae8b8a0710cd80347b3ba4b194022d22f">   39</a></span><span class="preprocessor">#define OP_TRIGGER_SEQ_SECOND_BYTE 0xA5</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="group__eeprom.html#gafd52c5b88764693bd5793607770b9e3a">   46</a></span><span class="preprocessor">#define CMD_FAIL_BIT 4</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="group__eeprom.html#gaa2008c1bc36d9ef42571a6ec52516d02">   53</a></span><span class="preprocessor">#define CMD_SUCCESS 0</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="group__eeprom.html#ga1be701873bbdcdd0be6c6694f9ce8810">   60</a></span><span class="preprocessor">#define CMD_FAIL_ERROR 1</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="group__eeprom.html#ga7b162d8b59db68ebc84d1371e373c44e">   67</a></span><span class="preprocessor">#define LOW_VOLTAGE_ERROR 2</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="group__eeprom.html#ga48e49bfe7b106d9356d27403982bcf7c">   74</a></span><span class="preprocessor">#define ERROR_VALUE 0xFF</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="foldopen" id="foldopen00096" data-start="" data-end="">
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="group__eeprom.html#ga0ba0e98241d4b70f05295f997c7d0344">   96</a></span><span class="preprocessor">#define eeprom_read_byte(addr_high, addr_low, value_ptr, error_ptr)     \</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">do {                                                                    \</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">    if (power_low_voltage_flag_get())                                   \</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">    {                                                                   \</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">        *error_ptr = LOW_VOLTAGE_ERROR;                                 \</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">        *value_ptr = ERROR_VALUE;                                       \</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">    }                                                                   \</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">    else                                                                \</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="group__eeprom.html#ga4a387682bbda598022c3e89444092d55">   31</a></span><span class="preprocessor">#define ERASE_OP 0x03</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="group__eeprom.html#ga9f1718d5accb3325f94e33b543be7992">   38</a></span><span class="preprocessor">#define OP_TRIGGER_SEQ_FIRST_BYTE 0x5A</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="group__eeprom.html#gae8b8a0710cd80347b3ba4b194022d22f">   44</a></span><span class="preprocessor">#define OP_TRIGGER_SEQ_SECOND_BYTE 0xA5</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="group__eeprom.html#gafd52c5b88764693bd5793607770b9e3a">   51</a></span><span class="preprocessor">#define CMD_FAIL_BIT 4</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="group__eeprom.html#gaa2008c1bc36d9ef42571a6ec52516d02">   58</a></span><span class="preprocessor">#define CMD_SUCCESS 0</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="group__eeprom.html#ga1be701873bbdcdd0be6c6694f9ce8810">   65</a></span><span class="preprocessor">#define CMD_FAIL_ERROR 1</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="group__eeprom.html#ga7b162d8b59db68ebc84d1371e373c44e">   72</a></span><span class="preprocessor">#define LOW_VOLTAGE_ERROR 2</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="group__eeprom.html#ga48e49bfe7b106d9356d27403982bcf7c">   79</a></span><span class="preprocessor">#define ERROR_VALUE 0xFF</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="foldopen" id="foldopen00101" data-start="" data-end="">
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="group__eeprom.html#ga0ba0e98241d4b70f05295f997c7d0344">  101</a></span><span class="preprocessor">#define eeprom_read_byte(addr_high, addr_low, value_ptr, error_ptr)     \</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">do {                                                                    \</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">    if (power_low_voltage_flag_get())                                   \</span></div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">    {                                                                   \</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">        </span><span class="comment">/* Enable IAP */</span><span class="preprocessor">                                                \</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">        bit_set(IAP_CONTR, SBIT7);                                      \</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">        </span><span class="comment">/* Set IAP WT2 WT1 WT0 to 011 for eeprom read waiting */</span><span class="preprocessor">        \</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">        IAP_CONTR &amp;= ~0x07;                                             \</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">        IAP_CONTR |= 0x03;                                              \</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">                                                                        \</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">        </span><span class="comment">/* Set address */</span><span class="preprocessor">                                               \</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">        IAP_ADDRH = (addr_high);                                        \</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">        IAP_ADDRL = (addr_low);                                         \</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">                                                                        \</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">        </span><span class="comment">/* Set read operation */</span><span class="preprocessor">                                        \</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">        IAP_CMD = REAP_OP;                                              \</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">                                                                        \</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">        </span><span class="comment">/* Set start operation sequence */</span><span class="preprocessor">                              \</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">        IAP_TRIG = OP_TRIGGER_SEQ_FIRST_BYTE;                           \</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">        IAP_TRIG = OP_TRIGGER_SEQ_SECOND_BYTE;                          \</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">                                                                        \</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="preprocessor">        </span><span class="comment">/* Wait for operation to complete */</span><span class="preprocessor">                            \</span></div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">        NOP();                                                          \</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">                                                                        \</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">        </span><span class="comment">/* Read error status from IAP */</span><span class="preprocessor">                                \</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">        *error_ptr = get_bit(IAP_CONTR, CMD_FAIL_BIT);                  \</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">        </span><span class="comment">/* if no operation error read data from IAP otherwise value is ERROR_VALUE */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">        *value_ptr = *error_ptr != CMD_SUCCESS ? ERROR_VALUE : IAP_DATA;\</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">        *error_ptr = LOW_VOLTAGE_ERROR;                                 \</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">        *value_ptr = ERROR_VALUE;                                       \</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">    }                                                                   \</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">    else                                                                \</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">    {                                                                   \</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">        </span><span class="comment">/* Enable IAP */</span><span class="preprocessor">                                                \</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">        bit_set(IAP_CONTR, SBIT7);                                      \</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">        </span><span class="comment">/* Set IAP WT2 WT1 WT0 to 011 for eeprom read waiting */</span><span class="preprocessor">        \</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">        IAP_CONTR &amp;= ~0x07;                                             \</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">        IAP_CONTR |= 0x03;                                              \</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">                                                                        \</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">        </span><span class="comment">/* Set address */</span><span class="preprocessor">                                               \</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">        IAP_ADDRH = (addr_high);                                        \</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">        IAP_ADDRL = (addr_low);                                         \</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">                                                                        \</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">        </span><span class="comment">/* Set read operation */</span><span class="preprocessor">                                        \</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">        IAP_CMD = REAP_OP;                                              \</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="preprocessor">                                                                        \</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">        </span><span class="comment">/* Set start operation sequence */</span><span class="preprocessor">                              \</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">        IAP_TRIG = OP_TRIGGER_SEQ_FIRST_BYTE;                           \</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">        IAP_TRIG = OP_TRIGGER_SEQ_SECOND_BYTE;                          \</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">                                                                        \</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">        </span><span class="comment">/* Wait for operation to complete */</span><span class="preprocessor">                            \</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">        NOP();                                                          \</span></div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">                                                                        \</span></div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">        </span><span class="comment">/* Disable IAP */</span><span class="preprocessor">                                               \</span></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="preprocessor">        bit_clr(IAP_CONTR, CBIT7);                                      \</span></div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">    }                                                                   \</span></div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">} while (0)</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">        </span><span class="comment">/* Read error status from IAP */</span><span class="preprocessor">                                \</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="preprocessor">        *error_ptr = get_bit(IAP_CONTR, CMD_FAIL_BIT);                  \</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">        </span><span class="comment">/* if no operation error read data from IAP otherwise value is ERROR_VALUE */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">        *value_ptr = *error_ptr != CMD_SUCCESS ? ERROR_VALUE : IAP_DATA;\</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="preprocessor">                                                                        \</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="preprocessor">        </span><span class="comment">/* Disable IAP */</span><span class="preprocessor">                                               \</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="preprocessor">        bit_clr(IAP_CONTR, CBIT7);                                      \</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="preprocessor">    }                                                                   \</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="preprocessor">} while (0)</span></div>
 </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="keywordtype">void</span> eeprom_erase_sector(</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    uint8_t sector_start_addr, </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    uint8_t *error_ptr</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>);</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="keywordtype">void</span> <a class="code hl_function" href="eeprom_8h.html#a99d96ebc2993699d4df327a512ee8db9">eeprom_erase_sector</a>(</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    uint8_t sector_start_addr, </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    uint8_t *error_ptr</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aeeprom_8h_html_a99d96ebc2993699d4df327a512ee8db9"><div class="ttname"><a href="eeprom_8h.html#a99d96ebc2993699d4df327a512ee8db9">eeprom_erase_sector</a></div><div class="ttdeci">void eeprom_erase_sector(uint8_t sector_start_addr, uint8_t *error_ptr)</div><div class="ttdoc">Erases a sector in the EEPROM starting from a specified address.</div><div class="ttdef"><b>Definition</b> eeprom.c:8</div></div>
 <div class="ttc" id="apower__management_8h_html"><div class="ttname"><a href="power__management_8h.html">power_management.h</a></div></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
