@@ -23,6 +23,8 @@ void main(void)
 {
     uart1_init(9600);
 
+    power_low_voltage_flag_clear();
+
     while (1)
     {
         // Read byte from EEPROM at addresses 0x00000-0x0002 via IAP

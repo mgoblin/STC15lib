@@ -23,18 +23,20 @@
  */
 #define REAP_OP 0x01
 
+#define ERASE_OP 0x03
+
 /**
  * @brief Read operation trigger sequence first byte
  * 
  * @ingroup eeprom
  */
-#define READ_OP_TRIGGER_SEQ_FIRST_BYTE 0x5A
+#define OP_TRIGGER_SEQ_FIRST_BYTE 0x5A
 /**
  * @brief Read operation trigger sequence second byte
  * 
  * @ingroup eeprom
  */
-#define READ_OP_TRIGGER_SEQ_SECOND_BYTE 0xA5
+#define OP_TRIGGER_SEQ_SECOND_BYTE 0xA5
 
 /**
  * @brief Command fail error code
@@ -93,11 +95,10 @@
  */
 #define eeprom_read_byte(addr_high, addr_low, value_ptr, error_ptr)     \
 do {                                                                    \
-    if (power_low_voltage_flag_get())                                  \
+    if (power_low_voltage_flag_get())                                   \
     {                                                                   \
         *error_ptr = LOW_VOLTAGE_ERROR;                                 \
         *value_ptr = ERROR_VALUE;                                       \
-        power_low_voltage_flag_clear();                                 \
     }                                                                   \
     else                                                                \
     {                                                                   \
@@ -114,9 +115,12 @@ do {                                                                    \
         /* Set read operation */                                        \
         IAP_CMD = REAP_OP;                                              \
                                                                         \
-        /* Set start read sequence */                                   \
-        IAP_TRIG = READ_OP_TRIGGER_SEQ_FIRST_BYTE;                      \
-        IAP_TRIG = READ_OP_TRIGGER_SEQ_SECOND_BYTE;                     \
+        /* Set start operation sequence */                              \
+        IAP_TRIG = OP_TRIGGER_SEQ_FIRST_BYTE;                           \
+        IAP_TRIG = OP_TRIGGER_SEQ_SECOND_BYTE;                          \
+                                                                        \
+        /* Wait for operation to complete */                            \
+        NOP();                                                          \
                                                                         \
         /* Read error status from IAP */                                \
         *error_ptr = get_bit(IAP_CONTR, CMD_FAIL_BIT);                  \
@@ -128,6 +132,9 @@ do {                                                                    \
     }                                                                   \
 } while (0)
 
-void eeprom_erase_sector(uint8_t addr_high, uint8_t addr_low);
+void eeprom_erase_sector(
+    uint8_t sector_start_addr, 
+    uint8_t *error_ptr
+);
 
 #endif

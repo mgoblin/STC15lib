@@ -112,7 +112,7 @@ static volatile __idata uint8_t * const wirc_l_ptr = (__idata uint8_t *) WIRC_L_
  * 
  * @ingroup power_management
  */
-#define power_low_voltage_flag_get() (test_if_bit_set(PCON, SBIT5))
+#define power_low_voltage_flag_get() (get_bit(PCON, 5))
 
 /**
  * @brief Clears the low voltage detection flag in the PCON register.
