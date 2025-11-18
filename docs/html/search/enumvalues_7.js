@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['t1_0',['T1',['../group__timer__common.html#ggaf044d39b4f1cbe40ca04353b2852a21da623238751deb7764bdebf4799fe30f07',1,'timer_structs.h']]],
-  ['t12_1',['T12',['../group__timer__common.html#ggaf044d39b4f1cbe40ca04353b2852a21da5c3a2baea537d57bba309aa892a7926c',1,'timer_structs.h']]]
+  ['p1_5f6_0',['P1_6',['../group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d',1,'frequency.h']]],
+  ['p5_5f4_1',['P5_4',['../group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050',1,'frequency.h']]]
 ];

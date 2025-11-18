@@ -9,26 +9,41 @@
  * @author Michael Golovanov
  */
 
-#include <assert.h>
 #include <stdint.h>
 
 #include <sys.h>
 #include <bits.h>
 #include <power_management.h>
 
-/**
- * @brief Read operation
- * 
- * @ingroup eeprom
- */
-#define REAP_OP 0x01
 
 /**
- * @brief Erase operation
+ * @brief EEPROM operation types
  * 
  * @ingroup eeprom
  */
-#define ERASE_OP 0x03
+enum eeprom_operation_t
+{
+    /** @brief Read operation */
+    READ_OP = 0x01,
+    /** @brief Erase operation */
+    ERASE_OP = 0x03,
+};
+
+/**
+ * @brief EEPROM operation status
+ * 
+ * @ingroup eeprom
+ */
+enum eeprom_operation_status_t
+{
+    /** @brief Operation success */
+    CMD_SUCCESS = 0,
+    /** @brief Operation fail */
+    CMD_FAIL_ERROR = 1,
+    /** @brief Low voltage error */
+    LOW_VOLTAGE_ERROR = 2,
+};
+
 
 /**
  * @brief Read operation trigger sequence first byte
@@ -49,27 +64,6 @@
  * @ingroup eeprom
  */
 #define CMD_FAIL_BIT 4
-
-/**
- * @brief Return codes. Operation success
- * 
- * @ingroup eeprom
- */
-#define CMD_SUCCESS 0
-
-/**
- * @brief Return codes. Operation fail
- * 
- * @ingroup eeprom
- */
-#define CMD_FAIL_ERROR 1
-
-/**
- * @brief Return codes. Low voltage error
- * 
- * @ingroup eeprom
- */
-#define LOW_VOLTAGE_ERROR 2
 
 /**
  * @brief Error value
@@ -146,7 +140,7 @@ do {                                                                    \
         IAP_ADDRL = (addr_low);                                         \
                                                                         \
         /* Set read operation */                                        \
-        IAP_CMD = REAP_OP;                                              \
+        IAP_CMD = READ_OP;                                              \
                                                                         \
         /* Set start operation sequence */                              \
         IAP_TRIG = OP_TRIGGER_SEQ_FIRST_BYTE;                           \
@@ -193,7 +187,7 @@ do {                                                            \
     else                                                        \
     {                                                           \
         /* Set address */                                       \
-        IAP_ADDRH = sector_start_addr;                          \
+        IAP_ADDRH = (sector_start_addr);                        \
         IAP_ADDRL = 0x00;                                       \
                                                                 \
         /* Set erase operation waiting */                       \

@@ -1,22 +1,20 @@
 <map id="include/eeprom.h" name="include/eeprom.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="101,5,235,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,80,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,33,76,74,74,69,147,28"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="82,152,153,177"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="166,32,128,140,123,138,161,30"/>
-<area shape="rect" id="Node000004" href="$sys_8h.html" title=" " alt="" coords="177,152,233,177"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="174,30,202,138,196,139,168,32"/>
-<area shape="rect" id="Node000007" href="$bits_8h_source.html" title=" " alt="" coords="372,152,431,177"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="236,17,275,22,315,33,354,50,387,77,397,91,402,107,406,138,401,139,397,108,392,93,383,80,351,55,313,38,274,28,235,22"/>
-<area shape="rect" id="Node000008" href="$power__management_8h.html" title=" " alt="" coords="205,79,373,104"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="189,28,259,69,257,74,186,33"/>
-<area shape="rect" id="Node000005" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="156,225,255,251"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="208,178,208,212,203,212,203,178"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="160,299,251,324"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="208,251,208,285,203,285,203,251"/>
-<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="263,106,159,149,157,144,261,102"/>
-<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="278,106,231,145,228,141,274,102"/>
-<area shape="poly" id="edge9_Node000008_Node000007" title=" " alt="" coords="309,102,373,142,370,147,306,106"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="257,152,340,177"/>
-<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="294,104,298,138,293,139,288,105"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="84,5,219,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,152,76,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,33,60,142,56,139,140,29"/>
+<area shape="rect" id="Node000003" href="$sys_8h.html" title=" " alt="" coords="101,152,157,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="144,32,130,53,119,79,117,109,123,138,117,139,112,110,114,78,126,51,140,29"/>
+<area shape="rect" id="Node000006" href="$bits_8h_source.html" title=" " alt="" coords="295,152,354,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="220,27,268,45,291,59,311,77,325,107,329,137,323,138,320,108,307,80,288,63,266,49,218,32"/>
+<area shape="rect" id="Node000007" href="$power__management_8h.html" title=" " alt="" coords="129,79,297,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="163,29,196,66,192,70,159,33"/>
+<area shape="rect" id="Node000004" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="79,225,178,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="131,178,131,212,126,212,126,178"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="83,299,174,324"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="131,251,131,285,126,285,126,251"/>
+<area shape="poly" id="edge9_Node000007_Node000002" title=" " alt="" coords="186,106,82,149,80,144,184,102"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="201,106,155,145,151,141,197,102"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="232,102,296,142,293,147,229,106"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="181,152,263,177"/>
+<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="217,104,221,138,216,139,212,105"/>
 </map>

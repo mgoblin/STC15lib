@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['high_0',['HIGH',['../group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893',1,'interrupt.h']]]
+  ['cmd_5ffail_5ferror_0',['CMD_FAIL_ERROR',['../group__eeprom.html#gga7b2b5c6eec6838c542ee5ce1e1aa97fca64d72a6d5e7e1f8ebd2afae5f72b080e',1,'eeprom.h']]],
+  ['cmd_5fsuccess_1',['CMD_SUCCESS',['../group__eeprom.html#gga7b2b5c6eec6838c542ee5ce1e1aa97fca0a22fcf0d061f9b1473876e43d12c33c',1,'eeprom.h']]]
 ];

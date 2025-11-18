@@ -1,7 +1,7 @@
 var searchData=
 [
   ['raising_5for_5ffalling_5fedge_0',['RAISING_OR_FALLING_EDGE',['../group__interrupts.html#gga97fc91f85abe6139a7f24fbdff35c7e7ad791487f941a47c772442d5252a819bc',1,'interrupt.h']]],
-  ['reap_5fop_1',['REAP_OP',['../group__eeprom.html#ga7abc3dd1b9abfbe87a4ebe682ee0a7fa',1,'eeprom.h']]],
+  ['read_5fop_1',['READ_OP',['../group__eeprom.html#gga02a1ca0f05ee0d6aa0f1b6c2fc51af94a87a8b6de09985a6be2ba5a88cd8ee77e',1,'eeprom.h']]],
   ['receive_20functions_2',['receive functions',['../group__uart1__8bit__shared.html',1,'UART1 8-bit send/receive functions'],['../group__uart1__9bit__shared.html',1,'UART1 9bit, 8-bit with parity, 8-bit with two stop bits send/receive functions']]],
   ['references_3',['References',['../index.html#autotoc_md8',1,'']]],
   ['reset_4',['reset',['../group__mcu__reset.html#gadff1ae9368523be49ce8ef497d4ca902',1,'reset:&#160;reset.h'],['../group__mcu__reset.html',1,'Reset']]],

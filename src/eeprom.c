@@ -6,13 +6,13 @@
 #define SECTOR_START_ADDR 0x00
 
 
-volatile uint8_t eeprom_operation_error;
-
 void main(void)
 {
     uart1_init(9600);
 
     power_low_voltage_flag_clear();
+    
+    volatile uint8_t eeprom_operation_error;
 
     while (1)
     {
