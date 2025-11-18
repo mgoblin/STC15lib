@@ -156,11 +156,11 @@
 * Build library with cmake (but not examples)
 * Fix delay_ms. On small ms delays it works correctly, but on seconds delay it doubled.
 * Rename pin.h to gpio.h
+* Power management low voltage flag routines implemented
 * Read byte from EEPROM via IAP registers implemented
-* Power management low voltage flag routines immplemented
+* Erase EEPROM page routine implemented
+* TODO Write byte to EEPROM 
 * TODO Read byte from EEPROM via MOVC command implemented
-* TODO Write byte to EEPROM
-* TODO Erase EEPROM segment 
 
 Next releases todo
 * TODO build examples using cmake

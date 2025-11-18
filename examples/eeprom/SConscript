@@ -3,6 +3,15 @@ Import("env")
 env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
 
 env.Default (
-    env.Program('eeprom_read_byte_example', 
-    ['eeprom_read_byte_example.c', 'uart.c'])
+    env.Program(
+        'eeprom_read_byte_example', 
+        ['eeprom_read_byte_example.c', 'uart.c']
+    ),
+
+    env.Program(
+        'eeprom_erase_page_example', 
+        ['eeprom_erase_page_example.c', 'uart.c']
+    ),
+
+    
 )

@@ -178,7 +178,7 @@ do {                                                                    \
  * 
  * @ingroup eeprom
  */
-#define eeprom_erase_sector(sector_start_addr, error_ptr)       \
+#define eeprom_erase_page(sector_start_addr, error_ptr)         \
 do {                                                            \
     if (power_low_voltage_flag_get())                           \
     {                                                           \

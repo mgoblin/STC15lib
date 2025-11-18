@@ -3,7 +3,7 @@ var searchData=
   ['eeprom_0',['EEPROM',['../group__eeprom.html',1,'']]],
   ['eeprom_2eh_1',['eeprom.h',['../eeprom_8h.html',1,'']]],
   ['eeprom_5fdisable_5fiap_2',['eeprom_disable_iap',['../group__eeprom.html#ga788d9a71954050054bc2b35e49860b8f',1,'eeprom.h']]],
-  ['eeprom_5ferase_5fsector_3',['eeprom_erase_sector',['../group__eeprom.html#ga562e9de4699c3fa5a8d1d5b1f94ae4a5',1,'eeprom.h']]],
+  ['eeprom_5ferase_5fpage_3',['eeprom_erase_page',['../group__eeprom.html#gaff91b418fe7e6f7c8c03905d8b82123f',1,'eeprom.h']]],
   ['eeprom_5foperation_5fstatus_5ft_4',['eeprom_operation_status_t',['../group__eeprom.html#ga7b2b5c6eec6838c542ee5ce1e1aa97fc',1,'eeprom.h']]],
   ['eeprom_5foperation_5ft_5',['eeprom_operation_t',['../group__eeprom.html#ga02a1ca0f05ee0d6aa0f1b6c2fc51af94',1,'eeprom.h']]],
   ['eeprom_5fread_5fbyte_6',['eeprom_read_byte',['../group__eeprom.html#ga0ba0e98241d4b70f05295f997c7d0344',1,'eeprom.h']]],
