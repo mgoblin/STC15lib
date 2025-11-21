@@ -120,6 +120,9 @@ do {                                            \
  *                   - CMD_FAIL_ERROR - read operation failed, 
  *                   - LOW_VOLTAGE_ERROR - low voltage error
  * 
+ * @warning This function does not perform address bounds checking.
+ *          It is the caller's responsibility to ensure valid EEPROM addresses.
+ * 
  * @ingroup eeprom
  */
 #define eeprom_read_byte(addr_high, addr_low, value_ptr, error_ptr)     \
@@ -177,6 +180,9 @@ do {                                                                    \
  *
  * @warning This function modifies EEPROM contents; ensure data integrity requirements
  *          are met before calling it.
+ * 
+ * @warning This function does not perform address bounds checking.
+ *          It is the caller's responsibility to ensure valid EEPROM addresses.
  * 
  * @ingroup eeprom
  */
