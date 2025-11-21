@@ -25,6 +25,8 @@ enum eeprom_operation_t
 {
     /** @brief Read operation */
     READ_OP = 0x01,
+    /** @brief Write operation */
+    WRITE_OP = 0x02,
     /** @brief Erase operation */
     ERASE_OP = 0x03,
 };
@@ -213,5 +215,7 @@ do {                                                            \
         eeprom_disable_iap();                                   \
     }                                                           \
 } while(0)
+
+static inline void eeprom_write_byte(uint8_t addr_high, uint8_t addr_low, uint8_t value, uint8_t *error_ptr);
 
 #endif

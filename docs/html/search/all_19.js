@@ -16,5 +16,6 @@ var searchData=
   ['wirc_5fl_5faddress_13',['WIRC_L_ADDRESS',['../group__power__management.html#ga82e21440e9b642907b03b4f1d111ca7b',1,'power_management.h']]],
   ['with_20parity_208_20bit_20with_20two_20stop_20bits_20send_20receive_20functions_14',['UART1 9bit, 8-bit with parity, 8-bit with two stop bits send/receive functions',['../group__uart1__9bit__shared.html',1,'']]],
   ['with_20timer2_2012t_15',['with timer2 12t',['../group__uart1__mode1__timer2__12T.html',1,'UART1 Mode 1 with Timer2 12T'],['../group__uart1__mode3__timer2__12T.html',1,'UART1 Mode 3 with Timer2 12T']]],
-  ['with_20timer2_201t_16',['with timer2 1t',['../group__uart1__mode1__timer2__1T.html',1,'UART1 Mode 1 with Timer2 1T'],['../group__uart1__mode3__timer2__1T.html',1,'UART1 Mode 3 with Timer2 1T']]]
+  ['with_20timer2_201t_16',['with timer2 1t',['../group__uart1__mode1__timer2__1T.html',1,'UART1 Mode 1 with Timer2 1T'],['../group__uart1__mode3__timer2__1T.html',1,'UART1 Mode 3 with Timer2 1T']]],
+  ['write_5fop_17',['WRITE_OP',['../group__eeprom.html#gga02a1ca0f05ee0d6aa0f1b6c2fc51af94a673cb8cebf7f88741d345dc00cba0c3d',1,'eeprom.h']]]
 ];

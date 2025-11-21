@@ -59,7 +59,8 @@ var menudata={children:[
 {text:"n",url:"globals_eval.html#index_n"},
 {text:"o",url:"globals_eval.html#index_o"},
 {text:"p",url:"globals_eval.html#index_p"},
-{text:"r",url:"globals_eval.html#index_r"}]},
+{text:"r",url:"globals_eval.html#index_r"},
+{text:"w",url:"globals_eval.html#index_w"}]},
 {text:"Macros",url:"globals_defs.html",children:[
 {text:"c",url:"globals_defs.html#index_c"},
 {text:"d",url:"globals_defs_d.html#index_d"},
