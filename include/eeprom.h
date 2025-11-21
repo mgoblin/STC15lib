@@ -243,6 +243,6 @@ do {                                                            \
  * 
  * @ingroup eeprom
  */
-static inline void eeprom_write_byte(uint8_t addr_high, uint8_t addr_low, uint8_t value, uint8_t *error_ptr);
+void eeprom_write_byte(uint8_t addr_high, uint8_t addr_low, uint8_t value, uint8_t *error_ptr);
 
 #endif

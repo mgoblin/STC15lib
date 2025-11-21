@@ -8,7 +8,7 @@
 #define ADDR_H 0x00
 #define ADDR_L 0x00
 
-static inline void eeprom_write_byte(uint8_t addr_high, uint8_t addr_low, uint8_t value, uint8_t *error_ptr)
+void eeprom_write_byte(uint8_t addr_high, uint8_t addr_low, uint8_t value, uint8_t *error_ptr)
 {
     if (power_low_voltage_flag_get())
     {
