@@ -160,9 +160,10 @@
 * Read byte from EEPROM via IAP registers implemented
 * Erase EEPROM page routine implemented
 * TODO Write byte to EEPROM 
-* TODO Read byte from EEPROM via MOVC command implemented
 
 Next releases todo
+* TODO Read byte from EEPROM via MOVC command implemented
+* TODO Refactor EEPROM routines for the compiled code reduce. Extract common code into routines. May be static inline functions. 
 * TODO build examples using cmake
 * TODO UART1 support frame error
 * TODO UART1 Automatic address recognition support
