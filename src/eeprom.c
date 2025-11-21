@@ -59,19 +59,23 @@ void main(void)
         eeprom_erase_page(ADDR_H, &error);
         printf_tiny("Erase page %x and status %x\r\n", ADDR_H, error);
         
-        eeprom_write_byte(ADDR_H, ADDR_L, 0x55, &error);
+        value = 0x55;
+        eeprom_write_byte(ADDR_H, ADDR_L, value, &error);
         
         if (!error)
         {
-            printf_tiny("Wrire to %x %x successful\r\n", ADDR_H, ADDR_L);
+            printf_tiny("Wrire to %x %x value %x successful\r\n", ADDR_H, ADDR_L, value);
             // Read back
+            value = 0;
             eeprom_read_byte(ADDR_H, ADDR_L, &value, &error);
-            printf_tiny("Read back %x %x = %x and status %x\r\n", ADDR_H, ADDR_L, value, error);
+            printf_tiny("Read back from %x %x = %x and status %x\r\n", ADDR_H, ADDR_L, value, error);
         }
         else
         {
             printf_tiny("Wrire to %x %x failed\r\n", ADDR_H, ADDR_L);
         }
+
+        printf_tiny("\r\n\r\n");
 
         delay_ms(1000);
     }
