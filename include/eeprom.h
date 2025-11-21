@@ -216,6 +216,33 @@ do {                                                            \
     }                                                           \
 } while(0)
 
+/**
+ * @brief Writes a single byte to the EEPROM at the specified address.
+ *
+ * This function performs a byte write operation to the EEPROM memory using the given
+ * high and low bytes of the address. The value to be written is passed as an argument,
+ * and any error condition encountered during the operation is reported via the error pointer.
+ *
+ * @param addr_high uint8_t  High byte of the EEPROM address (bits 15-8).
+ * @param addr_low  uint8_t  Low byte of the EEPROM address (bits 7-0).
+ * @param value     uint8_t  The byte value to be written to EEPROM.
+ * @param error_ptr uint8_t* Pointer to a uint8_t variable where the error status will be stored:
+ *                           Must not be NULL. 0 - no error, otherwise - error code.
+ *                           Error codes: 
+ *                              - CMD_FAIL_ERROR - read operation failed, 
+ *                              - LOW_VOLTAGE_ERROR - low voltage error
+ * 
+ * @note This is an inline function, intended for fast, low-level EEPROM access.
+ *       Ensure that the EEPROM is ready for writing prior to calling this function.
+ *       Improper use may result in data corruption or missed writes.
+ * 
+ * @warning Before write byte EEPORM page must be erased.
+ *
+ * @warning This function does not perform address bounds checking.
+ *          It is the caller's responsibility to ensure valid EEPROM addresses.
+ * 
+ * @ingroup eeprom
+ */
 static inline void eeprom_write_byte(uint8_t addr_high, uint8_t addr_low, uint8_t value, uint8_t *error_ptr);
 
 #endif
