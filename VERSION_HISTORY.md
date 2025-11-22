@@ -163,7 +163,9 @@
 
 Next releases todo
 * TODO Read byte from EEPROM via MOVC command implemented
-* TODO Refactor EEPROM routines for the compiled code reduce. Extract common code into routines. May be static inline functions. 
+* TODO Refactor EEPROM routines for the compiled code reduce. Extract common code into routines. May be static inline functions.
+* TODO Write utility to make hex file for the EEPROM
+* Add utility to dump RAM 
 * TODO build examples using cmake
 * TODO UART1 support frame error
 * TODO UART1 Automatic address recognition support
