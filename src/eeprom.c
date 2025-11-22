@@ -8,48 +8,15 @@
 #define ADDR_H 0x00
 #define ADDR_L 0x00
 
-void eeprom_write_byte(uint8_t addr_high, uint8_t addr_low, uint8_t value, uint8_t *error_ptr)
-{
-    if (power_low_voltage_flag_get())
-    {
-        *error_ptr = LOW_VOLTAGE_ERROR;
-    }
-    else
-    {
-        /* Set address */
-        IAP_ADDRH = addr_high;
-        IAP_ADDRL = addr_low;
+#define DEFAULT_VALUE 0x00
+#define DEFAULT_ERROR 0x00
 
-        /* Set write operation waiting */
-        IAP_CONTR &= ~0x07;
-        IAP_CONTR |= 0x03;
+#define DELAY_MS 1000
 
-        /* Enable IAP */
-        bit_set(IAP_CONTR, SBIT7);
-
-        /* Set write operation */
-        IAP_CMD = WRITE_OP;
-
-        /* Set data */
-        IAP_DATA = value;
-
-        /* Set start operation sequence */
-        IAP_TRIG = OP_TRIGGER_SEQ_FIRST_BYTE;
-        IAP_TRIG = OP_TRIGGER_SEQ_SECOND_BYTE;
-
-        /* Wait for operation to complete */
-        NOP();
-
-        /* Read error status from IAP */
-        *error_ptr = get_eeprom_last_operation_result();
-        
-        eeprom_disable_iap();
-    }
-}
 void main(void)
 {
-    uint8_t error = 0;
-    uint8_t value = 0;
+    uint8_t error = DEFAULT_ERROR;
+    uint8_t value = DEFAULT_VALUE;
 
     uart1_init(9600);
     power_low_voltage_flag_clear();
@@ -77,7 +44,7 @@ void main(void)
 
         printf_tiny("\r\n\r\n");
 
-        delay_ms(1000);
+        delay_ms(DELAY_MS);
     }
     
 }

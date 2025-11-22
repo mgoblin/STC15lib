@@ -249,6 +249,43 @@ do {                                                            \
  * 
  * @ingroup eeprom
  */
-void eeprom_write_byte(uint8_t addr_high, uint8_t addr_low, uint8_t value, uint8_t *error_ptr);
+#define eeprom_write_byte(addr_high, addr_low, value, error_ptr)    \
+do {                                                                \
+    if (power_low_voltage_flag_get())                               \
+    {                                                               \
+        *error_ptr = LOW_VOLTAGE_ERROR;                             \
+    }                                                               \
+    else                                                            \
+    {                                                               \
+        /* Set address */                                           \
+        IAP_ADDRH = addr_high;                                      \
+        IAP_ADDRL = addr_low;                                       \
+                                                                    \
+        /* Set write operation waiting */                           \
+        IAP_CONTR &= ~0x07;                                         \
+        IAP_CONTR |= 0x03;                                          \
+                                                                    \
+        /* Enable IAP */                                            \
+        bit_set(IAP_CONTR, SBIT7);                                  \
+                                                                    \
+        /* Set write operation */                                   \
+        IAP_CMD = WRITE_OP;                                         \
+                                                                    \
+        /* Set data */                                              \
+        IAP_DATA = value;                                           \
+                                                                    \
+        /* Set start operation sequence */                          \
+        IAP_TRIG = OP_TRIGGER_SEQ_FIRST_BYTE;                       \
+        IAP_TRIG = OP_TRIGGER_SEQ_SECOND_BYTE;                      \
+                                                                    \
+        /* Wait for operation to complete */                        \
+        NOP();                                                      \
+                                                                    \
+        /* Read error status from IAP */                            \
+        *error_ptr = get_eeprom_last_operation_result();            \
+                                                                    \
+        eeprom_disable_iap();                                       \
+    }                                                               \
+} while (0)
 
 #endif

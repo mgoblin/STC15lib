@@ -159,7 +159,7 @@
 * Power management low voltage flag routines implemented
 * Read byte from EEPROM via IAP registers implemented
 * Erase EEPROM page routine implemented
-* TODO Write byte to EEPROM 
+* Write byte to EEPROM routine implemented
 
 Next releases todo
 * TODO Read byte from EEPROM via MOVC command implemented

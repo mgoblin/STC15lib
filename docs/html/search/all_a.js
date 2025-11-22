@@ -7,7 +7,7 @@ var searchData=
   ['eeprom_5foperation_5fstatus_5ft_4',['eeprom_operation_status_t',['../group__eeprom.html#ga7b2b5c6eec6838c542ee5ce1e1aa97fc',1,'eeprom.h']]],
   ['eeprom_5foperation_5ft_5',['eeprom_operation_t',['../group__eeprom.html#ga02a1ca0f05ee0d6aa0f1b6c2fc51af94',1,'eeprom.h']]],
   ['eeprom_5fread_5fbyte_6',['eeprom_read_byte',['../group__eeprom.html#ga0ba0e98241d4b70f05295f997c7d0344',1,'eeprom.h']]],
-  ['eeprom_5fwrite_5fbyte_7',['eeprom_write_byte',['../group__eeprom.html#ga80807aaa414692b04963d0ef4d5f5d0b',1,'eeprom_write_byte(uint8_t addr_high, uint8_t addr_low, uint8_t value, uint8_t *error_ptr):&#160;eeprom.c'],['../group__eeprom.html#ga80807aaa414692b04963d0ef4d5f5d0b',1,'eeprom_write_byte(uint8_t addr_high, uint8_t addr_low, uint8_t value, uint8_t *error_ptr):&#160;eeprom.c']]],
+  ['eeprom_5fwrite_5fbyte_7',['eeprom_write_byte',['../group__eeprom.html#ga8e2e7cf95cd1dccc30ce7fedc7f3c1ab',1,'eeprom.h']]],
   ['enable_5fadc_5finterrupt_8',['enable_adc_interrupt',['../group__interrupts.html#gaadf84a2181fd871ee2e29848480756ae',1,'interrupt.h']]],
   ['enable_5fint0_5finterrupt_9',['enable_int0_interrupt',['../group__interrupts.html#ga9f0976519e8c6f8102dce44f7ad2aa6a',1,'interrupt.h']]],
   ['enable_5fint1_5finterrupt_10',['enable_int1_interrupt',['../group__interrupts.html#ga4fb0d9228dcf2749cd098092edaa1308',1,'interrupt.h']]],

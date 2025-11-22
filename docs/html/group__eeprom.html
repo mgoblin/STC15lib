@@ -71,8 +71,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle"><div class="title">EEPROM</div></div>
 </div><!--header-->
 <div class="contents">
@@ -107,6 +106,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gaff91b418fe7e6f7c8c03905d8b82123f" id="r_gaff91b418fe7e6f7c8c03905d8b82123f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__eeprom.html#gaff91b418fe7e6f7c8c03905d8b82123f">eeprom_erase_page</a>(sector_start_addr,  error_ptr)</td></tr>
 <tr class="memdesc:gaff91b418fe7e6f7c8c03905d8b82123f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erases a sector in the EEPROM starting from a specified address.  <br /></td></tr>
 <tr class="separator:gaff91b418fe7e6f7c8c03905d8b82123f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8e2e7cf95cd1dccc30ce7fedc7f3c1ab" id="r_ga8e2e7cf95cd1dccc30ce7fedc7f3c1ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__eeprom.html#ga8e2e7cf95cd1dccc30ce7fedc7f3c1ab">eeprom_write_byte</a>(addr_high,  addr_low,  value,  error_ptr)</td></tr>
+<tr class="memdesc:ga8e2e7cf95cd1dccc30ce7fedc7f3c1ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a single byte to the EEPROM at the specified address.  <br /></td></tr>
+<tr class="separator:ga8e2e7cf95cd1dccc30ce7fedc7f3c1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -122,12 +124,6 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga7b2b5c6eec6838c542ee5ce1e1aa97fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">EEPROM operation status.  <a href="group__eeprom.html#ga7b2b5c6eec6838c542ee5ce1e1aa97fc">More...</a><br /></td></tr>
 <tr class="separator:ga7b2b5c6eec6838c542ee5ce1e1aa97fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ga80807aaa414692b04963d0ef4d5f5d0b" id="r_ga80807aaa414692b04963d0ef4d5f5d0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__eeprom.html#ga80807aaa414692b04963d0ef4d5f5d0b">eeprom_write_byte</a> (uint8_t addr_high, uint8_t addr_low, uint8_t value, uint8_t *error_ptr)</td></tr>
-<tr class="memdesc:ga80807aaa414692b04963d0ef4d5f5d0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a single byte to the EEPROM at the specified address.  <br /></td></tr>
-<tr class="separator:ga80807aaa414692b04963d0ef4d5f5d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions and data structures related to EEPROM</p>
@@ -263,6 +259,66 @@ This function does not perform address bounds checking. It is the caller's respo
 
 </div>
 </div>
+<a id="ga8e2e7cf95cd1dccc30ce7fedc7f3c1ab" name="ga8e2e7cf95cd1dccc30ce7fedc7f3c1ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8e2e7cf95cd1dccc30ce7fedc7f3c1ab">&#9670;&#160;</a></span>eeprom_write_byte</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define eeprom_write_byte</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">addr_high, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">addr_low, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">value, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">error_ptr&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Writes a single byte to the EEPROM at the specified address. </p>
+<p>This function performs a byte write operation to the EEPROM memory using the given high and low bytes of the address. The value to be written is passed as an argument, and any error condition encountered during the operation is reported via the error pointer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr_high</td><td>uint8_t High byte of the EEPROM address (bits 15-8). </td></tr>
+    <tr><td class="paramname">addr_low</td><td>uint8_t Low byte of the EEPROM address (bits 7-0). </td></tr>
+    <tr><td class="paramname">value</td><td>uint8_t The byte value to be written to EEPROM. </td></tr>
+    <tr><td class="paramname">error_ptr</td><td>uint8_t* Pointer to a uint8_t variable where the error status will be stored: Must not be NULL. 0 - no error, otherwise - error code. Error codes:<ul>
+<li>CMD_FAIL_ERROR - read operation failed,</li>
+<li>LOW_VOLTAGE_ERROR - low voltage error</li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This is an inline function, intended for fast, low-level EEPROM access. Ensure that the EEPROM is ready for writing prior to calling this function. Improper use may result in data corruption or missed writes.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Before write byte EEPORM page must be erased.</dd>
+<dd>
+This function does not perform address bounds checking. It is the caller's responsibility to ensure valid EEPROM addresses. </dd></dl>
+
+</div>
+</div>
 <a id="gad66214463ff06635ed0ffbddeb1928aa" name="gad66214463ff06635ed0ffbddeb1928aa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gad66214463ff06635ed0ffbddeb1928aa">&#9670;&#160;</a></span>get_eeprom_last_operation_result</h2>
 
@@ -329,67 +385,6 @@ This function does not perform address bounds checking. It is the caller's respo
 <tr><td class="fieldname"><a id="gga02a1ca0f05ee0d6aa0f1b6c2fc51af94a49f5e6ae117e51844fd91fe6bc19d215" name="gga02a1ca0f05ee0d6aa0f1b6c2fc51af94a49f5e6ae117e51844fd91fe6bc19d215"></a>ERASE_OP&#160;</td><td class="fielddoc"><p>Erase operation. </p>
 </td></tr>
 </table>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ga80807aaa414692b04963d0ef4d5f5d0b" name="ga80807aaa414692b04963d0ef4d5f5d0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga80807aaa414692b04963d0ef4d5f5d0b">&#9670;&#160;</a></span>eeprom_write_byte()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void eeprom_write_byte </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>addr_high</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>addr_low</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>error_ptr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Writes a single byte to the EEPROM at the specified address. </p>
-<p>This function performs a byte write operation to the EEPROM memory using the given high and low bytes of the address. The value to be written is passed as an argument, and any error condition encountered during the operation is reported via the error pointer.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">addr_high</td><td>uint8_t High byte of the EEPROM address (bits 15-8). </td></tr>
-    <tr><td class="paramname">addr_low</td><td>uint8_t Low byte of the EEPROM address (bits 7-0). </td></tr>
-    <tr><td class="paramname">value</td><td>uint8_t The byte value to be written to EEPROM. </td></tr>
-    <tr><td class="paramname">error_ptr</td><td>uint8_t* Pointer to a uint8_t variable where the error status will be stored: Must not be NULL. 0 - no error, otherwise - error code. Error codes:<ul>
-<li>CMD_FAIL_ERROR - read operation failed,</li>
-<li>LOW_VOLTAGE_ERROR - low voltage error</li>
-</ul>
-</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>This is an inline function, intended for fast, low-level EEPROM access. Ensure that the EEPROM is ready for writing prior to calling this function. Improper use may result in data corruption or missed writes.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Before write byte EEPORM page must be erased.</dd>
-<dd>
-This function does not perform address bounds checking. It is the caller's responsibility to ensure valid EEPROM addresses. </dd></dl>
 
 </div>
 </div>
