@@ -13,5 +13,9 @@ env.Default (
         ['eeprom_erase_page_example.c', 'uart.c']
     ),
 
+    env.Program(
+        'eeprom_write_byte_example', 
+        ['eeprom_write_byte_example.c', 'uart.c']
+    ),
     
 )
