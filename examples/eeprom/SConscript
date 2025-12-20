@@ -1,6 +1,14 @@
+import shutil
 Import("env")
 
+destination = env.subst("$BUILD_DIR") + '/examples/eeprom/eeprom_data.hex'
+print(destination)
+
+source = env.File('#examples/eeprom/eeprom_data.hex').abspath
+print(source)
+
 env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
+shutil.copy(source, destination)
 
 env.Default (
     env.Program(

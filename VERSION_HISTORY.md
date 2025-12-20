@@ -161,6 +161,9 @@
 * Erase EEPROM page routine implemented
 * Write byte to EEPROM routine implemented
 
+0.13.1
+* Add eeprom_data.hex with eeprom data used for examples
+
 Next releases todo
 * TODO Read byte from EEPROM via MOVC command implemented
 * TODO Refactor EEPROM routines for the compiled code reduce. Extract common code into routines. May be static inline functions.
