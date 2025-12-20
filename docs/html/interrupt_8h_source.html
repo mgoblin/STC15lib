@@ -162,7 +162,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga2ef6ebd3211c16ce240018d22589e8da">  370</a></span><span class="preprocessor">#define disable_timer0_interrupt() (ET0 = 0)</span></div>
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span> </div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno"><a class="line" href="group__interrupts.html#gaf6a267bf6befa9aee24a701bd782f457">  380</a></span><span class="preprocessor">#define is_timer0_interrupt_enabled() (ET0 == 0 &amp;&amp; is_mcu_interrupts_enabled())</span></div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno"><a class="line" href="group__interrupts.html#gaf6a267bf6befa9aee24a701bd782f457">  380</a></span><span class="preprocessor">#define is_timer0_interrupt_enabled() (ET0 == 1 &amp;&amp; is_mcu_interrupts_enabled())</span></div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span> </div>
 <div class="line"><a id="l00389" name="l00389"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga6ba6fe72d49d266c76ca27b31bcb0395">  389</a></span><span class="preprocessor">#define enable_timer2_interrupt() (bit_set(IE2, SBIT2))</span></div>
 <div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span> </div>

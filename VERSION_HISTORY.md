@@ -163,6 +163,7 @@
 
 0.13.1
 * Add eeprom_data.hex with eeprom data used for examples
+* Fix [issue #3](https://github.com/mgoblin/STC15lib/issues/3)
 
 Next releases todo
 * TODO Read byte from EEPROM via MOVC command implemented
