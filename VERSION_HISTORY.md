@@ -165,9 +165,11 @@
 * Add eeprom_data.hex with eeprom data used for examples
 * Fix [issue #3](https://github.com/mgoblin/STC15lib/issues/3)
 
+0.14.0
+* Add ADC (analog to digital convertion) initial support
+
 Next releases todo
 * TODO Read byte from EEPROM via MOVC command implemented
-* TODO Refactor EEPROM routines for the compiled code reduce. Extract common code into routines. May be static inline functions.
 * TODO Write utility to make hex file for the EEPROM
 * Add utility to dump RAM 
 * TODO build examples using cmake
