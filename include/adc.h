@@ -4,9 +4,8 @@
 #include <sys.h>
 #include <bits.h>
 #include <stdint.h>
-#include <stdbool.h>
 
-void adc_init(void);
+void adc_init(uint8_t p1_pin);
 void adc_start(void);
 uint16_t adc_read(void);
 
