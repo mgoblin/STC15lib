@@ -1,7 +1,15 @@
 var searchData=
 [
-  ['add_20library_20to_20your_20project_0',['Add library to your project',['../index.html#autotoc_md2',1,'']]],
-  ['all_20modes_1',['UART1 all modes',['../group__uart1__shared.html',1,'']]],
-  ['aux_2',['aux',['../group__timer0__to__ms.html',1,'Timer0 Aux'],['../group__timer2__to__ms.html',1,'Timer2 Aux']]],
-  ['aux_20common_3',['Timer Aux common',['../group__timer__to__ms.html',1,'']]]
+  ['adc_0',['ADC',['../group__adc.html',1,'']]],
+  ['adc_2eh_1',['adc.h',['../adc_8h.html',1,'']]],
+  ['adc_5fpin_5fmode_5ft_2',['adc_pin_mode_t',['../group__adc.html#gacfdd0c0861e09d934579a69882027135',1,'adc.h']]],
+  ['adc_5fspeed_5f180_3',['ADC_SPEED_180',['../group__adc.html#ggaa63b42a360b882a87434ae898707d473ac79d53ecc378839bd0befe114e8972c0',1,'adc.h']]],
+  ['adc_5fspeed_5f360_4',['ADC_SPEED_360',['../group__adc.html#ggaa63b42a360b882a87434ae898707d473a7de5086482036ef10da72be2f5da9815',1,'adc.h']]],
+  ['adc_5fspeed_5f540_5',['ADC_SPEED_540',['../group__adc.html#ggaa63b42a360b882a87434ae898707d473a841a03319c2efabe4127944ba8658984',1,'adc.h']]],
+  ['adc_5fspeed_5f90_6',['ADC_SPEED_90',['../group__adc.html#ggaa63b42a360b882a87434ae898707d473adf2851e0d4945fff972f045ae062daf0',1,'adc.h']]],
+  ['adc_5fspeed_5ft_7',['adc_speed_t',['../group__adc.html#gaa63b42a360b882a87434ae898707d473',1,'adc.h']]],
+  ['add_20library_20to_20your_20project_8',['Add library to your project',['../index.html#autotoc_md2',1,'']]],
+  ['all_20modes_9',['UART1 all modes',['../group__uart1__shared.html',1,'']]],
+  ['aux_10',['aux',['../group__timer0__to__ms.html',1,'Timer0 Aux'],['../group__timer2__to__ms.html',1,'Timer2 Aux']]],
+  ['aux_20common_11',['Timer Aux common',['../group__timer__to__ms.html',1,'']]]
 ];

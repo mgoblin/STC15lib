@@ -1,22 +1,56 @@
 #ifndef STC15_ADCH
 #define STC15_ADCH
 
+/**
+ * @file adc.h
+ * 
+ * @defgroup adc ADC
+ * 
+ * @details Functions and data structures related to ADC module
+ * 
+ * @author Michael Golovanov
+ */
+
 #include <sys.h>
 #include <bits.h>
 #include <stdint.h>
 #include <stdbool.h>
 
+/**
+ * @brief ADC P1 modes enum
+ * 
+ * @details describes P1 pin modes for ADC
+ * 
+ * ADC can be used only with P1 pins. Each P1 pin can be configured as ADC input.
+ * P1 pins can be configured as input only or open-drain.
+ * 
+ * @ingroup adc
+ */
 typedef enum 
 {
+    /** @brief input only P1 pin mode */
     PIN_INPUT_ONLY,
-    PIN_OPEN_DRAIN
+    /** @brief open drain P1 pin mode */
+    PIN_OPEN_DRAIN,
 } adc_pin_mode_t;
 
+/**
+ * 
+ * @brief ADC speed enum
+ * 
+ * @details describes possible convertion speeds
+ * 
+ * @ingroup adc
+ */
 typedef enum 
 {
+    /** 540 mcu cycles */
     ADC_SPEED_540 = 0b00000000,
+    /** 360 mcu cycles */
     ADC_SPEED_360 = 0b00100000,
+    /** 180 mcu cycles */
     ADC_SPEED_180 = 0b01000000,
+    /** 90 mcu cycles */
     ADC_SPEED_90  = 0b01100000
 } adc_speed_t;
 
