@@ -2,7 +2,7 @@ var indexSectionsWithContent =
 {
   0: "01389_abcdefghilmnoprstuvwy",
   1: "acdefgiprstuw",
-  2: "_cgmp",
+  2: "_acgmp",
   3: "aeimtu",
   4: "abcehlnoprtw",
   5: "clm",

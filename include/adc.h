@@ -54,6 +54,21 @@ typedef enum
     ADC_SPEED_90  = 0b01100000
 } adc_speed_t;
 
+/**
+ * 
+ * @brief ADC initialization function
+ * 
+ * @details Configures the ADC for 10-bit resolution, uses the internal 
+ * voltage reference. 
+ *
+ * 
+ * @param p1_pin uint8_t P1 pin number. Values from 0 to 7.
+ * @param pin_mode adc_pin_mode_t P1 pin mode. 
+ * @param adrj_flag bool ADC_RES-ADC_RESL or ADC_RESL-ADC_RES result bits order
+ * @param speed adc_speed_t ADC convertion speed
+ * 
+ * @ingroup adc
+ */
 void adc_init(uint8_t p1_pin, adc_pin_mode_t pin_mode, bool adrj_flag, adc_speed_t speed);
 uint16_t adc_read(void);
 void adc_destroy(void);
