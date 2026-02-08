@@ -6,14 +6,14 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-typedef struct {
-    uint8_t p1_pin : 3;
-    bool adrj_flag : 1;
-    uint8_t speed : 2;
-} adc_config_t;
+typedef enum 
+{
+    PIN_INPUT_ONLY,
+    PIN_OPEN_DRAIN
+} adc_pin_mode_t;
 
-void adc_init(adc_config_t *config);
-void adc_start(void);
+void adc_init(uint8_t p1_pin, adc_pin_mode_t pin_mode, bool adrj_flag, uint8_t speed);
 uint16_t adc_read(void);
+void adc_destroy(uint8_t p1_pin);
 
 #endif
