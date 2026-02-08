@@ -2,9 +2,6 @@
 
 #include <gpio.h>
 
-#include <stdio.h>
-#include <uart.h>
-
 #define ADC_START_BIT 3
 #define ADC_FLAG 4
 #define ADRJ_BIT 5
@@ -15,6 +12,7 @@
 
 void adc_init(uint8_t p1_pin, adc_pin_mode_t pin_mode, bool adrj_flag, adc_speed_t speed)
 {
+    /* Set input only or open drain pin mode according to pin_mode argument */
     switch (pin_mode)
     {
         case PIN_OPEN_DRAIN:
@@ -30,50 +28,47 @@ void adc_init(uint8_t p1_pin, adc_pin_mode_t pin_mode, bool adrj_flag, adc_speed
             break;
     };
     
+    /* Set P1ASF bit for using pin as ADC input */
     bit_set(P1ASF, 1 << p1_pin);
 
+    /* Set ADC power on, speed and source channel pin */
     ADC_CONTR = ADC_POWER_ON_MSK | p1_pin | speed;
 
-    adrj_flag ? 
-        bit_set(CLK_DIV, 1 << ADRJ_BIT) : 
+    /* Set ADC_RES-ADC_RESL or ADC_RESL-ADC_RES result bits order */
+    if (adrj_flag)
+    { 
+        bit_set(CLK_DIV, 1 << ADRJ_BIT);
+    }
+    else
+    {
         bit_clr(CLK_DIV, ~(1 << ADRJ_BIT)); 
-
+    }
 }
 
 uint16_t adc_read(void)
 {
+    /* Clear ADC result ready flag */
     bit_clr(ADC_CONTR, ~(1 << ADC_FLAG));
+    /* Set ADC power on */
     bit_set(ADC_CONTR, 1 << ADC_START_BIT);
 
+    /* Waiting for ADC result is ready */
     while (test_if_bit_cleared(ADC_CONTR, 1 << ADC_FLAG));
     
+    /* Return ADC result value */
     return test_if_bit_set(CLK_DIV, 1 << ADRJ_BIT) ?
         (ADC_RESL << ADC_LOW_BITS_COUNT) | (ADC_RES & ADC_LOW_BITS_MSK) 
         : 
         (ADC_RES << ADC_LOW_BITS_COUNT)  | (ADC_RESL & ADC_LOW_BITS_MSK);
 }
 
-void adc_destroy()
+void adc_destroy(void)
 {
+    /* Stop ADC */
     bit_clr(ADC_CONTR, ~(1 << ADC_START_BIT));
+    /* Clear ADC result ready flag */
     bit_clr(ADC_CONTR, ~(1 << ADC_FLAG));
 
+    /* Set all gpio P1 port pins as general purpose pins mode */
     P1ASF = 0;
-}
-
-#define p1_pin 1
-
-void main(void)
-{
-    uart1_init(9600);
-
-    adc_init(p1_pin, PIN_INPUT_ONLY,false, ADC_SPEED_90);
-
-    while (1)
-    {
-        uint16_t result = adc_read();
-        printf_tiny("ADC result is %x\r\n", result);
-    }
-
-    adc_destroy();
 }

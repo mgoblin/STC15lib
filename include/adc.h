@@ -22,6 +22,6 @@ typedef enum
 
 void adc_init(uint8_t p1_pin, adc_pin_mode_t pin_mode, bool adrj_flag, adc_speed_t speed);
 uint16_t adc_read(void);
-void adc_destroy();
+void adc_destroy(void);
 
 #endif

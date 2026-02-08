@@ -166,6 +166,7 @@
 * Fix [issue #3](https://github.com/mgoblin/STC15lib/issues/3)
 
 0.14.0
+* TODO ADC interrupt example
 * Add ADC (analog to digital convertion) initial support
 
 Next releases todo
