@@ -169,6 +169,7 @@
 * Add ADC (analog to digital convertion) initial support
 
 Next releases todo
+* TODO Add ADC reference voltage support
 * TODO Read byte from EEPROM via MOVC command implemented
 * TODO Write utility to make hex file for the EEPROM
 * Add utility to dump RAM 
