@@ -26,6 +26,11 @@
 /** ADC CONTR register ADC_POWER_ON bit mask */
 #define ADC_POWER_ON_MSK 0x80
 
+/** @brief ADC result shift offset */
+#define ADC_LOW_BITS_COUNT 2
+/** @brief ADC result low bits mask */
+#define ADC_LOW_BITS_MSK 0x03
+
 /**
  * @brief ADC P1 modes enum
  * 
@@ -66,7 +71,7 @@ typedef enum
 
 /**
  * 
- * @brief ADC initialization function
+ * @brief ADC initialization routine
  * 
  * @details Configures the ADC for 10-bit resolution, uses the internal 
  * voltage reference. 
@@ -114,7 +119,34 @@ typedef enum
     }                                                   \
 }
 
-uint16_t adc_read(void);
+/**
+ * @brief ADC read routine
+ * 
+ * @details Clear result ready ADC flag and start ADC.
+ * After ADC flag is up by hardware store result to 
+ * value reference
+ * 
+ * @param value uint16_t 10-bit ADC result  
+ * 
+ * @ingroup adc
+ */
+#define adc_read(value)                                 \
+{                                                       \
+    /* Clear ADC result ready flag */                   \
+    bit_clr(ADC_CONTR, ~(1 << ADC_FLAG_BIT));           \
+    /* Set ADC power on */                              \
+    bit_set(ADC_CONTR, 1 << ADC_START_BIT);             \
+                                                        \
+    /* Waiting for ADC result is ready */               \
+    while (test_if_bit_cleared(ADC_CONTR, 1 << ADC_FLAG_BIT));  \
+                                                        \
+    /* Return ADC result value */                       \
+    *value = test_if_bit_set(CLK_DIV, 1 << ADRJ_BIT) ?  \
+        (ADC_RESL << ADC_LOW_BITS_COUNT) | (ADC_RES & ADC_LOW_BITS_MSK)  \
+        :                                               \
+        (ADC_RES << ADC_LOW_BITS_COUNT)  | (ADC_RESL & ADC_LOW_BITS_MSK);\
+}
+
 void adc_destroy(void);
 
 #endif

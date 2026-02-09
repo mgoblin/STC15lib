@@ -13,7 +13,8 @@ void main(void)
 
     while (1)
     {
-        uint16_t result = adc_read();
+        uint16_t result; 
+        adc_read(&result);
         printf_tiny("ADC result is %x\r\n", result);
     }
 
