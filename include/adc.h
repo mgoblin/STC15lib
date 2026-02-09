@@ -147,6 +147,24 @@ typedef enum
         (ADC_RES << ADC_LOW_BITS_COUNT)  | (ADC_RESL & ADC_LOW_BITS_MSK);\
 }
 
-void adc_destroy(void);
+/**
+ * @brief Deinitialize ADC module
+ * 
+ * Stops ongoing conversion, clears status flag, and disables analog function 
+ * on all P1 pins.
+ * 
+ * @ingroup adc
+ */
+#define adc_destroy(void)                               \
+{                                                       \
+    /* Stop ADC */                                      \
+    bit_clr(ADC_CONTR, ~(1 << ADC_START_BIT));          \
+    /* Clear ADC result ready flag */                   \
+    bit_clr(ADC_CONTR, ~(1 << ADC_FLAG_BIT));           \
+                                                        \
+    /* Set all gpio P1 port pins */                     \
+    /* as general purpose pins mode */                  \
+    P1ASF = 0;                                          \
+}
 
 #endif

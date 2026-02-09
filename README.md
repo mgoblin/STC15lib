@@ -101,6 +101,7 @@ void main()
 | Watchdog timer | Watchdog timer routines        | READY              |
 | GPIO          | Pin as digital in/out routines  | READY              |
 | EEPROM        | Non volatile flash memory routines   | INITIAL SUPPORT         |
+| ADC (no ref voltage support)           | Analog to digital converstions  | PARTIAL            |
 
 Other modules does not implemented yet.
 
