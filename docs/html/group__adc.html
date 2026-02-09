@@ -70,12 +70,18 @@ $(function() {
 
 <div class="header">
   <div class="summary">
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle"><div class="title">ADC</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga59b639c1371361872115e5f28e396b0e" id="r_ga59b639c1371361872115e5f28e396b0e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#ga59b639c1371361872115e5f28e396b0e">adc_init</a>(p1_pin,  pin_mode,  adrj_flag,  speed)</td></tr>
+<tr class="memdesc:ga59b639c1371361872115e5f28e396b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC initialization function.  <br /></td></tr>
+<tr class="separator:ga59b639c1371361872115e5f28e396b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:gacfdd0c0861e09d934579a69882027135" id="r_gacfdd0c0861e09d934579a69882027135"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#gacfdd0c0861e09d934579a69882027135">adc_pin_mode_t</a> { <a class="el" href="group__adc.html#ggacfdd0c0861e09d934579a69882027135a81175ac9fcb1d403a4272fe0b8833e3e">PIN_INPUT_ONLY</a>
@@ -90,16 +96,63 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gaa63b42a360b882a87434ae898707d473"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC speed enum.  <a href="group__adc.html#gaa63b42a360b882a87434ae898707d473">More...</a><br /></td></tr>
 <tr class="separator:gaa63b42a360b882a87434ae898707d473"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ga35289737b490cca978a1bb6dbec44727" id="r_ga35289737b490cca978a1bb6dbec44727"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#ga35289737b490cca978a1bb6dbec44727">adc_init</a> (uint8_t p1_pin, <a class="el" href="group__adc.html#gacfdd0c0861e09d934579a69882027135">adc_pin_mode_t</a> pin_mode, bool adrj_flag, <a class="el" href="group__adc.html#gaa63b42a360b882a87434ae898707d473">adc_speed_t</a> speed)</td></tr>
-<tr class="memdesc:ga35289737b490cca978a1bb6dbec44727"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC initialization function.  <br /></td></tr>
-<tr class="separator:ga35289737b490cca978a1bb6dbec44727"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions and data structures related to ADC module</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga59b639c1371361872115e5f28e396b0e" name="ga59b639c1371361872115e5f28e396b0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga59b639c1371361872115e5f28e396b0e">&#9670;&#160;</a></span>adc_init</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define adc_init</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">p1_pin, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pin_mode, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">adrj_flag, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">speed&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ADC initialization function. </p>
+<p>Configures the ADC for 10-bit resolution, uses the internal voltage reference.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p1_pin</td><td>uint8_t P1 pin number. Values from 0 to 7. </td></tr>
+    <tr><td class="paramname">pin_mode</td><td>adc_pin_mode_t P1 pin mode. </td></tr>
+    <tr><td class="paramname">adrj_flag</td><td>bool ADC_RES-ADC_RESL or ADC_RESL-ADC_RES result bits order </td></tr>
+    <tr><td class="paramname">speed</td><td>adc_speed_t ADC convertion speed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="gacfdd0c0861e09d934579a69882027135" name="gacfdd0c0861e09d934579a69882027135"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gacfdd0c0861e09d934579a69882027135">&#9670;&#160;</a></span>adc_pin_mode_t</h2>
@@ -149,59 +202,6 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="ggaa63b42a360b882a87434ae898707d473adf2851e0d4945fff972f045ae062daf0" name="ggaa63b42a360b882a87434ae898707d473adf2851e0d4945fff972f045ae062daf0"></a>ADC_SPEED_90&#160;</td><td class="fielddoc"><p>90 mcu cycles </p>
 </td></tr>
 </table>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ga35289737b490cca978a1bb6dbec44727" name="ga35289737b490cca978a1bb6dbec44727"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga35289737b490cca978a1bb6dbec44727">&#9670;&#160;</a></span>adc_init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void adc_init </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>p1_pin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__adc.html#gacfdd0c0861e09d934579a69882027135">adc_pin_mode_t</a>&#160;</td>
-          <td class="paramname"><em>pin_mode</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>adrj_flag</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__adc.html#gaa63b42a360b882a87434ae898707d473">adc_speed_t</a>&#160;</td>
-          <td class="paramname"><em>speed</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>ADC initialization function. </p>
-<p>Configures the ADC for 10-bit resolution, uses the internal voltage reference.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">p1_pin</td><td>uint8_t P1 pin number. Values from 0 to 7. </td></tr>
-    <tr><td class="paramname">pin_mode</td><td>adc_pin_mode_t P1 pin mode. </td></tr>
-    <tr><td class="paramname">adrj_flag</td><td>bool ADC_RES-ADC_RESL or ADC_RESL-ADC_RES result bits order </td></tr>
-    <tr><td class="paramname">speed</td><td>adc_speed_t ADC convertion speed </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

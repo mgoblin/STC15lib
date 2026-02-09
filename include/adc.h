@@ -15,6 +15,16 @@
 #include <bits.h>
 #include <stdint.h>
 #include <stdbool.h>
+#include <gpio.h>
+
+/** @brief ADC CONTR register ADC_START bit position */
+#define ADC_START_BIT 3
+/** @brief ADC CONTR register ADC_FLAG bit position */
+#define ADC_FLAG_BIT 4
+/** @brief CLKDIV register ADRJ bit position */
+#define ADRJ_BIT 5
+/** ADC CONTR register ADC_POWER_ON bit mask */
+#define ADC_POWER_ON_MSK 0x80
 
 /**
  * @brief ADC P1 modes enum
@@ -69,7 +79,41 @@ typedef enum
  * 
  * @ingroup adc
  */
-void adc_init(uint8_t p1_pin, adc_pin_mode_t pin_mode, bool adrj_flag, adc_speed_t speed);
+#define adc_init(p1_pin, pin_mode, adrj_flag, speed)    \
+{                                                       \
+    /* Set input only or open drain pin mode */         \
+    /* according to pin_mode argument */                \
+    switch (pin_mode)                                   \
+    {                                                   \
+        case PIN_OPEN_DRAIN:                            \
+            pin_open_drain_init(P1, p1_pin);            \
+            break;                                      \
+        case PIN_INPUT_ONLY:                            \
+            pin_input_only_init(P1,p1_pin);             \
+            break;                                      \
+        default:                                        \
+            pin_input_only_init(P1,p1_pin);             \
+            break;                                      \
+    }                                                   \
+                                                        \
+    /* Set P1ASF bit for using pin as ADC input */      \
+    bit_set(P1ASF, 1 << p1_pin);                        \
+                                                        \
+    /* Set ADC power on, speed and source channel pin */\
+    ADC_CONTR = ADC_POWER_ON_MSK | p1_pin | speed;      \
+                                                        \
+    /* Set ADC_RES-ADC_RESL or ADC_RESL-ADC_RES */      \
+    /* result bits order */                             \
+    if (adrj_flag)                                      \
+    {                                                   \
+        bit_set(CLK_DIV, 1 << ADRJ_BIT);                \
+    }                                                   \
+    else                                                \
+    {                                                   \
+        bit_clr(CLK_DIV, ~(1 << ADRJ_BIT));             \
+    }                                                   \
+}
+
 uint16_t adc_read(void);
 void adc_destroy(void);
 

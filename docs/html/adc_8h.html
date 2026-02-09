@@ -74,6 +74,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">adc.h File Reference</div></div>
@@ -83,29 +84,62 @@ $(function() {
 <code>#include &lt;bits.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="gpio_8h_source.html">gpio.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for adc.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="adc_8h__incl.png" border="0" usemap="#ainclude_2adc_8h" alt=""/></div>
 <map name="ainclude_2adc_8h" id="ainclude_2adc_8h">
-<area shape="rect" title=" " alt="" coords="126,5,234,31"/>
-<area shape="rect" href="sys_8h.html" title=" " alt="" coords="27,79,83,104"/>
-<area shape="poly" title=" " alt="" coords="161,33,88,74,86,69,159,28"/>
-<area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="107,79,165,104"/>
-<area shape="poly" title=" " alt="" coords="175,32,153,68,148,66,170,30"/>
-<area shape="rect" title=" " alt="" coords="190,79,261,104"/>
-<area shape="poly" title=" " alt="" coords="190,30,213,66,208,69,185,32"/>
-<area shape="rect" title=" " alt="" coords="285,79,368,104"/>
-<area shape="poly" title=" " alt="" coords="205,28,292,70,289,75,202,33"/>
-<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="5,152,104,177"/>
-<area shape="poly" title=" " alt="" coords="57,104,57,138,52,138,52,104"/>
-<area shape="rect" title=" " alt="" coords="9,225,100,251"/>
+<area shape="rect" title=" " alt="" coords="143,5,251,31"/>
+<area shape="rect" href="sys_8h.html" title=" " alt="" coords="27,152,83,177"/>
+<area shape="poly" title=" " alt="" coords="188,33,78,144,74,140,184,29"/>
+<area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="107,152,165,177"/>
+<area shape="poly" title=" " alt="" coords="188,33,171,54,156,80,146,110,141,139,136,138,141,109,151,78,167,51,184,29"/>
+<area shape="rect" title=" " alt="" coords="190,152,261,177"/>
+<area shape="poly" title=" " alt="" coords="211,29,228,50,243,78,245,110,238,139,233,138,240,110,237,79,224,53,207,32"/>
+<area shape="rect" title=" " alt="" coords="285,152,368,177"/>
+<area shape="poly" title=" " alt="" coords="213,29,263,77,313,139,309,142,259,80,209,33"/>
+<area shape="rect" href="gpio_8h.html" title=" " alt="" coords="166,79,229,104"/>
+<area shape="poly" title=" " alt="" coords="200,31,200,65,195,65,195,31"/>
+<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="5,225,104,251"/>
 <area shape="poly" title=" " alt="" coords="57,178,57,212,52,212,52,178"/>
+<area shape="rect" title=" " alt="" coords="9,299,100,324"/>
+<area shape="poly" title=" " alt="" coords="57,251,57,285,52,285,52,251"/>
+<area shape="poly" title=" " alt="" coords="176,106,91,148,89,143,173,102"/>
+<area shape="poly" title=" " alt="" coords="189,106,157,143,153,140,185,103"/>
+<area shape="poly" title=" " alt="" coords="204,103,218,138,213,140,199,105"/>
+<area shape="poly" title=" " alt="" coords="219,102,294,143,292,147,217,106"/>
 </map>
 </div>
 </div>
 <p><a href="adc_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a84aeff7f7cb774816c29ed00c0ad6551" id="r_a84aeff7f7cb774816c29ed00c0ad6551"><td class="memItemLeft" align="right" valign="top"><a id="a84aeff7f7cb774816c29ed00c0ad6551" name="a84aeff7f7cb774816c29ed00c0ad6551"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ADC_START_BIT</b>&#160;&#160;&#160;3</td></tr>
+<tr class="memdesc:a84aeff7f7cb774816c29ed00c0ad6551"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC CONTR register ADC_START bit position. <br /></td></tr>
+<tr class="separator:a84aeff7f7cb774816c29ed00c0ad6551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada1c239a8dc03fed4b4c1f4d6fe2df13" id="r_ada1c239a8dc03fed4b4c1f4d6fe2df13"><td class="memItemLeft" align="right" valign="top"><a id="ada1c239a8dc03fed4b4c1f4d6fe2df13" name="ada1c239a8dc03fed4b4c1f4d6fe2df13"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ADC_FLAG_BIT</b>&#160;&#160;&#160;4</td></tr>
+<tr class="memdesc:ada1c239a8dc03fed4b4c1f4d6fe2df13"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC CONTR register ADC_FLAG bit position. <br /></td></tr>
+<tr class="separator:ada1c239a8dc03fed4b4c1f4d6fe2df13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae993a3a1347aa383067f3c7bc6cfce35" id="r_ae993a3a1347aa383067f3c7bc6cfce35"><td class="memItemLeft" align="right" valign="top"><a id="ae993a3a1347aa383067f3c7bc6cfce35" name="ae993a3a1347aa383067f3c7bc6cfce35"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ADRJ_BIT</b>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:ae993a3a1347aa383067f3c7bc6cfce35"><td class="mdescLeft">&#160;</td><td class="mdescRight">CLKDIV register ADRJ bit position. <br /></td></tr>
+<tr class="separator:ae993a3a1347aa383067f3c7bc6cfce35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf22e993bdb562f89f9d9cc343615b8b" id="r_abf22e993bdb562f89f9d9cc343615b8b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="adc_8h.html#abf22e993bdb562f89f9d9cc343615b8b">ADC_POWER_ON_MSK</a>&#160;&#160;&#160;0x80</td></tr>
+<tr class="separator:abf22e993bdb562f89f9d9cc343615b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a044b4ab4fe915cb6d9deb2ff38afe7" id="r_a1a044b4ab4fe915cb6d9deb2ff38afe7"><td class="memItemLeft" align="right" valign="top"><a id="a1a044b4ab4fe915cb6d9deb2ff38afe7" name="a1a044b4ab4fe915cb6d9deb2ff38afe7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ADC_LOW_BITS_COUNT</b>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a1a044b4ab4fe915cb6d9deb2ff38afe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73368454ae30fae5a5b7bb9ac95013a4" id="r_a73368454ae30fae5a5b7bb9ac95013a4"><td class="memItemLeft" align="right" valign="top"><a id="a73368454ae30fae5a5b7bb9ac95013a4" name="a73368454ae30fae5a5b7bb9ac95013a4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ADC_LOW_BITS_MSK</b>&#160;&#160;&#160;0x03</td></tr>
+<tr class="separator:a73368454ae30fae5a5b7bb9ac95013a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga59b639c1371361872115e5f28e396b0e" id="r_ga59b639c1371361872115e5f28e396b0e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#ga59b639c1371361872115e5f28e396b0e">adc_init</a>(p1_pin,  pin_mode,  adrj_flag,  speed)</td></tr>
+<tr class="memdesc:ga59b639c1371361872115e5f28e396b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC initialization function.  <br /></td></tr>
+<tr class="separator:ga59b639c1371361872115e5f28e396b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:gacfdd0c0861e09d934579a69882027135" id="r_gacfdd0c0861e09d934579a69882027135"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#gacfdd0c0861e09d934579a69882027135">adc_pin_mode_t</a> { <a class="el" href="group__adc.html#ggacfdd0c0861e09d934579a69882027135a81175ac9fcb1d403a4272fe0b8833e3e">PIN_INPUT_ONLY</a>
@@ -123,9 +157,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga35289737b490cca978a1bb6dbec44727" id="r_ga35289737b490cca978a1bb6dbec44727"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#ga35289737b490cca978a1bb6dbec44727">adc_init</a> (uint8_t p1_pin, <a class="el" href="group__adc.html#gacfdd0c0861e09d934579a69882027135">adc_pin_mode_t</a> pin_mode, bool adrj_flag, <a class="el" href="group__adc.html#gaa63b42a360b882a87434ae898707d473">adc_speed_t</a> speed)</td></tr>
-<tr class="memdesc:ga35289737b490cca978a1bb6dbec44727"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC initialization function.  <br /></td></tr>
-<tr class="separator:ga35289737b490cca978a1bb6dbec44727"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5af05cc48d199cae150afa5751e4ae58" id="r_a5af05cc48d199cae150afa5751e4ae58"><td class="memItemLeft" align="right" valign="top"><a id="a5af05cc48d199cae150afa5751e4ae58" name="a5af05cc48d199cae150afa5751e4ae58"></a>
 uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>adc_read</b> (void)</td></tr>
 <tr class="separator:a5af05cc48d199cae150afa5751e4ae58"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,6 +164,22 @@ uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>adc_read</b> (voi
 void&#160;</td><td class="memItemRight" valign="bottom"><b>adc_destroy</b> (void)</td></tr>
 <tr class="separator:a879cfdbd930b0d6cb3668d63a5a41265"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="abf22e993bdb562f89f9d9cc343615b8b" name="abf22e993bdb562f89f9d9cc343615b8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf22e993bdb562f89f9d9cc343615b8b">&#9670;&#160;</a></span>ADC_POWER_ON_MSK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADC_POWER_ON_MSK&#160;&#160;&#160;0x80</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ADC CONTR register ADC_POWER_ON bit mask </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
