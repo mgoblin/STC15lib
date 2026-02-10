@@ -173,7 +173,7 @@ Next releases todo
 * TODO Add ADC reference voltage support
 * TODO Read byte from EEPROM via MOVC command implemented
 * TODO Write utility to make hex file for the EEPROM
-* Add utility to dump RAM 
+* TODO Add utility to dump RAM 
 * TODO build examples using cmake
 * TODO UART1 support frame error
 * TODO UART1 Automatic address recognition support

@@ -1,0 +1,12 @@
+import shutil
+Import("env")
+
+env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
+# shutil.copy(source, destination)
+
+env.Default (
+    env.Program(
+        'adc_read_example', 
+        ['adc_read_example.c', 'uart.c']
+    ),
+)
