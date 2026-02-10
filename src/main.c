@@ -6,11 +6,6 @@
 #define ADC_P0_PIN 1
 #define LED P10
 
-bool is_adc_async_read_started(void)
-{
-    return test_if_bit_set(ADC_CONTR, 1 << ADC_START_BIT);
-}
-
 uint16_t adc_async_get_result(void)
 {
     return test_if_bit_set(CLK_DIV, 1 << ADRJ_BIT) ?  

@@ -162,7 +162,15 @@ do {                                                    \
     }                                                   \
 } while(0);
 
-bool is_adc_async_read_started(void);
+/**
+ * @brief get ADC start and power flags
+ * 
+ * @return bool true if flags set otherwise false
+ * 
+ * @ingroup adc
+ */
+#define is_adc_async_read_started() (test_if_bit_set(ADC_CONTR, 1 << ADC_START_BIT) && (ADC_CONTR & ADC_POWER_ON_MSK))
+
 uint16_t adc_async_get_result(void);
 void adc_async_read_finish(void);
 
