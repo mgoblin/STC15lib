@@ -13,12 +13,12 @@ void main(void)
     uart1_init(9600);
 
     // Init ADC on P1.1 on maximum speed
-    adc_init(p1_pin, PIN_INPUT_ONLY,false, ADC_SPEED_90);
+    adc_init_input_only(p1_pin, false, ADC_SPEED_90);
 
     while (1)
     {
         uint16_t result; 
-        adc_read(&result);
+        adc_read_sync(&result);
         printf_tiny("ADC result is %x\r\n", result);
     }
 

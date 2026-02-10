@@ -32,25 +32,6 @@
 #define ADC_LOW_BITS_MSK 0x03
 
 /**
- * @brief ADC P1 modes enum
- * 
- * @details describes P1 pin modes for ADC
- * 
- * ADC can be used only with P1 pins. Each P1 pin can be configured as ADC input.
- * P1 pins can be configured as input only or open-drain.
- * 
- * @ingroup adc
- */
-typedef enum 
-{
-    /** @brief input only P1 pin mode */
-    PIN_INPUT_ONLY,
-    /** @brief open drain P1 pin mode */
-    PIN_OPEN_DRAIN,
-} adc_pin_mode_t;
-
-/**
- * 
  * @brief ADC speed enum
  * 
  * @details describes possible convertion speeds
@@ -70,36 +51,22 @@ typedef enum
 } adc_speed_t;
 
 /**
- * 
- * @brief ADC initialization routine
+ * @brief ADC initialization in pin input only mode
  * 
  * @details Configures the ADC for 10-bit resolution, uses the internal 
  * voltage reference. 
  *
  * 
  * @param p1_pin uint8_t P1 pin number. Values from 0 to 7.
- * @param pin_mode adc_pin_mode_t P1 pin mode. 
  * @param adrj_flag bool ADC_RES-ADC_RESL or ADC_RESL-ADC_RES result bits order
  * @param speed adc_speed_t ADC convertion speed
  * 
  * @ingroup adc
  */
-#define adc_init(p1_pin, pin_mode, adrj_flag, speed)    \
-{                                                       \
-    /* Set input only or open drain pin mode */         \
-    /* according to pin_mode argument */                \
-    switch (pin_mode)                                   \
-    {                                                   \
-        case PIN_OPEN_DRAIN:                            \
-            pin_open_drain_init(P1, p1_pin);            \
-            break;                                      \
-        case PIN_INPUT_ONLY:                            \
-            pin_input_only_init(P1,p1_pin);             \
-            break;                                      \
-        default:                                        \
-            pin_input_only_init(P1,p1_pin);             \
-            break;                                      \
-    }                                                   \
+#define adc_init_input_only(p1_pin, adrj_flag, speed)   \
+do {                                                    \
+    /* Set input only pin mode */                       \
+    pin_input_only_init(P1, p1_pin);                    \
                                                         \
     /* Set P1ASF bit for using pin as ADC input */      \
     bit_set(P1ASF, 1 << p1_pin);                        \
@@ -109,20 +76,47 @@ typedef enum
                                                         \
     /* Set ADC_RES-ADC_RESL or ADC_RESL-ADC_RES */      \
     /* result bits order */                             \
-    if (adrj_flag)                                      \
-    {                                                   \
-        bit_set(CLK_DIV, 1 << ADRJ_BIT);                \
-    }                                                   \
-    else                                                \
-    {                                                   \
+    adrj_flag ?                                         \
+        bit_set(CLK_DIV, 1 << ADRJ_BIT) :               \
         bit_clr(CLK_DIV, ~(1 << ADRJ_BIT));             \
-    }                                                   \
-}
+} while(0)
+
+/**
+ * @brief ADC initialization in pin open drain mode
+ * 
+ * @details Configures the ADC for 10-bit resolution, uses the internal 
+ * voltage reference. 
+ *
+ * 
+ * @param p1_pin uint8_t P1 pin number. Values from 0 to 7.
+ * @param adrj_flag bool ADC_RES-ADC_RESL or ADC_RESL-ADC_RES result bits order
+ * @param speed adc_speed_t ADC convertion speed
+ * 
+ * @ingroup adc
+ */
+#define adc_init_open_drain(p1_pin, adrj_flag, speed)   \
+do {                                                    \
+    /* Set input only pin mode */                       \
+    pin_open_drain_init(P1, p1_pin);                    \
+                                                        \
+    /* Set P1ASF bit for using pin as ADC input */      \
+    bit_set(P1ASF, 1 << p1_pin);                        \
+                                                        \
+    /* Set ADC power on, speed and source channel pin */\
+    ADC_CONTR = ADC_POWER_ON_MSK | p1_pin | speed;      \
+                                                        \
+    /* Set ADC_RES-ADC_RESL or ADC_RESL-ADC_RES */      \
+    /* result bits order */                             \
+    adrj_flag ?                                         \
+        bit_set(CLK_DIV, 1 << ADRJ_BIT) :               \
+        bit_clr(CLK_DIV, ~(1 << ADRJ_BIT));             \
+} while(0)
 
 /**
  * @brief ADC read routine
  * 
  * @details Clear result ready ADC flag and start ADC.
+ * Waiting for result is ready (flag up).
  * After ADC flag is up by hardware store result to 
  * value reference
  * 
@@ -130,8 +124,8 @@ typedef enum
  * 
  * @ingroup adc
  */
-#define adc_read(value)                                 \
-{                                                       \
+#define adc_read_sync(value)                            \
+do {                                                    \
     /* Clear ADC result ready flag */                   \
     bit_clr(ADC_CONTR, ~(1 << ADC_FLAG_BIT));           \
     /* Set ADC power on */                              \
@@ -145,7 +139,7 @@ typedef enum
         (ADC_RESL << ADC_LOW_BITS_COUNT) | (ADC_RES & ADC_LOW_BITS_MSK)  \
         :                                               \
         (ADC_RES << ADC_LOW_BITS_COUNT)  | (ADC_RESL & ADC_LOW_BITS_MSK);\
-}
+} while(0)
 
 /**
  * @brief Deinitialize ADC module
@@ -156,7 +150,7 @@ typedef enum
  * @ingroup adc
  */
 #define adc_destroy(void)                               \
-{                                                       \
+do {                                                    \
     /* Stop ADC */                                      \
     bit_clr(ADC_CONTR, ~(1 << ADC_START_BIT));          \
     /* Clear ADC result ready flag */                   \
@@ -165,6 +159,6 @@ typedef enum
     /* Set all gpio P1 port pins */                     \
     /* as general purpose pins mode */                  \
     P1ASF = 0;                                          \
-}
+} while(0)
 
 #endif
