@@ -93,6 +93,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gaea9694f2a258f3234635db0ba42d95e6" id="r_gaea9694f2a258f3234635db0ba42d95e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#gaea9694f2a258f3234635db0ba42d95e6">is_adc_async_read_started</a>()&#160;&#160;&#160;(test_if_bit_set(ADC_CONTR, 1 &lt;&lt; <a class="el" href="adc_8h.html#a84aeff7f7cb774816c29ed00c0ad6551">ADC_START_BIT</a>) &amp;&amp; (ADC_CONTR &amp; <a class="el" href="adc_8h.html#abf22e993bdb562f89f9d9cc343615b8b">ADC_POWER_ON_MSK</a>))</td></tr>
 <tr class="memdesc:gaea9694f2a258f3234635db0ba42d95e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">get ADC start and power flags  <br /></td></tr>
 <tr class="separator:gaea9694f2a258f3234635db0ba42d95e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf115fda1f311d9577cee589134d1f02c" id="r_gaf115fda1f311d9577cee589134d1f02c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#gaf115fda1f311d9577cee589134d1f02c">adc_async_read_finish</a>()&#160;&#160;&#160;(bit_clr(ADC_CONTR, ~(1 &lt;&lt; <a class="el" href="adc_8h.html#ada1c239a8dc03fed4b4c1f4d6fe2df13">ADC_FLAG_BIT</a>)))</td></tr>
+<tr class="memdesc:gaf115fda1f311d9577cee589134d1f02c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear ADC result ready flag.  <br /></td></tr>
+<tr class="separator:gaf115fda1f311d9577cee589134d1f02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6e678166816b8341b430912a0fd30268" id="r_ga6e678166816b8341b430912a0fd30268"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#ga6e678166816b8341b430912a0fd30268">adc_destroy</a>(void)</td></tr>
 <tr class="memdesc:ga6e678166816b8341b430912a0fd30268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinitialize ADC module.  <br /></td></tr>
 <tr class="separator:ga6e678166816b8341b430912a0fd30268"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,6 +115,26 @@ Enumerations</h2></td></tr>
 <p>TODO Describe sync and async modes</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="gaf115fda1f311d9577cee589134d1f02c" name="gaf115fda1f311d9577cee589134d1f02c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf115fda1f311d9577cee589134d1f02c">&#9670;&#160;</a></span>adc_async_read_finish</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define adc_async_read_finish</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(bit_clr(ADC_CONTR, ~(1 &lt;&lt; <a class="el" href="adc_8h.html#ada1c239a8dc03fed4b4c1f4d6fe2df13">ADC_FLAG_BIT</a>)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear ADC result ready flag. </p>
+<dl class="section note"><dt>Note</dt><dd>This routine suppose to be called inside ADC interrupt handler </dd></dl>
+
+</div>
+</div>
 <a id="ga1ed306842c5d0e89d6a8100032a69aa0" name="ga1ed306842c5d0e89d6a8100032a69aa0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga1ed306842c5d0e89d6a8100032a69aa0">&#9670;&#160;</a></span>adc_async_read_start</h2>
 

@@ -14,11 +14,6 @@ uint16_t adc_async_get_result(void)
         (ADC_RES << ADC_LOW_BITS_COUNT)  | (ADC_RESL & ADC_LOW_BITS_MSK);
 }
 
-void adc_async_read_finish(void)
-{
-    bit_clr(ADC_CONTR, ~(1 << ADC_FLAG_BIT));
-}
-
 void adc_ISR(void) __interrupt(5)
 {
     if (adc_async_get_result())

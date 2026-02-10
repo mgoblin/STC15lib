@@ -171,8 +171,18 @@ do {                                                    \
  */
 #define is_adc_async_read_started() (test_if_bit_set(ADC_CONTR, 1 << ADC_START_BIT) && (ADC_CONTR & ADC_POWER_ON_MSK))
 
+/**
+ * @brief Clear ADC result ready flag
+ * 
+ * @note This routine suppose to be called inside ADC interrupt handler
+ * 
+ * @ingroup adc
+ */
+#define adc_async_read_finish() (bit_clr(ADC_CONTR, ~(1 << ADC_FLAG_BIT)))
+
 uint16_t adc_async_get_result(void);
-void adc_async_read_finish(void);
+
+
 
 /**
  * @brief Deinitialize ADC module
