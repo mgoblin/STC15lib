@@ -8,6 +8,8 @@
  * 
  * @details Functions and data structures related to ADC module
  * 
+ * TODO Describe sync and async modes
+ * 
  * @author Michael Golovanov
  */
 
@@ -142,6 +144,29 @@ do {                                                    \
 } while(0)
 
 /**
+ * @brief Start async ADC read operation if not started
+ * 
+ * @details Set ADC start flag if it does not set
+ * After that program is not bloked. When result 
+ * is ready MCU generate ADC interrupt.    
+ * 
+ * @note ADC interrupt should be enabled
+ * 
+ * @ingroup adc
+ */
+#define adc_async_read_start()                          \
+do {                                                    \
+    if (!is_adc_async_read_started())                   \
+    {                                                   \
+        bit_set(ADC_CONTR, 1 << ADC_START_BIT);         \
+    }                                                   \
+} while(0);
+
+bool is_adc_async_read_started(void);
+uint16_t adc_async_get_result(void);
+void adc_async_read_finish(void);
+
+/**
  * @brief Deinitialize ADC module
  * 
  * Stops ongoing conversion, clears status flag, and disables analog function 
@@ -159,6 +184,9 @@ do {                                                    \
     /* Set all gpio P1 port pins */                     \
     /* as general purpose pins mode */                  \
     P1ASF = 0;                                          \
+                                                        \
+    /* ADC power off*/                                  \
+    bit_clr(ADC_CONTR, ~ADC_POWER_ON_MSK);              \
 } while(0)
 
 #endif

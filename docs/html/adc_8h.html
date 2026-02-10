@@ -75,7 +75,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">adc.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -146,6 +147,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga2857b9efd36f8d5f11de3523c3fd74d8" id="r_ga2857b9efd36f8d5f11de3523c3fd74d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#ga2857b9efd36f8d5f11de3523c3fd74d8">adc_read_sync</a>(value)</td></tr>
 <tr class="memdesc:ga2857b9efd36f8d5f11de3523c3fd74d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC read routine.  <br /></td></tr>
 <tr class="separator:ga2857b9efd36f8d5f11de3523c3fd74d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ed306842c5d0e89d6a8100032a69aa0" id="r_ga1ed306842c5d0e89d6a8100032a69aa0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#ga1ed306842c5d0e89d6a8100032a69aa0">adc_async_read_start</a>()</td></tr>
+<tr class="memdesc:ga1ed306842c5d0e89d6a8100032a69aa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start async ADC read operation if not started.  <br /></td></tr>
+<tr class="separator:ga1ed306842c5d0e89d6a8100032a69aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6e678166816b8341b430912a0fd30268" id="r_ga6e678166816b8341b430912a0fd30268"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#ga6e678166816b8341b430912a0fd30268">adc_destroy</a>(void)</td></tr>
 <tr class="memdesc:ga6e678166816b8341b430912a0fd30268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinitialize ADC module.  <br /></td></tr>
 <tr class="separator:ga6e678166816b8341b430912a0fd30268"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,6 +163,18 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gaa63b42a360b882a87434ae898707d473"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC speed enum.  <a href="group__adc.html#gaa63b42a360b882a87434ae898707d473">More...</a><br /></td></tr>
 <tr class="separator:gaa63b42a360b882a87434ae898707d473"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a3c65a69e77fe6d6643a8d251a7ab0c1f" id="r_a3c65a69e77fe6d6643a8d251a7ab0c1f"><td class="memItemLeft" align="right" valign="top"><a id="a3c65a69e77fe6d6643a8d251a7ab0c1f" name="a3c65a69e77fe6d6643a8d251a7ab0c1f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_adc_async_read_started</b> (void)</td></tr>
+<tr class="separator:a3c65a69e77fe6d6643a8d251a7ab0c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19afa8b6d8cf0d29e8a29fe1be0edbe2" id="r_a19afa8b6d8cf0d29e8a29fe1be0edbe2"><td class="memItemLeft" align="right" valign="top"><a id="a19afa8b6d8cf0d29e8a29fe1be0edbe2" name="a19afa8b6d8cf0d29e8a29fe1be0edbe2"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>adc_async_get_result</b> (void)</td></tr>
+<tr class="separator:a19afa8b6d8cf0d29e8a29fe1be0edbe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9413c196943e615ca3412ed38cc0b4c2" id="r_a9413c196943e615ca3412ed38cc0b4c2"><td class="memItemLeft" align="right" valign="top"><a id="a9413c196943e615ca3412ed38cc0b4c2" name="a9413c196943e615ca3412ed38cc0b4c2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>adc_async_read_finish</b> (void)</td></tr>
+<tr class="separator:a9413c196943e615ca3412ed38cc0b4c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="abf22e993bdb562f89f9d9cc343615b8b" name="abf22e993bdb562f89f9d9cc343615b8b"></a>
