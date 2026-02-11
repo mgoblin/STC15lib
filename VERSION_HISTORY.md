@@ -166,15 +166,14 @@
 * Fix [issue #3](https://github.com/mgoblin/STC15lib/issues/3)
 
 0.14.0
-* TODO ADC interrupt example
 * Add ADC (analog to digital convertion) support. No ref voltage feature.
-
-Next releases todo
 * TODO Add ADC reference voltage support
 * TODO Read byte from EEPROM via MOVC command implemented
+* TODO build examples using cmake
 * TODO Write utility to make hex file for the EEPROM
 * TODO Add utility to dump RAM 
-* TODO build examples using cmake
+
+Next releases todo
 * TODO UART1 support frame error
 * TODO UART1 Automatic address recognition support
 * TODO UART1 Relay broadcast mode support
