@@ -137,15 +137,27 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>ADC_LOW_BITS_MSK</b>&#160;&#160;&#160;0x03</td></tr>
 <tr class="memdesc:a73368454ae30fae5a5b7bb9ac95013a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC result low bits mask. <br /></td></tr>
 <tr class="separator:a73368454ae30fae5a5b7bb9ac95013a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">init</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>ADC initializaion and destroy routines </p>
+</div></td></tr>
 <tr class="memitem:ga67fe8b4aa9aaa52892d1bd5ab1b6bef9" id="r_ga67fe8b4aa9aaa52892d1bd5ab1b6bef9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#ga67fe8b4aa9aaa52892d1bd5ab1b6bef9">adc_init_input_only</a>(p1_pin,  adrj_flag,  speed)</td></tr>
 <tr class="memdesc:ga67fe8b4aa9aaa52892d1bd5ab1b6bef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC initialization in pin input only mode.  <br /></td></tr>
 <tr class="separator:ga67fe8b4aa9aaa52892d1bd5ab1b6bef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae9a1769ed42cd3171882232ff0302947" id="r_gae9a1769ed42cd3171882232ff0302947"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#gae9a1769ed42cd3171882232ff0302947">adc_init_open_drain</a>(p1_pin,  adrj_flag,  speed)</td></tr>
 <tr class="memdesc:gae9a1769ed42cd3171882232ff0302947"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC initialization in pin open drain mode.  <br /></td></tr>
 <tr class="separator:gae9a1769ed42cd3171882232ff0302947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6e678166816b8341b430912a0fd30268" id="r_ga6e678166816b8341b430912a0fd30268"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#ga6e678166816b8341b430912a0fd30268">adc_destroy</a>(void)</td></tr>
+<tr class="memdesc:ga6e678166816b8341b430912a0fd30268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinitialize ADC module.  <br /></td></tr>
+<tr class="separator:ga6e678166816b8341b430912a0fd30268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">sync</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>ADC sync routines </p>
+</div></td></tr>
 <tr class="memitem:ga2857b9efd36f8d5f11de3523c3fd74d8" id="r_ga2857b9efd36f8d5f11de3523c3fd74d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#ga2857b9efd36f8d5f11de3523c3fd74d8">adc_read_sync</a>(value)</td></tr>
 <tr class="memdesc:ga2857b9efd36f8d5f11de3523c3fd74d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC read routine.  <br /></td></tr>
 <tr class="separator:ga2857b9efd36f8d5f11de3523c3fd74d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">async</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>ADC async routines </p>
+</div></td></tr>
 <tr class="memitem:ga1ed306842c5d0e89d6a8100032a69aa0" id="r_ga1ed306842c5d0e89d6a8100032a69aa0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#ga1ed306842c5d0e89d6a8100032a69aa0">adc_async_read_start</a>()</td></tr>
 <tr class="memdesc:ga1ed306842c5d0e89d6a8100032a69aa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start async ADC read operation if not started.  <br /></td></tr>
 <tr class="separator:ga1ed306842c5d0e89d6a8100032a69aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,9 +170,6 @@ Macros</h2></td></tr>
 <tr class="memitem:gae7954164fa7cbba6947dbe04221c618c" id="r_gae7954164fa7cbba6947dbe04221c618c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#gae7954164fa7cbba6947dbe04221c618c">adc_async_get_result</a>()&#160;&#160;&#160;(test_if_bit_set(CLK_DIV, 1 &lt;&lt; <a class="el" href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">ADRJ_BIT</a>) ? (ADC_RESL &lt;&lt; <a class="el" href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a>) | (ADC_RES &amp; <a class="el" href="adc_8h.html#a73368454ae30fae5a5b7bb9ac95013a4">ADC_LOW_BITS_MSK</a>) : (ADC_RES &lt;&lt; <a class="el" href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a>)  | (ADC_RESL &amp; <a class="el" href="adc_8h.html#a73368454ae30fae5a5b7bb9ac95013a4">ADC_LOW_BITS_MSK</a>))</td></tr>
 <tr class="memdesc:gae7954164fa7cbba6947dbe04221c618c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Async get ADC result.  <br /></td></tr>
 <tr class="separator:gae7954164fa7cbba6947dbe04221c618c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6e678166816b8341b430912a0fd30268" id="r_ga6e678166816b8341b430912a0fd30268"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#ga6e678166816b8341b430912a0fd30268">adc_destroy</a>(void)</td></tr>
-<tr class="memdesc:ga6e678166816b8341b430912a0fd30268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinitialize ADC module.  <br /></td></tr>
-<tr class="separator:ga6e678166816b8341b430912a0fd30268"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>

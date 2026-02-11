@@ -8,7 +8,12 @@
  * 
  * @details Functions and data structures related to ADC module
  * 
- * TODO Describe sync and async modes
+ * ADC could be used in sync or async modes.
+ * 
+ * In sync mode read ADC result blocks until result is not ready.
+ * 
+ * In async mode read is started in non blocking mode. ADC ready
+ * raise an interrupt. 
  * 
  * @author Michael Golovanov
  */
@@ -52,6 +57,10 @@ typedef enum
     ADC_SPEED_90  = 0b01100000
 } adc_speed_t;
 
+/** @name init
+ *  ADC initializaion and destroy routines 
+ */
+///@{
 /**
  * @brief ADC initialization in pin input only mode
  * 
@@ -115,6 +124,36 @@ do {                                                    \
 } while(0)
 
 /**
+ * @brief Deinitialize ADC module
+ * 
+ * Stops ongoing conversion, clears status flag, and disables analog function 
+ * on all P1 pins.
+ * 
+ * @ingroup adc
+ */
+#define adc_destroy(void)                               \
+do {                                                    \
+    /* Stop ADC */                                      \
+    bit_clr(ADC_CONTR, ~(1 << ADC_START_BIT));          \
+    /* Clear ADC result ready flag */                   \
+    bit_clr(ADC_CONTR, ~(1 << ADC_FLAG_BIT));           \
+                                                        \
+    /* Set all gpio P1 port pins */                     \
+    /* as general purpose pins mode */                  \
+    P1ASF = 0;                                          \
+                                                        \
+    /* ADC power off*/                                  \
+    bit_clr(ADC_CONTR, ~ADC_POWER_ON_MSK);              \
+} while(0)
+
+///@}
+
+/** @name sync
+ *  ADC sync routines 
+ */
+///@{
+
+/**
  * @brief ADC read routine
  * 
  * @details Clear result ready ADC flag and start ADC.
@@ -142,6 +181,14 @@ do {                                                    \
         :                                               \
         (ADC_RES << ADC_LOW_BITS_COUNT)  | (ADC_RESL & ADC_LOW_BITS_MSK);\
 } while(0)
+
+///@}
+
+
+/** @name async
+ *  ADC async routines 
+ */
+///@{
 
 /**
  * @brief Start async ADC read operation if not started
@@ -194,29 +241,6 @@ do {                                                    \
  * @ingroup adc
  */
 #define adc_async_get_result() (test_if_bit_set(CLK_DIV, 1 << ADRJ_BIT) ? (ADC_RESL << ADC_LOW_BITS_COUNT) | (ADC_RES & ADC_LOW_BITS_MSK) : (ADC_RES << ADC_LOW_BITS_COUNT)  | (ADC_RESL & ADC_LOW_BITS_MSK))
-
-
-/**
- * @brief Deinitialize ADC module
- * 
- * Stops ongoing conversion, clears status flag, and disables analog function 
- * on all P1 pins.
- * 
- * @ingroup adc
- */
-#define adc_destroy(void)                               \
-do {                                                    \
-    /* Stop ADC */                                      \
-    bit_clr(ADC_CONTR, ~(1 << ADC_START_BIT));          \
-    /* Clear ADC result ready flag */                   \
-    bit_clr(ADC_CONTR, ~(1 << ADC_FLAG_BIT));           \
-                                                        \
-    /* Set all gpio P1 port pins */                     \
-    /* as general purpose pins mode */                  \
-    P1ASF = 0;                                          \
-                                                        \
-    /* ADC power off*/                                  \
-    bit_clr(ADC_CONTR, ~ADC_POWER_ON_MSK);              \
-} while(0)
+///@}
 
 #endif
