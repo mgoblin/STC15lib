@@ -180,8 +180,20 @@ do {                                                    \
  */
 #define adc_async_read_finish() (bit_clr(ADC_CONTR, ~(1 << ADC_FLAG_BIT)))
 
-uint16_t adc_async_get_result(void);
-
+/**
+ * @brief Async get ADC result
+ * 
+ * @details Retrieves the result of a completed asynchronous ADC conversion
+ * 
+ * This routine should be used inside ADC interrupt handler. Typically
+ * after call this routine adc_async_read_finish() should be called to 
+ * clear ADC result ready flag.
+ * 
+ * @return uint16_t 10-bit ADC result
+ * 
+ * @ingroup adc
+ */
+#define adc_async_get_result() (test_if_bit_set(CLK_DIV, 1 << ADRJ_BIT) ? (ADC_RESL << ADC_LOW_BITS_COUNT) | (ADC_RES & ADC_LOW_BITS_MSK) : (ADC_RES << ADC_LOW_BITS_COUNT)  | (ADC_RESL & ADC_LOW_BITS_MSK))
 
 
 /**

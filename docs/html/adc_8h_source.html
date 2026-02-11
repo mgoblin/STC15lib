@@ -181,28 +181,27 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="group__adc.html#gaf115fda1f311d9577cee589134d1f02c">  181</a></span><span class="preprocessor">#define adc_async_read_finish() (bit_clr(ADC_CONTR, ~(1 &lt;&lt; ADC_FLAG_BIT)))</span></div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>uint16_t adc_async_get_result(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="preprocessor">#define adc_async_get_result() (test_if_bit_set(CLK_DIV, 1 &lt;&lt; ADRJ_BIT) ? (ADC_RESL &lt;&lt; ADC_LOW_BITS_COUNT) | (ADC_RES &amp; ADC_LOW_BITS_MSK) : (ADC_RES &lt;&lt; ADC_LOW_BITS_COUNT)  | (ADC_RESL &amp; ADC_LOW_BITS_MSK))</span></div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
-<div class="foldopen" id="foldopen00195" data-start="" data-end="">
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="group__adc.html#ga6e678166816b8341b430912a0fd30268">  195</a></span><span class="preprocessor">#define adc_destroy(void)                               \</span></div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="preprocessor">do {                                                    \</span></div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="preprocessor">    </span><span class="comment">/* Stop ADC */</span><span class="preprocessor">                                      \</span></div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="preprocessor">    bit_clr(ADC_CONTR, ~(1 &lt;&lt; ADC_START_BIT));          \</span></div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="preprocessor">    </span><span class="comment">/* Clear ADC result ready flag */</span><span class="preprocessor">                   \</span></div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="preprocessor">    bit_clr(ADC_CONTR, ~(1 &lt;&lt; ADC_FLAG_BIT));           \</span></div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="preprocessor">                                                        \</span></div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="preprocessor">    </span><span class="comment">/* Set all gpio P1 port pins */</span><span class="preprocessor">                     \</span></div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="preprocessor">    </span><span class="comment">/* as general purpose pins mode */</span><span class="preprocessor">                  \</span></div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="preprocessor">    P1ASF = 0;                                          \</span></div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="preprocessor">                                                        \</span></div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="preprocessor">    </span><span class="comment">/* ADC power off*/</span><span class="preprocessor">                                  \</span></div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">    bit_clr(ADC_CONTR, ~ADC_POWER_ON_MSK);              \</span></div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor">} while(0)</span></div>
+<div class="foldopen" id="foldopen00194" data-start="" data-end="">
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="group__adc.html#ga6e678166816b8341b430912a0fd30268">  194</a></span><span class="preprocessor">#define adc_destroy(void)                               \</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="preprocessor">do {                                                    \</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="preprocessor">    </span><span class="comment">/* Stop ADC */</span><span class="preprocessor">                                      \</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="preprocessor">    bit_clr(ADC_CONTR, ~(1 &lt;&lt; ADC_START_BIT));          \</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="preprocessor">    </span><span class="comment">/* Clear ADC result ready flag */</span><span class="preprocessor">                   \</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="preprocessor">    bit_clr(ADC_CONTR, ~(1 &lt;&lt; ADC_FLAG_BIT));           \</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="preprocessor">                                                        \</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="preprocessor">    </span><span class="comment">/* Set all gpio P1 port pins */</span><span class="preprocessor">                     \</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="preprocessor">    </span><span class="comment">/* as general purpose pins mode */</span><span class="preprocessor">                  \</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="preprocessor">    P1ASF = 0;                                          \</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="preprocessor">                                                        \</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="preprocessor">    </span><span class="comment">/* ADC power off*/</span><span class="preprocessor">                                  \</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="preprocessor">    bit_clr(ADC_CONTR, ~ADC_POWER_ON_MSK);              \</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">} while(0)</span></div>
 </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="agpio_8h_html"><div class="ttname"><a href="gpio_8h.html">gpio.h</a></div></div>
 <div class="ttc" id="agroup__adc_html_gaa63b42a360b882a87434ae898707d473"><div class="ttname"><a href="group__adc.html#gaa63b42a360b882a87434ae898707d473">adc_speed_t</a></div><div class="ttdeci">adc_speed_t</div><div class="ttdoc">ADC speed enum.</div><div class="ttdef"><b>Definition</b> adc.h:44</div></div>
 <div class="ttc" id="agroup__adc_html_ggaa63b42a360b882a87434ae898707d473a7de5086482036ef10da72be2f5da9815"><div class="ttname"><a href="group__adc.html#ggaa63b42a360b882a87434ae898707d473a7de5086482036ef10da72be2f5da9815">ADC_SPEED_360</a></div><div class="ttdeci">@ ADC_SPEED_360</div><div class="ttdef"><b>Definition</b> adc.h:48</div></div>

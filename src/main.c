@@ -6,14 +6,6 @@
 #define ADC_P0_PIN 1
 #define LED P10
 
-uint16_t adc_async_get_result(void)
-{
-    return test_if_bit_set(CLK_DIV, 1 << ADRJ_BIT) ?  
-        (ADC_RESL << ADC_LOW_BITS_COUNT) | (ADC_RES & ADC_LOW_BITS_MSK)  
-        :                                               
-        (ADC_RES << ADC_LOW_BITS_COUNT)  | (ADC_RESL & ADC_LOW_BITS_MSK);
-}
-
 void adc_ISR(void) __interrupt(5)
 {
     if (adc_async_get_result())

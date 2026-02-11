@@ -75,8 +75,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle"><div class="title">adc.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -156,6 +155,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gaf115fda1f311d9577cee589134d1f02c" id="r_gaf115fda1f311d9577cee589134d1f02c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#gaf115fda1f311d9577cee589134d1f02c">adc_async_read_finish</a>()&#160;&#160;&#160;(bit_clr(ADC_CONTR, ~(1 &lt;&lt; <a class="el" href="adc_8h.html#ada1c239a8dc03fed4b4c1f4d6fe2df13">ADC_FLAG_BIT</a>)))</td></tr>
 <tr class="memdesc:gaf115fda1f311d9577cee589134d1f02c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear ADC result ready flag.  <br /></td></tr>
 <tr class="separator:gaf115fda1f311d9577cee589134d1f02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7954164fa7cbba6947dbe04221c618c" id="r_ae7954164fa7cbba6947dbe04221c618c"><td class="memItemLeft" align="right" valign="top"><a id="ae7954164fa7cbba6947dbe04221c618c" name="ae7954164fa7cbba6947dbe04221c618c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>adc_async_get_result</b>()&#160;&#160;&#160;(test_if_bit_set(CLK_DIV, 1 &lt;&lt; <a class="el" href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">ADRJ_BIT</a>) ? (ADC_RESL &lt;&lt; <a class="el" href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a>) | (ADC_RES &amp; <a class="el" href="adc_8h.html#a73368454ae30fae5a5b7bb9ac95013a4">ADC_LOW_BITS_MSK</a>) : (ADC_RES &lt;&lt; <a class="el" href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a>)  | (ADC_RESL &amp; <a class="el" href="adc_8h.html#a73368454ae30fae5a5b7bb9ac95013a4">ADC_LOW_BITS_MSK</a>))</td></tr>
+<tr class="separator:ae7954164fa7cbba6947dbe04221c618c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6e678166816b8341b430912a0fd30268" id="r_ga6e678166816b8341b430912a0fd30268"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#ga6e678166816b8341b430912a0fd30268">adc_destroy</a>(void)</td></tr>
 <tr class="memdesc:ga6e678166816b8341b430912a0fd30268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinitialize ADC module.  <br /></td></tr>
 <tr class="separator:ga6e678166816b8341b430912a0fd30268"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,12 +171,6 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gaa63b42a360b882a87434ae898707d473"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC speed enum.  <a href="group__adc.html#gaa63b42a360b882a87434ae898707d473">More...</a><br /></td></tr>
 <tr class="separator:gaa63b42a360b882a87434ae898707d473"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a19afa8b6d8cf0d29e8a29fe1be0edbe2" id="r_a19afa8b6d8cf0d29e8a29fe1be0edbe2"><td class="memItemLeft" align="right" valign="top"><a id="a19afa8b6d8cf0d29e8a29fe1be0edbe2" name="a19afa8b6d8cf0d29e8a29fe1be0edbe2"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>adc_async_get_result</b> (void)</td></tr>
-<tr class="separator:a19afa8b6d8cf0d29e8a29fe1be0edbe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="abf22e993bdb562f89f9d9cc343615b8b" name="abf22e993bdb562f89f9d9cc343615b8b"></a>

@@ -167,7 +167,7 @@
 
 0.14.0
 * TODO ADC interrupt example
-* Add ADC (analog to digital convertion) initial support
+* Add ADC (analog to digital convertion) support. No ref voltage feature.
 
 Next releases todo
 * TODO Add ADC reference voltage support
