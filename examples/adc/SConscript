@@ -9,4 +9,8 @@ env.Default (
         'adc_read_example', 
         ['adc_read_example.c', 'uart.c']
     ),
+    env.Program(
+        'adc_async_example', 
+        ['adc_async_example.c']
+    ),    
 )

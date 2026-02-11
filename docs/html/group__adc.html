@@ -125,7 +125,7 @@ Enumerations</h2></td></tr>
 <p>Functions and data structures related to ADC module</p>
 <p>ADC could be used in sync or async modes.</p>
 <p>In sync mode read ADC result blocks until result is not ready.</p>
-<p>In async mode read is started in non blocking mode. ADC ready raise an interrupt.</p>
+<p>In async mode read is started in non blocking mode. ADC ready raise an interrupt. In async mode mcu interrupts and ADC interrupt should be enabled before start reading.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="gae7954164fa7cbba6947dbe04221c618c" name="gae7954164fa7cbba6947dbe04221c618c"></a>
@@ -190,8 +190,8 @@ Enumerations</h2></td></tr>
 <div class="line">        bit_set(ADC_CONTR, 1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#a84aeff7f7cb774816c29ed00c0ad6551">ADC_START_BIT</a>);         \</div>
 <div class="line">    }                                                   \</div>
 <div class="line">} <span class="keywordflow">while</span>(0);</div>
-<div class="ttc" id="aadc_8h_html_a84aeff7f7cb774816c29ed00c0ad6551"><div class="ttname"><a href="adc_8h.html#a84aeff7f7cb774816c29ed00c0ad6551">ADC_START_BIT</a></div><div class="ttdeci">#define ADC_START_BIT</div><div class="ttdoc">ADC CONTR register ADC_START bit position.</div><div class="ttdef"><b>Definition</b> adc.h:28</div></div>
-<div class="ttc" id="agroup__adc_html_gaea9694f2a258f3234635db0ba42d95e6"><div class="ttname"><a href="group__adc.html#gaea9694f2a258f3234635db0ba42d95e6">is_adc_async_read_started</a></div><div class="ttdeci">#define is_adc_async_read_started()</div><div class="ttdoc">get ADC start and power flags</div><div class="ttdef"><b>Definition</b> adc.h:219</div></div>
+<div class="ttc" id="aadc_8h_html_a84aeff7f7cb774816c29ed00c0ad6551"><div class="ttname"><a href="adc_8h.html#a84aeff7f7cb774816c29ed00c0ad6551">ADC_START_BIT</a></div><div class="ttdeci">#define ADC_START_BIT</div><div class="ttdoc">ADC CONTR register ADC_START bit position.</div><div class="ttdef"><b>Definition</b> adc.h:29</div></div>
+<div class="ttc" id="agroup__adc_html_gaea9694f2a258f3234635db0ba42d95e6"><div class="ttname"><a href="group__adc.html#gaea9694f2a258f3234635db0ba42d95e6">is_adc_async_read_started</a></div><div class="ttdeci">#define is_adc_async_read_started()</div><div class="ttdoc">get ADC start and power flags</div><div class="ttdef"><b>Definition</b> adc.h:220</div></div>
 </div><!-- fragment -->
 <p>Start async ADC read operation if not started. </p>
 <p>Set ADC start flag if it does not set After that program is not bloked. When result is ready MCU generate ADC interrupt. <br  />
@@ -228,8 +228,8 @@ Enumerations</h2></td></tr>
 <div class="line">    <span class="comment">/* ADC power off*/</span>                                  \</div>
 <div class="line">    bit_clr(ADC_CONTR, ~<a class="code hl_define" href="adc_8h.html#abf22e993bdb562f89f9d9cc343615b8b">ADC_POWER_ON_MSK</a>);              \</div>
 <div class="line">} <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="aadc_8h_html_abf22e993bdb562f89f9d9cc343615b8b"><div class="ttname"><a href="adc_8h.html#abf22e993bdb562f89f9d9cc343615b8b">ADC_POWER_ON_MSK</a></div><div class="ttdeci">#define ADC_POWER_ON_MSK</div><div class="ttdef"><b>Definition</b> adc.h:34</div></div>
-<div class="ttc" id="aadc_8h_html_ada1c239a8dc03fed4b4c1f4d6fe2df13"><div class="ttname"><a href="adc_8h.html#ada1c239a8dc03fed4b4c1f4d6fe2df13">ADC_FLAG_BIT</a></div><div class="ttdeci">#define ADC_FLAG_BIT</div><div class="ttdoc">ADC CONTR register ADC_FLAG bit position.</div><div class="ttdef"><b>Definition</b> adc.h:30</div></div>
+<div class="ttc" id="aadc_8h_html_abf22e993bdb562f89f9d9cc343615b8b"><div class="ttname"><a href="adc_8h.html#abf22e993bdb562f89f9d9cc343615b8b">ADC_POWER_ON_MSK</a></div><div class="ttdeci">#define ADC_POWER_ON_MSK</div><div class="ttdef"><b>Definition</b> adc.h:35</div></div>
+<div class="ttc" id="aadc_8h_html_ada1c239a8dc03fed4b4c1f4d6fe2df13"><div class="ttname"><a href="adc_8h.html#ada1c239a8dc03fed4b4c1f4d6fe2df13">ADC_FLAG_BIT</a></div><div class="ttdeci">#define ADC_FLAG_BIT</div><div class="ttdoc">ADC CONTR register ADC_FLAG bit position.</div><div class="ttdef"><b>Definition</b> adc.h:31</div></div>
 </div><!-- fragment -->
 <p>Deinitialize ADC module. </p>
 <p>Stops ongoing conversion, clears status flag, and disables analog function on all P1 pins. </p>
@@ -283,7 +283,7 @@ Enumerations</h2></td></tr>
 <div class="line">        bit_set(CLK_DIV, 1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">ADRJ_BIT</a>) :               \</div>
 <div class="line">        bit_clr(CLK_DIV, ~(1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">ADRJ_BIT</a>));             \</div>
 <div class="line">} <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="aadc_8h_html_ae993a3a1347aa383067f3c7bc6cfce35"><div class="ttname"><a href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">ADRJ_BIT</a></div><div class="ttdeci">#define ADRJ_BIT</div><div class="ttdoc">CLKDIV register ADRJ bit position.</div><div class="ttdef"><b>Definition</b> adc.h:32</div></div>
+<div class="ttc" id="aadc_8h_html_ae993a3a1347aa383067f3c7bc6cfce35"><div class="ttname"><a href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">ADRJ_BIT</a></div><div class="ttdeci">#define ADRJ_BIT</div><div class="ttdoc">CLKDIV register ADRJ bit position.</div><div class="ttdef"><b>Definition</b> adc.h:33</div></div>
 </div><!-- fragment -->
 <p>ADC initialization in pin input only mode. </p>
 <p>Configures the ADC for 10-bit resolution, uses the internal voltage reference.</p>
@@ -389,8 +389,8 @@ Enumerations</h2></td></tr>
 <div class="line">        :                                               \</div>
 <div class="line">        (ADC_RES &lt;&lt; <a class="code hl_define" href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a>)  | (ADC_RESL &amp; <a class="code hl_define" href="adc_8h.html#a73368454ae30fae5a5b7bb9ac95013a4">ADC_LOW_BITS_MSK</a>);\</div>
 <div class="line">} <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="aadc_8h_html_a1a044b4ab4fe915cb6d9deb2ff38afe7"><div class="ttname"><a href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a></div><div class="ttdeci">#define ADC_LOW_BITS_COUNT</div><div class="ttdoc">ADC result shift offset.</div><div class="ttdef"><b>Definition</b> adc.h:37</div></div>
-<div class="ttc" id="aadc_8h_html_a73368454ae30fae5a5b7bb9ac95013a4"><div class="ttname"><a href="adc_8h.html#a73368454ae30fae5a5b7bb9ac95013a4">ADC_LOW_BITS_MSK</a></div><div class="ttdeci">#define ADC_LOW_BITS_MSK</div><div class="ttdoc">ADC result low bits mask.</div><div class="ttdef"><b>Definition</b> adc.h:39</div></div>
+<div class="ttc" id="aadc_8h_html_a1a044b4ab4fe915cb6d9deb2ff38afe7"><div class="ttname"><a href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a></div><div class="ttdeci">#define ADC_LOW_BITS_COUNT</div><div class="ttdoc">ADC result shift offset.</div><div class="ttdef"><b>Definition</b> adc.h:38</div></div>
+<div class="ttc" id="aadc_8h_html_a73368454ae30fae5a5b7bb9ac95013a4"><div class="ttname"><a href="adc_8h.html#a73368454ae30fae5a5b7bb9ac95013a4">ADC_LOW_BITS_MSK</a></div><div class="ttdeci">#define ADC_LOW_BITS_MSK</div><div class="ttdoc">ADC result low bits mask.</div><div class="ttdef"><b>Definition</b> adc.h:40</div></div>
 </div><!-- fragment -->
 <p>ADC read routine. </p>
 <p>Clear result ready ADC flag and start ADC. Waiting for result is ready (flag up). After ADC flag is up by hardware store result to value reference</p>

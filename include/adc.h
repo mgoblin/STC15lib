@@ -13,7 +13,8 @@
  * In sync mode read ADC result blocks until result is not ready.
  * 
  * In async mode read is started in non blocking mode. ADC ready
- * raise an interrupt. 
+ * raise an interrupt. In async mode mcu interrupts and ADC interrupt
+ * should be enabled before start reading. 
  * 
  * @author Michael Golovanov
  */

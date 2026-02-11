@@ -84,135 +84,135 @@ $(document).ready(function() { init_codefold(0); });
 <a href="adc_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef STC15_ADCH</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define STC15_ADCH</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="sys_8h.html">sys.h</a>&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;bits.h&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;<a class="code" href="gpio_8h.html">gpio.h</a>&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="adc_8h.html#a84aeff7f7cb774816c29ed00c0ad6551">   28</a></span><span class="preprocessor">#define ADC_START_BIT 3</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="adc_8h.html#ada1c239a8dc03fed4b4c1f4d6fe2df13">   30</a></span><span class="preprocessor">#define ADC_FLAG_BIT 4</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">   32</a></span><span class="preprocessor">#define ADRJ_BIT 5</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="adc_8h.html#abf22e993bdb562f89f9d9cc343615b8b">   34</a></span><span class="preprocessor">#define ADC_POWER_ON_MSK 0x80</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">   37</a></span><span class="preprocessor">#define ADC_LOW_BITS_COUNT 2</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="adc_8h.html#a73368454ae30fae5a5b7bb9ac95013a4">   39</a></span><span class="preprocessor">#define ADC_LOW_BITS_MSK 0x03</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="foldopen" id="foldopen00048" data-start="{" data-end="};">
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="group__adc.html#gaa63b42a360b882a87434ae898707d473">   48</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>{</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="group__adc.html#ggaa63b42a360b882a87434ae898707d473a841a03319c2efabe4127944ba8658984">   51</a></span>    <a class="code hl_enumvalue" href="group__adc.html#ggaa63b42a360b882a87434ae898707d473a841a03319c2efabe4127944ba8658984">ADC_SPEED_540</a> = 0b00000000,</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="group__adc.html#ggaa63b42a360b882a87434ae898707d473a7de5086482036ef10da72be2f5da9815">   53</a></span>    <a class="code hl_enumvalue" href="group__adc.html#ggaa63b42a360b882a87434ae898707d473a7de5086482036ef10da72be2f5da9815">ADC_SPEED_360</a> = 0b00100000,</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="group__adc.html#ggaa63b42a360b882a87434ae898707d473ac79d53ecc378839bd0befe114e8972c0">   55</a></span>    <a class="code hl_enumvalue" href="group__adc.html#ggaa63b42a360b882a87434ae898707d473ac79d53ecc378839bd0befe114e8972c0">ADC_SPEED_180</a> = 0b01000000,</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_enumvalue" href="group__adc.html#ggaa63b42a360b882a87434ae898707d473adf2851e0d4945fff972f045ae062daf0">ADC_SPEED_90</a>  = 0b01100000</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="group__adc.html#ggaa63b42a360b882a87434ae898707d473adf2851e0d4945fff972f045ae062daf0">   58</a></span>} <a class="code hl_enumeration" href="group__adc.html#gaa63b42a360b882a87434ae898707d473">adc_speed_t</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="sys_8h.html">sys.h</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;bits.h&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="gpio_8h.html">gpio.h</a>&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="adc_8h.html#a84aeff7f7cb774816c29ed00c0ad6551">   29</a></span><span class="preprocessor">#define ADC_START_BIT 3</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="adc_8h.html#ada1c239a8dc03fed4b4c1f4d6fe2df13">   31</a></span><span class="preprocessor">#define ADC_FLAG_BIT 4</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">   33</a></span><span class="preprocessor">#define ADRJ_BIT 5</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="adc_8h.html#abf22e993bdb562f89f9d9cc343615b8b">   35</a></span><span class="preprocessor">#define ADC_POWER_ON_MSK 0x80</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">   38</a></span><span class="preprocessor">#define ADC_LOW_BITS_COUNT 2</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="adc_8h.html#a73368454ae30fae5a5b7bb9ac95013a4">   40</a></span><span class="preprocessor">#define ADC_LOW_BITS_MSK 0x03</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="};">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="group__adc.html#gaa63b42a360b882a87434ae898707d473">   49</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>{</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="group__adc.html#ggaa63b42a360b882a87434ae898707d473a841a03319c2efabe4127944ba8658984">   52</a></span>    <a class="code hl_enumvalue" href="group__adc.html#ggaa63b42a360b882a87434ae898707d473a841a03319c2efabe4127944ba8658984">ADC_SPEED_540</a> = 0b00000000,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="group__adc.html#ggaa63b42a360b882a87434ae898707d473a7de5086482036ef10da72be2f5da9815">   54</a></span>    <a class="code hl_enumvalue" href="group__adc.html#ggaa63b42a360b882a87434ae898707d473a7de5086482036ef10da72be2f5da9815">ADC_SPEED_360</a> = 0b00100000,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="group__adc.html#ggaa63b42a360b882a87434ae898707d473ac79d53ecc378839bd0befe114e8972c0">   56</a></span>    <a class="code hl_enumvalue" href="group__adc.html#ggaa63b42a360b882a87434ae898707d473ac79d53ecc378839bd0befe114e8972c0">ADC_SPEED_180</a> = 0b01000000,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_enumvalue" href="group__adc.html#ggaa63b42a360b882a87434ae898707d473adf2851e0d4945fff972f045ae062daf0">ADC_SPEED_90</a>  = 0b01100000</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="group__adc.html#ggaa63b42a360b882a87434ae898707d473adf2851e0d4945fff972f045ae062daf0">   59</a></span>} <a class="code hl_enumeration" href="group__adc.html#gaa63b42a360b882a87434ae898707d473">adc_speed_t</a>;</div>
 </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="foldopen" id="foldopen00077" data-start="" data-end="">
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="group__adc.html#ga67fe8b4aa9aaa52892d1bd5ab1b6bef9">   77</a></span><span class="preprocessor">#define adc_init_input_only(p1_pin, adrj_flag, speed)   \</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">do {                                                    \</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">    </span><span class="comment">/* Set input only pin mode */</span><span class="preprocessor">                       \</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">    pin_input_only_init(P1, p1_pin);                    \</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">                                                        \</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">    </span><span class="comment">/* Set P1ASF bit for using pin as ADC input */</span><span class="preprocessor">      \</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">    bit_set(P1ASF, 1 &lt;&lt; p1_pin);                        \</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">                                                        \</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">    </span><span class="comment">/* Set ADC power on, speed and source channel pin */</span><span class="preprocessor">\</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">    ADC_CONTR = ADC_POWER_ON_MSK | p1_pin | speed;      \</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">                                                        \</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">    </span><span class="comment">/* Set ADC_RES-ADC_RESL or ADC_RESL-ADC_RES */</span><span class="preprocessor">      \</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">    </span><span class="comment">/* result bits order */</span><span class="preprocessor">                             \</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">    adrj_flag ?                                         \</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">        bit_set(CLK_DIV, 1 &lt;&lt; ADRJ_BIT) :               \</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">        bit_clr(CLK_DIV, ~(1 &lt;&lt; ADRJ_BIT));             \</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">} while(0)</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="foldopen" id="foldopen00078" data-start="" data-end="">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="group__adc.html#ga67fe8b4aa9aaa52892d1bd5ab1b6bef9">   78</a></span><span class="preprocessor">#define adc_init_input_only(p1_pin, adrj_flag, speed)   \</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">do {                                                    \</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">    </span><span class="comment">/* Set input only pin mode */</span><span class="preprocessor">                       \</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">    pin_input_only_init(P1, p1_pin);                    \</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">                                                        \</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">    </span><span class="comment">/* Set P1ASF bit for using pin as ADC input */</span><span class="preprocessor">      \</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">    bit_set(P1ASF, 1 &lt;&lt; p1_pin);                        \</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">                                                        \</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">    </span><span class="comment">/* Set ADC power on, speed and source channel pin */</span><span class="preprocessor">\</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">    ADC_CONTR = ADC_POWER_ON_MSK | p1_pin | speed;      \</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">                                                        \</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">    </span><span class="comment">/* Set ADC_RES-ADC_RESL or ADC_RESL-ADC_RES */</span><span class="preprocessor">      \</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">    </span><span class="comment">/* result bits order */</span><span class="preprocessor">                             \</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">    adrj_flag ?                                         \</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">        bit_set(CLK_DIV, 1 &lt;&lt; ADRJ_BIT) :               \</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">        bit_clr(CLK_DIV, ~(1 &lt;&lt; ADRJ_BIT));             \</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">} while(0)</span></div>
 </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="foldopen" id="foldopen00108" data-start="" data-end="">
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="group__adc.html#gae9a1769ed42cd3171882232ff0302947">  108</a></span><span class="preprocessor">#define adc_init_open_drain(p1_pin, adrj_flag, speed)   \</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">do {                                                    \</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">    </span><span class="comment">/* Set input only pin mode */</span><span class="preprocessor">                       \</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">    pin_open_drain_init(P1, p1_pin);                    \</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">                                                        \</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">    </span><span class="comment">/* Set P1ASF bit for using pin as ADC input */</span><span class="preprocessor">      \</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">    bit_set(P1ASF, 1 &lt;&lt; p1_pin);                        \</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">                                                        \</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">    </span><span class="comment">/* Set ADC power on, speed and source channel pin */</span><span class="preprocessor">\</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">    ADC_CONTR = ADC_POWER_ON_MSK | p1_pin | speed;      \</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">                                                        \</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">    </span><span class="comment">/* Set ADC_RES-ADC_RESL or ADC_RESL-ADC_RES */</span><span class="preprocessor">      \</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">    </span><span class="comment">/* result bits order */</span><span class="preprocessor">                             \</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">    adrj_flag ?                                         \</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="preprocessor">        bit_set(CLK_DIV, 1 &lt;&lt; ADRJ_BIT) :               \</span></div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">        bit_clr(CLK_DIV, ~(1 &lt;&lt; ADRJ_BIT));             \</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">} while(0)</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="foldopen" id="foldopen00109" data-start="" data-end="">
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="group__adc.html#gae9a1769ed42cd3171882232ff0302947">  109</a></span><span class="preprocessor">#define adc_init_open_drain(p1_pin, adrj_flag, speed)   \</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">do {                                                    \</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">    </span><span class="comment">/* Set input only pin mode */</span><span class="preprocessor">                       \</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">    pin_open_drain_init(P1, p1_pin);                    \</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">                                                        \</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">    </span><span class="comment">/* Set P1ASF bit for using pin as ADC input */</span><span class="preprocessor">      \</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">    bit_set(P1ASF, 1 &lt;&lt; p1_pin);                        \</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">                                                        \</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">    </span><span class="comment">/* Set ADC power on, speed and source channel pin */</span><span class="preprocessor">\</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">    ADC_CONTR = ADC_POWER_ON_MSK | p1_pin | speed;      \</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">                                                        \</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">    </span><span class="comment">/* Set ADC_RES-ADC_RESL or ADC_RESL-ADC_RES */</span><span class="preprocessor">      \</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">    </span><span class="comment">/* result bits order */</span><span class="preprocessor">                             \</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="preprocessor">    adrj_flag ?                                         \</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">        bit_set(CLK_DIV, 1 &lt;&lt; ADRJ_BIT) :               \</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">        bit_clr(CLK_DIV, ~(1 &lt;&lt; ADRJ_BIT));             \</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">} while(0)</span></div>
 </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="foldopen" id="foldopen00134" data-start="" data-end="">
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="group__adc.html#ga6e678166816b8341b430912a0fd30268">  134</a></span><span class="preprocessor">#define adc_destroy(void)                               \</span></div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="preprocessor">do {                                                    \</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="preprocessor">    </span><span class="comment">/* Stop ADC */</span><span class="preprocessor">                                      \</span></div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="preprocessor">    bit_clr(ADC_CONTR, ~(1 &lt;&lt; ADC_START_BIT));          \</span></div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="preprocessor">    </span><span class="comment">/* Clear ADC result ready flag */</span><span class="preprocessor">                   \</span></div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="preprocessor">    bit_clr(ADC_CONTR, ~(1 &lt;&lt; ADC_FLAG_BIT));           \</span></div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="preprocessor">                                                        \</span></div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="preprocessor">    </span><span class="comment">/* Set all gpio P1 port pins */</span><span class="preprocessor">                     \</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="preprocessor">    </span><span class="comment">/* as general purpose pins mode */</span><span class="preprocessor">                  \</span></div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="preprocessor">    P1ASF = 0;                                          \</span></div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="preprocessor">                                                        \</span></div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="preprocessor">    </span><span class="comment">/* ADC power off*/</span><span class="preprocessor">                                  \</span></div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="preprocessor">    bit_clr(ADC_CONTR, ~ADC_POWER_ON_MSK);              \</span></div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="preprocessor">} while(0)</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="foldopen" id="foldopen00135" data-start="" data-end="">
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="group__adc.html#ga6e678166816b8341b430912a0fd30268">  135</a></span><span class="preprocessor">#define adc_destroy(void)                               \</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="preprocessor">do {                                                    \</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="preprocessor">    </span><span class="comment">/* Stop ADC */</span><span class="preprocessor">                                      \</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="preprocessor">    bit_clr(ADC_CONTR, ~(1 &lt;&lt; ADC_START_BIT));          \</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="preprocessor">    </span><span class="comment">/* Clear ADC result ready flag */</span><span class="preprocessor">                   \</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="preprocessor">    bit_clr(ADC_CONTR, ~(1 &lt;&lt; ADC_FLAG_BIT));           \</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="preprocessor">                                                        \</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="preprocessor">    </span><span class="comment">/* Set all gpio P1 port pins */</span><span class="preprocessor">                     \</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="preprocessor">    </span><span class="comment">/* as general purpose pins mode */</span><span class="preprocessor">                  \</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="preprocessor">    P1ASF = 0;                                          \</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="preprocessor">                                                        \</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="preprocessor">    </span><span class="comment">/* ADC power off*/</span><span class="preprocessor">                                  \</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="preprocessor">    bit_clr(ADC_CONTR, ~ADC_POWER_ON_MSK);              \</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">} while(0)</span></div>
 </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
-<div class="foldopen" id="foldopen00168" data-start="" data-end="">
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="group__adc.html#ga2857b9efd36f8d5f11de3523c3fd74d8">  168</a></span><span class="preprocessor">#define adc_read_sync(value)                            \</span></div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="preprocessor">do {                                                    \</span></div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">    </span><span class="comment">/* Clear ADC result ready flag */</span><span class="preprocessor">                   \</span></div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="preprocessor">    bit_clr(ADC_CONTR, ~(1 &lt;&lt; ADC_FLAG_BIT));           \</span></div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="preprocessor">    </span><span class="comment">/* Set ADC power on */</span><span class="preprocessor">                              \</span></div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="preprocessor">    bit_set(ADC_CONTR, 1 &lt;&lt; ADC_START_BIT);             \</span></div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="preprocessor">                                                        \</span></div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="preprocessor">    </span><span class="comment">/* Waiting for ADC result is ready */</span><span class="preprocessor">               \</span></div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="preprocessor">    while (test_if_bit_cleared(ADC_CONTR, 1 &lt;&lt; ADC_FLAG_BIT));  \</span></div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="preprocessor">                                                        \</span></div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="preprocessor">    </span><span class="comment">/* Return ADC result value */</span><span class="preprocessor">                       \</span></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="preprocessor">    *value = test_if_bit_set(CLK_DIV, 1 &lt;&lt; ADRJ_BIT) ?  \</span></div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="preprocessor">        (ADC_RESL &lt;&lt; ADC_LOW_BITS_COUNT) | (ADC_RES &amp; ADC_LOW_BITS_MSK)  \</span></div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="preprocessor">        :                                               \</span></div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="preprocessor">        (ADC_RES &lt;&lt; ADC_LOW_BITS_COUNT)  | (ADC_RESL &amp; ADC_LOW_BITS_MSK);\</span></div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="preprocessor">} while(0)</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="foldopen" id="foldopen00169" data-start="" data-end="">
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="group__adc.html#ga2857b9efd36f8d5f11de3523c3fd74d8">  169</a></span><span class="preprocessor">#define adc_read_sync(value)                            \</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">do {                                                    \</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="preprocessor">    </span><span class="comment">/* Clear ADC result ready flag */</span><span class="preprocessor">                   \</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="preprocessor">    bit_clr(ADC_CONTR, ~(1 &lt;&lt; ADC_FLAG_BIT));           \</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="preprocessor">    </span><span class="comment">/* Set ADC power on */</span><span class="preprocessor">                              \</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="preprocessor">    bit_set(ADC_CONTR, 1 &lt;&lt; ADC_START_BIT);             \</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="preprocessor">                                                        \</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="preprocessor">    </span><span class="comment">/* Waiting for ADC result is ready */</span><span class="preprocessor">               \</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="preprocessor">    while (test_if_bit_cleared(ADC_CONTR, 1 &lt;&lt; ADC_FLAG_BIT));  \</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="preprocessor">                                                        \</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="preprocessor">    </span><span class="comment">/* Return ADC result value */</span><span class="preprocessor">                       \</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="preprocessor">    *value = test_if_bit_set(CLK_DIV, 1 &lt;&lt; ADRJ_BIT) ?  \</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="preprocessor">        (ADC_RESL &lt;&lt; ADC_LOW_BITS_COUNT) | (ADC_RES &amp; ADC_LOW_BITS_MSK)  \</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="preprocessor">        :                                               \</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="preprocessor">        (ADC_RES &lt;&lt; ADC_LOW_BITS_COUNT)  | (ADC_RESL &amp; ADC_LOW_BITS_MSK);\</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="preprocessor">} while(0)</span></div>
 </div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
-<div class="foldopen" id="foldopen00204" data-start="" data-end="">
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="group__adc.html#ga1ed306842c5d0e89d6a8100032a69aa0">  204</a></span><span class="preprocessor">#define adc_async_read_start()                          \</span></div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="preprocessor">do {                                                    \</span></div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="preprocessor">    if (!is_adc_async_read_started())                   \</span></div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">    {                                                   \</span></div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor">        bit_set(ADC_CONTR, 1 &lt;&lt; ADC_START_BIT);         \</span></div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="preprocessor">    }                                                   \</span></div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="preprocessor">} while(0);</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="foldopen" id="foldopen00205" data-start="" data-end="">
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="group__adc.html#ga1ed306842c5d0e89d6a8100032a69aa0">  205</a></span><span class="preprocessor">#define adc_async_read_start()                          \</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="preprocessor">do {                                                    \</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">    if (!is_adc_async_read_started())                   \</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor">    {                                                   \</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="preprocessor">        bit_set(ADC_CONTR, 1 &lt;&lt; ADC_START_BIT);         \</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="preprocessor">    }                                                   \</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="preprocessor">} while(0);</span></div>
 </div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="group__adc.html#gaea9694f2a258f3234635db0ba42d95e6">  219</a></span><span class="preprocessor">#define is_adc_async_read_started() (test_if_bit_set(ADC_CONTR, 1 &lt;&lt; ADC_START_BIT) &amp;&amp; (ADC_CONTR &amp; ADC_POWER_ON_MSK))</span></div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="group__adc.html#gaf115fda1f311d9577cee589134d1f02c">  228</a></span><span class="preprocessor">#define adc_async_read_finish() (bit_clr(ADC_CONTR, ~(1 &lt;&lt; ADC_FLAG_BIT)))</span></div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno"><a class="line" href="group__adc.html#gae7954164fa7cbba6947dbe04221c618c">  243</a></span><span class="preprocessor">#define adc_async_get_result() (test_if_bit_set(CLK_DIV, 1 &lt;&lt; ADRJ_BIT) ? (ADC_RESL &lt;&lt; ADC_LOW_BITS_COUNT) | (ADC_RES &amp; ADC_LOW_BITS_MSK) : (ADC_RES &lt;&lt; ADC_LOW_BITS_COUNT)  | (ADC_RESL &amp; ADC_LOW_BITS_MSK))</span></div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="group__adc.html#gaea9694f2a258f3234635db0ba42d95e6">  220</a></span><span class="preprocessor">#define is_adc_async_read_started() (test_if_bit_set(ADC_CONTR, 1 &lt;&lt; ADC_START_BIT) &amp;&amp; (ADC_CONTR &amp; ADC_POWER_ON_MSK))</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno"><a class="line" href="group__adc.html#gaf115fda1f311d9577cee589134d1f02c">  229</a></span><span class="preprocessor">#define adc_async_read_finish() (bit_clr(ADC_CONTR, ~(1 &lt;&lt; ADC_FLAG_BIT)))</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno"><a class="line" href="group__adc.html#gae7954164fa7cbba6947dbe04221c618c">  244</a></span><span class="preprocessor">#define adc_async_get_result() (test_if_bit_set(CLK_DIV, 1 &lt;&lt; ADRJ_BIT) ? (ADC_RESL &lt;&lt; ADC_LOW_BITS_COUNT) | (ADC_RES &amp; ADC_LOW_BITS_MSK) : (ADC_RES &lt;&lt; ADC_LOW_BITS_COUNT)  | (ADC_RESL &amp; ADC_LOW_BITS_MSK))</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="agpio_8h_html"><div class="ttname"><a href="gpio_8h.html">gpio.h</a></div></div>
-<div class="ttc" id="agroup__adc_html_gaa63b42a360b882a87434ae898707d473"><div class="ttname"><a href="group__adc.html#gaa63b42a360b882a87434ae898707d473">adc_speed_t</a></div><div class="ttdeci">adc_speed_t</div><div class="ttdoc">ADC speed enum.</div><div class="ttdef"><b>Definition</b> adc.h:49</div></div>
-<div class="ttc" id="agroup__adc_html_ggaa63b42a360b882a87434ae898707d473a7de5086482036ef10da72be2f5da9815"><div class="ttname"><a href="group__adc.html#ggaa63b42a360b882a87434ae898707d473a7de5086482036ef10da72be2f5da9815">ADC_SPEED_360</a></div><div class="ttdeci">@ ADC_SPEED_360</div><div class="ttdef"><b>Definition</b> adc.h:53</div></div>
-<div class="ttc" id="agroup__adc_html_ggaa63b42a360b882a87434ae898707d473a841a03319c2efabe4127944ba8658984"><div class="ttname"><a href="group__adc.html#ggaa63b42a360b882a87434ae898707d473a841a03319c2efabe4127944ba8658984">ADC_SPEED_540</a></div><div class="ttdeci">@ ADC_SPEED_540</div><div class="ttdef"><b>Definition</b> adc.h:51</div></div>
-<div class="ttc" id="agroup__adc_html_ggaa63b42a360b882a87434ae898707d473ac79d53ecc378839bd0befe114e8972c0"><div class="ttname"><a href="group__adc.html#ggaa63b42a360b882a87434ae898707d473ac79d53ecc378839bd0befe114e8972c0">ADC_SPEED_180</a></div><div class="ttdeci">@ ADC_SPEED_180</div><div class="ttdef"><b>Definition</b> adc.h:55</div></div>
-<div class="ttc" id="agroup__adc_html_ggaa63b42a360b882a87434ae898707d473adf2851e0d4945fff972f045ae062daf0"><div class="ttname"><a href="group__adc.html#ggaa63b42a360b882a87434ae898707d473adf2851e0d4945fff972f045ae062daf0">ADC_SPEED_90</a></div><div class="ttdeci">@ ADC_SPEED_90</div><div class="ttdef"><b>Definition</b> adc.h:57</div></div>
+<div class="ttc" id="agroup__adc_html_gaa63b42a360b882a87434ae898707d473"><div class="ttname"><a href="group__adc.html#gaa63b42a360b882a87434ae898707d473">adc_speed_t</a></div><div class="ttdeci">adc_speed_t</div><div class="ttdoc">ADC speed enum.</div><div class="ttdef"><b>Definition</b> adc.h:50</div></div>
+<div class="ttc" id="agroup__adc_html_ggaa63b42a360b882a87434ae898707d473a7de5086482036ef10da72be2f5da9815"><div class="ttname"><a href="group__adc.html#ggaa63b42a360b882a87434ae898707d473a7de5086482036ef10da72be2f5da9815">ADC_SPEED_360</a></div><div class="ttdeci">@ ADC_SPEED_360</div><div class="ttdef"><b>Definition</b> adc.h:54</div></div>
+<div class="ttc" id="agroup__adc_html_ggaa63b42a360b882a87434ae898707d473a841a03319c2efabe4127944ba8658984"><div class="ttname"><a href="group__adc.html#ggaa63b42a360b882a87434ae898707d473a841a03319c2efabe4127944ba8658984">ADC_SPEED_540</a></div><div class="ttdeci">@ ADC_SPEED_540</div><div class="ttdef"><b>Definition</b> adc.h:52</div></div>
+<div class="ttc" id="agroup__adc_html_ggaa63b42a360b882a87434ae898707d473ac79d53ecc378839bd0befe114e8972c0"><div class="ttname"><a href="group__adc.html#ggaa63b42a360b882a87434ae898707d473ac79d53ecc378839bd0befe114e8972c0">ADC_SPEED_180</a></div><div class="ttdeci">@ ADC_SPEED_180</div><div class="ttdef"><b>Definition</b> adc.h:56</div></div>
+<div class="ttc" id="agroup__adc_html_ggaa63b42a360b882a87434ae898707d473adf2851e0d4945fff972f045ae062daf0"><div class="ttname"><a href="group__adc.html#ggaa63b42a360b882a87434ae898707d473adf2851e0d4945fff972f045ae062daf0">ADC_SPEED_90</a></div><div class="ttdeci">@ ADC_SPEED_90</div><div class="ttdef"><b>Definition</b> adc.h:58</div></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
