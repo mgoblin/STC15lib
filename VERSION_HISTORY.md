@@ -167,8 +167,6 @@
 
 0.14.0
 * Add ADC (analog to digital convertion) support. No ref voltage feature.
-* TODO Add ADC reference voltage support
-* TODO Read byte from EEPROM via MOVC command implemented
 * TODO build examples using cmake
 * TODO Write utility to make hex file for the EEPROM
 * TODO Add utility to dump RAM 
