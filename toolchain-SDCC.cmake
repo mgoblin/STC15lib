@@ -36,11 +36,38 @@ set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
 set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
 
-function(ihx_to_hex bin)
-    add_custom_command( 
-        TARGET ${bin} POST_BUILD COMMAND  ${CMAKE_PACKIHX} ${bin}.ihx > ${bin}.hex
-        TARGET ${bin} POST_BUILD COMMAND  ${CMAKE_MAKEBIN} -p ${bin}.ihx ${bin}.bin
-        TARGET ${bin} POST_BUILD COMMAND  echo -n "Firmware bytes size: "
-        TARGET ${bin} POST_BUILD COMMAND  stat --format '%s' ${bin}.bin
-    )
-endfunction(ihx_to_hex)
+if(CMAKE_HOST_WIN32)
+    message(STATUS "Host system is Windows")
+    function(ihx_to_hex bin)
+        add_custom_command( 
+            TARGET ${bin} 
+            POST_BUILD 
+            COMMAND  ${CMAKE_PACKIHX} ${bin}.ihx > ${bin}.hex
+            COMMAND  ${CMAKE_MAKEBIN} -p ${bin}.ihx ${bin}.bin
+        )
+    endfunction(ihx_to_hex)
+
+elseif(CMAKE_HOST_APPLE)
+    message(STATUS "Host system is macOS")
+    function(ihx_to_hex bin)
+        add_custom_command( 
+            TARGET ${bin} 
+            POST_BUILD 
+            COMMAND  ${CMAKE_PACKIHX} ${bin}.ihx > ${bin}.hex 2>/dev/null
+            COMMAND  ${CMAKE_MAKEBIN} -p ${bin}.ihx ${bin}.bin
+        )
+    endfunction(ihx_to_hex)
+elseif(CMAKE_HOST_UNIX)
+    message(STATUS "Host system is Unix/Linux")
+    function(ihx_to_hex bin)
+        add_custom_command( 
+            TARGET ${bin} 
+            POST_BUILD 
+            COMMAND  ${CMAKE_PACKIHX} ${bin}.ihx > ${bin}.hex 2>/dev/null
+            COMMAND  ${CMAKE_MAKEBIN} -p ${bin}.ihx ${bin}.bin
+            COMMAND  echo -n "${bin} firmware size in bytes: " > "${CMAKE_CURRENT_BINARY_DIR}/${bin}.fsize"
+            COMMAND  stat --format '%s' ${bin}.bin >> "${CMAKE_CURRENT_BINARY_DIR}/${bin}.fsize"
+            COMMAND  cat "${CMAKE_CURRENT_BINARY_DIR}/${bin}.fsize" 
+        )
+    endfunction(ihx_to_hex)
+endif()
