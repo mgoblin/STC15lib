@@ -2,6 +2,10 @@ add_executable(adc_async_example
     adc_async_example.c
 )
 
+add_executable(adc_read_example
+    adc_read_example.c
+)
+
 target_include_directories(adc_async_example 
     PRIVATE "${CMAKE_SOURCE_DIR}/include"
 )
@@ -15,8 +19,11 @@ target_link_options(adc_async_example PRIVATE
   -mmcs51 --debug
 )
 
+target_link_libraries(adc_read_example PRIVATE stc15lib) 
+
 # Transform firmware ihx to hex
 ihx_to_hex(adc_async_example)
+ihx_to_hex(adc_read_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash
