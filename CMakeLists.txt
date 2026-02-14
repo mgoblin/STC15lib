@@ -20,4 +20,6 @@ include_directories(stc15lib
 
 add_subdirectory("src")
 
+add_subdirectory("examples/adc")
+
 
