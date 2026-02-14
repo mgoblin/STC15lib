@@ -6,20 +6,8 @@ add_executable(adc_read_example
     adc_read_example.c
 )
 
-target_include_directories(adc_async_example 
-    PRIVATE "${CMAKE_SOURCE_DIR}/include"
-)
-
-target_compile_options(adc_async_example PRIVATE
-  $<IF:$<COMPILE_LANGUAGE:C>, -mmcs51 --model-small --std-c23 --debug --no-xinit-opt --opt-code-size,>
-  $<IF:$<COMPILE_LANGUAGE:ASM>, -plosgff,>
-)
-
-target_link_options(adc_async_example PRIVATE
-  -mmcs51 --debug
-)
-
 target_link_libraries(adc_read_example PRIVATE stc15lib) 
+target_link_libraries(adc_async_example PRIVATE stc15lib) 
 
 # Transform firmware ihx to hex
 ihx_to_hex(adc_async_example)
