@@ -172,6 +172,8 @@
 * TODO generate docs during cmake build
 * TODO Write utility to make hex file for the EEPROM
 * TODO Add utility to dump RAM 
+* TODO Contributor guide
+* TODO Developer guide6
 
 Next releases todo
 * TODO UART1 support frame error
