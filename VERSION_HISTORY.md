@@ -166,7 +166,7 @@
 * Fix [issue #3](https://github.com/mgoblin/STC15lib/issues/3)
 
 0.14.0
-* Add ADC (analog to digital convertion) support. No ref voltage feature.
+* Add ADC (analog to digital convertion) support.
 * TODO build examples using cmake
 * TODO Write utility to make hex file for the EEPROM
 * TODO Add utility to dump RAM 
