@@ -64,7 +64,7 @@
  * 
  * @ingroup uart1_mode1_timer2_1T
  */
-typedef enum : unsigned long long
+typedef enum : unsigned int
 {
     /** @brief 1200 baudrate */
     baudrate_1200 = 0xF6FF,
