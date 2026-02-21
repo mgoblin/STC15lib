@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">STC15W408AS library<span id="projectnumber">&#160;0.14.0</span>
+   <div id="projectname">STC15W408AS library<span id="projectnumber">&#160;0.15.0</span>
    </div>
   </td>
  </tr>
@@ -83,19 +83,19 @@ Add library to your project</h2>
 <div class="fragment"><div class="line">[env:STC15W408AS]</div>
 <div class="line">platform = intel_mcs51</div>
 <div class="line">board = STC15W408AS</div>
-<div class="line">lib_deps = mgoblin/STC15 hardware@^0.14.0</div>
-</div><!-- fragment --><p> Where is 0.14.0 STC15 hardware library version.</p>
+<div class="line">lib_deps = mgoblin/STC15 hardware@^0.15.0</div>
+</div><!-- fragment --><p> Where is 0.15.0 STC15 hardware library version.</p>
 <p>As alternative in lib_deps line github link could be used.</p>
 <div class="fragment"><div class="line">[env:STC15W408AS]</div>
 <div class="line">platform = intel_mcs51</div>
 <div class="line">board = STC15W408AS</div>
-<div class="line">lib_deps = https://github.com/mgoblin/STC15lib#0.14.0</div>
-</div><!-- fragment --><p>Where is 0.14.0 STC15 hardware library github tag version.</p>
+<div class="line">lib_deps = https://github.com/mgoblin/STC15lib#</div>
+</div><!-- fragment --><p>Where is 0.15.0 STC15 hardware library github tag version.</p>
 <p>Each released library version has the tag in github repository.</p>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Low level STC15 prorgamming</h2>
 <p>You can directly manipulate to MCU registers from C-code. <a class="el" href="STC15Fxx_8h_source.html">STC15Fxx.h</a> should be included.</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;STC15Fxx.h&gt;</span> <span class="comment">// MCU SFR declarations </span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;STC15Fxx.h&gt;</span> <span class="comment">// MCU SFR declarations</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> main()</div>
 <div class="line">{</div>
