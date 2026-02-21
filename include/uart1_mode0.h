@@ -36,7 +36,11 @@
  * 
  * @ingroup uart1_mode0
  */
-typedef enum {
+typedef enum
+#ifdef C23ENUM
+ : unsigned long  
+#endif
+{
     baudrate_921600 = 921600U,
     baudrate_5529600 = 5529600U
 } uart1_mode0_baudrate_t;
