@@ -170,10 +170,10 @@
 * Electrical schema for adc examples added
 * Build examples using cmake
 * Generate docs during cmake build
-* TODO Write utility to make hex file for the EEPROM
-* TODO Add utility to dump RAM 
 
 Next releases todo
+* TODO Write utility to make hex file for the EEPROM
+* TODO Add utility to dump RAM 
 * TODO UART1 support frame error
 * TODO UART1 Automatic address recognition support
 * TODO UART1 Relay broadcast mode support
