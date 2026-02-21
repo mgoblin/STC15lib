@@ -64,7 +64,13 @@
  * 
  * @ingroup uart1_mode1_timer2_1T
  */
-typedef enum : unsigned int
+typedef enum 
+#ifdef C23ENUM
+// Platformio use SDCC 4.4.0 and does not support C23 standard
+// SDCC 4.5.0 use for CMake build and without : unsigned int 
+// generates warning.  
+: unsigned int
+#endif
 {
     /** @brief 1200 baudrate */
     baudrate_1200 = 0xF6FF,
