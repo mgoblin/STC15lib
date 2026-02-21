@@ -169,7 +169,7 @@
 * Add ADC (analog to digital convertion) support.
 * Electrical schema for adc examples added
 * Build examples using cmake
-* TODO generate docs during cmake build
+* Generate docs during cmake build
 * TODO Write utility to make hex file for the EEPROM
 * TODO Add utility to dump RAM 
 
