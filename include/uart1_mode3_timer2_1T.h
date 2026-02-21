@@ -66,6 +66,9 @@
  * @ingroup uart1_mode3_timer2_1T
  */
 typedef enum 
+#ifdef C23ENUM
+: unsigned int
+#endif
 {
     /** @brief 1200 baudrate */
     baudrate_1200 = 0xF6FF,
