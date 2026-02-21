@@ -173,7 +173,6 @@
 * TODO Write utility to make hex file for the EEPROM
 * TODO Add utility to dump RAM 
 * TODO Contributor guide
-* TODO Developer guide6
 
 Next releases todo
 * TODO UART1 support frame error
@@ -182,5 +181,6 @@ Next releases todo
 * TODO is PCON SMOD bit really doble baud rate in mode 1, 2, 3?
 * TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms
 * TODO Review wakeup timer routines. Move from ticks to ms
+* TODO Contributor guide
 
 
