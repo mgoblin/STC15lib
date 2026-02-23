@@ -1,5 +1,7 @@
 Import("env")
 
+env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
+
 env.Default (
-    env.Program('mem_dump', ['mem_dump.c'])
+    env.Program('mem_dump', ['mem_dump.c', 'uart.c'])
 )
