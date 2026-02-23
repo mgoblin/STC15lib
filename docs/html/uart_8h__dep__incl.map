@@ -1,5 +1,7 @@
 <map id="include/uart.h" name="include/uart.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="79,5,190,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="197,5,307,31"/>
 <area shape="rect" id="Node000002" href="$counter0__mode1__example_8c.html" title=" " alt="" coords="5,79,264,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,44,137,79,132,79,132,44"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="225,40,164,81,162,76,222,36"/>
+<area shape="rect" id="Node000003" href="$mem__print_8h_source.html" title=" " alt="" coords="287,79,454,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="282,36,344,76,341,81,279,41"/>
 </map>
