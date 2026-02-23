@@ -18,18 +18,6 @@
 /** Dont clear memory */
 void _mcs51_genRAMCLEAR() {}
 
-void hex_to_string(uint8_t hex, char str_buffer[3])
-{
-    
-    __itoa(hex, str_buffer, 16);
-    if (hex < 0x10)
-    {
-        str_buffer[1] = str_buffer[0];
-        str_buffer[0] = '0';
-    }
-    str_buffer[2] = 0;
-}
-
 void main()
 {
     uart1_init(115200);
@@ -39,28 +27,28 @@ void main()
     while(1)
     {
         uint8_t address = START_DUMP_ADDR;
-        char str_buffer[3];
 
-        // print dump header
+        // print dump header row
         printf_tiny("      0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F\r\n");
 
         for(uint8_t row = 0; row < row_count; row++)
         {
-            hex_to_string(address, str_buffer);
-            printf_tiny("0x%s ", str_buffer);
+            address < 0x10 ? 
+                printf_tiny("0x0%x", address) : printf_tiny("0x%x", address);
+            
             for(uint8_t column = 0; column < ROW_LENGTH; column++)
             {
                 __idata uint8_t *data_address;
                 data_address = (__idata uint8_t *) address;
-                hex_to_string(*data_address, str_buffer);
-                printf_tiny("|");
-                printf_tiny("%s", str_buffer);
+                *data_address < 0x10 ?
+                    printf_tiny("|0%x", *data_address): printf_tiny("|%x", *data_address);
                 address++;
             }
+
             printf_tiny("|\r\n");
         }
 
-        // print dump footer
+        // print dump footer row
         printf_tiny("      0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F\r\n");
     }
 } 
