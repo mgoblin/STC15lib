@@ -12,4 +12,4 @@ if verbose == 0:
 
 base_dir = env.subst("$BUILD_DIR") + "/utils"
 
-SConscript('memory_dumper/SConscript', exports = 'env', variant_dir= base_dir + "/bits")
+SConscript('memory_dumper/SConscript', exports = 'env', variant_dir= base_dir + "/memory_dumper")
