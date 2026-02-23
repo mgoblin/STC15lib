@@ -172,16 +172,17 @@
 * Generate docs during cmake build
 
 0.15.0
-* Add utility to dump idata RAM (first 256 RAM bytes)
+* Add utility to dump idata RAM (first 256 RAM)
 * TODO Write utility to make hex file for the EEPROM
+* TODO Review wakeup timer routines. Move from ticks to ms
+* TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms
+
 
 Next releases todo
 * TODO UART1 support frame error
 * TODO UART1 Automatic address recognition support
 * TODO UART1 Relay broadcast mode support
-* TODO is PCON SMOD bit really doble baud rate in mode 1, 2, 3?
-* TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms
-* TODO Review wakeup timer routines. Move from ticks to ms
+* TODO is PCON SMOD bit really double baud rate in mode 1, 2, 3?
 * TODO Contributor guide
 
 
