@@ -16,5 +16,6 @@ var searchData=
   ['disable_5ftimer0_5finterrupt_13',['disable_timer0_interrupt',['../group__interrupts.html#ga2ef6ebd3211c16ce240018d22589e8da',1,'interrupt.h']]],
   ['disable_5ftimer2_5finterrupt_14',['disable_timer2_interrupt',['../group__interrupts.html#gac8daf51c922df876c57f419b63996dd5',1,'interrupt.h']]],
   ['disable_5fuart1_5finterrupt_15',['disable_uart1_interrupt',['../group__interrupts.html#ga5dac79f9182e6dc1a31448a28ee0a162',1,'interrupt.h']]],
-  ['documentation_16',['Library documentation',['../index.html#autotoc_md6',1,'']]]
+  ['documentation_16',['Library documentation',['../index.html#autotoc_md6',1,'']]],
+  ['dumper_17',['Memmory dumper',['../md_utils_2memory__dumper_2README.html',1,'']]]
 ];
