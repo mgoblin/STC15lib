@@ -10,9 +10,11 @@
 
 #define ROW_LENGTH 16
 
+#define UART_BAUD_RATE 115200
+
 void main()
 {
-    uart1_init(115200);
+    uart1_init(UART_BAUD_RATE);
 
     while(1)
     {

@@ -173,7 +173,6 @@
 
 0.15.0
 * Add utility to dump idata RAM (first 256 RAM bytes)
-* TODO Add README.md for memory dumper  
 * TODO Write utility to make hex file for the EEPROM
 
 Next releases todo
