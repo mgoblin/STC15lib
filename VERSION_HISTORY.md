@@ -172,8 +172,9 @@
 * Generate docs during cmake build
 
 0.15.0
+* Add utility to dump RAM
+* TODO Add README.md for memory dumper  
 * TODO Write utility to make hex file for the EEPROM
-* TODO Add utility to dump RAM 
 
 Next releases todo
 * TODO UART1 support frame error

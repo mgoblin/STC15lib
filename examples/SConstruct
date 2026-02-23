@@ -18,7 +18,6 @@ SConscript('counter/SConscript', exports = 'env', variant_dir= base_dir + '/coun
 SConscript('delay/SConscript', exports = 'env', variant_dir= base_dir + '/delay')
 SConscript('frequency/SConscript', exports = 'env', variant_dir= base_dir + '/frequency')
 SConscript('interrupt/SConscript', exports = 'env', variant_dir= base_dir + '/interrupt')
-SConscript('memory_dumper/SConscript', exports = 'env', variant_dir= base_dir + '/memory_dumper')
 SConscript('power_management/SConscript', exports = 'env', variant_dir= base_dir + '/power_management')
 SConscript('reset/SConscript', exports = 'env', variant_dir= base_dir + '/reset')
 SConscript('timer/SConscript', exports = 'env', variant_dir= base_dir + '/timer')

@@ -20,6 +20,7 @@ include_directories(stc15lib
 
 add_subdirectory("src")
 add_subdirectory("examples")
+add_subdirectory("utils")
 
 find_package(Doxygen REQUIRED dot)
 if(Doxygen_FOUND)
