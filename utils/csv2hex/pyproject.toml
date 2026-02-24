@@ -1,5 +1,5 @@
 [project]
-name = "csv2hex_writer"
+name = "csv2hex"
 description = "csv to intel hex file converter"
 version = "0.0.1"
 authors = [
