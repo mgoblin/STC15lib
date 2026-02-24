@@ -1,7 +1,0 @@
-Metadata-Version: 2.4
-Name: csv2hex_writer
-Version: 0.0.1
-Summary: csv to intel hex file converter
-Author-email: Michael Golovanov <mike.golovanov@gmail.com>
-Requires-Dist: intelhex
-Provides-Extra: dev
