@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/csv2hex.py
+src/csv2hex_writer.egg-info/PKG-INFO
+src/csv2hex_writer.egg-info/SOURCES.txt
+src/csv2hex_writer.egg-info/dependency_links.txt
+src/csv2hex_writer.egg-info/requires.txt
+src/csv2hex_writer.egg-info/top_level.txt

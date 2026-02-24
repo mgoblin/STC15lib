@@ -1,0 +1,19 @@
+[project]
+name = "csv2hex_writer"
+description = "csv to intel hex file converter"
+version = "0.0.1"
+authors = [
+    { name = "Michael Golovanov", email = "mike.golovanov@gmail.com" }
+]
+
+dependencies = [
+    "intelhex"
+]
+
+[project.optional-dependencies]
+dev = [
+]
+
+[build-system]
+requires = ["setuptools>=61.0"] # Minimum version for pyproject.toml support
+build-backend = "setuptools.build_meta"
