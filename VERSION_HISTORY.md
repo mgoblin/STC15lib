@@ -173,7 +173,10 @@
 
 0.15.0
 * Add utility to dump idata RAM (first 256 RAM)
-* TODO Write utility to make hex file for the EEPROM
+* Write utility to make hex file from csv
+* Document utility (README and source code) to make hex file from csv
+* bug: copy eerprom_data.hex on cmake build eeprom examples
+* bug: Cmake firmware size is not equals to platfromio build size and cmake builded firmware doesnt work correctly with UART
 * TODO Review wakeup timer routines. Move from ticks to ms
 * TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms
 
