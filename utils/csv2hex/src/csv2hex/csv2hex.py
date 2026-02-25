@@ -30,20 +30,27 @@ def read_csv_content(f):
         # Ensure the file is closed
         f.close()
 
+def parse_csv(csv_content):
+    string_io = io.StringIO(csv_content)
+    csv_reader = csv.reader(string_io)
+    parsed_data = []
+    for row in csv_reader:
+        parsed_data.append(row)
+    return sum(parsed_data, [])
+
+def convert_to_hex_num(str_data):
+    return int(str_data.strip(), 16)
+
 def main():
     args = parse_agrs()
     csv_content = read_csv_content(args.i)
 
-    print(csv_content)
+    parsed_data = [convert_to_hex_num(item) for item in parse_csv(csv_content) if convert_to_hex_num(item)]
 
-    string_io = io.StringIO(csv_content)
-    csvreader = csv.reader(string_io)
-
-    parsed_data = []
-    for row in csvreader:
-        parsed_data.append(row)
-
-    print(sum(parsed_data, []))
+    ih = IntelHex()
+    start_addr = 0
+    ih.fromdict({addr: val for addr, val in enumerate(parsed_data, start=start_addr)})
+    ih.tofile(args.o, format='hex')
 
 if __name__ == "__main__":
     main()
