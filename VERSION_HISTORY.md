@@ -183,6 +183,7 @@
 
 
 Next releases todo
+* TODO memory dump not only idata but all memory too
 * TODO UART1 support frame error
 * TODO UART1 Automatic address recognition support
 * TODO UART1 Relay broadcast mode support
