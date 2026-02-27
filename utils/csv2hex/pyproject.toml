@@ -9,7 +9,8 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "intelhex (>=2.3.0,<3.0.0)",
-    "argparse (>=1.4.0,<2.0.0)"
+    "argparse (>=1.4.0,<2.0.0)",
+    "coverage (>=7.13.4,<8.0.0)"
 ]
 
 [tool.poetry]

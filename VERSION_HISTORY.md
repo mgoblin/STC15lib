@@ -174,7 +174,6 @@
 0.15.0
 * Add utility to dump idata RAM (first 256 RAM)
 * Write utility to make hex file from csv
-* TODO Unit tests for csv2hex utility 
 * TODO bug: copy eerprom_data.hex on cmake build eeprom examples
 * TODO bug: Cmake firmware size is not equals to platfromio build size and cmake builded firmware doesnt work correctly with UART
 * TODO Calculate correctly firmware size on cmake build 

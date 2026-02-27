@@ -79,7 +79,21 @@ What is it</h1>
 <h1><a class="anchor" id="autotoc_md11"></a>
 csv2hex usage</h1>
 <div class="fragment"><div class="line">python3 csv2hex.py [-i csv file name] [-o hex file name]</div>
-</div><!-- fragment --><p>When no input file is specified with -i, the converter will automatically look for a file named input.csv. Likewise, if the output file is not defined with -o, the resulting Intel Hex file will be saved as output.hex. </p>
+</div><!-- fragment --><p>When no input file is specified with -i, the converter will automatically look for a file named input.csv. Likewise, if the output file is not defined with -o, the resulting Intel Hex file will be saved as output.hex.</p>
+<h1><a class="anchor" id="autotoc_md12"></a>
+How to run unit tests from terminal on Linux</h1>
+<p>Run all commands from csv2hex folder.</p>
+<ol type="1">
+<li>Acivate virtual env <div class="fragment"><div class="line"> bash</div>
+<div class="line">source .venv/bin/activate</div>
+</div><!-- fragment --></li>
+<li>Run unittests <div class="fragment"><div class="line">poetry run python -m unittest discover tests</div>
+</div><!-- fragment --></li>
+<li>Run unit tests with coverate <div class="fragment"><div class="line">poetry run coverage run -m unittest discover tests</div>
+</div><!-- fragment --></li>
+<li>Make HTML test coverage report <div class="fragment"><div class="line">poetry run coverage html</div>
+</div><!-- fragment --> Open index.html from htmlcov subfolder. </li>
+</ol>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

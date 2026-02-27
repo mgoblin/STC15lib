@@ -64,8 +64,9 @@ var searchData=
   ['uart1_5fsend_5fbyte_5fodd_5fparity_61',['uart1_send_byte_odd_parity',['../group__uart1__9bit__shared.html#gac3030b62d39529414e0ce05553d843b9',1,'uart1_9bit_shared.h']]],
   ['uart1_5fsend_5fbyte_5fspace_5fparity_62',['uart1_send_byte_space_parity',['../group__uart1__9bit__shared.html#gae0fa44b6ce18040906cc04d728ce0b1b',1,'uart1_9bit_shared.h']]],
   ['uart1_5fshared_2eh_63',['uart1_shared.h',['../uart1__shared_8h.html',1,'']]],
-  ['usage_64',['csv2hex usage',['../md_utils_2csv2hex_2README.html#autotoc_md11',1,'']]],
-  ['use_20it_65',['How to use it',['../index.html#autotoc_md1',1,'']]],
-  ['use_20stc15_20hal_20functions_66',['Use STC15 HAL functions',['../index.html#autotoc_md4',1,'']]],
-  ['utility_67',['csv2hex utility',['../md_utils_2csv2hex_2README.html',1,'']]]
+  ['unit_20tests_20from_20terminal_20on_20linux_64',['How to run unit tests from terminal on Linux',['../md_utils_2csv2hex_2README.html#autotoc_md12',1,'']]],
+  ['usage_65',['csv2hex usage',['../md_utils_2csv2hex_2README.html#autotoc_md11',1,'']]],
+  ['use_20it_66',['How to use it',['../index.html#autotoc_md1',1,'']]],
+  ['use_20stc15_20hal_20functions_67',['Use STC15 HAL functions',['../index.html#autotoc_md4',1,'']]],
+  ['utility_68',['csv2hex utility',['../md_utils_2csv2hex_2README.html',1,'']]]
 ];
