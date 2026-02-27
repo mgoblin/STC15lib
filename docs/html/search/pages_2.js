@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['is_0',['What it is',['../index.html',1,'']]],
-  ['it_20is_1',['What it is',['../index.html',1,'']]]
+  ['history_0',['Version history',['../md_VERSION__HISTORY.html',1,'']]]
 ];

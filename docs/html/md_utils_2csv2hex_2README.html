@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>STC15W408AS library: README</title>
+<title>STC15W408AS library: csv2hex utility</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,10 +69,18 @@ $(function() {
 
 </div><!-- top -->
 <div><div class="header">
-  <div class="headertitle"><div class="title">README</div></div>
+  <div class="headertitle"><div class="title">csv2hex utility</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"></div></div><!-- contents -->
+<div class="textblock"><p><a class="anchor" id="autotoc_md9"></a> </p>
+<h1><a class="anchor" id="autotoc_md10"></a>
+What is it</h1>
+<p>This converter takes a CSV file and transforms it into an Intel Hex file. Its main purpose is to generate firmware for programming EEPROMs.</p>
+<h1><a class="anchor" id="autotoc_md11"></a>
+csv2hex usage</h1>
+<div class="fragment"><div class="line">python3 csv2hex.py [-i csv file name] [-o hex file name]</div>
+</div><!-- fragment --><p>When no input file is specified with -i, the converter will automatically look for a file named input.csv. Likewise, if the output file is not defined with -o, the resulting Intel Hex file will be saved as output.hex. </p>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
