@@ -10,7 +10,7 @@
 
 #define LED P10
 
-void timerISR() __interrupt(1)
+void timerISR() __interrupt(INTERRUPT_TIMER0)
 {
     LED = !LED;
 }
@@ -34,6 +34,6 @@ void main()
     timer0_mode2_start(0xff);
 
     while(1) {
-        printf_fast("100* timer frequency is %luHz\r\n", timer_frequency);
+        printf_fast("100* timer frequency is %luHz\r\n", timer_frequency >> 1);
     }
 }

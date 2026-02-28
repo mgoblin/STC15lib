@@ -10,7 +10,7 @@
 #define TICKS 0xffff
 char fstr[32];
 
-void timerISR() __interrupt(1)
+void timerISR() __interrupt(INTERRUPT_TIMER0)
 {
     LED = !LED;
 }
@@ -26,7 +26,7 @@ void main()
     timer0_mode0_start(TICKS);
 
     uint32_t timer_frequency = timer0_uint16_ticks_to_freq100(TICKS);
-    __ultoa(timer_frequency, fstr, 10);
+    __ultoa(timer_frequency >> 1, fstr, 10);
 
     while (1) {
         delay_ms(200);

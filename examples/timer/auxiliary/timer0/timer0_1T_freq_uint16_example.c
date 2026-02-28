@@ -12,7 +12,7 @@
 #define LED P10
 #define TICKS 0x0000 // uint16 modify to change timer frequency
 
-void timerISR() __interrupt(1)
+void timerISR() __interrupt(INTERRUPT_TIMER0)
 {
     LED = !LED;
 }
@@ -31,7 +31,7 @@ void main()
     uart1_init(9600);
     while (1) 
     {
-       printf_fast("100 * timer frequency is %lu Hz\r\n", timer_frequency); 
+       printf_fast("100 * timer frequency is %lu Hz\r\n", timer_frequency >> 1); 
        delay_ms(100);
     }
 }
