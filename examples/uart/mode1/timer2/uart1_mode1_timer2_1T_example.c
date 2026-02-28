@@ -6,13 +6,7 @@
 
 #include <uart1_mode1_timer2_1T.h>
 
-#include <delay.h>
-
 #define LED P10
-
-void uart1_ISR(void) __interrupt(4)
-{
-}
 
 void main(void)
 {
@@ -25,7 +19,6 @@ void main(void)
 
         uint8_t byte = 0x00;
         uart1_receive_byte(byte);
-        delay_ms(1000);
 
         LED = 1;
 
@@ -36,7 +29,5 @@ void main(void)
         uart1_send_byte('k');
         uart1_send_byte('\r');
         uart1_send_byte('\n');
-
-        delay_ms(2000);
     }
 }

@@ -109,7 +109,7 @@ typedef enum
 do {                                        \
                                             \
     enable_mcu_interrupts();                \
-    enable_uart1_interrupt();               \
+    disable_uart1_interrupt();              \
     disable_timer2_interrupt();             \
                                             \
     PCON &= 0x3F;                           \
