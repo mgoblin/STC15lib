@@ -37,6 +37,9 @@
  * @ingroup uart1_mode0
  */
 typedef enum
+#if __SDCC_VERSION_MAJOR == 4 && __SDCC_VERSION_MINOR >= 5
+    : uint32_t
+#endif
 {
     baudrate_921600 = 921600U,
     baudrate_5529600 = 5529600U
@@ -62,7 +65,7 @@ typedef enum
 do                                                  \
 {                                                   \
     enable_mcu_interrupts();                        \
-    enable_uart1_interrupt();                       \
+    disable_uart1_interrupt();                      \
     PCON &= 0x3F;                                   \
     SCON = 0;                                       \
     baudRate == baudrate_921600 ?                   \
