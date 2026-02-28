@@ -24,6 +24,7 @@ void uart1ISR() __interrupt(4)
 void main()
 {
     uart1_mode2_init(RxD_P30_TxD_P31, baudrate_345600);
+    enable_uart1_interrupt();
 	
     while(1)
     {

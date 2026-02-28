@@ -36,6 +36,9 @@
  * @ingroup uart1_mode2
  */
 typedef enum 
+#if __SDCC_VERSION_MAJOR == 4 && __SDCC_VERSION_MINOR >= 5
+    : uint32_t
+#endif
 {
     baudrate_172800 = 172800U,
     baudrate_345600 = 345600U
@@ -61,7 +64,7 @@ typedef enum
 #define uart1_mode2_init(pins, baudRate)                                        \
 do {                                                                            \
     enable_mcu_interrupts();                                                    \
-    enable_uart1_interrupt();                                                   \
+    disable_uart1_interrupt();                                                  \
                                                                                 \
     /* PCON.7 always set to 1. Is it error? */                                  \
     baudRate == baudrate_345600 ? bit_set(PCON, SBIT7) : bit_clr(PCON, SBIT7);  \

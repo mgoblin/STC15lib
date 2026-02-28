@@ -12,8 +12,8 @@ env.Default(
     ),
 
     env.Program(
-        'uart1_mode2_receive_odd_parity_example',
-        ['uart1_mode2_receive_odd_parity_example.c'],
+        'uart1_mode2_receive_even_parity_example',
+        ['uart1_mode2_receive_even_parity_example.c'],
     ),
 
 )

@@ -2,7 +2,7 @@
  * This is an example of how to use uart1 in mode2.
  * 
  * baudrate = 345600
- * 8 bits - Odd parity - 1 stop bit
+ * 8 bits - Even parity - 1 stop bit
  * 
  * Echo received data
  * 
