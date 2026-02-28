@@ -21,7 +21,7 @@
 #define LED P10
 #define COUNTER_INIT_VALUE 65435U // Initial counter value
 
-void timer0ISR(void) __interrupt(1)
+void timer0ISR(void) __interrupt(INTERRUPT_COUNTER0)
 {
     LED = !LED;
 }

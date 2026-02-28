@@ -75,6 +75,13 @@
  * @ingroup interrupts
  */
 #define INTERRUPT_INT0 0
+
+/**
+ * @brief TIMER0 interrupt number for counter mode
+ * 
+ * @ingroup interrups
+ */
+#define INTERRUPT_COUNTER0 1
 /** 
  * Interrupt priority enumeration
  * 

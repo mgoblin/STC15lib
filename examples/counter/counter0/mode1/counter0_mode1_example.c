@@ -30,7 +30,7 @@
 #define LED_ON 0
 
 /// @brief Counter0 interrupt service routine
-void counter0ISR() __interrupt(1)
+void counter0ISR() __interrupt(INTERRUPT_COUNTER0)
 {
     printf_tiny("Counter is full and counter will be stoped\r\n");
 

@@ -12,7 +12,7 @@
 
 uint16_t isr_calls_count = 0;
 
-void counter0_ISR() __interrupt(1)
+void counter0_ISR() __interrupt(INTERRUPT_COUNTER0)
 {
     isr_calls_count++;
 
