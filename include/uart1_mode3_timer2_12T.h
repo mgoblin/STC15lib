@@ -66,6 +66,9 @@
  * @ingroup uart1_mode3_timer2_12T
  */
 typedef enum 
+#if __SDCC_VERSION_MAJOR == 4 && __SDCC_VERSION_MINOR >= 5
+    : uint16_t
+#endif
 {
     /** @brief 1200 baudrate */
     baudrate_1200 = 0xFF3F,
@@ -92,12 +95,14 @@ typedef enum
  * 
  * @note Must be called before starting UART communication
  * 
+ * @attention This routine disables uart1 interrupt.
+ * 
  * @ingroup uart1_mode3_timer2_12T
  */
 #define uart1_mode3_timer2_12T_init(pins)                       \
 do {                                                            \
     enable_mcu_interrupts();                                    \
-    enable_uart1_interrupt();                                   \
+    disable_uart1_interrupt();                                  \
     disable_timer2_interrupt();                                 \
                                                                 \
     PCON &= 0x3F;                                               \

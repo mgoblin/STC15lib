@@ -13,6 +13,7 @@ void uart1_ISTR() __interrupt(4)
 void main()
 {
     uart1_mode3_timer2_12T_init(RxD_P30_TxD_P31);
+    enable_uart1_interrupt();
     uart1_mode3_timer2_12T_start(baudrate_9600);
 
     while (1)
