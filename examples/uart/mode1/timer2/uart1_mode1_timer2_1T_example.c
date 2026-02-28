@@ -23,15 +23,15 @@ void main(void)
     {
         LED = 0;
 
-        // uint8_t byte = 0x00;
-        // uart1_receive_byte(byte);
+        uint8_t byte = 0x00;
+        uart1_receive_byte(byte);
         delay_ms(1000);
 
         LED = 1;
 
-        // uart1_send_byte(byte);
+        uart1_send_byte(byte);
 
-        uart1_send_byte('1');
+        uart1_send_byte(' ');
         uart1_send_byte('O');
         uart1_send_byte('k');
         uart1_send_byte('\r');
