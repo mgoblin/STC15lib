@@ -59,6 +59,8 @@ typedef enum
  * 
  * @attention Baud rate is biased by frequency divider.
  * 
+ * @attention This routine disables uart1 interrupt.
+ * 
  * @ingroup uart1_mode0
  */
 #define uart1_mode0_init(baudRate)                  \

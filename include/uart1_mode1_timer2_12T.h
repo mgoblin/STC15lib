@@ -94,6 +94,8 @@ typedef enum
  * 
  * @note Must be called before starting UART communication
  * 
+ * @attention This routine disables uart1 interrupt.
+ * 
  * @ingroup uart1_mode1_timer2_12T
  */
 #define uart1_mode1_timer2_12T_init(pins)   \

@@ -58,6 +58,7 @@ typedef enum
  * @param baudRate uart1_mode2_baudrate_t The desired UART1 baud rate.
  * 
  * @attention Baud rate is biased by frequency divider.
+ * @attention This routine disables uart1 interrupt.
  * 
  * @ingroup uart1_mode2
 */
