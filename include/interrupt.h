@@ -69,7 +69,12 @@
  * 
  * @author Michael Golovanov
  */
-
+/**
+ * @brief INTO interrupt number alias
+ * 
+ * @ingroup interrupts
+ */
+#define INTERRUPT_INT0 0
 /** 
  * Interrupt priority enumeration
  * 

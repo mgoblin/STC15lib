@@ -11,7 +11,7 @@
 #define INT0 P32
 
 // INT0 handler
-void int0_handler() __interrupt(0)
+void int0_handler() __interrupt(INTERRUPT_INT0)
 {
     LED = !LED; // LED on/off
 }
