@@ -10,12 +10,14 @@ void uart1_ISR() __interrupt(4)
     if (is_uart1_send_byte_complete() || is_uart1_receive_byte_complete())
     {
         LED = !LED;
+        delay_ms(500);
     }
 }
 
 void main()
 {
     uart1_mode1_timer2_12T_init(RxD_P30_TxD_P31);
+    enable_uart1_interrupt();
     uart1_mode1_timer2_12T_start(baudrate_9600);
 
     while (1)
