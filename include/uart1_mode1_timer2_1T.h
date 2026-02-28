@@ -65,6 +65,9 @@
  * @ingroup uart1_mode1_timer2_1T
  */
 typedef enum 
+#if __SDCC_VERSION_MAJOR == 4 && __SDCC_VERSION_MINOR >= 5
+    : uint16_t
+#endif
 {
     /** @brief 1200 baudrate */
     baudrate_1200 = 0xF6FF,
