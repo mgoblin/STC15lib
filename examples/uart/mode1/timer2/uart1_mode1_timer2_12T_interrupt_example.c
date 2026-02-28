@@ -5,7 +5,7 @@
 
 #define LED P10
 
-void uart1_ISTR() __interrupt(4)
+void uart1_ISR() __interrupt(4)
 {
     if (is_uart1_send_byte_complete() || is_uart1_receive_byte_complete())
     {

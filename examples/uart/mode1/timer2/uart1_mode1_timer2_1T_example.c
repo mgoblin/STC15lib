@@ -10,7 +10,11 @@
 
 #define LED P10
 
-void main()
+void uart1_ISR(void) __interrupt(4)
+{
+}
+
+void main(void)
 {
     uart1_mode1_timer2_1T_init(RxD_P30_TxD_P31);
     uart1_mode1_timer2_1T_start(baudrate_115200);
@@ -19,15 +23,15 @@ void main()
     {
         LED = 0;
 
-        uint8_t byte = 0x00;
-        uart1_receive_byte(byte);
+        // uint8_t byte = 0x00;
+        // uart1_receive_byte(byte);
         delay_ms(1000);
 
         LED = 1;
 
-        uart1_send_byte(byte);
+        // uart1_send_byte(byte);
 
-        uart1_send_byte(' ');
+        uart1_send_byte('1');
         uart1_send_byte('O');
         uart1_send_byte('k');
         uart1_send_byte('\r');
