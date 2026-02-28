@@ -4,6 +4,13 @@ add_executable(eeprom_erase_page_example
 add_executable(eeprom_read_byte_example
     eeprom_read_byte_example.c
 )
+add_custom_command(
+    TARGET eeprom_read_byte_example
+    POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy
+        ${CMAKE_CURRENT_SOURCE_DIR}/eeprom_data.hex
+        ${CMAKE_CURRENT_BINARY_DIR}/eeprom_data.hex
+)
 add_executable(eeprom_write_byte_example
     eeprom_write_byte_example.c
 )
