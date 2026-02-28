@@ -36,38 +36,18 @@ set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
 set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
 
-if(CMAKE_HOST_WIN32)
-    message(STATUS "Host system is Windows")
-    function(ihx_to_hex bin)
-        add_custom_command( 
-            TARGET ${bin} 
-            POST_BUILD 
-            COMMAND  ${CMAKE_PACKIHX} ${bin}.ihx > ${bin}.hex
-            COMMAND  ${CMAKE_MAKEBIN} -p ${bin}.ihx ${bin}.bin
-        )
-    endfunction(ihx_to_hex)
-
-elseif(CMAKE_HOST_APPLE)
-    message(STATUS "Host system is macOS")
-    function(ihx_to_hex bin)
-        add_custom_command( 
-            TARGET ${bin} 
-            POST_BUILD 
-            COMMAND  ${CMAKE_PACKIHX} ${bin}.ihx > ${bin}.hex 2>/dev/null
-            COMMAND  ${CMAKE_MAKEBIN} -p ${bin}.ihx ${bin}.bin
-        )
-    endfunction(ihx_to_hex)
-elseif(CMAKE_HOST_UNIX)
-    message(STATUS "Host system is Unix/Linux")
-    function(ihx_to_hex bin)
-        add_custom_command( 
-            TARGET ${bin} 
-            POST_BUILD 
-            COMMAND  ${CMAKE_PACKIHX} ${bin}.ihx > ${bin}.hex 2>/dev/null
-            COMMAND  ${CMAKE_MAKEBIN} -p ${bin}.ihx ${bin}.bin
-            COMMAND  echo -n "${bin} firmware size in bytes: " > "${CMAKE_CURRENT_BINARY_DIR}/${bin}.fsize"
-            COMMAND  stat --format '%s' ${bin}.bin >> "${CMAKE_CURRENT_BINARY_DIR}/${bin}.fsize"
-            COMMAND  cat "${CMAKE_CURRENT_BINARY_DIR}/${bin}.fsize" 
-        )
-    endfunction(ihx_to_hex)
+find_package(Python3 REQUIRED COMPONENTS Interpreter)
+if (Python3_FOUND)
+    message(STATUS "Python interpreter found: ${Python3_EXECUTABLE}")
+else()
+    message(FATAL_ERROR "Python interpreter not found. Please install Python3.")
 endif()
+
+function(ihx_to_hex bin)
+    add_custom_command( 
+        TARGET ${bin} 
+        POST_BUILD 
+        COMMAND  ${CMAKE_PACKIHX} ${bin}.ihx > ${bin}.hex 2>/dev/null
+        COMMAND ${Python3_EXECUTABLE} "${PROJECT_SOURCE_DIR}/size.py" "${CMAKE_CURRENT_BINARY_DIR}/${bin}.mem" "${bin}"
+    )
+endfunction(ihx_to_hex)
