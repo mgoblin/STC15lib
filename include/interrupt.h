@@ -89,6 +89,14 @@
  * @ingroup interrups
  */
 #define INTERRUPT_COUNTER0 1
+
+/**
+ * @brief TIMER0 interrupt number for timer mode
+ * 
+ * @ingroup interrups
+ */
+#define INTERRUPT_TIMER0 1
+
 /** 
  * Interrupt priority enumeration
  * 

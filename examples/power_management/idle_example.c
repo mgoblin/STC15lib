@@ -2,10 +2,10 @@
  * How to use idle.
  * 
  * Start timer0 that wake up from idle mode.
- * In main routine LED blink. 
+ * In timer routine LED blink. 
  * Idle freeze main routine until timer0 interrupt arrived.
  * 
- * As a result LED blink not with delay 250 ms period but on timer period.  
+ * As a result LED blink with timer period.  
  */
 #include <power_management.h>
 
@@ -16,9 +16,9 @@
 
 #define LED P10
 
-void timerISR() __interrupt(1)
+void timerISR() __interrupt(INTERRUPT_TIMER0)
 {
-
+    LED = !LED;
 }
 
 void main()
@@ -29,9 +29,6 @@ void main()
 
     while(1)
     {
-        LED = !LED;
-        delay_ms(250);
-        
         idle();
     }
 }
