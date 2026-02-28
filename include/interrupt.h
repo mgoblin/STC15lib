@@ -77,6 +77,13 @@
 #define INTERRUPT_INT0 0
 
 /**
+ * @brief INT1 interrupt number alias
+ * 
+ * @ingroup interrupts
+ */
+#define INTERRUPT_INT1 2
+
+/**
  * @brief TIMER0 interrupt number for counter mode
  * 
  * @ingroup interrups
