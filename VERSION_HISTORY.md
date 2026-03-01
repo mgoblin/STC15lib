@@ -176,14 +176,14 @@
 * Write utility to make hex file from csv
 * Fix: copy eerprom_data.hex on cmake build eeprom examples
 * Fix: Cmake firmware size is not equals to platfromio build size
-* Fix: Firmware builded by sdccc 4.5 doesnt work correctly with UART
-* TODO verify sdcc 4.5 interrupts. If interrupt handler doesn`t declared interupt should be disabled 
-* TODO rewrite frequency and ms calc from macro to functions
+* TODO Fix: Firmware builded by sdcc 4.5 work correctly
 * TODO Review wakeup timer routines. Move from ticks to ms
 * TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms
 
 
 Next releases todo
+* TODO rewrite frequency and ms calc from macro to functions
+* TODO Refactor timer aux/common
 * TODO memory dump not only idata but xdata memory too
 * TODO UART1 support frame error
 * TODO UART1 Automatic address recognition support

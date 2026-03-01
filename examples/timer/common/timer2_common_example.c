@@ -18,11 +18,6 @@ void print_timer2_mode_and_divider()
     printf_tiny("Timer mode is %d and divider is %d\r\n", mode, divider);
 }
 
-void timerISR() __interrupt(12)
-{
-    
-}
-
 void main()
 {
     timer2_mode0_12T_init();
