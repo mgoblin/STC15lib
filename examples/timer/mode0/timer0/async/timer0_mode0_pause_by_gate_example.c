@@ -1,5 +1,7 @@
 /**
  * How to pause/resume timer0 in mode0 using gate
+ * 
+ * LED blinking during 2 seconds and than stop on 2 seconds.
  */
 #include <timer0_mode0.h>
 #include <delay.h>
@@ -10,7 +12,7 @@
 
 #define INT0 P32
 
-void timerISR() __interrupt(1)
+void timerISR() __interrupt(INTERRUPT_TIMER0)
 {
     LED = !LED;
 }
@@ -23,6 +25,7 @@ void delay_ms_f(uint16_t ms)
 void main()
 {
     timer0_mode0_12T_init();
+    enable_timer0_interrupt();
     timer0_mode0_start(0xffff); 
     
     INT0 = 0; // Set INT0 to LOW. Timer paused/resumed by gate

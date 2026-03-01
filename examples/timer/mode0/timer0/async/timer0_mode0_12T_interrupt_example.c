@@ -8,7 +8,7 @@
 
 #define LED P10
 
-void timer0ISR(void) __interrupt(1)
+void timer0ISR(void) __interrupt(INTERRUPT_TIMER0)
 {
     LED = !LED;
 }
@@ -16,6 +16,7 @@ void timer0ISR(void) __interrupt(1)
 void main()
 {
     timer0_mode0_12T_init();
+    enable_timer0_interrupt();
 
     timer0_mode0_start(0xffff);
 

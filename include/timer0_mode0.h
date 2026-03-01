@@ -48,12 +48,15 @@
 /**
  * @brief Initialize mode0 12T for timer0. 
  * 
+ * @attention This routine disables timer0 interrupt.
+ * Interrupt should be enabled by user for async style.
+ * 
  * @ingroup timer0_mode0
  */
 #define timer0_mode0_12T_init()                 \
 do {                                            \
     enable_mcu_interrupts();                    \
-    enable_timer0_interrupt();                  \
+    disable_timer0_interrupt();                 \
     TMOD &= 0xf0;                               \
     bit_clr(AUXR, CBIT7);                       \
 } while(0)
@@ -61,12 +64,15 @@ do {                                            \
 /**
  * @brief Initialize mode0 1T for timer0.
  * 
+ * @attention This routine disables timer0 interrupt.
+ * Interrupt should be enabled by user for async style.
+ * 
  * @ingroup timer0_mode0
  */
 #define timer0_mode0_1T_init()                  \
 do {                                            \
     enable_mcu_interrupts();                    \
-    enable_timer0_interrupt();                  \
+    disable_timer0_interrupt();                 \
     TMOD &= 0xf0;                               \
     bit_set(AUXR, SBIT7);                       \
 } while(0)

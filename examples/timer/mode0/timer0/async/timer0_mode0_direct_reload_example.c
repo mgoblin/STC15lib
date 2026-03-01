@@ -24,6 +24,7 @@ void main()
     set_frequency_divider_scale(3);
 
     timer0_mode0_12T_init();
+    enable_timer0_interrupt();
     timer0_mode0_start(0xffff);
 
     while (1)

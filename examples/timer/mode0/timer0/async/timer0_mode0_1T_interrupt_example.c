@@ -15,7 +15,7 @@
 
 uint8_t interrupt_counter = 0; // interrupt counter. 
 
-void timer0ISR(void) __interrupt(1)
+void timer0ISR(void) __interrupt(INTERRUPT_TIMER0)
 {
     // Every 12th interrupt call switch LED state and reset counter
     if (interrupt_counter++ == 12)
@@ -33,6 +33,7 @@ void delay_ms_f(uint16_t ms)
 void main()
 {
     timer0_mode0_1T_init();
+    enable_timer0_interrupt();
 
     while(1)
     {
