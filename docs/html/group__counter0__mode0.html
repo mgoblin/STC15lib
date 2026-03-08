@@ -330,7 +330,7 @@ Macros</h2></td></tr>
 <div class="line">} <span class="keywordflow">while</span> (0);</div>
 </div><!-- fragment -->
 <p>Run counter0. </p>
-<p>Before run counter0_mode0_init should be called. After run counter0 is counted T0 pin state change. Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code.</p>
+<p>Before run counter0_mode0_init should be called. After run counter0 is counted T0 pin state change. Interrupt handler void timer0ISR(void) __interrupt(1) or void timer0ISR(void) __interrupt(INTERRUPT_COUNTER0) should be defined in user code.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>uint16_t initial counter value </td></tr>

@@ -52,7 +52,11 @@
  * - TMOD.2 = 1
  * - TMOD.3 = 0
  * 
- * @attention Interrupt handler void counter0ISR(void) __interrupt(1) should be defined in user code.
+ * @attention Interrupt handler 
+ * void counter0ISR(void) __interrupt(1) 
+ * or 
+ * void timer0ISR(void) __interrupt(INTERRUPT_COUNTER0) 
+ * should be defined in user code.
  * 
  * @ingroup counter0_mode2
  */

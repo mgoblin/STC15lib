@@ -70,7 +70,11 @@ do {                                            \
  * 
  * @details Before run counter0_mode0_init should be called.
  * After run counter0 is counted T0 pin state change.
- * Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code.
+ * Interrupt handler 
+ * void timer0ISR(void) __interrupt(1) 
+ * or 
+ * void timer0ISR(void) __interrupt(INTERRUPT_COUNTER0)
+ * should be defined in user code.
  * 
  * @param value uint16_t initial counter value
  * 

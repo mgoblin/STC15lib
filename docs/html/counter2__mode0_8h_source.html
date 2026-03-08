@@ -106,46 +106,46 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="foldopen" id="foldopen00070" data-start="" data-end="">
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#gadeb71948175275b25a1255598c32ef50">   70</a></span><span class="preprocessor">#define counter2_mode0_start(value)             \</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">do {                                            \</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">    counter2_mode0_set_value(value);            \</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">                                                \</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">    bit_set(AUXR, SBIT4);                       \</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">} while (0);</span></div>
+<div class="foldopen" id="foldopen00074" data-start="" data-end="">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#gadeb71948175275b25a1255598c32ef50">   74</a></span><span class="preprocessor">#define counter2_mode0_start(value)             \</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">do {                                            \</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">    counter2_mode0_set_value(value);            \</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">                                                \</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">    bit_set(AUXR, SBIT4);                       \</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">} while (0);</span></div>
 </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="foldopen" id="foldopen00084" data-start="" data-end="">
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#gab6d6c1c5304526bf5abe5ff2931b0c2b">   84</a></span><span class="preprocessor">#define counter2_mode0_stop()                   \</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">do {                                            \</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">    bit_clr(AUXR, CBIT4);                       \</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">} while (0)</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="foldopen" id="foldopen00088" data-start="" data-end="">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#gab6d6c1c5304526bf5abe5ff2931b0c2b">   88</a></span><span class="preprocessor">#define counter2_mode0_stop()                   \</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">do {                                            \</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">    bit_clr(AUXR, CBIT4);                       \</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">} while (0)</span></div>
 </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#ga31160e77d29e9cad64af08f8694fd17f">   97</a></span><span class="preprocessor">#define is_counter2_mode0_started() (test_if_bit_set(_AUXR, SBIT4))</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#ga359b791bb6456edbcb590926595f45be">  112</a></span><span class="preprocessor">#define counter2_mode0_get_value() ((((uint16_t) T2H) &lt;&lt; 8) | T2L)</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="foldopen" id="foldopen00123" data-start="" data-end="">
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#gac76600212f6455bb2044da36c310ddf6">  123</a></span><span class="preprocessor">#define counter2_mode0_set_value(value)         \</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">do {                                            \</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">    static_assert(value &lt;= 0xffff, &quot;value to large&quot;); \</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">    const uint16_t _val = (value);              \</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">    T2H = (uint8_t)(_val &gt;&gt; 8);                 \</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">    T2L = (uint8_t)(_val &amp; 0xff);               \</span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">} while(0)</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#ga31160e77d29e9cad64af08f8694fd17f">  101</a></span><span class="preprocessor">#define is_counter2_mode0_started() (test_if_bit_set(_AUXR, SBIT4))</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#ga359b791bb6456edbcb590926595f45be">  116</a></span><span class="preprocessor">#define counter2_mode0_get_value() ((((uint16_t) T2H) &lt;&lt; 8) | T2L)</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="foldopen" id="foldopen00127" data-start="" data-end="">
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#gac76600212f6455bb2044da36c310ddf6">  127</a></span><span class="preprocessor">#define counter2_mode0_set_value(value)         \</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">do {                                            \</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">    static_assert(value &lt;= 0xffff, &quot;value to large&quot;); \</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">    const uint16_t _val = (value);              \</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="preprocessor">    T2H = (uint8_t)(_val &gt;&gt; 8);                 \</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">    T2L = (uint8_t)(_val &amp; 0xff);               \</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">} while(0)</span></div>
 </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#ga6228c30868b5729072c444e93bd72877">  144</a></span><span class="preprocessor">#define counter2_mode0_enable_P30_output()   (bit_set(INT_CLKO, SBIT2))</span></div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#ga5c357d609580d05b38949c515167f0b9">  154</a></span><span class="preprocessor">#define counter2_mode0_disable_P30_output()   (bit_clr(INT_CLKO, CBIT2))</span></div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#ga6fcf54ce1a73faadacf2ee87a0c83539">  163</a></span><span class="preprocessor">#define is_counter2_mode0_P30_output_enabled()   (test_if_bit_set(INT_CLKO, SBIT2))</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#ga6228c30868b5729072c444e93bd72877">  148</a></span><span class="preprocessor">#define counter2_mode0_enable_P30_output()   (bit_set(INT_CLKO, SBIT2))</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#ga5c357d609580d05b38949c515167f0b9">  158</a></span><span class="preprocessor">#define counter2_mode0_disable_P30_output()   (bit_clr(INT_CLKO, CBIT2))</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#ga6fcf54ce1a73faadacf2ee87a0c83539">  167</a></span><span class="preprocessor">#define is_counter2_mode0_P30_output_enabled()   (test_if_bit_set(INT_CLKO, SBIT2))</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="ainterrupt_8h_html"><div class="ttname"><a href="interrupt_8h.html">interrupt.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

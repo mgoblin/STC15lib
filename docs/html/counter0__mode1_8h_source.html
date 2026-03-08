@@ -94,51 +94,51 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="group__counter0__mode1.html#ga7521122e23c8d5c83b2a033b2505c86c">   38</a></span><span class="preprocessor">#define INT0 P32</span></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="foldopen" id="foldopen00060" data-start="" data-end="">
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="group__counter0__mode1.html#gae25012f2830105f130d2f29688ac06be">   60</a></span><span class="preprocessor">#define counter0_mode1_init()                   \</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">do {                                            \</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">    enable_mcu_interrupts();                    \</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">    enable_timer0_interrupt();                  \</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">                                                \</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">    TMOD &amp;= 0xF0;                               \</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">    TMOD |= 0x05;                               \</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">                                                \</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">    TF0 = 0;                                    \</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">    TR0 = 0;                                    \</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">} while(0)   </span></div>
+<div class="foldopen" id="foldopen00064" data-start="" data-end="">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="group__counter0__mode1.html#gae25012f2830105f130d2f29688ac06be">   64</a></span><span class="preprocessor">#define counter0_mode1_init()                   \</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">do {                                            \</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">    enable_mcu_interrupts();                    \</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">    enable_timer0_interrupt();                  \</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">                                                \</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">    TMOD &amp;= 0xF0;                               \</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">    TMOD |= 0x05;                               \</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">                                                \</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">    TF0 = 0;                                    \</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">    TR0 = 0;                                    \</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">} while(0)   </span></div>
 </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="foldopen" id="foldopen00090" data-start="" data-end="">
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="group__counter0__mode1.html#ga884dd0b68e80c9981a5c9d11b59d6461">   90</a></span><span class="preprocessor">#define counter0_mode1_start(value)             \</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">do {                                            \</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">    static_assert(value &lt;= 0xffff, &quot;value is too large&quot;); \</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">                                                \</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">    const uint16_t _val = value;                \</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">    TH0 = (uint8_t) (_val &gt;&gt; 8);                \</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">    TL0 = (uint8_t) (_val &amp; 0xFF);              \</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="foldopen" id="foldopen00094" data-start="" data-end="">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="group__counter0__mode1.html#ga884dd0b68e80c9981a5c9d11b59d6461">   94</a></span><span class="preprocessor">#define counter0_mode1_start(value)             \</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">do {                                            \</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">    static_assert(value &lt;= 0xffff, &quot;value is too large&quot;); \</span></div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">                                                \</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">    TF0 = 0;                                    \</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">    TR0 = 1;                                    \</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">} while(0)</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">    const uint16_t _val = value;                \</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">    TH0 = (uint8_t) (_val &gt;&gt; 8);                \</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">    TL0 = (uint8_t) (_val &amp; 0xFF);              \</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">                                                \</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">    TF0 = 0;                                    \</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">    TR0 = 1;                                    \</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">} while(0)</span></div>
 </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="group__counter0__mode1.html#gaebb0f55b8e9935afa507bff8999a5551">  110</a></span><span class="preprocessor">#define is_counter0_mode1_started() (TR0 == 1)</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="foldopen" id="foldopen00119" data-start="" data-end="">
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="group__counter0__mode1.html#gaa6d5753aac781bc2cf0efc8dce1979f3">  119</a></span><span class="preprocessor">#define counter0_mode1_stop()                   \</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">do {                                            \</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">    TR0 = 0;                                    \</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="preprocessor">    TF0 = 0;                                    \</span></div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">} while(0)</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="group__counter0__mode1.html#gaebb0f55b8e9935afa507bff8999a5551">  114</a></span><span class="preprocessor">#define is_counter0_mode1_started() (TR0 == 1)</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="foldopen" id="foldopen00123" data-start="" data-end="">
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="group__counter0__mode1.html#gaa6d5753aac781bc2cf0efc8dce1979f3">  123</a></span><span class="preprocessor">#define counter0_mode1_stop()                   \</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">do {                                            \</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">    TR0 = 0;                                    \</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">    TF0 = 0;                                    \</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">} while(0)</span></div>
 </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="group__counter0__mode1.html#ga7b73a2e58701629927ef0ba7f3e1b47c">  139</a></span><span class="preprocessor">#define counter0_mode1_get_value() ((((uint16_t) TH0) &lt;&lt; 8) | TL0)</span></div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="group__counter0__mode1.html#ga7b73a2e58701629927ef0ba7f3e1b47c">  143</a></span><span class="preprocessor">#define counter0_mode1_get_value() ((((uint16_t) TH0) &lt;&lt; 8) | TL0)</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="ainterrupt_8h_html"><div class="ttname"><a href="interrupt_8h.html">interrupt.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
