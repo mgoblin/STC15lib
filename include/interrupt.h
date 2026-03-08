@@ -97,6 +97,20 @@
  */
 #define INTERRUPT_TIMER0 1
 
+/**
+ * @brief TIMER2 interrupt number for counter mode
+ * 
+ * @ingroup interrups
+ */
+#define INTERRUPT_COUTER2 12
+
+/**
+ * @brief TIMER2 interrupt number for timer mode
+ * 
+ * @ingroup interrups
+ */
+#define INTERRUPT_TIMER2 12
+
 /** 
  * Interrupt priority enumeration
  * 

@@ -96,141 +96,145 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="interrupt_8h.html#af23e608e0ae3552352312d753caf7954">   98</a></span><span class="preprocessor">#define INTERRUPT_TIMER0 1</span></div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="foldopen" id="foldopen00105" data-start="{" data-end="};">
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">  105</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>{</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a6a226f4143ca3b18999551694cdb72a8">  108</a></span>    <a class="code hl_enumvalue" href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a6a226f4143ca3b18999551694cdb72a8">LOW</a> = 0, </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <a class="code hl_enumvalue" href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893">HIGH</a> = 1</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893">  111</a></span>} <a class="code hl_enumeration" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="interrupt_8h.html#a21d331d420b6bbe94ed32e6735cde296">  105</a></span><span class="preprocessor">#define INTERRUPT_COUTER2 12</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="interrupt_8h.html#ad4ccc1ff69ffa89f37945ac73856a86b">  112</a></span><span class="preprocessor">#define INTERRUPT_TIMER2 12</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="foldopen" id="foldopen00119" data-start="{" data-end="};">
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">  119</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>{</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a6a226f4143ca3b18999551694cdb72a8">  122</a></span>    <a class="code hl_enumvalue" href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a6a226f4143ca3b18999551694cdb72a8">LOW</a> = 0, </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <a class="code hl_enumvalue" href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893">HIGH</a> = 1</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893">  125</a></span>} <a class="code hl_enumeration" href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a>;</div>
 </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="foldopen" id="foldopen00118" data-start="{" data-end="};">
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7">  118</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>{</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="group__interrupts.html#gga97fc91f85abe6139a7f24fbdff35c7e7ad791487f941a47c772442d5252a819bc">  121</a></span>    <a class="code hl_enumvalue" href="group__interrupts.html#gga97fc91f85abe6139a7f24fbdff35c7e7ad791487f941a47c772442d5252a819bc">RAISING_OR_FALLING_EDGE</a> = 0,</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <a class="code hl_enumvalue" href="group__interrupts.html#gga97fc91f85abe6139a7f24fbdff35c7e7a80874c2f638b4611a7d53723ff1f6c3d">ONLY_FALLING_EDGE</a> = 1</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="group__interrupts.html#gga97fc91f85abe6139a7f24fbdff35c7e7a80874c2f638b4611a7d53723ff1f6c3d">  124</a></span>} <a class="code hl_enumeration" href="group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7">external_interrupt_trigger_t</a>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="foldopen" id="foldopen00132" data-start="{" data-end="};">
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7">  132</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>{</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="group__interrupts.html#gga97fc91f85abe6139a7f24fbdff35c7e7ad791487f941a47c772442d5252a819bc">  135</a></span>    <a class="code hl_enumvalue" href="group__interrupts.html#gga97fc91f85abe6139a7f24fbdff35c7e7ad791487f941a47c772442d5252a819bc">RAISING_OR_FALLING_EDGE</a> = 0,</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <a class="code hl_enumvalue" href="group__interrupts.html#gga97fc91f85abe6139a7f24fbdff35c7e7a80874c2f638b4611a7d53723ff1f6c3d">ONLY_FALLING_EDGE</a> = 1</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="group__interrupts.html#gga97fc91f85abe6139a7f24fbdff35c7e7a80874c2f638b4611a7d53723ff1f6c3d">  138</a></span>} <a class="code hl_enumeration" href="group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7">external_interrupt_trigger_t</a>;</div>
 </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c">  135</a></span><span class="preprocessor">#define enable_mcu_interrupts() (EA = 1)</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga8b0ea5804af6316376f49ade70b868b3">  146</a></span><span class="preprocessor">#define disable_mcu_interrupts() (EA = 0)</span></div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">  155</a></span><span class="preprocessor">#define is_mcu_interrupts_enabled() (EA == 1)</span></div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="group__interrupts.html#gada95baa6c6b2484eb8cf3c01889071fc">  164</a></span><span class="preprocessor">#define enable_low_voltage_interrupt() (ELVD = 1)</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="group__interrupts.html#gae7bd7f894582b7f376b077fbd4435864">  173</a></span><span class="preprocessor">#define disable_low_voltage_interrupt() (ELVD = 0)</span></div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="group__interrupts.html#gac4ef997b6aa14a6864c2ef2c432aac4a">  183</a></span><span class="preprocessor">#define is_low_voltage_interrupt_enabled() (ELVD == 1 &amp;&amp; is_mcu_interrupts_enabled())</span></div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="group__interrupts.html#gaadf84a2181fd871ee2e29848480756ae">  192</a></span><span class="preprocessor">#define enable_adc_interrupt() (EADC = 1)</span></div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga499a9a838de2728a9c6ab4311d055b86">  201</a></span><span class="preprocessor">#define disable_adc_interrupt() (EADC = 0)</span></div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="group__interrupts.html#gace1428b686ee4412764f5ecb31197814">  211</a></span><span class="preprocessor">#define is_adc_interrupt_enabled() (EADC == 1 &amp;&amp; is_mcu_interrupts_enabled())</span></div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga650e12d0892198b3a63c1a8c382b9c12">  220</a></span><span class="preprocessor">#define enable_uart1_interrupt() (ES = 1)</span></div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga5dac79f9182e6dc1a31448a28ee0a162">  229</a></span><span class="preprocessor">#define disable_uart1_interrupt() (ES = 0)</span></div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="group__interrupts.html#gae4d7cee935888f8c3b25ae5697d868b5">  239</a></span><span class="preprocessor">#define is_uart1_interrupt_enabled() (ES == 1 &amp;&amp; is_mcu_interrupts_enabled())</span></div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga9f0976519e8c6f8102dce44f7ad2aa6a">  248</a></span><span class="preprocessor">#define enable_int0_interrupt() (EX0 = 1)</span></div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga5280b5134c4d1fad2f492e30205d7691">  257</a></span><span class="preprocessor">#define disable_int0_interrupt() (EX0 = 0)</span></div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga194f7f1f70af345370c596512b23a588">  267</a></span><span class="preprocessor">#define is_int0_interrupt_enabled() (EX0 == 1 &amp;&amp; is_mcu_interrupts_enabled())</span></div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga4fb0d9228dcf2749cd098092edaa1308">  276</a></span><span class="preprocessor">#define enable_int1_interrupt() (EX1 = 1)</span></div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno"><a class="line" href="group__interrupts.html#gaa588f32201651fc565dd745d36048a97">  285</a></span><span class="preprocessor">#define disable_int1_interrupt() (EX1 = 0)</span></div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga77b38abe100ab6558721575d42b9776a">  295</a></span><span class="preprocessor">#define is_int1_interrupt_enabled() (EX1 == 1 &amp;&amp; is_mcu_interrupts_enabled())</span></div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga590f0de8191271977e1f79d9ab9576ab">  304</a></span><span class="preprocessor">#define enable_int2_interrupt() (bit_set(INT_CLKO, SBIT4))</span></div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga4668129f676d8d123d5992da8b7d6564">  313</a></span><span class="preprocessor">#define disable_int2_interrupt() (bit_clr(INT_CLKO, CBIT4))</span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga88ebf38f3c33cba4de86d19e2532ec97">  323</a></span><span class="preprocessor">#define is_int2_interrupt_enabled() (test_if_bit_set(INT_CLKO, SBIT4) &amp;&amp; is_mcu_interrupts_enabled())</span></div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga10ccfe3b81e2f0f8f8a9014a6f6cb382">  332</a></span><span class="preprocessor">#define enable_int3_interrupt() (bit_set(INT_CLKO, SBIT5))</span></div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga0eefb72a54f3befd3535d70e71a06de4">  341</a></span><span class="preprocessor">#define disable_int3_interrupt() (bit_clr(INT_CLKO, CBIT5))</span></div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span> </div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga55815a15f668bf452348f7483ca94a2e">  351</a></span><span class="preprocessor">#define is_int3_interrupt_enabled() (test_if_bit_set(INT_CLKO, SBIT5) &amp;&amp; is_mcu_interrupts_enabled())</span></div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga0e5e4a9cb47201c8f5be1e0918d29ac4">  360</a></span><span class="preprocessor">#define enable_int4_interrupt() (bit_set(INT_CLKO, SBIT6))</span></div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno"><a class="line" href="group__interrupts.html#gae3a80148c904b86a58976a26399720d0">  369</a></span><span class="preprocessor">#define disable_int4_interrupt() (bit_clr(INT_CLKO, CBIT6))</span></div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span> </div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno"><a class="line" href="group__interrupts.html#gab74f8baae5f006ebecd8ccbb787decb0">  379</a></span><span class="preprocessor">#define is_int4_interrupt_enable() (test_if_bit_set(INT_CLKO, SBIT6) &amp;&amp; is_mcu_interrupts_enabled())</span></div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span> </div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga3ce3cdb9bf4963e75a0664964fb83c3a">  388</a></span><span class="preprocessor">#define enable_timer0_interrupt() (ET0 = 1)</span></div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span> </div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga2ef6ebd3211c16ce240018d22589e8da">  397</a></span><span class="preprocessor">#define disable_timer0_interrupt() (ET0 = 0)</span></div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span> </div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno"><a class="line" href="group__interrupts.html#gaf6a267bf6befa9aee24a701bd782f457">  407</a></span><span class="preprocessor">#define is_timer0_interrupt_enabled() (ET0 == 1 &amp;&amp; is_mcu_interrupts_enabled())</span></div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span> </div>
-<div class="line"><a id="l00416" name="l00416"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga6ba6fe72d49d266c76ca27b31bcb0395">  416</a></span><span class="preprocessor">#define enable_timer2_interrupt() (bit_set(IE2, SBIT2))</span></div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span> </div>
-<div class="line"><a id="l00425" name="l00425"></a><span class="lineno"><a class="line" href="group__interrupts.html#gac8daf51c922df876c57f419b63996dd5">  425</a></span><span class="preprocessor">#define disable_timer2_interrupt() (bit_clr(IE2, CBIT2))</span></div>
-<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span> </div>
-<div class="line"><a id="l00435" name="l00435"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga0c35fd771294a22d4cd3e205fd806bdb">  435</a></span><span class="preprocessor">#define is_timer2_interrupt_enabled() (test_if_bit_set(IE2, SBIT2) &amp;&amp; is_mcu_interrupts_enabled())</span></div>
-<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span> </div>
-<div class="line"><a id="l00444" name="l00444"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga1031a01617faf8bd48f91d9eac505792">  444</a></span><span class="preprocessor">#define enable_spi_interrupt() (bit_set(IE2, SBIT1))</span></div>
-<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span> </div>
-<div class="line"><a id="l00453" name="l00453"></a><span class="lineno"><a class="line" href="group__interrupts.html#gad8ec33652ec7e3a2a2754678217a9799">  453</a></span><span class="preprocessor">#define disable_spi_interrupt() (bit_clr(IE2, CBIT1))</span></div>
-<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span> </div>
-<div class="line"><a id="l00463" name="l00463"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga749a47d315950a06ecd28e89cacec83d">  463</a></span><span class="preprocessor">#define is_spi_interrupt_enabled() (test_if_bit_set(IE2, SBIT1) &amp;&amp; is_mcu_interrupts_enabled())</span></div>
-<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span> </div>
-<div class="line"><a id="l00472" name="l00472"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga61be7c532b0092fb479d95934351910d">  472</a></span><span class="preprocessor">#define set_pca_interrupt_priority(priority) (PPCA = priority)</span></div>
-<div class="line"><a id="l00473" name="l00473"></a><span class="lineno">  473</span> </div>
-<div class="line"><a id="l00481" name="l00481"></a><span class="lineno"><a class="line" href="group__interrupts.html#gabf64c78cca4cdf3dbccbe6b3be2ac7f3">  481</a></span><span class="preprocessor">#define get_pca_interrupt_priority() (PPCA)</span></div>
-<div class="line"><a id="l00482" name="l00482"></a><span class="lineno">  482</span> </div>
-<div class="line"><a id="l00490" name="l00490"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga3d287824f6ad9219ad0ea0ea8ceed3a2">  490</a></span><span class="preprocessor">#define set_low_voltage_interrupt_priority(priority) (PLVD = priority)</span></div>
-<div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span> </div>
-<div class="line"><a id="l00499" name="l00499"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga7d6648d7b8c9e35c9a3e19067b8eb8ae">  499</a></span><span class="preprocessor">#define get_low_voltage_interrupt_priority() (PVLD)</span></div>
-<div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span> </div>
-<div class="line"><a id="l00508" name="l00508"></a><span class="lineno"><a class="line" href="group__interrupts.html#gac3ad7282866c58628f44b746ec2da56f">  508</a></span><span class="preprocessor">#define set_adc_interrupt_priority(priority) (PADC = priority)</span></div>
-<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span> </div>
-<div class="line"><a id="l00517" name="l00517"></a><span class="lineno"><a class="line" href="group__interrupts.html#gad657770c0ca0c4561bbe0370c219020d">  517</a></span><span class="preprocessor">#define get_adc_interrupt_priority() (PADC)</span></div>
-<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span> </div>
-<div class="line"><a id="l00525" name="l00525"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga82ffad64559fd095450b0c283004b8ac">  525</a></span><span class="preprocessor">#define set_uart1_interrupt_priority(priority) (PS = priority)</span></div>
-<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span> </div>
-<div class="line"><a id="l00534" name="l00534"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga856d0becba655d45b38340f214e0c82a">  534</a></span><span class="preprocessor">#define get_uart1_interrupt_priority() (PS)</span></div>
-<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span> </div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno"><a class="line" href="group__interrupts.html#gadc1f845094582635951872311de9f1f4">  542</a></span><span class="preprocessor">#define set_int0_interrupt_priority(priority) (PX0 = priority)</span></div>
-<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span> </div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno"><a class="line" href="group__interrupts.html#gaad8983bc0b980226f8a20ea91576f224">  551</a></span><span class="preprocessor">#define get_int0_interrupt_priority() (PX0)</span></div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span> </div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno"><a class="line" href="group__interrupts.html#gafcf2592c8e8e557e3ba9eab108c34ce9">  560</a></span><span class="preprocessor">#define set_int1_interrupt_priority(priority) (PX1 = priority)</span></div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span> </div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga00c71c291d049d66e03de830a21cbe29">  569</a></span><span class="preprocessor">#define get_int1_interrupt_priority() (PX1)</span></div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span> </div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga592af19616ab5d4dfa15bc48c451ffe6">  578</a></span><span class="preprocessor">#define set_timer0_interrupt_priority(priority) (PT0 = priority)</span></div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span> </div>
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno"><a class="line" href="group__interrupts.html#gaae1d82dd8aa3ed51e31de9cdf4d03eaa">  587</a></span><span class="preprocessor">#define get_timer0_interrupt_priority() (PT0)</span></div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span> </div>
-<div class="line"><a id="l00596" name="l00596"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga7f4ce2c83eea0366ba67f8cc956aab8f">  596</a></span><span class="preprocessor">#define set_spi_interrupt_priority(priority) (priority == HIGH ? bit_set(IP2, SBIT1) : bit_clr(IP2, CBIT1))</span></div>
-<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span> </div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno"><a class="line" href="group__interrupts.html#gaacd1dbc81fe112ce6b25b664d07f2924">  605</a></span><span class="preprocessor">#define get_spi_interrupt_priority() (test_if_bit_set(IP2, SBIT1))</span></div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span> </div>
-<div class="line"><a id="l00614" name="l00614"></a><span class="lineno"><a class="line" href="group__interrupts.html#gae83d9bb9ef89de5990b742de004f8ed5">  614</a></span><span class="preprocessor">#define set_int0_interrupt_trigger(trigger) ( IT0 = trigger)</span></div>
-<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span> </div>
-<div class="line"><a id="l00624" name="l00624"></a><span class="lineno"><a class="line" href="group__interrupts.html#gafa1390efc7ccf39edab668888d503995">  624</a></span><span class="preprocessor">#define get_int0_interrupt_trigger() (IT0)</span></div>
-<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span> </div>
-<div class="line"><a id="l00633" name="l00633"></a><span class="lineno"><a class="line" href="group__interrupts.html#gae5bb64646f48ac6321349bca7fb8094c">  633</a></span><span class="preprocessor">#define set_int1_interrupt_trigger(trigger) (IT1 = trigger)</span></div>
-<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span> </div>
-<div class="line"><a id="l00643" name="l00643"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga87497515d718a96065c9606e3e7eb99f">  643</a></span><span class="preprocessor">#define get_int1_interrupt_trigger() (IT1)</span></div>
-<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span> </div>
-<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="agroup__interrupts_html_ga97fc91f85abe6139a7f24fbdff35c7e7"><div class="ttname"><a href="group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7">external_interrupt_trigger_t</a></div><div class="ttdeci">external_interrupt_trigger_t</div><div class="ttdef"><b>Definition</b> interrupt.h:119</div></div>
-<div class="ttc" id="agroup__interrupts_html_ga9ebbbf91c4e6fa77cced0ac0daefd964"><div class="ttname"><a href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a></div><div class="ttdeci">interrupt_priority_t</div><div class="ttdef"><b>Definition</b> interrupt.h:106</div></div>
-<div class="ttc" id="agroup__interrupts_html_gga97fc91f85abe6139a7f24fbdff35c7e7a80874c2f638b4611a7d53723ff1f6c3d"><div class="ttname"><a href="group__interrupts.html#gga97fc91f85abe6139a7f24fbdff35c7e7a80874c2f638b4611a7d53723ff1f6c3d">ONLY_FALLING_EDGE</a></div><div class="ttdeci">@ ONLY_FALLING_EDGE</div><div class="ttdoc">Generate interrupt only on fallign edge.</div><div class="ttdef"><b>Definition</b> interrupt.h:123</div></div>
-<div class="ttc" id="agroup__interrupts_html_gga97fc91f85abe6139a7f24fbdff35c7e7ad791487f941a47c772442d5252a819bc"><div class="ttname"><a href="group__interrupts.html#gga97fc91f85abe6139a7f24fbdff35c7e7ad791487f941a47c772442d5252a819bc">RAISING_OR_FALLING_EDGE</a></div><div class="ttdeci">@ RAISING_OR_FALLING_EDGE</div><div class="ttdoc">Generate interrupt on both raise and falling edges.</div><div class="ttdef"><b>Definition</b> interrupt.h:121</div></div>
-<div class="ttc" id="agroup__interrupts_html_gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893"><div class="ttname"><a href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893">HIGH</a></div><div class="ttdeci">@ HIGH</div><div class="ttdoc">High priority.</div><div class="ttdef"><b>Definition</b> interrupt.h:110</div></div>
-<div class="ttc" id="agroup__interrupts_html_gga9ebbbf91c4e6fa77cced0ac0daefd964a6a226f4143ca3b18999551694cdb72a8"><div class="ttname"><a href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a6a226f4143ca3b18999551694cdb72a8">LOW</a></div><div class="ttdeci">@ LOW</div><div class="ttdoc">Low priority.</div><div class="ttdef"><b>Definition</b> interrupt.h:108</div></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c">  149</a></span><span class="preprocessor">#define enable_mcu_interrupts() (EA = 1)</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga8b0ea5804af6316376f49ade70b868b3">  160</a></span><span class="preprocessor">#define disable_mcu_interrupts() (EA = 0)</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">  169</a></span><span class="preprocessor">#define is_mcu_interrupts_enabled() (EA == 1)</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="group__interrupts.html#gada95baa6c6b2484eb8cf3c01889071fc">  178</a></span><span class="preprocessor">#define enable_low_voltage_interrupt() (ELVD = 1)</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="group__interrupts.html#gae7bd7f894582b7f376b077fbd4435864">  187</a></span><span class="preprocessor">#define disable_low_voltage_interrupt() (ELVD = 0)</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="group__interrupts.html#gac4ef997b6aa14a6864c2ef2c432aac4a">  197</a></span><span class="preprocessor">#define is_low_voltage_interrupt_enabled() (ELVD == 1 &amp;&amp; is_mcu_interrupts_enabled())</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="group__interrupts.html#gaadf84a2181fd871ee2e29848480756ae">  206</a></span><span class="preprocessor">#define enable_adc_interrupt() (EADC = 1)</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga499a9a838de2728a9c6ab4311d055b86">  215</a></span><span class="preprocessor">#define disable_adc_interrupt() (EADC = 0)</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno"><a class="line" href="group__interrupts.html#gace1428b686ee4412764f5ecb31197814">  225</a></span><span class="preprocessor">#define is_adc_interrupt_enabled() (EADC == 1 &amp;&amp; is_mcu_interrupts_enabled())</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga650e12d0892198b3a63c1a8c382b9c12">  234</a></span><span class="preprocessor">#define enable_uart1_interrupt() (ES = 1)</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga5dac79f9182e6dc1a31448a28ee0a162">  243</a></span><span class="preprocessor">#define disable_uart1_interrupt() (ES = 0)</span></div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno"><a class="line" href="group__interrupts.html#gae4d7cee935888f8c3b25ae5697d868b5">  253</a></span><span class="preprocessor">#define is_uart1_interrupt_enabled() (ES == 1 &amp;&amp; is_mcu_interrupts_enabled())</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga9f0976519e8c6f8102dce44f7ad2aa6a">  262</a></span><span class="preprocessor">#define enable_int0_interrupt() (EX0 = 1)</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga5280b5134c4d1fad2f492e30205d7691">  271</a></span><span class="preprocessor">#define disable_int0_interrupt() (EX0 = 0)</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga194f7f1f70af345370c596512b23a588">  281</a></span><span class="preprocessor">#define is_int0_interrupt_enabled() (EX0 == 1 &amp;&amp; is_mcu_interrupts_enabled())</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga4fb0d9228dcf2749cd098092edaa1308">  290</a></span><span class="preprocessor">#define enable_int1_interrupt() (EX1 = 1)</span></div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno"><a class="line" href="group__interrupts.html#gaa588f32201651fc565dd745d36048a97">  299</a></span><span class="preprocessor">#define disable_int1_interrupt() (EX1 = 0)</span></div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga77b38abe100ab6558721575d42b9776a">  309</a></span><span class="preprocessor">#define is_int1_interrupt_enabled() (EX1 == 1 &amp;&amp; is_mcu_interrupts_enabled())</span></div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga590f0de8191271977e1f79d9ab9576ab">  318</a></span><span class="preprocessor">#define enable_int2_interrupt() (bit_set(INT_CLKO, SBIT4))</span></div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga4668129f676d8d123d5992da8b7d6564">  327</a></span><span class="preprocessor">#define disable_int2_interrupt() (bit_clr(INT_CLKO, CBIT4))</span></div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga88ebf38f3c33cba4de86d19e2532ec97">  337</a></span><span class="preprocessor">#define is_int2_interrupt_enabled() (test_if_bit_set(INT_CLKO, SBIT4) &amp;&amp; is_mcu_interrupts_enabled())</span></div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga10ccfe3b81e2f0f8f8a9014a6f6cb382">  346</a></span><span class="preprocessor">#define enable_int3_interrupt() (bit_set(INT_CLKO, SBIT5))</span></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga0eefb72a54f3befd3535d70e71a06de4">  355</a></span><span class="preprocessor">#define disable_int3_interrupt() (bit_clr(INT_CLKO, CBIT5))</span></div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga55815a15f668bf452348f7483ca94a2e">  365</a></span><span class="preprocessor">#define is_int3_interrupt_enabled() (test_if_bit_set(INT_CLKO, SBIT5) &amp;&amp; is_mcu_interrupts_enabled())</span></div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span> </div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga0e5e4a9cb47201c8f5be1e0918d29ac4">  374</a></span><span class="preprocessor">#define enable_int4_interrupt() (bit_set(INT_CLKO, SBIT6))</span></div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span> </div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno"><a class="line" href="group__interrupts.html#gae3a80148c904b86a58976a26399720d0">  383</a></span><span class="preprocessor">#define disable_int4_interrupt() (bit_clr(INT_CLKO, CBIT6))</span></div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span> </div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno"><a class="line" href="group__interrupts.html#gab74f8baae5f006ebecd8ccbb787decb0">  393</a></span><span class="preprocessor">#define is_int4_interrupt_enable() (test_if_bit_set(INT_CLKO, SBIT6) &amp;&amp; is_mcu_interrupts_enabled())</span></div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span> </div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga3ce3cdb9bf4963e75a0664964fb83c3a">  402</a></span><span class="preprocessor">#define enable_timer0_interrupt() (ET0 = 1)</span></div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span> </div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga2ef6ebd3211c16ce240018d22589e8da">  411</a></span><span class="preprocessor">#define disable_timer0_interrupt() (ET0 = 0)</span></div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span> </div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno"><a class="line" href="group__interrupts.html#gaf6a267bf6befa9aee24a701bd782f457">  421</a></span><span class="preprocessor">#define is_timer0_interrupt_enabled() (ET0 == 1 &amp;&amp; is_mcu_interrupts_enabled())</span></div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span> </div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga6ba6fe72d49d266c76ca27b31bcb0395">  430</a></span><span class="preprocessor">#define enable_timer2_interrupt() (bit_set(IE2, SBIT2))</span></div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span> </div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno"><a class="line" href="group__interrupts.html#gac8daf51c922df876c57f419b63996dd5">  439</a></span><span class="preprocessor">#define disable_timer2_interrupt() (bit_clr(IE2, CBIT2))</span></div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span> </div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga0c35fd771294a22d4cd3e205fd806bdb">  449</a></span><span class="preprocessor">#define is_timer2_interrupt_enabled() (test_if_bit_set(IE2, SBIT2) &amp;&amp; is_mcu_interrupts_enabled())</span></div>
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span> </div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga1031a01617faf8bd48f91d9eac505792">  458</a></span><span class="preprocessor">#define enable_spi_interrupt() (bit_set(IE2, SBIT1))</span></div>
+<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span> </div>
+<div class="line"><a id="l00467" name="l00467"></a><span class="lineno"><a class="line" href="group__interrupts.html#gad8ec33652ec7e3a2a2754678217a9799">  467</a></span><span class="preprocessor">#define disable_spi_interrupt() (bit_clr(IE2, CBIT1))</span></div>
+<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span> </div>
+<div class="line"><a id="l00477" name="l00477"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga749a47d315950a06ecd28e89cacec83d">  477</a></span><span class="preprocessor">#define is_spi_interrupt_enabled() (test_if_bit_set(IE2, SBIT1) &amp;&amp; is_mcu_interrupts_enabled())</span></div>
+<div class="line"><a id="l00478" name="l00478"></a><span class="lineno">  478</span> </div>
+<div class="line"><a id="l00486" name="l00486"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga61be7c532b0092fb479d95934351910d">  486</a></span><span class="preprocessor">#define set_pca_interrupt_priority(priority) (PPCA = priority)</span></div>
+<div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span> </div>
+<div class="line"><a id="l00495" name="l00495"></a><span class="lineno"><a class="line" href="group__interrupts.html#gabf64c78cca4cdf3dbccbe6b3be2ac7f3">  495</a></span><span class="preprocessor">#define get_pca_interrupt_priority() (PPCA)</span></div>
+<div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span> </div>
+<div class="line"><a id="l00504" name="l00504"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga3d287824f6ad9219ad0ea0ea8ceed3a2">  504</a></span><span class="preprocessor">#define set_low_voltage_interrupt_priority(priority) (PLVD = priority)</span></div>
+<div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span> </div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga7d6648d7b8c9e35c9a3e19067b8eb8ae">  513</a></span><span class="preprocessor">#define get_low_voltage_interrupt_priority() (PVLD)</span></div>
+<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span> </div>
+<div class="line"><a id="l00522" name="l00522"></a><span class="lineno"><a class="line" href="group__interrupts.html#gac3ad7282866c58628f44b746ec2da56f">  522</a></span><span class="preprocessor">#define set_adc_interrupt_priority(priority) (PADC = priority)</span></div>
+<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span> </div>
+<div class="line"><a id="l00531" name="l00531"></a><span class="lineno"><a class="line" href="group__interrupts.html#gad657770c0ca0c4561bbe0370c219020d">  531</a></span><span class="preprocessor">#define get_adc_interrupt_priority() (PADC)</span></div>
+<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span> </div>
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga82ffad64559fd095450b0c283004b8ac">  539</a></span><span class="preprocessor">#define set_uart1_interrupt_priority(priority) (PS = priority)</span></div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span> </div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga856d0becba655d45b38340f214e0c82a">  548</a></span><span class="preprocessor">#define get_uart1_interrupt_priority() (PS)</span></div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span> </div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno"><a class="line" href="group__interrupts.html#gadc1f845094582635951872311de9f1f4">  556</a></span><span class="preprocessor">#define set_int0_interrupt_priority(priority) (PX0 = priority)</span></div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span> </div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno"><a class="line" href="group__interrupts.html#gaad8983bc0b980226f8a20ea91576f224">  565</a></span><span class="preprocessor">#define get_int0_interrupt_priority() (PX0)</span></div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span> </div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno"><a class="line" href="group__interrupts.html#gafcf2592c8e8e557e3ba9eab108c34ce9">  574</a></span><span class="preprocessor">#define set_int1_interrupt_priority(priority) (PX1 = priority)</span></div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span> </div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga00c71c291d049d66e03de830a21cbe29">  583</a></span><span class="preprocessor">#define get_int1_interrupt_priority() (PX1)</span></div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span> </div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga592af19616ab5d4dfa15bc48c451ffe6">  592</a></span><span class="preprocessor">#define set_timer0_interrupt_priority(priority) (PT0 = priority)</span></div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span> </div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno"><a class="line" href="group__interrupts.html#gaae1d82dd8aa3ed51e31de9cdf4d03eaa">  601</a></span><span class="preprocessor">#define get_timer0_interrupt_priority() (PT0)</span></div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span> </div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga7f4ce2c83eea0366ba67f8cc956aab8f">  610</a></span><span class="preprocessor">#define set_spi_interrupt_priority(priority) (priority == HIGH ? bit_set(IP2, SBIT1) : bit_clr(IP2, CBIT1))</span></div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span> </div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno"><a class="line" href="group__interrupts.html#gaacd1dbc81fe112ce6b25b664d07f2924">  619</a></span><span class="preprocessor">#define get_spi_interrupt_priority() (test_if_bit_set(IP2, SBIT1))</span></div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span> </div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno"><a class="line" href="group__interrupts.html#gae83d9bb9ef89de5990b742de004f8ed5">  628</a></span><span class="preprocessor">#define set_int0_interrupt_trigger(trigger) ( IT0 = trigger)</span></div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span> </div>
+<div class="line"><a id="l00638" name="l00638"></a><span class="lineno"><a class="line" href="group__interrupts.html#gafa1390efc7ccf39edab668888d503995">  638</a></span><span class="preprocessor">#define get_int0_interrupt_trigger() (IT0)</span></div>
+<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span> </div>
+<div class="line"><a id="l00647" name="l00647"></a><span class="lineno"><a class="line" href="group__interrupts.html#gae5bb64646f48ac6321349bca7fb8094c">  647</a></span><span class="preprocessor">#define set_int1_interrupt_trigger(trigger) (IT1 = trigger)</span></div>
+<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span> </div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno"><a class="line" href="group__interrupts.html#ga87497515d718a96065c9606e3e7eb99f">  657</a></span><span class="preprocessor">#define get_int1_interrupt_trigger() (IT1)</span></div>
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span> </div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__interrupts_html_ga97fc91f85abe6139a7f24fbdff35c7e7"><div class="ttname"><a href="group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7">external_interrupt_trigger_t</a></div><div class="ttdeci">external_interrupt_trigger_t</div><div class="ttdef"><b>Definition</b> interrupt.h:133</div></div>
+<div class="ttc" id="agroup__interrupts_html_ga9ebbbf91c4e6fa77cced0ac0daefd964"><div class="ttname"><a href="group__interrupts.html#ga9ebbbf91c4e6fa77cced0ac0daefd964">interrupt_priority_t</a></div><div class="ttdeci">interrupt_priority_t</div><div class="ttdef"><b>Definition</b> interrupt.h:120</div></div>
+<div class="ttc" id="agroup__interrupts_html_gga97fc91f85abe6139a7f24fbdff35c7e7a80874c2f638b4611a7d53723ff1f6c3d"><div class="ttname"><a href="group__interrupts.html#gga97fc91f85abe6139a7f24fbdff35c7e7a80874c2f638b4611a7d53723ff1f6c3d">ONLY_FALLING_EDGE</a></div><div class="ttdeci">@ ONLY_FALLING_EDGE</div><div class="ttdoc">Generate interrupt only on fallign edge.</div><div class="ttdef"><b>Definition</b> interrupt.h:137</div></div>
+<div class="ttc" id="agroup__interrupts_html_gga97fc91f85abe6139a7f24fbdff35c7e7ad791487f941a47c772442d5252a819bc"><div class="ttname"><a href="group__interrupts.html#gga97fc91f85abe6139a7f24fbdff35c7e7ad791487f941a47c772442d5252a819bc">RAISING_OR_FALLING_EDGE</a></div><div class="ttdeci">@ RAISING_OR_FALLING_EDGE</div><div class="ttdoc">Generate interrupt on both raise and falling edges.</div><div class="ttdef"><b>Definition</b> interrupt.h:135</div></div>
+<div class="ttc" id="agroup__interrupts_html_gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893"><div class="ttname"><a href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893">HIGH</a></div><div class="ttdeci">@ HIGH</div><div class="ttdoc">High priority.</div><div class="ttdef"><b>Definition</b> interrupt.h:124</div></div>
+<div class="ttc" id="agroup__interrupts_html_gga9ebbbf91c4e6fa77cced0ac0daefd964a6a226f4143ca3b18999551694cdb72a8"><div class="ttname"><a href="group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a6a226f4143ca3b18999551694cdb72a8">LOW</a></div><div class="ttdeci">@ LOW</div><div class="ttdoc">Low priority.</div><div class="ttdef"><b>Definition</b> interrupt.h:122</div></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
