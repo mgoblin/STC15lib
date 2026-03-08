@@ -175,7 +175,11 @@ do {                                                        \
  * @details Before run timer0_mode3_12T_init or timer0_mode3_1T_init should be called.
  *  
  * After run program flow not blocked and interrupt will raised when timer is overloaded.
- * Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code.
+ * Interrupt handler 
+ * void timer0ISR(void) __interrupt(1) 
+ * or 
+ * void timer0ISR(void) __interrupt(INTERRUPT_TIMER0) 
+ * should be defined in user code.
  * 
  * Timer rerun after overloaded and interupt handler called. 
  * 
@@ -199,7 +203,11 @@ do {                                                                            
  * @details Before run timer0_mode3_12T_init or timer0_mode3_1T_init should be called.
  * 
  * After run program flow not blocked and interrupt will raised when timer is overloaded.
- * Interrupt handler void timer0ISR(void) __interrupt(1) should be defined in user code.
+ * Interrupt handler 
+ * void timer0ISR(void) __interrupt(1) 
+ * or 
+ * void timer0ISR(void) __interrupt(INTERRUPT_TIMER0) 
+ * should be defined in user code.
  * 
  * Timer rerun after overloaded and interupt handler called. 
  * Timer overload occurs on [TH0, TL0] = 0xff + 1
