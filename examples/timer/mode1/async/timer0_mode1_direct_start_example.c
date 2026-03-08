@@ -7,7 +7,7 @@
 #define TH0_VALUE 0x00
 #define TL0_VALUE 0x00
 
-void timerISR() __interrupt(1)
+void timerISR() __interrupt(INTERRUPT_TIMER0)
 {
     LED = !LED;
 }

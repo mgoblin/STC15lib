@@ -14,7 +14,7 @@
 const uint8_t TL0_values[VALUES_SIZE] = { 0xff, 0xff, 0xff };
 const uint8_t TH0_values[VALUES_SIZE] = { 0x10, 0x80, 0xef };
 
-void timerISR() __interrupt(1)
+void timerISR() __interrupt(INTERRUPT_TIMER0)
 {
     LED = !LED;
 }
