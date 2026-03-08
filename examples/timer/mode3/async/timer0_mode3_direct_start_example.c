@@ -11,7 +11,7 @@
 #define LED P10
 
 
-void timerISR() __interrupt(1)
+void timerISR() __interrupt(INTERRUPT_TIMER0)
 {
     LED = !LED;
 }
