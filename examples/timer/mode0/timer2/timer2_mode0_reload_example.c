@@ -30,7 +30,7 @@ void main()
     }
 }
 
-void timerISR() __interrupt(12)
+void timerISR() __interrupt(INTERRUPT_TIMER2)
 {
     LED = !LED;
 }

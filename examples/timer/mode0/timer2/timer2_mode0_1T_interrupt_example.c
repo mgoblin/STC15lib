@@ -7,7 +7,7 @@
 #define LED P10
 
 // Timer2 raise interrupt 12 afer overflow. This is an interrupt handler.
-void timer2ISR() __interrupt(12)
+void timer2ISR() __interrupt(INTERRUPT_TIMER2)
 {
     LED = !LED;
 }
