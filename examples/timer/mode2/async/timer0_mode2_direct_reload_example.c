@@ -17,7 +17,7 @@ uint8_t blink_divider = 0; // timer interrupt counter
 #define VALUES_SIZE 3
 const uint8_t timer_values[VALUES_SIZE] = { 0xd0, 0x70, 0x00 };
 
-void timerISR() __interrupt(1)
+void timerISR() __interrupt(INTERRUPT_TIMER0)
 {
     if (blink_divider >= BLINKS)
     {

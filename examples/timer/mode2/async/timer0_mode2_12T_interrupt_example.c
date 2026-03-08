@@ -10,7 +10,7 @@
 
 uint16_t interrupt_counter = 0;
 
-void timer0ISR(void) __interrupt(1)
+void timer0ISR(void) __interrupt(INTERRUPT_TIMER0)
 {
     if (interrupt_counter++ >= SLOW_DOWN_CYCLES)
     {

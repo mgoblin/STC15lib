@@ -10,7 +10,7 @@
 #define BLINKS 10
 uint8_t interrupt_count = 0;
 
-void timerISR() __interrupt(1)
+void timerISR() __interrupt(INTERRUPT_TIMER0)
 {
     if (interrupt_count >= BLINKS)
     {
