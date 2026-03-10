@@ -98,6 +98,20 @@
 #define INTERRUPT_TIMER0 1
 
 /**
+ * @brief TIMER1 interrupt number for counter mode
+ * 
+ * @ingroup interrups
+ */
+#define INTERRUPT_COUNTER1 3
+
+/**
+ * @brief TIMER1 interrupt number for timer mode
+ * 
+ * @ingroup interrups
+ */
+#define INTERRUPT_TIMER1 3
+
+/**
  * @brief TIMER2 interrupt number for counter mode
  * 
  * @ingroup interrups
