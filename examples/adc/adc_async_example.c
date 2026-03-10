@@ -26,7 +26,7 @@
 *
 * Read ADC value and if it greater than 0 change LED state 
 */
-void adc_ISR(void) __interrupt(5)
+void adc_ISR(void) __interrupt(INTERRUPT_ADC)
 {
     if (adc_async_get_result())
     {

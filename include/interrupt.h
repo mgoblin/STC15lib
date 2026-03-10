@@ -132,6 +132,13 @@
  */
 #define INTERRUPT_UART1 4
 
+/**
+ * @brief ADC interrupt number for timer mode
+ * 
+ * @ingroup interrups
+ */
+#define INTERRUPT_ADC 5
+
 
 /** 
  * Interrupt priority enumeration
