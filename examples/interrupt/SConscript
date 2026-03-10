@@ -1,5 +1,6 @@
 Import("env")
 
 env.Default (
-    env.Program('interrupt_example', ['interrupt_example.c'])
+    env.Program('interrupt_int0_example', ['interrupt_int0_example.c']),
+    env.Program('interrupt_int1_example', ['interrupt_int1_example.c']),
 )
