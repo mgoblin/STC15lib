@@ -13,7 +13,7 @@
 
 #define LED P10
 
-void uart1ISR() __interrupt(4)
+void uart1ISR() __interrupt(INTERRUPT_UART1)
 {
     if(TI)
     {

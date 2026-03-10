@@ -5,7 +5,7 @@
 
 #define LED P10
 
-void uart1_ISTR() __interrupt(4)
+void uart1_ISTR() __interrupt(INTERRUPT_UART1)
 {
     LED = 0;
 }

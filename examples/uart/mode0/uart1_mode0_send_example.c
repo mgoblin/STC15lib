@@ -12,7 +12,7 @@
 
 #define LED P10
 
-void uart1ISR() __interrupt(4)
+void uart1ISR() __interrupt(INTERRUPT_UART1)
 {
     if(TI)
     {
@@ -23,6 +23,7 @@ void uart1ISR() __interrupt(4)
 void main()
 {
 	uart1_mode0_init(baudrate_921600);
+    enable_uart1_interrupt();
 	
     while(1)
     {

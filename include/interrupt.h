@@ -125,6 +125,14 @@
  */
 #define INTERRUPT_TIMER2 12
 
+/**
+ * @brief UART1 interrupt number for timer mode
+ * 
+ * @ingroup interrups
+ */
+#define INTERRUPT_UART1 4
+
+
 /** 
  * Interrupt priority enumeration
  * 
