@@ -15,7 +15,7 @@
 #define LED P10
 #define TICKS 0xffff
 
-void timerISR() __interrupt(12)
+void timerISR() __interrupt(INTERRUPT_TIMER2)
 {
     LED = !LED;
 }
