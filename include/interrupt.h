@@ -126,19 +126,25 @@
 #define INTERRUPT_TIMER2 12
 
 /**
- * @brief UART1 interrupt number for timer mode
+ * @brief UART1 interrupt number
  * 
  * @ingroup interrups
  */
 #define INTERRUPT_UART1 4
 
 /**
- * @brief ADC interrupt number for timer mode
+ * @brief ADC interrupt number
  * 
  * @ingroup interrups
  */
 #define INTERRUPT_ADC 5
 
+/**
+ * @brief Low voltage detected interrupt number
+ * 
+ * @ingroup interrups
+ */
+#define INTERRUPT_LVD 6
 
 /** 
  * Interrupt priority enumeration
