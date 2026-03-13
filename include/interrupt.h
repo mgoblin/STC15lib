@@ -181,6 +181,14 @@
  */
 #define INTERRUPT_SPI 9
 
+/**
+ * @brief PWM interrupt number
+ * 
+ * @ingroup interrups
+ */
+#define INTERRUPT_PWM 13
+
+
 /** 
  * Interrupt priority enumeration
  * 
