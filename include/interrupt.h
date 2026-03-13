@@ -238,6 +238,12 @@
  */
 #define INTERRUPT_PWM 13
 
+/**
+ * @brief Comparator interrupt number
+ * 
+ * @ingroup interrups
+ */
+#define INTERRUPT_CMPR 21
 
 /** 
  * Interrupt priority enumeration
