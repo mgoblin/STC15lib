@@ -133,6 +133,13 @@
 #define INTERRUPT_UART1 4
 
 /**
+ * @brief UART2 interrupt number
+ * 
+ * @ingroup interrups
+ */
+#define INTERRUPT_UART2 8
+
+/**
  * @brief ADC interrupt number
  * 
  * @ingroup interrups
