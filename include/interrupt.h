@@ -138,7 +138,7 @@
  * 
  * @ingroup interrups
  */
-#define INTERRUPT_COUTER2 12
+#define INTERRUPT_COUNTER2 12
 
 /**
  * @brief TIMER2 interrupt number for timer mode
@@ -146,6 +146,34 @@
  * @ingroup interrups
  */
 #define INTERRUPT_TIMER2 12
+
+/**
+ * @brief TIMER3 interrupt number for counter mode
+ * 
+ * @ingroup interrups
+ */
+#define INTERRUPT_COUNTER3 19
+
+/**
+ * @brief TIMER3 interrupt number for timer mode
+ * 
+ * @ingroup interrups
+ */
+#define INTERRUPT_TIMER3 19
+
+/**
+ * @brief TIMER4 interrupt number for counter mode
+ * 
+ * @ingroup interrups
+ */
+#define INTERRUPT_COUNTER4 20
+
+/**
+ * @brief TIMER4 interrupt number for timer mode
+ * 
+ * @ingroup interrups
+ */
+#define INTERRUPT_TIMER4 20
 
 /**
  * @brief UART1 interrupt number
