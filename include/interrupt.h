@@ -160,6 +160,13 @@
  */
 #define INTERRUPT_PCA 7
 
+/**
+ * @brief SPI interrupt number
+ * 
+ * @ingroup interrups
+ */
+#define INTERRUPT_SPI 9
+
 /** 
  * Interrupt priority enumeration
  * 
