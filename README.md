@@ -102,6 +102,7 @@ void main()
 | GPIO          | Pin as digital in/out routines  | READY              |
 | EEPROM        | Non volatile flash memory routines   | INITIAL SUPPORT         |
 | ADC           | Analog to digital converstions  | READY              |
+| Comparator    | Analog voltage comparator       | INITIAL SUPPORT         |
 
 Other modules does not implemented yet.
 
