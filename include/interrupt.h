@@ -146,6 +146,13 @@
  */
 #define INTERRUPT_LVD 6
 
+/**
+ * @brief PCA interrupt number
+ * 
+ * @ingroup interrups
+ */
+#define INTERRUPT_PCA 7
+
 /** 
  * Interrupt priority enumeration
  * 
