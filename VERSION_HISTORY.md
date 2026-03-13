@@ -177,6 +177,7 @@
 * Fix: copy eerprom_data.hex on cmake build eeprom examples
 * Fix: Cmake firmware size is not equals to platfromio build size
 * Fix: Firmware builded by sdcc 4.5 work correctly
+* TODO Comparator module implemented
 * TODO Review wakeup timer routines. Move from ticks to ms
 * TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms
 
