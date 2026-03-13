@@ -12,5 +12,7 @@ var searchData=
   ['interrupt_5ftimer1_9',['INTERRUPT_TIMER1',['../interrupt_8h.html#a2ca53825c7217e731039b6ad5dc52aa9',1,'interrupt.h']]],
   ['interrupt_5ftimer2_10',['INTERRUPT_TIMER2',['../interrupt_8h.html#ad4ccc1ff69ffa89f37945ac73856a86b',1,'interrupt.h']]],
   ['interrupt_5fuart1_11',['INTERRUPT_UART1',['../interrupt_8h.html#acb8aa184c94484d130bdbb3427088c7e',1,'interrupt.h']]],
-  ['interrupt_5fuart2_12',['INTERRUPT_UART2',['../interrupt_8h.html#a57a52740c4d93eb2419e25ee79702f6c',1,'interrupt.h']]]
+  ['interrupt_5fuart2_12',['INTERRUPT_UART2',['../interrupt_8h.html#a57a52740c4d93eb2419e25ee79702f6c',1,'interrupt.h']]],
+  ['interrupt_5fuart3_13',['INTERRUPT_UART3',['../interrupt_8h.html#ac62362c046b77493d3799586fa364cfd',1,'interrupt.h']]],
+  ['interrupt_5fuart4_14',['INTERRUPT_UART4',['../interrupt_8h.html#ac417132f550a272190c4bafda57f6333',1,'interrupt.h']]]
 ];

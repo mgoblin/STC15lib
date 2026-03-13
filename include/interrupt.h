@@ -48,8 +48,8 @@
  * 12 | Timer2 interrupt
  * 13 | PWM interrupt
  * 16 | INT4
- * 17 | S3
- * 18 | S4
+ * 17 | UART3 (STC15W408AS has no this timer)
+ * 18 | UART4 (STC15W408AS has no this timer)
  * 19 | Timer3 interrupt (STC15W408AS has no this timer)
  * 20 | Timer4 interrupt (STC15W408AS has no this timer)
  * 21 | Comparator interrupt
@@ -160,6 +160,20 @@
  * @ingroup interrups
  */
 #define INTERRUPT_UART2 8
+
+/**
+ * @brief UART3 interrupt number
+ * 
+ * @ingroup interrups
+ */
+#define INTERRUPT_UART3 17
+
+/**
+ * @brief UART4 interrupt number
+ * 
+ * @ingroup interrups
+ */
+#define INTERRUPT_UART4 18
 
 /**
  * @brief ADC interrupt number
