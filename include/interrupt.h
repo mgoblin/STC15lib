@@ -675,7 +675,17 @@ do {                                                                   \
 do {                                                                   \
     bit_clr(CMPCR1, CBIT5);                                            \
     bit_clr(CMPCR1, CBIT4);                                            \
-} while(0)    
+} while(0)  
+
+/**
+ * @brief Get comparator interrupt enable status
+ * @details Get mcu interrupt and comparator interrupt support status
+ * 
+ * @return true if mcu and comparator interrupt enabled, otherwise false 
+ * 
+ * @ingroup interrupts
+ */
+#define is_comparator_interrupt_enabled() ((test_if_bit_set(CMPCR1, SBIT4) || test_if_bit_set(CMPCR1, SBIT5)) && is_mcu_interrupts_enabled())
 
 ///@}
 
