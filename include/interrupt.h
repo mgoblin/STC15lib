@@ -70,10 +70,6 @@
  * @author Michael Golovanov
  */
 
- /** @name aliases
- *  Interrupt aliases
- */
-///@{
 
 /**
  * @brief INTO interrupt number alias
@@ -251,8 +247,6 @@
  */
 #define INTERRUPT_CMPR 21
 
-///@}
-
 /** 
  * Interrupt priority enumeration
  * 
@@ -278,6 +272,13 @@ typedef enum
     /// @brief Generate interrupt only on fallign edge
     ONLY_FALLING_EDGE = 1
 } external_interrupt_trigger_t;
+
+
+
+/** @name onoff
+ *  Interrupt enable/disable routines
+ */
+///@{
 
 /**
  * @brief Enable interrupts support of MCU
@@ -617,6 +618,9 @@ typedef enum
  * @ingroup interrupts
  */
 #define is_spi_interrupt_enabled() (test_if_bit_set(IE2, SBIT1) && is_mcu_interrupts_enabled())
+
+///@}
+
 
 /**
  * @brief Set programmable counter arrya (PCA) interrupt priority
