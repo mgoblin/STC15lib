@@ -69,6 +69,12 @@
  * 
  * @author Michael Golovanov
  */
+
+ /** @name aliases
+ *  Interrupt aliases
+ */
+///@{
+
 /**
  * @brief INTO interrupt number alias
  * 
@@ -244,6 +250,8 @@
  * @ingroup interrups
  */
 #define INTERRUPT_CMPR 21
+
+///@}
 
 /** 
  * Interrupt priority enumeration
