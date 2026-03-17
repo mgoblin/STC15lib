@@ -71,6 +71,12 @@
  */
 
 
+/** @name aliases
+ *  Interrupt number aliases
+ */
+///@{
+
+
 /**
  * @brief INTO interrupt number alias
  * 
@@ -110,145 +116,147 @@
 /**
  * @brief TIMER0 interrupt number for counter mode
  * 
- * @ingroup interrups
+ * @ingroup interrupts
  */
 #define INTERRUPT_COUNTER0 1
 
 /**
  * @brief TIMER0 interrupt number for timer mode
  * 
- * @ingroup interrups
+ * @ingroup interrupts
  */
 #define INTERRUPT_TIMER0 1
 
 /**
  * @brief TIMER1 interrupt number for counter mode
  * 
- * @ingroup interrups
+ * @ingroup interrupts
  */
 #define INTERRUPT_COUNTER1 3
 
 /**
  * @brief TIMER1 interrupt number for timer mode
  * 
- * @ingroup interrups
+ * @ingroup interrupts
  */
 #define INTERRUPT_TIMER1 3
 
 /**
  * @brief TIMER2 interrupt number for counter mode
  * 
- * @ingroup interrups
+ * @ingroup interrupts
  */
 #define INTERRUPT_COUNTER2 12
 
 /**
  * @brief TIMER2 interrupt number for timer mode
  * 
- * @ingroup interrups
+ * @ingroup interrupts
  */
 #define INTERRUPT_TIMER2 12
 
 /**
  * @brief TIMER3 interrupt number for counter mode
  * 
- * @ingroup interrups
+ * @ingroup interrupts
  */
 #define INTERRUPT_COUNTER3 19
 
 /**
  * @brief TIMER3 interrupt number for timer mode
  * 
- * @ingroup interrups
+ * @ingroup interrupts
  */
 #define INTERRUPT_TIMER3 19
 
 /**
  * @brief TIMER4 interrupt number for counter mode
  * 
- * @ingroup interrups
+ * @ingroup interrupts
  */
 #define INTERRUPT_COUNTER4 20
 
 /**
  * @brief TIMER4 interrupt number for timer mode
  * 
- * @ingroup interrups
+ * @ingroup interrupts
  */
 #define INTERRUPT_TIMER4 20
 
 /**
  * @brief UART1 interrupt number
  * 
- * @ingroup interrups
+ * @ingroup interrupts
  */
 #define INTERRUPT_UART1 4
 
 /**
  * @brief UART2 interrupt number
  * 
- * @ingroup interrups
+ * @ingroup interrupts
  */
 #define INTERRUPT_UART2 8
 
 /**
  * @brief UART3 interrupt number
  * 
- * @ingroup interrups
+ * @ingroup interrupts
  */
 #define INTERRUPT_UART3 17
 
 /**
  * @brief UART4 interrupt number
  * 
- * @ingroup interrups
+ * @ingroup interrupts
  */
 #define INTERRUPT_UART4 18
 
 /**
  * @brief ADC interrupt number
  * 
- * @ingroup interrups
+ * @ingroup interrupts
  */
 #define INTERRUPT_ADC 5
 
 /**
  * @brief Low voltage detected interrupt number
  * 
- * @ingroup interrups
+ * @ingroup interrupts
  */
 #define INTERRUPT_LVD 6
 
 /**
  * @brief PCA interrupt number
  * 
- * @ingroup interrups
+ * @ingroup interrupts
  */
 #define INTERRUPT_PCA 7
 
 /**
  * @brief SPI interrupt number
  * 
- * @ingroup interrups
+ * @ingroup interrupts
  */
 #define INTERRUPT_SPI 9
 
 /**
  * @brief PWM interrupt number
  * 
- * @ingroup interrups
+ * @ingroup interrupts
  */
 #define INTERRUPT_PWM 13
 
 /**
  * @brief Comparator interrupt number
  * 
- * @ingroup interrups
+ * @ingroup interrupts
  */
 #define INTERRUPT_CMPR 21
 
+///@}
+
 /** 
- * Interrupt priority enumeration
+ * @brief priority enumeration
  * 
  * @ingroup interrupts
  */
@@ -261,7 +269,7 @@ typedef enum
 } interrupt_priority_t;
 
 /** 
- * External interrupt (INT0, INT1) trigger enumeration
+ * @brief interrupt (INT0, INT1) trigger enumeration
  * 
  * @ingroup interrupts
  */
@@ -275,7 +283,7 @@ typedef enum
 
 
 
-/** @name onoff
+/** @name on/off
  *  Interrupt enable/disable routines
  */
 ///@{
@@ -622,6 +630,12 @@ typedef enum
 ///@}
 
 
+/** @name priority
+ *  Interrupt priority routines
+ */
+///@{
+
+
 /**
  * @brief Set programmable counter arrya (PCA) interrupt priority
  * 
@@ -764,6 +778,14 @@ typedef enum
  */
 #define get_spi_interrupt_priority() (test_if_bit_set(IP2, SBIT1))
 
+///@}
+
+
+/** @name trigger
+ *  Interrupt trigger routines
+ */
+///@{
+
 /**
  * @brief Set INT0 interrupt trigger
  * 
@@ -801,5 +823,7 @@ typedef enum
  * @ingroup interrupts
  */
 #define get_int1_interrupt_trigger() (IT1)
+
+///@}
 
 #endif
