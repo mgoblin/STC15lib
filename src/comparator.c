@@ -17,10 +17,24 @@
 
 #define LCDTY   0x3F    // CMPCR2.[5:0] : set the Duty of Level-Change control filter in the output terminal of comparator
 
-#define PIE     0x20    // CMPCR1.5 : Pos-edge Interrupt Enabling bit
-#define NIE     0x10    // CMPCR1.4 : Neg-edge Interrupt Enabling bit
-
 #define CMPEN   0x80    // CMPCR1.7 : Enable bit of comparator
+
+void comparator_init_async(void)
+{
+    CMPCR1 = 0x00;
+    CMPCR2 = 0x09;
+    enable_comparator_interrupt(ANY_EDGE);
+}
+
+void comparator_start(void)
+{
+    bit_set(CMPCR1, SBIT7);
+}
+
+void comparator_stop(void)
+{
+    bit_clr(CMPCR1, CBIT7);
+}
 
 void cmpISR(void) __interrupt(INTERRUPT_CMPR)
 {
@@ -30,25 +44,26 @@ void cmpISR(void) __interrupt(INTERRUPT_CMPR)
 
 void main(void)
 {
-    CMPCR1 = 0; //Initilize the Comparator control register 1
-    CMPCR2 = 0; //Initilize the Comparator control register 2
+    // CMPCR1 = 0; //Initilize the Comparator control register 1
+    // CMPCR2 = 0; //Initilize the Comparator control register 2
 
-    CMPCR1 &= ~PIS; //choose external pin P5.5(CMP+) as the postive pole of comparator
-    CMPCR1 &= ~NIS; //choose internal BandGap Votage BGV as the negative pole of comparator
+    // CMPCR1 &= ~PIS; //choose external pin P5.5(CMP+) as the postive pole of comparator
+    // CMPCR1 &= ~NIS; //choose internal BandGap Votage BGV as the negative pole of comparator
 
-    CMPCR1 &= ~CMPOE; // Forbid the comparator output to test pin
-    CMPCR2 &= ~INVCMPO; //Normal output the comparing result of comparator on P1.2
+    // CMPCR1 &= ~CMPOE; // Forbid the comparator output to test pin
+    // CMPCR2 &= ~INVCMPO; //Normal output the comparing result of comparator on P1.2
 
-    CMPCR2 &= ~DISFLT; // Enable the comparator filter
-    CMPCR2 &= ~LCDTY;
+    // CMPCR2 &= ~DISFLT; // Enable the comparator filter
+    // CMPCR2 &= ~LCDTY;
 
-    // CMPCR1 |= PIE; // Enable Pos-edge Interrupt
-    // CMPCR1 |= NIE; // Enable Neg-edge Interrupt
+    // CMPCR1 |= CMPEN; //Enable Comparator
 
-    CMPCR1 |= CMPEN; //Enable Comparator
+    // enable_mcu_interrupts();
+    // enable_comparator_interrupt(ANY_EDGE);
 
     enable_mcu_interrupts();
-    enable_comparator_interrupt(ANY_EDGE);
+    comparator_init_async();
+    comparator_start();
     
     while(1);
 }
