@@ -664,6 +664,18 @@ do {                                                                   \
     }                                                                  \
 } while(0)
 
+/**
+ * @brief Disables comparator interrupt
+ * @details Before call this method mcu interrupt support should be enabled 
+ * by calling enable_mcu_interrupts()
+ * 
+ * @ingroup interrupts
+ */
+#define disable_comparator_interrupt()                                 \
+do {                                                                   \
+    bit_clr(CMPCR1, CBIT5);                                            \
+    bit_clr(CMPCR1, CBIT4);                                            \
+} while(0)    
 
 ///@}
 
