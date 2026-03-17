@@ -368,6 +368,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga749a47d315950a06ecd28e89cacec83d" id="r_ga749a47d315950a06ecd28e89cacec83d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga749a47d315950a06ecd28e89cacec83d">is_spi_interrupt_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(IE2, SBIT1) &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td></tr>
 <tr class="memdesc:ga749a47d315950a06ecd28e89cacec83d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get SPI interrupt enable status.  <br /></td></tr>
 <tr class="separator:ga749a47d315950a06ecd28e89cacec83d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa197eaeb8f5d7451a7030d8c811f5dad" id="r_gaa197eaeb8f5d7451a7030d8c811f5dad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaa197eaeb8f5d7451a7030d8c811f5dad">enable_comparator_interrupt</a>(trigger)</td></tr>
+<tr class="memdesc:gaa197eaeb8f5d7451a7030d8c811f5dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable comparator interrupt.  <br /></td></tr>
+<tr class="separator:gaa197eaeb8f5d7451a7030d8c811f5dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">priority</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Interrupt priority routines </p>
 </div></td></tr>
@@ -447,6 +450,12 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga97fc91f85abe6139a7f24fbdff35c7e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">interrupt (INT0, INT1) trigger enumeration  <a href="group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7">More...</a><br /></td></tr>
 <tr class="separator:ga97fc91f85abe6139a7f24fbdff35c7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab11255d882506a529e8ed1cc6403f6a4" id="r_gab11255d882506a529e8ed1cc6403f6a4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gab11255d882506a529e8ed1cc6403f6a4">comparator_interrupt_trigger_t</a> { <a class="el" href="group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a328b755a70c4d67ceeb23e098b8da58b">LOW_TO_HIGH</a> = 0
+, <a class="el" href="group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a13bfb562277fbb6ceb979e2720675f0a">HIGH_TO_LOW</a> = 1
+, <a class="el" href="group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d">ANY_EDGE</a> = 2
+ }</td></tr>
+<tr class="memdesc:gab11255d882506a529e8ed1cc6403f6a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator interrupt trigger enumeration.  <a href="group__interrupts.html#gab11255d882506a529e8ed1cc6403f6a4">More...</a><br /></td></tr>
+<tr class="separator:gab11255d882506a529e8ed1cc6403f6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

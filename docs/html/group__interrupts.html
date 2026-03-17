@@ -87,6 +87,12 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga97fc91f85abe6139a7f24fbdff35c7e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">interrupt (INT0, INT1) trigger enumeration  <a href="group__interrupts.html#ga97fc91f85abe6139a7f24fbdff35c7e7">More...</a><br /></td></tr>
 <tr class="separator:ga97fc91f85abe6139a7f24fbdff35c7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab11255d882506a529e8ed1cc6403f6a4" id="r_gab11255d882506a529e8ed1cc6403f6a4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gab11255d882506a529e8ed1cc6403f6a4">comparator_interrupt_trigger_t</a> { <a class="el" href="group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a328b755a70c4d67ceeb23e098b8da58b">LOW_TO_HIGH</a> = 0
+, <a class="el" href="group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a13bfb562277fbb6ceb979e2720675f0a">HIGH_TO_LOW</a> = 1
+, <a class="el" href="group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d">ANY_EDGE</a> = 2
+ }</td></tr>
+<tr class="memdesc:gab11255d882506a529e8ed1cc6403f6a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator interrupt trigger enumeration.  <a href="group__interrupts.html#gab11255d882506a529e8ed1cc6403f6a4">More...</a><br /></td></tr>
+<tr class="separator:gab11255d882506a529e8ed1cc6403f6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">aliases</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>Interrupt number aliases </p>
@@ -302,6 +308,9 @@ Enumerations</h2></td></tr>
 <tr class="memitem:ga749a47d315950a06ecd28e89cacec83d" id="r_ga749a47d315950a06ecd28e89cacec83d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#ga749a47d315950a06ecd28e89cacec83d">is_spi_interrupt_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(IE2, SBIT1) &amp;&amp; <a class="el" href="group__interrupts.html#ga7af372e71df37937e8ed0b195fbde1f1">is_mcu_interrupts_enabled</a>())</td></tr>
 <tr class="memdesc:ga749a47d315950a06ecd28e89cacec83d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get SPI interrupt enable status.  <br /></td></tr>
 <tr class="separator:ga749a47d315950a06ecd28e89cacec83d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa197eaeb8f5d7451a7030d8c811f5dad" id="r_gaa197eaeb8f5d7451a7030d8c811f5dad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__interrupts.html#gaa197eaeb8f5d7451a7030d8c811f5dad">enable_comparator_interrupt</a>(trigger)</td></tr>
+<tr class="memdesc:gaa197eaeb8f5d7451a7030d8c811f5dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable comparator interrupt.  <br /></td></tr>
+<tr class="separator:gaa197eaeb8f5d7451a7030d8c811f5dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">priority</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>Interrupt priority routines </p>
@@ -682,6 +691,46 @@ Enumerations</h2></td></tr>
 
 <p>Enable ADC interrupt. </p>
 <p>Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a> </p>
+
+</div>
+</div>
+<a id="gaa197eaeb8f5d7451a7030d8c811f5dad" name="gaa197eaeb8f5d7451a7030d8c811f5dad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa197eaeb8f5d7451a7030d8c811f5dad">&#9670;&#160;</a></span>enable_comparator_interrupt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define enable_comparator_interrupt</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">trigger</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                   \</div>
+<div class="line">    if (trigger == <a class="code hl_enumvalue" href="group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a328b755a70c4d67ceeb23e098b8da58b">LOW_TO_HIGH</a> || trigger == <a class="code hl_enumvalue" href="group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d">ANY_EDGE</a>)                 \</div>
+<div class="line">    {                                                                  \</div>
+<div class="line">        bit_set(CMPCR1, SBIT5);                                        \</div>
+<div class="line">    }                                                                  \</div>
+<div class="line">    if (trigger == <a class="code hl_enumvalue" href="group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a13bfb562277fbb6ceb979e2720675f0a">HIGH_TO_LOW</a> || trigger == <a class="code hl_enumvalue" href="group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d">ANY_EDGE</a>)                 \</div>
+<div class="line">    {                                                                  \</div>
+<div class="line">        bit_set(CMPCR1, SBIT4);                                        \</div>
+<div class="line">    }                                                                  \</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
+<div class="ttc" id="agroup__interrupts_html_ggab11255d882506a529e8ed1cc6403f6a4a13bfb562277fbb6ceb979e2720675f0a"><div class="ttname"><a href="group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a13bfb562277fbb6ceb979e2720675f0a">HIGH_TO_LOW</a></div><div class="ttdeci">@ HIGH_TO_LOW</div><div class="ttdoc">High to low edge trigger.</div><div class="ttdef"><b>Definition</b> interrupt.h:294</div></div>
+<div class="ttc" id="agroup__interrupts_html_ggab11255d882506a529e8ed1cc6403f6a4a328b755a70c4d67ceeb23e098b8da58b"><div class="ttname"><a href="group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a328b755a70c4d67ceeb23e098b8da58b">LOW_TO_HIGH</a></div><div class="ttdeci">@ LOW_TO_HIGH</div><div class="ttdoc">Low to high edge trigger.</div><div class="ttdef"><b>Definition</b> interrupt.h:292</div></div>
+<div class="ttc" id="agroup__interrupts_html_ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d"><div class="ttname"><a href="group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d">ANY_EDGE</a></div><div class="ttdeci">@ ANY_EDGE</div><div class="ttdoc">Any edge trigger.</div><div class="ttdef"><b>Definition</b> interrupt.h:296</div></div>
+</div><!-- fragment -->
+<p>Enable comparator interrupt. </p>
+<p>Enable comparator interrupt for trigger. Before call this method mcu interrupt support should be enabled by calling <a class="el" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c" title="Enable interrupts support of MCU.">enable_mcu_interrupts()</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">trigger</td><td>comparator_interrupt_trigger_t comparator interrupt trigger </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1608,6 +1657,30 @@ Enumerations</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="gab11255d882506a529e8ed1cc6403f6a4" name="gab11255d882506a529e8ed1cc6403f6a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab11255d882506a529e8ed1cc6403f6a4">&#9670;&#160;</a></span>comparator_interrupt_trigger_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__interrupts.html#gab11255d882506a529e8ed1cc6403f6a4">comparator_interrupt_trigger_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Comparator interrupt trigger enumeration. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggab11255d882506a529e8ed1cc6403f6a4a328b755a70c4d67ceeb23e098b8da58b" name="ggab11255d882506a529e8ed1cc6403f6a4a328b755a70c4d67ceeb23e098b8da58b"></a>LOW_TO_HIGH&#160;</td><td class="fielddoc"><p>Low to high edge trigger. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggab11255d882506a529e8ed1cc6403f6a4a13bfb562277fbb6ceb979e2720675f0a" name="ggab11255d882506a529e8ed1cc6403f6a4a13bfb562277fbb6ceb979e2720675f0a"></a>HIGH_TO_LOW&#160;</td><td class="fielddoc"><p>High to low edge trigger. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d" name="ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d"></a>ANY_EDGE&#160;</td><td class="fielddoc"><p>Any edge trigger. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="ga97fc91f85abe6139a7f24fbdff35c7e7" name="ga97fc91f85abe6139a7f24fbdff35c7e7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga97fc91f85abe6139a7f24fbdff35c7e7">&#9670;&#160;</a></span>external_interrupt_trigger_t</h2>
 

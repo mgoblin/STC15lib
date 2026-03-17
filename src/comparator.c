@@ -42,12 +42,13 @@ void main(void)
     CMPCR2 &= ~DISFLT; // Enable the comparator filter
     CMPCR2 &= ~LCDTY;
 
-    CMPCR1 |= PIE; // Enable Pos-edge Interrupt
-    CMPCR1 |= NIE; // Enable Neg-edge Interrupt
+    // CMPCR1 |= PIE; // Enable Pos-edge Interrupt
+    // CMPCR1 |= NIE; // Enable Neg-edge Interrupt
 
     CMPCR1 |= CMPEN; //Enable Comparator
 
     enable_mcu_interrupts();
+    enable_comparator_interrupt(ANY_EDGE);
     
     while(1);
 }

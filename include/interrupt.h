@@ -281,6 +281,21 @@ typedef enum
     ONLY_FALLING_EDGE = 1
 } external_interrupt_trigger_t;
 
+/**
+ * @brief Comparator interrupt trigger enumeration
+ * 
+ * @ingroup interrupts
+ */
+typedef enum
+{
+    /// @brief Low to high edge trigger
+    LOW_TO_HIGH = 0,
+    /// @brief High to low edge trigger
+    HIGH_TO_LOW = 1,
+    /// @brief Any edge trigger
+    ANY_EDGE = 2
+} comparator_interrupt_trigger_t;
+
 
 
 /** @name on/off
@@ -626,6 +641,29 @@ typedef enum
  * @ingroup interrupts
  */
 #define is_spi_interrupt_enabled() (test_if_bit_set(IE2, SBIT1) && is_mcu_interrupts_enabled())
+
+/**
+ * @brief Enable comparator interrupt
+ * @details Enable comparator interrupt for trigger.
+ * Before call this method mcu interrupt support should be enabled 
+ * by calling enable_mcu_interrupts()
+ * 
+ * @param trigger comparator_interrupt_trigger_t comparator interrupt trigger
+ * 
+ * @ingroup interrupts
+ */
+#define enable_comparator_interrupt(trigger)                           \
+do {                                                                   \
+    if (trigger == LOW_TO_HIGH || trigger == ANY_EDGE)                 \
+    {                                                                  \
+        bit_set(CMPCR1, SBIT5);                                        \
+    }                                                                  \
+    if (trigger == HIGH_TO_LOW || trigger == ANY_EDGE)                 \
+    {                                                                  \
+        bit_set(CMPCR1, SBIT4);                                        \
+    }                                                                  \
+} while(0)
+
 
 ///@}
 
