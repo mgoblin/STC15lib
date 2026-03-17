@@ -80,6 +80,12 @@ Macros</h2></td></tr>
 <tr class="memitem:gaf37a8521684f48e916b727ab02e1a707" id="r_gaf37a8521684f48e916b727ab02e1a707"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__comparator.html#gaf37a8521684f48e916b727ab02e1a707">comparator_init_async</a>()</td></tr>
 <tr class="memdesc:gaf37a8521684f48e916b727ab02e1a707"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator init for using interrupts routine.  <br /></td></tr>
 <tr class="separator:gaf37a8521684f48e916b727ab02e1a707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaabc6bf5a3629a179e3f7e124617ecaa9" id="r_gaabc6bf5a3629a179e3f7e124617ecaa9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__comparator.html#gaabc6bf5a3629a179e3f7e124617ecaa9">comparator_start</a>()&#160;&#160;&#160;(bit_set(CMPCR1, SBIT7))</td></tr>
+<tr class="memdesc:gaabc6bf5a3629a179e3f7e124617ecaa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator start routine.  <br /></td></tr>
+<tr class="separator:gaabc6bf5a3629a179e3f7e124617ecaa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad17f94a97843fdebfd934f3f9b7bd50f" id="r_gad17f94a97843fdebfd934f3f9b7bd50f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__comparator.html#gad17f94a97843fdebfd934f3f9b7bd50f">comparator_stop</a>()&#160;&#160;&#160;(bit_clr(CMPCR1, CBIT7))</td></tr>
+<tr class="memdesc:gad17f94a97843fdebfd934f3f9b7bd50f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator stop routine.  <br /></td></tr>
+<tr class="separator:gad17f94a97843fdebfd934f3f9b7bd50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions and data structures related to comparator</p>
@@ -111,6 +117,46 @@ Macros</h2></td></tr>
 <div class="ttc" id="agroup__interrupts_html_ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d"><div class="ttname"><a href="group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d">ANY_EDGE</a></div><div class="ttdeci">@ ANY_EDGE</div><div class="ttdoc">Any edge trigger.</div><div class="ttdef"><b>Definition</b> interrupt.h:296</div></div>
 </div><!-- fragment -->
 <p>Comparator init for using interrupts routine. </p>
+
+</div>
+</div>
+<a id="gaabc6bf5a3629a179e3f7e124617ecaa9" name="gaabc6bf5a3629a179e3f7e124617ecaa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaabc6bf5a3629a179e3f7e124617ecaa9">&#9670;&#160;</a></span>comparator_start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define comparator_start</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(bit_set(CMPCR1, SBIT7))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Comparator start routine. </p>
+<p>Before call this method comparator should be initialized by <a class="el" href="group__comparator.html#gaf37a8521684f48e916b727ab02e1a707" title="Comparator init for using interrupts routine.">comparator_init_async()</a> or comparator_init_sync() </p>
+
+</div>
+</div>
+<a id="gad17f94a97843fdebfd934f3f9b7bd50f" name="gad17f94a97843fdebfd934f3f9b7bd50f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad17f94a97843fdebfd934f3f9b7bd50f">&#9670;&#160;</a></span>comparator_stop</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define comparator_stop</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;(bit_clr(CMPCR1, CBIT7))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Comparator stop routine. </p>
+<p>Before call this method comparator should be started by calling <a class="el" href="group__comparator.html#gaabc6bf5a3629a179e3f7e124617ecaa9" title="Comparator start routine.">comparator_start()</a> </p>
 
 </div>
 </div>

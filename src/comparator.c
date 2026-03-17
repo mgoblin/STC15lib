@@ -17,16 +17,6 @@
 
 #define CMPEN   0x80    // CMPCR1.7 : Enable bit of comparator
 
-void comparator_start(void)
-{
-    bit_set(CMPCR1, SBIT7);
-}
-
-void comparator_stop(void)
-{
-    bit_clr(CMPCR1, CBIT7);
-}
-
 void cmpISR(void) __interrupt(INTERRUPT_CMPR)
 {
     CMPCR1 &= ~CMPIF;           //Clear the finishing flag

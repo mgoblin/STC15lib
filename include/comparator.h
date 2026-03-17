@@ -30,8 +30,22 @@ do {                                        \
     enable_comparator_interrupt(ANY_EDGE);  \
 } while(0)    
 
-void comparator_start(void);
+/**
+ * @brief Comparator start routine
+ * @details Before call this method comparator should be initialized 
+ * by comparator_init_async() or comparator_init_sync()
+ * 
+ * @ingroup comparator
+ */
+#define comparator_start() (bit_set(CMPCR1, SBIT7))
 
-void comparator_stop(void);
+/**
+ * @brief Comparator stop routine
+ * @details Before call this method comparator should be started 
+ * by calling comparator_start()
+ * 
+ * @ingroup comparator
+ */
+#define comparator_stop() (bit_clr(CMPCR1, CBIT7))
 
 #endif
