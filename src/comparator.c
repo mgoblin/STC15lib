@@ -1,5 +1,3 @@
-#include <interrupt.h>
-#include <delay.h>
 #include <comparator.h>
 
 #define LED     P10
@@ -18,13 +16,6 @@
 #define LCDTY   0x3F    // CMPCR2.[5:0] : set the Duty of Level-Change control filter in the output terminal of comparator
 
 #define CMPEN   0x80    // CMPCR1.7 : Enable bit of comparator
-
-void comparator_init_async(void)
-{
-    CMPCR1 = 0x00;
-    CMPCR2 = 0x09;
-    enable_comparator_interrupt(ANY_EDGE);
-}
 
 void comparator_start(void)
 {
@@ -61,7 +52,6 @@ void main(void)
     // enable_mcu_interrupts();
     // enable_comparator_interrupt(ANY_EDGE);
 
-    enable_mcu_interrupts();
     comparator_init_async();
     comparator_start();
     

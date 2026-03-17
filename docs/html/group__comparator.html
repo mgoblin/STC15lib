@@ -69,10 +69,51 @@ $(function() {
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">Comparator</div></div>
 </div><!--header-->
 <div class="contents">
-<p>Functions and data structures related to comparator </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:gaf37a8521684f48e916b727ab02e1a707" id="r_gaf37a8521684f48e916b727ab02e1a707"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__comparator.html#gaf37a8521684f48e916b727ab02e1a707">comparator_init_async</a>()</td></tr>
+<tr class="memdesc:gaf37a8521684f48e916b727ab02e1a707"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator init for using interrupts routine.  <br /></td></tr>
+<tr class="separator:gaf37a8521684f48e916b727ab02e1a707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>Functions and data structures related to comparator</p>
+<p>Comparator is used for analog comparation of positive and negative inputs.</p>
+<p>Comparator could work in async (using interrupts) or sync modes.</p>
+<dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="gaf37a8521684f48e916b727ab02e1a707" name="gaf37a8521684f48e916b727ab02e1a707"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf37a8521684f48e916b727ab02e1a707">&#9670;&#160;</a></span>comparator_init_async</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define comparator_init_async</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                        \</div>
+<div class="line">    CMPCR1 = 0x00;                          \</div>
+<div class="line">    CMPCR2 = 0x09;                          \</div>
+<div class="line">                                            \</div>
+<div class="line">    enable_mcu_interrupts();                \</div>
+<div class="line">    enable_comparator_interrupt(<a class="code hl_enumvalue" href="group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d">ANY_EDGE</a>);  \</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
+<div class="ttc" id="agroup__interrupts_html_ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d"><div class="ttname"><a href="group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d">ANY_EDGE</a></div><div class="ttdeci">@ ANY_EDGE</div><div class="ttdoc">Any edge trigger.</div><div class="ttdef"><b>Definition</b> interrupt.h:296</div></div>
+</div><!-- fragment -->
+<p>Comparator init for using interrupts routine. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
