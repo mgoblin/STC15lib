@@ -1,6 +1,7 @@
 add_subdirectory("adc")
 add_subdirectory("bits")
 add_subdirectory("chip_id")
+add_subdirectory("comparator")
 add_subdirectory("counter")
 add_subdirectory("delay")
 add_subdirectory("eeprom")
