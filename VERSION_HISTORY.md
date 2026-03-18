@@ -179,11 +179,11 @@
 * Fix: Firmware builded by sdcc 4.5 work correctly
 * Comparator module initial implementation
 * EEPROM write array implemented
-* TODO Review wakeup timer routines. Move from ticks to ms
-* TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms
 
 
 Next releases todo
+* TODO Review wakeup timer routines. Move from ticks to ms
+* TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms
 * TODO rewrite frequency and ms calc from macro to functions
 * TODO Refactor timer aux/common
 * TODO memory dump not only idata but xdata memory too
