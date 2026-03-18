@@ -23,5 +23,10 @@ env.Default (
         'eeprom_write_byte_example', 
         ['eeprom_write_byte_example.c', 'uart.c']
     ),
-    
+
+    env.Program(
+        'eeprom_write_page_example', 
+        ['eeprom_write_page_example.c', 'uart.c']
+    ),
+
 )

@@ -288,4 +288,22 @@ do {                                                                \
     }                                                               \
 } while (0)
 
+#define eeprom_write_page(addr_high, arr, arr_size, error_ptr)        \
+do {                                                                  \
+    eeprom_erase_page(addr_high, error_ptr);                          \
+    if (*error_ptr)                                                   \
+    {                                                                 \
+        break;                                                        \
+    }                                                                 \
+                                                                      \
+    for (uint8_t i = 0; i < arr_size; i++)                            \
+    {                                                                 \
+        eeprom_write_byte(addr_high, i, arr[i], error_ptr);           \
+        if (*error_ptr)                                               \
+        {                                                             \
+            break;                                                    \
+        }                                                             \
+    }                                                                 \
+} while(0)                                                                
+
 #endif
