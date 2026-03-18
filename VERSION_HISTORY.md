@@ -180,11 +180,13 @@
 * Comparator module initial implementation
 * EEPROM write array implemented
 
-
-Next releases todo
+0.16.0
 * TODO Review wakeup timer routines. Move from ticks to ms
 * TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms
-* TODO rewrite frequency and ms calc from macro to functions
+* TODO Rewrite frequency and ms calc from macro to functions
+* TODO Comparator module sync mode implementation 
+
+Next releases todo
 * TODO Refactor timer aux/common
 * TODO memory dump not only idata but xdata memory too
 * TODO Rework bits module
