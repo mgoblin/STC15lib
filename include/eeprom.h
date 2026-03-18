@@ -288,6 +288,21 @@ do {                                                                \
     }                                                               \
 } while (0)
 
+/**
+ * @brief Write page to EEPROM.
+ * @details write bytes from pointer (or array) to EEPROM page.
+ * Data size should be less than 512 bytes.
+ * 
+ * @param addr_high uint8_t  High byte of the EEPROM address (bits 15-8).
+ * @param arr       uint8_t* Pointer to array of bytes to write.
+ * @param arr_size  uint8_t  Size of array to write.
+ * @param error_ptr uint8_t* Pointer to a uint8_t variable where the error status will be stored.
+ * 
+ * @warning This function does not perform address bounds checking.
+ *          It is the caller's responsibility to ensure valid EEPROM addresses.
+ * 
+ * @ingroup eeprom
+ */
 #define eeprom_write_page(addr_high, arr, arr_size, error_ptr)        \
 do {                                                                  \
     eeprom_erase_page(addr_high, error_ptr);                          \

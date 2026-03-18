@@ -144,8 +144,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga8e2e7cf95cd1dccc30ce7fedc7f3c1ab" id="r_ga8e2e7cf95cd1dccc30ce7fedc7f3c1ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__eeprom.html#ga8e2e7cf95cd1dccc30ce7fedc7f3c1ab">eeprom_write_byte</a>(addr_high,  addr_low,  value,  error_ptr)</td></tr>
 <tr class="memdesc:ga8e2e7cf95cd1dccc30ce7fedc7f3c1ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a single byte to the EEPROM at the specified address.  <br /></td></tr>
 <tr class="separator:ga8e2e7cf95cd1dccc30ce7fedc7f3c1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6451ccd991782015249619941d5ed6eb" id="r_a6451ccd991782015249619941d5ed6eb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eeprom_8h.html#a6451ccd991782015249619941d5ed6eb">eeprom_write_page</a>(addr_high,  arr,  arr_size,  error_ptr)</td></tr>
-<tr class="separator:a6451ccd991782015249619941d5ed6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6451ccd991782015249619941d5ed6eb" id="r_ga6451ccd991782015249619941d5ed6eb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__eeprom.html#ga6451ccd991782015249619941d5ed6eb">eeprom_write_page</a>(addr_high,  arr,  arr_size,  error_ptr)</td></tr>
+<tr class="memdesc:ga6451ccd991782015249619941d5ed6eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write page to EEPROM.  <br /></td></tr>
+<tr class="separator:ga6451ccd991782015249619941d5ed6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -162,63 +163,6 @@ Enumerations</h2></td></tr>
 <tr class="memdesc:ga7b2b5c6eec6838c542ee5ce1e1aa97fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">EEPROM operation status.  <a href="group__eeprom.html#ga7b2b5c6eec6838c542ee5ce1e1aa97fc">More...</a><br /></td></tr>
 <tr class="separator:ga7b2b5c6eec6838c542ee5ce1e1aa97fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a6451ccd991782015249619941d5ed6eb" name="a6451ccd991782015249619941d5ed6eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6451ccd991782015249619941d5ed6eb">&#9670;&#160;</a></span>eeprom_write_page</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define eeprom_write_page</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">addr_high, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">arr, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">arr_size, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">error_ptr&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                  \</div>
-<div class="line">    eeprom_erase_page(addr_high, error_ptr);                          \</div>
-<div class="line">    if (*error_ptr)                                                   \</div>
-<div class="line">    {                                                                 \</div>
-<div class="line">        <span class="keywordflow">break</span>;                                                        \</div>
-<div class="line">    }                                                                 \</div>
-<div class="line">                                                                      \</div>
-<div class="line">    for (uint8_t i = 0; i &lt; arr_size; i++)                            \</div>
-<div class="line">    {                                                                 \</div>
-<div class="line">        eeprom_write_byte(addr_high, i, arr[i], error_ptr);           \</div>
-<div class="line">        if (*error_ptr)                                               \</div>
-<div class="line">        {                                                             \</div>
-<div class="line">            <span class="keywordflow">break</span>;                                                    \</div>
-<div class="line">        }                                                             \</div>
-<div class="line">    }                                                                 \</div>
-<div class="line">} <span class="keywordflow">while</span>(0)</div>
-</div><!-- fragment -->
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
