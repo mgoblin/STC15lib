@@ -193,5 +193,6 @@ Next releases todo
 * TODO UART1 Relay broadcast mode support
 * TODO is PCON SMOD bit really double baud rate in mode 1, 2, 3?
 * TODO Contributor guide
+* TODO Make firmware sizes table on build
 
 

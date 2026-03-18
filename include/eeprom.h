@@ -36,7 +36,7 @@ enum eeprom_operation_t
  * 
  * @ingroup eeprom
  */
-enum eeprom_operation_status_t
+typedef enum
 {
     /** @brief Operation success */
     CMD_SUCCESS = 0,
@@ -44,7 +44,7 @@ enum eeprom_operation_status_t
     CMD_FAIL_ERROR = 1,
     /** @brief Low voltage error */
     LOW_VOLTAGE_ERROR = 2,
-};
+} eeprom_operation_status_t;
 
 
 /**
