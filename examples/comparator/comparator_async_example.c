@@ -20,7 +20,7 @@
 void cmpISR(void) __interrupt(INTERRUPT_CMPR)
 {
     CMPCR1 &= ~CMPIF;           //Clear the finishing flag
-    LED = !!(CMPCR1 & CMPRES);  //Output the result CMPRES to test pin to display
+    LED = (CMPCR1 & CMPRES);    //Output the result CMPRES to test pin to display
 }
 
 void main(void)
