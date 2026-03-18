@@ -100,9 +100,9 @@ void main()
 | UART         | Serial port **p-2-p** routines   | READY              |
 | Watchdog timer | Watchdog timer routines        | READY              |
 | GPIO          | Pin as digital in/out routines  | READY              |
-| EEPROM        | Non volatile flash memory routines   | INITIAL SUPPORT         |
+| EEPROM        | Non volatile flash memory routines   | READY         |
 | ADC           | Analog to digital converstions  | READY              |
-| Comparator    | Analog voltage comparator       | INITIAL SUPPORT         |
+| Comparator    | Analog voltage comparator       | INITIAL SUPPORT    |
 
 Other modules does not implemented yet.
 

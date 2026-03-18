@@ -178,7 +178,7 @@
 * Fix: Cmake firmware size is not equals to platfromio build size
 * Fix: Firmware builded by sdcc 4.5 work correctly
 * Comparator module initial implementation
-* TODO EEPROM write array implemented
+* EEPROM write array implemented
 * TODO Review wakeup timer routines. Move from ticks to ms
 * TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms
 
@@ -194,5 +194,6 @@ Next releases todo
 * TODO is PCON SMOD bit really double baud rate in mode 1, 2, 3?
 * TODO Contributor guide
 * TODO Make firmware sizes table on build
+* TODO Try to read/write EEPROM using MOVC assembler command
 
 
