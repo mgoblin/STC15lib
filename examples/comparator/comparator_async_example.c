@@ -1,3 +1,12 @@
+/**
+ * How to use comparator with interrupt.
+ * 
+ * Comparator is configured to compare P5.5 and BandGap Volage.
+ * 
+ * Rotary variable resistor is connected to P5.5. 
+ * Upon reaching the threshold LED is on.
+ */
+
 #include <comparator.h>
 
 #define LED     P10
@@ -5,6 +14,9 @@
 #define CMPIF   0x40    // CMPCR1.6 : Interrupt flag bit of comparator
 #define CMPRES  0x01    // CMPCR1.0 : Result bit of comparator
 
+/** 
+ * Comparator interrupt handler
+ */
 void cmpISR(void) __interrupt(INTERRUPT_CMPR)
 {
     CMPCR1 &= ~CMPIF;           //Clear the finishing flag
