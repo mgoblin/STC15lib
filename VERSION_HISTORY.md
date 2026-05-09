@@ -181,7 +181,7 @@
 * EEPROM write array implemented
 
 0.16.0
-* TODO Review wakeup timer routines. Move from ticks to ms
+* Add wakeup timer init routine for intervals in seconds
 * TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms
 * TODO Rewrite frequency and ms calc from macro to functions
 * TODO Comparator module sync mode implementation 

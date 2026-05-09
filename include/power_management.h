@@ -28,6 +28,17 @@
  */
 #define WIRC_L_ADDRESS 0xf9
 
+
+/**
+ * @brief Default internal wakeup generator frequency in Hz
+ * 
+ * @see wakeup_timer_internal_clk_freq() - function that attempts to read the actual
+ *       internal clock frequency from RAM
+ * @see wakeup_timer_init_seconds() - function that uses this default value when
+ *       the actual frequency cannot be determined
+ * 
+ * @ingroup power_management
+ */
 #define WAKEUP_DEFAULT_FREQ 32768U
 
 /**
@@ -79,6 +90,30 @@ do {                                                    \
 } while(0)
 
 
+/**
+ * @brief Initialize wakeup timer with a specified duration in seconds
+ * 
+ * This routine configures the wakeup timer to wake up the MCU after a specified
+ * number of seconds. It calculates the appropriate timer ticks based on the
+ * internal wakeup clock frequency.
+ * 
+ * The calculation uses the formula: timer_ticks = seconds * (wakeup_freq >> 4)
+ * where wakeup_freq >> 4 represents the clock frequency divided by 16.
+ * 
+ * The function first attempts to read the actual internal clock frequency
+ * using wakeup_timer_internal_clk_freq(). If this returns 0 (which happens
+ * when RAM is cleared by the compiler startup code), it falls back to using
+ * WAKEUP_DEFAULT_FREQ (32,768 Hz).
+ * 
+ * @param seconds uint16_t Number of seconds to set the wakeup timer for
+ * 
+ * @see wakeup_timer_internal_clk_freq() - function to get the actual internal
+ *       clock frequency from RAM addresses 0xf8-0xf9
+ * @see WAKEUP_DEFAULT_FREQ - default frequency used when actual frequency is unavailable
+ * @see wakeup_timer_init() - lower-level function that initializes the timer with ticks
+ * 
+ * @ingroup power_management
+ */
 #define wakeup_timer_init_seconds(seconds)                          \
 do {                                                                \
     uint16_t wakeup_freq = wakeup_timer_internal_clk_freq();        \
