@@ -15,4 +15,9 @@ env.Default (
         'low_voltage_example', 
         ['low_voltage_example.c', 'uart.c']
     ),
+
+    env.Program(
+        'wakeup_seconds_example', 
+        ['wakeup_seconds_example.c', 'uart.c']
+    ),
 )

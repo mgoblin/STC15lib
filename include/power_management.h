@@ -28,6 +28,8 @@
  */
 #define WIRC_L_ADDRESS 0xf9
 
+#define WAKEUP_DEFAULT_FREQ 32768U
+
 /**
  * @brief Set MCU idle mode
  * @details Shuts off 
@@ -74,6 +76,15 @@ do {                            \
 do {                                                    \
     WKTCH = (ticks >> 8) | 0x80;                        \
     WKTCL = ticks & 0xff;                               \
+} while(0)
+
+
+#define wakeup_timer_init_seconds(seconds)                          \
+do {                                                                \
+    uint16_t wakeup_freq = wakeup_timer_internal_clk_freq();        \
+    if (!wakeup_freq) { wakeup_freq = WAKEUP_DEFAULT_FREQ; }        \
+    uint16_t timer_ticks = seconds * (wakeup_freq >> 4);            \
+    wakeup_timer_init(timer_ticks);                                 \
 } while(0)
 
 static volatile __idata uint8_t * const wirc_h_ptr = (__idata uint8_t *) WIRC_H_ADDRESS;

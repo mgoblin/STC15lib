@@ -185,6 +185,7 @@
 * TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms
 * TODO Rewrite frequency and ms calc from macro to functions
 * TODO Comparator module sync mode implementation 
+* TODO fix examples flash targets on cmake build
 
 Next releases todo
 * TODO Refactor timer aux/common

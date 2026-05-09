@@ -125,6 +125,9 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>WIRC_L_ADDRESS</b>&#160;&#160;&#160;0xf9</td></tr>
 <tr class="memdesc:ga82e21440e9b642907b03b4f1d111ca7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wakeup timer internal clock frequency value low byte address. <br /></td></tr>
 <tr class="separator:ga82e21440e9b642907b03b4f1d111ca7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a108303f1628d9af8ece636b31a581586" id="r_a108303f1628d9af8ece636b31a581586"><td class="memItemLeft" align="right" valign="top"><a id="a108303f1628d9af8ece636b31a581586" name="a108303f1628d9af8ece636b31a581586"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WAKEUP_DEFAULT_FREQ</b>&#160;&#160;&#160;32768U</td></tr>
+<tr class="separator:a108303f1628d9af8ece636b31a581586"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga89e1b35bd6cbaf15cc0d33631acac076" id="r_ga89e1b35bd6cbaf15cc0d33631acac076"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#ga89e1b35bd6cbaf15cc0d33631acac076">idle</a>()&#160;&#160;&#160;(bit_set(PCON, SBIT0))</td></tr>
 <tr class="memdesc:ga89e1b35bd6cbaf15cc0d33631acac076"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MCU idle mode.  <br /></td></tr>
 <tr class="separator:ga89e1b35bd6cbaf15cc0d33631acac076"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,6 +137,8 @@ Macros</h2></td></tr>
 <tr class="memitem:gadd59513e05eeefc7f94d3b4d47993c9e" id="r_gadd59513e05eeefc7f94d3b4d47993c9e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#gadd59513e05eeefc7f94d3b4d47993c9e">wakeup_timer_init</a>(ticks)</td></tr>
 <tr class="memdesc:gadd59513e05eeefc7f94d3b4d47993c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init and run wakeup timer.  <br /></td></tr>
 <tr class="separator:gadd59513e05eeefc7f94d3b4d47993c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68287ce4c6e4b29144416b2a8a450ce5" id="r_a68287ce4c6e4b29144416b2a8a450ce5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="power__management_8h.html#a68287ce4c6e4b29144416b2a8a450ce5">wakeup_timer_init_seconds</a>(seconds)</td></tr>
+<tr class="separator:a68287ce4c6e4b29144416b2a8a450ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga91ea0552ad4f4846e01e2ae59adce627" id="r_ga91ea0552ad4f4846e01e2ae59adce627"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#ga91ea0552ad4f4846e01e2ae59adce627">wakeup_timer_internal_clk_freq</a>()&#160;&#160;&#160;(((uint16_t)*wirc_h_ptr &lt;&lt; 8) | *wirc_l_ptr)</td></tr>
 <tr class="memdesc:ga91ea0552ad4f4846e01e2ae59adce627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wakeup timer internal clock frequency.  <br /></td></tr>
 <tr class="separator:ga91ea0552ad4f4846e01e2ae59adce627"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,6 +149,32 @@ Macros</h2></td></tr>
 <tr class="memdesc:ga9863918f1eedbe577046485380a9a3d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the low voltage detection flag in the PCON register.  <br /></td></tr>
 <tr class="separator:ga9863918f1eedbe577046485380a9a3d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a68287ce4c6e4b29144416b2a8a450ce5" name="a68287ce4c6e4b29144416b2a8a450ce5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68287ce4c6e4b29144416b2a8a450ce5">&#9670;&#160;</a></span>wakeup_timer_init_seconds</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define wakeup_timer_init_seconds</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">seconds</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                \</div>
+<div class="line">    uint16_t wakeup_freq = <a class="code hl_define" href="group__power__management.html#ga91ea0552ad4f4846e01e2ae59adce627">wakeup_timer_internal_clk_freq</a>();        \</div>
+<div class="line">    if (!wakeup_freq) { wakeup_freq = WAKEUP_DEFAULT_FREQ; }        \</div>
+<div class="line">    uint16_t timer_ticks = seconds * (wakeup_freq &gt;&gt; 4);            \</div>
+<div class="line">    wakeup_timer_init(timer_ticks);                                 \</div>
+<div class="line">} <span class="keywordflow">while</span>(0)</div>
+<div class="ttc" id="agroup__power__management_html_ga91ea0552ad4f4846e01e2ae59adce627"><div class="ttname"><a href="group__power__management.html#ga91ea0552ad4f4846e01e2ae59adce627">wakeup_timer_internal_clk_freq</a></div><div class="ttdeci">#define wakeup_timer_internal_clk_freq()</div><div class="ttdoc">Get wakeup timer internal clock frequency.</div><div class="ttdef"><b>Definition</b> power_management.h:110</div></div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
