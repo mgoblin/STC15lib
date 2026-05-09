@@ -20,7 +20,7 @@ void main()
    
    timer0_mode0_start(TICKS);
 
-   uint32_t ms = timer0_ticks_to_ms_usafe(TICKS);
+   uint32_t ms = timer0_ticks_to_ms(TICKS);
 
    while (1) {
         printf_fast("P3.5 time is %lu ms\r\n", ms); // 5 ms

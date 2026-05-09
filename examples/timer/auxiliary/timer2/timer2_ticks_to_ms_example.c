@@ -25,7 +25,7 @@ void main()
    timer2_mode0_1T_init();
    timer2_mode0_enable_P30_output();
    
-   volatile uint32_t ms = timer2_ticks_to_ms_usafe(TICKS);
+   volatile uint32_t ms = timer2_ticks_to_ms(TICKS);
 
    // timer2_mode0_start(TICKS);
    // while(1) {}
