@@ -65,11 +65,11 @@
  * For example, in timer 12T mode0 and MCU frequency divider scale equals to 0 
  * correct ticks values is 1000..65535.
  * 
- * @param ticks uint16_t ticks count
+ * @param ticks uint16_t ticks count. Range 7...65535
  * @param timer_divider timer_clock_divider_t 1T or 12T timer clock divider
- * @param frequency_divider_scale uint8_t MCU frequency divider scale
+ * @param frequency_divider_scale uint8_t MCU frequency divider scale 0..7
  * 
- * @return uint16_t milliseconds time corresponing to timer ticks
+ * @return uint16_t milliseconds time corresponing to timer ticks. Range 0..9043
  * 
  * @ingroup timer_to_ms
  */

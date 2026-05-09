@@ -183,7 +183,8 @@
 0.16.0
 * Add wakeup timer init routine for intervals in seconds
 * TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms
-* TODO Rewrite frequency and ms calc from macro to functions
+* Rewrite timer ms calc from macro to function
+* TODO Rewrite timer frequency calc from macro to function
 * TODO Comparator module sync mode implementation 
 * TODO fix examples flash targets on cmake build
 * TODO Add docs to memory dumper README

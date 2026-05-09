@@ -272,13 +272,13 @@ Functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>This method doesnt analyze corner cases and overflow of results. Be careful. For example, in timer 12T mode0 and MCU frequency divider scale equals to 0 correct ticks values is 1000..65535.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ticks</td><td>uint16_t ticks count </td></tr>
+    <tr><td class="paramname">ticks</td><td>uint16_t ticks count. Range 7...65535 </td></tr>
     <tr><td class="paramname">timer_divider</td><td>timer_clock_divider_t 1T or 12T timer clock divider </td></tr>
-    <tr><td class="paramname">frequency_divider_scale</td><td>uint8_t MCU frequency divider scale</td></tr>
+    <tr><td class="paramname">frequency_divider_scale</td><td>uint8_t MCU frequency divider scale 0..7</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>uint16_t milliseconds time corresponing to timer ticks </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>uint16_t milliseconds time corresponing to timer ticks. Range 0..9043 </dd></dl>
 
 </div>
 </div>
