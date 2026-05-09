@@ -1,6 +1,7 @@
 Import("env")
 
 env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
+env.Command('timer_to_ms_common.c', '#src/timer_to_ms_common.c', Copy('$TARGET', '$SOURCE'))
 
 env.Default (
     env.Program(
@@ -10,7 +11,7 @@ env.Default (
 
     env.Program(
         'timer2_ticks_to_ms_example', 
-        ['timer2_ticks_to_ms_example.c', 'uart.c']
+        ['timer2_ticks_to_ms_example.c', 'uart.c', 'timer_to_ms_common.c']
     ),
 
 )

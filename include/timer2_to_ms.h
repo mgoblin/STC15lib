@@ -47,7 +47,7 @@
  * 
  * @param frequency uint32_t frequency value in Hz. Should not be 0;
  * 
- * @return uint16_t timer0 ticks corresponding to frequency value
+ * @return uint16_t timer2 ticks corresponding to frequency value
  * 
  * @ingroup timer2_to_ms
  */
@@ -61,7 +61,7 @@
  * 
  * @return milliseconds time corresponing to timer ticks
  * 
- * @ingroup timer0_to_ms
+ * @ingroup timer2_to_ms
  */
 #define timer2_ticks_to_ms_usafe(ticks) (timer_ticks_to_ms_usafe(ticks, get_timer2_clock_divider(), get_frequency_divider_scale()))
 
@@ -77,7 +77,7 @@
  * @return uint16_t ticks count for milliseconds
  * 
  * 
- * @ingroup timer0_to_ms
+ * @ingroup timer2_to_ms
  */
 #define timer2_ms_to_ticks_usafe(ms) (timer_ms_to_ticks_usafe(ms, get_timer2_clock_divider()))
 
