@@ -88,69 +88,74 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;<a class="code" href="sys_8h.html">sys.h</a>&gt;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;bits.h&gt;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b">   25</a></span><span class="preprocessor">#define get_master_clock_frequency() (MAIN_Fosc)</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="group__freq.html#ga2c1fe9860e17f13e1bcc3f5c46d420c8">   34</a></span><span class="preprocessor">#define get_master_clock_frequency_high_part() (MAIN_FoscH)</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="group__freq.html#gaab28dddcfa288a3f7449bbf680e85414">   43</a></span><span class="preprocessor">#define get_master_clock_frequency_low_part() (MAIN_FoscL)</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="group__freq.html#gabec6924a99fc0c136d0d1d6de5f8bf52">   54</a></span><span class="preprocessor">#define get_frequency_divider() (1 &lt;&lt; (CLK_DIV &amp; 0x07))</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">   65</a></span><span class="preprocessor">#define get_frequency_divider_scale() (CLK_DIV &amp; 0x07)</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="foldopen" id="foldopen00079" data-start="" data-end="">
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="group__freq.html#ga78fdcc336987b6447dec7b7480c4e9a8">   79</a></span><span class="preprocessor">#define set_frequency_divider_scale(divider_scale)      \</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">do {                                                    \</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">    CLK_DIV &amp;= 0xf8;                                    \</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">    CLK_DIV |= (divider_scale &amp; 0x07);                  \</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">} while(0)</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="group__freq.html#gab5e7c0db3e221ee5bed61794ee6a6922">   22</a></span><span class="preprocessor">#define CLK_DIV_MASK 0x07</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b">   32</a></span><span class="preprocessor">#define get_master_clock_frequency() (MAIN_Fosc)</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="group__freq.html#ga2c1fe9860e17f13e1bcc3f5c46d420c8">   41</a></span><span class="preprocessor">#define get_master_clock_frequency_high_part() (MAIN_FoscH)</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="group__freq.html#gaab28dddcfa288a3f7449bbf680e85414">   50</a></span><span class="preprocessor">#define get_master_clock_frequency_low_part() (MAIN_FoscL)</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="group__freq.html#gabec6924a99fc0c136d0d1d6de5f8bf52">   61</a></span><span class="preprocessor">#define get_frequency_divider() (1 &lt;&lt; get_frequency_divider_scale())</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">   72</a></span><span class="preprocessor">#define get_frequency_divider_scale() (CLK_DIV &amp; CLK_DIV_MASK)</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="foldopen" id="foldopen00086" data-start="" data-end="">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="group__freq.html#ga78fdcc336987b6447dec7b7480c4e9a8">   86</a></span><span class="preprocessor">#define set_frequency_divider_scale(divider_scale)      \</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">do {                                                    \</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">    CLK_DIV &amp;= 0xf8;                                    \</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">    CLK_DIV |= (divider_scale &amp; CLK_DIV_MASK);          \</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">} while(0)</span></div>
 </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="group__freq.html#gab0cf04749c06459a905501a82de37ec5">   93</a></span><span class="preprocessor">#define enable_master_clock_output_div1() (CLK_DIV |= 0x40)</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="group__freq.html#gab8cf6beb70bdf87d5ecb400ed00bb797">  103</a></span><span class="preprocessor">#define enable_master_clock_output_div2() (CLK_DIV |= 0x80)</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="group__freq.html#ga6fa1489df98df6cf04b7ef07168267a2">  113</a></span><span class="preprocessor">#define enable_master_clock_output_div4() (CLK_DIV |= 0xC0)</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="group__freq.html#gabcec59e26510c1132c4f13f45b13ec6b">  124</a></span><span class="preprocessor">#define disable_master_clock_output() (CLK_DIV &amp;= 0x3f)</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="group__freq.html#gac4ca6015de4bde7454d665a3314420bf">  114</a></span><span class="preprocessor">#define SYSclk (get_master_clock_frequency() &gt;&gt; get_frequency_divider_scale())</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="group__freq.html#gab0cf04749c06459a905501a82de37ec5">  124</a></span><span class="preprocessor">#define enable_master_clock_output_div1() (CLK_DIV |= 0x40)</span></div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="foldopen" id="foldopen00131" data-start="{" data-end="};">
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="group__freq.html#gae5d505beabdbd466d648cb5dccf4b6d2">  131</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>{</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2">  134</a></span>    <a class="code hl_enumvalue" href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a>, </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050">  136</a></span>    <a class="code hl_enumvalue" href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050">P5_4</a>, </div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <a class="code hl_enumvalue" href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d">P1_6</a>  </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d">  139</a></span>} <a class="code hl_enumeration" href="group__freq.html#gae5d505beabdbd466d648cb5dccf4b6d2">master_clock_output_pin_t</a>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="group__freq.html#gab8cf6beb70bdf87d5ecb400ed00bb797">  134</a></span><span class="preprocessor">#define enable_master_clock_output_div2() (CLK_DIV |= 0x80)</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="group__freq.html#ga6fa1489df98df6cf04b7ef07168267a2">  144</a></span><span class="preprocessor">#define enable_master_clock_output_div4() (CLK_DIV |= 0xC0)</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="group__freq.html#gabcec59e26510c1132c4f13f45b13ec6b">  155</a></span><span class="preprocessor">#define disable_master_clock_output() (CLK_DIV &amp;= 0x3f)</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="foldopen" id="foldopen00162" data-start="{" data-end="};">
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="group__freq.html#gae5d505beabdbd466d648cb5dccf4b6d2">  162</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>{</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2">  165</a></span>    <a class="code hl_enumvalue" href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a>, </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050">  167</a></span>    <a class="code hl_enumvalue" href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050">P5_4</a>, </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <a class="code hl_enumvalue" href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d">P1_6</a>  </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d">  170</a></span>} <a class="code hl_enumeration" href="group__freq.html#gae5d505beabdbd466d648cb5dccf4b6d2">master_clock_output_pin_t</a>;</div>
 </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="group__freq.html#gac8981aaa3084498168f17aabc235dea7">  148</a></span><span class="preprocessor">#define get_master_clock_output_pin() ((CLK_DIV &amp; 0xC0) == 0 ? NONE : (CLK_DIV &amp; 0x08) == 0 ? P5_4 : P1_6)</span></div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="preprocessor">#pragma save</span></div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="preprocessor">#pragma disable_warning 126</span></div>
-<div class="foldopen" id="foldopen00159" data-start="" data-end="">
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="group__freq.html#gadbf3520848e3ffb8498074ba7c25bfed">  159</a></span><span class="preprocessor">#define set_master_clock_output_pin(pin)            \</span></div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="preprocessor">do {                                                \</span></div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="preprocessor">    if (pin == NONE)                                \</span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="preprocessor">    {                                               \</span></div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="preprocessor">        disable_master_clock_output();              \</span></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="preprocessor">    }                                               \</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">    else if (pin == P5_4)                           \</span></div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="preprocessor">    {                                               \</span></div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="preprocessor">        bit_clr(CLK_DIV, CBIT3);                    \</span></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="preprocessor">    }                                               \</span></div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="preprocessor">    else if (pin == P1_6)                           \</span></div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">    {                                               \</span></div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="preprocessor">        bit_set(CLK_DIV, SBIT3);                    \</span></div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="preprocessor">    }                                               \</span></div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="preprocessor">} while(0)</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="group__freq.html#gac8981aaa3084498168f17aabc235dea7">  179</a></span><span class="preprocessor">#define get_master_clock_output_pin() ((CLK_DIV &amp; 0xC0) == 0 ? NONE : (CLK_DIV &amp; 0x08) == 0 ? P5_4 : P1_6)</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="preprocessor">#pragma save</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="preprocessor">#pragma disable_warning 126</span></div>
+<div class="foldopen" id="foldopen00190" data-start="" data-end="">
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="group__freq.html#gadbf3520848e3ffb8498074ba7c25bfed">  190</a></span><span class="preprocessor">#define set_master_clock_output_pin(pin)            \</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="preprocessor">do {                                                \</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="preprocessor">    if (pin == NONE)                                \</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="preprocessor">    {                                               \</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="preprocessor">        disable_master_clock_output();              \</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="preprocessor">    }                                               \</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="preprocessor">    else if (pin == P5_4)                           \</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="preprocessor">    {                                               \</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="preprocessor">        bit_clr(CLK_DIV, CBIT3);                    \</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="preprocessor">    }                                               \</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="preprocessor">    else if (pin == P1_6)                           \</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="preprocessor">    {                                               \</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="preprocessor">        bit_set(CLK_DIV, SBIT3);                    \</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="preprocessor">    }                                               \</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="preprocessor">} while(0)</span></div>
 </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="preprocessor">#pragma restore</span></div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="preprocessor">#endif </span></div>
-<div class="ttc" id="agroup__freq_html_gae5d505beabdbd466d648cb5dccf4b6d2"><div class="ttname"><a href="group__freq.html#gae5d505beabdbd466d648cb5dccf4b6d2">master_clock_output_pin_t</a></div><div class="ttdeci">master_clock_output_pin_t</div><div class="ttdoc">Master clock output pins enumeration.</div><div class="ttdef"><b>Definition</b> frequency.h:132</div></div>
-<div class="ttc" id="agroup__freq_html_ggae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d"><div class="ttname"><a href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d">P1_6</a></div><div class="ttdeci">@ P1_6</div><div class="ttdoc">output to pin 1.6</div><div class="ttdef"><b>Definition</b> frequency.h:138</div></div>
-<div class="ttc" id="agroup__freq_html_ggae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050"><div class="ttname"><a href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050">P5_4</a></div><div class="ttdeci">@ P5_4</div><div class="ttdoc">output to pin 5.4</div><div class="ttdef"><b>Definition</b> frequency.h:136</div></div>
-<div class="ttc" id="agroup__freq_html_ggae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2"><div class="ttname"><a href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a></div><div class="ttdeci">@ NONE</div><div class="ttdoc">output disabled</div><div class="ttdef"><b>Definition</b> frequency.h:134</div></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="preprocessor">#pragma restore</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">#endif </span></div>
+<div class="ttc" id="agroup__freq_html_gae5d505beabdbd466d648cb5dccf4b6d2"><div class="ttname"><a href="group__freq.html#gae5d505beabdbd466d648cb5dccf4b6d2">master_clock_output_pin_t</a></div><div class="ttdeci">master_clock_output_pin_t</div><div class="ttdoc">Master clock output pins enumeration.</div><div class="ttdef"><b>Definition</b> frequency.h:163</div></div>
+<div class="ttc" id="agroup__freq_html_ggae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d"><div class="ttname"><a href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d">P1_6</a></div><div class="ttdeci">@ P1_6</div><div class="ttdoc">output to pin 1.6</div><div class="ttdef"><b>Definition</b> frequency.h:169</div></div>
+<div class="ttc" id="agroup__freq_html_ggae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050"><div class="ttname"><a href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050">P5_4</a></div><div class="ttdeci">@ P5_4</div><div class="ttdoc">output to pin 5.4</div><div class="ttdef"><b>Definition</b> frequency.h:167</div></div>
+<div class="ttc" id="agroup__freq_html_ggae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2"><div class="ttname"><a href="group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a></div><div class="ttdeci">@ NONE</div><div class="ttdoc">output disabled</div><div class="ttdef"><b>Definition</b> frequency.h:165</div></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

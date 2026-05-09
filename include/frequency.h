@@ -14,6 +14,13 @@
 #include <sys.h>
 #include <bits.h>
 
+/** 
+ * @brief MCU frequency divider bitmask (3 low bits of CLK_DIV registry)
+ * 
+ * @ingroup freq 
+ */
+#define CLK_DIV_MASK 0x07
+
 /**
  * @brief Get MAIN_Fosc value
  * 
@@ -51,7 +58,7 @@
  * 
  * @ingroup freq
  */
-#define get_frequency_divider() (1 << (CLK_DIV & 0x07))
+#define get_frequency_divider() (1 << get_frequency_divider_scale())
 
 /**
  * @brief Get master clock frequency divider scale (CLK_DIV bits [0..2])
@@ -62,7 +69,7 @@
  * 
  * @ingroup freq
  */
-#define get_frequency_divider_scale() (CLK_DIV & 0x07)
+#define get_frequency_divider_scale() (CLK_DIV & CLK_DIV_MASK)
 
 /**
  * @brief Update and get master clock frequency divider (CLK_DIV bits [0..2])
@@ -79,8 +86,32 @@
 #define set_frequency_divider_scale(divider_scale)      \
 do {                                                    \
     CLK_DIV &= 0xf8;                                    \
-    CLK_DIV |= (divider_scale & 0x07);                  \
+    CLK_DIV |= (divider_scale & CLK_DIV_MASK);          \
 } while(0)
+
+
+/**
+ * @brief System clock frequency
+ * 
+ * This routine calculates the actual system clock frequency that the CPU is running at,
+ * taking into account the main oscillator frequency and the clock divider setting.
+ * 
+ * The formula is: SYSclk = MAIN_Fosc / (2^divider_scale)
+ * where:
+ * - MAIN_Fosc is the main oscillator frequency defined in sys.h
+ * - divider_scale is the value in bits [0..2] of the CLK_DIV register
+ * 
+ * This represents the effective CPU clock frequency after any prescaling has been applied.
+ * For example, if MAIN_Fosc is 11,059,200 Hz and the divider_scale is 1 (dividing by 2),
+ * then SYSclk would be 5,529,600 Hz.
+ * 
+ * @see get_master_clock_frequency() - function that returns the main oscillator frequency
+ * @see get_frequency_divider_scale() - function that returns the current clock divider scale
+ * @see set_frequency_divider_scale() - function to change the clock divider
+ * 
+ * @ingroup freq
+ */
+#define SYSclk (get_master_clock_frequency() >> get_frequency_divider_scale())
 
 /**
  * @brief Enable master clock output. By default output set to P5.4 pin.
