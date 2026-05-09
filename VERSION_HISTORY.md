@@ -186,6 +186,8 @@
 * TODO Rewrite frequency and ms calc from macro to functions
 * TODO Comparator module sync mode implementation 
 * TODO fix examples flash targets on cmake build
+* TODO Add docs to memory dumper README
+* TODO Add docs to csv2hex README
 
 Next releases todo
 * TODO Refactor timer aux/common
