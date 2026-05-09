@@ -63,7 +63,7 @@
  * 
  * @ingroup timer2_to_ms
  */
-#define timer2_ticks_to_ms_usafe(ticks) (timer_ticks_to_ms_usafe(ticks, get_timer2_clock_divider(), get_frequency_divider_scale()))
+#define timer2_ticks_to_ms_usafe(ticks) (timer_ticks_to_ms(ticks, get_timer2_clock_divider(), get_frequency_divider_scale()))
 
 /**
  * @brief Convert milliseconds to timer2 ticks.
