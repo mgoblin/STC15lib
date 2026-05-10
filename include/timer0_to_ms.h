@@ -66,7 +66,7 @@
  * 
  * @ingroup timer0_to_ms
  */
-#define timer0_ticks_to_ms(ticks) (timer_ticks_to_ms(ticks, get_timer0_clock_divider(), get_frequency_divider_scale()))
+#define timer0_ticks_to_ms(ticks) (timer_16bit_ticks_to_ms(ticks, get_timer0_clock_divider(), get_frequency_divider_scale()))
 
 /**
  * @brief Convert milliseconds to timer0 ticks.

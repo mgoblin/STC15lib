@@ -55,7 +55,7 @@
 #define timer_frequency_to_ticks_unsafe(frequency, timer_clock_divider, frequency_divider_scale) (((get_master_clock_frequency() >> 1) / (frequency * timer_clock_divider)) >> frequency_divider_scale)
 
 /**
- * @brief Converts 16-bit timer ticks count to ms
+ * @brief Converts 16-bit mode timer ticks count to ms
  * 
  * @attention This routine use integer division math and therefore have 
  * a calculation inaccuracy.
@@ -68,7 +68,23 @@
  * 
  * @ingroup timer_to_ms
  */
-uint16_t timer_ticks_to_ms( uint16_t ticks, timer_clock_divider_t timer_divider, uint8_t frequency_divider_scale);
+uint16_t timer_16bit_ticks_to_ms( uint16_t ticks, timer_clock_divider_t timer_divider, uint8_t frequency_divider_scale);
+
+/**
+ * @brief Converts 8-bit mode timer ticks count to microseconds
+ * 
+ * @attention This routine use integer division math and therefore have 
+ * a calculation inaccuracy.
+ * 
+ * @param ticks uint8_t ticks count. 
+ * @param timer_divider timer_clock_divider_t 1T or 12T timer clock divider
+ * @param frequency_divider_scale uint8_t MCU frequency divider scale 0..7
+ * 
+ * @return uint16_t microseconds time corresponing to timer ticks. Up to 35328.
+ * 
+ * @ingroup timer_to_ms
+ */
+uint16_t timer_8bit_ticks_to_mcs( uint8_t ticks, timer_clock_divider_t timer_divider, uint8_t frequency_divider_scale);
 
 /**
  * @brief Converts milliseconds to 16-bit timer ticks
