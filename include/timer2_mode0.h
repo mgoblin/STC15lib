@@ -3,7 +3,7 @@
 
 /**
  * @file timer2_mode0.h
- * @defgroup timer2_mode0 Timer2 Mode0
+ * @defgroup timer2_mode0 Timer2 Mode0 basics
  * @details Functions and data structures for timer2 mode0.
  * 
  * Timer can work as COUNTER or TIMER. 

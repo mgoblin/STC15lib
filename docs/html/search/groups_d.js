@@ -6,10 +6,11 @@ var searchData=
   ['mode_201_20with_20timer2_201t_3',['UART1 Mode 1 with Timer2 1T',['../group__uart1__mode1__timer2__1T.html',1,'']]],
   ['mode_203_20with_20timer2_2012t_4',['UART1 Mode 3 with Timer2 12T',['../group__uart1__mode3__timer2__12T.html',1,'']]],
   ['mode_203_20with_20timer2_201t_5',['UART1 Mode 3 with Timer2 1T',['../group__uart1__mode3__timer2__1T.html',1,'']]],
-  ['mode0_6',['mode0',['../group__counter0__mode0.html',1,'Counter0 Mode0'],['../group__counter2__mode0.html',1,'Counter2 Mode0'],['../group__timer0__mode0.html',1,'Timer0 Mode0'],['../group__timer2__mode0.html',1,'Timer2 Mode0']]],
-  ['mode1_7',['mode1',['../group__counter0__mode1.html',1,'Counter0 Mode1'],['../group__timer0__mode1.html',1,'Timer0 Mode1']]],
-  ['mode2_8',['mode2',['../group__counter0__mode2.html',1,'Counter0 Mode2'],['../group__timer0__mode2.html',1,'Timer0 Mode2'],['../group__uart1__mode2.html',1,'UART1 Mode2']]],
-  ['mode3_9',['mode3',['../group__counter0__mode3.html',1,'Counter0 Mode3'],['../group__timer0__mode3.html',1,'Timer0 Mode3']]],
-  ['modes_10',['UART1 all modes',['../group__uart1__shared.html',1,'']]],
-  ['ms_20duration_20frequency_20and_20vise_20versa_20conversions_11',['Timer ticks to ms duration/frequency and vise versa conversions',['../group__timer__to__ms.html',1,'']]]
+  ['mode0_6',['mode0',['../group__counter0__mode0.html',1,'Counter0 Mode0'],['../group__counter2__mode0.html',1,'Counter2 Mode0'],['../group__timer0__mode0.html',1,'Timer0 Mode0']]],
+  ['mode0_20basics_7',['Timer2 Mode0 basics',['../group__timer2__mode0.html',1,'']]],
+  ['mode0_20ticks_20to_20duration_20frequency_20convertions_8',['Timer2 Mode0 ticks to duration/frequency convertions',['../group__timer2__mode0__to__ms.html',1,'']]],
+  ['mode1_9',['mode1',['../group__counter0__mode1.html',1,'Counter0 Mode1'],['../group__timer0__mode1.html',1,'Timer0 Mode1']]],
+  ['mode2_10',['mode2',['../group__counter0__mode2.html',1,'Counter0 Mode2'],['../group__timer0__mode2.html',1,'Timer0 Mode2'],['../group__uart1__mode2.html',1,'UART1 Mode2']]],
+  ['mode3_11',['mode3',['../group__counter0__mode3.html',1,'Counter0 Mode3'],['../group__timer0__mode3.html',1,'Timer0 Mode3']]],
+  ['modes_12',['UART1 all modes',['../group__uart1__shared.html',1,'']]]
 ];

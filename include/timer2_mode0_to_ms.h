@@ -3,7 +3,7 @@
 
 /**
  * @file timer2_mode0_to_ms.h
- * @defgroup timer2_mode0_to_ms Timer2 ticks to duration/frequency convertions
+ * @defgroup timer2_mode0_to_ms Timer2 Mode0 ticks to duration/frequency convertions
  * @details Functions and data structures for converting timer2 ticks 
  * to duration/frequency and vice versa.
  * 
@@ -16,7 +16,7 @@
 #include <timer_common.h>
 #include <timer_to_ms_common.h>
 
-/** @name tick to frequency conversions
+/** @name ticks to frequency conversions
  *  Timer ticks to overlow frequency and vice versa convertions 
  */
 ///@{
@@ -52,6 +52,12 @@
  * @ingroup timer2_mode0_to_ms
  */
 #define timer2_frequency_to_ticks_unsafe(frequency) (timer_frequency_to_ticks_unsafe(frequency, get_timer2_clock_divider(), get_frequency_divider_scale()))
+///@}
+
+/** @name ticks to duration conversions
+ *  Timer ticks to timer overlow duration and vice versa convertions 
+ */
+///@{
 
 /**
  * @brief Convert ticks count to ms
@@ -79,7 +85,6 @@
  * @ingroup timer2_mode0_to_ms
  */
 #define timer2_ms_to_ticks(ms) (timer_ms_to_ticks(ms, get_timer2_clock_divider(), get_frequency_divider_scale()))
-
 ///@}
 
 #endif

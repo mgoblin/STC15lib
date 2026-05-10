@@ -3,7 +3,7 @@
 
 /**
  * @file timer_to_ms_common.h
- * @defgroup timer_to_ms Timer ticks to ms duration/frequency and vise versa conversions 
+ * @defgroup timer_to_ms Timer ticks to duration/frequency and vise versa conversions 
  * @details Functions and data structures for converting timer ticks 
  * to frequency and times for timers.
  * 

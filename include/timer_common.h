@@ -3,12 +3,12 @@
 
 /**
  * @file timer_common.h
- * @defgroup timer_common Timer common
+ * @defgroup timer_common Timer configuration reading
  * 
  * @brief Gets config from timers.
  * 
- * @details This module get mode, divider and ticks count 
- * from configured timer or counter
+ * @details This module contains reading mode and divider
+ * from configured timer or counter routines
  * 
  * @author Michael Golovanov
  */

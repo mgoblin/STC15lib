@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>STC15W408AS library: Timer2 ticks to duration/frequency convertions</title>
+<title>STC15W408AS library: Timer2 Mode0 ticks to duration/frequency convertions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,11 +69,11 @@ $(function() {
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Timer2 ticks to duration/frequency convertions</div></div>
+  <div class="headertitle"><div class="title">Timer2 Mode0 ticks to duration/frequency convertions</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">tick to frequency conversions</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader">ticks to frequency conversions</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>Timer ticks to overlow frequency and vice versa convertions </p>
 </td></tr>
 <tr class="memitem:gab91deb5b06b8decf78783fb7484bef3e" id="r_gab91deb5b06b8decf78783fb7484bef3e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0__to__ms.html#gab91deb5b06b8decf78783fb7484bef3e">timer2_uint16_ticks_to_freq100</a>(ticks)&#160;&#160;&#160;(<a class="el" href="group__timer__to__ms.html#ga05eec17c45e48cc9ceb0c238cfbe5505">timer_uint16_ticks_to_freq100</a>(ticks, <a class="el" href="group__timer__common.html#ga4259384552df325973b81bd5425b7f4a">get_timer2_clock_divider</a>(), <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td></tr>
@@ -82,6 +82,10 @@ $(function() {
 <tr class="memitem:ga14954bfb79088274f0a50fb2616b7046" id="r_ga14954bfb79088274f0a50fb2616b7046"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0__to__ms.html#ga14954bfb79088274f0a50fb2616b7046">timer2_frequency_to_ticks_unsafe</a>(frequency)&#160;&#160;&#160;(<a class="el" href="group__timer__to__ms.html#ga36e1de1ec7beecd79fbc758e75f35a65">timer_frequency_to_ticks_unsafe</a>(frequency, <a class="el" href="group__timer__common.html#ga4259384552df325973b81bd5425b7f4a">get_timer2_clock_divider</a>(), <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td></tr>
 <tr class="memdesc:ga14954bfb79088274f0a50fb2616b7046"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsafe approximation timer2 frequency corresponding to ticks.  <br /></td></tr>
 <tr class="separator:ga14954bfb79088274f0a50fb2616b7046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">ticks to duration conversions</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>Timer ticks to timer overlow duration and vice versa convertions </p>
+</td></tr>
 <tr class="memitem:ga942c5c43119ff6aa6ece2d02119c03c8" id="r_ga942c5c43119ff6aa6ece2d02119c03c8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0__to__ms.html#ga942c5c43119ff6aa6ece2d02119c03c8">timer2_ticks_to_ms</a>(ticks)&#160;&#160;&#160;(<a class="el" href="group__timer__to__ms.html#ga36010354fc034e749ab5c893bf23490d">timer_16bit_ticks_to_ms</a>(ticks, <a class="el" href="group__timer__common.html#ga4259384552df325973b81bd5425b7f4a">get_timer2_clock_divider</a>(), <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td></tr>
 <tr class="memdesc:ga942c5c43119ff6aa6ece2d02119c03c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert ticks count to ms.  <br /></td></tr>
 <tr class="separator:ga942c5c43119ff6aa6ece2d02119c03c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
