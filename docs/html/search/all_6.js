@@ -24,5 +24,5 @@ var searchData=
   ['all_20modes_21',['UART1 all modes',['../group__uart1__shared.html',1,'']]],
   ['and_20vise_20versa_20conversions_22',['Timer ticks to ms duration/frequency and vise versa conversions',['../group__timer__to__ms.html',1,'']]],
   ['any_5fedge_23',['ANY_EDGE',['../group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d',1,'interrupt.h']]],
-  ['aux_24',['aux',['../group__timer0__to__ms.html',1,'Timer0 Aux'],['../group__timer2__to__ms.html',1,'Timer2 Aux']]]
+  ['aux_24',['Timer0 Aux',['../group__timer0__to__ms.html',1,'']]]
 ];

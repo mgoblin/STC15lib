@@ -10,7 +10,7 @@
  */
 
 #include <timer2_mode0.h>
-#include <timer2_to_ms.h>
+#include <timer2_mode0_to_ms.h>
 
 #include <uart.h>
 #include <stdio.h>

@@ -1,11 +1,11 @@
-#ifndef STC15_TIMER2_TO_MSH
-#define STC15_TIMER2_TO_MSH
+#ifndef STC15_TIMER2_MODE0_TO_MSH
+#define STC15_TIMER2_MODE0_TO_MSH
 
 /**
- * @file timer2_to_ms.h
- * @defgroup timer2_to_ms Timer2 Aux
- * @details Functions and data structures for converting timer ticks 
- * to frequency and times for timer2.
+ * @file timer2_mode0_to_ms.h
+ * @defgroup timer2_mode0_to_ms Timer2 ticks to duration/frequency convertions
+ * @details Functions and data structures for converting timer2 ticks 
+ * to duration/frequency and vice versa.
  * 
  * @author Michael Golovanov
 */
@@ -32,7 +32,7 @@
  * 
  * @return uint32_t frequency multiplied by 100 corresponding to ticks count 
  * 
- * @ingroup timer2_to_ms
+ * @ingroup timer2_mode0_to_ms
  */
 #define timer2_uint16_ticks_to_freq100(ticks) (timer_uint16_ticks_to_freq100(ticks, get_timer2_clock_divider(), get_frequency_divider_scale()))
 
@@ -49,7 +49,7 @@
  * 
  * @return uint16_t timer2 ticks corresponding to frequency value
  * 
- * @ingroup timer2_to_ms
+ * @ingroup timer2_mode0_to_ms
  */
 #define timer2_frequency_to_ticks_unsafe(frequency) (timer_frequency_to_ticks_unsafe(frequency, get_timer2_clock_divider(), get_frequency_divider_scale()))
 
@@ -61,7 +61,7 @@
  * 
  * @return milliseconds time corresponing to timer ticks
  * 
- * @ingroup timer2_to_ms
+ * @ingroup timer2_mode0_to_ms
  */
 #define timer2_ticks_to_ms(ticks) (timer_16bit_ticks_to_ms(ticks, get_timer2_clock_divider(), get_frequency_divider_scale()))
 
@@ -76,7 +76,7 @@
  * @return uint16_t ticks count for milliseconds
  * 
  * 
- * @ingroup timer2_to_ms
+ * @ingroup timer2_mode0_to_ms
  */
 #define timer2_ms_to_ticks(ms) (timer_ms_to_ticks(ms, get_timer2_clock_divider(), get_frequency_divider_scale()))
 

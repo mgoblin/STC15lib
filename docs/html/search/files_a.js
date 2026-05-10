@@ -7,7 +7,7 @@ var searchData=
   ['timer0_5fms2ticks_5fexample_2ec_4',['timer0_ms2ticks_example.c',['../timer0__ms2ticks__example_8c.html',1,'']]],
   ['timer0_5fto_5fms_2eh_5',['timer0_to_ms.h',['../timer0__to__ms_8h.html',1,'']]],
   ['timer2_5fmode0_2eh_6',['timer2_mode0.h',['../timer2__mode0_8h.html',1,'']]],
-  ['timer2_5fto_5fms_2eh_7',['timer2_to_ms.h',['../timer2__to__ms_8h.html',1,'']]],
+  ['timer2_5fmode0_5fto_5fms_2eh_7',['timer2_mode0_to_ms.h',['../timer2__mode0__to__ms_8h.html',1,'']]],
   ['timer_5fcommon_2eh_8',['timer_common.h',['../timer__common_8h.html',1,'']]],
   ['timer_5fto_5fms_5fcommon_2eh_9',['timer_to_ms_common.h',['../timer__to__ms__common_8h.html',1,'']]]
 ];

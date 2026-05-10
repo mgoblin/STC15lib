@@ -4,7 +4,7 @@
  * Timer2 use for uart1 and example can output timer signal 
  * to P3.0 or print frequency to UART1
  */
-#include <timer2_to_ms.h>
+#include <timer2_mode0_to_ms.h>
 
 #include <frequency.h>
 #include <delay.h>

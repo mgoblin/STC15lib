@@ -5,7 +5,7 @@
  * Either print or P3.0 signal with calculated ms can be used
  *
  */
-#include <timer2_to_ms.h>
+#include <timer2_mode0_to_ms.h>
 #include <timer2_mode0.h>
 
 #include <uart.h>
