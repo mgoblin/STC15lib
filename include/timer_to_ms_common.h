@@ -82,7 +82,8 @@ uint16_t timer_ticks_to_ms( uint16_t ticks, timer_clock_divider_t timer_divider,
  * This routine doesnt check overflows. Its unsafe.
  * 
  * @param ms uint16_t ms to convert
- * @param timer_clock_divider_t timer_clock_divider timer clock divider
+ * @param divider timer_clock_divider_t timer clock divider 1T or 12T
+ * @param frequency_divider_scale uint8_t
  * 
  * @return uint16_t ticks count for milliseconds
  * 

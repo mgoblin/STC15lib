@@ -10,6 +10,9 @@ uint16_t timer_ticks_to_ms(uint16_t ticks, timer_clock_divider_t div, uint8_t fr
 
 uint16_t timer_ms_to_ticks_usafe(uint16_t ms, timer_clock_divider_t divider, uint8_t frequency_divider_scale)
 {
+  uint16_t mcu_freq_ms = (MAIN_Fosc >> frequency_divider_scale) / 1000;
+  uint16_t timer_freq_ms = mcu_freq_ms / divider;
+  uint32_t ticks_count = ms * timer_freq_ms;
 
-    return 0;
+  return (ticks_count >= UINT16_MAX) ? 0 : (uint16_t) ticks_count;
 }
