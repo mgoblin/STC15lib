@@ -5,8 +5,6 @@
  * @file timer_common.h
  * @defgroup timer_common Timer configuration reading
  * 
- * @brief Gets config from timers.
- * 
  * @details This module contains reading mode and divider
  * from configured timer or counter routines
  * 
@@ -44,7 +42,7 @@
  */
 ///@{
 /**
- * Get mode for timer2.
+ * @brief Get mode for timer2.
  * 
  * @return timer2 mode. Timer2 have only mode0.
  * 
@@ -53,7 +51,7 @@
 #define get_timer2_mode() (0)
 
 /**
- * Get clock divider for timer2. 
+ * @brief Get clock divider for timer2. 
  * 
  * @return timer2 clock divider
  * 

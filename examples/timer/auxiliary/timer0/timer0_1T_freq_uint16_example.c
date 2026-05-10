@@ -2,7 +2,7 @@
  * How to calculate timer frequency and output timer signal 
  * to P35 signal 
  */
-#include <timer0_to_ms.h>
+#include <timer0_mode0_to_ms.h>
 
 #include <uart.h>
 #include <stdio.h>
@@ -24,7 +24,7 @@ void main()
 
     // For ticks = 0xffff calc result is 84.37 Hz, measurament is 84.517 Hz
     // For ticks = 0x0000 calc result is 5.529600 MHz, measurament is 5.538 MHz
-    volatile uint32_t timer_frequency = timer0_uint16_ticks_to_freq100(TICKS);
+    volatile uint32_t timer_frequency = timer0_mode0_ticks_to_freq100(TICKS);
 
     timer0_mode0_start(TICKS);
 

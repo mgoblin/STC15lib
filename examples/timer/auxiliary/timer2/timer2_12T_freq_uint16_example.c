@@ -27,7 +27,7 @@ void main()
     timer2_mode0_12T_init();
     timer2_mode0_enable_P30_output();
     
-    volatile uint32_t timer_frequency = timer2_uint16_ticks_to_freq100(TICKS);
+    volatile uint32_t timer_frequency = timer2_mode0_ticks_to_freq100(TICKS);
 
     // timer2_mode0_start(TICKS);
     // while (1){}

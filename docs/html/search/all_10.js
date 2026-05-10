@@ -15,12 +15,15 @@ var searchData=
   ['mode_203_20with_20timer2_201t_12',['UART1 Mode 3 with Timer2 1T',['../group__uart1__mode3__timer2__1T.html',1,'']]],
   ['mode0_13',['mode0',['../group__counter0__mode0.html',1,'Counter0 Mode0'],['../group__counter2__mode0.html',1,'Counter2 Mode0']]],
   ['mode0_20basics_14',['mode0 basics',['../group__timer0__mode0.html',1,'Timer0 Mode0 basics'],['../group__timer2__mode0.html',1,'Timer2 Mode0 basics']]],
-  ['mode0_20ticks_20to_20duration_20frequency_20convertions_15',['Timer2 Mode0 ticks to duration/frequency convertions',['../group__timer2__mode0__to__ms.html',1,'']]],
+  ['mode0_20ticks_20to_20duration_20frequency_20convertions_15',['mode0 ticks to duration frequency convertions',['../group__timer0__mode0__to__ms.html',1,'Timer0 Mode0 ticks to duration/frequency convertions'],['../group__timer2__mode0__to__ms.html',1,'Timer2 Mode0 ticks to duration/frequency convertions']]],
   ['mode1_16',['Counter0 Mode1',['../group__counter0__mode1.html',1,'']]],
   ['mode1_20basics_17',['Timer0 Mode1 basics',['../group__timer0__mode1.html',1,'']]],
-  ['mode2_18',['mode2',['../group__counter0__mode2.html',1,'Counter0 Mode2'],['../group__uart1__mode2.html',1,'UART1 Mode2']]],
-  ['mode2_20basics_19',['Timer0 Mode2 basics',['../group__timer0__mode2.html',1,'']]],
-  ['mode3_20',['Counter0 Mode3',['../group__counter0__mode3.html',1,'']]],
-  ['mode3_20basics_21',['Timer0 Mode3 basics',['../group__timer0__mode3.html',1,'']]],
-  ['modules_20maturity_22',['Library modules maturity',['../index.html#autotoc_md5',1,'']]]
+  ['mode1_20ticks_20to_20duration_20frequency_20convertions_18',['Timer0 Mode1 ticks to duration/frequency convertions',['../group__timer0__mode1__to__ms.html',1,'']]],
+  ['mode2_19',['mode2',['../group__counter0__mode2.html',1,'Counter0 Mode2'],['../group__uart1__mode2.html',1,'UART1 Mode2']]],
+  ['mode2_20basics_20',['Timer0 Mode2 basics',['../group__timer0__mode2.html',1,'']]],
+  ['mode2_20ticks_20to_20duration_20frequency_20convertions_21',['Timer0 Mode2 ticks to duration/frequency convertions',['../group__timer0__mode2__to__ms.html',1,'']]],
+  ['mode3_22',['Counter0 Mode3',['../group__counter0__mode3.html',1,'']]],
+  ['mode3_20basics_23',['Timer0 Mode3 basics',['../group__timer0__mode3.html',1,'']]],
+  ['mode3_20ticks_20to_20duration_20frequency_20convertions_24',['Timer0 Mode3 ticks to duration/frequency convertions',['../group__timer0__mode3__to__ms.html',1,'']]],
+  ['modules_20maturity_25',['Library modules maturity',['../index.html#autotoc_md5',1,'']]]
 ];

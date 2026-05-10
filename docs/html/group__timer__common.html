@@ -74,9 +74,6 @@ $(function() {
   <div class="headertitle"><div class="title">Timer configuration reading</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Gets config from timers.  
-<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -100,12 +97,13 @@ Enumerations</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>Timer2 routines </p>
 </td></tr>
 <tr class="memitem:ga68b53855ca88473c1f21651184ee2cc8" id="r_ga68b53855ca88473c1f21651184ee2cc8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__common.html#ga68b53855ca88473c1f21651184ee2cc8">get_timer2_mode</a>()&#160;&#160;&#160;(0)</td></tr>
+<tr class="memdesc:ga68b53855ca88473c1f21651184ee2cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get mode for timer2.  <br /></td></tr>
 <tr class="separator:ga68b53855ca88473c1f21651184ee2cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4259384552df325973b81bd5425b7f4a" id="r_ga4259384552df325973b81bd5425b7f4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__common.html#ga4259384552df325973b81bd5425b7f4a">get_timer2_clock_divider</a>()&#160;&#160;&#160;(test_if_bit_set(AUXR, SBIT2) ? <a class="el" href="group__timer__common.html#ggaf044d39b4f1cbe40ca04353b2852a21da623238751deb7764bdebf4799fe30f07">T1</a> : <a class="el" href="group__timer__common.html#ggaf044d39b4f1cbe40ca04353b2852a21da5c3a2baea537d57bba309aa892a7926c">T12</a>)</td></tr>
+<tr class="memdesc:ga4259384552df325973b81bd5425b7f4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get clock divider for timer2.  <br /></td></tr>
 <tr class="separator:ga4259384552df325973b81bd5425b7f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Gets config from timers. </p>
 <p>This module contains reading mode and divider from configured timer or counter routines</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -163,7 +161,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get clock divider for timer2.</p>
+
+<p>Get clock divider for timer2. </p>
 <dl class="section return"><dt>Returns</dt><dd>timer2 clock divider </dd></dl>
 
 </div>
@@ -182,7 +181,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get mode for timer2.</p>
+
+<p>Get mode for timer2. </p>
 <dl class="section return"><dt>Returns</dt><dd>timer2 mode. Timer2 have only mode0. </dd></dl>
 
 </div>

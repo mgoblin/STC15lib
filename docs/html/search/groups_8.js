@@ -2,5 +2,5 @@ var searchData=
 [
   ['delay_0',['Delay',['../group__delays.html',1,'']]],
   ['duration_20frequency_20and_20vise_20versa_20conversions_1',['Timer ticks to duration/frequency and vise versa conversions',['../group__timer__to__ms.html',1,'']]],
-  ['duration_20frequency_20convertions_2',['Timer2 Mode0 ticks to duration/frequency convertions',['../group__timer2__mode0__to__ms.html',1,'']]]
+  ['duration_20frequency_20convertions_2',['duration frequency convertions',['../group__timer0__mode0__to__ms.html',1,'Timer0 Mode0 ticks to duration/frequency convertions'],['../group__timer0__mode1__to__ms.html',1,'Timer0 Mode1 ticks to duration/frequency convertions'],['../group__timer0__mode2__to__ms.html',1,'Timer0 Mode2 ticks to duration/frequency convertions'],['../group__timer0__mode3__to__ms.html',1,'Timer0 Mode3 ticks to duration/frequency convertions'],['../group__timer2__mode0__to__ms.html',1,'Timer2 Mode0 ticks to duration/frequency convertions']]]
 ];

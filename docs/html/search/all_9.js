@@ -20,5 +20,5 @@ var searchData=
   ['documentation_17',['Library documentation',['../index.html#autotoc_md6',1,'']]],
   ['dumper_18',['Memmory dumper',['../md_utils_2memory__dumper_2README.html',1,'']]],
   ['duration_20frequency_20and_20vise_20versa_20conversions_19',['Timer ticks to duration/frequency and vise versa conversions',['../group__timer__to__ms.html',1,'']]],
-  ['duration_20frequency_20convertions_20',['Timer2 Mode0 ticks to duration/frequency convertions',['../group__timer2__mode0__to__ms.html',1,'']]]
+  ['duration_20frequency_20convertions_20',['duration frequency convertions',['../group__timer0__mode0__to__ms.html',1,'Timer0 Mode0 ticks to duration/frequency convertions'],['../group__timer0__mode1__to__ms.html',1,'Timer0 Mode1 ticks to duration/frequency convertions'],['../group__timer0__mode2__to__ms.html',1,'Timer0 Mode2 ticks to duration/frequency convertions'],['../group__timer0__mode3__to__ms.html',1,'Timer0 Mode3 ticks to duration/frequency convertions'],['../group__timer2__mode0__to__ms.html',1,'Timer2 Mode0 ticks to duration/frequency convertions']]]
 ];

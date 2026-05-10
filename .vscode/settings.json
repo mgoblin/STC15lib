@@ -16,7 +16,7 @@
         "delay.h": "c",
         "timer_to_ms.h": "c",
         "stdlib.h": "c",
-        "timer0_to_ms.h": "c",
+        "timer0_mode0_to_ms.h": "c",
         "reset.h": "c",
         "wdt.h": "c",
         "timer2_mode0_to_ms.h": "c",

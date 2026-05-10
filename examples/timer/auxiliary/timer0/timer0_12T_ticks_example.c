@@ -8,7 +8,7 @@
  */
 
 #include <timer0_mode0.h>
-#include <timer0_to_ms.h>
+#include <timer0_mode0_to_ms.h>
 
 #include <uart.h>
 #include <stdio.h>
@@ -30,11 +30,11 @@ void main()
     timer0_mode0_enable_P35_output();
 
     // Calculate ticks count to frequency 2.5 kHz. Value is 0x5C
-    uint16_t ticks = timer0_frequency_to_ticks_unsafe(2500);
+    uint16_t ticks = timer0_mode0_frequency_to_ticks_unsafe(2500);
     // Store MCU clock divider to print it in while cycle
     uint8_t freq_divider = get_frequency_divider();
     // Calculate P35 meander frequency and its value is 2477.41, not 2500
-    uint32_t freq = timer0_uint16_ticks_to_freq100(ticks) >> 1;
+    uint32_t freq = timer0_mode0_ticks_to_freq100(ticks) >> 1;
     
     // Start timer
     timer0_mode0_start(ticks);

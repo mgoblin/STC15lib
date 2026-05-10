@@ -187,13 +187,15 @@
 * Rewrite timer ms for ticks calc from macro to function
 * Rewrite timer ticks for ms calc from macro to function
 * TODO Rewrite timer frequency calc from macro to function
+* TODO Add timerX start on ms/mcs routines
+* TODO Add timerX start on freq routines
+* TODO Restructure and add timerX_modeX freq, duration and ticks examples
 * TODO Comparator module sync mode implementation 
 * TODO fix examples flash targets on cmake build
 * TODO Add docs to memory dumper README
 * TODO Add docs to csv2hex README
 
 Next releases todo
-* TODO Refactor timer aux/common
 * TODO memory dump not only idata but xdata memory too
 * TODO Rework bits module
 * TODO UART1 support frame error

@@ -7,7 +7,7 @@
  * 
  * The example configures Timer0 to run in 1T mode (one clock cycle per count)
  * and calculates the number of ticks needed for a 3ms delay using the
- * timer0_ms_to_ticks() function. It then starts the timer and outputs the
+ * timer0_mode0_ms_to_ticks() function. It then starts the timer and outputs the
  * calculated tick value over UART.
  * 
  * @note The actual tick value will depend on the system clock frequency
@@ -15,12 +15,12 @@
  *       3ms corresponds to approximately 33,177 ticks.
  * 
  * @see timer0_mode0.h - Header for Timer0 Mode 0 functions
- * @see timer0_to_ms.h - Header containing ms to ticks conversion functions
+ * @see timer0_mode0_to_ms.h - Header containing ms to ticks conversion functions
  * 
  */
 
 #include <timer0_mode0.h>
-#include <timer0_to_ms.h>
+#include <timer0_mode0_to_ms.h>
 
 #include <uart.h>
 #include <stdio.h>
@@ -40,7 +40,7 @@ void main()
 
     // Convert 3 milliseconds to the corresponding number of timer ticks
     // This calculation takes into account the system clock frequency and timer mode
-    uint16_t ticks = timer0_ms_to_ticks(3);
+    uint16_t ticks = timer0_mode0_ms_to_ticks(3);
     
     // Start Timer0 with the calculated number of ticks
     // The timer will count down from this value and generate an overflow interrupt

@@ -1,18 +1,18 @@
-#ifndef STC15_TIMER0_TO_MSH
-#define STC15_TIMER0_TO_MSH
+#ifndef STC15_TIMER0_MODE2_TO_MSH
+#define STC15_TIMER0_MODE2_TO_MSH
 
 /**
- * @file timer0_to_ms.h
- * @defgroup timer0_to_ms Timer0 Aux
+ * @file timer0_mode2_to_ms.h
+ * @defgroup timer0_mode2_to_ms Timer0 Mode2 ticks to duration/frequency convertions
  * @details Functions and data structures for converting timer ticks 
- * to frequency and times for timer0.
+ * to frequency and times for timer0 mode2.
  * 
  * @author Michael Golovanov
 */
 
 #include <stdint.h>
 #include <frequency.h>
-#include <timer0_mode0.h>
+#include <timer0_mode2.h>
 #include <timer_common.h>
 #include <timer_to_ms_common.h>
 
@@ -35,9 +35,9 @@
  * 
  * @return uint32_t frequency multiplied by 100 corresponding to ticks count 
  * 
- * @ingroup timer0_to_ms
+ * @ingroup timer0_mode2_to_ms
  */
-#define timer0_uint16_ticks_to_freq100(ticks) (timer_uint16_ticks_to_freq100(ticks, get_timer0_clock_divider(), get_frequency_divider_scale()))
+#define timer0_mode2_ticks_to_freq100(ticks) (timer_uint16_ticks_to_freq100(ticks, get_timer0_clock_divider(), get_frequency_divider_scale()))
 
 /**
  * @brief Unsafe approximation timer0 frequency corresponding to ticks. 
@@ -52,37 +52,33 @@
  * 
  * @return uint16_t timer0 ticks corresponding to frequency value
  * 
- * @ingroup timer0_to_ms
+ * @ingroup timer0_mode2_to_ms
  */
-#define timer0_frequency_to_ticks_unsafe(frequency) (timer_frequency_to_ticks_unsafe(frequency, get_timer0_clock_divider(), get_frequency_divider_scale()))
+#define timer0_mode2_frequency_to_ticks_unsafe(frequency) (timer_frequency_to_ticks_unsafe(frequency, get_timer0_clock_divider(), get_frequency_divider_scale()))
 
 /**
- * @brief Convert ticks count to ms
- * @details <b>This method doesnt analyze corner cases and overflow of result. Be careful.</b> 
+ * @brief Convert ticks count to microseconds
  * 
- * @param ticks uint16_t ticks count
+ * @param ticks uint8_t ticks count. 
  * 
- * @return milliseconds time corresponing to timer ticks
+ * @return uint16_t microseconds time corresponing to timer ticks. 
  * 
- * @ingroup timer0_to_ms
+ * @ingroup timer0_mode2_to_ms
  */
-#define timer0_ticks_to_ms(ticks) (timer_16bit_ticks_to_ms(ticks, get_timer0_clock_divider(), get_frequency_divider_scale()))
+#define timer0_mode2_ticks_to_mcs(ticks) (timer_8bit_ticks_to_mcs(ticks, get_timer0_clock_divider(), get_frequency_divider_scale()))
 
 /**
  * @brief Convert milliseconds to timer0 ticks.
- * @details 
- * 1 ms = ((get_master_clock_frequency_high_part() + 26) >> get_frequency_divider_scale()) / timer_clock_divider
  * 
- * This routine doesnt check overflows. Its unsafe.
+ * @param ms uint16_t ms to convert. Range is 1..~9000
  * 
- * @param ms uint16_t ms to convert
- * 
- * @return uint16_t ticks count for milliseconds
+ * @return uint16_t     Number of timer ticks corresponding to the input time.
+ *                      Returns 0 if the result overflows uint16_t range.
  * 
  * 
- * @ingroup timer0_to_ms
+ * @ingroup timer0_mode2_to_ms
  */
-#define timer0_ms_to_ticks(ms) (timer_ms_to_ticks(ms, get_timer0_clock_divider(), get_frequency_divider_scale()))
+#define timer0_mode2_ms_to_ticks(ms) (timer_ms_to_ticks(ms, get_timer0_clock_divider(), get_frequency_divider_scale()))
 
 ///@}
 

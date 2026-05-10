@@ -1,5 +1,5 @@
 /**
- * This example shows how to use the timer2_ms_to_ticks 
+ * This example shows how to use the timer2_mode0_ms_to_ticks 
  * to calculate the number of timer 2 ticks for a given duration.
  * 
  * The duration is specified in milliseconds.
@@ -50,7 +50,7 @@ void main()
     timer2_mode0_12T_init();
     // Calculate timer2 ticks count given duration
     // ticks_count is equals to 0 if given duration can not be serviced.
-    uint16_t ticks = timer2_ms_to_ticks(DURATION_MS / ISR_SCALER);
+    uint16_t ticks = timer2_mode0_ms_to_ticks(DURATION_MS / ISR_SCALER);
     
     // start timer2 if it supports given duration
     if (ticks > 0) 

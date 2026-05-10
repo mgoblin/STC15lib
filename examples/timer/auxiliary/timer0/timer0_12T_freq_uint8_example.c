@@ -3,7 +3,7 @@
  * on timer0 mode2 (8-bit autoreloadable timer)
  */
 #include <timer0_mode2.h>
-#include <timer0_to_ms.h>
+#include <timer0_mode2_to_ms.h>
 
 #include <uart.h>
 #include <stdio.h>
@@ -29,7 +29,7 @@ void main()
     // Calculate P35 signal frequency * 100 for 0xff ticks count.
     // 0xff is a maximum value for ticks count in timer mode2. 
     // Return value is 90000 -> P35 frequency is 900 Hz. 
-    volatile uint32_t timer_frequency = timer0_uint16_ticks_to_freq100(0x00ff);
+    volatile uint32_t timer_frequency = timer0_mode2_ticks_to_freq100(0x00ff);
 
     timer0_mode2_start(0xff);
 
