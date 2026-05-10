@@ -4,7 +4,7 @@
 /**
  * @file uart1_shared.h
  * 
- * @defgroup uart1_shared UART1 all modes
+ * @defgroup uart1_shared UART1 commons
  * 
  * @details UART1 routines used in all UART1 modes.
  * 

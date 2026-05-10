@@ -3,7 +3,7 @@
 
 /**
  * @file timer0_mode0.h
- * @defgroup timer0_mode0 Timer0 Mode0
+ * @defgroup timer0_mode0 Timer0 Mode0 basics
  * @details Functions and data structures for timer0 mode0.
  * 
  * This module supports general purpose timer0.
