@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>STC15W408AS library: Timer Aux common</title>
+<title>STC15W408AS library: Timer ticks to ms duration/frequency and vise versa conversions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -72,7 +72,7 @@ $(function() {
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">Timer Aux common</div></div>
+  <div class="headertitle"><div class="title">Timer ticks to ms duration/frequency and vise versa conversions</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
@@ -91,7 +91,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga5d43a1d876e23c1af823eb29c8c341ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert 16-bit timer ticks count to ms.  <br /></td></tr>
 <tr class="separator:ga5d43a1d876e23c1af823eb29c8c341ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga968f64949f8e4c05c9a448295d9e6369" id="r_ga968f64949f8e4c05c9a448295d9e6369"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#ga968f64949f8e4c05c9a448295d9e6369">timer_ms_to_ticks</a> (uint16_t ms, <a class="el" href="group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a> divider, uint8_t frequency_divider_scale)</td></tr>
-<tr class="memdesc:ga968f64949f8e4c05c9a448295d9e6369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts milliseconds to timer ticks (unsafe conversion)  <br /></td></tr>
+<tr class="memdesc:ga968f64949f8e4c05c9a448295d9e6369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts milliseconds to 16-bit timer ticks.  <br /></td></tr>
 <tr class="separator:ga968f64949f8e4c05c9a448295d9e6369"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -227,7 +227,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Converts milliseconds to timer ticks (unsafe conversion) </p>
+<p>Converts milliseconds to 16-bit timer ticks. </p>
 <p>This function converts a given time duration in milliseconds to the corresponding 16-bit timer reload/tick count based on the MCU's clock frequency, timer clock divider (T1 or T12), and the system frequency divider scale. The calculation assumes:</p><ul>
 <li>Timer operates in one of the standard modes (e.g., Mode 1 - 16-bit timer).</li>
 <li>The timer counts up from the initial value to 0xFFFF (65535), so the number of ticks before overflow is (65536 - initial_value).</li>
@@ -236,7 +236,7 @@ Functions</h2></td></tr>
 <li>MCU_frequency = MAIN_Fosc &gt;&gt; frequency_divider_scale</li>
 <li>timer_clock_divider = 1 for 1T mode, 12 for 12T mode</li>
 </ul>
-<dl class="section warning"><dt>Warning</dt><dd>This function does <b>not</b> perform safety checks for overflow beyond <code>uint16_t</code> range. If the computed tick count exceeds 65535, it will be clamped to 0. It is the caller's responsibility to ensure that input values result in valid tick counts within the allowable timer range.</dd>
+<dl class="section warning"><dt>Warning</dt><dd>If the computed tick count exceeds 65535, it will be clamped to 0. It is the caller's responsibility to ensure that input values result in valid tick counts within the allowable timer range.</dd>
 <dd>
 Inaccuracies may arise due to integer division truncation, especially at higher frequency divider scales or very small millisecond values.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>

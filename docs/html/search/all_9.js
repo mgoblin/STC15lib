@@ -18,5 +18,6 @@ var searchData=
   ['disable_5ftimer2_5finterrupt_15',['disable_timer2_interrupt',['../group__interrupts.html#gac8daf51c922df876c57f419b63996dd5',1,'interrupt.h']]],
   ['disable_5fuart1_5finterrupt_16',['disable_uart1_interrupt',['../group__interrupts.html#ga5dac79f9182e6dc1a31448a28ee0a162',1,'interrupt.h']]],
   ['documentation_17',['Library documentation',['../index.html#autotoc_md6',1,'']]],
-  ['dumper_18',['Memmory dumper',['../md_utils_2memory__dumper_2README.html',1,'']]]
+  ['dumper_18',['Memmory dumper',['../md_utils_2memory__dumper_2README.html',1,'']]],
+  ['duration_20frequency_20and_20vise_20versa_20conversions_19',['Timer ticks to ms duration/frequency and vise versa conversions',['../group__timer__to__ms.html',1,'']]]
 ];

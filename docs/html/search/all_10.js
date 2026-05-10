@@ -18,5 +18,6 @@ var searchData=
   ['mode2_15',['mode2',['../group__counter0__mode2.html',1,'Counter0 Mode2'],['../group__timer0__mode2.html',1,'Timer0 Mode2'],['../group__uart1__mode2.html',1,'UART1 Mode2']]],
   ['mode3_16',['mode3',['../group__counter0__mode3.html',1,'Counter0 Mode3'],['../group__timer0__mode3.html',1,'Timer0 Mode3']]],
   ['modes_17',['UART1 all modes',['../group__uart1__shared.html',1,'']]],
-  ['modules_20maturity_18',['Library modules maturity',['../index.html#autotoc_md5',1,'']]]
+  ['modules_20maturity_18',['Library modules maturity',['../index.html#autotoc_md5',1,'']]],
+  ['ms_20duration_20frequency_20and_20vise_20versa_20conversions_19',['Timer ticks to ms duration/frequency and vise versa conversions',['../group__timer__to__ms.html',1,'']]]
 ];
