@@ -1,4 +1,5 @@
 /**
+ * @file timer0_ms2ticks_example.c
  * @brief Example demonstrating conversion from milliseconds to timer0 ticks
  * 
  * This example shows how to convert a time duration in milliseconds to the
