@@ -258,7 +258,28 @@ $(function() {
 <div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Init WDT. </p>
-<p>WDT overflow time = (12 * wdt_scale * 32768) / MainFosc</p>
+<p>WDT overflow time = (12 * wdt_scale * 32768) / SysClk</p>
+<p>Typical WDT overflow durations for MCU frequency divider 1 shown in the table below</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">#   </th><th class="markdownTableHeadNone">PS2, PS1, PS0   </th><th class="markdownTableHeadNone">Scale   </th><th class="markdownTableHeadNone">Duration, ms    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">0, 0, 0   </td><td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">71,1 ms    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">0, 0, 1   </td><td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">142,2 ms    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">0, 1, 0   </td><td class="markdownTableBodyNone">8   </td><td class="markdownTableBodyNone">284,4 ms    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">0, 1, 1   </td><td class="markdownTableBodyNone">16   </td><td class="markdownTableBodyNone">568,9 ms    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">1, 0, 0   </td><td class="markdownTableBodyNone">32   </td><td class="markdownTableBodyNone">1137,8 ms (≈1,14 s)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">6   </td><td class="markdownTableBodyNone">1, 0, 1   </td><td class="markdownTableBodyNone">64   </td><td class="markdownTableBodyNone">2275,6 ms (≈2,28 s)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">7   </td><td class="markdownTableBodyNone">1, 1, 0   </td><td class="markdownTableBodyNone">128   </td><td class="markdownTableBodyNone">4551,2 ms (≈4,55 s)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">8   </td><td class="markdownTableBodyNone">1, 1, 1   </td><td class="markdownTableBodyNone">256   </td><td class="markdownTableBodyNone">9102,4 ms (≈9,10 s)   </td></tr>
+</table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">wdt_scale</td><td>uint8_t WDT timer scale in range 0..7 </td></tr>

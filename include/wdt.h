@@ -37,7 +37,21 @@
 
 /**
  * @brief Init WDT
- * @details WDT overflow time = (12 * wdt_scale * 32768) / MainFosc
+ * @details WDT overflow time = (12 * wdt_scale * 32768) / SysClk
+ * 
+ * Typical WDT overflow durations for MCU frequency divider 1 shown in the
+ * table below
+ * 
+ * # | PS2, PS1, PS0 | Scale |	Duration, ms
+ * - | ------------- | ----- | -------------
+ * 1 |	0, 0, 0	     | 2	 | 71,1 ms
+ * 2 |	0, 0, 1	     | 4	 | 142,2 ms
+ * 3 |	0, 1, 0	     | 8	 | 284,4 ms
+ * 4 |	0, 1, 1	     | 16	 | 568,9 ms
+ * 5 |	1, 0, 0	     | 32	 | 1137,8 ms (≈1,14 s)
+ * 6 |	1, 0, 1	     | 64    | 2275,6 ms (≈2,28 s)
+ * 7 |	1, 1, 0	     | 128	 | 4551,2 ms (≈4,55 s)
+ * 8 |	1, 1, 1	     | 256	 | 9102,4 ms (≈9,10 s)
  * 
  * @param wdt_scale uint8_t WDT timer scale in range 0..7 
  * 
