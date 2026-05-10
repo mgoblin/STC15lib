@@ -25,6 +25,9 @@
 #include <uart.h>
 #include <stdio.h>
 
+/**
+ * @brief Main function for timer0_ms2ticks_example
+ */
 void main()
 {
     // Initialize Timer0 in Mode 0 (16-bit timer) with 1T timing

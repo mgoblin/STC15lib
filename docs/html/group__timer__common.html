@@ -70,26 +70,14 @@ $(function() {
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
 <a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle"><div class="title">Timer common</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Gets config from timers.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:ga8fb5b0ee3b737afe80af761364e3b729" id="r_ga8fb5b0ee3b737afe80af761364e3b729"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__common.html#ga8fb5b0ee3b737afe80af761364e3b729">get_timer0_mode</a>()&#160;&#160;&#160;(TMOD &amp; 0x03)</td></tr>
-<tr class="memdesc:ga8fb5b0ee3b737afe80af761364e3b729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer0 mode.  <br /></td></tr>
-<tr class="separator:ga8fb5b0ee3b737afe80af761364e3b729"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac2f34fcd6ffbec0a91510385d3286f70" id="r_gac2f34fcd6ffbec0a91510385d3286f70"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__common.html#gac2f34fcd6ffbec0a91510385d3286f70">get_timer0_clock_divider</a>()&#160;&#160;&#160;(test_if_bit_cleared(AUXR, SBIT7) ? <a class="el" href="group__timer__common.html#ggaf044d39b4f1cbe40ca04353b2852a21da5c3a2baea537d57bba309aa892a7926c">T12</a> : <a class="el" href="group__timer__common.html#ggaf044d39b4f1cbe40ca04353b2852a21da623238751deb7764bdebf4799fe30f07">T1</a>)</td></tr>
-<tr class="memdesc:gac2f34fcd6ffbec0a91510385d3286f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timer0 clock divider.  <br /></td></tr>
-<tr class="separator:gac2f34fcd6ffbec0a91510385d3286f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga68b53855ca88473c1f21651184ee2cc8" id="r_ga68b53855ca88473c1f21651184ee2cc8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__common.html#ga68b53855ca88473c1f21651184ee2cc8">get_timer2_mode</a>()&#160;&#160;&#160;(0)</td></tr>
-<tr class="memdesc:ga68b53855ca88473c1f21651184ee2cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable output of meandr with timer interval on P3.5 pin.  <br /></td></tr>
-<tr class="separator:ga68b53855ca88473c1f21651184ee2cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4259384552df325973b81bd5425b7f4a" id="r_ga4259384552df325973b81bd5425b7f4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__common.html#ga4259384552df325973b81bd5425b7f4a">get_timer2_clock_divider</a>()&#160;&#160;&#160;(test_if_bit_set(AUXR, SBIT2) ? <a class="el" href="group__timer__common.html#ggaf044d39b4f1cbe40ca04353b2852a21da623238751deb7764bdebf4799fe30f07">T1</a> : <a class="el" href="group__timer__common.html#ggaf044d39b4f1cbe40ca04353b2852a21da5c3a2baea537d57bba309aa892a7926c">T12</a>)</td></tr>
-<tr class="separator:ga4259384552df325973b81bd5425b7f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:gaf044d39b4f1cbe40ca04353b2852a21d" id="r_gaf044d39b4f1cbe40ca04353b2852a21d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a> { <a class="el" href="group__timer__common.html#ggaf044d39b4f1cbe40ca04353b2852a21da623238751deb7764bdebf4799fe30f07">T1</a> = 1
@@ -97,9 +85,28 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gaf044d39b4f1cbe40ca04353b2852a21d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer clock divider values enum.  <a href="group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d">More...</a><br /></td></tr>
 <tr class="separator:gaf044d39b4f1cbe40ca04353b2852a21d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Timer0</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>Timer0 routines </p>
+</td></tr>
+<tr class="memitem:ga8fb5b0ee3b737afe80af761364e3b729" id="r_ga8fb5b0ee3b737afe80af761364e3b729"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__common.html#ga8fb5b0ee3b737afe80af761364e3b729">get_timer0_mode</a>()&#160;&#160;&#160;(TMOD &amp; 0x03)</td></tr>
+<tr class="memdesc:ga8fb5b0ee3b737afe80af761364e3b729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get mode for timer0.  <br /></td></tr>
+<tr class="separator:ga8fb5b0ee3b737afe80af761364e3b729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac2f34fcd6ffbec0a91510385d3286f70" id="r_gac2f34fcd6ffbec0a91510385d3286f70"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__common.html#gac2f34fcd6ffbec0a91510385d3286f70">get_timer0_clock_divider</a>()&#160;&#160;&#160;(test_if_bit_cleared(AUXR, SBIT7) ? <a class="el" href="group__timer__common.html#ggaf044d39b4f1cbe40ca04353b2852a21da5c3a2baea537d57bba309aa892a7926c">T12</a> : <a class="el" href="group__timer__common.html#ggaf044d39b4f1cbe40ca04353b2852a21da623238751deb7764bdebf4799fe30f07">T1</a>)</td></tr>
+<tr class="memdesc:gac2f34fcd6ffbec0a91510385d3286f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get clock divider for timer0.  <br /></td></tr>
+<tr class="separator:gac2f34fcd6ffbec0a91510385d3286f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Timer2</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>Timer2 routines </p>
+</td></tr>
+<tr class="memitem:ga68b53855ca88473c1f21651184ee2cc8" id="r_ga68b53855ca88473c1f21651184ee2cc8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__common.html#ga68b53855ca88473c1f21651184ee2cc8">get_timer2_mode</a>()&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:ga68b53855ca88473c1f21651184ee2cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4259384552df325973b81bd5425b7f4a" id="r_ga4259384552df325973b81bd5425b7f4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__common.html#ga4259384552df325973b81bd5425b7f4a">get_timer2_clock_divider</a>()&#160;&#160;&#160;(test_if_bit_set(AUXR, SBIT2) ? <a class="el" href="group__timer__common.html#ggaf044d39b4f1cbe40ca04353b2852a21da623238751deb7764bdebf4799fe30f07">T1</a> : <a class="el" href="group__timer__common.html#ggaf044d39b4f1cbe40ca04353b2852a21da5c3a2baea537d57bba309aa892a7926c">T12</a>)</td></tr>
+<tr class="separator:ga4259384552df325973b81bd5425b7f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Common functions and data structures for timers.</p>
+<p>Gets config from timers. </p>
+<p>This module get mode, divider and ticks count from configured timer or counter</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="gac2f34fcd6ffbec0a91510385d3286f70" name="gac2f34fcd6ffbec0a91510385d3286f70"></a>
@@ -117,7 +124,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get timer0 clock divider. </p>
+<p>Get clock divider for timer0. </p>
 <dl class="section return"><dt>Returns</dt><dd>timer0 clock divider </dd></dl>
 
 </div>
@@ -137,7 +144,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get timer0 mode. </p>
+<p>Get mode for timer0. </p>
 <dl class="section return"><dt>Returns</dt><dd>timer0 mode in range from 0 to 3 </dd></dl>
 
 </div>
@@ -156,7 +163,7 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get timer2 clock divider</p>
+<p>Get clock divider for timer2.</p>
 <dl class="section return"><dt>Returns</dt><dd>timer2 clock divider </dd></dl>
 
 </div>
@@ -175,15 +182,7 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Enable output of meandr with timer interval on P3.5 pin. </p>
-<p>By default output is disabled</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">enable</td><td>bool if true output is enabled otherwise output is disabled Get timer2 mode</td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Get mode for timer2.</p>
 <dl class="section return"><dt>Returns</dt><dd>timer2 mode. Timer2 have only mode0. </dd></dl>
 
 </div>
