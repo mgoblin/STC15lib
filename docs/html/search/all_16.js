@@ -90,7 +90,7 @@ var searchData=
   ['timer_5fclock_5fdivider_5ft_87',['timer_clock_divider_t',['../group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d',1,'timer_structs.h']]],
   ['timer_5fcommon_2eh_88',['timer_common.h',['../timer__common_8h.html',1,'']]],
   ['timer_5ffrequency_5fto_5fticks_5funsafe_89',['timer_frequency_to_ticks_unsafe',['../group__timer__to__ms.html#ga36e1de1ec7beecd79fbc758e75f35a65',1,'timer_to_ms_common.h']]],
-  ['timer_5fms_5fto_5fticks_5fusafe_90',['timer_ms_to_ticks_usafe',['../group__timer__to__ms.html#ga57965a4fbee4f1ad9ca1ad75bf98fd38',1,'timer_to_ms_common.h']]],
+  ['timer_5fms_5fto_5fticks_5fusafe_90',['timer_ms_to_ticks_usafe',['../group__timer__to__ms.html#ga46bf40ee2853f36c806390026282b4b7',1,'timer_ms_to_ticks_usafe(uint16_t ms, timer_clock_divider_t divider):&#160;timer_to_ms_common.c'],['../group__timer__to__ms.html#ga46bf40ee2853f36c806390026282b4b7',1,'timer_ms_to_ticks_usafe(uint16_t ms, timer_clock_divider_t divider):&#160;timer_to_ms_common.c']]],
   ['timer_5fticks_5fto_5fms_91',['timer_ticks_to_ms',['../group__timer__to__ms.html#ga5d43a1d876e23c1af823eb29c8c341ae',1,'timer_ticks_to_ms(uint16_t ticks, timer_clock_divider_t div, uint8_t frequency_divider_scale):&#160;timer_to_ms_common.c'],['../group__timer__to__ms.html#ga5d43a1d876e23c1af823eb29c8c341ae',1,'timer_ticks_to_ms(uint16_t ticks, timer_clock_divider_t timer_divider, uint8_t frequency_divider_scale):&#160;timer_to_ms_common.c']]],
   ['timer_5fto_5fms_5fcommon_2eh_92',['timer_to_ms_common.h',['../timer__to__ms__common_8h.html',1,'']]],
   ['timer_5fuint16_5fticks_5fto_5ffreq100_93',['timer_uint16_ticks_to_freq100',['../group__timer__to__ms.html#ga05eec17c45e48cc9ceb0c238cfbe5505',1,'timer_to_ms_common.h']]],

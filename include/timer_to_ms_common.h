@@ -83,12 +83,12 @@ uint16_t timer_ticks_to_ms( uint16_t ticks, timer_clock_divider_t timer_divider,
  * This routine doesnt check overflows. Its unsafe.
  * 
  * @param ms uint16_t ms to convert
- * @param timer_clock_divider timer clock divider
+ * @param timer_clock_divider_t timer_clock_divider timer clock divider
  * 
  * @return uint16_t ticks count for milliseconds
  * 
  * @ingroup timer_to_ms
  */
-#define timer_ms_to_ticks_usafe(ms, timer_clock_divider) (ms * ((get_master_clock_frequency_high_part() + 26) >> get_frequency_divider_scale()) / timer_clock_divider)
+ uint16_t timer_ms_to_ticks_usafe(uint16_t ms, timer_clock_divider_t divider);// (ms * ((get_master_clock_frequency_high_part() + 26) >> get_frequency_divider_scale()) / timer_clock_divider)
 
 #endif
