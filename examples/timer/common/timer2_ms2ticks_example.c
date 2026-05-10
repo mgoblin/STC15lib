@@ -22,7 +22,7 @@
 #define ISR_SCALER 10
 
 // LED light on duration
-#define DURATION_MS 5000
+#define DURATION_MS 500
 
 // ISR scaler current value
 uint8_t isr_scaler_value = 0;
