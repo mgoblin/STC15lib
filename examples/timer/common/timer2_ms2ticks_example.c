@@ -22,7 +22,7 @@
 #define ISR_SCALER 10
 
 // LED light on duration
-#define DURATION_MS 500
+#define DURATION_MS 5000
 
 // ISR scaler current value
 uint8_t isr_scaler_value = 0;
@@ -68,7 +68,10 @@ void main()
         // If given duration not supported - send error message through UART
         if (ticks == 0)
         {
-            printf_tiny("Duration %u cannot be serviced by timer2\r\n", DURATION_MS);
+            printf_tiny(
+                "Duration %u ms cannot be serviced by timer2\r\n", 
+                DURATION_MS / ISR_SCALER
+            );
         }
     }
 }
