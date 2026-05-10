@@ -3,7 +3,7 @@
 
 /**
  * @file timer_to_ms_common.h
- * @defgroup timer_to_ms Timer Aux common
+ * @defgroup timer_to_ms Timer ticks to ms duration/frequency and vise versa conversions 
  * @details Functions and data structures for converting timer ticks 
  * to frequency and times for timers.
  * 
@@ -76,7 +76,7 @@
 uint16_t timer_ticks_to_ms( uint16_t ticks, timer_clock_divider_t timer_divider, uint8_t frequency_divider_scale);
 
 /**
- * @brief Converts milliseconds to timer ticks (unsafe conversion)
+ * @brief Converts milliseconds to 16-bit timer ticks
  * 
  * @details This function converts a given time duration in milliseconds to the corresponding 
  * 16-bit timer reload/tick count based on the MCU's clock frequency, timer clock divider (T1 or T12), 
@@ -91,8 +91,7 @@ uint16_t timer_ticks_to_ms( uint16_t ticks, timer_clock_divider_t timer_divider,
  *     - MCU_frequency = MAIN_Fosc >> frequency_divider_scale
  *     - timer_clock_divider = 1 for 1T mode, 12 for 12T mode
  * 
- * @warning This function does **not** perform safety checks for overflow beyond `uint16_t` range.
- * If the computed tick count exceeds 65535, it will be clamped to 0. It is the caller's responsibility
+ * @warning If the computed tick count exceeds 65535, it will be clamped to 0. It is the caller's responsibility
  * to ensure that input values result in valid tick counts within the allowable timer range.
  * 
  * @warning Inaccuracies may arise due to integer division truncation, especially at higher 
