@@ -55,15 +55,10 @@
 #define timer_frequency_to_ticks_unsafe(frequency, timer_clock_divider, frequency_divider_scale) (((get_master_clock_frequency() >> 1) / (frequency * timer_clock_divider)) >> frequency_divider_scale)
 
 /**
- * @brief Convert 16-bit timer ticks count to ms
+ * @brief Converts 16-bit timer ticks count to ms
  * 
  * @attention This routine use integer division math and therefore have 
  * a calculation inaccuracy.
- * 
- * @warning This method doesnt analyze corner cases and overflow of results. 
- * Be careful. 
- * For example, in timer 12T mode0 and MCU frequency divider scale equals to 0 
- * correct ticks values is 1000..65535.
  * 
  * @param ticks uint16_t ticks count. Range 7...65535
  * @param timer_divider timer_clock_divider_t 1T or 12T timer clock divider
