@@ -76,16 +76,40 @@
 uint16_t timer_ticks_to_ms( uint16_t ticks, timer_clock_divider_t timer_divider, uint8_t frequency_divider_scale);
 
 /**
- * @brief Convert milliseconds to timer ticks.
- * @details 
+ * @brief Converts milliseconds to timer ticks (unsafe conversion)
  * 
- * This routine doesnt check overflows. Its unsafe.
+ * @details This function converts a given time duration in milliseconds to the corresponding 
+ * 16-bit timer reload/tick count based on the MCU's clock frequency, timer clock divider (T1 or T12), 
+ * and the system frequency divider scale. The calculation assumes:
+ *   - Timer operates in one of the standard modes (e.g., Mode 1 - 16-bit timer).
+ *   - The timer counts up from the initial value to 0xFFFF (65535), so the number of ticks 
+ *     before overflow is (65536 - initial_value).
  * 
- * @param ms uint16_t ms to convert
- * @param divider timer_clock_divider_t timer clock divider 1T or 12T
- * @param frequency_divider_scale uint8_t
+ * The formula used:
+ *   ticks = ms × (MCU_frequency / 1000) / timer_clock_divider
+ *   where:
+ *     - MCU_frequency = MAIN_Fosc >> frequency_divider_scale
+ *     - timer_clock_divider = 1 for 1T mode, 12 for 12T mode
  * 
- * @return uint16_t ticks count for milliseconds
+ * @warning This function does **not** perform safety checks for overflow beyond `uint16_t` range.
+ * If the computed tick count exceeds 65535, it will be clamped to 0. It is the caller's responsibility
+ * to ensure that input values result in valid tick counts within the allowable timer range.
+ * 
+ * @warning Inaccuracies may arise due to integer division truncation, especially at higher 
+ * frequency divider scales or very small millisecond values.
+ * 
+ * @param ms                    uint16_t Time duration in milliseconds [1..~9000 depending on clock]
+ * @param divider               timer_clock_divider_t Clock divider for the timer: T1 (1T mode) or T12 (12T mode)
+ * @param frequency_divider_scale uint8_t System clock divider scale (0..7), used as shift right amount on MAIN_Fosc
+ * 
+ * @return uint16_t             Number of timer ticks corresponding to the input time.
+ *                              Returns 0 if the result overflows uint16_t range.
+ * 
+ * @note Example:
+ *   For MAIN_Fosc = 11059200 Hz, frequency_divider_scale = 0, divider = T12 (12):
+ *     mcu_freq_ms = 11059200 / 1000 = 11059
+ *     timer_freq_ms = 11059 / 12 ≈ 921
+ *     ms = 10 → ticks = 10 * 921 = 9210
  * 
  * @ingroup timer_to_ms
  */
