@@ -127,7 +127,7 @@ do {                                            \
  */
 #define eeprom_read_byte(addr_high, addr_low, value_ptr, error_ptr)     \
 do {                                                                    \
-    if (power_low_voltage_flag_get())                                   \
+    if (get_power_low_voltage_flag())                                   \
     {                                                                   \
         *error_ptr = LOW_VOLTAGE_ERROR;                                 \
         *value_ptr = ERROR_VALUE;                                       \
@@ -188,7 +188,7 @@ do {                                                                    \
  */
 #define eeprom_erase_page(sector_start_addr, error_ptr)         \
 do {                                                            \
-    if (power_low_voltage_flag_get())                           \
+    if (get_power_low_voltage_flag())                           \
     {                                                           \
         *error_ptr = LOW_VOLTAGE_ERROR;                         \
     }                                                           \
@@ -251,7 +251,7 @@ do {                                                            \
  */
 #define eeprom_write_byte(addr_high, addr_low, value, error_ptr)    \
 do {                                                                \
-    if (power_low_voltage_flag_get())                               \
+    if (get_power_low_voltage_flag())                               \
     {                                                               \
         *error_ptr = LOW_VOLTAGE_ERROR;                             \
     }                                                               \

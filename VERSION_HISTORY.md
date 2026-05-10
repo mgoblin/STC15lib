@@ -181,6 +181,7 @@
 * EEPROM write array implemented
 
 0.16.0
+* Unify routines naming
 * Add wakeup timer init routine for intervals in seconds
 * TODO Review watch dog timer routines. Current init with ticks have not intuitively understandable. Move from ticks to ms
 * Rewrite timer ms for ticks calc from macro to function

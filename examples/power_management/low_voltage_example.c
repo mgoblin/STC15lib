@@ -18,8 +18,8 @@ void main(void)
 
     while (1)
     {
-        printf_tiny("Low voltage flag is %x\r\n", power_low_voltage_flag_get());
-        power_low_voltage_flag_clear();
+        printf_tiny("Low voltage flag is %x\r\n", get_power_low_voltage_flag());
+        clear_power_low_voltage_flag();
 
         delay_ms(1000);
 

@@ -25,7 +25,7 @@ uint8_t value = EMPTY_VALUE;
 void main(void)
 {
     uart1_init(9600);
-    power_low_voltage_flag_clear();
+    clear_power_low_voltage_flag();
 
     while (1)
     {

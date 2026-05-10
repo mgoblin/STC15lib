@@ -32,7 +32,7 @@ void main(void)
     // LED on and start writing
     LED = LED_ON;
 
-    power_low_voltage_flag_clear();
+    clear_power_low_voltage_flag();
 
     eeprom_operation_status_t error = CMD_SUCCESS;
     eeprom_write_page(ADDR_H, data, DATA_SIZE, &error);

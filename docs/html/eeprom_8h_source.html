@@ -134,7 +134,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="foldopen" id="foldopen00128" data-start="" data-end="">
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="group__eeprom.html#ga0ba0e98241d4b70f05295f997c7d0344">  128</a></span><span class="preprocessor">#define eeprom_read_byte(addr_high, addr_low, value_ptr, error_ptr)     \</span></div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">do {                                                                    \</span></div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">    if (power_low_voltage_flag_get())                                   \</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">    if (get_power_low_voltage_flag())                                   \</span></div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="preprocessor">    {                                                                   \</span></div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">        *error_ptr = LOW_VOLTAGE_ERROR;                                 \</span></div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">        *value_ptr = ERROR_VALUE;                                       \</span></div>
@@ -174,7 +174,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="foldopen" id="foldopen00189" data-start="" data-end="">
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="group__eeprom.html#gaff91b418fe7e6f7c8c03905d8b82123f">  189</a></span><span class="preprocessor">#define eeprom_erase_page(sector_start_addr, error_ptr)         \</span></div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="preprocessor">do {                                                            \</span></div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="preprocessor">    if (power_low_voltage_flag_get())                           \</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="preprocessor">    if (get_power_low_voltage_flag())                           \</span></div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="preprocessor">    {                                                           \</span></div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="preprocessor">        *error_ptr = LOW_VOLTAGE_ERROR;                         \</span></div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="preprocessor">    }                                                           \</span></div>
@@ -212,7 +212,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="foldopen" id="foldopen00252" data-start="" data-end="">
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno"><a class="line" href="group__eeprom.html#ga8e2e7cf95cd1dccc30ce7fedc7f3c1ab">  252</a></span><span class="preprocessor">#define eeprom_write_byte(addr_high, addr_low, value, error_ptr)    \</span></div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="preprocessor">do {                                                                \</span></div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="preprocessor">    if (power_low_voltage_flag_get())                               \</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="preprocessor">    if (get_power_low_voltage_flag())                               \</span></div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="preprocessor">    {                                                               \</span></div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="preprocessor">        *error_ptr = LOW_VOLTAGE_ERROR;                             \</span></div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="preprocessor">    }                                                               \</span></div>
