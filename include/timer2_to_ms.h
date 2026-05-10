@@ -68,7 +68,6 @@
 /**
  * @brief Convert milliseconds to timer2 ticks.
  * @details 
- * 1 ms = ((get_master_clock_frequency_high_part() + 26) >> get_frequency_divider_scale()) / timer_clock_divider
  * 
  * This routine doesnt check overflows. Its unsafe.
  * 
@@ -79,7 +78,7 @@
  * 
  * @ingroup timer2_to_ms
  */
-#define timer2_ms_to_ticks_usafe(ms) (timer_ms_to_ticks_usafe(ms, get_timer2_clock_divider()))
+#define timer2_ms_to_ticks_usafe(ms) (timer_ms_to_ticks_usafe(ms, get_timer2_clock_divider(), get_frequency_divider_scale()))
 
 ///@}
 
