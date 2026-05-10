@@ -82,7 +82,7 @@
  * 
  * @ingroup timer0_to_ms
  */
-#define timer0_ms_to_ticks_usafe(ms) (timer_ms_to_ticks(ms, get_timer0_clock_divider(), get_frequency_divider_scale()))
+#define timer0_ms_to_ticks(ms) (timer_ms_to_ticks(ms, get_timer0_clock_divider(), get_frequency_divider_scale()))
 
 ///@}
 

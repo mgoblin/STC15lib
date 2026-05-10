@@ -15,7 +15,7 @@ void main()
     timer0_mode0_1T_init();
     timer0_mode0_enable_P35_output();
 
-    uint16_t ticks = timer0_ms_to_ticks_usafe(3);
+    uint16_t ticks = timer0_ms_to_ticks(3);
     timer0_mode0_start(ticks);   
     
     uart1_init(9600);
