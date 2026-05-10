@@ -113,6 +113,6 @@ uint16_t timer_ticks_to_ms( uint16_t ticks, timer_clock_divider_t timer_divider,
  * 
  * @ingroup timer_to_ms
  */
- uint16_t timer_ms_to_ticks_usafe(uint16_t ms, timer_clock_divider_t divider, uint8_t frequency_divider_scale);// (ms * ((get_master_clock_frequency_high_part() + 26) >> get_frequency_divider_scale()) / timer_clock_divider)
+ uint16_t timer_ms_to_ticks(uint16_t ms, timer_clock_divider_t divider, uint8_t frequency_divider_scale);// (ms * ((get_master_clock_frequency_high_part() + 26) >> get_frequency_divider_scale()) / timer_clock_divider)
 
 #endif
