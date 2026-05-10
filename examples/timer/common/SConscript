@@ -19,4 +19,8 @@ env.Default(
         ['timer2_common_example.c', 'uart.c']
     ),
 
+    env.Program(
+        'timer2_ms2ticks_example',
+        ['timer2_ms2ticks_example.c', 'uart.c', 'timer_to_ms_common.c']
+    ),
 )
