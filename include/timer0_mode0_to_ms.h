@@ -22,22 +22,21 @@
 ///@{
 
 /**
- * @brief Convert ticks to timer frequency for timer0 multiplied by 100.
- * @details The output frequency = (SYSclk/timer_clock_divider)/((65536-ticks) * 2).
- * Multiplication by 100 is used for get frequency value without using float numbers.
+ * @brief Converts ticks to timer frequency for timer0 multiplied by 100.
+ * @details The output frequency = (SYSclk/timer_clock_divider)/(1 + ticks).
  * 
  * Call this method after timer0 is initialized and MCU clock frequency divider scale is set.
  * 
- * uint16 ticks used in mode 0, 1, 3.
- * Low byte of ticks is used in mode 2. 
+ * uint16 ticks used in timer mode 0, 1, 3.
+ * For timer mode2 (8 bit autoreladable timer) ticks can be in 0..255 range. 
  * 
  * @param ticks uint16_t timer ticks count to covert
  * 
- * @return uint32_t frequency multiplied by 100 corresponding to ticks count 
+ * @return float timer overflow frequency corresponding to given ticks count 
  * 
  * @ingroup timer0_mode0_to_ms
  */
-#define timer0_mode0_ticks_to_freq100(ticks) (timer_ticks_to_Hz(ticks, get_timer0_clock_divider(), get_frequency_divider_scale()))
+#define timer0_mode0_ticks_to_Hz(ticks) (timer_ticks_to_Hz(ticks, get_timer0_clock_divider(), get_frequency_divider_scale()))
 
 /**
  * @brief Unsafe approximation timer0 frequency corresponding to ticks. 

@@ -24,7 +24,7 @@
  * @param timer_clock_divider uint8_t timer clock divider T12 or T1
  * @param frequency_divider_scale uint8_t mcu frequency divider scale 0..7
  * 
- * @return float frequency corresponding to ticks count 
+ * @return float timer overflow frequency corresponding to given ticks count 
  * 
  * @ingroup timer_to_ms
  */

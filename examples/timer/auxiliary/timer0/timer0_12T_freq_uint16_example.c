@@ -25,7 +25,7 @@ void main()
     timer0_mode0_enable_P35_output();
     timer0_mode0_start(TICKS);
 
-    uint32_t timer_frequency = timer0_mode0_ticks_to_freq100(TICKS);
+    uint32_t timer_frequency = timer0_mode0_ticks_to_Hz(TICKS);
     __ultoa(timer_frequency >> 1, fstr, 10);
 
     while (1) {
