@@ -37,21 +37,18 @@
 #define timer2_mode0_ticks_to_Hz(ticks) (timer_ticks_to_Hz(ticks, get_timer2_clock_divider(), get_frequency_divider_scale()))
 
 /**
- * @brief Unsafe approximation timer2 frequency corresponding to ticks. 
- * @details 
- * ticks = get_master_clock_frequency() / (2 * get_timer2_clock_divider() * frequency))
+ * @brief Converts frequency to ticks for timer2 mode0. 
+ * @details Call this method after timer2 is initialized and MCU clock frequency divider scale is set.
  * 
- * Call this method after timer2 is initialized and MCU clock frequency divider scale is set.
- * 
- * <b>This method doesnt analyze corner cases and overflow of result. Be careful.</b> 
+ * @warning On ticks uint16_t overflow returns 0 
  * 
  * @param frequency uint32_t frequency value in Hz. Should not be 0;
  * 
- * @return uint16_t timer2 ticks corresponding to frequency value
+ * @return uint16_t timer2 ticks corresponding to given frequency value or 0 on result overflow
  * 
  * @ingroup timer2_mode0_to_ms
  */
-#define timer2_mode0_frequency_to_ticks_unsafe(frequency) (timer_frequency_to_ticks(frequency, get_timer2_clock_divider(), get_frequency_divider_scale()))
+#define timer2_mode0_frequency_to_ticks(frequency) (timer_frequency_to_ticks(frequency, get_timer2_clock_divider(), get_frequency_divider_scale()))
 ///@}
 
 /** @name ticks to duration conversions
