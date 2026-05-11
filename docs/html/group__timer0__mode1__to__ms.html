@@ -80,9 +80,9 @@ $(function() {
 <tr class="memitem:ga21d2fc5add2044b18a8cc22082c42a97" id="r_ga21d2fc5add2044b18a8cc22082c42a97"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode1__to__ms.html#ga21d2fc5add2044b18a8cc22082c42a97">timer0_mode1_ticks_to_Hz</a>(ticks)&#160;&#160;&#160;(<a class="el" href="group__timer__to__ms.html#ga653d1846d94b881b590b8ebf24d13067">timer_ticks_to_Hz</a>(ticks, <a class="el" href="group__timer__common.html#gac2f34fcd6ffbec0a91510385d3286f70">get_timer0_clock_divider</a>(), <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td></tr>
 <tr class="memdesc:ga21d2fc5add2044b18a8cc22082c42a97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts ticks to timer overflow frequency for timer0 mode1.  <br /></td></tr>
 <tr class="separator:ga21d2fc5add2044b18a8cc22082c42a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga78e6f1ecb6dc4541354c26b0fdfa5b69" id="r_ga78e6f1ecb6dc4541354c26b0fdfa5b69"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode1__to__ms.html#ga78e6f1ecb6dc4541354c26b0fdfa5b69">timer0_mode1_frequency_to_ticks_unsafe</a>(frequency)&#160;&#160;&#160;(<a class="el" href="group__timer__to__ms.html#ga9b6abea135ead9a5384b56e8da8722a4">timer_frequency_to_ticks</a>(frequency, <a class="el" href="group__timer__common.html#gac2f34fcd6ffbec0a91510385d3286f70">get_timer0_clock_divider</a>(), <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td></tr>
-<tr class="memdesc:ga78e6f1ecb6dc4541354c26b0fdfa5b69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsafe approximation timer0 frequency corresponding to ticks.  <br /></td></tr>
-<tr class="separator:ga78e6f1ecb6dc4541354c26b0fdfa5b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga07230468c60b1c432d10a1aeaf01d4ea" id="r_ga07230468c60b1c432d10a1aeaf01d4ea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode1__to__ms.html#ga07230468c60b1c432d10a1aeaf01d4ea">timer0_mode1_frequency_to_ticks</a>(frequency)&#160;&#160;&#160;(<a class="el" href="group__timer__to__ms.html#ga9b6abea135ead9a5384b56e8da8722a4">timer_frequency_to_ticks</a>(frequency, <a class="el" href="group__timer__common.html#gac2f34fcd6ffbec0a91510385d3286f70">get_timer0_clock_divider</a>(), <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td></tr>
+<tr class="memdesc:ga07230468c60b1c432d10a1aeaf01d4ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts frequency to ticks for timer0 mode1.  <br /></td></tr>
+<tr class="separator:ga07230468c60b1c432d10a1aeaf01d4ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad03059d5317c6b2f14dca3ae479f7248" id="r_gad03059d5317c6b2f14dca3ae479f7248"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode1__to__ms.html#gad03059d5317c6b2f14dca3ae479f7248">timer0_mode1_ticks_to_ms</a>(ticks)&#160;&#160;&#160;(<a class="el" href="group__timer__to__ms.html#ga36010354fc034e749ab5c893bf23490d">timer_16bit_ticks_to_ms</a>(ticks, <a class="el" href="group__timer__common.html#gac2f34fcd6ffbec0a91510385d3286f70">get_timer0_clock_divider</a>(), <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td></tr>
 <tr class="memdesc:gad03059d5317c6b2f14dca3ae479f7248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert ticks count to ms.  <br /></td></tr>
 <tr class="separator:gad03059d5317c6b2f14dca3ae479f7248"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -94,14 +94,14 @@ $(function() {
 <p>Functions and data structures for converting timer ticks to frequency and times for timer0 mode1.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ga78e6f1ecb6dc4541354c26b0fdfa5b69" name="ga78e6f1ecb6dc4541354c26b0fdfa5b69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga78e6f1ecb6dc4541354c26b0fdfa5b69">&#9670;&#160;</a></span>timer0_mode1_frequency_to_ticks_unsafe</h2>
+<a id="ga07230468c60b1c432d10a1aeaf01d4ea" name="ga07230468c60b1c432d10a1aeaf01d4ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga07230468c60b1c432d10a1aeaf01d4ea">&#9670;&#160;</a></span>timer0_mode1_frequency_to_ticks</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define timer0_mode1_frequency_to_ticks_unsafe</td>
+          <td class="memname">#define timer0_mode1_frequency_to_ticks</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">frequency</td><td>)</td>
@@ -110,17 +110,16 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p>Unsafe approximation timer0 frequency corresponding to ticks. </p>
-<p>ticks = <a class="el" href="group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b" title="Get MAIN_Fosc value.">get_master_clock_frequency()</a> / (2 * <a class="el" href="group__timer__common.html#gac2f34fcd6ffbec0a91510385d3286f70" title="Get clock divider for timer0.">get_timer0_clock_divider()</a> * frequency))</p>
+<p>Converts frequency to ticks for timer0 mode1. </p>
 <p>Call this method after timer0 is initialized and MCU clock frequency divider scale is set.</p>
-<p><b>This method doesnt analyze corner cases and overflow of result. Be careful.</b></p>
+<dl class="section warning"><dt>Warning</dt><dd>This method returns 0 on ticks overflow of result. Be careful.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">frequency</td><td>uint32_t frequency value in Hz. Should not be 0;</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>uint16_t timer0 ticks corresponding to frequency value </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>uint16_t timer0 ticks corresponding to frequency value or 0 on uint16_t overflow </dd></dl>
 
 </div>
 </div>
