@@ -29,11 +29,11 @@ void main()
     // Calculate P35 signal frequency * 100 for 0xff ticks count.
     // 0xff is a maximum value for ticks count in timer mode2. 
     // Return value is 90000 -> P35 frequency is 900 Hz. 
-    volatile uint32_t timer_frequency = timer0_mode2_ticks_to_freq100(0x00ff);
+    volatile uint32_t timer_frequency = timer0_mode2_ticks_to_Hz(0x00ff);
 
     timer0_mode2_start(0xff);
 
     while(1) {
-        printf_fast("100* timer frequency is %luHz\r\n", timer_frequency >> 1);
+        printf_fast("Timer frequency is %luHz\r\n", timer_frequency >> 1);
     }
 }
