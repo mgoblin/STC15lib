@@ -181,8 +181,8 @@
 * EEPROM write array implemented
 
 0.16.0
-* Unify routines naming
-* Add wakeup timer init routine for intervals in seconds
+* Routines naming unified
+* Wakeup timer init routine for intervals in seconds implemented
 * Timer ticks to ms calc refactored from macro to function
 * Timer ms to ticks calc refactored from macro to function 
 * Timer ticks to frequency calc refactored from macro to function
