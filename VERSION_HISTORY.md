@@ -183,10 +183,7 @@
 0.16.0
 * Routines naming unified
 * Wakeup timer init routine for intervals in seconds implemented
-* Timer ticks to ms calc refactored from macro to function
-* Timer ms to ticks calc refactored from macro to function 
-* Timer ticks to frequency calc refactored from macro to function
-* TODO Rewrite timer frequency to ticks calc from macro to function
+* Timer convertions between ticks and ms/frequency routines refactored
 * TODO Separate timer_to_ms.h on ticks <-> ms and ticks <-> freq parts
 * TODO Add timerX start on ms/mcs routines
 * TODO Add timerX start on freq routines
