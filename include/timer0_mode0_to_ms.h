@@ -39,17 +39,14 @@
 #define timer0_mode0_ticks_to_Hz(ticks) (timer_ticks_to_Hz(ticks, get_timer0_clock_divider(), get_frequency_divider_scale()))
 
 /**
- * @brief Unsafe approximation timer0 frequency corresponding to ticks. 
- * @details 
- * ticks = get_master_clock_frequency() / (2 * get_timer0_clock_divider() * frequency))
+ * @brief Converts frequency to timer0 mode0 ticks. 
+ * @details Call this method after timer0 is initialized and MCU clock frequency divider scale is set.
  * 
- * Call this method after timer0 is initialized and MCU clock frequency divider scale is set.
- * 
- * <b>This method doesnt analyze corner cases and overflow of result. Be careful.</b> 
+ * @warning On uint16_t overflow this routine returns 0. 
  * 
  * @param frequency uint32_t frequency value in Hz. Should not be 0;
  * 
- * @return uint16_t timer0 ticks corresponding to frequency value
+ * @return uint16_t timer0 ticks corresponding to frequency value or 0 on uint16_t overflow 
  * 
  * @ingroup timer0_mode0_to_ms
  */
