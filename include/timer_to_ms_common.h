@@ -35,7 +35,7 @@ float timer_ticks_to_Hz(uint16_t ticks, timer_clock_divider_t timer_clock_divide
  * @details Frequency to ticks is a reverse operation of ticks to frequency, 
  * 
  * Not all frequency ranges can be correctly coverted to ticks. 
- * If ticks count for frequency is greater than UINT16_MAX returns 0.
+ * If ticks count for frequency is greater than UINT16_MAX then return 0.
  *   
  * @param frequency uint32_t frequency
  * @param timer_clock_divider timer_clock_divider_t enum T12 or T1 timer clock divider
