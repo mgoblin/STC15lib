@@ -27,7 +27,7 @@ void main()
     timer2_mode0_12T_init();
     timer2_mode0_enable_P30_output();
     
-    volatile uint32_t timer_frequency = timer2_mode0_ticks_to_freq100(TICKS);
+    volatile uint32_t timer_frequency = timer2_mode0_ticks_to_Hz(TICKS);
 
     // timer2_mode0_start(TICKS);
     // while (1){}
@@ -40,6 +40,6 @@ void main()
         delay_ms(200);
         // For TICKS = 0xffff and mcu clock divider 128 print 10 / 100 Hz
         // For TICKS = 0x0000 and mcu clock divider 128 print 720000 / 100 Hz 
-        printf_tiny("Frequency: %s / 100 Hz\r\n", fstr);
+        printf_tiny("Frequency: %s Hz\r\n", fstr);
     }
 }
