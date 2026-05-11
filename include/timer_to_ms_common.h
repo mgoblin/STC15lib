@@ -31,27 +31,21 @@
 float timer_ticks_to_Hz(uint16_t ticks, timer_clock_divider_t timer_clock_divider, uint16_t frequency_divider_scale);
 
 /**
- * @brief Convert timer frequency to ticks (unsafe operation)
+ * @brief Converts given timer overflow frequency to ticks.
  * @details Frequency to ticks is a reverse operation of ticks to frequency, 
  * 
- * Not all frequency ranges can be correctly coverted to ticks. This method doesnt carefully 
- * analyze frequency to ticks covertion correctness.
- * 
- * For 1T mode and frequency divider scale 0 minimal frequency is near 100Hz 
- * (11059200 / 2 / 100) = 55296 ticks and maximum frequency is near 5MHz 1.1 ticks
- * 
- * For 12T mode and frequency divider scale 0 minimal frequency is near 8Hz 
- * (11059200 / 2 / 12 / 8) = 57600 ticks and maximum frequency is near 400kHz
+ * Not all frequency ranges can be correctly coverted to ticks. 
+ * If ticks count for frequency is greater than UINT16_MAX returns 0.
  *   
  * @param frequency uint32_t frequency
- * @param timer_clock_divider uint8_t or timer_clock_divider_t enum T12 or T1 timer clock divider
+ * @param timer_clock_divider timer_clock_divider_t enum T12 or T1 timer clock divider
  * @param frequency_divider_scale uint8_t mcu clock frequency diviver scale in range of [0..7]
  * 
- * @return uint16_t ticks count for input parameters 
+ * @return uint16_t ticks count for input parameters or 0 on uint16_t overflow
  * 
  * @ingroup timer_to_ms
  */
-#define timer_frequency_to_ticks_unsafe(frequency, timer_clock_divider, frequency_divider_scale) (((get_master_clock_frequency() >> 1) / (frequency * timer_clock_divider)) >> frequency_divider_scale)
+uint16_t timer_frequency_to_ticks(uint32_t frequency, timer_clock_divider_t timer_clock_divider, uint8_t frequency_divider_scale);
 
 /**
  * @brief Converts 16-bit mode timer ticks count to ms

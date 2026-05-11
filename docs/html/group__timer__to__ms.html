@@ -70,23 +70,19 @@ $(function() {
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Timer ticks to duration/frequency and vise versa conversions</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:ga36e1de1ec7beecd79fbc758e75f35a65" id="r_ga36e1de1ec7beecd79fbc758e75f35a65"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#ga36e1de1ec7beecd79fbc758e75f35a65">timer_frequency_to_ticks_unsafe</a>(frequency,  timer_clock_divider,  frequency_divider_scale)&#160;&#160;&#160;(((<a class="el" href="group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b">get_master_clock_frequency</a>() &gt;&gt; 1) / (frequency * timer_clock_divider)) &gt;&gt; frequency_divider_scale)</td></tr>
-<tr class="memdesc:ga36e1de1ec7beecd79fbc758e75f35a65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert timer frequency to ticks (unsafe operation)  <br /></td></tr>
-<tr class="separator:ga36e1de1ec7beecd79fbc758e75f35a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga653d1846d94b881b590b8ebf24d13067" id="r_ga653d1846d94b881b590b8ebf24d13067"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#ga653d1846d94b881b590b8ebf24d13067">timer_ticks_to_Hz</a> (uint16_t ticks, <a class="el" href="group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a> timer_clock_divider, uint16_t frequency_divider_scale)</td></tr>
 <tr class="memdesc:ga653d1846d94b881b590b8ebf24d13067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts ticks to timer frequency.  <br /></td></tr>
 <tr class="separator:ga653d1846d94b881b590b8ebf24d13067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9b6abea135ead9a5384b56e8da8722a4" id="r_ga9b6abea135ead9a5384b56e8da8722a4"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#ga9b6abea135ead9a5384b56e8da8722a4">timer_frequency_to_ticks</a> (uint32_t frequency, <a class="el" href="group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a> timer_clock_divider, uint8_t frequency_divider_scale)</td></tr>
+<tr class="memdesc:ga9b6abea135ead9a5384b56e8da8722a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts given timer overflow frequency to ticks.  <br /></td></tr>
+<tr class="separator:ga9b6abea135ead9a5384b56e8da8722a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga36010354fc034e749ab5c893bf23490d" id="r_ga36010354fc034e749ab5c893bf23490d"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#ga36010354fc034e749ab5c893bf23490d">timer_16bit_ticks_to_ms</a> (uint16_t ticks, <a class="el" href="group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a> timer_divider, uint8_t frequency_divider_scale)</td></tr>
 <tr class="memdesc:ga36010354fc034e749ab5c893bf23490d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts 16-bit mode timer ticks count to ms.  <br /></td></tr>
 <tr class="separator:ga36010354fc034e749ab5c893bf23490d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -100,56 +96,6 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions and data structures for converting timer ticks to frequency and times for timers.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ga36e1de1ec7beecd79fbc758e75f35a65" name="ga36e1de1ec7beecd79fbc758e75f35a65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga36e1de1ec7beecd79fbc758e75f35a65">&#9670;&#160;</a></span>timer_frequency_to_ticks_unsafe</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define timer_frequency_to_ticks_unsafe</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">frequency, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">timer_clock_divider, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">frequency_divider_scale&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;(((<a class="el" href="group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b">get_master_clock_frequency</a>() &gt;&gt; 1) / (frequency * timer_clock_divider)) &gt;&gt; frequency_divider_scale)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Convert timer frequency to ticks (unsafe operation) </p>
-<p>Frequency to ticks is a reverse operation of ticks to frequency,</p>
-<p>Not all frequency ranges can be correctly coverted to ticks. This method doesnt carefully analyze frequency to ticks covertion correctness.</p>
-<p>For 1T mode and frequency divider scale 0 minimal frequency is near 100Hz (11059200 / 2 / 100) = 55296 ticks and maximum frequency is near 5MHz 1.1 ticks</p>
-<p>For 12T mode and frequency divider scale 0 minimal frequency is near 8Hz (11059200 / 2 / 12 / 8) = 57600 ticks and maximum frequency is near 400kHz</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">frequency</td><td>uint32_t frequency </td></tr>
-    <tr><td class="paramname">timer_clock_divider</td><td>uint8_t or timer_clock_divider_t enum T12 or T1 timer clock divider </td></tr>
-    <tr><td class="paramname">frequency_divider_scale</td><td>uint8_t mcu clock frequency diviver scale in range of [0..7]</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>uint16_t ticks count for input parameters </dd></dl>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga36010354fc034e749ab5c893bf23490d" name="ga36010354fc034e749ab5c893bf23490d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga36010354fc034e749ab5c893bf23490d">&#9670;&#160;</a></span>timer_16bit_ticks_to_ms()</h2>
@@ -240,6 +186,53 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>uint16_t microseconds time corresponing to timer ticks. Up to 35328. </dd></dl>
+
+</div>
+</div>
+<a id="ga9b6abea135ead9a5384b56e8da8722a4" name="ga9b6abea135ead9a5384b56e8da8722a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9b6abea135ead9a5384b56e8da8722a4">&#9670;&#160;</a></span>timer_frequency_to_ticks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t timer_frequency_to_ticks </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>frequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a>&#160;</td>
+          <td class="paramname"><em>timer_clock_divider</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>frequency_divider_scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts given timer overflow frequency to ticks. </p>
+<p>Frequency to ticks is a reverse operation of ticks to frequency,</p>
+<p>Not all frequency ranges can be correctly coverted to ticks. If ticks count for frequency is greater than UINT16_MAX returns 0.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frequency</td><td>uint32_t frequency </td></tr>
+    <tr><td class="paramname">timer_clock_divider</td><td>timer_clock_divider_t enum T12 or T1 timer clock divider </td></tr>
+    <tr><td class="paramname">frequency_divider_scale</td><td>uint8_t mcu clock frequency diviver scale in range of [0..7]</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>uint16_t ticks count for input parameters or 0 on uint16_t overflow </dd></dl>
 
 </div>
 </div>
