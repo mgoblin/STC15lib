@@ -14,22 +14,21 @@
 #include <frequency.h>
 #include <timer_structs.h>
 /**
- * @brief Convert ticks to timer frequency multiplied by 100.
- * @details The output frequency = (SYSclk/timer_clock_divider)/((65536-ticks) * 2).
- * Multiplication by 100 is used for get frequency value without using float numbers.
+ * @brief Converts ticks to timer frequency.
+ * @details The output frequency = (SYSclk/timer_clock_divider)/(1 + ticks).
  * 
- * uint16 ticks used in mode 0, 1, 3.
- * Low byte of ticks is used in mode 2. 
+ * uint16 ticks used in timer mode 0, 1, 3.
+ * For timer mode2 (8 bit autoreladable timer) ticks can be in 0..255 range. 
  * 
  * @param ticks uint16_t timer ticks count to covert
  * @param timer_clock_divider uint8_t timer clock divider T12 or T1
  * @param frequency_divider_scale uint8_t mcu frequency divider scale 0..7
  * 
- * @return uint32_t frequency multiplied by 100 corresponding to ticks count 
+ * @return float frequency corresponding to ticks count 
  * 
  * @ingroup timer_to_ms
  */
-#define timer_uint16_ticks_to_freq100(ticks, timer_clock_divider, frequency_divider_scale) ((100 * get_master_clock_frequency() / (timer_clock_divider * (1 + (uint32_t)ticks))) >> frequency_divider_scale)
+float timer_ticks_to_Hz(uint16_t ticks, timer_clock_divider_t timer_clock_divider, uint16_t frequency_divider_scale);
 
 /**
  * @brief Convert timer frequency to ticks (unsafe operation)

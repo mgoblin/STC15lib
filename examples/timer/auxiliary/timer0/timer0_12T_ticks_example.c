@@ -34,7 +34,7 @@ void main()
     // Store MCU clock divider to print it in while cycle
     uint8_t freq_divider = get_frequency_divider();
     // Calculate P35 meander frequency and its value is 2477.41, not 2500
-    uint32_t freq = timer0_mode0_ticks_to_freq100(ticks) >> 1;
+    uint32_t freq = ((uint32_t)timer0_mode0_ticks_to_freq100(ticks)) >> 1;
     
     // Start timer
     timer0_mode0_start(ticks);

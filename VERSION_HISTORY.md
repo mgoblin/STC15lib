@@ -186,6 +186,7 @@
 * Rewrite timer ticks for ms calc from macro to function
 * Rewrite timer ms for ticks calc from macro to function
 * TODO Rewrite timer frequency calc from macro to function
+* TODO Separate timer_to_ms.h on ticks <-> ms and ticks <-> freq parts
 * TODO Add timerX start on ms/mcs routines
 * TODO Add timerX start on freq routines
 * TODO Restructure and add timerX_modeX freq, duration and ticks examples

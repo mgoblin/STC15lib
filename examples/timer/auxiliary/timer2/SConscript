@@ -6,7 +6,7 @@ env.Command('timer_to_ms_common.c', '#src/timer_to_ms_common.c', Copy('$TARGET',
 env.Default (
     env.Program(
         'timer2_12T_freq_uint16_example', 
-        ['timer2_12T_freq_uint16_example.c', 'uart.c']
+        ['timer2_12T_freq_uint16_example.c', 'uart.c', 'timer_to_ms_common.c']
     ),
 
     env.Program(

@@ -23,3 +23,8 @@ uint16_t timer_ms_to_ticks(uint16_t ms, timer_clock_divider_t divider, uint8_t f
 
   return (ticks_count >= UINT16_MAX) ? 0 : (uint16_t) ticks_count;
 }
+
+float timer_ticks_to_Hz(uint16_t ticks, timer_clock_divider_t timer_clock_divider, uint16_t frequency_divider_scale) 
+{ 
+  return (MAIN_Fosc >> frequency_divider_scale) / (float)(timer_clock_divider * (1 + ticks));
+}

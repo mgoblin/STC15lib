@@ -130,15 +130,15 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga05eec17c45e48cc9ceb0c238cfbe5505" id="r_ga05eec17c45e48cc9ceb0c238cfbe5505"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#ga05eec17c45e48cc9ceb0c238cfbe5505">timer_uint16_ticks_to_freq100</a>(ticks,  timer_clock_divider,  frequency_divider_scale)&#160;&#160;&#160;((100 * <a class="el" href="group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b">get_master_clock_frequency</a>() / (timer_clock_divider * (1 + (uint32_t)ticks))) &gt;&gt; frequency_divider_scale)</td></tr>
-<tr class="memdesc:ga05eec17c45e48cc9ceb0c238cfbe5505"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert ticks to timer frequency multiplied by 100.  <br /></td></tr>
-<tr class="separator:ga05eec17c45e48cc9ceb0c238cfbe5505"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga36e1de1ec7beecd79fbc758e75f35a65" id="r_ga36e1de1ec7beecd79fbc758e75f35a65"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#ga36e1de1ec7beecd79fbc758e75f35a65">timer_frequency_to_ticks_unsafe</a>(frequency,  timer_clock_divider,  frequency_divider_scale)&#160;&#160;&#160;(((<a class="el" href="group__freq.html#ga4b6a94e4ee8538e604d14f2a2b759d7b">get_master_clock_frequency</a>() &gt;&gt; 1) / (frequency * timer_clock_divider)) &gt;&gt; frequency_divider_scale)</td></tr>
 <tr class="memdesc:ga36e1de1ec7beecd79fbc758e75f35a65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert timer frequency to ticks (unsafe operation)  <br /></td></tr>
 <tr class="separator:ga36e1de1ec7beecd79fbc758e75f35a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga653d1846d94b881b590b8ebf24d13067" id="r_ga653d1846d94b881b590b8ebf24d13067"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#ga653d1846d94b881b590b8ebf24d13067">timer_ticks_to_Hz</a> (uint16_t ticks, <a class="el" href="group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a> timer_clock_divider, uint16_t frequency_divider_scale)</td></tr>
+<tr class="memdesc:ga653d1846d94b881b590b8ebf24d13067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts ticks to timer frequency.  <br /></td></tr>
+<tr class="separator:ga653d1846d94b881b590b8ebf24d13067"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga36010354fc034e749ab5c893bf23490d" id="r_ga36010354fc034e749ab5c893bf23490d"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#ga36010354fc034e749ab5c893bf23490d">timer_16bit_ticks_to_ms</a> (uint16_t ticks, <a class="el" href="group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a> timer_divider, uint8_t frequency_divider_scale)</td></tr>
 <tr class="memdesc:ga36010354fc034e749ab5c893bf23490d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts 16-bit mode timer ticks count to ms.  <br /></td></tr>
 <tr class="separator:ga36010354fc034e749ab5c893bf23490d"><td class="memSeparator" colspan="2">&#160;</td></tr>

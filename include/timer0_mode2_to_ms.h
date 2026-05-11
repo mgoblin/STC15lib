@@ -37,7 +37,7 @@
  * 
  * @ingroup timer0_mode2_to_ms
  */
-#define timer0_mode2_ticks_to_freq100(ticks) (timer_uint16_ticks_to_freq100(ticks, get_timer0_clock_divider(), get_frequency_divider_scale()))
+#define timer0_mode2_ticks_to_freq100(ticks) (timer_ticks_to_Hz(ticks, get_timer0_clock_divider(), get_frequency_divider_scale()))
 
 /**
  * @brief Unsafe approximation timer0 frequency corresponding to ticks. 

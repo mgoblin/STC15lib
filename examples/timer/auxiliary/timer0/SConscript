@@ -6,22 +6,22 @@ env.Command('timer_to_ms_common.c', '#src/timer_to_ms_common.c', Copy('$TARGET',
 env.Default(
     env.Program(
         'timer0_1T_freq_uint16_example',
-        ['timer0_1T_freq_uint16_example.c', 'uart.c']
+        ['timer0_1T_freq_uint16_example.c', 'uart.c', 'timer_to_ms_common.c']
     ),
     
     env.Program(
         'timer0_12T_freq_uint8_example',
-        ['timer0_12T_freq_uint8_example.c', 'uart.c']
+        ['timer0_12T_freq_uint8_example.c', 'uart.c', 'timer_to_ms_common.c']
     ),    
 
     env.Program(
         'timer0_12T_freq_uint16_example',
-        ['timer0_12T_freq_uint16_example.c', 'uart.c']
+        ['timer0_12T_freq_uint16_example.c', 'uart.c', 'timer_to_ms_common.c']
     ),  
 
     env.Program(
         'timer0_12T_ticks_example',
-        ['timer0_12T_ticks_example.c', 'uart.c']
+        ['timer0_12T_ticks_example.c', 'uart.c', 'timer_to_ms_common.c']
     ),    
 
     env.Program(

@@ -77,7 +77,7 @@ $(function() {
 <tr><td class="ititle" colspan="2"><p>Timer ticks to frequency and vice versa convertions <br  />
  </p>
 </td></tr>
-<tr class="memitem:ga8189bdbd979e3873dfe5c627231235d4" id="r_ga8189bdbd979e3873dfe5c627231235d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2__to__ms.html#ga8189bdbd979e3873dfe5c627231235d4">timer0_mode2_ticks_to_freq100</a>(ticks)&#160;&#160;&#160;(<a class="el" href="group__timer__to__ms.html#ga05eec17c45e48cc9ceb0c238cfbe5505">timer_uint16_ticks_to_freq100</a>(ticks, <a class="el" href="group__timer__common.html#gac2f34fcd6ffbec0a91510385d3286f70">get_timer0_clock_divider</a>(), <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td></tr>
+<tr class="memitem:ga8189bdbd979e3873dfe5c627231235d4" id="r_ga8189bdbd979e3873dfe5c627231235d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2__to__ms.html#ga8189bdbd979e3873dfe5c627231235d4">timer0_mode2_ticks_to_freq100</a>(ticks)&#160;&#160;&#160;(<a class="el" href="group__timer__to__ms.html#ga653d1846d94b881b590b8ebf24d13067">timer_ticks_to_Hz</a>(ticks, <a class="el" href="group__timer__common.html#gac2f34fcd6ffbec0a91510385d3286f70">get_timer0_clock_divider</a>(), <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td></tr>
 <tr class="memdesc:ga8189bdbd979e3873dfe5c627231235d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert ticks to timer frequency for timer0 multiplied by 100.  <br /></td></tr>
 <tr class="separator:ga8189bdbd979e3873dfe5c627231235d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac9e4f3ca4dd91ff88ab6180289504fa2" id="r_gac9e4f3ca4dd91ff88ab6180289504fa2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2__to__ms.html#gac9e4f3ca4dd91ff88ab6180289504fa2">timer0_mode2_frequency_to_ticks_unsafe</a>(frequency)&#160;&#160;&#160;(<a class="el" href="group__timer__to__ms.html#ga36e1de1ec7beecd79fbc758e75f35a65">timer_frequency_to_ticks_unsafe</a>(frequency, <a class="el" href="group__timer__common.html#gac2f34fcd6ffbec0a91510385d3286f70">get_timer0_clock_divider</a>(), <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td></tr>
@@ -162,7 +162,7 @@ $(function() {
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">ticks</td><td>)</td>
-          <td>&#160;&#160;&#160;(<a class="el" href="group__timer__to__ms.html#ga05eec17c45e48cc9ceb0c238cfbe5505">timer_uint16_ticks_to_freq100</a>(ticks, <a class="el" href="group__timer__common.html#gac2f34fcd6ffbec0a91510385d3286f70">get_timer0_clock_divider</a>(), <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="group__timer__to__ms.html#ga653d1846d94b881b590b8ebf24d13067">timer_ticks_to_Hz</a>(ticks, <a class="el" href="group__timer__common.html#gac2f34fcd6ffbec0a91510385d3286f70">get_timer0_clock_divider</a>(), <a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae">get_frequency_divider_scale</a>()))</td>
         </tr>
       </table>
 </div><div class="memdoc">
