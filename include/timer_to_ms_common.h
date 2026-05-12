@@ -61,7 +61,7 @@ uint16_t timer_Hz_to_ticks(uint32_t frequency, timer_clock_divider_t timer_clock
  * 
  * @ingroup timer_to_ms
  */
-uint8_t timer_frequency_to_ticks_8bit(uint32_t frequency, timer_clock_divider_t timer_clock_divider, uint8_t frequency_divider_scale);
+uint8_t timer_Hz_to_ticks_8bit(uint32_t frequency, timer_clock_divider_t timer_clock_divider, uint8_t frequency_divider_scale);
 
 /**
  * @brief Converts 16-bit mode timer ticks count to ms
