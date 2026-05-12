@@ -12,10 +12,10 @@ add_executable(wakeup_seconds_example
     wakeup_seconds_example.c
 )
 
-target_link_libraries(idle_example PRIVATE stc15lib)
-target_link_libraries(low_voltage_example PRIVATE stc15lib)
-target_link_libraries(powerdown_example PRIVATE stc15lib)
-target_link_libraries(wakeup_seconds_example PRIVATE stc15lib)
+target_link_libraries(idle_example PRIVATE stc15hal)
+target_link_libraries(low_voltage_example PRIVATE stc15hal)
+target_link_libraries(powerdown_example PRIVATE stc15hal)
+target_link_libraries(wakeup_seconds_example PRIVATE stc15hal)
 
 # Transform firmware ihx to hex
 ihx_to_hex(idle_example)

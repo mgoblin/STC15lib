@@ -2,7 +2,7 @@ add_executable(delay_example
     delay_example.c
 )
 
-target_link_libraries(delay_example PRIVATE stc15lib) 
+target_link_libraries(delay_example PRIVATE stc15hal) 
 
 # Transform firmware ihx to hex
 ihx_to_hex(delay_example)

@@ -8,9 +8,9 @@ add_executable(wdt_start_example
     wdt_start_example.c
 )
 
-target_link_libraries(wdt_clear_example PRIVATE stc15lib)
-target_link_libraries(wdt_flag_example PRIVATE stc15lib)
-target_link_libraries(wdt_start_example PRIVATE stc15lib)
+target_link_libraries(wdt_clear_example PRIVATE stc15hal)
+target_link_libraries(wdt_flag_example PRIVATE stc15hal)
+target_link_libraries(wdt_start_example PRIVATE stc15hal)
 
 # Transform firmware ihx to hex
 ihx_to_hex(wdt_clear_example)

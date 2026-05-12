@@ -1,4 +1,4 @@
-add_library(stc15lib STATIC 
+add_library(stc15hal STATIC 
   uart.c
   ticks_to_ms_common.c
   ms_to_ticks_common.c

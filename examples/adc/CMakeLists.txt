@@ -6,8 +6,8 @@ add_executable(adc_read_example
     adc_read_example.c
 )
 
-target_link_libraries(adc_read_example PRIVATE stc15lib) 
-target_link_libraries(adc_async_example PRIVATE stc15lib) 
+target_link_libraries(adc_read_example PRIVATE stc15hal) 
+target_link_libraries(adc_async_example PRIVATE stc15hal) 
 
 # Transform firmware ihx to hex
 ihx_to_hex(adc_async_example)

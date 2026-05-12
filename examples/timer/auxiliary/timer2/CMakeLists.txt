@@ -5,8 +5,8 @@ add_executable(timer2_ticks_to_ms_example
     timer2_ticks_to_ms_example.c
 )
 
-target_link_libraries(timer2_12T_freq_uint16_example PRIVATE stc15lib)
-target_link_libraries(timer2_ticks_to_ms_example PRIVATE stc15lib)
+target_link_libraries(timer2_12T_freq_uint16_example PRIVATE stc15hal)
+target_link_libraries(timer2_ticks_to_ms_example PRIVATE stc15hal)
 
 # Transform firmware ihx to hex
 ihx_to_hex(timer2_12T_freq_uint16_example)

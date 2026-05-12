@@ -2,7 +2,7 @@ add_executable(counter2_mode0_example
     counter2_mode0_example.c
 )
 
-target_link_libraries(counter2_mode0_example PRIVATE stc15lib) 
+target_link_libraries(counter2_mode0_example PRIVATE stc15hal) 
 
 # Transform firmware ihx to hex
 ihx_to_hex(counter2_mode0_example)

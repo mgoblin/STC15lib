@@ -8,9 +8,9 @@ add_executable(uart1_mode2_send_odd_parity_example
     uart1_mode2_send_odd_parity_example.c
 )
 
-target_link_libraries(uart1_mode2_receive_even_parity_example PRIVATE stc15lib)
-target_link_libraries(uart1_mode2_send_9bit_example PRIVATE stc15lib)
-target_link_libraries(uart1_mode2_send_odd_parity_example PRIVATE stc15lib)
+target_link_libraries(uart1_mode2_receive_even_parity_example PRIVATE stc15hal)
+target_link_libraries(uart1_mode2_send_9bit_example PRIVATE stc15hal)
+target_link_libraries(uart1_mode2_send_odd_parity_example PRIVATE stc15hal)
 
 # Transform firmware ihx to hex
 ihx_to_hex(uart1_mode2_receive_even_parity_example)

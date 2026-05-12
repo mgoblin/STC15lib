@@ -2,7 +2,7 @@ add_executable(reset_example
     reset_example.c
 )
 
-target_link_libraries(reset_example PRIVATE stc15lib) 
+target_link_libraries(reset_example PRIVATE stc15hal) 
 
 # Transform firmware ihx to hex
 ihx_to_hex(reset_example)

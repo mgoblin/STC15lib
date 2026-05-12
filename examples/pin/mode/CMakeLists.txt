@@ -14,11 +14,11 @@ add_executable(pin_quasi_bidiretional_init_example
     pin_quasi_bidiretional_init_example.c
 )
 
-target_link_libraries(pin_input_only_init_example PRIVATE stc15lib)
-target_link_libraries(pin_mode_example PRIVATE stc15lib)
-target_link_libraries(pin_open_drain_init_example PRIVATE stc15lib)
-target_link_libraries(pin_push_pull_init_example PRIVATE stc15lib)
-target_link_libraries(pin_quasi_bidiretional_init_example PRIVATE stc15lib)
+target_link_libraries(pin_input_only_init_example PRIVATE stc15hal)
+target_link_libraries(pin_mode_example PRIVATE stc15hal)
+target_link_libraries(pin_open_drain_init_example PRIVATE stc15hal)
+target_link_libraries(pin_push_pull_init_example PRIVATE stc15hal)
+target_link_libraries(pin_quasi_bidiretional_init_example PRIVATE stc15hal)
 
 # Transform firmware ihx to hex
 ihx_to_hex(pin_input_only_init_example)

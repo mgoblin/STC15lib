@@ -5,8 +5,8 @@ add_executable(interrupt_int1_example
     interrupt_int1_example.c
 )
 
-target_link_libraries(interrupt_int0_example PRIVATE stc15lib) 
-target_link_libraries(interrupt_int1_example PRIVATE stc15lib)
+target_link_libraries(interrupt_int0_example PRIVATE stc15hal) 
+target_link_libraries(interrupt_int1_example PRIVATE stc15hal)
 
 # Transform firmware ihx to hex
 ihx_to_hex(interrupt_int0_example)

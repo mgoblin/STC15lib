@@ -3,7 +3,7 @@ add_executable(uart1_mode3_timer2_1T_2stop_bits_example
     uart1_mode3_timer2_1T_2stop_bits_example.c
 )
 
-target_link_libraries(uart1_mode3_timer2_1T_2stop_bits_example PRIVATE stc15lib)
+target_link_libraries(uart1_mode3_timer2_1T_2stop_bits_example PRIVATE stc15hal)
 
 # Transform firmware ihx to hex
 ihx_to_hex(uart1_mode3_timer2_1T_2stop_bits_example)
@@ -20,7 +20,7 @@ add_executable(uart1_mode3_timer2_1T_example
     uart1_mode3_timer2_1T_example.c
 )
 
-target_link_libraries(uart1_mode3_timer2_1T_example PRIVATE stc15lib)
+target_link_libraries(uart1_mode3_timer2_1T_example PRIVATE stc15hal)
 
 # Transform firmware ihx to hex
 ihx_to_hex(uart1_mode3_timer2_1T_example)
@@ -37,7 +37,7 @@ add_executable(uart1_mode3_timer2_1T_freq_bias_example
     uart1_mode3_timer2_1T_freq_bias_example.c
 )
 
-target_link_libraries(uart1_mode3_timer2_1T_freq_bias_example PRIVATE stc15lib)
+target_link_libraries(uart1_mode3_timer2_1T_freq_bias_example PRIVATE stc15hal)
 
 # Transform firmware ihx to hex
 ihx_to_hex(uart1_mode3_timer2_1T_freq_bias_example)
@@ -54,7 +54,7 @@ add_executable(uart1_mode3_timer2_1T_odd_parity_example
     uart1_mode3_timer2_1T_odd_parity_example.c
 )
 
-target_link_libraries(uart1_mode3_timer2_1T_odd_parity_example PRIVATE stc15lib)
+target_link_libraries(uart1_mode3_timer2_1T_odd_parity_example PRIVATE stc15hal)
 
 # Transform firmware ihx to hex
 ihx_to_hex(uart1_mode3_timer2_1T_odd_parity_example)
@@ -71,7 +71,7 @@ add_executable(uart1_mode3_timer2_12T_even_parity_example
     uart1_mode3_timer2_12T_even_parity_example.c
 )
 
-target_link_libraries(uart1_mode3_timer2_12T_even_parity_example PRIVATE stc15lib)
+target_link_libraries(uart1_mode3_timer2_12T_even_parity_example PRIVATE stc15hal)
 
 # Transform firmware ihx to hex
 ihx_to_hex(uart1_mode3_timer2_12T_even_parity_example)
@@ -88,7 +88,7 @@ add_executable(uart1_mode3_timer2_12T_example
     uart1_mode3_timer2_12T_example.c
 )
 
-target_link_libraries(uart1_mode3_timer2_12T_example PRIVATE stc15lib)
+target_link_libraries(uart1_mode3_timer2_12T_example PRIVATE stc15hal)
 
 # Transform firmware ihx to hex
 ihx_to_hex(uart1_mode3_timer2_12T_example)
@@ -105,7 +105,7 @@ add_executable(uart1_mode3_timer2_12T_freq_bias_example
     uart1_mode3_timer2_12T_freq_bias_example.c
 )
 
-target_link_libraries(uart1_mode3_timer2_12T_freq_bias_example PRIVATE stc15lib)
+target_link_libraries(uart1_mode3_timer2_12T_freq_bias_example PRIVATE stc15hal)
 
 # Transform firmware ihx to hex
 ihx_to_hex(uart1_mode3_timer2_12T_freq_bias_example)
@@ -122,7 +122,7 @@ add_executable(uart1_mode3_timer2_12T_interrupt_example
     uart1_mode3_timer2_12T_interrupt_example.c
 )
 
-target_link_libraries(uart1_mode3_timer2_12T_interrupt_example PRIVATE stc15lib)
+target_link_libraries(uart1_mode3_timer2_12T_interrupt_example PRIVATE stc15hal)
 
 # Transform firmware ihx to hex
 ihx_to_hex(uart1_mode3_timer2_12T_interrupt_example)
@@ -139,7 +139,7 @@ add_executable(uart1_mode3_timer2_12T_receive_even_parity_example
     uart1_mode3_timer2_12T_receive_even_parity_example.c
 )
 
-target_link_libraries(uart1_mode3_timer2_12T_receive_even_parity_example PRIVATE stc15lib)
+target_link_libraries(uart1_mode3_timer2_12T_receive_even_parity_example PRIVATE stc15hal)
 
 # Transform firmware ihx to hex
 ihx_to_hex(uart1_mode3_timer2_12T_receive_even_parity_example)
@@ -156,7 +156,7 @@ add_executable(uart1_mode3_timer2_12T_receive_odd_parity_example
     uart1_mode3_timer2_12T_receive_odd_parity_example.c
 )
 
-target_link_libraries(uart1_mode3_timer2_12T_receive_odd_parity_example PRIVATE stc15lib)
+target_link_libraries(uart1_mode3_timer2_12T_receive_odd_parity_example PRIVATE stc15hal)
 
 # Transform firmware ihx to hex
 ihx_to_hex(uart1_mode3_timer2_12T_receive_odd_parity_example)

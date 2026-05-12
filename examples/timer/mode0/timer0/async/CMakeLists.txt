@@ -17,12 +17,12 @@ add_executable(timer0_mode0_reload_example
     timer0_mode0_reload_example.c
 )
 
-target_link_libraries(timer0_mode0_1T_interrupt_example PRIVATE stc15lib)
-target_link_libraries(timer0_mode0_12T_interrupt_example PRIVATE stc15lib)
-target_link_libraries(timer0_mode0_direct_reload_example PRIVATE stc15lib)
-target_link_libraries(timer0_mode0_direct_start_example PRIVATE stc15lib)
-target_link_libraries(timer0_mode0_pause_by_gate_example PRIVATE stc15lib)
-target_link_libraries(timer0_mode0_reload_example PRIVATE stc15lib) 
+target_link_libraries(timer0_mode0_1T_interrupt_example PRIVATE stc15hal)
+target_link_libraries(timer0_mode0_12T_interrupt_example PRIVATE stc15hal)
+target_link_libraries(timer0_mode0_direct_reload_example PRIVATE stc15hal)
+target_link_libraries(timer0_mode0_direct_start_example PRIVATE stc15hal)
+target_link_libraries(timer0_mode0_pause_by_gate_example PRIVATE stc15hal)
+target_link_libraries(timer0_mode0_reload_example PRIVATE stc15hal) 
 
 # Transform firmware ihx to hex
 ihx_to_hex(timer0_mode0_1T_interrupt_example)

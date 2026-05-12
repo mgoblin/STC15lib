@@ -2,7 +2,7 @@ add_executable(mem_dump
     mem_dump.c
 )
 
-target_link_libraries(mem_dump PRIVATE stc15lib) 
+target_link_libraries(mem_dump PRIVATE stc15hal) 
 
 # Transform firmware ihx to hex
 ihx_to_hex(mem_dump)

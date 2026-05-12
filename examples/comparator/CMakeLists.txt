@@ -2,7 +2,7 @@ add_executable(comparator_async_example
     comparator_async_example.c
 )
 
-target_link_libraries(comparator_async_example PRIVATE stc15lib) 
+target_link_libraries(comparator_async_example PRIVATE stc15hal) 
 
 # Transform firmware ihx to hex
 ihx_to_hex(comparator_async_example)

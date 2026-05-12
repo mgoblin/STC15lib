@@ -5,8 +5,8 @@ add_executable(uart1_mode0_send_example
     uart1_mode0_send_example.c
 )
 
-target_link_libraries(uart1_mode0_baud_rates_example PRIVATE stc15lib)
-target_link_libraries(uart1_mode0_send_example PRIVATE stc15lib) 
+target_link_libraries(uart1_mode0_baud_rates_example PRIVATE stc15hal)
+target_link_libraries(uart1_mode0_send_example PRIVATE stc15hal) 
 
 # Transform firmware ihx to hex
 ihx_to_hex(uart1_mode0_baud_rates_example)

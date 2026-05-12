@@ -8,9 +8,9 @@ add_executable(counter0_mode2_p35_output_example
     counter0_mode2_p35_output_example.c
 )
 
-target_link_libraries(counter0_mode2_example PRIVATE stc15lib)
-target_link_libraries(counter0_mode2_gate_example PRIVATE stc15lib)
-target_link_libraries(counter0_mode2_p35_output_example PRIVATE stc15lib)
+target_link_libraries(counter0_mode2_example PRIVATE stc15hal)
+target_link_libraries(counter0_mode2_gate_example PRIVATE stc15hal)
+target_link_libraries(counter0_mode2_p35_output_example PRIVATE stc15hal)
 
 # Transform firmware ihx to hex
 ihx_to_hex(counter0_mode2_example)

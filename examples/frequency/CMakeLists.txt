@@ -5,8 +5,8 @@ add_executable(slowdown_example
     slowdown_example.c
 )
 
-target_link_libraries(master_clock_output_example PRIVATE stc15lib)
-target_link_libraries(slowdown_example PRIVATE stc15lib) 
+target_link_libraries(master_clock_output_example PRIVATE stc15hal)
+target_link_libraries(slowdown_example PRIVATE stc15hal) 
 
 # Transform firmware ihx to hex
 ihx_to_hex(master_clock_output_example)

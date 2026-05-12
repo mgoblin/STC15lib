@@ -2,7 +2,7 @@ add_executable(pin_read_value_example
     pin_read_value_example.c
 )
 
-target_link_libraries(pin_read_value_example PRIVATE stc15lib) 
+target_link_libraries(pin_read_value_example PRIVATE stc15hal) 
 
 # Transform firmware ihx to hex
 ihx_to_hex(pin_read_value_example)

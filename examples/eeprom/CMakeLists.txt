@@ -12,10 +12,10 @@ add_executable(eeprom_write_page_example
     eeprom_write_page_example.c
 )
 
-target_link_libraries(eeprom_erase_page_example PRIVATE stc15lib)
-target_link_libraries(eeprom_read_byte_example PRIVATE stc15lib)
-target_link_libraries(eeprom_write_byte_example PRIVATE stc15lib)
-target_link_libraries(eeprom_write_page_example PRIVATE stc15lib) 
+target_link_libraries(eeprom_erase_page_example PRIVATE stc15hal)
+target_link_libraries(eeprom_read_byte_example PRIVATE stc15hal)
+target_link_libraries(eeprom_write_byte_example PRIVATE stc15hal)
+target_link_libraries(eeprom_write_page_example PRIVATE stc15hal) 
 
 # Transform firmware ihx to hex
 ihx_to_hex(eeprom_erase_page_example)

@@ -5,7 +5,7 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 file(REAL_PATH "toolchain-SDCC.cmake" CMAKE_TOOLCHAIN_FILE EXPAND_TILDE)
 
 project(
-    stc15lib
+    stc15hal
     VERSION 0.16.0
     LANGUAGES C ASM
 ) # Define project name and language
@@ -13,8 +13,8 @@ project(
 set(CMAKE_C_STANDARD 23)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
-# add headers to stc15lib
-include_directories(stc15lib 
+# add headers to stc15hal
+include_directories(stc15hal 
   PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include # For public headers during build
 )
 

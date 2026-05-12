@@ -14,11 +14,11 @@ add_executable(uart1_mode1_timer2_12T_interrupt_example
     uart1_mode1_timer2_12T_interrupt_example.c
 )
 
-target_link_libraries(uart1_mode1_timer2_1T_example PRIVATE stc15lib)
-target_link_libraries(uart1_mode1_timer2_1T_freq_bias_example PRIVATE stc15lib)
-target_link_libraries(uart1_mode1_timer2_12T_example PRIVATE stc15lib)
-target_link_libraries(uart1_mode1_timer2_12T_freq_bias_example PRIVATE stc15lib)
-target_link_libraries(uart1_mode1_timer2_12T_interrupt_example PRIVATE stc15lib) 
+target_link_libraries(uart1_mode1_timer2_1T_example PRIVATE stc15hal)
+target_link_libraries(uart1_mode1_timer2_1T_freq_bias_example PRIVATE stc15hal)
+target_link_libraries(uart1_mode1_timer2_12T_example PRIVATE stc15hal)
+target_link_libraries(uart1_mode1_timer2_12T_freq_bias_example PRIVATE stc15hal)
+target_link_libraries(uart1_mode1_timer2_12T_interrupt_example PRIVATE stc15hal) 
 
 # Transform firmware ihx to hex
 ihx_to_hex(uart1_mode1_timer2_1T_example)
