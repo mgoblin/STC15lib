@@ -5,4 +5,5 @@ add_library(stc15lib STATIC
   ticks_to_mcs_common.c
   timer_ticks_to_Hz.c
   timer_Hz_to_ticks.c
+  timer_Hz_to_ticks_8bit.c
 ) # Create libray from uart.c
