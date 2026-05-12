@@ -50,7 +50,7 @@
  * 
  * @ingroup timer0_mode0_to_ms
  */
-#define timer0_mode0_frequency_to_ticks(frequency) (timer_Hz_to_ticks(frequency, get_timer0_clock_divider(), get_frequency_divider_scale()))
+#define timer0_mode0_Hz_to_ticks(frequency) (timer_Hz_to_ticks(frequency, get_timer0_clock_divider(), get_frequency_divider_scale()))
 
 /**
  * @brief Convert ticks count to ms
