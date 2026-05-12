@@ -48,7 +48,7 @@
  * 
  * @ingroup timer2_mode0_to_ms
  */
-#define timer2_mode0_frequency_to_ticks(frequency) (timer_frequency_to_ticks(frequency, get_timer2_clock_divider(), get_frequency_divider_scale()))
+#define timer2_mode0_frequency_to_ticks(frequency) (timer_Hz_to_ticks(frequency, get_timer2_clock_divider(), get_frequency_divider_scale()))
 ///@}
 
 /** @name ticks to duration conversions

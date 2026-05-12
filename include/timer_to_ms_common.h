@@ -45,7 +45,7 @@ float timer_ticks_to_Hz(uint16_t ticks, timer_clock_divider_t timer_clock_divide
  * 
  * @ingroup timer_to_ms
  */
-uint16_t timer_frequency_to_ticks(uint32_t frequency, timer_clock_divider_t timer_clock_divider, uint8_t frequency_divider_scale);
+uint16_t timer_Hz_to_ticks(uint32_t frequency, timer_clock_divider_t timer_clock_divider, uint8_t frequency_divider_scale);
 /**
  * @brief Converts given timer overflow frequency to ticks for 8bit timer mode.
  * @details Frequency to ticks is a reverse operation of ticks to frequency, 
