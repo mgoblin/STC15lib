@@ -184,10 +184,10 @@
 * Routines naming unified
 * Wakeup timer init routine for intervals in seconds implemented
 * Timer convertions between ticks and ms/frequency routines refactored
-* TODO Separate timer_to_ms.h on ticks <-> ms and ticks <-> freq parts
+* timer_to_ms_cpmmon.c separated to small files 
+* TODO Restructure and add timerX_modeX freq, duration and ticks examples
 * TODO Add timerX start on ms/mcs routines
 * TODO Add timerX start on freq routines
-* TODO Restructure and add timerX_modeX freq, duration and ticks examples
 * TODO fix examples flash targets on cmake build
 * TODO Add docs to memory dumper README
 * TODO Add docs to csv2hex README
