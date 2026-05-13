@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['main_5ffosc_0',['MAIN_Fosc',['../sys_8h.html#aa52cf4efd75d43c7917d9eec3becd2fa',1,'sys.h']]],
-  ['main_5ffosch_1',['MAIN_FoscH',['../sys_8h.html#ae1b9b7f30c88b5491fd35d286418f6d6',1,'sys.h']]],
-  ['main_5ffoscl_2',['MAIN_FoscL',['../sys_8h.html#ab42e14bee431f5da3ecef889588cc728',1,'sys.h']]]
+  ['led_5foff_0',['LED_OFF',['../counter0__mode1__example_8c.html#a80700bb63bd56ebabbb4728aa433fd29',1,'counter0_mode1_example.c']]],
+  ['led_5fon_1',['LED_ON',['../counter0__mode1__example_8c.html#af2e697ac60e05813d45ea2c9c9e79c25',1,'counter0_mode1_example.c']]],
+  ['led_5fpin_2',['LED_PIN',['../counter0__mode1__example_8c.html#ab4553be4db9860d940f81d7447173b2f',1,'counter0_mode1_example.c']]]
 ];

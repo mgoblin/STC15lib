@@ -1,6 +1,6 @@
 /**
  * This example shows how to use the timer2_mode0_ms_to_ticks 
- * to calculate the number of timer 2 ticks for a given duration.
+ * to calculate the number of timer2 ticks for a given duration.
  * 
  * The duration is specified in milliseconds.
  * If the specified duration divided by the interrupt scaling factor 
@@ -48,7 +48,7 @@ void timerISR() __interrupt(INTERRUPT_TIMER2)
 void main()
 {
     timer2_mode0_12T_init();
-    // Calculate timer2 ticks count given duration
+    // Calculate timer2 ticks count for given duration
     // ticks_count is equals to 0 if given duration can not be serviced.
     uint16_t ticks = timer2_mode0_ms_to_ticks(DURATION_MS / ISR_SCALER);
     

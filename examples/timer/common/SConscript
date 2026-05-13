@@ -10,8 +10,8 @@ env.Default(
     ),
 
     env.Program(
-        'timer0_ms2ticks_example',
-        ['timer0_ms2ticks_example.c', 'uart.c', 'ms_to_ticks_common.c']
+        'timer0_mode0_ms_to_ticks_example',
+        ['timer0_mode0_ms_to_ticks_example.c', 'uart.c', 'ms_to_ticks_common.c']
     ),
 
     env.Program(
@@ -20,7 +20,7 @@ env.Default(
     ),
 
     env.Program(
-        'timer2_ms2ticks_example',
-        ['timer2_ms2ticks_example.c', 'uart.c', 'ms_to_ticks_common.c']
+        'timer2_mode0_ms_to_ticks_example',
+        ['timer2_mode0_ms_to_ticks_example.c', 'uart.c', 'ms_to_ticks_common.c']
     ),
 )
