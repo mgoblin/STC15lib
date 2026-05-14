@@ -185,8 +185,8 @@
 * Wakeup timer init routine for intervals in seconds implemented
 * Timer convertions between ticks and ms/frequency routines refactored
 * timer_to_ms_common.c separated to small files
-* Examples ms_to_ticks moved to timer/modeX subfolders
-* TODO Add timerX_modeX ms_to_freq, freq_to_ms, ticks_to_ms examples
+* Examples ms to ticks and vice verse moved to timer/modeX subfolders
+* TODO Move freq to ms and vice verse examples timer/modeX subfolders
 * TODO Refactor timer0_mode2_ms_to_ticks to timer0_mode2_mcs_to_ticks 
 * TODO Add timerX start on ms/mcs routines
 * TODO Add timerX start on freq routines
