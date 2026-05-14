@@ -1,5 +1,8 @@
 Import("env")
 
+env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
+env.Command('ms_to_ticks_common.c', '#src/ms_to_ticks_common.c', Copy('$TARGET', '$SOURCE'))
+
 env.Default(
     env.Program(
         'timer2_mode0_1T_interrupt_example',
@@ -21,4 +24,8 @@ env.Default(
         ['timer2_mode0_direct_reload_example.c']
     ),    
 
+    env.Program(
+        'timer2_mode0_ms_to_ticks_example',
+        ['timer2_mode0_ms_to_ticks_example.c', 'uart.c', 'ms_to_ticks_common.c']
+    ),
 )
