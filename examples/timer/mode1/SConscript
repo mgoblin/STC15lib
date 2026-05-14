@@ -2,4 +2,5 @@ Import('env')
 
 SConscript('async/SConscript', exports = 'env')
 SConscript('sync/SConscript', exports = 'env')
+SConscript('ms_freq/SConscript', exports = 'env')
 

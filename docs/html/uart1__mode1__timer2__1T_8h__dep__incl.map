@@ -1,17 +1,17 @@
 <map id="include/uart1_mode1_timer2_1T.h" name="include/uart1_mode1_timer2_1T.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="658,5,817,45"/>
-<area shape="rect" id="Node000002" href="$uart_8h.html" title=" " alt="" coords="682,93,793,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="740,59,740,93,735,93,735,59"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="666,5,825,45"/>
+<area shape="rect" id="Node000002" href="$uart_8h.html" title=" " alt="" coords="690,93,801,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="748,59,748,93,743,93,743,59"/>
 <area shape="rect" id="Node000003" href="$counter0__mode1__example_8c.html" title=" " alt="" coords="5,174,264,214"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="669,118,491,139,276,169,233,177,232,171,276,164,490,134,668,112"/>
-<area shape="rect" id="Node000004" href="$timer0__mode1__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="289,167,495,221"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="678,125,496,170,495,164,677,119"/>
-<area shape="rect" id="Node000005" href="$timer0__mode2__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="519,167,726,221"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="712,129,659,169,656,165,709,125"/>
-<area shape="rect" id="Node000006" href="$timer0__mode3__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="750,167,957,221"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="765,125,820,165,816,169,762,129"/>
-<area shape="rect" id="Node000007" href="$timer0__mode0__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="981,167,1216,221"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="800,119,989,164,988,169,798,124"/>
-<area shape="rect" id="Node000008" href="$mem__print_8h_source.html" title=" " alt="" coords="1239,174,1406,214"/>
-<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="807,110,997,129,1113,144,1229,164,1260,171,1259,176,1227,169,1112,150,997,134,806,115"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="677,117,495,139,276,169,233,177,232,171,276,164,495,134,676,112"/>
+<area shape="rect" id="Node000004" href="$timer0__mode2__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="289,167,495,221"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="685,125,496,170,495,165,684,119"/>
+<area shape="rect" id="Node000005" href="$timer0__mode3__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="519,167,726,221"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="719,129,662,169,659,164,716,125"/>
+<area shape="rect" id="Node000006" href="$timer0__mode0__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="751,167,985,221"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="775,125,832,164,829,169,772,129"/>
+<area shape="rect" id="Node000007" href="$timer0__mode1__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="1010,167,1193,221"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="808,119,998,164,1010,167,1009,172,997,169,807,124"/>
+<area shape="rect" id="Node000008" href="$mem__print_8h_source.html" title=" " alt="" coords="1217,174,1383,214"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="815,111,993,130,1099,145,1206,164,1237,171,1236,177,1205,169,1099,150,992,135,814,116"/>
 </map>

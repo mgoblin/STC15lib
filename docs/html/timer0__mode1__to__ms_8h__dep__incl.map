@@ -1,5 +1,5 @@
 <map id="include/timer0_mode1_to_ms.h" name="include/timer0_mode1_to_ms.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="25,5,193,45"/>
-<area shape="rect" id="Node000002" href="$timer0__mode1__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="5,93,212,148"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,59,111,93,106,93,106,59"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="13,5,181,45"/>
+<area shape="rect" id="Node000002" href="$timer0__mode1__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="5,93,188,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,59,99,93,94,93,94,59"/>
 </map>
