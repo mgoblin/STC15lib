@@ -50,7 +50,7 @@ void main()
    timer0_mode0_enable_P35_output();
    
    // Start Timer0 with the defined tick count.
-   // The timer will repeatedly count from (65535 - TICKS) to 65535,
+   // The timer will repeatedly count from 0 to 65535,
    // generating a periodic signal on P3.5.
    timer0_mode0_start(TICKS);
 
