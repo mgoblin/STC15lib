@@ -1,25 +1,25 @@
 /**
- * @file timer0_mode1_ms_to_ticks_example.c
+ * @file timer0_mode3_ms_to_ticks_example.c
  * @brief Example demonstrating conversion from milliseconds to timer0 ticks
  * 
  * This example shows how to convert a time duration in milliseconds to the
- * corresponding number of timer ticks for Timer0 in Mode 1.
+ * corresponding number of timer ticks for Timer0 in Mode 3.
  * 
  * The example configures Timer0 to run in 1T mode (one clock cycle per count)
  * and calculates the number of ticks needed for a 3ms delay using the
- * timer0_mode1_ms_to_ticks() function. It then starts the timer and outputs the
+ * timer0_mode3_ms_to_ticks() function. It then starts the timer and outputs the
  * calculated tick value over UART.
  * 
  * @note The actual tick value will depend on the system clock frequency
  *       defined in sys.h (MAIN_Fosc). With the default 11.0592MHz clock,
  *       3ms corresponds to approximately 33,177 ticks.
  * 
- * @see timer0_mode1.h - Header for Timer0 Mode 1 functions
- * @see timer0_mode1_to_ms.h - Header containing ms to ticks conversion functions
+ * @see timer0_mode3.h - Header for Timer0 Mode 3 functions
+ * @see timer0_mode3_to_ms.h - Header containing ms to ticks conversion functions
  * 
  */
 
-#include <timer0_mode1_to_ms.h>
+#include <timer0_mode3_to_ms.h>
 
 #include <uart.h>
 #include <stdio.h>
@@ -32,17 +32,17 @@
  */
 void main()
 {
-    // Initialize Timer0 in Mode 1 (16-bit timer) with 1T timing
+    // Initialize Timer0 in Mode 3 (16-bit timer) with 1T timing
     // In 1T mode, the timer increments once per system clock cycle
-    timer0_mode1_1T_init();
+    timer0_mode3_1T_init();
     
     // Convert 3 milliseconds to the corresponding number of timer ticks
     // This calculation takes into account the system clock frequency and timer mode
-    uint16_t ticks = timer0_mode1_ms_to_ticks(DURATION_MS);
+    uint16_t ticks = timer0_mode3_ms_to_ticks(DURATION_MS);
     
     // Start Timer0 with the calculated number of ticks
     // The timer will count down from this value and generate an overflow interrupt
-    timer0_mode1_start(ticks);   
+    timer0_mode3_start(ticks);   
     
     // Initialize UART1 at 9600 baud rate for serial communication
     uart1_init(9600);
