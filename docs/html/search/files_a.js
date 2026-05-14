@@ -10,7 +10,7 @@ var searchData=
   ['timer0_5fmode1_5fto_5fms_2eh_7',['timer0_mode1_to_ms.h',['../timer0__mode1__to__ms_8h.html',1,'']]],
   ['timer0_5fmode2_2eh_8',['timer0_mode2.h',['../timer0__mode2_8h.html',1,'']]],
   ['timer0_5fmode2_5fms_5fto_5fticks_5fexample_2ec_9',['timer0_mode2_ms_to_ticks_example.c',['../timer0__mode2__ms__to__ticks__example_8c.html',1,'']]],
-  ['timer0_5fmode2_5fticks_5fto_5fms_5fexample_2ec_10',['timer0_mode2_ticks_to_ms_example.c',['../timer0__mode2__ticks__to__ms__example_8c.html',1,'']]],
+  ['timer0_5fmode2_5fticks_5fto_5fmcs_5fexample_2ec_10',['timer0_mode2_ticks_to_mcs_example.c',['../timer0__mode2__ticks__to__mcs__example_8c.html',1,'']]],
   ['timer0_5fmode2_5fto_5fms_2eh_11',['timer0_mode2_to_ms.h',['../timer0__mode2__to__ms_8h.html',1,'']]],
   ['timer0_5fmode3_2eh_12',['timer0_mode3.h',['../timer0__mode3_8h.html',1,'']]],
   ['timer0_5fmode3_5fms_5fto_5fticks_5fexample_2ec_13',['timer0_mode3_ms_to_ticks_example.c',['../timer0__mode3__ms__to__ticks__example_8c.html',1,'']]],
