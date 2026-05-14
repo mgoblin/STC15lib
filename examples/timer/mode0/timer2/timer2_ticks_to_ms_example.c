@@ -1,4 +1,6 @@
-/** 
+/**
+ * @file timer2_ticks_to_ms_example.c
+ * 
  * How to calculate P3.0 HIGH time ms for timer2
  * 
  * Timer2 used by UART1. 
@@ -11,15 +13,22 @@
 #include <uart.h>
 #include <stdio.h>
 
+/// LED pin 
 #define LED P10
 
+/// Timer2 ticks count
 #define TICKS 0xffff
 
+/**
+ * @brief interrupt request handler
+ */
 void timerISR() __interrupt(INTERRUPT_TIMER2)
 {
    LED = !LED;
 }
 
+
+/// @brief  Entry point
 void main()
 {
    timer2_mode0_1T_init();

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['led_5foff_0',['LED_OFF',['../counter0__mode1__example_8c.html#a80700bb63bd56ebabbb4728aa433fd29',1,'counter0_mode1_example.c']]],
-  ['led_5fon_1',['LED_ON',['../counter0__mode1__example_8c.html#af2e697ac60e05813d45ea2c9c9e79c25',1,'counter0_mode1_example.c']]],
-  ['led_5fpin_2',['LED_PIN',['../counter0__mode1__example_8c.html#ab4553be4db9860d940f81d7447173b2f',1,'counter0_mode1_example.c']]]
+  ['led_0',['LED',['../timer2__ticks__to__ms__example_8c.html#aeb7a7ba1ab7e0406f1b5ab36d579f585',1,'timer2_ticks_to_ms_example.c']]],
+  ['led_5foff_1',['LED_OFF',['../counter0__mode1__example_8c.html#a80700bb63bd56ebabbb4728aa433fd29',1,'counter0_mode1_example.c']]],
+  ['led_5fon_2',['LED_ON',['../counter0__mode1__example_8c.html#af2e697ac60e05813d45ea2c9c9e79c25',1,'counter0_mode1_example.c']]],
+  ['led_5fpin_3',['LED_PIN',['../counter0__mode1__example_8c.html#ab4553be4db9860d940f81d7447173b2f',1,'counter0_mode1_example.c']]]
 ];
