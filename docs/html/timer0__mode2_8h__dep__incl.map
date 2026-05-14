@@ -1,5 +1,7 @@
 <map id="include/timer0_mode2.h" name="include/timer0_mode2.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,185,31"/>
-<area shape="rect" id="Node000002" href="$timer0__mode2__to__ms_8h.html" title=" " alt="" coords="11,79,179,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,44,98,79,93,79,93,44"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="19,5,199,31"/>
+<area shape="rect" id="Node000002" href="$timer0__mode2__to__ms_8h.html" title=" " alt="" coords="25,79,193,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,44,111,79,106,79,106,44"/>
+<area shape="rect" id="Node000003" href="$timer0__mode2__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="5,167,212,221"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="111,132,111,167,106,167,106,132"/>
 </map>

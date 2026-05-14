@@ -1,13 +1,15 @@
 <map id="include/uart1_mode1_timer2_1T.h" name="include/uart1_mode1_timer2_1T.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="427,5,586,45"/>
-<area shape="rect" id="Node000002" href="$uart_8h.html" title=" " alt="" coords="451,93,562,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="509,59,509,93,504,93,504,59"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="543,5,702,45"/>
+<area shape="rect" id="Node000002" href="$uart_8h.html" title=" " alt="" coords="567,93,678,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="625,59,625,93,620,93,620,59"/>
 <area shape="rect" id="Node000003" href="$counter0__mode1__example_8c.html" title=" " alt="" coords="5,174,264,214"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="444,124,217,177,216,171,443,119"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="554,122,276,169,236,177,235,171,276,164,553,116"/>
 <area shape="rect" id="Node000004" href="$timer0__mode0__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="289,167,495,221"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="482,129,429,169,425,165,479,125"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="580,126,463,169,461,164,578,121"/>
 <area shape="rect" id="Node000005" href="$timer0__mode1__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="519,167,726,221"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="535,125,589,165,586,169,531,129"/>
-<area shape="rect" id="Node000006" href="$mem__print_8h_source.html" title=" " alt="" coords="750,174,917,214"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="566,119,739,164,766,171,765,176,738,169,565,125"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="625,132,625,167,620,167,620,132"/>
+<area shape="rect" id="Node000006" href="$timer0__mode2__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="750,167,957,221"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="668,121,784,164,782,169,666,126"/>
+<area shape="rect" id="Node000007" href="$mem__print_8h_source.html" title=" " alt="" coords="981,174,1147,214"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="692,114,821,135,970,164,1000,171,998,177,969,169,821,140,691,120"/>
 </map>
