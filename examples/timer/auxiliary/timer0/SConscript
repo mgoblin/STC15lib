@@ -44,8 +44,8 @@ env.Default(
     ),    
 
     env.Program(
-        'timer0_ticks_to_ms_example',
-        ['timer0_ticks_to_ms_example.c', 'uart.c', 'ticks_to_ms_common.c']
+        'timer0_mode0_ticks_to_ms_example',
+        ['timer0_mode0_ticks_to_ms_example.c', 'uart.c', 'ticks_to_ms_common.c']
     ),    
 
 )

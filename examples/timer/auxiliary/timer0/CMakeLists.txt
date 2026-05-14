@@ -10,15 +10,15 @@ add_executable(timer0_12T_freq_uint16_example
 add_executable(timer0_12T_ticks_example
     timer0_12T_ticks_example.c
 )
-add_executable(timer0_ticks_to_ms_example
-    timer0_ticks_to_ms_example.c
+add_executable(timer0_mode0_ticks_to_ms_example
+    timer0_mode0_ticks_to_ms_example.c
 )
 
 target_link_libraries(timer0_1T_freq_uint16_example PRIVATE stc15hal)
 target_link_libraries(timer0_12T_freq_uint8_example PRIVATE stc15hal)
 target_link_libraries(timer0_12T_freq_uint16_example PRIVATE stc15hal)
 target_link_libraries(timer0_12T_ticks_example PRIVATE stc15hal)
-target_link_libraries(timer0_ticks_to_ms_example PRIVATE stc15hal)
+target_link_libraries(timer0_mode0_ticks_to_ms_example PRIVATE stc15hal)
 
 # Transform firmware ihx to hex
 ihx_to_hex(timer0_1T_freq_uint16_example)
@@ -29,7 +29,7 @@ ihx_to_hex(timer0_12T_freq_uint16_example)
 # Transform firmware ihx to hex
 ihx_to_hex(timer0_12T_ticks_example)
 # Transform firmware ihx to hex
-ihx_to_hex(timer0_ticks_to_ms_example)
+ihx_to_hex(timer0_mode0_ticks_to_ms_example)
 
 
 # upload firmware to STC MCU
@@ -57,8 +57,8 @@ add_custom_target(flash_timer0_12T_ticks
     JOB_POOL console # for ninja build tool output stgal command input to console
 )
 # upload firmware to STC MCU
-add_custom_target(flash_timer0_ticks_to_ms
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/timer0_ticks_to_ms_example.hex
-    DEPENDS timer0_ticks_to_ms_example
+add_custom_target(flash_timer0_mode0_ticks_to_ms
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/timer0_mode0_ticks_to_ms_example.hex
+    DEPENDS timer0_mode0_ticks_to_ms_example
     JOB_POOL console # for ninja build tool output stgal command input to console
 )
