@@ -27,7 +27,7 @@
 
 /** 
  * Number of timer ticks to load into Timer0.
- * 0xFFFF is the maximum value for a 13‑bit timer (actually 0x1FFF),
+ * 0xFFFF is the maximum value for a 16‑bit timer (actually 0x1FFF),
  * but the library handles the masking internally.
  */
 #define TICKS 0xffff
@@ -35,7 +35,7 @@
 /// @brief  entry point
 void main()
 {
-   // Set the MCU clock divider to 1 (no division).
+   // Set the MCU clock divider to 1 (division by 2).
    // This ensures the timer runs at the full system clock speed.
    set_frequency_divider_scale(1);
 
@@ -49,19 +49,16 @@ void main()
    
    // Start Timer0 with the defined tick count.
    // The timer will repeatedly count from 0 to 65535,
-   // generating a periodic signal on P3.5.
    timer0_mode1_start(TICKS);
 
    // Convert the tick count to milliseconds.
    // The function uses the current system clock and timer configuration
    // to compute the equivalent time in milliseconds.
-   // This routine must be called after timer0_mode0_1T_init()
+   // This routine must be called after timer0_mode1_1T_init()
    uint32_t ms = timer0_mode1_ticks_to_ms(TICKS);
 
-   // Infinite loop: print the calculated high‑time every iteration.
+   // Infinite loop: print the calculated duration.
    while (1) {
-        // The printed value corresponds to the high‑time of the square wave
-        // on P3.5. For a 50% duty cycle, the period is twice this value.
         printf_fast("Timer duration is %lu ms\r\n", ms); // Expected output: 5 ms
    }
 }
