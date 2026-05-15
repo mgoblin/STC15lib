@@ -3,7 +3,7 @@
  * @brief Example demonstrating conversion from frequency (Hz) to timer0 ticks
  * 
  * This example shows how to convert a desired frequency in Hz to the
- * corresponding number of timer ticks for Timer0 in Mode 0 (13-bit timer mode).
+ * corresponding number of timer ticks for Timer0 in Mode 0 (16-bit timer mode).
  * 
  * The example configures Timer0 to run in 1T mode (one clock cycle per count)
  * and enables output on P3.5 pin. It demonstrates how to calculate the
@@ -40,7 +40,10 @@
 
 #include <delay.h>
 
+/// @brief LED pin
 #define LED P10
+
+/// @brief Timer0 ticks count.  
 #define TICKS 0x0000 // uint16 modify to change timer frequency
 
 /**
@@ -56,9 +59,11 @@ void timerISR() __interrupt(INTERRUPT_TIMER0)
     LED = !LED;
 }
 
+
+/// @brief  Entry point
 void main()
 {    
-    // Initialize Timer0 in Mode 0 (13-bit timer) with 1T timing
+    // Initialize Timer0 in Mode 0 (16-bit timer) with 1T timing
     // In 1T mode, the timer increments once per system clock cycle
     timer0_mode0_1T_init();
     
@@ -66,9 +71,13 @@ void main()
     // This will show the timer signal on the pin (useful for debugging with oscilloscope)
     timer0_mode0_enable_P35_output();
 
+    // Enable Timer0 interrupt
+    // This will call timerISR() __interrupt on timer0 overflow
+    enable_timer0_interrupt();
+
     // Calculate the timer frequency corresponding to the specified tick value
     // The function timer0_mode0_ticks_to_Hz() converts ticks to frequency in Hz
-    volatile uint32_t timer_frequency = timer0_mode0_ticks_to_Hz(TICKS);
+    const uint32_t timer_frequency = timer0_mode0_ticks_to_Hz(TICKS);
 
     // Start Timer0 with the specified number of ticks
     // The timer will count down from this value and generate an overflow interrupt
@@ -81,8 +90,7 @@ void main()
     while (1) 
     {
        // Print the calculated timer frequency to serial monitor
-       // The frequency is divided by 2 for display purposes
-       printf_fast("100 * timer frequency is %lu Hz\r\n", timer_frequency >> 1); 
+       printf_fast("Timer frequency is %lu Hz\r\n", timer_frequency); 
        
        // Add a small delay between measurements
        delay_ms(100);

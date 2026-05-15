@@ -161,9 +161,12 @@ Include dependency graph for timer0_mode0_Hz_to_ticks_example.c:</div>
 Macros</h2></td></tr>
 <tr class="memitem:aeb7a7ba1ab7e0406f1b5ab36d579f585" id="r_aeb7a7ba1ab7e0406f1b5ab36d579f585"><td class="memItemLeft" align="right" valign="top"><a id="aeb7a7ba1ab7e0406f1b5ab36d579f585" name="aeb7a7ba1ab7e0406f1b5ab36d579f585"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>LED</b>&#160;&#160;&#160;P10</td></tr>
+<tr class="memdesc:aeb7a7ba1ab7e0406f1b5ab36d579f585"><td class="mdescLeft">&#160;</td><td class="mdescRight">LED pin. <br /></td></tr>
 <tr class="separator:aeb7a7ba1ab7e0406f1b5ab36d579f585"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec3306780fb4af22ba80e4da7929e220" id="r_aec3306780fb4af22ba80e4da7929e220"><td class="memItemLeft" align="right" valign="top"><a id="aec3306780fb4af22ba80e4da7929e220" name="aec3306780fb4af22ba80e4da7929e220"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>TICKS</b>&#160;&#160;&#160;0x0000</td></tr>
+<tr class="memdesc:aec3306780fb4af22ba80e4da7929e220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer0 ticks count. <br  />
+ <br /></td></tr>
 <tr class="separator:aec3306780fb4af22ba80e4da7929e220"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -173,11 +176,12 @@ Functions</h2></td></tr>
 <tr class="separator:a79c3e844add5becb362f8b57cec2153e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdef7a1fd863a6d3770c1268cb06add3" id="r_acdef7a1fd863a6d3770c1268cb06add3"><td class="memItemLeft" align="right" valign="top"><a id="acdef7a1fd863a6d3770c1268cb06add3" name="acdef7a1fd863a6d3770c1268cb06add3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
+<tr class="memdesc:acdef7a1fd863a6d3770c1268cb06add3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entry point. <br /></td></tr>
 <tr class="separator:acdef7a1fd863a6d3770c1268cb06add3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Example demonstrating conversion from frequency (Hz) to timer0 ticks. </p>
-<p>This example shows how to convert a desired frequency in Hz to the corresponding number of timer ticks for Timer0 in Mode 0 (13-bit timer mode).</p>
+<p>This example shows how to convert a desired frequency in Hz to the corresponding number of timer ticks for Timer0 in Mode 0 (16-bit timer mode).</p>
 <p>The example configures Timer0 to run in 1T mode (one clock cycle per count) and enables output on P3.5 pin. It demonstrates how to calculate the timer frequency from a given tick value and outputs this information over UART.</p>
 <p>Key components demonstrated:</p><ul>
 <li>Timer0 initialization in Mode 0 with 1T timing</li>
