@@ -186,8 +186,9 @@
 * Timer convertions between ticks and ms/frequency routines refactored
 * File src/timer_to_ms_common.c separated to source files (one file for one routine implementation)
 * Examples ms to ticks and vice verse moved to timer/modeX subfolders
-* TODO Move freq to ms examples timer/modeX subfolders
-* TODO Move ms to freq examples timer/modeX subfolders
+* TODO Fixit: timer0_mode1_ticks_to_Hz_example.c - TICKS 0xFFFF and 0xFFFE - big diff. Validate this case for other 16bit modes
+* TODO Move ticks to freq examples timer/modeX subfolders
+* TODO Move freq to ticks examples timer/modeX subfolders
 * TODO Add timerX start on ms/mcs routines
 * TODO Add timerX start on freq routines
 * TODO Fix: examples flash targets on cmake build
