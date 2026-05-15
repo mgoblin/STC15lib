@@ -184,12 +184,13 @@
 * Routines naming unified
 * Wakeup timer init for given duration routine implemented
 * Timer convertions between ticks and ms/frequency routines refactored
-* timer_to_ms_common.c separated to small files
+* File src/timer_to_ms_common.c separated to source files (one file for one routine implementation)
 * Examples ms to ticks and vice verse moved to timer/modeX subfolders
-* TODO Move freq to ms and vice verse examples timer/modeX subfolders
+* TODO Move freq to ms examples timer/modeX subfolders
+* TODO Move ms to freq examples timer/modeX subfolders
 * TODO Add timerX start on ms/mcs routines
 * TODO Add timerX start on freq routines
-* TODO fix examples flash targets on cmake build
+* TODO Fix: examples flash targets on cmake build
 * TODO Add docs to memory dumper README
 * TODO Add docs to csv2hex README
 

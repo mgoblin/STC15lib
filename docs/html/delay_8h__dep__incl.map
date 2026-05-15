@@ -1,5 +1,7 @@
 <map id="include/delay.h" name="include/delay.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="75,5,194,31"/>
-<area shape="rect" id="Node000002" href="$counter0__mode1__example_8c.html" title=" " alt="" coords="5,79,264,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,44,137,79,132,79,132,44"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="199,5,318,31"/>
+<area shape="rect" id="Node000002" href="$counter0__mode1__example_8c.html" title=" " alt="" coords="5,86,264,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,41,164,88,161,84,229,36"/>
+<area shape="rect" id="Node000003" href="$timer0__mode0__Hz__to__ticks__example_8c.html" title="Example demonstrating conversion from frequency (Hz) to timer0 ticks." alt="" coords="288,79,480,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="288,36,347,76,344,81,285,41"/>
 </map>
