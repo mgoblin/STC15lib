@@ -1,9 +1,9 @@
 /**
- * @file timer0_mode0_Hz_to_ticks_example.c
- * @brief Example demonstrating conversion from frequency (Hz) to timer0 ticks
+ * @file timer0_mode0_ticks_to_Hz_example.c
+ * @brief Example demonstrating conversion from timer0 ticks to frequency (Hz) 
  * 
- * This example shows how to convert a desired frequency in Hz to the
- * corresponding number of timer ticks for Timer0 in Mode 0 (16-bit timer mode).
+ * This example shows how to convert a desired number of timer ticks to the
+ * corresponding frequency in Hz for Timer0 in Mode 0 (16-bit timer mode).
  * 
  * The example configures Timer0 to run in 1T mode (one clock cycle per count)
  * and enables output on P3.5 pin. It demonstrates how to calculate the
@@ -72,7 +72,7 @@ void main()
     timer0_mode0_enable_P35_output();
 
     // Enable Timer0 interrupt
-    // This will call timerISR() __interrupt on timer0 overflow
+    // This will call timerISR() on timer0 overflow
     enable_timer0_interrupt();
 
     // Calculate the timer frequency corresponding to the specified tick value

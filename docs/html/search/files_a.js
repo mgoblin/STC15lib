@@ -1,8 +1,8 @@
 var searchData=
 [
   ['timer0_5fmode0_2eh_0',['timer0_mode0.h',['../timer0__mode0_8h.html',1,'']]],
-  ['timer0_5fmode0_5fhz_5fto_5fticks_5fexample_2ec_1',['timer0_mode0_Hz_to_ticks_example.c',['../timer0__mode0__Hz__to__ticks__example_8c.html',1,'']]],
-  ['timer0_5fmode0_5fms_5fto_5fticks_5fexample_2ec_2',['timer0_mode0_ms_to_ticks_example.c',['../timer0__mode0__ms__to__ticks__example_8c.html',1,'']]],
+  ['timer0_5fmode0_5fms_5fto_5fticks_5fexample_2ec_1',['timer0_mode0_ms_to_ticks_example.c',['../timer0__mode0__ms__to__ticks__example_8c.html',1,'']]],
+  ['timer0_5fmode0_5fticks_5fto_5fhz_5fexample_2ec_2',['timer0_mode0_ticks_to_Hz_example.c',['../timer0__mode0__ticks__to__Hz__example_8c.html',1,'']]],
   ['timer0_5fmode0_5fticks_5fto_5fms_5fexample_2ec_3',['timer0_mode0_ticks_to_ms_example.c',['../timer0__mode0__ticks__to__ms__example_8c.html',1,'']]],
   ['timer0_5fmode0_5fto_5fms_2eh_4',['timer0_mode0_to_ms.h',['../timer0__mode0__to__ms_8h.html',1,'']]],
   ['timer0_5fmode1_2eh_5',['timer0_mode1.h',['../timer0__mode1_8h.html',1,'']]],
