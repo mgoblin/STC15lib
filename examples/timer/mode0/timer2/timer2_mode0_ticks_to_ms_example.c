@@ -1,5 +1,5 @@
 /**
- * @file timer2_ticks_to_ms_example.c
+ * @file timer2_mode0_ticks_to_ms_example.c
  * 
  * How to calculate P3.0 HIGH time ms for timer2
  * 
@@ -34,7 +34,7 @@ void main()
    timer2_mode0_1T_init();
    timer2_mode0_enable_P30_output();
    
-   volatile uint32_t ms = timer2_mode0_ticks_to_ms(TICKS);
+   const uint32_t ms = timer2_mode0_ticks_to_ms(TICKS);
 
    // timer2_mode0_start(TICKS);
    // while(1) {}
