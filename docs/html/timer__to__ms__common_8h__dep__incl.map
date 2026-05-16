@@ -8,8 +8,8 @@
 <area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1696,59,1696,93,1691,93,1691,59"/>
 <area shape="rect" id="Node000014" href="$timer0__mode3__to__ms_8h.html" title=" " alt="" coords="2131,93,2299,133"/>
 <area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="1785,39,2131,96,2130,101,1784,44"/>
-<area shape="rect" id="Node000018" href="$timer2__mode0__to__ms_8h.html" title=" " alt="" coords="2535,93,2703,133"/>
-<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="1785,32,2535,102,2534,107,1784,38"/>
+<area shape="rect" id="Node000018" href="$timer2__mode0__to__ms_8h.html" title=" " alt="" coords="2644,93,2812,133"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="1785,32,2644,102,2644,108,1784,37"/>
 <area shape="rect" id="Node000003" href="$timer0__mode0__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="5,181,240,236"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="419,139,232,184,231,179,417,134"/>
 <area shape="rect" id="Node000004" href="$timer0__mode0__ticks__to__Hz__example_8c.html" title="Example demonstrating conversion from timer0 ticks to frequency (Hz)" alt="" coords="265,181,495,236"/>
@@ -34,6 +34,8 @@
 <area shape="poly" id="edge15_Node000014_Node000016" title=" " alt="" coords="2247,140,2290,179,2287,183,2244,144"/>
 <area shape="rect" id="Node000017" href="$timer0__mode3__ticks__to__ms__example_8c.html" title=" " alt="" coords="2431,181,2614,236"/>
 <area shape="poly" id="edge16_Node000014_Node000017" title=" " alt="" coords="2291,135,2437,179,2435,184,2290,140"/>
-<area shape="rect" id="Node000019" href="$timer2__mode0__ticks__to__ms__example_8c.html" title=" " alt="" coords="2638,181,2821,236"/>
-<area shape="poly" id="edge18_Node000018_Node000019" title=" " alt="" coords="2653,140,2700,179,2696,183,2650,144"/>
+<area shape="rect" id="Node000019" href="$timer2__mode0__ticks__to__Hz__example_8c.html" title="Example demonstrating conversion from timer2 ticks to frequency (Hz)" alt="" coords="2639,181,2817,236"/>
+<area shape="poly" id="edge18_Node000018_Node000019" title=" " alt="" coords="2731,147,2731,181,2725,181,2725,147"/>
+<area shape="rect" id="Node000020" href="$timer2__mode0__ticks__to__ms__example_8c.html" title=" " alt="" coords="2842,181,3025,236"/>
+<area shape="poly" id="edge19_Node000018_Node000020" title=" " alt="" coords="2783,137,2877,179,2874,184,2781,141"/>
 </map>

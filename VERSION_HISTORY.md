@@ -186,9 +186,9 @@
 * Timer convertions between ticks and ms/frequency routines refactored
 * File src/timer_to_ms_common.c separated to source files (one file for one routine implementation)
 * Examples ms to ticks and vice verse moved to timer/modeX subfolders
-* TODO Fixit: unify file names in src folder
 * TODO Move ticks to freq examples timer/modeX subfolders
 * TODO Move freq to ticks examples timer/modeX subfolders
+* TODO Fixit: unify file names in src folder
 * TODO Add timerX start on ms/mcs routines
 * TODO Add timerX start on freq routines
 * TODO Fix: examples flash targets on cmake build
