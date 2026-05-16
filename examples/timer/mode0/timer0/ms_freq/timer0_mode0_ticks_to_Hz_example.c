@@ -44,7 +44,7 @@
 #define LED P10
 
 /// @brief Timer0 ticks count.  
-#define TICKS 0x0000 // uint16 modify to change timer frequency
+#define TICKS 0xFFFF // uint16 modify to change timer frequency
 
 /**
  * @brief Timer0 interrupt service routine
