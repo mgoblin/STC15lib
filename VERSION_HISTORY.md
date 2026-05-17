@@ -183,7 +183,7 @@
 0.16.0
 * Wakeup timer init for given duration routine implemented
 * Timer convertions between ticks and ms/frequency routines refactored
-* Fixit: timer0_mode0_delay()
+* timer0_mode0_delay() simplified
 * Fix it: why timer0_mode1_delay() doesnt implemented?
 * TODO Add timerX start on ms/mcs routines
 * TODO Add timerX start on freq routines
