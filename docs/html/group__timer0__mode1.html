@@ -278,23 +278,14 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                    \</div>
-<div class="line">    <span class="keywordtype">bool</span> is_gate_opened = <a class="code hl_define" href="group__timer0__mode1.html#ga7f6cceb0066689cb9d212b43417719df">is_timer0_mode1_gate_opened</a>();                \</div>
-<div class="line">                                                                        \</div>
-<div class="line">    timer0_mode1_open_gate();                                           \</div>
-<div class="line">                                                                        \</div>
+<div class="line">    disable_timer0_interrupt();                                         \</div>
 <div class="line">    timer0_mode1_start(ticks);                                          \</div>
 <div class="line">    <span class="comment">/* Waiting for timer overloaded (timer overload flag set to 1) */</span>   \</div>
 <div class="line">    while(!TF0)                                                         \</div>
 <div class="line">    {                                                                   \</div>
 <div class="line">    }                                                                   \</div>
 <div class="line">    timer0_mode1_stop();                                                \</div>
-<div class="line">                                                                        \</div>
-<div class="line">    if (!is_gate_opened)                                                \</div>
-<div class="line">    {                                                                   \</div>
-<div class="line">        timer0_mode1_close_gate();                                      \</div>
-<div class="line">    }                                                                   \</div>
 <div class="line">} <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="agroup__timer0__mode1_html_ga7f6cceb0066689cb9d212b43417719df"><div class="ttname"><a href="group__timer0__mode1.html#ga7f6cceb0066689cb9d212b43417719df">is_timer0_mode1_gate_opened</a></div><div class="ttdeci">#define is_timer0_mode1_gate_opened()</div><div class="ttdoc">Get timer starting gate state.</div><div class="ttdef"><b>Definition</b> timer0_mode1.h:103</div></div>
 </div><!-- fragment -->
 <p>Run timer0 mode1 once and wait with program flow blocking timer not finished. </p>
 <p>Before run timer0_mode1_12T_init or timer0_mode1_1T_init should be called.</p>

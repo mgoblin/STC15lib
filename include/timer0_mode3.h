@@ -276,21 +276,13 @@ do {                                                        \
  */
 #define timer0_mode3_delay(ticks)                                       \
 do {                                                                    \
-    bool is_gate_opened = is_timer0_mode3_gate_opened();                \
-                                                                        \
-    timer0_mode3_open_gate();                                           \
-                                                                        \
+    disable_timer0_interrupt();                                         \
     timer0_mode3_start(ticks);                                          \
     /* Waiting for timer overloaded (timer overload flag set to 1) */   \
     while(!TF0)                                                         \
     {                                                                   \
     }                                                                   \
     timer0_mode3_stop();                                                \
-                                                                        \
-    if (!is_gate_opened)                                                \
-    {                                                                   \
-        timer0_mode3_close_gate();                                      \
-    }                                                                   \
 } while(0)
 ///@}
 //============================== Timer0 run once declarations end =========================
