@@ -187,7 +187,7 @@
 * File src/timer_to_ms_common.c separated to source files (one file for one routine implementation)
 * Ms to ticks and vice versa examples moved from auxiliary folder to timer/modeX subfolders
 * Ticks to freq examples moved from auxiliary folder to timer/modeX subfolders
-* Remove auxiliary folder
+* Auxiliary folder removed
 * TODO Add freq to ticks examples timer/modeX subfolders
 * TODO Fixit: unify file names in src folder
 * TODO Add timerX start on ms/mcs routines
