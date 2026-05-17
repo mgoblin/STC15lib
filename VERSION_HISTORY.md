@@ -183,7 +183,6 @@
 0.16.0
 * Wakeup timer init for given duration routine implemented
 * Timer convertions between ticks and ms/frequency routines refactored
-* TODO Fixit: unify file names in src folder
 * TODO Fixit: Simple UART doesnt work correctly if MCU freq is divided
 * TODO Add timerX start on ms/mcs routines
 * TODO Add timerX start on freq routines
