@@ -32,7 +32,7 @@
  * 
  * @param ticks uint16_t timer ticks count to covert
  * 
- * @return float timer overflow frequency corresponding to given ticks count 
+ * @return uint32_t timer overflow frequency corresponding to given ticks count 
  * 
  * @ingroup timer0_mode0_to_ms
  */

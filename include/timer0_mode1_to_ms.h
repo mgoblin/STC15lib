@@ -32,7 +32,7 @@
  * 
  * @param ticks uint16_t timer ticks count to covert
  * 
- * @return float frequency multiplied by 100 corresponding to ticks count 
+ * @return uint32_t frequency multiplied by 100 corresponding to ticks count 
  * 
  * @ingroup timer0_mode1_to_ms
  */
