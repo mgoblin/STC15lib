@@ -1,9 +1,11 @@
 <map id="include/timer0_mode3_to_ms.h" name="include/timer0_mode3_to_ms.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="218,5,386,45"/>
-<area shape="rect" id="Node000002" href="$timer0__mode3__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="5,93,188,148"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="249,53,156,96,153,91,247,49"/>
-<area shape="rect" id="Node000003" href="$timer0__mode3__ticks__to__Hz__example_8c.html" title="Example demonstrating conversion from timer0 ticks to frequency (Hz)" alt="" coords="213,93,391,148"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="305,59,305,93,299,93,299,59"/>
-<area shape="rect" id="Node000004" href="$timer0__mode3__ticks__to__ms__example_8c.html" title=" " alt="" coords="416,93,599,148"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="357,49,451,91,448,96,355,53"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="319,5,487,45"/>
+<area shape="rect" id="Node000002" href="$timer0__mode3__Hz__to__ticks__example_8c.html" title="Example demonstrating conversion from frequency (Hz) to timer0 ticks." alt="" coords="5,93,184,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="328,52,182,96,181,91,326,47"/>
+<area shape="rect" id="Node000003" href="$timer0__mode3__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="209,93,391,148"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="374,56,331,95,327,91,370,52"/>
+<area shape="rect" id="Node000004" href="$timer0__mode3__ticks__to__Hz__example_8c.html" title="Example demonstrating conversion from timer0 ticks to frequency (Hz)" alt="" coords="416,93,595,148"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="435,52,478,91,475,95,432,56"/>
+<area shape="rect" id="Node000005" href="$timer0__mode3__ticks__to__ms__example_8c.html" title=" " alt="" coords="619,93,802,148"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="479,47,625,91,623,96,478,52"/>
 </map>
