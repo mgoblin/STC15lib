@@ -188,13 +188,7 @@
 * Ms to ticks and vice versa examples moved from auxiliary folder to timer/modeX subfolders
 * Ticks to freq examples moved from auxiliary folder to timer/modeX subfolders
 * Auxiliary folder removed
-* TODO Add freq to ticks examples timer/modeX subfolders
-    - mode0
-        - timer0 + 
-        - timer2
-    - mode1 +
-    - mode2 +
-    - mode3    
+* Freq to ticks examples created
 * TODO Fixit: unify file names in src folder
 * TODO Fixit: Simple UART doesnt work correctly if MCU freq is divided
 * TODO Add timerX start on ms/mcs routines
