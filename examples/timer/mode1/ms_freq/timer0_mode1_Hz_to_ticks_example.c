@@ -39,7 +39,7 @@
 #define LED P10
 
 /// @brief Desired timer overflow frequency in Hz
-#define FREQ_HZ 1
+#define FREQ_HZ 10
 
 /**
  * @brief Timer0 interrupt service routine
