@@ -3,7 +3,7 @@ Import("env")
 env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
 env.Command('timer_ms_to_ticks.c', '#src/timer_ms_to_ticks.c', Copy('$TARGET', '$SOURCE'))
 env.Command('timer_ticks_to_ms.c', '#src/timer_ticks_to_ms.c', Copy('$TARGET', '$SOURCE'))
-env.Command('ticks_to_mcs_common.c', '#src/ticks_to_mcs_common.c', Copy('$TARGET', '$SOURCE'))
+env.Command('timer8bit_ticks_to_mcs.c', '#src/timer8bit_ticks_to_mcs.c', Copy('$TARGET', '$SOURCE'))
 env.Command('timer_ticks_to_Hz.c', '#src/timer_ticks_to_Hz.c', Copy('$TARGET', '$SOURCE'))
 env.Command('timer_Hz_to_ticks_8bit.c', '#src/timer_Hz_to_ticks_8bit.c', Copy('$TARGET', '$SOURCE'))
 
@@ -14,7 +14,7 @@ env.Default(
     ),
     env.Program(
         'timer0_mode2_ticks_to_mcs_example',
-        ['timer0_mode2_ticks_to_mcs_example.c', 'uart.c', 'ticks_to_mcs_common.c']
+        ['timer0_mode2_ticks_to_mcs_example.c', 'uart.c', 'timer8bit_ticks_to_mcs.c']
     ),
     env.Program(
         'timer0_mode2_ticks_to_Hz_example',
