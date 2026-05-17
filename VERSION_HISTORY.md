@@ -181,14 +181,8 @@
 * EEPROM write array implemented
 
 0.16.0
-* Routines naming unified
 * Wakeup timer init for given duration routine implemented
 * Timer convertions between ticks and ms/frequency routines refactored
-* File src/timer_to_ms_common.c separated to source files (one file for one routine implementation)
-* Ms to ticks and vice versa examples moved from auxiliary folder to timer/modeX subfolders
-* Ticks to freq examples moved from auxiliary folder to timer/modeX subfolders
-* Auxiliary folder removed
-* Freq to ticks examples created
 * TODO Fixit: unify file names in src folder
 * TODO Fixit: Simple UART doesnt work correctly if MCU freq is divided
 * TODO Add timerX start on ms/mcs routines
