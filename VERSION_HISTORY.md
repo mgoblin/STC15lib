@@ -190,12 +190,13 @@
 * Auxiliary folder removed
 * TODO Add freq to ticks examples timer/modeX subfolders
     - mode0
-        - timer0
+        - timer0 + 
         - timer2
-    - mode1
-    - mode2
+    - mode1 +
+    - mode2 +
     - mode3    
 * TODO Fixit: unify file names in src folder
+* TODO Fixit: Simple UART doesnt work correctly if MCU freq is divided
 * TODO Add timerX start on ms/mcs routines
 * TODO Add timerX start on freq routines
 * TODO Fix: examples flash targets on cmake build
