@@ -48,15 +48,12 @@
 /**
  * @brief Initialize mode0 12T for timer0. 
  * 
- * @attention This routine disables timer0 interrupt.
- * Interrupt should be enabled by user for async style.
- * 
  * @ingroup timer0_mode0
  */
 #define timer0_mode0_12T_init()                 \
 do {                                            \
     enable_mcu_interrupts();                    \
-    disable_timer0_interrupt();                 \
+    enable_timer0_interrupt();                  \
     TMOD &= 0xf0;                               \
     bit_clr(AUXR, CBIT7);                       \
 } while(0)
@@ -72,7 +69,7 @@ do {                                            \
 #define timer0_mode0_1T_init()                  \
 do {                                            \
     enable_mcu_interrupts();                    \
-    disable_timer0_interrupt();                 \
+    enable_timer0_interrupt();                  \
     TMOD &= 0xf0;                               \
     bit_set(AUXR, SBIT7);                       \
 } while(0)
@@ -280,21 +277,13 @@ do {                                                        \
  */
 #define timer0_mode0_delay(ticks)                                       \
 do {                                                                    \
-    bool is_gate_opened = is_timer0_mode0_gate_opened();                \
-                                                                        \
-    timer0_mode0_open_gate();                                           \
-                                                                        \
+    disable_timer0_interrupt();                                         \
     timer0_mode0_start(ticks);                                          \
     /* Waiting for timer overloaded (timer overload flag set to 1) */   \
     while(!TF0)                                                         \
     {                                                                   \
     }                                                                   \
     timer0_mode0_stop();                                                \
-                                                                        \
-    if (!is_gate_opened)                                                \
-    {                                                                   \
-        timer0_mode0_close_gate();                                      \
-    }                                                                   \
 } while(0)
 ///@}
 //============================== Timer0 run once declarations end =========================

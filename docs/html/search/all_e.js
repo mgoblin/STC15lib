@@ -84,6 +84,7 @@ var searchData=
   ['is_5fuart1_5fsend_5fbyte_5fcomplete_81',['is_uart1_send_byte_complete',['../group__uart1__8bit__shared.html#gaff248c97ad442c4fc9931d4baa5e9854',1,'uart1_8bit_shared.h']]],
   ['is_5fwdt_5fflag_5fon_82',['is_wdt_flag_on',['../group__wdt.html#gac1c4fb7f1f59ef6ad7b431fa6c64c058',1,'wdt.h']]],
   ['is_5fwdt_5fstarted_83',['is_wdt_started',['../group__wdt.html#ga843c35409dc0a28f62bb961488dfd62c',1,'wdt.h']]],
-  ['it_84',['it',['../index.html#autotoc_md1',1,'How to use it'],['../md_utils_2csv2hex_2README.html#autotoc_md10',1,'What is it']]],
-  ['it_20is_85',['What it is',['../index.html',1,'']]]
+  ['isr_5fcounter_84',['isr_counter',['../timer0__mode0__Hz__to__ticks__example_8c.html#ae90e7a7ffb22d9ab9899a7cf210f98c3',1,'timer0_mode0_Hz_to_ticks_example.c']]],
+  ['it_85',['it',['../index.html#autotoc_md1',1,'How to use it'],['../md_utils_2csv2hex_2README.html#autotoc_md10',1,'What is it']]],
+  ['it_20is_86',['What it is',['../index.html',1,'']]]
 ];

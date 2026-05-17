@@ -19,7 +19,6 @@ void main()
     set_frequency_divider_scale(2);
 
     timer0_mode0_12T_init();
-    enable_timer0_interrupt();
     timer0_mode0_start(ticks[0]);
 
     while (1)

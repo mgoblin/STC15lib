@@ -33,13 +33,20 @@
 
 #include <timer0_mode0_to_ms.h>
 
-#include <frequency.h>
+#include <uart.h>
+#include <stdio.h>
 
 /// @brief LED pin
 #define LED P10
 
 /// @brief Desired timer overflow frequency in Hz
-#define FREQ_HZ 1
+#define FREQ_KHZ 1
+
+/// @brief kHz scale
+#define KHZ_SCALE 1000
+
+/// @brief counts isr for toggling LED each 100th timer0 overflow 
+volatile uint16_t isr_counter = 0;
 
 /**
  * @brief Timer0 interrupt service routine
@@ -51,7 +58,11 @@
  */
 void timerISR() __interrupt(INTERRUPT_TIMER0)
 {
-    LED = !LED;
+    if (isr_counter++ == KHZ_SCALE)
+    {
+        LED = !LED;
+        isr_counter = 0;
+    }
 }
 
 /**
@@ -59,19 +70,18 @@ void timerISR() __interrupt(INTERRUPT_TIMER0)
  */
 void main(void)
 {
-    // Set MCU clock divider scale to 7 (divide by 128)
-    set_frequency_divider_scale(7);
-
     // Initialize Timer0 in Mode 0 with 12T timing
     timer0_mode0_12T_init();
-    // Enable Timer0 interrupt
-    enable_timer0_interrupt();
 
     // Calculate the timer ticks corresponding to the desired frequency
-    const uint16_t ticks = timer0_mode0_Hz_to_ticks(FREQ_HZ);
+    const uint16_t ticks = timer0_mode0_Hz_to_ticks(KHZ_SCALE * FREQ_KHZ);
     // Start Timer0 with the calculated ticks
     timer0_mode0_start(ticks);
 
+
+    uart1_init(9600);
     // Main loop: wait for interrupts
-    while (1) {}
+    while (1) {
+        printf_tiny("Ticks count is %u\r\n", ticks);
+    }
 }

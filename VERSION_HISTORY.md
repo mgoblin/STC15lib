@@ -183,9 +183,11 @@
 0.16.0
 * Wakeup timer init for given duration routine implemented
 * Timer convertions between ticks and ms/frequency routines refactored
-* TODO Fixit: Simple UART doesnt work correctly if MCU freq is divided
+* Fixit: timer0_mode0_delay()
+* Fix it: why timer0_mode1_delay() doesnt implemented?
 * TODO Add timerX start on ms/mcs routines
 * TODO Add timerX start on freq routines
+* TODO Add sync delay for ms
 * TODO Fix: examples flash targets on cmake build
 * TODO Add docs to memory dumper README
 * TODO Add docs to csv2hex README

@@ -16,7 +16,6 @@ void timerISR() __interrupt(INTERRUPT_TIMER0)
 void main()
 {
     timer0_mode0_12T_init();
-    enable_timer0_interrupt();
     timer0_mode0_direct_start(0x00, 0x00);
 
     while (1) {}

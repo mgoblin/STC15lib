@@ -1,4 +1,29 @@
 var searchData=
 [
-  ['none_0',['NONE',['../group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2ac157bdf0b85a40d2619cbc8bc1ae5fe2',1,'frequency.h']]]
+  ['main_0',['main',['../timer0__mode0__Hz__to__ticks__example_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667',1,'main(void):&#160;timer0_mode0_Hz_to_ticks_example.c'],['../counter0__mode1__example_8c.html#acdef7a1fd863a6d3770c1268cb06add3',1,'main():&#160;counter0_mode1_example.c'],['../timer0__mode3__ticks__to__ms__example_8c.html#acdef7a1fd863a6d3770c1268cb06add3',1,'main():&#160;timer0_mode3_ticks_to_ms_example.c'],['../timer0__mode3__ticks__to__Hz__example_8c.html#acdef7a1fd863a6d3770c1268cb06add3',1,'main():&#160;timer0_mode3_ticks_to_Hz_example.c'],['../timer0__mode3__ms__to__ticks__example_8c.html#acdef7a1fd863a6d3770c1268cb06add3',1,'main():&#160;timer0_mode3_ms_to_ticks_example.c'],['../timer0__mode3__Hz__to__ticks__example_8c.html#acdef7a1fd863a6d3770c1268cb06add3',1,'main():&#160;timer0_mode3_Hz_to_ticks_example.c'],['../timer0__mode2__ticks__to__mcs__example_8c.html#acdef7a1fd863a6d3770c1268cb06add3',1,'main():&#160;timer0_mode2_ticks_to_mcs_example.c'],['../timer0__mode2__ticks__to__Hz__example_8c.html#acdef7a1fd863a6d3770c1268cb06add3',1,'main():&#160;timer0_mode2_ticks_to_Hz_example.c'],['../timer0__mode2__ms__to__ticks__example_8c.html#acdef7a1fd863a6d3770c1268cb06add3',1,'main():&#160;timer0_mode2_ms_to_ticks_example.c'],['../timer0__mode2__Hz__to__ticks__example_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667',1,'main(void):&#160;timer0_mode2_Hz_to_ticks_example.c'],['../timer0__mode1__ticks__to__ms__example_8c.html#acdef7a1fd863a6d3770c1268cb06add3',1,'main():&#160;timer0_mode1_ticks_to_ms_example.c'],['../timer0__mode1__ticks__to__Hz__example_8c.html#acdef7a1fd863a6d3770c1268cb06add3',1,'main():&#160;timer0_mode1_ticks_to_Hz_example.c'],['../timer0__mode1__ms__to__ticks__example_8c.html#acdef7a1fd863a6d3770c1268cb06add3',1,'main():&#160;timer0_mode1_ms_to_ticks_example.c'],['../timer0__mode1__Hz__to__ticks__example_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667',1,'main(void):&#160;timer0_mode1_Hz_to_ticks_example.c'],['../timer2__mode0__ticks__to__ms__example_8c.html#acdef7a1fd863a6d3770c1268cb06add3',1,'main():&#160;timer2_mode0_ticks_to_ms_example.c'],['../timer2__mode0__ticks__to__Hz__example_8c.html#acdef7a1fd863a6d3770c1268cb06add3',1,'main():&#160;timer2_mode0_ticks_to_Hz_example.c'],['../timer2__mode0__Hz__to__ticks__example_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667',1,'main(void):&#160;timer2_mode0_Hz_to_ticks_example.c'],['../timer0__mode0__ticks__to__ms__example_8c.html#acdef7a1fd863a6d3770c1268cb06add3',1,'main():&#160;timer0_mode0_ticks_to_ms_example.c'],['../timer0__mode0__ticks__to__Hz__example_8c.html#acdef7a1fd863a6d3770c1268cb06add3',1,'main():&#160;timer0_mode0_ticks_to_Hz_example.c'],['../timer0__mode0__ms__to__ticks__example_8c.html#acdef7a1fd863a6d3770c1268cb06add3',1,'main():&#160;timer0_mode0_ms_to_ticks_example.c']]],
+  ['main_5ffosc_1',['MAIN_Fosc',['../sys_8h.html#aa52cf4efd75d43c7917d9eec3becd2fa',1,'sys.h']]],
+  ['main_5ffosch_2',['MAIN_FoscH',['../sys_8h.html#ae1b9b7f30c88b5491fd35d286418f6d6',1,'sys.h']]],
+  ['main_5ffoscl_3',['MAIN_FoscL',['../sys_8h.html#ab42e14bee431f5da3ecef889588cc728',1,'sys.h']]],
+  ['management_4',['Power management',['../group__power__management.html',1,'']]],
+  ['master_5fclock_5foutput_5fpin_5ft_5',['master_clock_output_pin_t',['../group__freq.html#gae5d505beabdbd466d648cb5dccf4b6d2',1,'frequency.h']]],
+  ['maturity_6',['Library modules maturity',['../index.html#autotoc_md5',1,'']]],
+  ['memmory_20dumper_7',['Memmory dumper',['../md_utils_2memory__dumper_2README.html',1,'']]],
+  ['mode_200_8',['UART1 Mode 0',['../group__uart1__mode0.html',1,'']]],
+  ['mode_201_20with_20timer2_2012t_9',['UART1 Mode 1 with Timer2 12T',['../group__uart1__mode1__timer2__12T.html',1,'']]],
+  ['mode_201_20with_20timer2_201t_10',['UART1 Mode 1 with Timer2 1T',['../group__uart1__mode1__timer2__1T.html',1,'']]],
+  ['mode_203_20with_20timer2_2012t_11',['UART1 Mode 3 with Timer2 12T',['../group__uart1__mode3__timer2__12T.html',1,'']]],
+  ['mode_203_20with_20timer2_201t_12',['UART1 Mode 3 with Timer2 1T',['../group__uart1__mode3__timer2__1T.html',1,'']]],
+  ['mode0_13',['mode0',['../group__counter0__mode0.html',1,'Counter0 Mode0'],['../group__counter2__mode0.html',1,'Counter2 Mode0']]],
+  ['mode0_20basics_14',['mode0 basics',['../group__timer0__mode0.html',1,'Timer0 Mode0 basics'],['../group__timer2__mode0.html',1,'Timer2 Mode0 basics']]],
+  ['mode0_20ticks_20to_20duration_20frequency_20convertions_15',['mode0 ticks to duration frequency convertions',['../group__timer0__mode0__to__ms.html',1,'Timer0 Mode0 ticks to duration/frequency convertions'],['../group__timer2__mode0__to__ms.html',1,'Timer2 Mode0 ticks to duration/frequency convertions']]],
+  ['mode1_16',['Counter0 Mode1',['../group__counter0__mode1.html',1,'']]],
+  ['mode1_20basics_17',['Timer0 Mode1 basics',['../group__timer0__mode1.html',1,'']]],
+  ['mode1_20ticks_20to_20duration_20frequency_20convertions_18',['Timer0 Mode1 ticks to duration/frequency convertions',['../group__timer0__mode1__to__ms.html',1,'']]],
+  ['mode2_19',['mode2',['../group__counter0__mode2.html',1,'Counter0 Mode2'],['../group__uart1__mode2.html',1,'UART1 Mode2']]],
+  ['mode2_20basics_20',['Timer0 Mode2 basics',['../group__timer0__mode2.html',1,'']]],
+  ['mode2_20ticks_20to_20duration_20frequency_20convertions_21',['Timer0 Mode2 ticks to duration/frequency convertions',['../group__timer0__mode2__to__ms.html',1,'']]],
+  ['mode3_22',['Counter0 Mode3',['../group__counter0__mode3.html',1,'']]],
+  ['mode3_20basics_23',['Timer0 Mode3 basics',['../group__timer0__mode3.html',1,'']]],
+  ['mode3_20ticks_20to_20duration_20frequency_20convertions_24',['Timer0 Mode3 ticks to duration/frequency convertions',['../group__timer0__mode3__to__ms.html',1,'']]],
+  ['modules_20maturity_25',['Library modules maturity',['../index.html#autotoc_md5',1,'']]]
 ];

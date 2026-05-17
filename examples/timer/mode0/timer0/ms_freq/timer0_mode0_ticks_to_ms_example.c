@@ -44,8 +44,7 @@ void main()
 
    // Configure Timer0 in Mode 0 with 1T clock (no prescaler).
    timer0_mode0_1T_init();
-   // Disable Timer0 interrupt (not needed for this example).
-   disable_timer0_interrupt();
+   
    // Enable timer output on pin P3.5 (square wave generation).
    timer0_mode0_enable_P35_output();
    
@@ -57,12 +56,12 @@ void main()
    // Convert the tick count to milliseconds.
    // The function uses the current system clock and timer configuration
    // to compute the equivalent time in milliseconds.
-   uint32_t ms = timer0_mode0_ticks_to_ms(TICKS);
+   uint8_t ms = (uint8_t)timer0_mode0_ticks_to_ms(TICKS);
 
    // Infinite loop: print the calculated high‑time every iteration.
    while (1) {
         // The printed value corresponds to the high‑time of the square wave
         // on P3.5. For a 50% duty cycle, the period is twice this value.
-        printf_fast("P3.5 time is %lu ms\r\n", ms); // Expected output: 5 ms
+        printf_tiny("P3.5 time is %u ms\r\n", ms); // Expected output: 5 ms
    }
 }

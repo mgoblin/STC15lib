@@ -77,9 +77,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga653d1846d94b881b590b8ebf24d13067" id="r_ga653d1846d94b881b590b8ebf24d13067"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#ga653d1846d94b881b590b8ebf24d13067">timer_ticks_to_Hz</a> (uint16_t ticks, <a class="el" href="group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a> timer_clock_divider, uint16_t frequency_divider_scale)</td></tr>
-<tr class="memdesc:ga653d1846d94b881b590b8ebf24d13067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts ticks to timer frequency.  <br /></td></tr>
-<tr class="separator:ga653d1846d94b881b590b8ebf24d13067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga39b2286465ddd47b0551392d467558cd" id="r_ga39b2286465ddd47b0551392d467558cd"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#ga39b2286465ddd47b0551392d467558cd">timer_ticks_to_Hz</a> (uint16_t ticks, <a class="el" href="group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a> timer_clock_divider, uint16_t frequency_divider_scale)</td></tr>
+<tr class="memdesc:ga39b2286465ddd47b0551392d467558cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts ticks to timer frequency.  <br /></td></tr>
+<tr class="separator:ga39b2286465ddd47b0551392d467558cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9a145a62ec6a913e0016e96a2419deb1" id="r_ga9a145a62ec6a913e0016e96a2419deb1"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer__to__ms.html#ga9a145a62ec6a913e0016e96a2419deb1">timer_Hz_to_ticks</a> (uint32_t frequency, <a class="el" href="group__timer__common.html#gaf044d39b4f1cbe40ca04353b2852a21d">timer_clock_divider_t</a> timer_clock_divider, uint8_t frequency_divider_scale)</td></tr>
 <tr class="memdesc:ga9a145a62ec6a913e0016e96a2419deb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts given timer overflow frequency to ticks.  <br /></td></tr>
 <tr class="separator:ga9a145a62ec6a913e0016e96a2419deb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -343,14 +343,14 @@ Inaccuracies may arise due to integer division truncation, especially at higher 
 
 </div>
 </div>
-<a id="ga653d1846d94b881b590b8ebf24d13067" name="ga653d1846d94b881b590b8ebf24d13067"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga653d1846d94b881b590b8ebf24d13067">&#9670;&#160;</a></span>timer_ticks_to_Hz()</h2>
+<a id="ga39b2286465ddd47b0551392d467558cd" name="ga39b2286465ddd47b0551392d467558cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga39b2286465ddd47b0551392d467558cd">&#9670;&#160;</a></span>timer_ticks_to_Hz()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float timer_ticks_to_Hz </td>
+          <td class="memname">uint32_t timer_ticks_to_Hz </td>
           <td>(</td>
           <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>ticks</em>, </td>
@@ -386,7 +386,7 @@ Inaccuracies may arise due to integer division truncation, especially at higher 
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>float timer overflow frequency corresponding to given ticks count </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>uint32_t timer overflow frequency corresponding to given ticks count </dd></dl>
 
 </div>
 </div>

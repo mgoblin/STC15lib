@@ -24,11 +24,11 @@
  * @param timer_clock_divider uint8_t timer clock divider T12 or T1
  * @param frequency_divider_scale uint8_t mcu frequency divider scale 0..7
  * 
- * @return float timer overflow frequency corresponding to given ticks count 
+ * @return uint32_t timer overflow frequency corresponding to given ticks count 
  * 
  * @ingroup timer_to_ms
  */
-float timer_ticks_to_Hz(uint16_t ticks, timer_clock_divider_t timer_clock_divider, uint16_t frequency_divider_scale);
+uint32_t timer_ticks_to_Hz(uint16_t ticks, timer_clock_divider_t timer_clock_divider, uint16_t frequency_divider_scale);
 
 /**
  * @brief Converts given timer overflow frequency to ticks.

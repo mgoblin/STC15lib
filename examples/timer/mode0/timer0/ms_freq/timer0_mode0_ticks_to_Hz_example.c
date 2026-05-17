@@ -38,8 +38,6 @@
 #include <uart.h>
 #include <stdio.h>
 
-#include <delay.h>
-
 /// @brief LED pin
 #define LED P10
 
@@ -71,13 +69,9 @@ void main()
     // This will show the timer signal on the pin (useful for debugging with oscilloscope)
     timer0_mode0_enable_P35_output();
 
-    // Enable Timer0 interrupt
-    // This will call timerISR() on timer0 overflow
-    enable_timer0_interrupt();
-
     // Calculate the timer frequency corresponding to the specified tick value
     // The function timer0_mode0_ticks_to_Hz() converts ticks to frequency in Hz
-    const uint32_t timer_frequency = timer0_mode0_ticks_to_Hz(TICKS);
+    const uint8_t timer_frequency = (uint8_t)timer0_mode0_ticks_to_Hz(TICKS);
 
     // Start Timer0 with the specified number of ticks
     // The timer will count down from this value and generate an overflow interrupt
@@ -90,10 +84,9 @@ void main()
     while (1) 
     {
        // Print the calculated timer frequency to serial monitor
-       // 11059200 Hz
-       printf_fast("Timer frequency is %lu Hz\r\n", timer_frequency); 
-       
-       // Add a small delay between measurements
-       delay_ms(100);
+       printf_tiny(
+        "Timer frequency is %u Hz\r\n", 
+        timer_frequency
+       ); // 168 Hz 
     }
 }

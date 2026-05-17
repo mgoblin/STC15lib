@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ticks_0',['TICKS',['../timer0__mode2__ticks__to__Hz__example_8c.html#a3a33057ab7207eb0943b7d45358dfaef',1,'timer0_mode2_ticks_to_Hz_example.c']]]
+  ['isr_5fcounter_0',['isr_counter',['../timer0__mode0__Hz__to__ticks__example_8c.html#ae90e7a7ffb22d9ab9899a7cf210f98c3',1,'timer0_mode0_Hz_to_ticks_example.c']]]
 ];

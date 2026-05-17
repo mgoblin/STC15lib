@@ -33,7 +33,6 @@ void delay_ms_f(uint16_t ms)
 void main()
 {
     timer0_mode0_1T_init();
-    enable_timer0_interrupt();
 
     while(1)
     {
