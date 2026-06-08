@@ -78,4 +78,25 @@
 
 ///@}
 
+/** @name frequency and ticks
+ *  Timer ticks to frequency and vice versa convertions  
+ */
+///@{
+
+/**
+ * @brief Start timer0 in mode 0 with ms duration
+ * 
+ * @param ms uint16_t timer overflow duration
+ * 
+ * @ingroup timer0_mode0_to_ms
+ */
+#define timer0_mode0_start_ms(ms)                       \
+do                                                      \
+{                                                       \
+    uint16_t ticks = timer0_mode0_ms_to_ticks(ms);      \
+    timer0_mode0_start(ticks);                          \
+} while (0);
+
+///@}
+
 #endif
