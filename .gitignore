@@ -1,4 +1,5 @@
 .pio
+.gigacode
 **/.venv
 **/__pycache__
 .vscode/.browse.c_cpp.db*
