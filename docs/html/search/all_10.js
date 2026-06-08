@@ -10,7 +10,7 @@ var searchData=
   ['library_20modules_20maturity_7',['Library modules maturity',['../index.html#autotoc_md6',1,'']]],
   ['library_20to_20your_20project_8',['Add library to your project',['../index.html#autotoc_md3',1,'']]],
   ['linux_9',['How to run unit tests from terminal on Linux',['../md_utils_2csv2hex_2README.html#autotoc_md13',1,'']]],
-  ['log_10',['Change log',['../index.html#autotoc_md8',1,'']]],
+  ['log_10',['log',['../md_CHANGELOG.html',1,'Change log'],['../index.html#autotoc_md8',1,'Change log']]],
   ['low_11',['LOW',['../group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a6a226f4143ca3b18999551694cdb72a8',1,'interrupt.h']]],
   ['low_20level_20stc15_20prorgamming_12',['Low level STC15 prorgamming',['../index.html#autotoc_md4',1,'']]],
   ['low_5fto_5fhigh_13',['LOW_TO_HIGH',['../group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a328b755a70c4d67ceeb23e098b8da58b',1,'interrupt.h']]],

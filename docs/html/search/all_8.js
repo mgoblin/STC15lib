@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['change_20log_0',['Change log',['../index.html#autotoc_md8',1,'']]],
+  ['change_20log_0',['change log',['../md_CHANGELOG.html',1,'Change log'],['../index.html#autotoc_md8',1,'Change log']]],
   ['chip_5fid_2eh_1',['chip_id.h',['../chip__id_8h.html',1,'']]],
   ['chip_5fid_5faddr_5from_2',['CHIP_ID_ADDR_ROM',['../group__chip__id.html#gade5a33c9ca0579ba754154984706deff',1,'chip_id.h']]],
   ['chip_5fid_5fsize_3',['CHIP_ID_SIZE',['../group__chip__id.html#ga909ec39ac520a4448627b2d9aa61d016',1,'chip_id.h']]],

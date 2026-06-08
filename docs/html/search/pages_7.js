@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['version_20history_0',['Version history',['../md_CHANGELOG.html',1,'']]]
+  ['what_20it_20is_0',['What it is',['../index.html',1,'']]]
 ];
