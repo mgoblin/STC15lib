@@ -78,8 +78,8 @@
 
 ///@}
 
-/** @name frequency and ticks
- *  Timer ticks to frequency and vice versa convertions  
+/** @name timer start for frequency and ms
+ *  Start Timer for ms or frequency  
  */
 ///@{
 
