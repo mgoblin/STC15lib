@@ -83,4 +83,27 @@
 #define timer2_mode0_ms_to_ticks(ms) (timer_ms_to_ticks(ms, get_timer2_clock_divider(), get_frequency_divider_scale()))
 ///@}
 
+
+/** @name timer start for frequency and ms
+ *  Start Timer for ms or frequency  
+ */
+///@{
+
+/**
+ * @brief Start timer2 in mode 0 with ms duration
+ * 
+ * @param ms uint16_t timer overflow duration
+ * 
+ * @ingroup timer2_mode0_to_ms
+ */
+#define timer2_mode0_start_ms(ms)                       \
+do                                                      \
+{                                                       \
+    uint16_t ticks = timer2_mode0_ms_to_ticks(ms);      \
+    timer2_mode0_start(ticks);                          \
+} while (0);
+
+///@}
+
+
 #endif
