@@ -100,7 +100,19 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="group__timer0__mode3__to__ms.html#ga556664a5c060b46c5e0f08cc28bdb3ff">   77</a></span><span class="preprocessor">#define timer0_mode3_ms_to_ticks(ms) (timer_ms_to_ticks(ms, get_timer0_clock_divider(), get_frequency_divider_scale()))</span></div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="foldopen" id="foldopen00094" data-start="" data-end="">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="group__timer0__mode3__to__ms.html#ga2e6bcc6d2dca3b9727b4abd662154eb1">   94</a></span><span class="preprocessor">#define timer0_mode3_start_ms(ms)                       \</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">do                                                      \</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">{                                                       \</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">    uint16_t ticks = timer0_mode3_ms_to_ticks(ms);      \</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">    timer0_mode3_start(ticks);                          \</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">} while (0);</span></div>
+</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="afrequency_8h_html"><div class="ttname"><a href="frequency_8h.html">frequency.h</a></div></div>
 <div class="ttc" id="atimer0__mode3_8h_html"><div class="ttname"><a href="timer0__mode3_8h.html">timer0_mode3.h</a></div></div>
 <div class="ttc" id="atimer__common_8h_html"><div class="ttname"><a href="timer__common_8h.html">timer_common.h</a></div></div>

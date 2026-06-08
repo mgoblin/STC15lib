@@ -78,4 +78,26 @@
 
 ///@}
 
+
+/** @name timer start for frequency and ms
+ *  Start Timer for ms or frequency  
+ */
+///@{
+
+/**
+ * @brief Start timer0 in mode 3 with ms duration
+ * 
+ * @param ms uint16_t timer overflow duration
+ * 
+ * @ingroup timer0_mode3_to_ms
+ */
+#define timer0_mode3_start_ms(ms)                       \
+do                                                      \
+{                                                       \
+    uint16_t ticks = timer0_mode3_ms_to_ticks(ms);      \
+    timer0_mode3_start(ticks);                          \
+} while (0);
+
+///@}
+
 #endif
