@@ -112,7 +112,7 @@ See examples in [https://github.com/mgoblin/STC15lib/tree/main/examples](https:/
 [Docs](https://mgoblin.github.io/STC15lib/docs/html/index.html)
 
 # Change log
-[Version history](https://mgoblin.github.io/STC15lib/CHANGELOG.html)
+[Change log](https://mgoblin.github.io/STC15lib/CHANGELOG.html)
 
 # References
 
