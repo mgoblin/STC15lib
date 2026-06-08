@@ -185,7 +185,6 @@
 * Timer convertions between ticks and ms/frequency routines refactored
 * timer0_modeX_delay() simplified
 * pin examples folder renamed to gpio
-* TODO Write examples in the pin/value
 * TODO Add timerX start on ms/mcs routines
 * TODO Add timerX start on freq routines
 * TODO Add sync delay for ms
