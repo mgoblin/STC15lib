@@ -23,4 +23,9 @@ env.Default(
         'timer0_mode3_Hz_to_ticks_example',
         ['timer0_mode3_Hz_to_ticks_example.c', 'uart.c', 'timer_Hz_to_ticks.c']
     ),
+
+    env.Program(
+        'timer0_mode3_start_ms_example',
+        ['timer0_mode3_start_ms_example.c', 'timer_ms_to_ticks.c']
+    ),
 )

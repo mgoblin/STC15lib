@@ -186,12 +186,8 @@
 * Timer convertions between ticks and ms/frequency routines refactored
 * timer0_modeX_delay() simplified
 * pin examples folder renamed to gpio
-* Timer0 mode0 start on ms/mcs routines implemented
-* Timer0 mode1 start on ms/mcs routines implemented
-* Timer0 mode2 start on ms/mcs routines implemented
-* TODO Add timer0 mode3 start on ms/mcs routines
+* Timer0 start on ms/mcs routines implemented
 * TODO Add timer2 mode0 start on ms/mcs routines
-* TODO Add timerX start on ms/mcs routines
 * TODO Add timerX start on freq routines
 * TODO Add sync delay for ms
 * TODO Fix: examples flash targets on cmake build
