@@ -1,49 +1,51 @@
 <map id="include/uart1_8bit_shared.h" name="include/uart1_8bit_shared.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="1977,5,2116,45"/>
-<area shape="rect" id="Node000002" href="$uart1__mode0_8h.html" title=" " alt="" coords="1772,101,1943,126"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1994,53,1884,103,1881,98,1992,49"/>
-<area shape="rect" id="Node000003" href="$uart1__mode1__timer2__12T_8h.html" title=" " alt="" coords="1967,93,2126,133"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="2049,59,2049,93,2044,93,2044,59"/>
-<area shape="rect" id="Node000004" href="$uart1__mode1__timer2__1T_8h.html" title=" " alt="" coords="2150,93,2309,133"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="2100,49,2190,91,2188,96,2098,54"/>
-<area shape="rect" id="Node000005" href="$uart_8h.html" title=" " alt="" coords="2174,181,2285,207"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="2232,147,2232,181,2227,181,2227,147"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="2112,5,2251,45"/>
+<area shape="rect" id="Node000002" href="$uart1__mode0_8h.html" title=" " alt="" coords="1907,101,2077,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2129,53,2018,103,2016,98,2126,49"/>
+<area shape="rect" id="Node000003" href="$uart1__mode1__timer2__12T_8h.html" title=" " alt="" coords="2102,93,2261,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="2184,59,2184,93,2179,93,2179,59"/>
+<area shape="rect" id="Node000004" href="$uart1__mode1__timer2__1T_8h.html" title=" " alt="" coords="2285,93,2443,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="2235,49,2325,91,2323,96,2233,54"/>
+<area shape="rect" id="Node000005" href="$uart_8h.html" title=" " alt="" coords="2309,181,2419,207"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="2367,147,2367,181,2361,181,2361,147"/>
 <area shape="rect" id="Node000006" href="$counter0__mode1__example_8c.html" title=" " alt="" coords="5,262,264,302"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="2160,199,1791,204,1246,214,687,232,453,243,276,257,225,265,224,259,276,252,452,238,687,226,1246,209,1791,198,2160,193"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="2295,199,1904,203,1319,213,718,230,466,243,276,257,225,265,224,259,276,252,466,237,718,225,1319,208,1904,198,2295,193"/>
 <area shape="rect" id="Node000007" href="$timer0__mode0__Hz__to__ticks__example_8c.html" title="Example demonstrating conversion from frequency (Hz) to timer0 ticks." alt="" coords="289,255,519,309"/>
-<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="2161,199,1364,215,884,233,684,244,532,257,520,259,519,254,532,252,683,239,884,227,1364,210,2161,194"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="2295,199,1946,203,1436,214,915,231,697,243,532,257,520,259,519,254,532,252,696,238,915,226,1436,208,1946,198,2295,193"/>
 <area shape="rect" id="Node000008" href="$timer0__mode0__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="544,255,779,309"/>
-<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="2160,199,1484,218,1084,235,917,246,791,257,779,259,779,254,790,252,917,240,1083,230,1483,213,2160,194"/>
-<area shape="rect" id="Node000009" href="$timer0__mode0__ticks__to__Hz__example_8c.html" title="Example demonstrating conversion from timer0 ticks to frequency (Hz)" alt="" coords="803,255,1034,309"/>
-<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="2160,198,1968,200,1693,208,1372,226,1208,240,1047,257,1034,259,1034,254,1046,252,1207,234,1372,220,1692,203,1968,195,2160,193"/>
-<area shape="rect" id="Node000010" href="$timer0__mode0__ticks__to__ms__example_8c.html" title=" " alt="" coords="1059,255,1293,309"/>
-<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="2160,199,1794,214,1551,231,1306,257,1294,259,1293,254,1305,252,1551,226,1794,209,2160,194"/>
-<area shape="rect" id="Node000011" href="$timer2__mode0__ticks__to__Hz__example_8c.html" title="Example demonstrating conversion from timer2 ticks to frequency (Hz)" alt="" coords="1317,255,1496,309"/>
-<area shape="poly" id="edge10_Node000005_Node000011" title=" " alt="" coords="2160,200,1875,215,1692,232,1508,257,1496,259,1496,254,1508,252,1692,227,1875,210,2160,194"/>
-<area shape="rect" id="Node000012" href="$timer2__mode0__ticks__to__ms__example_8c.html" title=" " alt="" coords="1521,255,1703,309"/>
-<area shape="poly" id="edge11_Node000005_Node000012" title=" " alt="" coords="2161,203,1960,222,1837,238,1715,257,1704,259,1703,254,1714,252,1837,232,1959,217,2160,198"/>
-<area shape="rect" id="Node000013" href="$timer0__mode1__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="1727,255,1910,309"/>
-<area shape="poly" id="edge12_Node000005_Node000013" title=" " alt="" coords="2161,210,1923,257,1911,260,1910,255,1922,252,2160,205"/>
-<area shape="rect" id="Node000014" href="$timer0__mode1__ticks__to__Hz__example_8c.html" title="Example demonstrating conversion from timer0 ticks to frequency (Hz)" alt="" coords="1935,255,2113,309"/>
-<area shape="poly" id="edge13_Node000005_Node000014" title=" " alt="" coords="2190,215,2088,257,2086,252,2188,210"/>
-<area shape="rect" id="Node000015" href="$timer0__mode1__ticks__to__ms__example_8c.html" title=" " alt="" coords="2138,255,2321,309"/>
-<area shape="poly" id="edge14_Node000005_Node000015" title=" " alt="" coords="2232,220,2232,255,2227,255,2227,220"/>
-<area shape="rect" id="Node000016" href="$timer0__mode2__Hz__to__ticks__example_8c.html" title="Example demonstrating conversion from frequency (Hz) to timer0 ticks." alt="" coords="2345,255,2524,309"/>
-<area shape="poly" id="edge15_Node000005_Node000016" title=" " alt="" coords="2271,210,2373,252,2371,257,2269,215"/>
-<area shape="rect" id="Node000017" href="$timer0__mode2__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="2549,255,2731,309"/>
-<area shape="poly" id="edge16_Node000005_Node000017" title=" " alt="" coords="2299,205,2537,252,2549,255,2548,260,2535,257,2298,210"/>
-<area shape="rect" id="Node000018" href="$timer0__mode2__ticks__to__Hz__example_8c.html" title="Example demonstrating conversion from timer0 ticks to frequency (Hz)" alt="" coords="2756,255,2935,309"/>
-<area shape="poly" id="edge17_Node000005_Node000018" title=" " alt="" coords="2299,198,2499,217,2622,232,2744,252,2756,254,2755,260,2744,257,2621,238,2499,222,2298,203"/>
-<area shape="rect" id="Node000019" href="$timer0__mode2__ticks__to__mcs__example_8c.html" title=" " alt="" coords="2959,255,3148,309"/>
-<area shape="poly" id="edge18_Node000005_Node000019" title=" " alt="" coords="2299,195,2582,211,2764,228,2947,252,2959,254,2958,259,2946,257,2764,233,2582,216,2298,200"/>
-<area shape="rect" id="Node000020" href="$timer0__mode3__Hz__to__ticks__example_8c.html" title="Example demonstrating conversion from frequency (Hz) to timer0 ticks." alt="" coords="3172,255,3351,309"/>
-<area shape="poly" id="edge19_Node000005_Node000020" title=" " alt="" coords="2298,193,2453,195,2668,204,2913,221,3038,235,3160,252,3172,254,3171,259,3160,257,3037,240,2912,227,2667,209,2453,201,2298,198"/>
-<area shape="rect" id="Node000021" href="$timer0__mode3__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="3375,255,3558,309"/>
-<area shape="poly" id="edge20_Node000005_Node000021" title=" " alt="" coords="2299,192,2484,192,2748,199,3053,217,3210,232,3363,252,3375,254,3375,259,3362,257,3209,237,3053,222,2748,204,2484,197,2299,197"/>
-<area shape="rect" id="Node000022" href="$timer0__mode3__ticks__to__Hz__example_8c.html" title="Example demonstrating conversion from timer0 ticks to frequency (Hz)" alt="" coords="3583,255,3761,309"/>
-<area shape="poly" id="edge21_Node000005_Node000022" title=" " alt="" coords="2299,194,2930,211,3300,228,3454,239,3571,252,3583,254,3582,259,3570,257,3454,244,3300,233,2930,216,2298,199"/>
-<area shape="rect" id="Node000023" href="$timer0__mode3__ticks__to__ms__example_8c.html" title=" " alt="" coords="3786,255,3969,309"/>
-<area shape="poly" id="edge22_Node000005_Node000023" title=" " alt="" coords="2298,193,2598,198,3024,208,3457,226,3637,238,3774,252,3786,254,3785,259,3773,257,3637,243,3457,231,3024,214,2598,203,2298,199"/>
-<area shape="rect" id="Node000024" href="$mem__print_8h_source.html" title=" " alt="" coords="3993,262,4159,302"/>
-<area shape="poly" id="edge23_Node000005_Node000024" title=" " alt="" coords="2299,193,2634,195,3121,204,3618,222,3825,235,3982,252,4016,259,4015,264,3981,257,3825,240,3617,227,3121,209,2634,201,2298,198"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="2295,199,1556,217,1114,234,930,245,791,257,779,259,779,254,790,252,930,240,1114,229,1556,211,2295,194"/>
+<area shape="rect" id="Node000009" href="$timer0__mode0__start__ms__example_8c.html" title="Example demonstrating Timer0 Mode 0 operation with millisecond&#45;based timing." alt="" coords="803,255,1016,309"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="2295,200,1666,218,1298,235,1144,246,1028,257,1017,259,1016,254,1028,252,1144,240,1297,230,1666,213,2295,194"/>
+<area shape="rect" id="Node000010" href="$timer0__mode0__ticks__to__Hz__example_8c.html" title="Example demonstrating conversion from timer0 ticks to frequency (Hz)" alt="" coords="1041,255,1271,309"/>
+<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="2294,198,2117,201,1867,210,1578,228,1284,257,1272,259,1271,254,1284,252,1577,222,1867,205,2117,196,2294,193"/>
+<area shape="rect" id="Node000011" href="$timer0__mode0__ticks__to__ms__example_8c.html" title=" " alt="" coords="1296,255,1531,309"/>
+<area shape="poly" id="edge10_Node000005_Node000011" title=" " alt="" coords="2295,200,1970,216,1758,233,1543,257,1531,259,1531,254,1542,252,1757,228,1970,211,2295,195"/>
+<area shape="rect" id="Node000012" href="$timer2__mode0__ticks__to__Hz__example_8c.html" title="Example demonstrating conversion from timer2 ticks to frequency (Hz)" alt="" coords="1555,255,1733,309"/>
+<area shape="poly" id="edge11_Node000005_Node000012" title=" " alt="" coords="2295,201,2052,218,1899,235,1746,257,1734,260,1733,254,1745,252,1898,229,2051,213,2295,196"/>
+<area shape="rect" id="Node000013" href="$timer2__mode0__ticks__to__ms__example_8c.html" title=" " alt="" coords="1758,255,1941,309"/>
+<area shape="poly" id="edge12_Node000005_Node000013" title=" " alt="" coords="2295,206,2138,226,1952,257,1942,260,1940,254,1952,252,2137,221,2294,200"/>
+<area shape="rect" id="Node000014" href="$timer0__mode1__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="1965,255,2147,309"/>
+<area shape="poly" id="edge13_Node000005_Node000014" title=" " alt="" coords="2310,213,2149,258,2147,253,2309,208"/>
+<area shape="rect" id="Node000015" href="$timer0__mode1__ticks__to__Hz__example_8c.html" title="Example demonstrating conversion from timer0 ticks to frequency (Hz)" alt="" coords="2172,255,2351,309"/>
+<area shape="poly" id="edge14_Node000005_Node000015" title=" " alt="" coords="2342,217,2294,257,2291,253,2338,213"/>
+<area shape="rect" id="Node000016" href="$timer0__mode1__ticks__to__ms__example_8c.html" title=" " alt="" coords="2375,255,2558,309"/>
+<area shape="poly" id="edge15_Node000005_Node000016" title=" " alt="" coords="2390,213,2437,253,2434,257,2386,217"/>
+<area shape="rect" id="Node000017" href="$timer0__mode2__Hz__to__ticks__example_8c.html" title="Example demonstrating conversion from frequency (Hz) to timer0 ticks." alt="" coords="2583,255,2761,309"/>
+<area shape="poly" id="edge16_Node000005_Node000017" title=" " alt="" coords="2420,208,2583,253,2582,258,2418,213"/>
+<area shape="rect" id="Node000018" href="$timer0__mode2__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="2786,255,2969,309"/>
+<area shape="poly" id="edge17_Node000005_Node000018" title=" " alt="" coords="2434,201,2590,221,2774,252,2786,255,2785,260,2773,257,2589,227,2433,206"/>
+<area shape="rect" id="Node000019" href="$timer0__mode2__ticks__to__Hz__example_8c.html" title="Example demonstrating conversion from timer0 ticks to frequency (Hz)" alt="" coords="2993,255,3172,309"/>
+<area shape="poly" id="edge18_Node000005_Node000019" title=" " alt="" coords="2433,196,2676,213,2829,230,2982,252,2994,254,2993,260,2981,257,2828,235,2676,219,2433,201"/>
+<area shape="rect" id="Node000020" href="$timer0__mode2__ticks__to__mcs__example_8c.html" title=" " alt="" coords="3196,255,3385,309"/>
+<area shape="poly" id="edge19_Node000005_Node000020" title=" " alt="" coords="2433,194,2571,198,2758,208,2970,225,3184,252,3196,254,3195,259,3184,257,2970,230,2758,213,2571,203,2433,199"/>
+<area shape="rect" id="Node000021" href="$timer0__mode3__Hz__to__ticks__example_8c.html" title="Example demonstrating conversion from frequency (Hz) to timer0 ticks." alt="" coords="3409,255,3588,309"/>
+<area shape="poly" id="edge20_Node000005_Node000021" title=" " alt="" coords="2433,192,2604,193,2843,201,3119,219,3260,233,3398,252,3409,254,3408,259,3397,257,3259,239,3118,224,2843,206,2604,199,2433,197"/>
+<area shape="rect" id="Node000022" href="$timer0__mode3__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="3613,255,3795,309"/>
+<area shape="poly" id="edge21_Node000005_Node000022" title=" " alt="" coords="2433,194,3016,212,3353,230,3494,240,3600,252,3613,254,3612,259,3600,257,3493,245,3353,235,3015,218,2433,200"/>
+<area shape="rect" id="Node000023" href="$timer0__mode3__ticks__to__Hz__example_8c.html" title="Example demonstrating conversion from timer0 ticks to frequency (Hz)" alt="" coords="3820,255,3999,309"/>
+<area shape="poly" id="edge22_Node000005_Node000023" title=" " alt="" coords="2433,194,2715,199,3113,209,3514,227,3682,238,3808,252,3820,254,3819,259,3808,257,3681,244,3514,232,3113,215,2715,204,2433,199"/>
+<area shape="rect" id="Node000024" href="$timer0__mode3__ticks__to__ms__example_8c.html" title=" " alt="" coords="4023,255,4206,309"/>
+<area shape="poly" id="edge23_Node000005_Node000024" title=" " alt="" coords="2433,193,2750,197,3207,207,3671,225,3865,237,4011,252,4023,254,4023,259,4010,257,3864,242,3671,230,3206,212,2750,203,2433,199"/>
+<area shape="rect" id="Node000025" href="$mem__print_8h_source.html" title=" " alt="" coords="4230,262,4397,302"/>
+<area shape="poly" id="edge24_Node000005_Node000025" title=" " alt="" coords="2433,193,2786,195,3303,202,3832,220,4053,234,4219,252,4254,259,4253,265,4218,257,4052,239,3831,226,3303,208,2786,200,2433,198"/>
 </map>
