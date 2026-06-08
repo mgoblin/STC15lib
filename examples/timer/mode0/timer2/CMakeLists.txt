@@ -1,3 +1,5 @@
+add_subdirectory("ms_freq")
+
 add_executable(timer2_mode0_1T_interrupt_example
     timer2_mode0_1T_interrupt_example.c
 )
