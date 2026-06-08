@@ -14,8 +14,8 @@ var searchData=
   ['set_5ftimer0_5finterrupt_5fpriority_11',['set_timer0_interrupt_priority',['../group__interrupts.html#ga592af19616ab5d4dfa15bc48c451ffe6',1,'interrupt.h']]],
   ['set_5fuart1_5finterrupt_5fpriority_12',['set_uart1_interrupt_priority',['../group__interrupts.html#ga82ffad64559fd095450b0c283004b8ac',1,'interrupt.h']]],
   ['simple_20uart1_13',['Simple UART1',['../group__uart.html',1,'']]],
-  ['stc15_20hal_20functions_14',['Use STC15 HAL functions',['../index.html#autotoc_md4',1,'']]],
-  ['stc15_20prorgamming_15',['Low level STC15 prorgamming',['../index.html#autotoc_md3',1,'']]],
+  ['stc15_20hal_20functions_14',['Use STC15 HAL functions',['../index.html#autotoc_md5',1,'']]],
+  ['stc15_20prorgamming_15',['Low level STC15 prorgamming',['../index.html#autotoc_md4',1,'']]],
   ['stop_20bits_20send_20receive_20functions_16',['UART1 9bit, 8-bit with parity, 8-bit with two stop bits send/receive functions',['../group__uart1__9bit__shared.html',1,'']]],
   ['sys_2eh_17',['sys.h',['../sys_8h.html',1,'']]],
   ['sysclk_18',['SYSclk',['../group__freq.html#gac4ca6015de4bde7454d665a3314420bf',1,'frequency.h']]]

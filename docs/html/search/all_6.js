@@ -19,7 +19,7 @@ var searchData=
   ['adc_5fspeed_5f90_16',['ADC_SPEED_90',['../group__adc.html#ggaa63b42a360b882a87434ae898707d473adf2851e0d4945fff972f045ae062daf0',1,'adc.h']]],
   ['adc_5fspeed_5ft_17',['adc_speed_t',['../group__adc.html#gaa63b42a360b882a87434ae898707d473',1,'adc.h']]],
   ['adc_5fstart_5fbit_18',['ADC_START_BIT',['../adc_8h.html#a84aeff7f7cb774816c29ed00c0ad6551',1,'adc.h']]],
-  ['add_20library_20to_20your_20project_19',['Add library to your project',['../index.html#autotoc_md2',1,'']]],
+  ['add_20library_20to_20your_20project_19',['Add library to your project',['../index.html#autotoc_md3',1,'']]],
   ['adrj_5fbit_20',['ADRJ_BIT',['../adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35',1,'adc.h']]],
   ['and_20vise_20versa_20conversions_21',['Timer ticks to duration/frequency and vise versa conversions',['../group__timer__to__ms.html',1,'']]],
   ['any_5fedge_22',['ANY_EDGE',['../group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d',1,'interrupt.h']]]

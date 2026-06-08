@@ -5,10 +5,10 @@ var searchData=
   ['reading_2',['Timer configuration reading',['../group__timer__common.html',1,'']]],
   ['readme_3',['README',['../md_examples_2README.html',1,'']]],
   ['receive_20functions_4',['receive functions',['../group__uart1__8bit__shared.html',1,'UART1 8-bit send/receive functions'],['../group__uart1__9bit__shared.html',1,'UART1 9bit, 8-bit with parity, 8-bit with two stop bits send/receive functions']]],
-  ['references_5',['References',['../index.html#autotoc_md8',1,'']]],
+  ['references_5',['References',['../index.html#autotoc_md9',1,'']]],
   ['reset_6',['reset',['../group__mcu__reset.html#gadff1ae9368523be49ce8ef497d4ca902',1,'reset:&#160;reset.h'],['../group__mcu__reset.html',1,'Reset']]],
   ['reset_2eh_7',['reset.h',['../reset_8h.html',1,'']]],
-  ['run_20unit_20tests_20from_20terminal_20on_20linux_8',['How to run unit tests from terminal on Linux',['../md_utils_2csv2hex_2README.html#autotoc_md12',1,'']]],
+  ['run_20unit_20tests_20from_20terminal_20on_20linux_8',['How to run unit tests from terminal on Linux',['../md_utils_2csv2hex_2README.html#autotoc_md13',1,'']]],
   ['rxd_5fp16_5ftxd_5fp17_9',['RxD_P16_TxD_P17',['../group__uart1__shared.html#ggaed599bf26e2baa98c2d108a072d02337a21147eba9db31edf831bc27da595c909',1,'uart1_shared.h']]],
   ['rxd_5fp30_5ftxd_5fp31_10',['RxD_P30_TxD_P31',['../group__uart1__shared.html#ggaed599bf26e2baa98c2d108a072d02337abb894b0d9862cbfcd47c453dba0b9c47',1,'uart1_shared.h']]],
   ['rxd_5fp36_5ftxd_5fp37_11',['RxD_P36_TxD_P37',['../group__uart1__shared.html#ggaed599bf26e2baa98c2d108a072d02337a5d9bd9050fee81f933458cb44d02eed3',1,'uart1_shared.h']]]
