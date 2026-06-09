@@ -188,6 +188,11 @@
 * pin examples folder renamed to gpio
 * Timer0 start on ms/mcs routines implemented
 * Timer2 mode0 start on ms/mcs routines implemented
+* TODO Add timer0 mode0 start on freq routines
+* TODO Add timer0 mode1 start on freq routines
+* TODO Add timer0 mode2 start on freq routines
+* TODO Add timer0 mode3 start on freq routines
+* TODO Add timer2 mode0 start on freq routines
 * TODO Add timerX start on freq routines
 * TODO Add sync delay for ms
 * TODO Fix: examples flash targets on cmake build

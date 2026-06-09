@@ -97,6 +97,9 @@ $(function() {
 <tr class="memitem:ga25bb9208ca465cc49e50a3a6ae2a6603" id="r_ga25bb9208ca465cc49e50a3a6ae2a6603"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode0__to__ms.html#ga25bb9208ca465cc49e50a3a6ae2a6603">timer0_mode0_start_ms</a>(ms)</td></tr>
 <tr class="memdesc:ga25bb9208ca465cc49e50a3a6ae2a6603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start timer0 in mode 0 with ms duration.  <br /></td></tr>
 <tr class="separator:ga25bb9208ca465cc49e50a3a6ae2a6603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga963eacc27413417cf8eb95a9a00a9b18" id="r_ga963eacc27413417cf8eb95a9a00a9b18"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode0__to__ms.html#ga963eacc27413417cf8eb95a9a00a9b18">timer0_mode0_start_Hz</a>(freq)</td></tr>
+<tr class="memdesc:ga963eacc27413417cf8eb95a9a00a9b18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start timer0 in mode 0 with Hz frequency.  <br /></td></tr>
+<tr class="separator:ga963eacc27413417cf8eb95a9a00a9b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions and data structures for converting timer ticks to frequency and times for timer0 mode0.</p>
@@ -123,7 +126,7 @@ $(function() {
 <dl class="section warning"><dt>Warning</dt><dd>On uint16_t overflow this routine returns 0.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">frequency</td><td>uint32_t frequency value in Hz. Should not be 0;</td></tr>
+    <tr><td class="paramname">frequency</td><td>3uint32_t frequency value in Hz. Should not be 0;1</td></tr>
   </table>
   </dd>
 </dl>
@@ -155,6 +158,38 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>uint16_t Number of timer ticks corresponding to the input time. Returns 0 if the result overflows uint16_t range. </dd></dl>
+
+</div>
+</div>
+<a id="ga963eacc27413417cf8eb95a9a00a9b18" name="ga963eacc27413417cf8eb95a9a00a9b18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga963eacc27413417cf8eb95a9a00a9b18">&#9670;&#160;</a></span>timer0_mode0_start_Hz</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer0_mode0_start_Hz</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">freq</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span>                                                      \</div>
+<div class="line">{                                                       \</div>
+<div class="line">    uint16_t ticks = <a class="code hl_define" href="group__timer0__mode0__to__ms.html#ga40b9d76ff711ffb65c9d75919f4fc08c">timer0_mode0_Hz_to_ticks</a>(freq);    \</div>
+<div class="line">    timer0_mode0_start(ticks);                          \</div>
+<div class="line">} <span class="keywordflow">while</span> (0);</div>
+<div class="ttc" id="agroup__timer0__mode0__to__ms_html_ga40b9d76ff711ffb65c9d75919f4fc08c"><div class="ttname"><a href="group__timer0__mode0__to__ms.html#ga40b9d76ff711ffb65c9d75919f4fc08c">timer0_mode0_Hz_to_ticks</a></div><div class="ttdeci">#define timer0_mode0_Hz_to_ticks(frequency)</div><div class="ttdoc">Converts frequency to timer0 mode0 ticks.</div><div class="ttdef"><b>Definition</b> timer0_mode0_to_ms.h:53</div></div>
+</div><!-- fragment -->
+<p>Start timer0 in mode 0 with Hz frequency. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">freq</td><td>uint32_t timer overflow frequency in Hz </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

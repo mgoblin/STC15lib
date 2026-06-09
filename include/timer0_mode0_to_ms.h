@@ -44,7 +44,7 @@
  * 
  * @warning On uint16_t overflow this routine returns 0. 
  * 
- * @param frequency uint32_t frequency value in Hz. Should not be 0;
+ * @param frequency 3uint32_t frequency value in Hz. Should not be 0;1
  * 
  * @return uint16_t timer0 ticks corresponding to frequency value or 0 on uint16_t overflow 
  * 
@@ -96,6 +96,21 @@ do                                                      \
     uint16_t ticks = timer0_mode0_ms_to_ticks(ms);      \
     timer0_mode0_start(ticks);                          \
 } while (0);
+
+/**
+ * @brief Start timer0 in mode 0 with Hz frequency
+ * 
+ * @param freq uint32_t timer overflow frequency in Hz
+ * 
+ * @ingroup timer0_mode0_to_ms
+ */
+#define timer0_mode0_start_Hz(freq)                     \
+do                                                      \
+{                                                       \
+    uint16_t ticks = timer0_mode0_Hz_to_ticks(freq);    \
+    timer0_mode0_start(ticks);                          \
+} while (0);
+
 
 ///@}
 
