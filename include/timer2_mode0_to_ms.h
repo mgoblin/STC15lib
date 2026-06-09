@@ -103,6 +103,21 @@ do                                                      \
     timer2_mode0_start(ticks);                          \
 } while (0);
 
+/**
+ * @brief Start timer2 in mode 0 with Hz frequency
+ * 
+ * @param freq uint32_t timer overflow frequency in Hz
+ * 
+ * @ingroup timer2_mode0_to_ms
+ */
+#define timer2_mode0_start_Hz(freq)                     \
+do                                                      \
+{                                                       \
+    uint16_t ticks = timer2_mode0_Hz_to_ticks(freq);    \
+    timer2_mode0_start(ticks);                          \
+} while (0);
+
+
 ///@}
 
 

@@ -100,6 +100,9 @@ $(function() {
 <tr class="memitem:gae122be356366820b8e4e2f2e79d46bb1" id="r_gae122be356366820b8e4e2f2e79d46bb1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0__to__ms.html#gae122be356366820b8e4e2f2e79d46bb1">timer2_mode0_start_ms</a>(ms)</td></tr>
 <tr class="memdesc:gae122be356366820b8e4e2f2e79d46bb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start timer2 in mode 0 with ms duration.  <br /></td></tr>
 <tr class="separator:gae122be356366820b8e4e2f2e79d46bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa635f5711c66e70298208ec0e58bf716" id="r_gaa635f5711c66e70298208ec0e58bf716"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer2__mode0__to__ms.html#gaa635f5711c66e70298208ec0e58bf716">timer2_mode0_start_Hz</a>(freq)</td></tr>
+<tr class="memdesc:gaa635f5711c66e70298208ec0e58bf716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start timer2 in mode 0 with Hz frequency.  <br /></td></tr>
+<tr class="separator:gaa635f5711c66e70298208ec0e58bf716"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions and data structures for converting timer2 ticks to duration/frequency and vice versa.</p>
@@ -159,6 +162,38 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>uint16_t ticks count for milliseconds </dd></dl>
+
+</div>
+</div>
+<a id="gaa635f5711c66e70298208ec0e58bf716" name="gaa635f5711c66e70298208ec0e58bf716"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa635f5711c66e70298208ec0e58bf716">&#9670;&#160;</a></span>timer2_mode0_start_Hz</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer2_mode0_start_Hz</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">freq</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span>                                                      \</div>
+<div class="line">{                                                       \</div>
+<div class="line">    uint16_t ticks = <a class="code hl_define" href="group__timer2__mode0__to__ms.html#ga465c1b48abf9cab7af7b50f7a78ee22b">timer2_mode0_Hz_to_ticks</a>(freq);    \</div>
+<div class="line">    timer2_mode0_start(ticks);                          \</div>
+<div class="line">} <span class="keywordflow">while</span> (0);</div>
+<div class="ttc" id="agroup__timer2__mode0__to__ms_html_ga465c1b48abf9cab7af7b50f7a78ee22b"><div class="ttname"><a href="group__timer2__mode0__to__ms.html#ga465c1b48abf9cab7af7b50f7a78ee22b">timer2_mode0_Hz_to_ticks</a></div><div class="ttdeci">#define timer2_mode0_Hz_to_ticks(frequency)</div><div class="ttdoc">Converts frequency to ticks for timer2 mode0.</div><div class="ttdef"><b>Definition</b> timer2_mode0_to_ms.h:50</div></div>
+</div><!-- fragment -->
+<p>Start timer2 in mode 0 with Hz frequency. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">freq</td><td>uint32_t timer overflow frequency in Hz </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
