@@ -190,7 +190,7 @@
 * Timer2 mode0 start on ms/mcs routines implemented
 * Timer0 mode0 start on freq routines implemented
 * Timer0 mode1 start on freq routines implemented
-* TODO Add timer0 mode2 start on freq routines
+* Timer0 mode2 start on freq routines implemented
 * TODO Add timer0 mode3 start on freq routines
 * TODO Add timer2 mode0 start on freq routines
 * TODO Add timerX start on freq routines
