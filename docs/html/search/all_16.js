@@ -16,7 +16,8 @@ var searchData=
   ['simple_20uart1_13',['Simple UART1',['../group__uart.html',1,'']]],
   ['stc15_20hal_20functions_14',['Use STC15 HAL functions',['../index.html#autotoc_md5',1,'']]],
   ['stc15_20prorgamming_15',['Low level STC15 prorgamming',['../index.html#autotoc_md4',1,'']]],
-  ['stop_20bits_20send_20receive_20functions_16',['UART1 9bit, 8-bit with parity, 8-bit with two stop bits send/receive functions',['../group__uart1__9bit__shared.html',1,'']]],
-  ['sys_2eh_17',['sys.h',['../sys_8h.html',1,'']]],
-  ['sysclk_18',['SYSclk',['../group__freq.html#gac4ca6015de4bde7454d665a3314420bf',1,'frequency.h']]]
+  ['stc15w408as_20library_16',['STC15W408AS library',['../index.html',1,'']]],
+  ['stop_20bits_20send_20receive_20functions_17',['UART1 9bit, 8-bit with parity, 8-bit with two stop bits send/receive functions',['../group__uart1__9bit__shared.html',1,'']]],
+  ['sys_2eh_18',['sys.h',['../sys_8h.html',1,'']]],
+  ['sysclk_19',['SYSclk',['../group__freq.html#gac4ca6015de4bde7454d665a3314420bf',1,'frequency.h']]]
 ];

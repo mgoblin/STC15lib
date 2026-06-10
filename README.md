@@ -1,3 +1,5 @@
+[![PlatformIO Registry](https://badges.registry.platformio.org/packages/mgoblin/library/STC15 hardware.svg)](https://registry.platformio.org/libraries/mgoblin/STC15 hardware)
+
 # What it is
 This C-library contains hardware abstraction layer (HAL) for STC15W408AS. 
 
