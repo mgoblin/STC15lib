@@ -191,21 +191,23 @@
 * Timer0 start on freq routines implemented
 * Timer2 mode0 start on freq routines implemented
 
-Next releases todo
+0.17.0
 * TODO Add sync delay for ms
 * TODO Fix: examples flash targets on cmake build
 * TODO Add docs to memory dumper README
+* TODO memory dump not only idata but xdata memory too
 * TODO Add docs to csv2hex README
+* TODO Make firmware sizes table on build
+* TODO Rework bits module
+
+Next releases todo
 * Separate ./README on READMEs for library devops, firmware dev and contributor parts
 * TODO Comparator module sync mode implementation 
-* TODO memory dump not only idata but xdata memory too
-* TODO Rework bits module
 * TODO UART1 support frame error
 * TODO UART1 Automatic address recognition support
 * TODO UART1 Relay broadcast mode support
 * TODO is PCON SMOD bit really double baud rate in mode 1, 2, 3?
 * TODO Contributor guide
-* TODO Make firmware sizes table on build
 * TODO Try to read/write EEPROM using MOVC assembler command
 
 
