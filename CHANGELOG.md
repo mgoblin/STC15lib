@@ -190,12 +190,12 @@
 * Timer2 mode0 start on ms/mcs routines implemented
 * Timer0 start on freq routines implemented
 * Timer2 mode0 start on freq routines implemented
+
+Next releases todo
 * TODO Add sync delay for ms
 * TODO Fix: examples flash targets on cmake build
 * TODO Add docs to memory dumper README
 * TODO Add docs to csv2hex README
-
-Next releases todo
 * Separate ./README on READMEs for library devops, firmware dev and contributor parts
 * TODO Comparator module sync mode implementation 
 * TODO memory dump not only idata but xdata memory too
