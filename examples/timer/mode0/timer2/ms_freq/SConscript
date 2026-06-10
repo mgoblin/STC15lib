@@ -12,4 +12,10 @@ env.Default(
         'timer2_mode0_start_ms_example',
         ['timer2_mode0_start_ms_example.c', 'timer_ms_to_ticks.c']
     ),
+
+    env.Program(
+        'timer2_mode0_start_Hz_example',
+        ['timer2_mode0_start_Hz_example.c', 'timer_Hz_to_ticks.c']
+    ),
+
 )
