@@ -36,7 +36,7 @@ env.Default(
 
     env.Program(
         'timer0_mode0_delay_ms_example',
-        ['timer0_mode0_delay_ms_example.c', 'uart.c', 'timer_ms_to_ticks.c']
+        ['timer0_mode0_delay_ms_example.c', 'timer_ms_to_ticks.c']
     ),    
 
 )

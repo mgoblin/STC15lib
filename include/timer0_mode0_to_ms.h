@@ -129,7 +129,7 @@ do                                                      \
 #define timer0_mode0_delay_ms(ms)                       \
 do                                                      \
 {                                                       \
-    uint16_t ticks = timer0_mode0_ticks_to_ms(ms);      \
+    uint16_t ticks = timer0_mode0_ms_to_ticks(ms);      \
     timer0_mode0_delay(ticks);                          \
 } while(0);
 
