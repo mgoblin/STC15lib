@@ -100,11 +100,50 @@ $(function() {
 <tr class="memitem:ga2b74bb67d6df1f3178e40eba134b7075" id="r_ga2b74bb67d6df1f3178e40eba134b7075"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode1__to__ms.html#ga2b74bb67d6df1f3178e40eba134b7075">timer0_mode1_start_Hz</a>(freq)</td></tr>
 <tr class="memdesc:ga2b74bb67d6df1f3178e40eba134b7075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start timer0 in mode 1 with Hz frequency.  <br /></td></tr>
 <tr class="separator:ga2b74bb67d6df1f3178e40eba134b7075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">timer delay ms</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>Delay using timer </p>
+</td></tr>
+<tr class="memitem:gabcf35bdae9d7a22a54f72e312e3772be" id="r_gabcf35bdae9d7a22a54f72e312e3772be"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode1__to__ms.html#gabcf35bdae9d7a22a54f72e312e3772be">timer0_mode1_delay_ms</a>(ms)</td></tr>
+<tr class="memdesc:gabcf35bdae9d7a22a54f72e312e3772be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run timer0 mode1 once and wait with program flow blocking timer not finished.  <br /></td></tr>
+<tr class="separator:gabcf35bdae9d7a22a54f72e312e3772be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions and data structures for converting timer ticks to frequency and times for timer0 mode1.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="gabcf35bdae9d7a22a54f72e312e3772be" name="gabcf35bdae9d7a22a54f72e312e3772be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabcf35bdae9d7a22a54f72e312e3772be">&#9670;&#160;</a></span>timer0_mode1_delay_ms</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer0_mode1_delay_ms</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ms</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span>                                                      \</div>
+<div class="line">{                                                       \</div>
+<div class="line">    uint16_t ticks = <a class="code hl_define" href="group__timer0__mode1__to__ms.html#gab37cdb2dd9f7b4aa4afb8e5e44a5980f">timer0_mode1_ms_to_ticks</a>(ms);      \</div>
+<div class="line">    timer0_mode1_delay(ticks);                          \</div>
+<div class="line">} <span class="keywordflow">while</span>(0);</div>
+<div class="ttc" id="agroup__timer0__mode1__to__ms_html_gab37cdb2dd9f7b4aa4afb8e5e44a5980f"><div class="ttname"><a href="group__timer0__mode1__to__ms.html#gab37cdb2dd9f7b4aa4afb8e5e44a5980f">timer0_mode1_ms_to_ticks</a></div><div class="ttdeci">#define timer0_mode1_ms_to_ticks(ms)</div><div class="ttdoc">Convert milliseconds to timer0 ticks.</div><div class="ttdef"><b>Definition</b> timer0_mode1_to_ms.h:77</div></div>
+</div><!-- fragment -->
+<p>Run timer0 mode1 once and wait with program flow blocking timer not finished. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ms</td><td>uint16_t delay ms duration </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="gaee0a257f71d01ef612f5bbf8096020ea" name="gaee0a257f71d01ef612f5bbf8096020ea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaee0a257f71d01ef612f5bbf8096020ea">&#9670;&#160;</a></span>timer0_mode1_Hz_to_ticks</h2>
 
@@ -213,7 +252,6 @@ $(function() {
 <div class="line">    uint16_t ticks = <a class="code hl_define" href="group__timer0__mode1__to__ms.html#gab37cdb2dd9f7b4aa4afb8e5e44a5980f">timer0_mode1_ms_to_ticks</a>(ms);      \</div>
 <div class="line">    timer0_mode1_start(ticks);                          \</div>
 <div class="line">} <span class="keywordflow">while</span> (0);</div>
-<div class="ttc" id="agroup__timer0__mode1__to__ms_html_gab37cdb2dd9f7b4aa4afb8e5e44a5980f"><div class="ttname"><a href="group__timer0__mode1__to__ms.html#gab37cdb2dd9f7b4aa4afb8e5e44a5980f">timer0_mode1_ms_to_ticks</a></div><div class="ttdeci">#define timer0_mode1_ms_to_ticks(ms)</div><div class="ttdoc">Convert milliseconds to timer0 ticks.</div><div class="ttdef"><b>Definition</b> timer0_mode1_to_ms.h:77</div></div>
 </div><!-- fragment -->
 <p>Start timer0 in mode 1 with ms duration. </p>
 <dl class="params"><dt>Parameters</dt><dd>

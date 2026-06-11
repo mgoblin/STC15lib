@@ -113,5 +113,25 @@ do                                                      \
 
 ///@}
 
+/** @name timer delay ms
+ *  Delay using timer
+ */
+///@{
+
+/**
+ * @brief Run timer0 mode1 once and wait with program flow blocking timer not finished.
+ * 
+ * @param ms uint16_t delay ms duration
+ * 
+ * @ingroup timer0_mode1_to_ms
+ */
+#define timer0_mode1_delay_ms(ms)                       \
+do                                                      \
+{                                                       \
+    uint16_t ticks = timer0_mode1_ms_to_ticks(ms);      \
+    timer0_mode1_delay(ticks);                          \
+} while(0);
+
+///@}
 
 #endif
