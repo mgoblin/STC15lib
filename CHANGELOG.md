@@ -206,6 +206,7 @@ Next releases todo
 * TODO UART1 support frame error
 * TODO UART1 Automatic address recognition support
 * TODO UART1 Relay broadcast mode support
+* TODO UART1 does not work correctly with freq scaling 
 * TODO is PCON SMOD bit really double baud rate in mode 1, 2, 3?
 * TODO Contributor guide
 * TODO Try to read/write EEPROM using MOVC assembler command
