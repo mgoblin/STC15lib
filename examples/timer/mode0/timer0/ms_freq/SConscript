@@ -5,6 +5,7 @@ env.Command('timer_ms_to_ticks.c', '#src/timer_ms_to_ticks.c', Copy('$TARGET', '
 env.Command('timer_ticks_to_ms.c', '#src/timer_ticks_to_ms.c', Copy('$TARGET', '$SOURCE'))
 env.Command('timer_ticks_to_Hz.c', '#src/timer_ticks_to_Hz.c', Copy('$TARGET', '$SOURCE'))
 env.Command('timer_Hz_to_ticks.c', '#src/timer_Hz_to_ticks.c', Copy('$TARGET', '$SOURCE'))
+env.Command('timer_ms_to_ticks_table.c', '#src/timer_ms_to_ticks_table.c', Copy('$TARGET', '$SOURCE'))
 
 env.Default(
     env.Program(
@@ -36,7 +37,7 @@ env.Default(
 
     env.Program(
         'timer0_mode0_delay_ms_example',
-        ['timer0_mode0_delay_ms_example.c', 'timer_ms_to_ticks.c']
+        ['timer0_mode0_delay_ms_example.c', 'timer_ms_to_ticks_table.c']
     ),    
 
 )

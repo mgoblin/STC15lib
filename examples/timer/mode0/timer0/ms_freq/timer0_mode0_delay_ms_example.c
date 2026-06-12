@@ -29,10 +29,12 @@
  * @see timer0_mode0_to_ms.h - Header containing millisecond-based timer functions
  * 
  */
-#include<timer0_mode0_to_ms.h>
+#include <timer0_mode0.h>
+#include <frequency.h>
+#include <timer_ms_to_ticks_table.h>
 
 /// LED pin connected to P1.0
-#define LED P10
+#define LED P11
 
 /// Delay duration in milliseconds
 #define DELAY_MS 1
@@ -61,16 +63,20 @@
  */
 void main(void)
 {
+    set_frequency_divider_scale(7);
+
     // Initialize Timer0 in Mode 0 (16-bit timer) with 1T timing
     // In 1T mode, the timer increments once every system clock cycle
-    timer0_mode0_1T_init();
+    timer0_mode0_12T_init();
+
+    uint16_t ticks = timer_1ms_to_ticks(get_timer0_clock_divider());
 
     // Main loop - continuously delay and toggle LED
     while (1) {
         // Perform 1000 iterations of 1ms delays (total 1000ms = 1 second)
         for(uint16_t i = 0; i < DELAY_SCALE; i++)
         {
-            timer0_mode0_delay_ms(DELAY_MS);
+            timer0_mode0_delay(ticks);
         }
         // Toggle LED - blink rate is 1Hz (once per second)
         LED = !LED;

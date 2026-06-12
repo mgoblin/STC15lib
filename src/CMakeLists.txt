@@ -6,4 +6,5 @@ add_library(stc15hal STATIC
   timer_ticks_to_Hz.c
   timer_Hz_to_ticks.c
   timer_Hz_to_ticks_8bit.c
+  timer_ms_to_ticks_table.c
 ) # Create libray from uart.c
