@@ -192,10 +192,7 @@
 * Timer2 mode0 start on freq routines implemented
 
 0.17.0
-* Timer0 mode0 sync delay for ms routine implemented
-* Timer0 mode1 sync delay for ms routine implemented
-* Timer0 mode2 sync delay for ms routine implemented
-* TODO Add sync delay for ms
+* Timer0 sync delay for ms routine implemented
 * TODO Verify delays with logical analyzer
 * TODO Fix: examples flash targets on cmake build
 * TODO Add docs to memory dumper README
