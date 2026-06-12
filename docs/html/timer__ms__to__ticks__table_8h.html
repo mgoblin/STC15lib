@@ -113,13 +113,73 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a36eef53ab6678e445bd45a80aaa5b802" id="r_a36eef53ab6678e445bd45a80aaa5b802"><td class="memItemLeft" align="right" valign="top"><a id="a36eef53ab6678e445bd45a80aaa5b802" name="a36eef53ab6678e445bd45a80aaa5b802"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>timer0_1ms_delay_init</b> ()</td></tr>
+<tr class="memitem:a36eef53ab6678e445bd45a80aaa5b802" id="r_a36eef53ab6678e445bd45a80aaa5b802"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer__ms__to__ticks__table_8h.html#a36eef53ab6678e445bd45a80aaa5b802">timer0_1ms_delay_init</a> ()</td></tr>
+<tr class="memdesc:a36eef53ab6678e445bd45a80aaa5b802"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes Timer0 for 1 millisecond delay using precalculated ticks.  <br /></td></tr>
 <tr class="separator:a36eef53ab6678e445bd45a80aaa5b802"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a250102a4e7ec9eb31b26344b80733d63" id="r_a250102a4e7ec9eb31b26344b80733d63"><td class="memItemLeft" align="right" valign="top"><a id="a250102a4e7ec9eb31b26344b80733d63" name="a250102a4e7ec9eb31b26344b80733d63"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>timer0_1ms_delay</b> ()</td></tr>
+<tr class="memitem:a250102a4e7ec9eb31b26344b80733d63" id="r_a250102a4e7ec9eb31b26344b80733d63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer__ms__to__ticks__table_8h.html#a250102a4e7ec9eb31b26344b80733d63">timer0_1ms_delay</a> ()</td></tr>
+<tr class="memdesc:a250102a4e7ec9eb31b26344b80733d63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes a 1 millisecond delay using Timer0.  <br /></td></tr>
 <tr class="separator:a250102a4e7ec9eb31b26344b80733d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a250102a4e7ec9eb31b26344b80733d63" name="a250102a4e7ec9eb31b26344b80733d63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a250102a4e7ec9eb31b26344b80733d63">&#9670;&#160;</a></span>timer0_1ms_delay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void timer0_1ms_delay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Executes a 1 millisecond delay using Timer0. </p>
+<p>Starts Timer0 and waits for the overflow flag (TF0) to be set, indicating that the configured 1ms time interval has elapsed. The timer is configured by <a class="el" href="timer__ms__to__ticks__table_8h.html#a36eef53ab6678e445bd45a80aaa5b802" title="Initializes Timer0 for 1 millisecond delay using precalculated ticks.">timer0_1ms_delay_init()</a> with the appropriate reload values for the system clock frequency.</p>
+<dl class="section note"><dt>Note</dt><dd>This is a blocking function that waits in a polling loop until the timer overflow occurs. </dd>
+<dd>
+Timer0 must be initialized with <a class="el" href="timer__ms__to__ticks__table_8h.html#a36eef53ab6678e445bd45a80aaa5b802" title="Initializes Timer0 for 1 millisecond delay using precalculated ticks.">timer0_1ms_delay_init()</a> before calling this function.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="timer__ms__to__ticks__table_8h.html#a36eef53ab6678e445bd45a80aaa5b802" title="Initializes Timer0 for 1 millisecond delay using precalculated ticks.">timer0_1ms_delay_init()</a> - Initializes Timer0 for 1ms delay </dd>
+<dd>
+TF0 - Timer0 overflow flag </dd>
+<dd>
+TR0 - Timer0 run control bit </dd></dl>
+
+</div>
+</div>
+<a id="a36eef53ab6678e445bd45a80aaa5b802" name="a36eef53ab6678e445bd45a80aaa5b802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36eef53ab6678e445bd45a80aaa5b802">&#9670;&#160;</a></span>timer0_1ms_delay_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void timer0_1ms_delay_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes Timer0 for 1 millisecond delay using precalculated ticks. </p>
+<dl class="section note"><dt>Note</dt><dd>Must be called before using <a class="el" href="timer__ms__to__ticks__table_8h.html#a250102a4e7ec9eb31b26344b80733d63" title="Executes a 1 millisecond delay using Timer0.">timer0_1ms_delay()</a> to ensure correct timer configuration for the current system clock settings. </dd>
+<dd>
+Disables Timer0 interrupt during initialization to prevent unwanted interrupt service routine execution.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__freq.html#ga2282854ce7886421e523f6d8f8467fae" title="Get master clock frequency divider scale (CLK_DIV bits [0..2])">get_frequency_divider_scale()</a> - Gets current frequency scale index </dd>
+<dd>
+<a class="el" href="group__timer__common.html#gac2f34fcd6ffbec0a91510385d3286f70" title="Get clock divider for timer0.">get_timer0_clock_divider()</a> - Gets Timer0 clock divider setting </dd>
+<dd>
+<a class="el" href="timer__ms__to__ticks__table_8h.html#a250102a4e7ec9eb31b26344b80733d63" title="Executes a 1 millisecond delay using Timer0.">timer0_1ms_delay()</a> - Performs the actual 1ms delay </dd>
+<dd>
+<a class="el" href="timer__ms__to__ticks__table_8c.html#ad45d424e3e78a19aa98fbd006443d079" title="Precalculated timer ticks for 1ms delay in 1T mode.">precalc_1t_ticks</a> - Lookup table for 1T mode tick values </dd>
+<dd>
+<a class="el" href="timer__ms__to__ticks__table_8c.html#a9d33c6d440b009a454f8893a3014b687" title="Precalculated timer ticks for 1ms delay in 12T mode.">precalc_12t_ticks</a> - Lookup table for 12T mode tick values </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

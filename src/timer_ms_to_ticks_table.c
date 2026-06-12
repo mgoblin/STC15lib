@@ -115,7 +115,7 @@ void timer0_1ms_delay_init()
     disable_timer0_interrupt();
     uint8_t scale = get_frequency_divider_scale();
     timer_clock_divider_t divider = get_timer0_clock_divider();
-    ticks  = divider == T1 ? 
+    uint16_t ticks  = divider == T1 ? 
         precalc_1t_ticks[scale] :
         precalc_12t_ticks[scale];
     uint16_t value = 0xffff - ticks;    

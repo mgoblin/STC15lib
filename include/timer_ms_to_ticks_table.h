@@ -32,11 +32,7 @@
 
 /**
  * @brief Initializes Timer0 for 1 millisecond delay using precalculated ticks
- * @details Configures Timer0 in mode 0 (13-bit counter) with precalculated tick
- *          values based on the current system clock frequency and timer clock divider.
- *          The function calculates the reload value using lookup tables and sets
- *          up the Timer0 registers (TH0/TL0) for a 1ms overflow interval.
- * 
+ 
  * @note Must be called before using timer0_1ms_delay() to ensure correct
  *       timer configuration for the current system clock settings.
  * @note Disables Timer0 interrupt during initialization to prevent
