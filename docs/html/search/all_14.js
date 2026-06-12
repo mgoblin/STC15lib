@@ -14,7 +14,9 @@ var searchData=
   ['power_20management_11',['Power management',['../group__power__management.html',1,'']]],
   ['power_5fdown_12',['power_down',['../group__power__management.html#ga1e0d38ad57d2078db65a84e857f5e5b6',1,'power_management.h']]],
   ['power_5fmanagement_2eh_13',['power_management.h',['../power__management_8h.html',1,'']]],
-  ['project_14',['Add library to your project',['../index.html#autotoc_md3',1,'']]],
-  ['prorgamming_15',['Low level STC15 prorgamming',['../index.html#autotoc_md4',1,'']]],
-  ['putchar_16',['putchar',['../group__uart.html#ga07036e93939040c563e862a6a31b65bc',1,'putchar(int ch):&#160;uart.c'],['../group__uart.html#ga07036e93939040c563e862a6a31b65bc',1,'putchar(int ch):&#160;uart.c']]]
+  ['precalc_5f12t_5fticks_14',['precalc_12t_ticks',['../timer__ms__to__ticks__table_8c.html#a9d33c6d440b009a454f8893a3014b687',1,'timer_ms_to_ticks_table.c']]],
+  ['precalc_5f1t_5fticks_15',['precalc_1t_ticks',['../timer__ms__to__ticks__table_8c.html#ad45d424e3e78a19aa98fbd006443d079',1,'timer_ms_to_ticks_table.c']]],
+  ['project_16',['Add library to your project',['../index.html#autotoc_md3',1,'']]],
+  ['prorgamming_17',['Low level STC15 prorgamming',['../index.html#autotoc_md4',1,'']]],
+  ['putchar_18',['putchar',['../group__uart.html#ga07036e93939040c563e862a6a31b65bc',1,'putchar(int ch):&#160;uart.c'],['../group__uart.html#ga07036e93939040c563e862a6a31b65bc',1,'putchar(int ch):&#160;uart.c']]]
 ];

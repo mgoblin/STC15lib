@@ -3,7 +3,7 @@ var indexSectionsWithContent =
   0: "01389_abcdefghiklmnoprstuvwy",
   1: "acdefgiprstuw",
   2: "_cgmpt",
-  3: "it",
+  3: "ipt",
   4: "aceimtu",
   5: "abcehlnoprtw",
   6: "acdfiklmt",

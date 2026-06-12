@@ -10,8 +10,8 @@
 <area shape="poly" id="edge24_Node000001_Node000025" title=" " alt="" coords="4457,30,4886,84,4885,89,4457,35"/>
 <area shape="rect" id="Node000033" href="$timer2__mode0__to__ms_8h.html" title=" " alt="" coords="6166,79,6334,119"/>
 <area shape="poly" id="edge32_Node000001_Node000033" title=" " alt="" coords="4460,21,6166,91,6165,97,4460,26"/>
-<area shape="rect" id="Node000039" href="$timer__ms__to__ticks__table_8h_source.html" title=" " alt="" coords="6691,79,6846,119"/>
-<area shape="poly" id="edge38_Node000001_Node000039" title=" " alt="" coords="4460,19,5244,40,6346,76,6691,91,6691,96,6346,81,5244,46,4460,25"/>
+<area shape="rect" id="Node000039" href="$timer__ms__to__ticks__table_8h.html" title=" " alt="" coords="6917,79,7071,119"/>
+<area shape="poly" id="edge38_Node000001_Node000039" title=" " alt="" coords="4460,20,6916,92,6916,98,4460,25"/>
 <area shape="rect" id="Node000003" href="$timer0__mode0__Hz__to__ticks__example_8c.html" title="Example demonstrating conversion from frequency (Hz) to timer0 ticks." alt="" coords="5,167,236,221"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="763,111,528,133,249,169,236,171,236,166,248,164,528,128,762,105"/>
 <area shape="rect" id="Node000004" href="$timer0__mode0__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="261,167,495,221"/>
@@ -77,5 +77,7 @@
 <area shape="rect" id="Node000038" href="$timer2__mode0__ticks__to__ms__example_8c.html" title=" " alt="" coords="6677,167,6860,221"/>
 <area shape="poly" id="edge37_Node000033_Node000038" title=" " alt="" coords="6348,111,6498,134,6665,164,6677,167,6676,172,6664,169,6497,139,6347,116"/>
 <area shape="rect" id="Node000040" href="$timer0__mode0__delay__ms__example_8c.html" title="Example demonstrating Timer0 Mode 0 blocking delay with millisecond precision." alt="" coords="6885,167,7103,221"/>
-<area shape="poly" id="edge39_Node000039_Node000040" title=" " alt="" coords="6828,121,6932,164,6930,169,6826,126"/>
+<area shape="poly" id="edge39_Node000039_Node000040" title=" " alt="" coords="6997,132,6997,167,6991,167,6991,132"/>
+<area shape="rect" id="Node000041" href="$timer__ms__to__ticks__table_8c.html" title="Implementation of timer to milliseconds conversion using lookup tables." alt="" coords="7127,174,7293,214"/>
+<area shape="poly" id="edge40_Node000039_Node000041" title=" " alt="" coords="7051,122,7167,171,7165,176,7049,127"/>
 </map>

@@ -38,6 +38,7 @@
 
 #include <timer_ms_to_ticks_table.h>
 #include <frequency.h>
+#include <interrupt.h>
 
 /**
  * @brief Precalculated timer ticks for 1ms delay in 1T mode
@@ -64,14 +65,14 @@
  */
 uint16_t precalc_1t_ticks[8] = 
 {
-    11065,  // 0 11059 
+    11070,  // 0 11059 
     5510,   // 1 5548
     2733,   // 2 2774
     1343,   // 3 1387
     650,    // 4 693
     300,    // 5 347
     127,    // 6 173
-    43,     // 7 87 
+    43,     // 7 87
 };
 
 /**
@@ -109,34 +110,24 @@ uint16_t precalc_12t_ticks[8] =
     4,      // 7 7
 }; 
 
-/**
- * @brief Convert 1 millisecond to timer ticks using lookup table
- * 
- * This function provides O(1) conversion from 1 millisecond to timer ticks
- * by using precalculated lookup tables. It selects the appropriate table
- * based on the clock divider setting and uses the system clock frequency
- * scale to index into the table.
- * 
- * Implementation:
- * 1. Get current frequency scale from CLK_DIV register
- * 2. Select appropriate lookup table based on divider parameter
- * 3. Return precalculated value from table at index
- * 
- * @param divider timer_clock_divider_t Clock divider setting:
- *                - T1: 1T mode (1 clock cycle per tick)
- *                - T12: 12T mode (12 clock cycles per tick)
- * 
- * @return uint16_t Number of timer ticks for 1ms delay
- * 
- * @note This is a fast O(1) alternative to dynamic calculation
- * @note The function uses get_frequency_divider_scale() internally
- * @see timer_ms_to_ticks_table.h - Declaration of this function
- * @see timer_to_ms_common.h - Dynamic conversion functions
- */
-uint16_t timer_1ms_to_ticks(timer_clock_divider_t divider)
+void timer0_1ms_delay_init()
 {
+    disable_timer0_interrupt();
     uint8_t scale = get_frequency_divider_scale();
-    return divider == T1 ? 
+    timer_clock_divider_t divider = get_timer0_clock_divider();
+    ticks  = divider == T1 ? 
         precalc_1t_ticks[scale] :
         precalc_12t_ticks[scale];
+    uint16_t value = 0xffff - ticks;    
+    TH0 = value >> 8; 
+    TL0 = value & 0xff;
+}
+
+// Call timer0_1ms_delay_init before
+void timer0_1ms_delay()
+{
+    TF0 = 0;
+    TR0 = 1;
+    while(!TF0);
+    TR0 = 0;
 }

@@ -1,0 +1,29 @@
+<map id="src/timer_ms_to_ticks_table.c" name="src/timer_ms_to_ticks_table.c">
+<area shape="rect" id="Node000001" title="Implementation of timer to milliseconds conversion using lookup tables." alt="" coords="192,5,357,45"/>
+<area shape="rect" id="Node000002" href="$timer__ms__to__ticks__table_8h.html" title=" " alt="" coords="7,93,201,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="235,48,142,90,140,85,233,43"/>
+<area shape="rect" id="Node000007" href="$frequency_8h.html" title=" " alt="" coords="226,93,323,119"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="277,46,277,79,272,79,272,46"/>
+<area shape="rect" id="Node000011" href="$interrupt_8h.html" title=" " alt="" coords="353,93,444,119"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="306,43,370,84,367,88,303,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="163,167,234,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="121,117,174,156,171,160,118,121"/>
+<area shape="rect" id="Node000004" href="$timer__common_8h.html" title=" " alt="" coords="5,167,139,192"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="101,120,85,155,80,153,96,118"/>
+<area shape="rect" id="Node000005" href="$bits_8h_source.html" title=" " alt="" coords="224,240,283,265"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="102,190,212,232,210,237,100,195"/>
+<area shape="rect" id="Node000006" href="$timer__structs_8h_source.html" title=" " alt="" coords="12,240,132,265"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="75,192,75,226,69,226,69,192"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="264,121,223,159,219,155,261,117"/>
+<area shape="poly" id="edge11_Node000007_Node000005" title=" " alt="" coords="276,120,260,227,254,226,270,119"/>
+<area shape="rect" id="Node000008" href="$sys_8h.html" title=" " alt="" coords="309,167,365,192"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="287,117,320,154,316,158,283,121"/>
+<area shape="rect" id="Node000009" href="$STC15Fxx_8h_source.html" title=" " alt="" coords="307,240,405,265"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="343,192,352,226,347,228,338,193"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="311,313,401,339"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="359,266,359,300,353,300,353,266"/>
+<area shape="poly" id="edge15_Node000011_Node000005" title=" " alt="" coords="401,119,397,155,390,175,379,194,345,217,296,238,294,233,343,212,375,190,386,173,392,154,396,119"/>
+<area shape="poly" id="edge14_Node000011_Node000008" title=" " alt="" coords="391,121,358,158,354,154,387,117"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="440,167,523,192"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="414,117,459,155,456,160,410,121"/>
+</map>

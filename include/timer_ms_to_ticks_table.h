@@ -31,31 +31,41 @@
 #include <timer_common.h>
 
 /**
- * @brief Convert 1 millisecond to timer ticks based on clock divider
+ * @brief Initializes Timer0 for 1 millisecond delay using precalculated ticks
+ * @details Configures Timer0 in mode 0 (13-bit counter) with precalculated tick
+ *          values based on the current system clock frequency and timer clock divider.
+ *          The function calculates the reload value using lookup tables and sets
+ *          up the Timer0 registers (TH0/TL0) for a 1ms overflow interval.
  * 
- * This function looks up the precalculated tick count for a 1 millisecond delay
- * based on the provided clock divider setting. It uses different lookup tables
- * for 1T mode (one clock cycle per tick) and 12T mode (twelve clock cycles per tick).
+ * @note Must be called before using timer0_1ms_delay() to ensure correct
+ *       timer configuration for the current system clock settings.
+ * @note Disables Timer0 interrupt during initialization to prevent
+ *       unwanted interrupt service routine execution.
  * 
- * The function selects the appropriate lookup table based on the divider parameter
- * and uses the current system clock frequency scale (from CLK_DIV register) to
- * index into the table. This provides O(1) conversion time without runtime math.
+ * @see get_frequency_divider_scale() - Gets current frequency scale index
+ * @see get_timer0_clock_divider() - Gets Timer0 clock divider setting
+ * @see timer0_1ms_delay() - Performs the actual 1ms delay
+ * @see precalc_1t_ticks - Lookup table for 1T mode tick values
+ * @see precalc_12t_ticks - Lookup table for 12T mode tick values
+ */
+void timer0_1ms_delay_init();
+
+/**
+ * @brief Executes a 1 millisecond delay using Timer0
+ * @details Starts Timer0 and waits for the overflow flag (TF0) to be set,
+ *          indicating that the configured 1ms time interval has elapsed.
+ *          The timer is configured by timer0_1ms_delay_init() with the
+ *          appropriate reload values for the system clock frequency.
  * 
- * @param divider timer_clock_divider_t Clock divider setting:
- *                - T1 (1): 1T mode, timer increments once per clock cycle
- *                - T12 (12): 12T mode, timer increments once per 12 clock cycles
+ * @note This is a blocking function that waits in a polling loop until
+ *       the timer overflow occurs.
+ * @note Timer0 must be initialized with timer0_1ms_delay_init() before
+ *       calling this function.
  * 
- * @return uint16_t Number of timer ticks corresponding to 1 millisecond delay
- *                  for the given clock divider setting
- * 
- * @note The returned value is precalculated and may have small approximation errors
- *       compared to exact mathematical calculation. Typical error is less than 1%.
- * 
- * @note The function uses get_frequency_divider_scale() internally to select the
- *       appropriate array index based on the current system clock divider.
- * 
- * @ingroup timer_ms_to_ticks_table
-*/
-uint16_t timer_1ms_to_ticks(timer_clock_divider_t divider);
+ * @see timer0_1ms_delay_init() - Initializes Timer0 for 1ms delay
+ * @see TF0 - Timer0 overflow flag
+ * @see TR0 - Timer0 run control bit
+ */
+void timer0_1ms_delay();
 
 #endif

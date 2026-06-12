@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>STC15W408AS library: examples/timer/mode0 Directory Reference</title>
+<title>STC15W408AS library: Timer to milliseconds conversion table</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,6 +46,7 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,37 +68,20 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_d28a4824dc47e487b107a5db32ef43c4.html">examples</a></li><li class="navelem"><a class="el" href="dir_e7ce32aeeb928923d1462842b69c3a0e.html">timer</a></li><li class="navelem"><a class="el" href="dir_0ab0ebc9663244eb06813df0abd15c34.html">mode0</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">mode0 Directory Reference</div></div>
+  <div class="headertitle"><div class="title">Timer to milliseconds conversion table</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Directory dependency graph for mode0:</div>
-<div class="dyncontent">
-<div class="center"><img src="dir_0ab0ebc9663244eb06813df0abd15c34_dep.png" border="0" usemap="#adir__0ab0ebc9663244eb06813df0abd15c34__dep" alt="examples/timer/mode0"/></div>
-<map name="adir__0ab0ebc9663244eb06813df0abd15c34__dep" id="adir__0ab0ebc9663244eb06813df0abd15c34__dep">
-<area shape="rect" href="dir_c3865279144d5f1f1b91e4f8379d333c.html" title="timer0" alt="" coords="127,63,193,88"/>
-<area shape="rect" href="dir_d44c64559bbebec7f509842c48db8b23.html" title="include" alt="" coords="80,136,149,161"/>
-<area shape="poly" href="dir_000053_000022.html" alt="" coords="155,90,132,126,127,123,150,87"/>
-<area shape="rect" href="dir_000053_000022.html" title="26" alt="" coords="130,118,148,133"/>
-<area shape="rect" href="dir_b095e2d776e1892e08f48f838f21a808.html" title="timer2" alt="" coords="38,63,103,88"/>
-<area shape="poly" href="dir_000054_000022.html" alt="" coords="80,87,103,123,98,126,76,90"/>
-<area shape="rect" href="dir_000054_000022.html" title="21" alt="" coords="96,109,114,123"/>
-<area shape="rect" href="dir_0ab0ebc9663244eb06813df0abd15c34.html" alt="" coords="27,52,295,99"/>
-<area shape="rect" href="dir_e7ce32aeeb928923d1462842b69c3a0e.html" title="timer" alt="" coords="16,16,305,109"/>
-</map>
-</div>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="subdirs" name="subdirs"></a>
-Directories</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><span class="iconfclosed"></span>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dir_b095e2d776e1892e08f48f838f21a808.html">timer2</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
+<p>Functions and data structures for converting milliseconds to timer ticks using precalculated lookup tables for efficient runtime conversion.</p>
+<p>This module provides a table-based approach for converting 1 millisecond durations to timer tick counts, accounting for different clock divider modes (1T and 12T). The conversion uses precalculated values stored in lookup tables to avoid expensive runtime calculations.</p>
+<p>The lookup tables contain precomputed tick values for 1ms delays at various system clock frequencies and divider settings. The appropriate table is selected based on the timer's clock divider setting (T1 for 1T mode or T12 for 12T mode).</p>
+<dl class="section note"><dt>Note</dt><dd>The precalculated values are optimized for common crystal frequencies and may have slight variations due to rounding. For exact calculations, use the dynamic conversion functions in <a class="el" href="timer__to__ms__common_8h.html">timer_to_ms_common.h</a> instead.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="timer__to__ms__common_8h.html">timer_to_ms_common.h</a> - Dynamic millisecond to ticks conversion functions </dd>
+<dd>
+<a class="el" href="timer__structs_8h_source.html">timer_structs.h</a> - Timer clock divider definitions </dd>
+<dd>
+<a class="el" href="frequency_8h.html">frequency.h</a> - System clock frequency management</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
