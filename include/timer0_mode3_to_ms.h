@@ -112,6 +112,20 @@ do                                                      \
     timer0_mode3_start(ticks);                          \
 } while (0);
 
+/**
+ * @brief Run timer0 mode3 once and wait with program flow blocking timer not finished.
+ * 
+ * @param ms uint16_t delay ms duration
+ * 
+ * @ingroup timer0_mode3_to_ms
+ */
+#define timer0_mode3_delay_ms(ms)                       \
+do                                                      \
+{                                                       \
+    uint16_t ticks = timer0_mode3_ms_to_ticks(ms);      \
+    timer0_mode3_delay(ticks);                          \
+} while(0);
+
 ///@}
 
 #endif
