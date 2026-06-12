@@ -34,4 +34,9 @@ env.Default(
         ['timer0_mode1_start_Hz_example.c', 'timer_Hz_to_ticks.c']
     ),
 
+    env.Program(
+        'timer0_mode1_delay_ms_example',
+        ['timer0_mode1_delay_ms_example.c', 'timer_ms_to_ticks.c']
+    ),
+
 )
