@@ -193,8 +193,6 @@
 
 0.17.0
 * Timer0 sync delay for ms routine implemented
-* TODO Verify delays with logical analyzer
-* Write tests for ms_to_ticks compiled with clang/gcc
 * TODO Fix: examples flash targets on cmake build
 * TODO Add docs to memory dumper README
 * TODO memory dump not only idata but xdata memory too
