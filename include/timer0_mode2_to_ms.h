@@ -111,6 +111,20 @@ do                                                      \
     timer0_mode2_start(ticks);                          \
 } while (0);
 
+/**
+ * @brief Run timer0 mode2 once and wait with program flow blocking timer not finished.
+ * 
+ * @param ms uint16_t delay ms duration
+ * 
+ * @ingroup timer0_mode2_to_ms
+ */
+#define timer0_mode2_delay_ms(ms)                       \
+do                                                      \
+{                                                       \
+    uint16_t ticks = timer0_mode2_ms_to_ticks(ms);      \
+    timer0_mode2_delay(ticks);                          \
+} while(0);
+
 
 ///@}
 
