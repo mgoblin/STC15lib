@@ -15,14 +15,16 @@ ihx_to_hex(interrupt_int1_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_interrupt_int0
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/interrupt_int0_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/interrupt/interrupt_int0_example.hex
     DEPENDS interrupt_int0_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 
 # upload firmware to STC MCU
 add_custom_target(flash_interrupt_int1
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/interrupt_int1_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/interrupt/interrupt_int1_example.hex
     DEPENDS interrupt_int1_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
