@@ -9,7 +9,8 @@ ihx_to_hex(pin_read_value_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_pin_read_value
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/pin_read_value_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/gpio/value/pin_read_value_example.hex
     DEPENDS pin_read_value_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
