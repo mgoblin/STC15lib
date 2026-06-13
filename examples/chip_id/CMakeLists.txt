@@ -9,7 +9,9 @@ ihx_to_hex(chip_id_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_chip_id
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/chip_id_example.hex
-    DEPENDS adc_async_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/chip_id/chip_id_example.hex
+    DEPENDS chip_id_example
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
+
 )
