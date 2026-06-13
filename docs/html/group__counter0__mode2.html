@@ -329,7 +329,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"> <span class="keywordflow">do</span> {                                           \</div>
-<div class="line">    static_assert(value &lt;= 0xff, <span class="stringliteral">&quot;value is too large&quot;</span>); \</div>
+<div class="line">    static_assert(value &lt; 0xff, <span class="stringliteral">&quot;value is too large&quot;</span>); \</div>
 <div class="line">                                                \</div>
 <div class="line">    TH0 = (uint8_t) value;                      \</div>
 <div class="line">                                                \</div>

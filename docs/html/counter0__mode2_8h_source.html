@@ -113,7 +113,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="foldopen" id="foldopen00093" data-start="" data-end="">
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="group__counter0__mode2.html#gab40071d3964342fecbdad51a671a16dd">   93</a></span><span class="preprocessor"> #define counter0_mode2_start(value)            \</span></div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor"> do {                                           \</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">    static_assert(value &lt;= 0xff, &quot;value is too large&quot;); \</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">    static_assert(value &lt; 0xff, &quot;value is too large&quot;); \</span></div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">                                                \</span></div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">    TH0 = (uint8_t) value;                      \</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">                                                \</span></div>

@@ -21,9 +21,10 @@ ihx_to_hex(counter0_mode2_p35_output_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_counter0_mode2
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/counter0_mode2_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/counter/counter0/mode2/counter0_mode2_example.hex
     DEPENDS counter0_mode2_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 # upload firmware to STC MCU
 add_custom_target(flash_counter0_mode2_gate
