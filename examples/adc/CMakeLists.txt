@@ -23,7 +23,8 @@ add_custom_target(flash_adc_read
 
 # upload firmware to STC MCU
 add_custom_target(flash_adc_async
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/adc_async_example.hex
-    DEPENDS bits_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/adc/adc_async_example.hex
+    DEPENDS adc_async_example
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )

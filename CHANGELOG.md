@@ -193,6 +193,7 @@
 
 0.17.0
 * Timer0 sync delay for ms routine implemented
+* CMake flash_* targets fixed
 * TODO Fix: examples flash targets on cmake build
 * TODO Add docs to memory dumper README
 * TODO memory dump not only idata but xdata memory too
@@ -209,5 +210,6 @@ Next releases todo
 * TODO UART1 does not work correctly with freq scaling 
 * TODO is PCON SMOD bit really double baud rate in mode 1, 2, 3?
 * TODO Try to read/write EEPROM using MOVC assembler command
+* TODO Timer sync delay implementation could use idle and isr handler
 
 
