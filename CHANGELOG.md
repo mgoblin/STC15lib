@@ -193,7 +193,7 @@
 
 0.17.0
 * Timer0 sync delay routines implemented
-* CMake timer2/mode0 examples flash_* targets are fixed
+* CMake timer0/mode1 examples flash_* targets are fixed
 * TODO Fix: examples flash targets on cmake build
 * TODO Add docs to memory dumper README
 * TODO memory dump not only idata but xdata memory too
