@@ -193,7 +193,7 @@
 
 0.17.0
 * Timer0 sync delay for ms routine implemented
-* CMake flash_comparator_async target fixed
+* CMake counter/counter0/mode0/flash_*comparator_async* targets fixed
 * TODO Fix: examples flash targets on cmake build
 * TODO Add docs to memory dumper README
 * TODO memory dump not only idata but xdata memory too
@@ -203,7 +203,6 @@
 * Separate ./README on READMEs for library devops, firmware dev and contributor parts
 
 Next releases todo
-* TODO Comparator module sync mode implementation 
 * TODO UART1 support frame error
 * TODO UART1 Automatic address recognition support
 * TODO UART1 Relay broadcast mode support
@@ -211,5 +210,6 @@ Next releases todo
 * TODO is PCON SMOD bit really double baud rate in mode 1, 2, 3?
 * TODO Try to read/write EEPROM using MOVC assembler command
 * TODO Timer sync delay implementation could use idle and isr handler
+* TODO Comparator module sync mode implementation 
 
 
