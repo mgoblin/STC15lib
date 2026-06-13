@@ -34,31 +34,36 @@ ihx_to_hex(uart1_mode1_timer2_12T_interrupt_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_uart1_mode1_timer2_1T
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart1_mode1_timer2_1T_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode1/timer2/uart1_mode1_timer2_1T_example.hex
     DEPENDS uart1_mode1_timer2_1T_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 # upload firmware to STC MCU
 add_custom_target(flash_uart1_mode1_timer2_1T_freq_bias
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart1_mode1_timer2_1T_freq_bias_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode1/timer2/uart1_mode1_timer2_1T_freq_bias_example.hex
     DEPENDS uart1_mode1_timer2_1T_freq_bias_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 # upload firmware to STC MCU
 add_custom_target(flash_uart1_mode1_timer2_12T
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart1_mode1_timer2_12T_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode1/timer2/uart1_mode1_timer2_12T_example.hex
     DEPENDS uart1_mode1_timer2_12T_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 # upload firmware to STC MCU
 add_custom_target(flash_uart1_mode1_timer2_12T_freq_bias
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart1_mode1_timer2_12T_freq_bias_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode1/timer2/uart1_mode1_timer2_12T_freq_bias_example.hex
     DEPENDS uart1_mode1_timer2_12T_freq_bias_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 # upload firmware to STC MCU
 add_custom_target(flash_uart1_mode1_timer2_12T_interrupt
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart1_mode1_timer2_12T_interrupt_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode1/timer2/uart1_mode1_timer2_12T_interrupt_example.hex
     DEPENDS uart1_mode1_timer2_12T_interrupt_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )

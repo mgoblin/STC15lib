@@ -9,7 +9,8 @@ ihx_to_hex(uart_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_uart
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/simple/uart_example.hex
     DEPENDS uart_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )

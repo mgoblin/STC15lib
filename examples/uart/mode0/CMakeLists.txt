@@ -15,13 +15,15 @@ ihx_to_hex(uart1_mode0_send_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_uart1_mode0_baud_rates
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart1_mode0_baud_rates_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode0/uart1_mode0_baud_rates_example.hex
     DEPENDS uart1_mode0_baud_rates_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 # upload firmware to STC MCU
 add_custom_target(flash_uart1_mode0_send
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart1_mode0_send_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode0/uart1_mode0_send_example.hex
     DEPENDS uart1_mode0_send_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )

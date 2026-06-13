@@ -21,19 +21,22 @@ ihx_to_hex(uart1_mode2_send_odd_parity_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_uart1_mode2_receive_even_parity
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart1_mode2_receive_even_parity_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode2/uart1_mode2_receive_even_parity_example.hex
     DEPENDS uart1_mode2_receive_even_parity_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 # upload firmware to STC MCU
 add_custom_target(flash_uart1_uart1_mode2_send_9bit
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart1_mode2_send_9bit_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode2/uart1_mode2_send_9bit_example.hex
     DEPENDS uart1_mode2_send_9bit_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 # upload firmware to STC MCU
 add_custom_target(flash_uart1_mode2_send_odd_parity
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart1_mode2_send_odd_parity_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode2/uart1_mode2_send_odd_parity_example.hex
     DEPENDS uart1_mode2_send_odd_parity_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )

@@ -10,9 +10,10 @@ ihx_to_hex(uart1_mode3_timer2_1T_2stop_bits_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_uart1_mode3_timer2_1T_2stop_bits
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart1_mode3_timer2_1T_2stop_bits_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode3/timer2/uart1_mode3_timer2_1T_2stop_bits_example.hex
     DEPENDS uart1_mode3_timer2_1T_2stop_bits_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 
 # 2
@@ -27,9 +28,10 @@ ihx_to_hex(uart1_mode3_timer2_1T_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_uart1_mode3_timer2_1T
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart1_mode3_timer2_1T_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode3/timer2/uart1_mode3_timer2_1T_example.hex
     DEPENDS uart1_mode3_timer2_1T_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 
 # 3
@@ -44,9 +46,10 @@ ihx_to_hex(uart1_mode3_timer2_1T_freq_bias_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_uart1_mode3_timer2_1T_freq_bias
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart1_mode3_timer2_1T_freq_bias_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode3/timer2/uart1_mode3_timer2_1T_freq_bias_example.hex
     DEPENDS uart1_mode3_timer2_1T_freq_bias_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 
 # 4
@@ -61,9 +64,10 @@ ihx_to_hex(uart1_mode3_timer2_1T_odd_parity_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_uart1_mode3_timer2_1T_odd_parity
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart1_mode3_timer2_1T_odd_parity_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode3/timer2/uart1_mode3_timer2_1T_odd_parity_example.hex
     DEPENDS uart1_mode3_timer2_1T_odd_parity_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 
 # 5
@@ -78,9 +82,10 @@ ihx_to_hex(uart1_mode3_timer2_12T_even_parity_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_uart1_mode3_timer2_12T_even_parity
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart1_mode3_timer2_12T_even_parity_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode3/timer2/uart1_mode3_timer2_12T_even_parity_example.hex
     DEPENDS uart1_mode3_timer2_12T_even_parity_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 
 # 6
@@ -95,9 +100,10 @@ ihx_to_hex(uart1_mode3_timer2_12T_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_uart1_mode3_timer2_12T_example
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart1_mode3_timer2_12T_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode3/timer2/uart1_mode3_timer2_12T_example.hex
     DEPENDS uart1_mode3_timer2_12T_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 
 # 7
@@ -112,9 +118,10 @@ ihx_to_hex(uart1_mode3_timer2_12T_freq_bias_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_uart1_mode3_timer2_12T_freq_bias_example
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart1_mode3_timer2_12T_freq_bias_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode3/timer2/uart1_mode3_timer2_12T_freq_bias_example.hex
     DEPENDS uart1_mode3_timer2_12T_examuart1_mode3_timer2_12T_freq_bias_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 
 # 8
@@ -129,9 +136,10 @@ ihx_to_hex(uart1_mode3_timer2_12T_interrupt_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_uart1_mode3_timer2_12T_interrupt
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart1_mode3_timer2_12T_interrupt_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode3/timer2/uart1_mode3_timer2_12T_interrupt_example.hex
     DEPENDS uart1_mode3_timer2_12T_interrupt_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 
 # 9
@@ -146,9 +154,10 @@ ihx_to_hex(uart1_mode3_timer2_12T_receive_even_parity_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_uart1_mode3_timer2_12T_receive_even_parity
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart1_mode3_timer2_12T_receive_even_parity_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode3/timer2/uart1_mode3_timer2_12T_receive_even_parity_example.hex
     DEPENDS uart1_mode3_timer2_12T_receive_even_parity_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 
 # 10
@@ -163,7 +172,8 @@ ihx_to_hex(uart1_mode3_timer2_12T_receive_odd_parity_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_uart1_mode3_timer2_12T_receive_odd_parity
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/uart1_mode3_timer2_12T_receive_odd_parity_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode3/timer2/uart1_mode3_timer2_12T_receive_odd_parity_example.hex
     DEPENDS uart1_mode3_timer2_12T_receive_odd_parity_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
