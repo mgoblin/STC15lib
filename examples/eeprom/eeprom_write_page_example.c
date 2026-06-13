@@ -9,9 +9,12 @@
  * 
  * After writing, data is cyclycally read back and compared with original data.
  * 
- * If error occurs, LED will be always on.
+ * If the read value matches the written value, the LED blinks.
+ * If error occurs thenLED will be always on.
  */
 #include <eeprom.h>
+
+#include <delay.h>
 
 
 // LED definitions
@@ -30,7 +33,7 @@ const uint8_t data[] = { 9, 8, 7, 6, 5, 4, 2, 2, 1, 0 };
 void main(void)
 {
     // LED on and start writing
-    LED = LED_ON;
+    LED = LED_OFF;
 
     clear_power_low_voltage_flag();
 
@@ -41,6 +44,9 @@ void main(void)
     {
         return;
     }
+
+    LED = LED_ON;
+    delay_ms(5000);
 
     // LED off on success
     LED = LED_OFF;
@@ -56,6 +62,10 @@ void main(void)
             {
                 LED = LED_ON;
                 break;
+            }
+            else{
+                LED = !LED;
+                delay_ms(500);
             }
         }
     }

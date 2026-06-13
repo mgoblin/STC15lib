@@ -50,7 +50,8 @@ add_custom_target(flash_eeprom_write_byte
 )
 # upload firmware to STC MCU
 add_custom_target(flash_eeprom_write_page
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/eeprom_write_page_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/eeprom/eeprom_write_page_example.hex
     DEPENDS eeprom_write_page_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
