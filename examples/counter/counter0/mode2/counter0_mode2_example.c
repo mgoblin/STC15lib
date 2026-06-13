@@ -18,6 +18,8 @@
 
 #define LED P10
 
+#define INITIAL_COUNTER_VALUE 0x00
+
 void timer0ISR(void) __interrupt(INTERRUPT_COUNTER0)
 {
     LED = !LED;
@@ -28,17 +30,16 @@ void main()
     uart1_init(9600);
 
     counter0_mode2_init();
-    counter0_mode2_start(0xFF);
+    counter0_mode2_start(INITIAL_COUNTER_VALUE);
     
     pin_quasi_bidiretional_init(P3, 4);
 
     while (1) {
-        T0 = !T0;
-        delay_ms(5);
-        if (!T0) // react on T0 pin change to low value only
+        // Change pin state. Counter should increments
+        P34 = !P34;
+        if (!T0) // react on low value T0 pin only
         {
-            printf_tiny(
-                "Tick %u\r\n", 
+            printf_tiny("Counter value: %u\r\n", 
                 counter0_mode2_get_value()
             );
         }
