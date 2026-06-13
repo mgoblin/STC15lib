@@ -35,7 +35,8 @@ add_custom_target(flash_counter0_mode3_gate
 )
 # upload firmware to STC MCU
 add_custom_target(flash_counter0_mode3_p35_output
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/counter0_mode3_p35_output_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/counter/counter0/mode3//counter0_mode3_p35_output_example.hex
     DEPENDS counter0_mode3_p35_output_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
