@@ -55,54 +55,62 @@ ihx_to_hex(timer2_mode0_Hz_to_ticks_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_timer2_mode0_1T_interrupt
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/timer2_mode0_1T_interrupt_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/timer/mode0/timer2/timer2_mode0_1T_interrupt_example.hex
     DEPENDS timer2_mode0_1T_interrupt_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 # upload firmware to STC MCU
 add_custom_target(flash_timer2_mode0_direct_reload
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/timer2_mode0_direct_reload_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/timer/mode0/timer2/timer2_mode0_direct_reload_example.hex
     DEPENDS timer2_mode0_direct_reload_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 # upload firmware to STC MCU
 add_custom_target(flash_timer2_mode0_P30_output
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/timer2_mode0_P30_output_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/timer/mode0/timer2/timer2_mode0_P30_output_example.hex
     DEPENDS timer2_mode0_P30_output_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 # upload firmware to STC MCU
 add_custom_target(flash_timer2_mode0_reload
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/timer2_mode0_reload_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/timer/mode0/timer2/timer2_mode0_reload_example.hex
     DEPENDS timer2_mode0_reload_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 
 # upload firmware to STC MCU
 add_custom_target(flash_timer2_mode0_ms_to_ticks
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/timer2_mode0_ms_to_ticks_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/timer/mode0/timer2/timer2_mode0_ms_to_ticks_example.hex
     DEPENDS timer2_mode0_ms_to_ticks_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 
 # upload firmware to STC MCU
 add_custom_target(flash_timer2_mode0_ticks_to_ms
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/timer2_mode0_ticks_to_ms_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/timer/mode0/timer2/timer2_mode0_ticks_to_ms_example.hex
     DEPENDS timer2_mode0_ticks_to_ms_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 
 # upload firmware to STC MCU
 add_custom_target(flash_timer2_mode0_ticks_to_Hz
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/timer2_mode0_ticks_to_Hz_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/timer/mode0/timer2/timer2_mode0_ticks_to_Hz_example.hex
     DEPENDS timer2_mode0_ticks_to_Hz_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 
 # upload firmware to STC MCU
 add_custom_target(flash_timer2_mode0_Hz_to_ticks
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/timer2_mode0_Hz_to_ticks_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/timer/mode0/timer2/timer2_mode0_Hz_to_ticks_example.hex
     DEPENDS timer2_mode0_Hz_to_ticks_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 
