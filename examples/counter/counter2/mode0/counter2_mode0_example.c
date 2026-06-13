@@ -27,7 +27,7 @@ void main()
     counter2_mode0_init();
     counter2_mode0_start(COUNTER_INIT_VALUE);
     
-    pin_quasi_bidiretional_init(P3, 4);
+    pin_quasi_bidiretional_init(P3, 1);
 
     while (1) {
         T2 = !T2;
