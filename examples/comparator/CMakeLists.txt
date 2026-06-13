@@ -9,7 +9,8 @@ ihx_to_hex(comparator_async_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_comparator_async
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/comparator_async_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/comparator/comparator_async_example.hex
     DEPENDS comparator_async_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )

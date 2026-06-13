@@ -13,5 +13,4 @@ add_custom_target(flash_chip_id
     DEPENDS chip_id_example
     COMMENT "Waiting for MCU, please cycle power:"
     USES_TERMINAL
-
 )
