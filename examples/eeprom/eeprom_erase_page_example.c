@@ -11,12 +11,13 @@
 #include <uart.h>
 #include <stdio.h>
 
+#include <stdint.h>
+
 #include <delay.h>
 
 #define LED P10
 
 #define EEPROM_TEST_SECTOR_ADDR 0x00
-
 
 void main(void)
 {
