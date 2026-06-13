@@ -21,19 +21,22 @@ ihx_to_hex(wdt_start_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_wdt_clear
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/wdt_clear_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/wdt/wdt_clear_example.hex
     DEPENDS wdt_clear_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 # upload firmware to STC MCU
 add_custom_target(flash_wdt_flag
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/wdt_flag_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/wdt/wdt_flag_example.hex
     DEPENDS wdt_flag_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 # upload firmware to STC MCU
 add_custom_target(flash_wdt_start
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/wdt_start_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/wdt/wdt_start_example.hex
     DEPENDS wdt_start_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
