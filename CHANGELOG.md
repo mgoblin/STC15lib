@@ -192,7 +192,7 @@
 * Timer2 mode0 start on freq routines implemented
 
 0.17.0
-* Timer0 sync delay for ms routine implemented
+* Timer0 sync delay routines implemented
 * CMake counter/counter0/mode2/flash_* targets fixed
 * TODO Fix: examples flash targets on cmake build
 * TODO Add docs to memory dumper README
@@ -203,6 +203,7 @@
 * Separate ./README on READMEs for library devops, firmware dev and contributor parts
 
 Next releases todo
+* TODO Try to build with SDCC 4.6
 * TODO Use static_assert 
 * TODO UART1 support frame error
 * TODO UART1 Automatic address recognition support
@@ -211,6 +212,7 @@ Next releases todo
 * TODO is PCON SMOD bit really double baud rate in mode 1, 2, 3?
 * TODO Try to read/write EEPROM using MOVC assembler command
 * TODO Timer sync delay implementation could use idle and isr handler
-* TODO Comparator module sync mode implementation 
+* TODO Comparator module sync mode implementation
+* TODO Use ucsim for testing
 
 
