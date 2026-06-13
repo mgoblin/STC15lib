@@ -16,14 +16,16 @@ ihx_to_hex(timer2_common_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_timer0_common
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/timer0_common_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/timer/common/timer0_common_example.hex
     DEPENDS timer0_common_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 
 # upload firmware to STC MCU
 add_custom_target(flash_timer2_common
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/timer2_common_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/timer/common/timer2_common_example.hex
     DEPENDS timer2_common_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
