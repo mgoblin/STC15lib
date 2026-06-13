@@ -33,31 +33,36 @@ ihx_to_hex(timer0_mode3_reload_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_timer0_mode3_1T_interrupt
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/timer0_mode3_1T_interrupt_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/timer/mode3/async/timer0_mode3_1T_interrupt_example.hex
     DEPENDS timer0_mode3_1T_interrupt_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 # upload firmware to STC MCU
 add_custom_target(flash_timer0_mode3_direct_reload
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/timer0_mode3_direct_reload_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/timer/mode3/async/timer0_mode3_direct_reload_example.hex
     DEPENDS timer0_mode3_direct_reload_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 # upload firmware to STC MCU
 add_custom_target(flash_timer0_mode3_direct_start
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/timer0_mode3_direct_start_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/timer/mode3/async/timer0_mode3_direct_start_example.hex
     DEPENDS timer0_mode3_direct_start_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 # upload firmware to STC MCU
 add_custom_target(flash_timer0_mode3_pause_by_gate
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/timer0_mode3_pause_by_gate_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/timer/mode3/async/timer0_mode3_pause_by_gate_example.hex
     DEPENDS timer0_mode3_pause_by_gate_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 # upload firmware to STC MCU
 add_custom_target(flash_timer0_mode3_reload
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/timer0_mode3_reload_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/timer/mode3/async/timer0_mode3_reload_example.hex
     DEPENDS timer0_mode3_reload_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
