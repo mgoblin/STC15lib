@@ -16,13 +16,15 @@ ihx_to_hex(slowdown_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_master_clock_output
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/master_clock_output_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/frequency/master_clock_output_example.hex
     DEPENDS master_clock_output_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 # upload firmware to STC MCU
 add_custom_target(flash_slowdown
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/slowdown_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/frequency/slowdown_example.hex
     DEPENDS slowdown_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
