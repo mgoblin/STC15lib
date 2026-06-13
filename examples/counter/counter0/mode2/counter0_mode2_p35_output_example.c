@@ -10,6 +10,8 @@
 #include <delay.h>
 
 #define LED P10
+#define COUNTER_INITIAL_VALUE 240
+#define COUNT_DELAY_MS 10
 
 void timer0ISR(void) __interrupt(INTERRUPT_COUNTER0)
 {
@@ -19,14 +21,15 @@ void timer0ISR(void) __interrupt(INTERRUPT_COUNTER0)
 void main()
 {
     counter0_mode2_init();
-    counter0_mode2_start(240);
     counter0_mode2_enable_P35_output();
+
+    counter0_mode2_start(COUNTER_INITIAL_VALUE);
 
     while (1)
     {
         T0 = !T0;
 
-        delay_ms(1);
+        delay_ms(COUNT_DELAY_MS);
     }
     
 }
