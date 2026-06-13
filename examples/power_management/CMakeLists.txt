@@ -25,28 +25,32 @@ ihx_to_hex(wakeup_seconds_example)
 
 # upload firmware to STC MCU
 add_custom_target(flash_idle
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/idle_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/power_management/idle_example.hex
     DEPENDS idle_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 # upload firmware to STC MCU
 add_custom_target(flash_low_voltage
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/low_voltage_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/power_management/low_voltage_example.hex
     DEPENDS low_voltage_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 # upload firmware to STC MCU
 add_custom_target(flash_powerdown
-    COMMAND stcgal ${CMAKE_BINARY_DIR}/src/powerdown_example.hex
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/power_management/powerdown_example.hex
     DEPENDS powerdown_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 
 # upload firmware to STC MCU
 add_custom_target(flash_wakeup_seconds_example
     COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/power_management/wakeup_seconds_example.hex
     DEPENDS powerdown_example
-    JOB_POOL console # for ninja build tool output stgal command input to console
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
 )
 
 
