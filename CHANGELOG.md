@@ -203,6 +203,7 @@
 * Separate ./README on READMEs for library devops, firmware dev and contributor parts
 
 Next releases todo
+* TODO Use static_assert 
 * TODO UART1 support frame error
 * TODO UART1 Automatic address recognition support
 * TODO UART1 Relay broadcast mode support
