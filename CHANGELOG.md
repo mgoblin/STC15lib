@@ -193,7 +193,7 @@
 
 0.17.0
 * Timer0 sync delay for ms routine implemented
-* CMake counter/counter0/mode0/flash_*comparator_async* targets fixed
+* CMake counter/counter0/mode1/flash_* targets fixed
 * TODO Fix: examples flash targets on cmake build
 * TODO Add docs to memory dumper README
 * TODO memory dump not only idata but xdata memory too
