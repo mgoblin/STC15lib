@@ -68,7 +68,7 @@ void print_xdata(void)
 void main()
 {
     uart1_init(UART_BAUD_RATE);
-
+    
     while(1)
     {
         print_idata();
