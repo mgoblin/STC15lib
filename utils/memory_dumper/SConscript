@@ -6,6 +6,7 @@ env.Default (
     env.Program('mem_dump', 
     [
         'mem_dump.c',
+        'mem_print.c',
         'uart.c'
     ])
 )

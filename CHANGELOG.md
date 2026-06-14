@@ -194,8 +194,8 @@
 0.17.0
 * Timer0 sync delay routines implemented
 * CMake examples flash_* targets are fixed
-* TODO Add docs to memory dumper README
 * TODO memory dump not only idata but xdata memory too
+* TODO Add docs to memory dumper README
 * TODO Add docs to csv2hex README
 * TODO Make firmware sizes table on build
 * TODO Rework bits module
