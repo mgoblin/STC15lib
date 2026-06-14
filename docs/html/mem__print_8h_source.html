@@ -81,19 +81,27 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">mem_print.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;<a class="code" href="uart_8h.html">uart.h</a>&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keywordtype">void</span> print_header_row(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keywordtype">void</span> print_footer_row(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keywordtype">void</span> print_row_offset(uint8_t address);</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keywordtype">void</span> print_row_end();</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keywordtype">void</span> print_byte_value(uint8_t <span class="keywordtype">byte</span>);</div>
+<a href="mem__print_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;<a class="code" href="uart_8h.html">uart.h</a>&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">void</span> <a class="code hl_function" href="mem__print_8h.html#a002026cf7978cce9adf5d5a3d38bee48">print_header_row</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span> <a class="code hl_function" href="mem__print_8h.html#ad211d2741222dfc76c3324c3c82dce2e">print_footer_row</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> <a class="code hl_function" href="mem__print_8h.html#ab0e1bfbb95c9e3204b7b0252716988de">print_row_offset</a>(uint8_t address);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> <a class="code hl_function" href="mem__print_8h.html#a985addff1528e73f4a9ba989666f3cf1">print_row_end</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> <a class="code hl_function" href="mem__print_8h.html#a95f323cd0902309bd206209f531d1f16">print_byte_value</a>(uint8_t <span class="keywordtype">byte</span>);</div>
+<div class="ttc" id="amem__print_8h_html_a002026cf7978cce9adf5d5a3d38bee48"><div class="ttname"><a href="mem__print_8h.html#a002026cf7978cce9adf5d5a3d38bee48">print_header_row</a></div><div class="ttdeci">void print_header_row(void)</div><div class="ttdoc">Print the header row (column indices 0-F)</div><div class="ttdef"><b>Definition</b> mem_print.c:10</div></div>
+<div class="ttc" id="amem__print_8h_html_a95f323cd0902309bd206209f531d1f16"><div class="ttname"><a href="mem__print_8h.html#a95f323cd0902309bd206209f531d1f16">print_byte_value</a></div><div class="ttdeci">void print_byte_value(uint8_t byte)</div><div class="ttdoc">Print a single byte value in hex with leading pipe.</div><div class="ttdef"><b>Definition</b> mem_print.c:37</div></div>
+<div class="ttc" id="amem__print_8h_html_a985addff1528e73f4a9ba989666f3cf1"><div class="ttname"><a href="mem__print_8h.html#a985addff1528e73f4a9ba989666f3cf1">print_row_end</a></div><div class="ttdeci">void print_row_end(void)</div><div class="ttdoc">Print the end-of-row marker.</div><div class="ttdef"><b>Definition</b> mem_print.c:32</div></div>
+<div class="ttc" id="amem__print_8h_html_ab0e1bfbb95c9e3204b7b0252716988de"><div class="ttname"><a href="mem__print_8h.html#ab0e1bfbb95c9e3204b7b0252716988de">print_row_offset</a></div><div class="ttdeci">void print_row_offset(uint8_t address)</div><div class="ttdoc">Print the row offset address in hex.</div><div class="ttdef"><b>Definition</b> mem_print.c:20</div></div>
+<div class="ttc" id="amem__print_8h_html_ad211d2741222dfc76c3324c3c82dce2e"><div class="ttname"><a href="mem__print_8h.html#ad211d2741222dfc76c3324c3c82dce2e">print_footer_row</a></div><div class="ttdeci">void print_footer_row(void)</div><div class="ttdoc">Print the footer row (same as header)</div><div class="ttdef"><b>Definition</b> mem_print.c:15</div></div>
 <div class="ttc" id="auart_8h_html"><div class="ttname"><a href="uart_8h.html">uart.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

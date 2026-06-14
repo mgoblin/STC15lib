@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>STC15W408AS library: Memory dumper</title>
+<title>STC15W408AS library: Memory Dumper</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,10 +69,70 @@ $(function() {
 
 </div><!-- top -->
 <div><div class="header">
-  <div class="headertitle"><div class="title">Memory dumper</div></div>
+  <div class="headertitle"><div class="title">Memory Dumper</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md14"></a>Dump to uart first 256 RAM bytes (idata area) </p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md14"></a> A utility for dumping the first 256 bytes of <b>IDATA</b> (internal RAM) and <b>XDATA</b> (external RAM) memory spaces to UART1 on STC15 microcontrollers.</p>
+<h1><a class="anchor" id="autotoc_md15"></a>
+Overview</h1>
+<p>This utility reads memory from address <code>0x00</code> to <code>0xFF</code> in both the IDATA and XDATA address spaces and outputs a formatted hex dump over UART1 at <b>115200 baud</b>.</p>
+<h1><a class="anchor" id="autotoc_md16"></a>
+Output Format</h1>
+<p>The dump is printed in a standard hex dump format with 16 bytes per row:</p>
+<div class="fragment"><div class="line">IDATA:</div>
+<div class="line">    0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F</div>
+<div class="line">00 |00|01|02|03|04|05|06|07|08|09|0A|0B|0C|0D|0E|0F|</div>
+<div class="line">10 |10|11|12|13|14|15|16|17|18|19|1A|1B|1C|1D|1E|1F|</div>
+<div class="line">...</div>
+<div class="line">    0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F</div>
+<div class="line"> </div>
+<div class="line">XDATA:</div>
+<div class="line">    0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F</div>
+<div class="line">00 |00|01|02|03|04|05|06|07|08|09|0A|0B|0C|0D|0E|0F|</div>
+<div class="line">...</div>
+<div class="line">    0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F</div>
+</div><!-- fragment --><ul>
+<li>The first column shows the row offset address in hexadecimal</li>
+<li>Each subsequent column shows the byte value at that offset</li>
+<li>The header and footer rows show column indices 0 through F</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md17"></a>
+Building</h1>
+<h2><a class="anchor" id="autotoc_md18"></a>
+With CMake</h2>
+<div class="fragment"><div class="line">cmake -B build</div>
+<div class="line">cmake --build build --target mem_dump</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md19"></a>
+With PlatformIO / SCons</h2>
+<div class="fragment"><div class="line">pio run -e your_env -t mem_dump</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md20"></a>
+Flashing</h1>
+<h2><a class="anchor" id="autotoc_md21"></a>
+With CMake</h2>
+<div class="fragment"><div class="line">cmake --build build --target flash_mem_dump</div>
+</div><!-- fragment --><p>This uses <code>stcgal</code> to flash the generated <code>.hex</code> file. Cycle power on the MCU when prompted.</p>
+<h1><a class="anchor" id="autotoc_md22"></a>
+Files</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">File   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="mem_dump.c"><code>mem_dump.c</code></a>   </td><td class="markdownTableBodyNone">Main entry point — initializes UART and dumps IDATA/XDATA    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="mem_print.c"><code>mem_print.c</code></a>   </td><td class="markdownTableBodyNone">Hex dump formatting functions    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="mem_print.h"><code>mem_print.h</code></a>   </td><td class="markdownTableBodyNone">Header for formatting functions    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="CMakeLists.txt"><code>CMakeLists.txt</code></a>   </td><td class="markdownTableBodyNone">CMake build configuration    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">[<code>SConscript</code>](SConscript)   </td><td class="markdownTableBodyNone">SCons build configuration for PlatformIO   </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md23"></a>
+Dependencies</h1>
+<ul>
+<li><a href="../../include/uart.h"><code>uart.h</code></a> — UART1 initialization and <code><a class="el" href="group__uart.html#ga07036e93939040c563e862a6a31b65bc" title="Send character to UART1.">putchar()</a></code> for <code>printf_tiny</code></li>
+<li>SDCC (Small Device C Compiler) — for <code>__idata</code>, <code>__xdata</code>, <code>__code</code> keywords </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

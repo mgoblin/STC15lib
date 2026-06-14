@@ -11,5 +11,6 @@ var searchData=
   ['baudrate_5f9600_8',['baudrate_9600',['../group__uart1__mode1__timer2__12T.html#gga041bfeb3611dd3a99d7c742e0d770844a920ff2bd65ec0264e548c65f9beeeebe',1,'baudrate_9600:&#160;uart1_mode1_timer2_12T.h'],['../group__uart1__mode1__timer2__1T.html#gga2e4139c472c0e5df5e673548645c252da920ff2bd65ec0264e548c65f9beeeebe',1,'baudrate_9600:&#160;uart1_mode1_timer2_1T.h'],['../group__uart1__mode3__timer2__12T.html#gga6250d834ff15b17fe8b5fa26d79b7261a920ff2bd65ec0264e548c65f9beeeebe',1,'baudrate_9600:&#160;uart1_mode3_timer2_12T.h'],['../group__uart1__mode3__timer2__1T.html#gga0d176dd7c7a2c116dbf6b3488716d72da920ff2bd65ec0264e548c65f9beeeebe',1,'baudrate_9600:&#160;uart1_mode3_timer2_1T.h']]],
   ['bit_20send_20receive_20functions_9',['UART1 8-bit send/receive functions',['../group__uart1__8bit__shared.html',1,'']]],
   ['bit_20with_20parity_208_20bit_20with_20two_20stop_20bits_20send_20receive_20functions_10',['UART1 9bit, 8-bit with parity, 8-bit with two stop bits send/receive functions',['../group__uart1__9bit__shared.html',1,'']]],
-  ['bits_20send_20receive_20functions_11',['UART1 9bit, 8-bit with parity, 8-bit with two stop bits send/receive functions',['../group__uart1__9bit__shared.html',1,'']]]
+  ['bits_20send_20receive_20functions_11',['UART1 9bit, 8-bit with parity, 8-bit with two stop bits send/receive functions',['../group__uart1__9bit__shared.html',1,'']]],
+  ['building_12',['Building',['../md_utils_2memory__dumper_2README.html#autotoc_md17',1,'']]]
 ];

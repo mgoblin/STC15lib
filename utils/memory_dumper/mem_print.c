@@ -1,6 +1,11 @@
+/**
+ * @file mem_print.c
+ * @brief Hex dump formatting functions for memory dumper utility
+ */
 #include "mem_print.h"
 
-__code const char* hf_str = "    0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F\r\n";
+/** @brief Header/footer string displayed at top and bottom of each dump */
+static __code const char hf_str[] = "    0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F\r\n";
 
 void print_header_row(void)
 {
@@ -24,7 +29,7 @@ void print_row_offset(uint8_t address)
     }
 }
 
-void print_row_end()
+void print_row_end(void)
 {
     printf_tiny("|\r\n");
 }

@@ -35,7 +35,7 @@
 <area shape="rect" id="Node000018" href="$timer0__mode2__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="2786,255,2969,309"/>
 <area shape="poly" id="edge17_Node000005_Node000018" title=" " alt="" coords="2434,201,2590,221,2774,252,2786,255,2785,260,2773,257,2589,227,2433,206"/>
 <area shape="rect" id="Node000019" href="$timer0__mode2__ticks__to__Hz__example_8c.html" title="Example demonstrating conversion from timer0 ticks to frequency (Hz)" alt="" coords="2993,255,3172,309"/>
-<area shape="poly" id="edge18_Node000005_Node000019" title=" " alt="" coords="2433,196,2676,213,2829,230,2982,252,2994,254,2993,260,2981,257,2828,235,2676,219,2433,201"/>
+<area shape="poly" id="edge18_Node000005_Node000019" title=" " alt="" coords="2433,196,2676,213,2828,230,2980,252,2994,255,2993,260,2980,257,2827,235,2675,219,2433,201"/>
 <area shape="rect" id="Node000020" href="$timer0__mode2__ticks__to__mcs__example_8c.html" title=" " alt="" coords="3196,255,3385,309"/>
 <area shape="poly" id="edge19_Node000005_Node000020" title=" " alt="" coords="2433,194,2571,198,2758,208,2970,225,3184,252,3196,254,3195,259,3184,257,2970,230,2758,213,2571,203,2433,199"/>
 <area shape="rect" id="Node000021" href="$timer0__mode3__Hz__to__ticks__example_8c.html" title="Example demonstrating conversion from frequency (Hz) to timer0 ticks." alt="" coords="3409,255,3588,309"/>
@@ -43,9 +43,13 @@
 <area shape="rect" id="Node000022" href="$timer0__mode3__ms__to__ticks__example_8c.html" title="Example demonstrating conversion from milliseconds to timer0 ticks." alt="" coords="3613,255,3795,309"/>
 <area shape="poly" id="edge21_Node000005_Node000022" title=" " alt="" coords="2433,194,3016,212,3353,230,3494,240,3600,252,3613,254,3612,259,3600,257,3493,245,3353,235,3015,218,2433,200"/>
 <area shape="rect" id="Node000023" href="$timer0__mode3__ticks__to__Hz__example_8c.html" title="Example demonstrating conversion from timer0 ticks to frequency (Hz)" alt="" coords="3820,255,3999,309"/>
-<area shape="poly" id="edge22_Node000005_Node000023" title=" " alt="" coords="2433,194,2715,199,3113,209,3514,227,3682,238,3808,252,3820,254,3819,259,3808,257,3681,244,3514,232,3113,215,2715,204,2433,199"/>
+<area shape="poly" id="edge22_Node000005_Node000023" title=" " alt="" coords="2433,194,2715,199,3112,209,3513,227,3681,238,3807,252,3820,254,3820,260,3806,257,3680,244,3513,232,3112,215,2715,204,2433,199"/>
 <area shape="rect" id="Node000024" href="$timer0__mode3__ticks__to__ms__example_8c.html" title=" " alt="" coords="4023,255,4206,309"/>
 <area shape="poly" id="edge23_Node000005_Node000024" title=" " alt="" coords="2433,193,2750,197,3207,207,3671,225,3865,237,4011,252,4023,254,4023,259,4010,257,3864,242,3671,230,3206,212,2750,203,2433,199"/>
-<area shape="rect" id="Node000025" href="$mem__print_8h_source.html" title=" " alt="" coords="4230,262,4397,302"/>
+<area shape="rect" id="Node000025" href="$mem__print_8h.html" title="Hex dump formatting functions for memory dumper utility." alt="" coords="4230,262,4397,302"/>
 <area shape="poly" id="edge24_Node000005_Node000025" title=" " alt="" coords="2433,193,2786,195,3303,202,3832,220,4053,234,4219,252,4254,259,4253,265,4218,257,4052,239,3831,226,3303,208,2786,200,2433,198"/>
+<area shape="rect" id="Node000026" href="$mem__dump_8c.html" title="Dump IDATA and XDATA memory contents to UART." alt="" coords="4134,357,4301,397"/>
+<area shape="poly" id="edge25_Node000025_Node000026" title=" " alt="" coords="4286,313,4239,359,4235,355,4282,309"/>
+<area shape="rect" id="Node000027" href="$mem__print_8c.html" title="Hex dump formatting functions for memory dumper utility." alt="" coords="4325,357,4491,397"/>
+<area shape="poly" id="edge26_Node000025_Node000027" title=" " alt="" coords="4344,310,4391,355,4387,359,4341,314"/>
 </map>
