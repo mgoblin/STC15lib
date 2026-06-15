@@ -198,6 +198,7 @@
 * Memory dumper is documented 
 * TODO Add docs to csv2hex README
 * TODO Make firmware sizes table on build
+* TODO SCons should build library
 * TODO Rework bits module
 * Separate ./README on READMEs for library devops, firmware dev and contributor parts
 
