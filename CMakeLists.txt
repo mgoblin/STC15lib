@@ -40,7 +40,7 @@ endif()
 # Collect all currently added targets in all subdirectories
 # Returns each target as: "relative_dir_path/target_name"
 # Example: ["blink", "subdir1/uart", "subdir2/flash_app"]
-function(get_all_targets _result _dir)
+function(get_all_targets_mem _result _dir)
     # Compute relative path from CMAKE_CURRENT_LIST_DIR to current _dir
     file(RELATIVE_PATH _rel_dir "${CMAKE_CURRENT_LIST_DIR}" "${_dir}")
 
@@ -54,7 +54,7 @@ function(get_all_targets _result _dir)
     # Recurse into subdirectories
     get_property(_subdirs DIRECTORY "${_dir}" PROPERTY SUBDIRECTORIES)
     foreach(_subdir IN LISTS _subdirs)
-        get_all_targets(${_result} "${_subdir}")
+        get_all_targets_mem(${_result} "${_subdir}")
     endforeach()
 
     # Collect targets in this directory, prefixed with relative path
@@ -63,7 +63,7 @@ function(get_all_targets _result _dir)
         # Only append if not already in list (avoid duplicates from overlapping calls)
         get_target_property(_type ${_target} TYPE)
         if(_type STREQUAL "EXECUTABLE")
-          list(APPEND ${_result} "${CMAKE_BINARY_DIR}/${_prefix}${_target}.hex")
+          list(APPEND ${_result} "${CMAKE_BINARY_DIR}/${_prefix}${_target}.mem")
         endif()  
     endforeach()
 
@@ -71,14 +71,5 @@ function(get_all_targets _result _dir)
     set(${_result} ${${_result}} PARENT_SCOPE)
 endfunction()
 
-get_all_targets(ALL_HEX_FILES ${CMAKE_CURRENT_LIST_DIR}/examples)
-
-# Helper
-function(print_list _name)
-  foreach(_target IN LISTS ${_name})
-    message(STATUS "  - ${_target}")
-    message(STATUS "")
-  endforeach()
-endfunction()
-
-print_list(ALL_HEX_FILES)
+get_all_targets_mem(ALL_MEM_FILES ${CMAKE_CURRENT_LIST_DIR}/examples)
+file(WRITE "${CMAKE_BINARY_DIR}/mem_list.txt" "${ALL_MEM_FILES}\n")
