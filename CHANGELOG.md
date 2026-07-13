@@ -196,8 +196,8 @@
 * CMake examples flash_* targets are fixed
 * Memory dump not only idata but xdata memory too
 * Memory dumper is documented 
-* TODO Add docs to csv2hex README
-* TODO Make firmware sizes table on build
+* TODO Make firmware sizes table on build with CMake
+* TODO Make firmware sizes table on build with Platformio
 * TODO SCons should build library
 * TODO Rework bits module
 * Separate ./README on READMEs for library devops, firmware dev and contributor parts
