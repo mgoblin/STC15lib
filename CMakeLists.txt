@@ -78,7 +78,10 @@ file(WRITE "${CMAKE_BINARY_DIR}/mem_list.txt" "${ALL_MEM_FILES}\n")
 set(EXAMPLES_BUILD_SUMMART_CMD "")
 
 list(APPEND EXAMPLES_BUILD_SUMMART_CMD
-    COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/cmake_examples_build_summary.py "${CMAKE_BINARY_DIR}/mem_list.txt"
+    COMMAND 
+    ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/cmake_examples_build_summary.py 
+    "${CMAKE_BINARY_DIR}/mem_list.txt"
+    "${CMAKE_BINARY_DIR}/build_summary.txt"
 )
 
 # Add a custom target that runs *after all* targets, with a clean dependency chain
