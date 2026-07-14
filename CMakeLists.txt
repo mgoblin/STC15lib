@@ -36,6 +36,9 @@ else()
   message(STATUS "Doxygen not found. Docs generation disabled")
 endif()
 
+# Find Pyhton
+find_package(Python3 REQUIRED)
+
 
 # Collect all currently added targets in all subdirectories
 # Returns each target as: "relative_dir_path/target_name"
@@ -76,18 +79,15 @@ file(WRITE "${CMAKE_BINARY_DIR}/mem_list.txt" "${ALL_MEM_FILES}\n")
 
 # Build a list of `cat` commands for each file in mem_list.txt
 # We'll read the file at build time and cat each path listed
-set(_CAT_CMDS "")
-file(STRINGS "${CMAKE_BINARY_DIR}/mem_list.txt" _MAP_PATHS)
-foreach(_map IN LISTS _MAP_PATHS)
-  list(APPEND _CAT_CMDS
-      COMMAND ${CMAKE_COMMAND} -E echo "=== ${_map} ==="
-      COMMAND ${CMAKE_COMMAND} -E cat "${_map}"
-  )
-endforeach()
+set(EXAMPLES_BUILD_SUMMART_CMD "")
+
+list(APPEND EXAMPLES_BUILD_SUMMART_CMD
+    COMMAND ${PYTHON3} ${CMAKE_CURRENT_SOURCE_DIR}/cmake_examples_build_summary.py "${CMAKE_BINARY_DIR}/mem_list.txt"
+)
 
 # Add a custom target that runs *after all* targets, with a clean dependency chain
-add_custom_target(cat_maps
+add_custom_target(build_summary
     COMMENT "Concatenate and display all .map files (post-build step)"
-    ${_CAT_CMDS}
+    ${EXAMPLES_BUILD_SUMMART_CMD}
 )
 

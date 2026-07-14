@@ -1,8 +1,12 @@
+# Prepare and print the examples build summary
+# This is a Python script that runs in CMake STC15Lib build.
+# Get one argument from command line 
+# which should be mem_list.txt file
+
 from __future__ import print_function
 import sys
 import re
 import os
-
 
 firmware_mem_files = sys.argv[1]
 with open(firmware_mem_files) as fp:
@@ -17,5 +21,3 @@ with open(firmware_mem_files) as fp:
                 print(f"{hex_name:<60}{matches.group(1)} bytes")
             else:
                 print(f"{hex_name:<60}No size found")
-
-
