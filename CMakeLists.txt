@@ -36,10 +36,6 @@ else()
   message(STATUS "Doxygen not found. Docs generation disabled")
 endif()
 
-# Find Pyhton
-find_package(Python3 REQUIRED)
-
-
 # Collect all currently added targets in all subdirectories
 # Returns each target as: "relative_dir_path/target_name"
 # Example: ["blink", "subdir1/uart", "subdir2/flash_app"]
@@ -82,11 +78,13 @@ file(WRITE "${CMAKE_BINARY_DIR}/mem_list.txt" "${ALL_MEM_FILES}\n")
 set(EXAMPLES_BUILD_SUMMART_CMD "")
 
 list(APPEND EXAMPLES_BUILD_SUMMART_CMD
-    COMMAND ${PYTHON3} ${CMAKE_CURRENT_SOURCE_DIR}/cmake_examples_build_summary.py "${CMAKE_BINARY_DIR}/mem_list.txt"
+    COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/cmake_examples_build_summary.py "${CMAKE_BINARY_DIR}/mem_list.txt"
 )
 
 # Add a custom target that runs *after all* targets, with a clean dependency chain
-add_custom_target(build_summary
+add_custom_target(build_summary ALL
     COMMENT "Display example .hex files and their sizes (post-build step)"
     ${EXAMPLES_BUILD_SUMMART_CMD}
 )
+
+add_dependencies(build_summary mem_dump)
