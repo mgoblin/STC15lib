@@ -87,7 +87,6 @@ list(APPEND EXAMPLES_BUILD_SUMMART_CMD
 
 # Add a custom target that runs *after all* targets, with a clean dependency chain
 add_custom_target(build_summary
-    COMMENT "Concatenate and display all .map files (post-build step)"
+    COMMENT "Display example .hex files and their sizes (post-build step)"
     ${EXAMPLES_BUILD_SUMMART_CMD}
 )
-

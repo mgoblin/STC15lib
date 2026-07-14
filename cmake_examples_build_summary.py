@@ -12,7 +12,7 @@ firmware_mem_files = sys.argv[1]
 with open(firmware_mem_files) as fp:
     maps_paths = fp.read()
     for line in maps_paths.split(';'):
-        with open(line) as map_file:
+        with open(line.strip()) as map_file:
             content = map_file.read()
             pattern = r"ROM/EPROM/FLASH\s+[a-fx\d]+\s+[a-fx\d]+\s+(\d+).*"
             matches = re.search(pattern, content, re.MULTILINE)
