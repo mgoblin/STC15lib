@@ -33,7 +33,7 @@ def build_summary_action(source, target, env):
     pattern = r"ROM/EPROM/FLASH\s+[a-fx\d]+\s+[a-fx\d]+\s+(\d+).*"
 
     with open(output_file, 'w') as out_fp:
-        out_fp.write(f"{len(mem_files_list)} .hex files and their sizes:")
+        out_fp.write(f"{len(mem_files_list)} .hex files and their sizes:\n")
         # Iterate through mem files list and print size of each hex file
         for mem_file_name in sorted(mem_files_list):
             with open(mem_file_name.strip()) as mem_file:

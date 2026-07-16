@@ -177,3 +177,21 @@ add_custom_target(flash_uart1_mode3_timer2_12T_receive_odd_parity
     COMMENT "Waiting for MCU, please cycle power:"
     USES_TERMINAL
 )
+
+# 11
+add_executable(uart1_mode3_timer2_12T_space_parity_example
+    uart1_mode3_timer2_12T_space_parity_example.c
+)
+
+target_link_libraries(uart1_mode3_timer2_12T_space_parity_example PRIVATE stc15hal)
+
+# Transform firmware ihx to hex
+ihx_to_hex(uart1_mode3_timer2_12T_space_parity_example)
+
+# upload firmware to STC MCU
+add_custom_target(flash_uart1_mode3_timer2_12T_space_parity
+    COMMAND stcgal ${CMAKE_BINARY_DIR}/examples/uart/mode3/timer2/uart1_mode3_timer2_12T_space_parity_example.hex
+    DEPENDS uart1_mode3_timer2_12T_space_parity_example
+    COMMENT "Waiting for MCU, please cycle power:"
+    USES_TERMINAL
+)
