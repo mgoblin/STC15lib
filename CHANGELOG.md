@@ -198,7 +198,7 @@
 * Memory dumper is documented 
 * CMake generates build summary with firmware sizes table
 * TODO Make firmware sizes table on build with Platformio
-* TODO Add examples count to CMake build summary
+* TODO Compare Platfromio and CMake build summaries
 * TODO SCons should build library
 * TODO Rework bits module
 * Separate ./README on READMEs for library devops, firmware dev and contributor parts

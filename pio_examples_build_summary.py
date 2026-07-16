@@ -25,6 +25,8 @@ def find_mem_files(examples_dir: str) -> list[str]:
 examples_dir = os.path.join(env.subst("$BUILD_DIR"), "examples")
 
 def build_summary_action(source, target, env):
+    print(target[0].get_abspath())
+
     # Find all mem files in examples dir. Mem files contains hex size info
     mem_files_list = find_mem_files(examples_dir)
     # Regex pattern to search for hex file size
@@ -49,9 +51,9 @@ def build_summary_action(source, target, env):
 
 
 post_action = env.Command(
-    target='global_post_build_action',
-    source=[],
-    action=build_summary_action
+    target = f"{examples_dir}/build_summary.txt",
+    source = [],
+    action = build_summary_action
 )
 
 env.Depends(post_action, [])
