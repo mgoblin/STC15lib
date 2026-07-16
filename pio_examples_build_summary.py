@@ -48,7 +48,9 @@ def build_summary_action(source, target, env):
                     out_fp.write(f"{hex_name:<60}No size found\n")
 
     
-#  TODO print build summary
+    with open(output_file, 'r') as out_fp:
+        build_summary_content = out_fp.read()
+        print(build_summary_content)
 
 post_action = env.Command(
     target = f"{examples_dir}/build_summary.txt",

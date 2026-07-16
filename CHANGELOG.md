@@ -196,8 +196,7 @@
 * CMake examples flash_* targets are fixed
 * Memory dump not only idata but xdata memory too
 * Memory dumper is documented 
-* CMake generates build summary with firmware sizes table
-* TODO Make firmware sizes table on build with Platformio
+* CMake and Platformio generates build summary with firmware sizes table
 * TODO CMake build refactor: build summary task should run after all example build tasks finished. Now its run after utiliy build mem_dump.
 * TODO Platformio build refactor: build summary task should run after all example build tasks finished.
 * TODO SCons should build library
