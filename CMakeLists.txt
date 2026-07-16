@@ -44,7 +44,7 @@ list(APPEND EXAMPLES_BUILD_SUMMART_CMD
   COMMAND 
   ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/cmake_examples_build_summary.py 
   "${CMAKE_BINARY_DIR}/examples"
-  "${CMAKE_BINARY_DIR}/build_summary.txt"
+  "${CMAKE_BINARY_DIR}/examples/build_summary.txt"
 )
 
 # Add a custom target that runs *after all* targets and generates a summary of .hex files and their sizes
@@ -55,7 +55,7 @@ add_custom_target(make_build_summary ALL
 
 # Add a custom target that runs *after all* targets and generates a summary of .hex files and their sizes
 add_custom_target(print_build_summary ALL
-  COMMAND ${CMAKE_COMMAND} -E cat "${CMAKE_BINARY_DIR}/build_summary.txt"
+  COMMAND ${CMAKE_COMMAND} -E cat "${CMAKE_BINARY_DIR}/examples/build_summary.txt"
   COMMENT "Printing contents of ${CMAKE_BINARY_DIR}/build_summary.txt:"
   VERBATIM
 )
