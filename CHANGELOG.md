@@ -204,6 +204,7 @@
 * Separate ./README on READMEs for library devops, firmware dev and contributor parts
 
 Next releases todo
+* TODO CMake build refactor: build summary task should run after all example build tasks finished. Now its run after utiliy build mem_dump.
 * TODO Try to build with SDCC 4.6
 * TODO Use static_assert 
 * TODO UART1 support frame error
