@@ -35,5 +35,33 @@ add_custom_target(print_build_summary ALL
 	VERBATIM
 )
 
-add_dependencies(make_build_summary mem_dump)
 add_dependencies(print_build_summary make_build_summary)
+
+# 1. Define the macro to collect ALL targets recursively
+macro(get_all_targets var folder)
+    get_property(current_targets DIRECTORY "${folder}" PROPERTY BUILDSYSTEM_TARGETS)
+    list(APPEND ${var} ${current_targets})
+
+    get_property(subfolders DIRECTORY "${folder}" PROPERTY SUBDIRECTORIES)
+    foreach(subfolder IN LISTS subfolders)
+        get_all_targets(${var} "${subfolder}")
+    endforeach()
+endmacro()
+
+# 2. Collect all targets first
+set(ALL_TARGETS "")
+get_all_targets(ALL_TARGETS "${CMAKE_CURRENT_SOURCE_DIR}")
+
+# 3. Filter the list for EXECUTABLE types only
+set(EXECUTABLE_TARGETS "")
+
+foreach(target IN LISTS ALL_TARGETS)
+    # Fetch the target type property
+    get_target_property(target_type ${target} TYPE)
+    
+    # Check if the target is an executable
+    if(target_type STREQUAL "EXECUTABLE")
+        list(APPEND EXECUTABLE_TARGETS ${target})
+        add_dependencies(make_build_summary ${target})
+    endif()
+endforeach()
