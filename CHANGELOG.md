@@ -198,7 +198,7 @@
 * Memory dumper is documented 
 * CMake and Platformio generates build summary with firmware sizes table
 * TODO Platformio build refactor: build summary task should run after all example build tasks finished.
-* TODO SCons should build library
+* TODO SCons should build library for examples
 * TODO Rework bits module
 * Separate ./README on READMEs for library devops, firmware dev and contributor parts
 
