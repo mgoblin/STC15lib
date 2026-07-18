@@ -14,7 +14,7 @@ base_dir = env.subst("$BUILD_DIR") + "/examples"
 
 bits_progs = SConscript('bits/SConscript', exports = 'env', variant_dir= base_dir + "/bits")
 chip_id_progs = SConscript('chip_id/SConscript', exports = 'env', variant_dir= base_dir + '/chip_id')
-SConscript('counter/SConscript', exports = 'env', variant_dir= base_dir + '/counter')
+counter_progs = SConscript('counter/SConscript', exports = 'env', variant_dir= base_dir + '/counter')
 SConscript('delay/SConscript', exports = 'env', variant_dir= base_dir + '/delay')
 SConscript('frequency/SConscript', exports = 'env', variant_dir= base_dir + '/frequency')
 SConscript('interrupt/SConscript', exports = 'env', variant_dir= base_dir + '/interrupt')
@@ -31,4 +31,5 @@ SConscript('comparator/SConscript', exports = 'env', variant_dir= base_dir + '/c
 Return([
     'bits_progs',
     'chip_id_progs',
+    'counter_progs',
 ])

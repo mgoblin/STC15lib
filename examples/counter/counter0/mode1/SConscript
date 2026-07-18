@@ -11,3 +11,5 @@ counter0_mode1_prog = env.Program(
 )
 
 env.Default(counter0_mode1_prog)
+
+Return(['counter0_mode1_prog'])

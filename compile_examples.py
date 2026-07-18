@@ -30,7 +30,7 @@ def find_mem_files(examples_dir: str) -> list[str]:
 
 def flatten(seq):
     for item in seq:
-        if isinstance(item, list):
+        if isinstance(item, list) or isinstance(item, tuple):
             yield from flatten(item)
         else:
             yield item    
@@ -74,7 +74,8 @@ post_action = env.Command(
 examples_flatten_list = list(flatten(example_build_tasks))
 print(f"Found {len(examples_flatten_list)} example build tasks")
 for item in examples_flatten_list:
-    print(item[0].name)
+    # print(item[0].name)
+    print(item[0])
 
 env.Depends(post_action, examples_flatten_list)
 env.AlwaysBuild(post_action)

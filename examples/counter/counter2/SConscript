@@ -1,3 +1,5 @@
 Import("env")
 
-SConscript('mode0/SConscript', exports = 'env')
+mode0_prog = SConscript('mode0/SConscript', exports = 'env')
+
+Return('mode0_prog')

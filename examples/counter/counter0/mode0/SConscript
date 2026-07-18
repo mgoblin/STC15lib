@@ -25,3 +25,9 @@ env.Default(
     counter0_mode0_p35_output_prog,
     counter0_mode0_gate_prog
 )
+
+Return([
+    'counter0_mode0_prog',
+    'counter0_mode0_p35_output_prog',
+    'counter0_mode0_gate_prog'
+])
