@@ -1,8 +1,8 @@
 Import("env")
 
-env.Default (
-    Program(
-        'counter2_mode0_example',
-        ['counter2_mode0_example.c'],
-    )
+counter2_mode0_prog = env.Program(
+    'counter2_mode0_example',
+    ['counter2_mode0_example.c'],
 )
+
+env.Default(counter2_mode0_prog)

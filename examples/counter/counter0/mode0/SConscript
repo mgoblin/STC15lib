@@ -2,22 +2,26 @@ Import("env")
 
 env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
 
-env.Default (
-    env.Program(
-        'counter0_mode0_example', 
-        [
-            'counter0_mode0_example.c', 
-            'uart.c'
-        ]
-    ), 
+counter0_mode0_prog = env.Program(
+    'counter0_mode0_example', 
+    [
+        'counter0_mode0_example.c', 
+        'uart.c'
+    ]
+)
 
-    env.Program(
-        'counter0_mode0_p35_output_example',
-        ['counter0_mode0_p35_output_example.c']
-    ),
+counter0_mode0_p35_output_prog = env.Program(
+    'counter0_mode0_p35_output_example',
+    ['counter0_mode0_p35_output_example.c']
+)
 
-    env.Program(
-        'counter0_mode0_gate_example',
-        ['counter0_mode0_gate_example.c']
-    )
+counter0_mode0_gate_prog = env.Program(
+    'counter0_mode0_gate_example',
+    ['counter0_mode0_gate_example.c']
+)
+
+env.Default(
+    counter0_mode0_prog,
+    counter0_mode0_p35_output_prog,
+    counter0_mode0_gate_prog
 )
