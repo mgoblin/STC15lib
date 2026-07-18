@@ -2,9 +2,11 @@ Import("env")
 
 env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
 
-env.Default(
-    env.Program(
-        "pin_read_value_example",
-        ["pin_read_value_example.c", 'uart.c']
-    ),
+pin_read_value_prog = env.Program(
+    "pin_read_value_example",
+    ["pin_read_value_example.c", 'uart.c']
 )
+
+env.Default(pin_read_value_prog)
+
+Return('pin_read_value_prog')

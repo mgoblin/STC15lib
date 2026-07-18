@@ -2,29 +2,43 @@ Import("env")
 
 env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
 
-env.Default(
-    env.Program(
-        'pin_quasi_bidiretional_init_example',
-        ['pin_quasi_bidiretional_init_example.c', 'uart.c']
-    ),
-
-    env.Program(
-        'pin_push_pull_init_example',
-        ['pin_push_pull_init_example.c', 'uart.c']
-    ),
-
-    env.Program(
-        'pin_input_only_init_example',
-        ['pin_input_only_init_example.c', 'uart.c']
-    ),
-
-    env.Program(
-        'pin_open_drain_init_example',
-        ['pin_open_drain_init_example.c', 'uart.c']
-    ),
-
-    env.Program(
-        'pin_mode_example',
-        ['pin_mode_example.c', 'uart.c']
-    ),
+pin_quasi_bidirectional_init_prog = env.Program(
+    'pin_quasi_bidiretional_init_example',
+    ['pin_quasi_bidiretional_init_example.c', 'uart.c']
 )
+
+pin_push_pull_init_prog = env.Program(
+    'pin_push_pull_init_example',
+    ['pin_push_pull_init_example.c', 'uart.c']
+)
+
+pin_input_only_init_prog = env.Program(
+    'pin_input_only_init_example',
+    ['pin_input_only_init_example.c', 'uart.c']
+)
+
+pin_open_drain_init_prog = env.Program(
+    'pin_open_drain_init_example',
+    ['pin_open_drain_init_example.c', 'uart.c']
+)
+
+pin_mode_prog = env.Program(
+    'pin_mode_example',
+    ['pin_mode_example.c', 'uart.c']
+)
+
+env.Default(
+    pin_quasi_bidirectional_init_prog,
+    pin_push_pull_init_prog,
+    pin_input_only_init_prog,
+    pin_open_drain_init_prog,
+    pin_mode_prog
+)
+
+Return([
+    'pin_quasi_bidirectional_init_prog',
+    'pin_push_pull_init_prog',
+    'pin_input_only_init_prog',
+    'pin_open_drain_init_prog',
+    'pin_mode_prog',
+])
