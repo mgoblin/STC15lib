@@ -198,11 +198,12 @@
 * Memory dumper is documented 
 * CMake and Platformio generates build summary with firmware sizes table
 * TODO SCons should make STC15 library for using in examples build
-* TODO Rework bits module
+* TODO Try to build with SDCC 4.6
 * Separate ./README on READMEs for library devops, firmware dev and contributor parts
 
 Next releases todo
-* TODO Try to build with SDCC 4.6
+
+* TODO Rework bits module
 * TODO Use static_assert 
 * TODO UART1 support frame error
 * TODO UART1 Automatic address recognition support
