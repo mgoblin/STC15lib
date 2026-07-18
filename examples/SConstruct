@@ -12,8 +12,8 @@ if verbose == 0:
 
 base_dir = env.subst("$BUILD_DIR") + "/examples"
 
-bits_prog = SConscript('bits/SConscript', exports = 'env', variant_dir= base_dir + "/bits")
-chip_id_prog = SConscript('chip_id/SConscript', exports = 'env', variant_dir= base_dir + '/chip_id')
+bits_progs = SConscript('bits/SConscript', exports = 'env', variant_dir= base_dir + "/bits")
+chip_id_progs = SConscript('chip_id/SConscript', exports = 'env', variant_dir= base_dir + '/chip_id')
 SConscript('counter/SConscript', exports = 'env', variant_dir= base_dir + '/counter')
 SConscript('delay/SConscript', exports = 'env', variant_dir= base_dir + '/delay')
 SConscript('frequency/SConscript', exports = 'env', variant_dir= base_dir + '/frequency')
@@ -29,6 +29,6 @@ SConscript('adc/SConscript', exports = 'env', variant_dir= base_dir + '/adc')
 SConscript('comparator/SConscript', exports = 'env', variant_dir= base_dir + '/comparator')
 
 Return([
-    'bits_prog',
-    'chip_id_prog',
+    'bits_progs',
+    'chip_id_progs',
 ])

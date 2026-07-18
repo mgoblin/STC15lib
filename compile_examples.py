@@ -28,6 +28,13 @@ def find_mem_files(examples_dir: str) -> list[str]:
     
     return sorted(mem_files)
 
+def flatten(seq):
+    for item in seq:
+        if isinstance(item, list):
+            yield from flatten(item)
+        else:
+            yield item    
+
 examples_dir = os.path.join(env.subst("$BUILD_DIR"), "examples")
 
 def build_summary_action(source, target, env):
@@ -64,7 +71,12 @@ post_action = env.Command(
     action = build_summary_action
 )
 
-env.Depends(post_action, example_build_tasks)
+examples_flatten_list = list(flatten(example_build_tasks))
+print(f"Found {len(examples_flatten_list)} example build tasks")
+for item in examples_flatten_list:
+    print(item[0].name)
+
+env.Depends(post_action, examples_flatten_list)
 env.AlwaysBuild(post_action)
 
 env.Default([], post_action)
