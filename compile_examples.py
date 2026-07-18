@@ -53,15 +53,16 @@ def build_summary_action(source, target, env):
             with open(mem_file_name.strip()) as mem_file:
                 # hex and mem file names are the same
                 hex_name = os.path.basename(mem_file_name).split('.')[0] + ".hex"
+                hex_directory = os.path.dirname(mem_file_name).replace(examples_dir, '')
 
                 mem_file_content = mem_file.read()
                 matches = re.search(pattern, mem_file_content, re.MULTILINE)
                 if matches:
-                    build_summary_lines.append(f"{hex_name:<60}{matches.group(1)} bytes")
+                    build_summary_lines.append(f"{hex_name:<60}{matches.group(1):<4} bytes ({hex_directory})")
                     # out_fp.write(f"{hex_name:<60}{matches.group(1)} bytes\n")
                 else:
                     # out_fp.write(f"{hex_name:<60}No size found\n")
-                    build_summary_lines.append(f"{hex_name:<60}No size found")
+                    build_summary_lines.append(f"{hex_name:<60} No size found")
         
         for line in sorted(build_summary_lines):
             out_fp.write(f"{line}\n")            
