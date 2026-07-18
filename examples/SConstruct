@@ -16,7 +16,8 @@ bits_progs      = SConscript('bits/SConscript', exports = 'env', variant_dir= ba
 chip_id_progs   = SConscript('chip_id/SConscript', exports = 'env', variant_dir= base_dir + '/chip_id')
 counter_progs   = SConscript('counter/SConscript', exports = 'env', variant_dir= base_dir + '/counter')
 delay_progs     = SConscript('delay/SConscript', exports = 'env', variant_dir= base_dir + '/delay')
-SConscript('frequency/SConscript', exports = 'env', variant_dir= base_dir + '/frequency')
+eeprom_progs    = SConscript('eeprom/SConscript', exports = 'env', variant_dir= base_dir + '/eeprom')
+frequency_progs = SConscript('frequency/SConscript', exports = 'env', variant_dir= base_dir + '/frequency')
 SConscript('interrupt/SConscript', exports = 'env', variant_dir= base_dir + '/interrupt')
 SConscript('power_management/SConscript', exports = 'env', variant_dir= base_dir + '/power_management')
 SConscript('reset/SConscript', exports = 'env', variant_dir= base_dir + '/reset')
@@ -24,7 +25,6 @@ SConscript('timer/SConscript', exports = 'env', variant_dir= base_dir + '/timer'
 SConscript('uart/SConscript', exports = 'env', variant_dir= base_dir + '/uart')
 SConscript('wdt/SConscript', exports = 'env', variant_dir= base_dir + '/wdt')
 SConscript('gpio/SConscript', exports = 'env', variant_dir= base_dir + '/gpio')
-eeprom_progs     = SConscript('eeprom/SConscript', exports = 'env', variant_dir= base_dir + '/eeprom')
 SConscript('adc/SConscript', exports = 'env', variant_dir= base_dir + '/adc')
 SConscript('comparator/SConscript', exports = 'env', variant_dir= base_dir + '/comparator')
 
@@ -33,5 +33,6 @@ Return([
     'chip_id_progs',
     'counter_progs',
     'delay_progs',
-    'eeprom_progs'
+    'eeprom_progs',
+    'frequency_progs',
 ])

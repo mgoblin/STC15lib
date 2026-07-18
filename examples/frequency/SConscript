@@ -2,15 +2,19 @@ Import("env")
 
 env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
 
-env.Default(
-    env.Object(
-        source = 'slowdown_example.c', 
-        target = 'slowdown.rel'
-    ),
-
-    env.Program(
-        'master_clock_output_example', 
-        ['master_clock_output_example.c', 'uart.c']),
-
-    env.Program('slowdown_example', ['slowdown_example.c'])    
+master_clock_output_prog = env.Program(
+    'master_clock_output_example', 
+    ['master_clock_output_example.c', 'uart.c']
 )
+
+slowdown_prog = env.Program('slowdown_example', ['slowdown_example.c'])
+
+env.Default(
+    master_clock_output_prog,
+    slowdown_prog
+)
+
+Return([
+    'master_clock_output_prog',
+    'slowdown_prog',
+])
