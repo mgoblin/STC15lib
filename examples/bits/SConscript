@@ -2,9 +2,9 @@ Import("env")
 
 env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
 
-prog = env.Program('bits_example', ['bits_example.c', 'uart.c'])
+bits_prog = env.Program('bits_example', ['bits_example.c', 'uart.c'])
 env.Default (
-    prog
+    bits_prog
 )
 
-Return('prog')
+Return('bits_prog')

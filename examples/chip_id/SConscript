@@ -2,6 +2,9 @@ Import("env")
 
 env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
 
+chip_id_prog = env.Program('chip_id_example', ['chip_id_example.c', 'uart.c'])
 env.Default (
-    env.Program('chip_id_example', ['chip_id_example.c', 'uart.c'])
+    chip_id_prog
 )
+
+Return('chip_id_prog')

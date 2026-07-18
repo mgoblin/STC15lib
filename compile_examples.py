@@ -64,7 +64,7 @@ post_action = env.Command(
     action = build_summary_action
 )
 
-env.Depends(post_action, [example_build_tasks])
+env.Depends(post_action, example_build_tasks)
 env.AlwaysBuild(post_action)
 
 env.Default([], post_action)
