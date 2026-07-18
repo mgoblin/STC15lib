@@ -19,7 +19,7 @@ delay_progs     = SConscript('delay/SConscript', exports = 'env', variant_dir= b
 eeprom_progs    = SConscript('eeprom/SConscript', exports = 'env', variant_dir= base_dir + '/eeprom')
 frequency_progs = SConscript('frequency/SConscript', exports = 'env', variant_dir= base_dir + '/frequency')
 gpio_progs      = SConscript('gpio/SConscript', exports = 'env', variant_dir= base_dir + '/gpio')
-SConscript('interrupt/SConscript', exports = 'env', variant_dir= base_dir + '/interrupt')
+interrupt_progs = SConscript('interrupt/SConscript', exports = 'env', variant_dir= base_dir + '/interrupt')
 SConscript('power_management/SConscript', exports = 'env', variant_dir= base_dir + '/power_management')
 SConscript('reset/SConscript', exports = 'env', variant_dir= base_dir + '/reset')
 SConscript('timer/SConscript', exports = 'env', variant_dir= base_dir + '/timer')
@@ -36,4 +36,5 @@ Return([
     'eeprom_progs',
     'frequency_progs',
     'gpio_progs',
+    'interrupt_progs',
 ])
