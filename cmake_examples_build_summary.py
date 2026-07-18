@@ -33,13 +33,24 @@ maps_paths = find_mem_files(sys.argv[1])
 
 with open(output_file, 'w') as out_fp:
     out_fp.write(f"{len(maps_paths)} .hex files and their sizes:\n")
+    build_summary_lines = []
     for line in maps_paths:
         with open(line.strip()) as mem_file:
-            content = mem_file.read()
+            mem_file_content = mem_file.read()
             pattern = r"ROM/EPROM/FLASH\s+[a-fx\d]+\s+[a-fx\d]+\s+(\d+).*"
-            matches = re.search(pattern, content, re.MULTILINE)
+            matches = re.search(pattern, mem_file_content, re.MULTILINE)
+       
+            examples_dir = os.path.dirname(output_file)
             hex_name = os.path.basename(mem_file.name).split('.')[0] + ".hex"
+            hex_directory = os.path.dirname(mem_file.name).replace(examples_dir, '')
+
+            matches = re.search(pattern, mem_file_content, re.MULTILINE)
             if matches:
-                out_fp.write(f"{hex_name:<60}{matches.group(1)} bytes\n")
+                build_summary_lines.append(f"{hex_name:<60}{matches.group(1):<4} bytes ({hex_directory})")
+                # out_fp.write(f"{hex_name:<60}{matches.group(1)} bytes\n")
             else:
-                out_fp.write(f"{hex_name:<60}No size found\n")
+                # out_fp.write(f"{hex_name:<60}No size found\n")
+                build_summary_lines.append(f"{hex_name:<60} No size found")
+        
+    for line in sorted(build_summary_lines):
+        out_fp.write(f"{line}\n")            

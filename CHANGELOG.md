@@ -197,7 +197,6 @@
 * Memory dump not only idata but xdata memory too
 * Memory dumper is documented 
 * CMake and Platformio generates build summary with firmware sizes table
-* TODO Sort examples by hex names without folder name
 * TODO SCons should make STC15 library for using in examples build
 * TODO Rework bits module
 * Separate ./README on READMEs for library devops, firmware dev and contributor parts
