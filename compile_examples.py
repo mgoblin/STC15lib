@@ -48,6 +48,7 @@ def build_summary_action(source, target, env):
     with open(output_file, 'w') as out_fp:
         out_fp.write(f"{len(mem_files_list)} .hex files and their sizes:\n")
         # Iterate through mem files list and print size of each hex file
+        build_summary_lines = []
         for mem_file_name in sorted(mem_files_list):
             with open(mem_file_name.strip()) as mem_file:
                 # hex and mem file names are the same
@@ -56,9 +57,14 @@ def build_summary_action(source, target, env):
                 mem_file_content = mem_file.read()
                 matches = re.search(pattern, mem_file_content, re.MULTILINE)
                 if matches:
-                    out_fp.write(f"{hex_name:<60}{matches.group(1)} bytes\n")
+                    build_summary_lines.append(f"{hex_name:<60}{matches.group(1)} bytes")
+                    # out_fp.write(f"{hex_name:<60}{matches.group(1)} bytes\n")
                 else:
-                    out_fp.write(f"{hex_name:<60}No size found\n")
+                    # out_fp.write(f"{hex_name:<60}No size found\n")
+                    build_summary_lines.append(f"{hex_name:<60}No size found")
+        
+        for line in sorted(build_summary_lines):
+            out_fp.write(f"{line}\n")            
 
     
     with open(output_file, 'r') as out_fp:
