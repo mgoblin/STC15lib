@@ -2,6 +2,11 @@ Import("env")
 
 env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
 
-env.Default (
-    env.Program('comparator_async_example', ['comparator_async_example.c'])
+comparator_async_prog = env.Program(
+    'comparator_async_example',
+    ['comparator_async_example.c']
 )
+
+env.Default(comparator_async_prog)
+
+Return(['comparator_async_prog'])

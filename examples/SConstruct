@@ -16,6 +16,7 @@ adc_progs      = SConscript('adc/SConscript', exports = 'env', variant_dir= base
 bits_progs      = SConscript('bits/SConscript', exports = 'env', variant_dir= base_dir + "/bits")
 chip_id_progs   = SConscript('chip_id/SConscript', exports = 'env', variant_dir= base_dir + '/chip_id')
 counter_progs   = SConscript('counter/SConscript', exports = 'env', variant_dir= base_dir + '/counter')
+cmpr_progs      = SConscript('comparator/SConscript', exports = 'env', variant_dir= base_dir + '/comparator')
 delay_progs     = SConscript('delay/SConscript', exports = 'env', variant_dir= base_dir + '/delay')
 eeprom_progs    = SConscript('eeprom/SConscript', exports = 'env', variant_dir= base_dir + '/eeprom')
 frequency_progs = SConscript('frequency/SConscript', exports = 'env', variant_dir= base_dir + '/frequency')
@@ -26,12 +27,13 @@ reset_prog      = SConscript('reset/SConscript', exports = 'env', variant_dir= b
 timer_prog      = SConscript('timer/SConscript', exports = 'env', variant_dir= base_dir + '/timer')
 uart_prog = SConscript('uart/SConscript', exports = 'env', variant_dir= base_dir + '/uart')
 SConscript('wdt/SConscript', exports = 'env', variant_dir= base_dir + '/wdt')
-SConscript('comparator/SConscript', exports = 'env', variant_dir= base_dir + '/comparator')
+
 
 Return([
     'adc_progs',
     'bits_progs',
     'chip_id_progs',
+    'cmpr_progs',
     'counter_progs',
     'delay_progs',
     'eeprom_progs',
