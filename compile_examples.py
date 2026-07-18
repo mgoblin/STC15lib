@@ -71,11 +71,7 @@ post_action = env.Command(
     action = build_summary_action
 )
 
-examples_flatten_list = list(flatten(example_build_tasks))
-print(f"Found {len(examples_flatten_list)} example build tasks")
-for item in examples_flatten_list:
-    # print(item[0].name)
-    print(item[0])
+examples_flatten_list = sorted(list(flatten(example_build_tasks)))
 
 env.Depends(post_action, examples_flatten_list)
 env.AlwaysBuild(post_action)

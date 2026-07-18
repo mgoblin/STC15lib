@@ -1,6 +1,6 @@
 Import("env")
 
-SConscript('ms_freq/SConscript', exports = 'env')
+ms_freq_progs = SConscript('ms_freq/SConscript', exports = 'env')
 
 env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
 env.Command('timer_ms_to_ticks.c', '#src/timer_ms_to_ticks.c', Copy('$TARGET', '$SOURCE'))
@@ -60,6 +60,7 @@ env.Default(
 )
 
 Return([
+    'ms_freq_progs',
     'timer2_mode0_1T_interrupt_prog',
     'timer2_mode0_P30_output_prog',
     'timer2_mode0_reload_prog',

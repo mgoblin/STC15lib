@@ -197,7 +197,6 @@
 * Memory dump not only idata but xdata memory too
 * Memory dumper is documented 
 * CMake and Platformio generates build summary with firmware sizes table
-* TODO Platformio build refactor: build summary task should run after all example build tasks finished.
 * TODO Sort examples by hex names without folder name
 * TODO SCons should build library for examples
 * TODO Rework bits module

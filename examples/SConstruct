@@ -23,9 +23,9 @@ frequency_progs = SConscript('frequency/SConscript', exports = 'env', variant_di
 gpio_progs      = SConscript('gpio/SConscript', exports = 'env', variant_dir= base_dir + '/gpio')
 interrupt_progs = SConscript('interrupt/SConscript', exports = 'env', variant_dir= base_dir + '/interrupt')
 pwr_mgmt_progs  = SConscript('power_management/SConscript', exports = 'env', variant_dir= base_dir + '/power_management')
-reset_prog      = SConscript('reset/SConscript', exports = 'env', variant_dir= base_dir + '/reset')
-timer_prog      = SConscript('timer/SConscript', exports = 'env', variant_dir= base_dir + '/timer')
-uart_prog       = SConscript('uart/SConscript', exports = 'env', variant_dir= base_dir + '/uart')
+reset_progs     = SConscript('reset/SConscript', exports = 'env', variant_dir= base_dir + '/reset')
+timer_progs     = SConscript('timer/SConscript', exports = 'env', variant_dir= base_dir + '/timer')
+uart_progs      = SConscript('uart/SConscript', exports = 'env', variant_dir= base_dir + '/uart')
 wdt_progs       = SConscript('wdt/SConscript', exports = 'env', variant_dir= base_dir + '/wdt')
 
 
@@ -41,8 +41,8 @@ Return([
     'gpio_progs',
     'interrupt_progs',
     'pwr_mgmt_progs',
-    'reset_prog',
-    'timer_prog',
-    'uart_prog',
+    'reset_progs',
+    'timer_progs',
+    'uart_progs',
     'wdt_progs',
 ])
