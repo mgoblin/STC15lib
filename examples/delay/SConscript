@@ -1,5 +1,9 @@
 Import("env")
 
+delay_prog = env.Program('delay_example', ['delay_example.c'])
+
 env.Default (
-    env.Program('delay_example', ['delay_example.c'])
+    delay_prog
 )
+
+Return ('delay_prog')
