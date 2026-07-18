@@ -1,8 +1,10 @@
 Import("env")
 
-env.Default (
-    env.Program(
-        'reset_example', 
-        ['reset_example.c']
-    )
+reset_prog = env.Program(
+    'reset_example', 
+    ['reset_example.c']
 )
+
+env.Default(reset_prog)
+
+Return('reset_prog')
