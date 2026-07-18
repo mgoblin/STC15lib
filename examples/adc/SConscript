@@ -2,15 +2,23 @@ import shutil
 Import("env")
 
 env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
-# shutil.copy(source, destination)
 
-env.Default (
-    env.Program(
-        'adc_read_example', 
-        ['adc_read_example.c', 'uart.c']
-    ),
-    env.Program(
-        'adc_async_example', 
-        ['adc_async_example.c']
-    ),    
+adc_read_prog = env.Program(
+    'adc_read_example', 
+    ['adc_read_example.c', 'uart.c']
 )
+
+adc_async_prog = env.Program(
+    'adc_async_example', 
+    ['adc_async_example.c']
+)
+
+env.Default(
+    adc_read_prog,
+    adc_async_prog
+)
+
+Return([
+    'adc_read_prog',
+    'adc_async_prog'
+])
