@@ -1,19 +1,28 @@
-Import('env')
+Import("env")
+
+uart1_mode2_send_9bit_prog = env.Program(
+    'uart1_mode2_send_9bit_example',
+    ['uart1_mode2_send_9bit_example.c']
+)
+
+uart1_mode2_send_odd_parity_prog = env.Program(
+    'uart1_mode2_send_odd_parity_example',
+    ['uart1_mode2_send_odd_parity_example.c']
+)
+
+uart1_mode2_receive_even_parity_prog = env.Program(
+    'uart1_mode2_receive_even_parity_example',
+    ['uart1_mode2_receive_even_parity_example.c']
+)
 
 env.Default(
-    env.Program(
-        'uart1_mode2_send_9bit_example',
-        ['uart1_mode2_send_9bit_example.c'],
-    ),
-
-    env.Program(
-        'uart1_mode2_send_odd_parity_example',
-        ['uart1_mode2_send_odd_parity_example.c'],
-    ),
-
-    env.Program(
-        'uart1_mode2_receive_even_parity_example',
-        ['uart1_mode2_receive_even_parity_example.c'],
-    ),
-
+    uart1_mode2_send_9bit_prog,
+    uart1_mode2_send_odd_parity_prog,
+    uart1_mode2_receive_even_parity_prog
 )
+
+Return([
+    'uart1_mode2_send_9bit_prog',
+    'uart1_mode2_send_odd_parity_prog',
+    'uart1_mode2_receive_even_parity_prog'
+])

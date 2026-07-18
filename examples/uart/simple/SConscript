@@ -1,10 +1,12 @@
-Import('env')
+Import("env")
 
 env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
 
-env.Default(
-    env.Program(
-        'uart_example',
-        ['uart_example.c', 'uart.c']
-    ),
+uart_example_prog = env.Program(
+    'uart_example',
+    ['uart_example.c', 'uart.c']
 )
+
+env.Default(uart_example_prog)
+
+Return(['uart_example_prog'])

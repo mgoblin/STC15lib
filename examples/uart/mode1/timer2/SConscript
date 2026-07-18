@@ -1,29 +1,42 @@
-Import('env')
+Import("env")
+
+uart1_mode1_timer2_12T_prog = env.Program(
+    'uart1_mode1_timer2_12T_example',
+    ['uart1_mode1_timer2_12T_example.c']
+)
+
+uart1_mode1_timer2_12T_interrupt_prog = env.Program(
+    'uart1_mode1_timer2_12T_interrupt_example',
+    ['uart1_mode1_timer2_12T_interrupt_example.c']
+)
+
+uart1_mode1_timer2_12T_freq_bias_prog = env.Program(
+    'uart1_mode1_timer2_12T_freq_bias_example',
+    ['uart1_mode1_timer2_12T_freq_bias_example.c']
+)
+
+uart1_mode1_timer2_1T_prog = env.Program(
+    'uart1_mode1_timer2_1T_example',
+    ['uart1_mode1_timer2_1T_example.c']
+)
+
+uart1_mode1_timer2_1T_freq_bias_prog = env.Program(
+    'uart1_mode1_timer2_1T_freq_bias_example',
+    ['uart1_mode1_timer2_1T_freq_bias_example.c']
+)
 
 env.Default(
-    env.Program(
-        'uart1_mode1_timer2_12T_example',
-        ['uart1_mode1_timer2_12T_example.c']
-    ),
-
-    env.Program(
-        'uart1_mode1_timer2_12T_interrupt_example',
-        ['uart1_mode1_timer2_12T_interrupt_example.c']
-    ),
-
-    env.Program(
-        'uart1_mode1_timer2_12T_freq_bias_example',
-        ['uart1_mode1_timer2_12T_freq_bias_example.c']
-    ),
-
-    env.Program(
-        'uart1_mode1_timer2_1T_example',
-        ['uart1_mode1_timer2_1T_example.c']
-    ),
-
-    env.Program(
-        'uart1_mode1_timer2_1T_freq_bias_example',
-        ['uart1_mode1_timer2_1T_freq_bias_example.c']
-    ),
-
+    uart1_mode1_timer2_12T_prog,
+    uart1_mode1_timer2_12T_interrupt_prog,
+    uart1_mode1_timer2_12T_freq_bias_prog,
+    uart1_mode1_timer2_1T_prog,
+    uart1_mode1_timer2_1T_freq_bias_prog
 )
+
+Return([
+    'uart1_mode1_timer2_12T_prog',
+    'uart1_mode1_timer2_12T_interrupt_prog',
+    'uart1_mode1_timer2_12T_freq_bias_prog',
+    'uart1_mode1_timer2_1T_prog',
+    'uart1_mode1_timer2_1T_freq_bias_prog'
+])

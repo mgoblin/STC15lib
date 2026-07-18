@@ -1,7 +1,15 @@
 Import("env")
 
-SConscript('simple/SConscript', exports = 'env')
-SConscript('mode0/SConscript', exports = 'env')
-SConscript('mode1/SConscript', exports = 'env')
-SConscript('mode2/SConscript', exports = 'env')
-SConscript('mode3/SConscript', exports = 'env')
+uart_simple_SConscript = SConscript('simple/SConscript', exports = 'env')
+uart_mode0_SConscript = SConscript('mode0/SConscript', exports = 'env')
+uart_mode1_SConscript = SConscript('mode1/SConscript', exports = 'env')
+uart_mode2_SConscript = SConscript('mode2/SConscript', exports = 'env')
+uart_mode3_SConscript = SConscript('mode3/SConscript', exports = 'env')
+
+Return([
+    'uart_simple_SConscript',
+    'uart_mode0_SConscript',
+    'uart_mode1_SConscript',
+    'uart_mode2_SConscript',
+    'uart_mode3_SConscript'
+])

@@ -1,3 +1,5 @@
 Import("env")
 
-SConscript('timer2/SConscript', exports = 'env')
+uart_mode1_timer2_SConscript = SConscript('timer2/SConscript', exports = 'env')
+
+Return(['uart_mode1_timer2_SConscript'])

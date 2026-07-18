@@ -1,14 +1,21 @@
-Import('env')
+Import("env")
+
+uart1_mode0_send_prog = env.Program(
+    'uart1_mode0_send_example',
+    ['uart1_mode0_send_example.c']
+)
+
+uart1_mode0_baud_rates_prog = env.Program(
+    'uart1_mode0_baud_rates_example',
+    ['uart1_mode0_baud_rates_example.c']
+)
 
 env.Default(
-    env.Program(
-        'uart1_mode0_send_example',
-        ['uart1_mode0_send_example.c']
-    ),
-
-    env.Program(
-        'uart1_mode0_baud_rates_example',
-        ['uart1_mode0_baud_rates_example.c']
-    ),
-
+    uart1_mode0_send_prog,
+    uart1_mode0_baud_rates_prog
 )
+
+Return([
+    'uart1_mode0_send_prog',
+    'uart1_mode0_baud_rates_prog'
+])
