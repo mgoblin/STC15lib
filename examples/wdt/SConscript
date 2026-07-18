@@ -1,21 +1,30 @@
-Import('env')
+Import("env")
 
 env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
 
-env.Default(
-    env.Program(
-        'wdt_clear_example',
-        ['wdt_clear_example.c']
-    ),
-
-    env.Program(
-        'wdt_flag_example',
-        ['wdt_flag_example.c', 'uart.c']
-    ),
-
-    env.Program(
-        'wdt_start_example',
-        ['wdt_start_example.c']
-    ),
-
+wdt_clear_prog = env.Program(
+    'wdt_clear_example',
+    ['wdt_clear_example.c']
 )
+
+wdt_flag_prog = env.Program(
+    'wdt_flag_example',
+    ['wdt_flag_example.c', 'uart.c']
+)
+
+wdt_start_prog = env.Program(
+    'wdt_start_example',
+    ['wdt_start_example.c']
+)
+
+env.Default(
+    wdt_clear_prog,
+    wdt_flag_prog,
+    wdt_start_prog
+)
+
+Return([
+    'wdt_clear_prog',
+    'wdt_flag_prog',
+    'wdt_start_prog'
+])

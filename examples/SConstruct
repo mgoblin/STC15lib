@@ -12,11 +12,11 @@ if verbose == 0:
 
 base_dir = env.subst("$BUILD_DIR") + "/examples"
 
-adc_progs      = SConscript('adc/SConscript', exports = 'env', variant_dir= base_dir + '/adc')
+adc_progs       = SConscript('adc/SConscript', exports = 'env', variant_dir= base_dir + '/adc')
 bits_progs      = SConscript('bits/SConscript', exports = 'env', variant_dir= base_dir + "/bits")
 chip_id_progs   = SConscript('chip_id/SConscript', exports = 'env', variant_dir= base_dir + '/chip_id')
-counter_progs   = SConscript('counter/SConscript', exports = 'env', variant_dir= base_dir + '/counter')
 cmpr_progs      = SConscript('comparator/SConscript', exports = 'env', variant_dir= base_dir + '/comparator')
+counter_progs   = SConscript('counter/SConscript', exports = 'env', variant_dir= base_dir + '/counter')
 delay_progs     = SConscript('delay/SConscript', exports = 'env', variant_dir= base_dir + '/delay')
 eeprom_progs    = SConscript('eeprom/SConscript', exports = 'env', variant_dir= base_dir + '/eeprom')
 frequency_progs = SConscript('frequency/SConscript', exports = 'env', variant_dir= base_dir + '/frequency')
@@ -25,8 +25,8 @@ interrupt_progs = SConscript('interrupt/SConscript', exports = 'env', variant_di
 pwr_mgmt_progs  = SConscript('power_management/SConscript', exports = 'env', variant_dir= base_dir + '/power_management')
 reset_prog      = SConscript('reset/SConscript', exports = 'env', variant_dir= base_dir + '/reset')
 timer_prog      = SConscript('timer/SConscript', exports = 'env', variant_dir= base_dir + '/timer')
-uart_prog = SConscript('uart/SConscript', exports = 'env', variant_dir= base_dir + '/uart')
-SConscript('wdt/SConscript', exports = 'env', variant_dir= base_dir + '/wdt')
+uart_prog       = SConscript('uart/SConscript', exports = 'env', variant_dir= base_dir + '/uart')
+wdt_progs       = SConscript('wdt/SConscript', exports = 'env', variant_dir= base_dir + '/wdt')
 
 
 Return([
@@ -44,4 +44,5 @@ Return([
     'reset_prog',
     'timer_prog',
     'uart_prog',
+    'wdt_progs',
 ])
