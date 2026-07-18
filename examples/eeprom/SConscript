@@ -8,25 +8,36 @@ source = env.File('#examples/eeprom/eeprom_data.hex').abspath
 env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
 shutil.copy(source, destination)
 
-env.Default (
-    env.Program(
-        'eeprom_read_byte_example', 
-        ['eeprom_read_byte_example.c', 'uart.c']
-    ),
-
-    env.Program(
-        'eeprom_erase_page_example', 
-        ['eeprom_erase_page_example.c', 'uart.c']
-    ),
-
-    env.Program(
-        'eeprom_write_byte_example', 
-        ['eeprom_write_byte_example.c', 'uart.c']
-    ),
-
-    env.Program(
-        'eeprom_write_page_example', 
-        ['eeprom_write_page_example.c', 'uart.c']
-    ),
-
+eeprom_read_byte_prog = env.Program(
+    'eeprom_read_byte_example', 
+    ['eeprom_read_byte_example.c', 'uart.c']
 )
+
+eeprom_erase_page_prog = env.Program(
+    'eeprom_erase_page_example', 
+    ['eeprom_erase_page_example.c', 'uart.c']
+)
+
+eeprom_write_byte_prog = env.Program(
+    'eeprom_write_byte_example', 
+    ['eeprom_write_byte_example.c', 'uart.c']
+)
+
+eeprom_write_page_prog = env.Program(
+    'eeprom_write_page_example', 
+    ['eeprom_write_page_example.c', 'uart.c']
+)
+
+env.Default(
+    eeprom_read_byte_prog,
+    eeprom_erase_page_prog,
+    eeprom_write_byte_prog,
+    eeprom_write_page_prog
+)
+
+Return([
+    'eeprom_read_byte_prog',
+    'eeprom_erase_page_prog',
+    'eeprom_write_byte_prog',
+    'eeprom_write_page_prog',
+])
