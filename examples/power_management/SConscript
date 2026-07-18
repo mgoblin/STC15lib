@@ -2,22 +2,36 @@ Import("env")
 
 env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
 
-env.Default (
-    env.Program(
-        'powerdown_example', 
-        ['powerdown_example.c', 'uart.c']
-    ),
-    env.Program(
-        'idle_example', 
-        ['idle_example.c', 'uart.c']
-    ),
-    env.Program(
-        'low_voltage_example', 
-        ['low_voltage_example.c', 'uart.c']
-    ),
-
-    env.Program(
-        'wakeup_seconds_example', 
-        ['wakeup_seconds_example.c', 'uart.c']
-    ),
+powerdown_prog = env.Program(
+    'powerdown_example', 
+    ['powerdown_example.c', 'uart.c']
 )
+
+idle_prog = env.Program(
+    'idle_example', 
+    ['idle_example.c', 'uart.c']
+)
+
+low_voltage_prog = env.Program(
+    'low_voltage_example', 
+    ['low_voltage_example.c', 'uart.c']
+)
+
+wakeup_seconds_prog = env.Program(
+    'wakeup_seconds_example', 
+    ['wakeup_seconds_example.c', 'uart.c']
+)
+
+env.Default(
+    powerdown_prog,
+    idle_prog,
+    low_voltage_prog,
+    wakeup_seconds_prog
+)
+
+Return([
+    'powerdown_prog',
+    'idle_prog',
+    'low_voltage_prog',
+    'wakeup_seconds_prog',
+])
