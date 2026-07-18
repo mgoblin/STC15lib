@@ -1,21 +1,27 @@
 Import("env")
 
-
 env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
 env.Command('timer_ms_to_ticks.c', '#src/timer_ms_to_ticks.c', Copy('$TARGET', '$SOURCE'))
 env.Command('timer_ticks_to_ms.c', '#src/timer_ticks_to_ms.c', Copy('$TARGET', '$SOURCE'))
 env.Command('timer_ticks_to_Hz.c', '#src/timer_ticks_to_Hz.c', Copy('$TARGET', '$SOURCE'))
 env.Command('timer_Hz_to_ticks.c', '#src/timer_Hz_to_ticks.c', Copy('$TARGET', '$SOURCE'))
 
-env.Default(
-    env.Program(
-        'timer2_mode0_start_ms_example',
-        ['timer2_mode0_start_ms_example.c', 'timer_ms_to_ticks.c']
-    ),
-
-    env.Program(
-        'timer2_mode0_start_Hz_example',
-        ['timer2_mode0_start_Hz_example.c', 'timer_Hz_to_ticks.c']
-    ),
-
+timer2_mode0_start_ms_prog = env.Program(
+    'timer2_mode0_start_ms_example',
+    ['timer2_mode0_start_ms_example.c', 'timer_ms_to_ticks.c']
 )
+
+timer2_mode0_start_Hz_prog = env.Program(
+    'timer2_mode0_start_Hz_example',
+    ['timer2_mode0_start_Hz_example.c', 'timer_Hz_to_ticks.c']
+)
+
+env.Default(
+    timer2_mode0_start_ms_prog,
+    timer2_mode0_start_Hz_prog
+)
+
+Return([
+    'timer2_mode0_start_ms_prog',
+    'timer2_mode0_start_Hz_prog'
+])

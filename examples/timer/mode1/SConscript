@@ -1,6 +1,11 @@
-Import('env')
+Import("env")
 
-SConscript('async/SConscript', exports = 'env')
-SConscript('sync/SConscript', exports = 'env')
-SConscript('ms_freq/SConscript', exports = 'env')
+timer0_mode1_async_SConscript = SConscript('async/SConscript', exports = 'env')
+timer0_mode1_sync_SConscript = SConscript('sync/SConscript', exports = 'env')
+timer0_mode1_ms_freq_SConscript = SConscript('ms_freq/SConscript', exports = 'env')
 
+Return([
+    'timer0_mode1_async_SConscript',
+    'timer0_mode1_sync_SConscript',
+    'timer0_mode1_ms_freq_SConscript'
+])

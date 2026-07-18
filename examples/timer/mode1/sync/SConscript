@@ -1,13 +1,21 @@
-Import('env')
+Import("env")
+
+timer0_mode1_1T_sync_prog = env.Program(
+    'timer0_mode1_1T_sync_example',
+    ['timer0_mode1_1T_sync_example.c']
+)
+
+timer0_mode1_12T_sync_prog = env.Program(
+    'timer0_mode1_12T_sync_example',
+    ['timer0_mode1_12T_sync_example.c']
+)
 
 env.Default(
-    env.Program(
-        'timer0_mode1_1T_sync_example',
-        ['timer0_mode1_1T_sync_example.c']
-    ),
-
-    env.Program(
-        'timer0_mode1_12T_sync_example',
-        ['timer0_mode1_12T_sync_example.c']
-    ),
+    timer0_mode1_1T_sync_prog,
+    timer0_mode1_12T_sync_prog
 )
+
+Return([
+    'timer0_mode1_1T_sync_prog',
+    'timer0_mode1_12T_sync_prog'
+])

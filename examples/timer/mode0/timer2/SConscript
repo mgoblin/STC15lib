@@ -8,45 +8,64 @@ env.Command('timer_ticks_to_ms.c', '#src/timer_ticks_to_ms.c', Copy('$TARGET', '
 env.Command('timer_ticks_to_Hz.c', '#src/timer_ticks_to_Hz.c', Copy('$TARGET', '$SOURCE'))
 env.Command('timer_Hz_to_ticks.c', '#src/timer_Hz_to_ticks.c', Copy('$TARGET', '$SOURCE'))
 
-env.Default(
-    env.Program(
-        'timer2_mode0_1T_interrupt_example',
-        ['timer2_mode0_1T_interrupt_example.c']
-    ),
-
-    env.Program(
-        'timer2_mode0_P30_output_example',
-        ['timer2_mode0_P30_output_example.c']
-    ),
-
-    env.Program(
-        'timer2_mode0_reload_example',
-        ['timer2_mode0_reload_example.c']
-    ),
-
-    env.Program(
-        'timer2_mode0_direct_reload_example',
-        ['timer2_mode0_direct_reload_example.c']
-    ),    
-
-    env.Program(
-        'timer2_mode0_ms_to_ticks_example',
-        ['timer2_mode0_ms_to_ticks_example.c', 'uart.c', 'timer_ms_to_ticks.c']
-    ),
-
-    env.Program(
-        'timer2_mode0_ticks_to_ms_example', 
-        ['timer2_mode0_ticks_to_ms_example.c', 'uart.c', 'timer_ticks_to_ms.c']
-    ),
-
-    env.Program(
-        'timer2_mode0_ticks_to_Hz_example',
-        ['timer2_mode0_ticks_to_Hz_example.c', 'uart.c', 'timer_ticks_to_Hz.c']
-    ),
-
-    env.Program(
-        'timer2_mode0_Hz_to_ticks_example',
-        ['timer2_mode0_Hz_to_ticks_example.c', 'uart.c', 'timer_Hz_to_ticks.c']
-    ),
-
+timer2_mode0_1T_interrupt_prog = env.Program(
+    'timer2_mode0_1T_interrupt_example',
+    ['timer2_mode0_1T_interrupt_example.c']
 )
+
+timer2_mode0_P30_output_prog = env.Program(
+    'timer2_mode0_P30_output_example',
+    ['timer2_mode0_P30_output_example.c']
+)
+
+timer2_mode0_reload_prog = env.Program(
+    'timer2_mode0_reload_example',
+    ['timer2_mode0_reload_example.c']
+)
+
+timer2_mode0_direct_reload_prog = env.Program(
+    'timer2_mode0_direct_reload_example',
+    ['timer2_mode0_direct_reload_example.c']
+)
+
+timer2_mode0_ms_to_ticks_prog = env.Program(
+    'timer2_mode0_ms_to_ticks_example',
+    ['timer2_mode0_ms_to_ticks_example.c', 'uart.c', 'timer_ms_to_ticks.c']
+)
+
+timer2_mode0_ticks_to_ms_prog = env.Program(
+    'timer2_mode0_ticks_to_ms_example', 
+    ['timer2_mode0_ticks_to_ms_example.c', 'uart.c', 'timer_ticks_to_ms.c']
+)
+
+timer2_mode0_ticks_to_Hz_prog = env.Program(
+    'timer2_mode0_ticks_to_Hz_example',
+    ['timer2_mode0_ticks_to_Hz_example.c', 'uart.c', 'timer_ticks_to_Hz.c']
+)
+
+timer2_mode0_Hz_to_ticks_prog = env.Program(
+    'timer2_mode0_Hz_to_ticks_example',
+    ['timer2_mode0_Hz_to_ticks_example.c', 'uart.c', 'timer_Hz_to_ticks.c']
+)
+
+env.Default(
+    timer2_mode0_1T_interrupt_prog,
+    timer2_mode0_P30_output_prog,
+    timer2_mode0_reload_prog,
+    timer2_mode0_direct_reload_prog,
+    timer2_mode0_ms_to_ticks_prog,
+    timer2_mode0_ticks_to_ms_prog,
+    timer2_mode0_ticks_to_Hz_prog,
+    timer2_mode0_Hz_to_ticks_prog
+)
+
+Return([
+    'timer2_mode0_1T_interrupt_prog',
+    'timer2_mode0_P30_output_prog',
+    'timer2_mode0_reload_prog',
+    'timer2_mode0_direct_reload_prog',
+    'timer2_mode0_ms_to_ticks_prog',
+    'timer2_mode0_ticks_to_ms_prog',
+    'timer2_mode0_ticks_to_Hz_prog',
+    'timer2_mode0_Hz_to_ticks_prog'
+])

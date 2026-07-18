@@ -1,4 +1,9 @@
 Import("env")
 
-SConscript('timer0/SConscript', exports = 'env')
-SConscript('timer2/SConscript', exports = 'env')
+timer0_mode0_timer0_SConscript = SConscript('timer0/SConscript', exports = 'env')
+timer0_mode0_timer2_SConscript = SConscript('timer2/SConscript', exports = 'env')
+
+Return([
+    'timer0_mode0_timer0_SConscript',
+    'timer0_mode0_timer2_SConscript'
+])

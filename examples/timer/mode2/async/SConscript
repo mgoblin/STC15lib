@@ -1,18 +1,28 @@
-Import('env')
+Import("env")
+
+timer0_mode2_12T_interrupt_prog = env.Program(
+    'timer0_mode2_12T_interrupt_example',
+    ['timer0_mode2_12T_interrupt_example.c']
+)
+
+timer0_mode2_direct_reload_prog = env.Program(
+    'timer0_mode2_direct_reload_example',
+    ['timer0_mode2_direct_reload_example.c']
+)
+
+timer0_mode2_direct_start_prog = env.Program(
+    'timer0_mode2_direct_start_example',
+    ['timer0_mode2_direct_start_example.c']
+)
 
 env.Default(
-    env.Program(
-        'timer0_mode2_12T_interrupt_example',
-        ['timer0_mode2_12T_interrupt_example.c']
-    ),
-
-    env.Program(
-        'timer0_mode2_direct_reload_example',
-        ['timer0_mode2_direct_reload_example.c']
-    ),
-
-    env.Program(
-        'timer0_mode2_direct_start_example',
-        ['timer0_mode2_direct_start_example.c']
-    ),
+    timer0_mode2_12T_interrupt_prog,
+    timer0_mode2_direct_reload_prog,
+    timer0_mode2_direct_start_prog
 )
+
+Return([
+    'timer0_mode2_12T_interrupt_prog',
+    'timer0_mode2_direct_reload_prog',
+    'timer0_mode2_direct_start_prog'
+])

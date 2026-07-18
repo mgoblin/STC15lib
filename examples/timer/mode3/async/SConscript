@@ -1,29 +1,42 @@
-Import('env')
+Import("env")
+
+timer0_mode3_1T_interrupt_prog = env.Program(
+    'timer0_mode3_1T_interrupt_example',
+    ['timer0_mode3_1T_interrupt_example.c']
+)
+
+timer0_mode3_pause_by_gate_prog = env.Program(
+    'timer0_mode3_pause_by_gate_example',
+    ['timer0_mode3_pause_by_gate_example.c']
+)
+
+timer0_mode3_reload_prog = env.Program(
+    'timer0_mode3_reload_example',
+    ['timer0_mode3_reload_example.c']
+)
+
+timer0_mode3_direct_reload_prog = env.Program(
+    'timer0_mode3_direct_reload_example',
+    ['timer0_mode3_direct_reload_example.c']
+)
+
+timer0_mode3_direct_start_prog = env.Program(
+    'timer0_mode3_direct_start_example',
+    ['timer0_mode3_direct_start_example.c']
+)
 
 env.Default(
-    env.Program(
-        'timer0_mode3_1T_interrupt_example',
-        ['timer0_mode3_1T_interrupt_example.c']
-    ),
-
-    env.Program(
-        'timer0_mode3_pause_by_gate_example',
-        ['timer0_mode3_pause_by_gate_example.c']
-    ),
-
-    env.Program(
-        'timer0_mode3_reload_example',
-        ['timer0_mode3_reload_example.c']
-    ),
-
-    env.Program(
-        'timer0_mode3_direct_reload_example',
-        ['timer0_mode3_direct_reload_example.c']
-    ),
-
-    env.Program(
-        'timer0_mode3_direct_start_example',
-        ['timer0_mode3_direct_start_example.c']
-    ),
-
+    timer0_mode3_1T_interrupt_prog,
+    timer0_mode3_pause_by_gate_prog,
+    timer0_mode3_reload_prog,
+    timer0_mode3_direct_reload_prog,
+    timer0_mode3_direct_start_prog
 )
+
+Return([
+    'timer0_mode3_1T_interrupt_prog',
+    'timer0_mode3_pause_by_gate_prog',
+    'timer0_mode3_reload_prog',
+    'timer0_mode3_direct_reload_prog',
+    'timer0_mode3_direct_start_prog'
+])
