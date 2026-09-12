@@ -22,7 +22,7 @@ var searchData=
   ['print_5fheader_5frow_19',['print_header_row',['../mem__print_8c.html#a002026cf7978cce9adf5d5a3d38bee48',1,'print_header_row(void):&#160;mem_print.c'],['../mem__print_8h.html#a002026cf7978cce9adf5d5a3d38bee48',1,'print_header_row(void):&#160;mem_print.c']]],
   ['print_5frow_5fend_20',['print_row_end',['../mem__print_8c.html#a985addff1528e73f4a9ba989666f3cf1',1,'print_row_end(void):&#160;mem_print.c'],['../mem__print_8h.html#a985addff1528e73f4a9ba989666f3cf1',1,'print_row_end(void):&#160;mem_print.c']]],
   ['print_5frow_5foffset_21',['print_row_offset',['../mem__print_8c.html#ab0e1bfbb95c9e3204b7b0252716988de',1,'print_row_offset(uint8_t address):&#160;mem_print.c'],['../mem__print_8h.html#ab0e1bfbb95c9e3204b7b0252716988de',1,'print_row_offset(uint8_t address):&#160;mem_print.c']]],
-  ['project_22',['Add library to your project',['../index.html#autotoc_md3',1,'']]],
-  ['prorgamming_23',['Low level STC15 prorgamming',['../index.html#autotoc_md4',1,'']]],
+  ['programming_22',['Low level STC15 programming',['../index.html#autotoc_md4',1,'']]],
+  ['project_23',['Add library to your project',['../index.html#autotoc_md3',1,'']]],
   ['putchar_24',['putchar',['../group__uart.html#ga07036e93939040c563e862a6a31b65bc',1,'putchar(int ch):&#160;uart.c'],['../group__uart.html#ga07036e93939040c563e862a6a31b65bc',1,'putchar(int ch):&#160;uart.c']]]
 ];

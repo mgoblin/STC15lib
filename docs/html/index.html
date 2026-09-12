@@ -77,27 +77,27 @@ $(function() {
 <h1><a class="anchor" id="autotoc_md1"></a>
 What it is</h1>
 <p>This C-library contains hardware abstraction layer (HAL) for STC15W408AS.</p>
-<p>STC15W408AS is a micro chip compatible with 8051 architecture.</p>
+<p>STC15W408AS is a microchip compatible with 8051 architecture.</p>
 <h1><a class="anchor" id="autotoc_md2"></a>
 How to use it</h1>
-<p>This code is published as <a href="https://platformio.org/">Platformio</a> library named STC15 hardware.</p>
+<p>This code is published as <a href="https://platformio.org/">platformio</a> library named STC15 hardware.</p>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Add library to your project</h2>
-<p>After create Platformio project for STC15408AS add to platformio.ini line with library depandency</p>
+<p>After create platformio project for STC15408AS add to platformio.ini line with library dependency</p>
 <div class="fragment"><div class="line">[env:STC15W408AS]</div>
 <div class="line">platform = intel_mcs51</div>
 <div class="line">board = STC15W408AS</div>
 <div class="line">lib_deps = mgoblin/STC15 hardware@^0.17.0</div>
 </div><!-- fragment --><p> Where is 0.17.0 STC15 hardware library version.</p>
-<p>As alternative in lib_deps line github link could be used.</p>
+<p>As alternative in lib_deps line GitHub link could be used.</p>
 <div class="fragment"><div class="line">[env:STC15W408AS]</div>
 <div class="line">platform = intel_mcs51</div>
 <div class="line">board = STC15W408AS</div>
 <div class="line">lib_deps = https://github.com/mgoblin/STC15lib#</div>
-</div><!-- fragment --><p>Where is 0.17.0 STC15 hardware library github tag version.</p>
-<p>Each released library version has the tag in github repository.</p>
+</div><!-- fragment --><p>Where is 0.17.0 STC15 hardware library GitHub tag version.</p>
+<p>Each released library version has the tag in GitHub repository.</p>
 <h2><a class="anchor" id="autotoc_md4"></a>
-Low level STC15 prorgamming</h2>
+Low level STC15 programming</h2>
 <p>You can directly manipulate to MCU registers from C-code. <a class="el" href="STC15Fxx_8h_source.html">STC15Fxx.h</a> should be included.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;STC15Fxx.h&gt;</span> <span class="comment">// MCU SFR declarations</span></div>
 <div class="line"> </div>
@@ -109,13 +109,13 @@ Low level STC15 prorgamming</h2>
 <div class="line">}</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
 Use STC15 HAL functions</h2>
-<p>This library provides hardware astraction laywer (HAL) for high level development tasks. Please read the docs for library modules in Library documentation section (see the docs link).</p>
+<p>This library provides hardware abstraction layer (HAL) for high level development tasks. Please read the docs for library modules in Library documentation section (see the docs link).</p>
 <p>Most of HAL functionality is C-macros.</p>
-<p>The advantage is small firmware code size because macroses are expanded into application.</p>
-<p>C-Macroses have some drawbacks.</p>
+<p>The advantage is small firmware code size because macros are expanded into application.</p>
+<p>C-Macros have some drawbacks.</p>
 <ol type="1">
 <li>No compiler typechecks</li>
-<li>No function call optimizations. Macroses code inlined.</li>
+<li>No function call optimizations. Macros code inlined.</li>
 </ol>
 <p>If you need to use one HAL macros many times the good idea is to wrap macros by C-function.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="delay_8h.html">delay.h</a>&gt;</span></div>
@@ -189,7 +189,7 @@ References</h1>
 <ul>
 <li>STC datasheets: <a href="http://stcmicro.com/sjsc.html">http://stcmicro.com/sjsc.html</a></li>
 <li>SDCC User Guide (PDF): <a href="http://sdcc.sourceforge.net/doc/sdccman.pdf">http://sdcc.sourceforge.net/doc/sdccman.pdf</a></li>
-<li>STC programmator <a href="https://github.com/mgoblin/STC-programmatorhttps://github.com/mgoblin/STC-programmator">https://github.com/mgoblin/STC-programmatorhttps://github.com/mgoblin/STC-programmator</a> </li>
+<li>STC programmer <a href="https://github.com/mgoblin/STC-programmatorhttps://github.com/mgoblin/STC-programmator">https://github.com/mgoblin/STC-programmatorhttps://github.com/mgoblin/STC-programmator</a> </li>
 </ul>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
