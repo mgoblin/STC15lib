@@ -80,7 +80,7 @@ $(function() {
 </ul>
 <p>0.2.0</p><ul>
 <li>headers flat structure</li>
-<li>doxygen documentation</li>
+<li>Doxygen documentation</li>
 <li>add get chip id function (value F51FC47E1D0B52 for STC15W408AS)</li>
 <li>add master clock and divider frequency functions</li>
 <li>adapt delay_ms to clock divider, uart not adapted yet</li>
@@ -121,7 +121,7 @@ $(function() {
 <li>Aux module convert ticks to frequency implemented</li>
 <li>Aux module unsafe convert frequency to ticks</li>
 <li>timer_all.h to <a class="el" href="timer__common_8h.html">timer_common.h</a> renamed</li>
-<li>delay_ms partially rewrited to asm to decrease size</li>
+<li>delay_ms partially rewrote to asm to decrease size</li>
 <li>UART to UART1 renamed</li>
 <li>Fix: UART bias timer0 1T by setting AUXR.7 value to 1.</li>
 <li>timer2 baud rate ticks calculation implemented</li>
@@ -132,11 +132,11 @@ $(function() {
 <li>Fix: remove variables from delay module</li>
 <li>Reset routine implemented</li>
 <li>Watchdog timer routines implemented</li>
-<li>delay_ms now is define again</li>
-<li>Idle power managment routine implemented</li>
+<li>delay_ms now is defined again</li>
+<li>Idle power management routine implemented</li>
 <li>Power down mode implemented with initial wakeup timer support</li>
-<li>Use bitmask as a constant in <a class="el" href="bits_8h_source.html">bits.h</a> to avoid unnessary bit operations in bit_set and bit_clr</li>
-<li>Use bitmask as a constant in <a class="el" href="bits_8h_source.html">bits.h</a> to avoid unnessary bit operations in test_if_bit_set and test_if_bit_cleared</li>
+<li>Use bitmask as a constant in <a class="el" href="bits_8h_source.html">bits.h</a> to avoid unnecessary bit operations in bit_set and bit_clr</li>
+<li>Use bitmask as a constant in <a class="el" href="bits_8h_source.html">bits.h</a> to avoid unnecessary bit operations in test_if_bit_set and test_if_bit_cleared</li>
 </ul>
 <p>0.8</p><ul>
 <li>Add memory dump example</li>
@@ -154,11 +154,11 @@ $(function() {
 <li>Fix INT0 should be defined in timer0 modes</li>
 <li>timerX_modeX_direct_{reload, start}(TxH, TxL) for direct set TLx, THx registers implemented</li>
 <li>Does not recompile examples every time. Compile only when it changed</li>
-<li>Compiler output suppressed for examples building in non verbose mode</li>
+<li>Compiler output suppressed for examples building in non-verbose mode</li>
 </ul>
 <p>0.10.0</p><ul>
 <li>Fix compilation on Windows OS. Rename folder from aux to auxiliary</li>
-<li>Fix doxygen warnings</li>
+<li>Fix Doxygen warnings</li>
 <li>Build examples hex<ul>
 <li>bits_example</li>
 <li>chip_id_example</li>
@@ -232,7 +232,7 @@ $(function() {
 <li>Counter0 mode3 routines implemented</li>
 <li>UART1 mode0 send routines implemented</li>
 <li>UART1 mode1 with Timer2 (12T and 1T) as baud rate generator send routines implemented</li>
-<li>Timer2 as baudrate generator routines removed from <a class="el" href="timer2__mode0_8h.html">timer2_mode0.h</a></li>
+<li>Timer2 as baud rate generator routines removed from <a class="el" href="timer2__mode0_8h.html">timer2_mode0.h</a></li>
 <li>uart1 module use uart1_mode1_timer2_1T routines</li>
 </ul>
 <p>0.12.0</p><ul>
@@ -266,14 +266,14 @@ $(function() {
 <li>Add utility to dump idata RAM (first 256 RAM)</li>
 <li>Write utility to make hex file from csv</li>
 <li>Fix: copy eerprom_data.hex on cmake build eeprom examples</li>
-<li>Fix: Cmake firmware size is not equals to platfromio build size</li>
-<li>Fix: Firmware builded by sdcc 4.5 work correctly</li>
+<li>Fix: Cmake firmware size is not equals to PlatformIO build size</li>
+<li>Fix: Firmware built by SDCC 4.5 work correctly</li>
 <li>Comparator module initial implementation</li>
 <li>EEPROM write array implemented</li>
 </ul>
 <p>0.16.0</p><ul>
 <li>Wakeup timer init for given duration routine implemented</li>
-<li>Timer convertions between ticks and ms/frequency routines refactored</li>
+<li>Timer conversions between ticks and ms/frequency routines refactored</li>
 <li>timer0_modeX_delay() simplified</li>
 <li>pin examples folder renamed to gpio</li>
 <li>Timer0 start on ms/mcs routines implemented</li>
@@ -286,10 +286,10 @@ $(function() {
 <li>CMake examples flash_* targets are fixed</li>
 <li>Memory dump not only idata but xdata memory too</li>
 <li>Memory dumper is documented</li>
-<li>CMake and Platformio generates build summary with firmware sizes table</li>
+<li>CMake and PlatformIO generates build summary with firmware sizes table</li>
 <li>TODO SCons should make STC15 library for using in examples build</li>
 <li>TODO Try to build with SDCC 4.6</li>
-<li>Separate ./README on READMEs for library devops, firmware dev and contributor parts</li>
+<li>Separate ./README on parts for library devops, firmware dev and contributor parts</li>
 </ul>
 <p>Next releases todo</p>
 <ul>

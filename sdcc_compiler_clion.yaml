@@ -1,0 +1,15 @@
+
+compilers:
+
+  - description: SDCC 4.5.0 STC15 Small Memory model
+    match-args: "-mmcs51"
+    match-compiler-exe: "(.*/)?sdcc(\\.exe)?"
+    code-insight-target-name: mcs51
+    include-dirs: "${compiler-exe-dir}/../include"
+    defines-text: "
+#define __interrupt(n)
+#define __at(n)
+#define __naked
+#define __critical
+#define __trap
+"
