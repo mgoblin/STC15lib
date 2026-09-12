@@ -8,7 +8,7 @@
 
 0.2.0
 * headers flat structure
-* doxygen documentation
+* Doxygen documentation
 * add get chip id function (value F51FC47E1D0B52 for STC15W408AS)
 * add master clock and divider frequency functions
 * adapt delay_ms to clock divider, uart not adapted yet
@@ -48,7 +48,7 @@
 * Aux module convert ticks to frequency implemented 
 * Aux module unsafe convert frequency to ticks
 * timer_all.h to timer_common.h renamed
-* delay_ms partially rewrited to asm to decrease size 
+* delay_ms partially rewrote to asm to decrease size 
 * UART to UART1 renamed
 * Fix: UART bias timer0 1T by setting AUXR.7 value to 1.
 * timer2 baud rate ticks calculation implemented
@@ -59,11 +59,11 @@
 * Fix: remove variables from delay module
 * Reset routine implemented
 * Watchdog timer routines implemented
-* delay_ms now is define again
-* Idle power managment routine implemented
+* delay_ms now is defined again
+* Idle power management routine implemented
 * Power down mode implemented with initial wakeup timer support
-* Use bitmask as a constant in bits.h to avoid unnessary bit operations in bit_set and bit_clr
-* Use bitmask as a constant in bits.h to avoid unnessary bit operations in test_if_bit_set and test_if_bit_cleared
+* Use bitmask as a constant in bits.h to avoid unnecessary bit operations in bit_set and bit_clr
+* Use bitmask as a constant in bits.h to avoid unnecessary bit operations in test_if_bit_set and test_if_bit_cleared
 
 0.8
 * Add memory dump example
@@ -81,11 +81,11 @@
 * Fix INT0 should be defined in timer0 modes
 * timerX_modeX_direct_{reload, start}(TxH, TxL) for direct set TLx, THx registers implemented
 * Does not recompile examples every time. Compile only when it changed
-* Compiler output suppressed for examples building in non verbose mode
+* Compiler output suppressed for examples building in non-verbose mode
 
 0.10.0
 * Fix compilation on Windows OS. Rename folder from aux to auxiliary
-* Fix doxygen warnings
+* Fix Doxygen warnings
 * Build examples hex
     * bits_example
     * chip_id_example
@@ -142,7 +142,7 @@
 * Counter0 mode3 routines implemented
 * UART1 mode0 send routines implemented
 * UART1 mode1 with Timer2 (12T and 1T) as baud rate generator send routines implemented
-* Timer2 as baudrate generator routines removed from timer2_mode0.h
+* Timer2 as baud rate generator routines removed from timer2_mode0.h
 * uart1 module use uart1_mode1_timer2_1T routines
 
 0.12.0
@@ -176,14 +176,14 @@
 * Add utility to dump idata RAM (first 256 RAM)
 * Write utility to make hex file from csv
 * Fix: copy eerprom_data.hex on cmake build eeprom examples
-* Fix: Cmake firmware size is not equals to platfromio build size
-* Fix: Firmware builded by sdcc 4.5 work correctly
+* Fix: Cmake firmware size is not equals to PlatformIO build size
+* Fix: Firmware built by SDCC 4.5 work correctly
 * Comparator module initial implementation
 * EEPROM write array implemented
 
 0.16.0
 * Wakeup timer init for given duration routine implemented
-* Timer convertions between ticks and ms/frequency routines refactored
+* Timer conversions between ticks and ms/frequency routines refactored
 * timer0_modeX_delay() simplified
 * pin examples folder renamed to gpio
 * Timer0 start on ms/mcs routines implemented
@@ -196,10 +196,10 @@
 * CMake examples flash_* targets are fixed
 * Memory dump not only idata but xdata memory too
 * Memory dumper is documented 
-* CMake and Platformio generates build summary with firmware sizes table
+* CMake and PlatformIO generates build summary with firmware sizes table
 * TODO SCons should make STC15 library for using in examples build
 * TODO Try to build with SDCC 4.6
-* Separate ./README on READMEs for library devops, firmware dev and contributor parts
+* Separate ./README on parts for library devops, firmware dev and contributor parts
 
 Next releases todo
 
