@@ -2,6 +2,8 @@
 compilers:
 
   - description: SDCC 4.5.0 STC15 Small Memory model
+    match-sources: ".*\\.c"
+    match-language: C
     match-args: "-mmcs51"
     match-compiler-exe: "(.*/)?sdcc(\\.exe)?"
     code-insight-target-name: mcs51
