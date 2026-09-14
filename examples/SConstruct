@@ -3,6 +3,7 @@ Import("env")
 env.Append(
     LIBPREFIX='lib',
     LIBSUFFIX='.lib',
+    LIBS=['libstc15hal'],
 )
 
 verbose = int(ARGUMENTS.get('PIOVERBOSE', 0))

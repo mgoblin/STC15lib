@@ -1,16 +1,13 @@
-import shutil
 Import("env")
 
 adc_read_prog = env.Program(
     'adc_read_example',
     ['adc_read_example.c'],
-    LIBS = ['libstc15hal']
 )
 
 adc_async_prog = env.Program(
     'adc_async_example', 
     ['adc_async_example.c'],
-    LIBS = ['libstc15hal']
 )
 
 env.Default(
