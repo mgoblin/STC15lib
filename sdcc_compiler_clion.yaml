@@ -4,10 +4,9 @@ compilers:
   - description: SDCC 4.5.0 STC15 Small Memory model
     match-sources: ".*\\.c"
     match-language: C
-    match-args: "-mmcs51"
     match-compiler-exe: "(.*/)?sdcc(\\.exe)?"
-    code-insight-target-name: mcs51
-    include-dirs: "${compiler-exe-dir}/../include"
+    include-dirs:
+      - ${project-path}/include
     defines-text: "
 #define __interrupt(n)
 #define __at(n)

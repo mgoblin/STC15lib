@@ -14,8 +14,8 @@ set(CMAKE_C_STANDARD 23)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
 # add headers to stc15hal
-include_directories(stc15hal 
-  PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include # For public headers during build
+include_directories(
+  ${CMAKE_SOURCE_DIR}/include # For public headers during build
 )
 
 add_subdirectory("src")
