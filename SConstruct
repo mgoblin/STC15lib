@@ -1,5 +1,11 @@
 Import("env")
 
+env.Replace(
+    LIBPREFIX='lib',
+    LIBSUFFIX='.lib',
+)
+
+
 build_dir = '.pio/build/STC15W408AS'
 VariantDir(build_dir, 'src', duplicate=0)
 
