@@ -1,9 +1,9 @@
 Import("env")
 
-build_dir = '.pio/build/STC15W408AS/lib'
+build_dir = '.pio/build/STC15W408AS'
 VariantDir(build_dir, 'src', duplicate=0)
 
-build_lib_task = env.StaticLibrary(f'{build_dir}/stc15', [
+build_lib_task = env.StaticLibrary(f'{build_dir}/stc15hal', [
     f'{build_dir}/uart.c',
     f'{build_dir}/timer8bit_ticks_to_mcs.c',
     f'{build_dir}/timer_Hz_to_ticks.c',

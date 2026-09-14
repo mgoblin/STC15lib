@@ -1,16 +1,16 @@
 import shutil
 Import("env")
 
-env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
-
 adc_read_prog = env.Program(
-    'adc_read_example', 
-    ['adc_read_example.c', 'uart.c']
+    'adc_read_example',
+    ['adc_read_example.c'],
+    LIBS = ['libstc15hal']
 )
 
 adc_async_prog = env.Program(
     'adc_async_example', 
-    ['adc_async_example.c']
+    ['adc_async_example.c'],
+    LIBS = ['libstc15hal']
 )
 
 env.Default(

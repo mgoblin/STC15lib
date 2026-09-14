@@ -1,10 +1,10 @@
 Import("env")
 
 env.Append(
-    CCFLAGS=[
-        "-Iinclude"
-    ]
+    LIBPREFIX='lib',
+    LIBSUFFIX='.lib',
 )
+
 verbose = int(ARGUMENTS.get('PIOVERBOSE', 0))
 
 if verbose == 0:
