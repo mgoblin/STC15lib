@@ -7,7 +7,6 @@ compilers:
     include-dirs:
       - ${compiler-exe-dir}/../share/sdcc/include/mcs51
       - ${compiler-exe-dir}/../share/sdcc/include
-      - ${compiler-exe-dir}/../share/sdcc/non-free/include
       - ${project-path}/include
     defines-text: "
     #define __SDCC 1
