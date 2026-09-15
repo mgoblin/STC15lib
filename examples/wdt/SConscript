@@ -1,6 +1,5 @@
 Import("env")
 
-env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
 
 wdt_clear_prog = env.Program(
     'wdt_clear_example',
@@ -9,7 +8,7 @@ wdt_clear_prog = env.Program(
 
 wdt_flag_prog = env.Program(
     'wdt_flag_example',
-    ['wdt_flag_example.c', 'uart.c']
+    ['wdt_flag_example.c']
 )
 
 wdt_start_prog = env.Program(
