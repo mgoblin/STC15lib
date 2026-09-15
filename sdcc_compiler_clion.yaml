@@ -1,16 +1,24 @@
-
 compilers:
-
-  - description: SDCC 4.5.0 STC15 Small Memory model
-    match-sources: ".*\\.c"
+  - description: SDCC for STC15 (MCS51)
+    match-compiler-exe: "(.*/)?sdcc(.exe)?"
+    match-args: -mmcs51
     match-language: C
-    match-compiler-exe: "(.*/)?sdcc(\\.exe)?"
+    # Эти переменные автоматически подставят путь к папке, где лежит sdcc.exe
     include-dirs:
+      - ${compiler-exe-dir}/../share/sdcc/include/mcs51
+      - ${compiler-exe-dir}/../share/sdcc/include
+      - ${compiler-exe-dir}/../share/sdcc/non-free/include
       - ${project-path}/include
     defines-text: "
-#define __interrupt(n)
-#define __at(n)
-#define __naked
-#define __critical
-#define __trap
-"
+    #define __SDCC 1
+    #define __mcs51 1
+    #define __interrupt(vector)
+    #define __using(regnum)
+    #define __code
+    #define __at(addr)
+    #define __sfr
+    #define __sfr16
+    #define __sfr32
+    #define __sbit
+    #define __xdata
+    "
