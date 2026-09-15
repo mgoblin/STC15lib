@@ -1,15 +1,13 @@
 Import("env")
 
-env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
-
 timer0_common_prog = env.Program(
     'timer0_common_example',
-    ['timer0_common_example.c', 'uart.c']
+    ['timer0_common_example.c']
 )
 
 timer2_common_prog = env.Program(
     'timer2_common_example',
-    ['timer2_common_example.c', 'uart.c']
+    ['timer2_common_example.c']
 )
 
 env.Default(

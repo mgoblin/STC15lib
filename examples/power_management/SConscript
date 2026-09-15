@@ -1,25 +1,23 @@
 Import("env")
 
-env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
-
 powerdown_prog = env.Program(
     'powerdown_example', 
-    ['powerdown_example.c', 'uart.c']
+    ['powerdown_example.c']
 )
 
 idle_prog = env.Program(
     'idle_example', 
-    ['idle_example.c', 'uart.c']
+    ['idle_example.c']
 )
 
 low_voltage_prog = env.Program(
     'low_voltage_example', 
-    ['low_voltage_example.c', 'uart.c']
+    ['low_voltage_example.c']
 )
 
 wakeup_seconds_prog = env.Program(
     'wakeup_seconds_example', 
-    ['wakeup_seconds_example.c', 'uart.c']
+    ['wakeup_seconds_example.c']
 )
 
 env.Default(
