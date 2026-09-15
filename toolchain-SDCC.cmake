@@ -8,10 +8,10 @@ set(CMAKE_C_COMPILER_ID_RUN TRUE)
 
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
-# set(SDCC_DIR /home/mike/Software/sdcc-4.6.0-amd64-unknown-linux2.5/sdcc-4.6.0/bin)
-# set(SDCC_ROOT /home/mike/Software/sdcc-4.6.0-amd64-unknown-linux2.5/sdcc-4.6.0/share/sdcc) # В Debian заголовки обычно лежат здесь
-set(SDCC_DIR /usr/bin)
-set(SDCC_ROOT /usr/share/sdcc)
+set(SDCC_DIR /home/mike/Software/sdcc-4.6.0-amd64-unknown-linux2.5/sdcc-4.6.0/bin)
+set(SDCC_ROOT /home/mike/Software/sdcc-4.6.0-amd64-unknown-linux2.5/sdcc-4.6.0/share/sdcc)
+# set(SDCC_DIR /usr/bin)
+# set(SDCC_ROOT /usr/share/sdcc)
 
 
 
