@@ -1,37 +1,50 @@
-# the name of the target operating system
+# 1. Указываем целевую систему. Это заставит CMake использовать Generic-SDCC-C.cmake
 set(CMAKE_SYSTEM_NAME Generic)
+set(CMAKE_SYSTEM_PROCESSOR mcs51)
 
-set(CMAKE_CROSSCOMPILING TRUE)
 set(CMAKE_ASM_COMPILER_ID "SDAS8051")
 
-# which compilers to use for C
-set(CMAKE_C_COMPILER sdcc CACHE INTERNAL "SDCC C compiler")
-set(CMAKE_ASM_COMPILER sdas8051 CACHE INTERNAL "asm compiler")
-set(CMAKE_ASM_COMPILER_LINKER sdld CACHE INTERNAL "asm linker tool")
-set(CMAKE_C_COMPILER_LINKER sdld CACHE INTERNAL "c linker tool")
-set(CMAKE_OBJCOPY sdobjcopy CACHE INTERNAL "objcopy tool")
+set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+
+set(SDCC_DIR /usr/bin)
+set(SDCC_ROOT /usr/share/sdcc) # В Debian заголовки обычно лежат здесь
+
+set(CMAKE_C_COMPILER ${SDCC_DIR}/sdcc)
+set(CMAKE_CXX_COMPILER ${SDCC_DIR}/sdcc)
 set(CMAKE_PACKIHX packihx CACHE INTERNAL "packihx tool")
 set(CMAKE_MAKEBIN makebin CACHE INTERNAL "makebin tool")
 
-get_filename_component(SDCC_LOCATION "${CMAKE_ASM_COMPILER}" PATH)
-get_filename_component(SDCC_LOCATION "${CMAKE_C_COMPILER}" PATH)
-get_filename_component(SDCC_LOCATION "${CMAKE_ASM_COMPILER_LINKER}" PATH)
-get_filename_component(SDCC_LOCATION "${CMAKE_C_COMPILER_LINKER}" PATH)
-find_program(SDCCLIB_EXECUTABLE sdar PATHS "${SDCC_LOCATION}" NO_DEFAULT_PATH)
-find_program(SDCCLIB_EXECUTABLE sdar)
-set(CMAKE_AR "${SDCCLIB_EXECUTABLE}" CACHE FILEPATH "The sdcc librarian" FORCE)
+set(CMAKE_C_OUTPUT_EXTENSION_REPLACE 1)
+set(CMAKE_EXECUTABLE_SUFFIX ".ihx")
+set(CMAKE_STATIC_LIBRARY_PREFIX "")
+set(CMAKE_STATIC_LIBRARY_SUFFIX ".lib")
 
 # Compilation flags
-set(CMAKE_C_FLAGS "-mmcs51 --model-small --std-c23 --Werror")
-set(CMAKE_ASM_FLAGS "-lso -a -y")
-set(CMAKE_ASM_LINK_FLAGS "-niumwx -M -y")
+set(CMAKE_C_FLAGS_INIT "-mmcs51 --model-small --std-c23 --Werror")
+set(SDCC_MCS51_MEMORY_FLAGS "--model-small --iram-size 256 --xram-size 256 --code-size 8096")
 
-# here is the target environment is located
-set(CMAKE_FIND_ROOT_PATH  /usr/share/sdcc)
 
-# adjust the default behaviour of the FIND_XXX() commands:
-# search headers and libraries in the target environment, search 
-# programs in the host environment
+# --- Static Library config ---
+
+# 1. Use dsar as the archiver for SDCC. We need to find it first. It is usually located next to the compiler, but we can also search in the system PATH.
+GET_FILENAME_COMPONENT(SDCC_LOCATION "${CMAKE_C_COMPILER}" PATH)
+FIND_PROGRAM(SDCCLIB_EXECUTABLE sdar PATHS "${SDCC_LOCATION}" NO_DEFAULT_PATH)
+# If not found, try to find it in the system PATH
+FIND_PROGRAM(SDCCLIB_EXECUTABLE sdar)
+
+# Use sdar 
+SET(CMAKE_AR "${SDCCLIB_EXECUTABLE}" CACHE FILEPATH "The sdcc librarian (sdar)" FORCE)
+
+# 2. Set the command to create static libraries using sdar
+SET(CMAKE_C_CREATE_STATIC_LIBRARY
+    "<CMAKE_AR> -rc <TARGET> <OBJECTS>")
+
+# 3. Set the command to link static libraries using sdcc
+SET(CMAKE_C_LINK_EXECUTABLE 
+    "<CMAKE_C_COMPILER> <FLAGS> <OBJECTS> --model-small --out-fmt-ihx -o <TARGET> <CMAKE_C_LINK_FLAGS> <LINK_FLAGS> <LINK_LIBRARIES>"
+)
+
+set(CMAKE_FIND_ROOT_PATH ${SDCC_ROOT})
 set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
 set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
