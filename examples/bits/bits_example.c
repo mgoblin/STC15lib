@@ -22,7 +22,7 @@
 #define original_byte 0b10000001  
 
 // allocate byte MCU flash. It cannot be modified and use as a constant value
-__code uint8_t shifted_left_byte = bit_shift_left(original_byte, 1);
+__code const uint8_t shifted_left_byte = bit_shift_left(original_byte, 1);
 
 // allocate byte in MCU RAM. This value not modifiable because have declared as const
 __data const uint8_t shifted_right_byte = bit_shift_right(original_byte, 1);

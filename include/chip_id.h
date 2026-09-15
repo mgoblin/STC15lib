@@ -33,7 +33,7 @@
  * 
  * @ingroup chip_id
  */
-__code __at(CHIP_ID_ADDR_ROM) uint8_t chip_id;
+__code __at(CHIP_ID_ADDR_ROM) const uint8_t chip_id;
 
 /**
  * @brief Get chip id as array. Array size is ID_SIZE
