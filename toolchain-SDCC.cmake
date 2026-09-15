@@ -26,7 +26,7 @@ set(CMAKE_STATIC_LIBRARY_PREFIX "")
 set(CMAKE_STATIC_LIBRARY_SUFFIX ".lib")
 
 # Compilation flags
-set(CMAKE_C_FLAGS_INIT "-mmcs51 --model-small --std-c23")
+set(CMAKE_C_FLAGS_INIT "-mmcs51 --model-small --std-c23 --norestartseqatomics")
 set(SDCC_MCS51_MEMORY_FLAGS "--model-small --iram-size 256 --xram-size 256 --code-size 8096")
 
 

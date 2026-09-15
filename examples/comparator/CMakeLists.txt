@@ -2,14 +2,6 @@ add_executable(comparator_async_example
     comparator_async_example.c
 )
 
-target_compile_options(comparator_async_example PRIVATE
-    -mmcs51
-    --model-small
-    --std-c23
-    --norestartseqatomics
-)
-
-
 target_link_libraries(comparator_async_example PRIVATE stc15hal) 
 
 # Transform firmware ihx to hex

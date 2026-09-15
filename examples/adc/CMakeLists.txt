@@ -6,20 +6,6 @@ add_executable(adc_read_example
     adc_read_example.c
 )
 
-target_compile_options(adc_async_example PRIVATE
-    -mmcs51
-    --model-small
-    --std-c23
-    --norestartseqatomics
-)
-target_compile_options(adc_read_example PRIVATE
-    -mmcs51
-    --model-small
-    --std-c23
-    --norestartseqatomics
-)
-
-
 target_link_libraries(adc_read_example PRIVATE stc15hal) 
 target_link_libraries(adc_async_example PRIVATE stc15hal) 
 

@@ -2,13 +2,6 @@ add_executable(bits_example
     bits_example.c
 )
 
-target_compile_options(bits_example PRIVATE
-    -mmcs51
-    --model-small
-    --std-c23
-    --norestartseqatomics
-)
-
 target_link_libraries(bits_example PRIVATE stc15hal) 
 
 # Transform firmware ihx to hex
