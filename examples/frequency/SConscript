@@ -1,10 +1,8 @@
 Import("env")
 
-env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
-
 master_clock_output_prog = env.Program(
     'master_clock_output_example', 
-    ['master_clock_output_example.c', 'uart.c']
+    ['master_clock_output_example.c']
 )
 
 slowdown_prog = env.Program('slowdown_example', ['slowdown_example.c'])

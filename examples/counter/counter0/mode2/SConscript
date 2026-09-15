@@ -1,18 +1,15 @@
 Import("env")
 
-env.Command('uart.c', '#src/uart.c', Copy('$TARGET', '$SOURCE'))
-
 counter0_mode2_prog = env.Program(
     'counter0_mode2_example',
     [
         'counter0_mode2_example.c',
-        'uart.c',
     ]
 )
 
 counter0_mode2_p35_output_prog = env.Program(
     'counter0_mode2_p35_output_example',
-    ['counter0_mode2_p35_output_example.c', 'uart.c'],
+    ['counter0_mode2_p35_output_example.c'],
 )
 
 counter0_mode2_gate_prog = env.Program(
