@@ -8,12 +8,24 @@ set(CMAKE_C_COMPILER_ID_RUN TRUE)
 
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
+# Compiler and linker settings for SDCC
+
+# SDCC 4.6
+# set(SDCC_VERSION 46)
 # set(SDCC_DIR /home/mike/Software/sdcc-4.6.0-amd64-unknown-linux2.5/sdcc-4.6.0/bin)
 # set(SDCC_ROOT /home/mike/Software/sdcc-4.6.0-amd64-unknown-linux2.5/sdcc-4.6.0/share/sdcc)
+
+# SDCC from PlatformIO
+# set(SDCC_VERSION 41)
+# set(SDCC_DIR /home/mike/.platformio/packages/toolchain-sdcc/bin)
+# set(SDCC_ROOT /home/mike/.platformio/packages/toolchain-sdcc/share/sdcc)
+
+# SDCC from Debian repo
+set(SDCC_VERSION 45)
 set(SDCC_DIR /usr/bin)
 set(SDCC_ROOT /usr/share/sdcc)
 
-
+# Compiler and linker settings for SDCC end
 
 set(CMAKE_C_COMPILER ${SDCC_DIR}/sdcc)
 set(CMAKE_CXX_COMPILER ${SDCC_DIR}/sdcc)
@@ -26,7 +38,13 @@ set(CMAKE_STATIC_LIBRARY_PREFIX "")
 set(CMAKE_STATIC_LIBRARY_SUFFIX ".lib")
 
 # Compilation flags
-set(CMAKE_C_FLAGS_INIT "-mmcs51 --model-small --std-c23 --norestartseqatomics")
+if(SDCC_VERSION VERSION_GREATER_EQUAL 46)
+    set(CMAKE_C_FLAGS_INIT "-mmcs51 --model-small --std-c23 --norestartseqatomics")
+elseif(SDCC_VERSION VERSION_GREATER_EQUAL 45)
+    set(CMAKE_C_FLAGS_INIT "-mmcs51 --model-small --std-c23")
+else()
+    set(CMAKE_C_FLAGS_INIT "-mmcs51 --model-small")    
+endif()    
 set(SDCC_MCS51_MEMORY_FLAGS "--model-small --iram-size 256 --xram-size 256 --code-size 8096")
 
 
