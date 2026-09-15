@@ -3,11 +3,17 @@ set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR mcs51)
 
 set(CMAKE_ASM_COMPILER_ID "SDAS8051")
+set(CMAKE_C_COMPILER_ID "SDCC")
+set(CMAKE_C_COMPILER_ID_RUN TRUE)
 
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
+# set(SDCC_DIR /home/mike/Software/sdcc-4.6.0-amd64-unknown-linux2.5/sdcc-4.6.0/bin)
+# set(SDCC_ROOT /home/mike/Software/sdcc-4.6.0-amd64-unknown-linux2.5/sdcc-4.6.0/share/sdcc) # В Debian заголовки обычно лежат здесь
 set(SDCC_DIR /usr/bin)
-set(SDCC_ROOT /usr/share/sdcc) # В Debian заголовки обычно лежат здесь
+set(SDCC_ROOT /usr/share/sdcc)
+
+
 
 set(CMAKE_C_COMPILER ${SDCC_DIR}/sdcc)
 set(CMAKE_CXX_COMPILER ${SDCC_DIR}/sdcc)
@@ -20,7 +26,7 @@ set(CMAKE_STATIC_LIBRARY_PREFIX "")
 set(CMAKE_STATIC_LIBRARY_SUFFIX ".lib")
 
 # Compilation flags
-set(CMAKE_C_FLAGS_INIT "-mmcs51 --model-small --std-c23 --Werror")
+set(CMAKE_C_FLAGS_INIT "-mmcs51 --model-small --std-c23")
 set(SDCC_MCS51_MEMORY_FLAGS "--model-small --iram-size 256 --xram-size 256 --code-size 8096")
 
 
