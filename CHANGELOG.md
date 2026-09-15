@@ -197,7 +197,7 @@
 * Memory dump not only idata but xdata memory too
 * Memory dumper is documented 
 * CMake and PlatformIO generates build summary with firmware sizes table
-* TODO SCons should make STC15 library for using in examples build
+* SCons make STC15 library for examples and utilities build
 * TODO Try to build with SDCC 4.6
 * Separate ./README on parts for library devops, firmware dev and contributor parts
 
