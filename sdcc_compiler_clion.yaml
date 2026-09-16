@@ -1,4 +1,4 @@
-
+# TODO Verify and reduce #define
 compilers:
 
   - description: SDCC 4.1.0
