@@ -35,3 +35,10 @@ jobs:
         working-directory: ${{github.workspace}}/build
         run: ctest -C ${{env.BUILD_TYPE}}
 
+      - name: Package distribution
+        working-directory: ${{github.workspace}}
+        run: |  
+          mkdir -p ${{github.workspace}}/dist
+          find build/src -name '*.lib' -exec cp {} dist/lib \;
+          cp include/*.h dist/include
+          cd dist && zip -r ../STC15lib-${{ github.ref_name }}.zip .
