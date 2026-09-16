@@ -1,23 +1,40 @@
+
 compilers:
-  - description: SDCC for STC15 (MCS51)
-    match-compiler-exe: "(.*/)?sdcc(.exe)?"
-    match-args: -mmcs51
-    match-language: C
-    # Эти переменные автоматически подставят путь к папке, где лежит sdcc.exe
+
+  - description: SDCC 4.1.0
+    match-args: "-mmcs51"
+    match-compiler-exe: "(.*/)?sdcc(\\.exe)?"
+    code-insight-target-name: mcs51
     include-dirs:
-      - ${compiler-exe-dir}/../share/sdcc/include/mcs51
-      - ${compiler-exe-dir}/../share/sdcc/include
-      - ${project-path}/include
+      - "/usr/share/sdcc/include"
+      - "/usr/share/sdcc/include/mcs51"
     defines-text: "
-    #define __SDCC 1
-    #define __mcs51 1
-    #define __interrupt(vector)
-    #define __using(regnum)
-    #define __code
-    #define __at(addr)
-    #define __sfr
-    #define __sfr16
-    #define __sfr32
-    #define __sbit
-    #define __xdata
-    "
+#define __STDC_VERSION__ 201112L
+#define __SDCC_INT_LONG_REENT 1
+#define __SDCC_MODEL_SMALL 1
+#define __STDC_HOSTED__ 0
+#define __STDC_UTF_16__ 1
+#define __SDCC_VERSION_MINOR 5
+#define __STDC_ISO_10646__ 201409L
+#define __SDCC_VERSION_PATCH 0
+#define __SDCC_mcs51 1
+#define __SDCC_FLOAT_REENT 1
+#define __SDCC_VERSION_MAJOR 4
+#define __STDC_NO_VLA__ 1
+#define __SDCC 4_1_0
+#define __STDC_UTF_32__ 1
+#define __STDC_NO_THREADS__ 1
+#define __SDCC_CHAR_UNSIGNED 1
+#define __STDC_NO_ATOMICS__ 1
+#define __SDCC_STACK_AUTO 1
+#define __STDC__ 1
+#define __SDCC_REVISION 12072
+#define __STDC_NO_COMPLEX__ 1
+#define __interrupt(n)
+#define __at(n)
+#define __naked
+#define __critical
+#define __trap
+#define __code
+#define __data
+"
