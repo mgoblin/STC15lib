@@ -199,6 +199,7 @@
 * CMake and PlatformIO generates build summary with firmware sizes table
 * SCons make STC15 library for examples and utilities build
 * Now CMake build can use SDCC 4.1 (PlatformIO), 4.5 (Default for Debian Trixie), and 4.6 (lastest on current time sdcc version). 4.5 usedd by default 
+* TODO GitHub build
 * TODO Separate ./README on parts for library devops, firmware dev and contributor parts
 
 Next releases todo
