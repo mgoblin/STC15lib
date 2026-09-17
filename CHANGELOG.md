@@ -202,11 +202,12 @@
 * GitHub build. On new tag GitHub CI builds release with artifacts and draft release. 
 
 0.18.0
-* TODO Separate ./README on parts for library devops, firmware dev and contributor parts
+* TODO Group PlatformIO and CMake build files in separate folders
+* TODO Separate ./README on parts for firmware dev and contributor parts
+* TODO Rework bits module
 
 Next releases todo
 
-* TODO Rework bits module
 * TODO Use static_assert 
 * TODO UART1 support frame error
 * TODO UART1 Automatic address recognition support
