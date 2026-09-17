@@ -43,7 +43,7 @@ jobs:
           cd dist && zip -r ../STC15lib-${{ github.ref_name }}.zip .
 
   docs:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     permissions:
       contents: write
       pages: write
