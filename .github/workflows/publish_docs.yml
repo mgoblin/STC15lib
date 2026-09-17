@@ -2,10 +2,9 @@ name: Deploy Doxygen Docs to GitHub Pages
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches: ["main"]
   workflow_dispatch:
-
+    
 permissions:
   contents: read
   pages: write
