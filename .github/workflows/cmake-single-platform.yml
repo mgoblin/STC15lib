@@ -1,5 +1,3 @@
-# This starter workflow is for a CMake project running on a single platform. There is a different starter workflow if you need cross-platform coverage.
-# See: https://github.com/actions/starter-workflows/blob/main/ci/cmake-multi-platform.yml
 name: CMake build release
 
 on:
@@ -43,3 +41,38 @@ jobs:
           find build/src -name '*.lib' -exec cp {} dist/lib \;
           cp include/*.h dist/include
           cd dist && zip -r ../STC15lib-${{ github.ref_name }}.zip .
+
+  docs:
+    runs-on: ubuntu-lastest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Doxygen
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y doxygen graphviz
+
+      - name: Build Documentation
+        run: doxygen doxygen.conf
+
+      - name: Add .nojekyll
+        run: touch docs/html/.nojekyll
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './docs/html'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
