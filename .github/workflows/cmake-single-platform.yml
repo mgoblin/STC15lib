@@ -46,7 +46,7 @@ jobs:
           cp include/*.h dist/include
           cd dist && zip -r ../STC15lib-${{ github.ref_name }}.zip .
 
-  build-pages:
+  deploy-pages:
     runs-on: ubuntu-latest
 
     permissions:
@@ -77,13 +77,6 @@ jobs:
         with:
           path: ./docs/html
 
-  deploy-pages:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-24.04
-    needs: build
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
