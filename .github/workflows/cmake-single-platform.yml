@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  build-dist:
     runs-on: ubuntu-26.04
     permissions:
       contents: write
