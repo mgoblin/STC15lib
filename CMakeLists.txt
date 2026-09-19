@@ -28,7 +28,7 @@ if(Doxygen_FOUND)
     "${DOXYGEN_VERSION} at ${DOXYGEN_EXECUTABLE}")
   
   add_custom_target(docs ALL
-    COMMAND doxygen doxygen.conf
+    COMMAND doxygen ${CMAKE_CURRENT_SOURCE_DIR}/doxygen.conf
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     COMMENT "Generating project documentation"
   )
