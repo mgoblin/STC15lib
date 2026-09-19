@@ -17,7 +17,7 @@
         "maintainer": true
       }
     ],
-    "license": "MIT",
+    "license": "Apache-2.0",
     "homepage": "https://github.com/mgoblin/STC15lib",
     "dependencies": {
     },

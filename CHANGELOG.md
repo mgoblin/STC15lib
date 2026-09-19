@@ -204,6 +204,7 @@
 0.18.0
 * Group PlatformIO and CMake build files in separate folders
 * Separate ./README on parts for firmware dev and contributor parts
+* Corrected library.json – Fix a license type from MIT to Apache
 * TODO Rework bits module
 
 Next releases todo
