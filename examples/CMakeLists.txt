@@ -19,7 +19,7 @@ set(EXAMPLES_BUILD_SUMMARY_CMD "")
 
 list(APPEND EXAMPLES_BUILD_SUMMARY_CMD
 	COMMAND
-	${Python3_EXECUTABLE} ${CMAKE_SOURCE_DIR}/cmake_examples_build_summary.py
+	${Python3_EXECUTABLE} ${CMAKE_SOURCE_DIR}/cmake/cmake_examples_build_summary.py
 	"${CMAKE_BINARY_DIR}/examples"
 	"${CMAKE_BINARY_DIR}/examples/build_summary.txt"
 )
