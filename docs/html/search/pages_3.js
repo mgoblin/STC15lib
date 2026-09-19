@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['jetbrains_20ide_20integration_0',['CLion JetBrains IDE integration',['../md_clion_2README.html',1,'']]]
+  ['hal_0',['STC15 Hardware Abstraction Layer (STC15 HAL)',['../index.html',1,'']]],
+  ['hardware_20abstraction_20layer_20stc15_20hal_1',['STC15 Hardware Abstraction Layer (STC15 HAL)',['../index.html',1,'']]]
 ];

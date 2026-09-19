@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['ide_20integration_0',['CLion JetBrains IDE integration',['../md_clion_2README.html',1,'']]],
-  ['integration_1',['CLion JetBrains IDE integration',['../md_clion_2README.html',1,'']]]
+  ['dumper_0',['Memory Dumper',['../md_utils_2memory__dumper_2README.html',1,'']]]
 ];

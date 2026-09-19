@@ -203,7 +203,7 @@
 
 0.18.0
 * Group PlatformIO and CMake build files in separate folders
-* TODO Separate ./README on parts for firmware dev and contributor parts
+* Separate ./README on parts for firmware dev and contributor parts
 * TODO Rework bits module
 
 Next releases todo

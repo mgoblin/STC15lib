@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['3_20with_20timer2_2012t_0',['UART1 Mode 3 with Timer2 12T',['../group__uart1__mode3__timer2__12T.html',1,'']]],
-  ['3_20with_20timer2_201t_1',['UART1 Mode 3 with Timer2 1T',['../group__uart1__mode3__timer2__1T.html',1,'']]]
+  ['2_20hal_20macros_20size_20optimization_0',['2. HAL Macros &amp; Size Optimization',['../index.html#autotoc_md13',1,'']]],
+  ['2_20uart1_20serial_20communication_20printf_1',['2. UART1 Serial Communication &amp; printf',['../index.html#autotoc_md17',1,'']]]
 ];

@@ -1,28 +1,5 @@
 var searchData=
 [
-  ['a_20cmake_20or_20platformio_20project_0',['Import STC15 lib as a CMake or PlatformIO Project',['../md_clion_2README.html#autotoc_md2',1,'']]],
-  ['adc_1',['ADC',['../group__adc.html',1,'']]],
-  ['adc_2eh_2',['adc.h',['../adc_8h.html',1,'']]],
-  ['adc_5fasync_5fget_5fresult_3',['adc_async_get_result',['../group__adc.html#gae7954164fa7cbba6947dbe04221c618c',1,'adc.h']]],
-  ['adc_5fasync_5fread_5ffinish_4',['adc_async_read_finish',['../group__adc.html#gaf115fda1f311d9577cee589134d1f02c',1,'adc.h']]],
-  ['adc_5fasync_5fread_5fstart_5',['adc_async_read_start',['../group__adc.html#ga1ed306842c5d0e89d6a8100032a69aa0',1,'adc.h']]],
-  ['adc_5fdestroy_6',['adc_destroy',['../group__adc.html#ga6e678166816b8341b430912a0fd30268',1,'adc.h']]],
-  ['adc_5fflag_5fbit_7',['ADC_FLAG_BIT',['../adc_8h.html#ada1c239a8dc03fed4b4c1f4d6fe2df13',1,'adc.h']]],
-  ['adc_5finit_5finput_5fonly_8',['adc_init_input_only',['../group__adc.html#ga67fe8b4aa9aaa52892d1bd5ab1b6bef9',1,'adc.h']]],
-  ['adc_5finit_5fopen_5fdrain_9',['adc_init_open_drain',['../group__adc.html#gae9a1769ed42cd3171882232ff0302947',1,'adc.h']]],
-  ['adc_5flow_5fbits_5fcount_10',['ADC_LOW_BITS_COUNT',['../adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7',1,'adc.h']]],
-  ['adc_5flow_5fbits_5fmsk_11',['ADC_LOW_BITS_MSK',['../adc_8h.html#a73368454ae30fae5a5b7bb9ac95013a4',1,'adc.h']]],
-  ['adc_5fpower_5fon_5fmsk_12',['ADC_POWER_ON_MSK',['../adc_8h.html#abf22e993bdb562f89f9d9cc343615b8b',1,'adc.h']]],
-  ['adc_5fread_5fsync_13',['adc_read_sync',['../group__adc.html#ga2857b9efd36f8d5f11de3523c3fd74d8',1,'adc.h']]],
-  ['adc_5fspeed_5f180_14',['ADC_SPEED_180',['../group__adc.html#ggaa63b42a360b882a87434ae898707d473ac79d53ecc378839bd0befe114e8972c0',1,'adc.h']]],
-  ['adc_5fspeed_5f360_15',['ADC_SPEED_360',['../group__adc.html#ggaa63b42a360b882a87434ae898707d473a7de5086482036ef10da72be2f5da9815',1,'adc.h']]],
-  ['adc_5fspeed_5f540_16',['ADC_SPEED_540',['../group__adc.html#ggaa63b42a360b882a87434ae898707d473a841a03319c2efabe4127944ba8658984',1,'adc.h']]],
-  ['adc_5fspeed_5f90_17',['ADC_SPEED_90',['../group__adc.html#ggaa63b42a360b882a87434ae898707d473adf2851e0d4945fff972f045ae062daf0',1,'adc.h']]],
-  ['adc_5fspeed_5ft_18',['adc_speed_t',['../group__adc.html#gaa63b42a360b882a87434ae898707d473',1,'adc.h']]],
-  ['adc_5fstart_5fbit_19',['ADC_START_BIT',['../adc_8h.html#a84aeff7f7cb774816c29ed00c0ad6551',1,'adc.h']]],
-  ['add_20library_20to_20your_20project_20',['Add library to your project',['../index.html#autotoc_md5',1,'']]],
-  ['adrj_5fbit_21',['ADRJ_BIT',['../adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35',1,'adc.h']]],
-  ['and_20vise_20versa_20conversions_22',['Timer ticks to duration/frequency and vise versa conversions',['../group__timer__to__ms.html',1,'']]],
-  ['any_5fedge_23',['ANY_EDGE',['../group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d',1,'interrupt.h']]],
-  ['as_20a_20cmake_20or_20platformio_20project_24',['Import STC15 lib as a CMake or PlatformIO Project',['../md_clion_2README.html#autotoc_md2',1,'']]]
+  ['8_20bit_20send_20receive_20functions_0',['UART1 8-bit send/receive functions',['../group__uart1__8bit__shared.html',1,'']]],
+  ['8_20bit_20with_20parity_208_20bit_20with_20two_20stop_20bits_20send_20receive_20functions_1',['UART1 9bit, 8-bit with parity, 8-bit with two stop bits send/receive functions',['../group__uart1__9bit__shared.html',1,'']]]
 ];
