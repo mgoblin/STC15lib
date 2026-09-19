@@ -6,6 +6,6 @@ Import("env")
 
 print("Building utils")
 
-env.SConscript('utils/SConstruct', exports = 'env')
+env.SConscript('#utils/SConstruct', exports = 'env')
 
 print("Build utils finished")
