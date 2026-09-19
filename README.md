@@ -333,7 +333,7 @@ STC15/
 ## Documentation & Changelog
 
 - **API Documentation:** [https://mgoblin.github.io/STC15lib/index.html](https://mgoblin.github.io/STC15lib/docs/html/index.html)
-- **Change Log:** [CHANGELOG.md](CHANGELOG.md) or [Online Changelog](https://mgoblin.github.io/STC15lib/CHANGELOG.html)
+- **Change Log:** [CHANGELOG.md](CHANGELOG.md) or [Online Changelog](https://mgoblin.github.io/STC15lib/md_CHANGELOG.html)
 
 ---
 
