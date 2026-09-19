@@ -5,7 +5,7 @@ Import("env")
 
 print("Building examples")
 
-example_build_tasks = env.SConscript('examples/SConstruct', exports = 'env')
+example_build_tasks = env.SConscript('#examples/SConstruct', exports = 'env')
 
 Import("env")
 
