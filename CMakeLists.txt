@@ -18,9 +18,12 @@ include_directories(
   ${CMAKE_SOURCE_DIR}/include # For public headers during build
 )
 
+enable_testing()
+
 add_subdirectory("src")
 add_subdirectory("examples")
 add_subdirectory("utils")
+add_subdirectory("test")
 
 find_package(Doxygen REQUIRED dot)
 if(Doxygen_FOUND)

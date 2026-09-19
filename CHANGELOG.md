@@ -206,6 +206,11 @@
 * Separate ./README on parts for firmware dev and contributor parts
 * Corrected library.json – Fix a license type from MIT to Apache
 * TODO Rework bits module
+* PCA/CCP module implemented (pca.h): pin group selection, counter clock source, 16 bit counter, compare/capture, high speed toggle output and 8/7/6 bit PWM
+* PCA examples added to examples/pca (PWM, 16 bit timer and capture)
+* Host tests for library headers added to test/ and wired to ctest
+* SPI module implemented (spi.h): master and slave mode, 4 clock dividers, all 4 CPOL/CPHA modes, MSB/LSB first, 3 pin groups, sync and async transfer, write collision detection
+* SPI example added to examples/spi (master loopback)
 
 Next releases todo
 

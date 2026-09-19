@@ -1,0 +1,14 @@
+Import("env")
+
+spi_master_prog = env.Program(
+    'spi_master_example',
+    ['spi_master_example.c'],
+)
+
+env.Default(
+    spi_master_prog
+)
+
+Return([
+    'spi_master_prog'
+])
