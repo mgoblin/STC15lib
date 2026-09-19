@@ -6,8 +6,8 @@ env.Replace(
 )
 
 
-build_dir = '.pio/build/STC15W408AS'
-VariantDir(build_dir, 'src', duplicate=0)
+build_dir = '../.pio/build/STC15W408AS'
+VariantDir(build_dir, '#src', duplicate=0)
 
 build_lib_task = env.StaticLibrary(f'{build_dir}/stc15hal', [
     f'{build_dir}/uart.c',
