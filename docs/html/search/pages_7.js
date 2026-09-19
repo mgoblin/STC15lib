@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['what_20it_20is_0',['What it is',['../index.html',1,'']]]
+  ['stc15w408as_20library_0',['STC15W408AS library',['../index.html',1,'']]]
 ];

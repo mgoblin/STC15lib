@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['library_0',['STC15W408AS library',['../index.html',1,'']]],
-  ['log_1',['Change log',['../md_CHANGELOG.html',1,'']]]
+  ['ide_20integration_0',['CLion JetBrains IDE integration',['../md_clion_2README.html',1,'']]],
+  ['integration_1',['CLion JetBrains IDE integration',['../md_clion_2README.html',1,'']]]
 ];
