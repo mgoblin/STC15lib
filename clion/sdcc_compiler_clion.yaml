@@ -8,6 +8,7 @@ compilers:
     include-dirs:
       - "/usr/share/sdcc/include"
       - "/usr/share/sdcc/include/mcs51"
+      - "${project-path}/include"
     defines-text: "
 #define __STDC_VERSION__ 202311L
 #define __SDCC_MODEL_SMALL 1
