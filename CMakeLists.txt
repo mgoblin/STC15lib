@@ -6,7 +6,7 @@ file(REAL_PATH "cmake/toolchain-SDCC.cmake" CMAKE_TOOLCHAIN_FILE EXPAND_TILDE)
 
 project(
     stc15hal
-    VERSION 0.17.0
+    VERSION 0.18.0
     LANGUAGES C ASM
 ) # Define project name and language
 
