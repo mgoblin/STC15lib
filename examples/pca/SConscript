@@ -1,0 +1,28 @@
+Import("env")
+
+pca_pwm_prog = env.Program(
+    'pca_pwm_example',
+    ['pca_pwm_example.c']
+)
+
+pca_timer_prog = env.Program(
+    'pca_timer_example',
+    ['pca_timer_example.c']
+)
+
+pca_capture_prog = env.Program(
+    'pca_capture_example',
+    ['pca_capture_example.c']
+)
+
+env.Default(
+    pca_pwm_prog,
+    pca_timer_prog,
+    pca_capture_prog
+)
+
+Return([
+    'pca_pwm_prog',
+    'pca_timer_prog',
+    'pca_capture_prog',
+])

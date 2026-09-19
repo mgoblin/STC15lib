@@ -91,6 +91,8 @@ void sleep_ms(uint16_t ms) {
 | **EEPROM / IAP**     | `eeprom.h`            | Read byte, write byte/array, and sector erase via IAP registers                  | Ready           |
 | **ADC**              | `adc.h`               | 10-bit analog-to-digital converter (sync blocking and async interrupt modes)     | Ready           |
 | **Comparator**       | `comparator.h`        | On-chip analog voltage comparator                                                | Initial Support |
+| **PCA / CCP**        | `pca.h`               | 16-bit counter, compare/capture, high-speed toggle output, 8/7/6-bit PWM         | Initial Support |
+| **SPI**              | `spi.h`               | Master & slave, 3 pin groups, 4 clock dividers, CPOL/CPHA modes, sync & async    | Initial Support |
 | **Bit Operations**   | `bits.h`              | Fast bit set, clear, toggle, and test macros                                     | Ready           |
 
 ### Code Examples
@@ -316,9 +318,12 @@ STC15/
 │   ├── eeprom/          # EEPROM read, write byte/page, erase examples
 │   ├── gpio/            # GPIO pin modes and values examples
 │   ├── interrupt/       # External interrupt & priority examples
+│   ├── pca/             # PCA/CCP: PWM, 16-bit timer, and capture examples
 │   ├── power_management/# Idle, Power-Down, and Wake-up timer examples
+│   ├── spi/             # SPI master & slave examples
 │   ├── timer/           # Timer0 & Timer2 mode examples (sync & async)
 │   └── uart/            # UART1 modes 0, 1, 2, 3 examples
+├── test/                # Host tests for the library headers (ctest)
 ├── utils/               # Diagnostic and data conversion tools (mem_dump, csv2hex)
 ├── docs/                # Generated Doxygen documentation
 ├── doxygen.conf         # Doxygen documentation configuration
