@@ -202,7 +202,7 @@
 * GitHub build. On new tag GitHub CI builds release with artifacts and draft release. 
 
 0.18.0
-* TODO Group PlatformIO and CMake build files in separate folders
+* Group PlatformIO and CMake build files in separate folders
 * TODO Separate ./README on parts for firmware dev and contributor parts
 * TODO Rework bits module
 
