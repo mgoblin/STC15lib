@@ -85,6 +85,6 @@ function(ihx_to_hex bin)
         TARGET ${bin} 
         POST_BUILD 
         COMMAND  ${CMAKE_PACKIHX} ${bin}.ihx > ${bin}.hex 2>/dev/null
-        COMMAND ${Python3_EXECUTABLE} "${PROJECT_SOURCE_DIR}/size.py" "${CMAKE_CURRENT_BINARY_DIR}/${bin}.mem" "${bin}"
+        COMMAND ${Python3_EXECUTABLE} "${CMAKE_SOURCE_DIR}/cmake/size.py" "${CMAKE_CURRENT_BINARY_DIR}/${bin}.mem" "${bin}"
     )
 endfunction(ihx_to_hex)

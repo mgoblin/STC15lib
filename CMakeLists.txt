@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.31) # Specify minimum CMake version
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
-file(REAL_PATH "toolchain-SDCC.cmake" CMAKE_TOOLCHAIN_FILE EXPAND_TILDE)
+file(REAL_PATH "cmake/toolchain-SDCC.cmake" CMAKE_TOOLCHAIN_FILE EXPAND_TILDE)
 
 project(
     stc15hal
