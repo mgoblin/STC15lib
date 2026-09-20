@@ -72,11 +72,11 @@ $(function() {
   <div class="headertitle"><div class="title">Memory Dumper</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md41"></a> A utility for dumping the first 256 bytes of <b>IDATA</b> (internal RAM) and <b>XDATA</b> (external RAM) memory spaces to UART1 on STC15 microcontrollers.</p>
-<h1><a class="anchor" id="autotoc_md42"></a>
+<div class="textblock"><p><a class="anchor" id="autotoc_md36"></a> A utility for dumping the first 256 bytes of <b>IDATA</b> (internal RAM) and <b>XDATA</b> (external RAM) memory spaces to UART1 on STC15 microcontrollers.</p>
+<h1><a class="anchor" id="autotoc_md37"></a>
 Overview</h1>
 <p>This utility reads memory from address <code>0x00</code> to <code>0xFF</code> in both the IDATA and XDATA address spaces and outputs a formatted hex dump over UART1 at <b>115200 baud</b>.</p>
-<h1><a class="anchor" id="autotoc_md43"></a>
+<h1><a class="anchor" id="autotoc_md38"></a>
 Output Format</h1>
 <p>The dump is printed in a standard hex dump format with 16 bytes per row:</p>
 <div class="fragment"><div class="line">IDATA:</div>
@@ -96,22 +96,22 @@ Output Format</h1>
 <li>Each subsequent column shows the byte value at that offset</li>
 <li>The header and footer rows show column indices 0 through F</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md44"></a>
+<h1><a class="anchor" id="autotoc_md39"></a>
 Building</h1>
-<h2><a class="anchor" id="autotoc_md45"></a>
+<h2><a class="anchor" id="autotoc_md40"></a>
 With CMake</h2>
 <div class="fragment"><div class="line">cmake -B build</div>
 <div class="line">cmake --build build --target mem_dump</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md46"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md41"></a>
 With PlatformIO / SCons</h2>
 <div class="fragment"><div class="line">pio run -e your_env -t mem_dump</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md47"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md42"></a>
 Flashing</h1>
-<h2><a class="anchor" id="autotoc_md48"></a>
+<h2><a class="anchor" id="autotoc_md43"></a>
 With CMake</h2>
 <div class="fragment"><div class="line">cmake --build build --target flash_mem_dump</div>
 </div><!-- fragment --><p>This uses <code>stcgal</code> to flash the generated <code>.hex</code> file. Cycle power on the MCU when prompted.</p>
-<h1><a class="anchor" id="autotoc_md49"></a>
+<h1><a class="anchor" id="autotoc_md44"></a>
 Files</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -127,7 +127,7 @@ Files</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">[<code>SConscript</code>](SConscript)   </td><td class="markdownTableBodyNone">SCons build configuration for PlatformIO   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md50"></a>
+<h1><a class="anchor" id="autotoc_md45"></a>
 Dependencies</h1>
 <ul>
 <li><a href="../../include/uart.h"><code>uart.h</code></a> — UART1 initialization and <code><a class="el" href="group__uart.html#ga07036e93939040c563e862a6a31b65bc" title="Send character to UART1.">putchar()</a></code> for <code>printf_tiny</code></li>

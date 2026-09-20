@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['versa_20conversions_0',['Timer ticks to duration/frequency and vise versa conversions',['../group__timer__to__ms.html',1,'']]],
-  ['vise_20versa_20conversions_1',['Timer ticks to duration/frequency and vise versa conversions',['../group__timer__to__ms.html',1,'']]],
-  ['vs_20hal_20macros_2',['Architecture: Direct SFR vs. HAL Macros',['../index.html#autotoc_md11',1,'']]]
+  ['xdata_5fdump_5faddr_0',['XDATA_DUMP_ADDR',['../mem__dump_8c.html#aa32c6eece43218981f125ccd61e0ee75',1,'mem_dump.c']]],
+  ['xdata_5fdump_5fsize_1',['XDATA_DUMP_SIZE',['../mem__dump_8c.html#ab10e5ebe3b4c40af36ad9de1c655e696',1,'mem_dump.c']]]
 ];

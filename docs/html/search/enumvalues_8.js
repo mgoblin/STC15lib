@@ -1,5 +1,19 @@
 var searchData=
 [
   ['p1_5f6_0',['P1_6',['../group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a1c09e634fa0f157f766022d25ea2860d',1,'frequency.h']]],
-  ['p5_5f4_1',['P5_4',['../group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050',1,'frequency.h']]]
+  ['p5_5f4_1',['P5_4',['../group__freq.html#ggae5d505beabdbd466d648cb5dccf4b6d2a3f2896cca74b9552337ba66e54412050',1,'frequency.h']]],
+  ['pca_5fclock_5feci_2',['PCA_CLOCK_ECI',['../group__pca.html#gga4da2c7294eed6b7c52126059f7ced722aa2490e7980ded6f2eef2d6e83fdf1b73',1,'pca.h']]],
+  ['pca_5fclock_5fsys_3',['PCA_CLOCK_SYS',['../group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a1d935cea5c220f4d1ff2f7d4ab4e7ba0',1,'pca.h']]],
+  ['pca_5fclock_5fsys_5f12_4',['PCA_CLOCK_SYS_12',['../group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a5ff24da099623298b9c81be2774fa1a8',1,'pca.h']]],
+  ['pca_5fclock_5fsys_5f2_5',['PCA_CLOCK_SYS_2',['../group__pca.html#gga4da2c7294eed6b7c52126059f7ced722af3dd1fd7743a65bd6e3c13586068fe05',1,'pca.h']]],
+  ['pca_5fclock_5fsys_5f4_6',['PCA_CLOCK_SYS_4',['../group__pca.html#gga4da2c7294eed6b7c52126059f7ced722abaaed42b306033cc71c3ec34a09e27e6',1,'pca.h']]],
+  ['pca_5fclock_5fsys_5f6_7',['PCA_CLOCK_SYS_6',['../group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a0054641919b53c1dcb5b02203b00fb49',1,'pca.h']]],
+  ['pca_5fclock_5fsys_5f8_8',['PCA_CLOCK_SYS_8',['../group__pca.html#gga4da2c7294eed6b7c52126059f7ced722af1e15887708060c617819bbbbbd526a0',1,'pca.h']]],
+  ['pca_5fclock_5ftimer0_9',['PCA_CLOCK_TIMER0',['../group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a39473d4f53e30f8e807f80fe604a4cd5',1,'pca.h']]],
+  ['pca_5fpin_5fgroup_5f1_10',['PCA_PIN_GROUP_1',['../group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a098b2eadf460bb52fcae8e32d7fd82a2',1,'pca.h']]],
+  ['pca_5fpin_5fgroup_5f2_11',['PCA_PIN_GROUP_2',['../group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a2c1db768e11447a6a580fcfd5512325c',1,'pca.h']]],
+  ['pca_5fpin_5fgroup_5f3_12',['PCA_PIN_GROUP_3',['../group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a5b6307074916e94fae9a231101a2e802',1,'pca.h']]],
+  ['pca_5fpwm_5f6bit_13',['PCA_PWM_6BIT',['../group__pca.html#gga2d4771555e692fb16401c24cf363f181a448d94a0f2971b59cd9b06e2491bbdfc',1,'pca.h']]],
+  ['pca_5fpwm_5f7bit_14',['PCA_PWM_7BIT',['../group__pca.html#gga2d4771555e692fb16401c24cf363f181a412bc747ee56c3c62f018549947ef83f',1,'pca.h']]],
+  ['pca_5fpwm_5f8bit_15',['PCA_PWM_8BIT',['../group__pca.html#gga2d4771555e692fb16401c24cf363f181a770cf2bdbedf37fc1213eb9122b29bfd',1,'pca.h']]]
 ];

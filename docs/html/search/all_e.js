@@ -1,19 +1,11 @@
 var searchData=
 [
-  ['files_0',['Files',['../md_utils_2memory__dumper_2README.html#autotoc_md49',1,'']]],
-  ['firmware_1',['Flashing Firmware',['../index.html#autotoc_md21',1,'']]],
-  ['firmware_20developers_2',['For Firmware Developers',['../index.html#autotoc_md7',1,'']]],
-  ['flashing_3',['Flashing',['../md_utils_2memory__dumper_2README.html#autotoc_md47',1,'']]],
-  ['flashing_20firmware_4',['Flashing Firmware',['../index.html#autotoc_md21',1,'']]],
-  ['for_20contributors_20library_20developers_5',['For Contributors &amp; Library Developers',['../index.html#autotoc_md23',1,'']]],
-  ['for_20firmware_20developers_6',['For Firmware Developers',['../index.html#autotoc_md7',1,'']]],
-  ['format_7',['Output Format',['../md_utils_2memory__dumper_2README.html#autotoc_md43',1,'']]],
-  ['freq_5fhz_8',['freq_hz',['../timer2__mode0__Hz__to__ticks__example_8c.html#ac07f8b71ab75b4b60f9e7303aa98689b',1,'FREQ_HZ:&#160;timer2_mode0_Hz_to_ticks_example.c'],['../timer0__mode3__Hz__to__ticks__example_8c.html#ac07f8b71ab75b4b60f9e7303aa98689b',1,'FREQ_HZ:&#160;timer0_mode3_Hz_to_ticks_example.c'],['../timer0__mode2__Hz__to__ticks__example_8c.html#ac07f8b71ab75b4b60f9e7303aa98689b',1,'FREQ_HZ:&#160;timer0_mode2_Hz_to_ticks_example.c'],['../timer0__mode1__Hz__to__ticks__example_8c.html#ac07f8b71ab75b4b60f9e7303aa98689b',1,'FREQ_HZ:&#160;timer0_mode1_Hz_to_ticks_example.c']]],
-  ['freq_5fkhz_9',['FREQ_KHZ',['../timer0__mode0__Hz__to__ticks__example_8c.html#a7ae67445b01c3460da57a317e732b186',1,'timer0_mode0_Hz_to_ticks_example.c']]],
-  ['frequency_10',['Frequency',['../group__freq.html',1,'']]],
-  ['frequency_20and_20vise_20versa_20conversions_11',['Timer ticks to duration/frequency and vise versa conversions',['../group__timer__to__ms.html',1,'']]],
-  ['frequency_20convertions_12',['frequency convertions',['../group__timer0__mode0__to__ms.html',1,'Timer0 Mode0 ticks to duration/frequency convertions'],['../group__timer0__mode1__to__ms.html',1,'Timer0 Mode1 ticks to duration/frequency convertions'],['../group__timer0__mode2__to__ms.html',1,'Timer0 Mode2 ticks to duration/frequency convertions'],['../group__timer0__mode3__to__ms.html',1,'Timer0 Mode3 ticks to duration/frequency convertions'],['../group__timer2__mode0__to__ms.html',1,'Timer2 Mode0 ticks to duration/frequency convertions']]],
-  ['frequency_2eh_13',['frequency.h',['../frequency_8h.html',1,'']]],
-  ['from_20terminal_20on_20linux_14',['How to run unit tests from terminal on Linux',['../md_utils_2csv2hex_2README.html#autotoc_md40',1,'']]],
-  ['functions_15',['functions',['../group__uart1__8bit__shared.html',1,'UART1 8-bit send/receive functions'],['../group__uart1__9bit__shared.html',1,'UART1 9bit, 8-bit with parity, 8-bit with two stop bits send/receive functions']]]
+  ['hal_0',['STC15 Hardware Abstraction Layer (STC15 HAL)',['../index.html',1,'']]],
+  ['hal_20macros_1',['Architecture: Direct SFR vs. HAL Macros',['../index.html#autotoc_md11',1,'']]],
+  ['hal_20macros_20size_20optimization_2',['2. HAL Macros &amp; Size Optimization',['../index.html#autotoc_md13',1,'']]],
+  ['hardware_20abstraction_20layer_20stc15_20hal_3',['STC15 Hardware Abstraction Layer (STC15 HAL)',['../index.html',1,'']]],
+  ['hex_20converter_20csv2hex_4',['CSV to HEX Converter (csv2hex)',['../index.html#autotoc_md24',1,'']]],
+  ['high_5',['HIGH',['../group__interrupts.html#gga9ebbbf91c4e6fa77cced0ac0daefd964a0c3a1dacf94061154b3ee354359c5893',1,'interrupt.h']]],
+  ['high_5fto_5flow_6',['HIGH_TO_LOW',['../group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a13bfb562277fbb6ceb979e2720675f0a',1,'interrupt.h']]],
+  ['how_20to_20run_20unit_20tests_20from_20terminal_20on_20linux_7',['How to run unit tests from terminal on Linux',['../md_utils_2csv2hex_2README.html#autotoc_md35',1,'']]]
 ];

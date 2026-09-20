@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['8_20bit_20send_20receive_20functions_0',['UART1 8-bit send/receive functions',['../group__uart1__8bit__shared.html',1,'']]],
-  ['8_20bit_20with_20parity_208_20bit_20with_20two_20stop_20bits_20send_20receive_20functions_1',['UART1 9bit, 8-bit with parity, 8-bit with two stop bits send/receive functions',['../group__uart1__9bit__shared.html',1,'']]]
+  ['_5f_5fat_0',['__at',['../group__chip__id.html#gab6bccae6b0bf7ea85ee0c168a03a2056',1,'chip_id.h']]]
 ];

@@ -162,136 +162,24 @@ Module Status &amp; Maturity</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><b>Comparator</b>   </td><td class="markdownTableBodyNone"><code><a class="el" href="comparator_8h.html">comparator.h</a></code>   </td><td class="markdownTableBodyNone">On-chip analog voltage comparator   </td><td class="markdownTableBodyNone">Initial Support    </td></tr>
 <tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>PCA / CCP</b>   </td><td class="markdownTableBodyNone"><code><a class="el" href="pca_8h.html">pca.h</a></code>   </td><td class="markdownTableBodyNone">16-bit counter, compare/capture, high-speed toggle output, 8/7/6-bit PWM   </td><td class="markdownTableBodyNone">Initial Support    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>SPI</b>   </td><td class="markdownTableBodyNone"><code><a class="el" href="spi_8h.html">spi.h</a></code>   </td><td class="markdownTableBodyNone">Master &amp; slave, 3 pin groups, 4 clock dividers, CPOL/CPHA modes, sync &amp; async   </td><td class="markdownTableBodyNone">Initial Support    </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><b>Bit Operations</b>   </td><td class="markdownTableBodyNone"><code><a class="el" href="bits_8h_source.html">bits.h</a></code>   </td><td class="markdownTableBodyNone">Fast bit set, clear, toggle, and test macros   </td><td class="markdownTableBodyNone">Ready   </td></tr>
 </table>
 <h2><a class="anchor" id="autotoc_md15"></a>
 Code Examples</h2>
 <p>See examples subfolder.</p>
-<h3><a class="anchor" id="autotoc_md16"></a>
-1. GPIO &amp; Delays (Blink LED)</h3>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="gpio_8h.html">gpio.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="delay_8h.html">delay.h</a>&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#define LED_PIN 0 </span><span class="comment">// P1.0</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> main(<span class="keywordtype">void</span>) {</div>
-<div class="line">    <span class="comment">// Configure P1.0 as push-pull output</span></div>
-<div class="line">    <a class="code hl_define" href="group__gpio.html#ga2c7e5cb2a19518afffd55e46270f2e41">pin_push_pull_init</a>(P1, LED_PIN);</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">while</span> (1) {</div>
-<div class="line">        pin_set_low(P1, LED_PIN);   <span class="comment">// LED ON (active low)</span></div>
-<div class="line">        <a class="code hl_define" href="group__delays.html#ga389926e6490f1d3db0f0896e8b0f5f2e">delay_ms</a>(500);</div>
-<div class="line">        pin_set_high(P1, LED_PIN);  <span class="comment">// LED OFF</span></div>
-<div class="line">        <a class="code hl_define" href="group__delays.html#ga389926e6490f1d3db0f0896e8b0f5f2e">delay_ms</a>(500);</div>
-<div class="line">    }</div>
-<div class="line">}</div>
-<div class="ttc" id="agroup__gpio_html_ga2c7e5cb2a19518afffd55e46270f2e41"><div class="ttname"><a href="group__gpio.html#ga2c7e5cb2a19518afffd55e46270f2e41">pin_push_pull_init</a></div><div class="ttdeci">#define pin_push_pull_init(port, port_pin)</div><div class="ttdoc">Init pin in in PUSH_PULL mode.</div><div class="ttdef"><b>Definition</b> gpio.h:51</div></div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md17"></a>
-2. UART1 Serial Communication &amp; printf</h3>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="uart_8h.html">uart.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="delay_8h.html">delay.h</a>&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> main(<span class="keywordtype">void</span>) {</div>
-<div class="line">    <span class="comment">// Initialize UART1 at 9600 baud using Timer2 (1T mode) on P3.0 (RxD) and P3.1 (TxD)</span></div>
-<div class="line">    <a class="code hl_define" href="group__uart.html#gaaf582a05f613b72c7255c5cd838879fd">uart1_init</a>(9600);</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">while</span> (1) {</div>
-<div class="line">        printf_tiny(<span class="stringliteral">&quot;Hello from STC15 HAL!\r\n&quot;</span>);</div>
-<div class="line">        <a class="code hl_define" href="group__delays.html#ga389926e6490f1d3db0f0896e8b0f5f2e">delay_ms</a>(1000);</div>
-<div class="line">    }</div>
-<div class="line">}</div>
-<div class="ttc" id="agroup__uart_html_gaaf582a05f613b72c7255c5cd838879fd"><div class="ttname"><a href="group__uart.html#gaaf582a05f613b72c7255c5cd838879fd">uart1_init</a></div><div class="ttdeci">#define uart1_init(uart_baudrate)</div><div class="ttdoc">Initiazlize UART1.</div><div class="ttdef"><b>Definition</b> uart.h:30</div></div>
-<div class="ttc" id="auart_8h_html"><div class="ttname"><a href="uart_8h.html">uart.h</a></div></div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md18"></a>
-3. 10-bit ADC (Analog-to-Digital Converter)</h3>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="adc_8h.html">adc.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="uart_8h.html">uart.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#define ADC_CHANNEL_PIN 1 </span><span class="comment">// ADC channel on P1.1</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> main(<span class="keywordtype">void</span>) {</div>
-<div class="line">    <a class="code hl_define" href="group__uart.html#gaaf582a05f613b72c7255c5cd838879fd">uart1_init</a>(115200);</div>
-<div class="line"> </div>
-<div class="line">    <span class="comment">// Initialize P1.1 as high-impedance input for ADC, standard bit order, 90 cycle conversion speed</span></div>
-<div class="line">    <a class="code hl_define" href="group__adc.html#ga67fe8b4aa9aaa52892d1bd5ab1b6bef9">adc_init_input_only</a>(ADC_CHANNEL_PIN, <span class="keyword">false</span>, <a class="code hl_enumvalue" href="group__adc.html#ggaa63b42a360b882a87434ae898707d473adf2851e0d4945fff972f045ae062daf0">ADC_SPEED_90</a>);</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">while</span> (1) {</div>
-<div class="line">        uint16_t adc_val;</div>
-<div class="line">        <a class="code hl_define" href="group__adc.html#ga2857b9efd36f8d5f11de3523c3fd74d8">adc_read_sync</a>(&amp;adc_val);</div>
-<div class="line">        printf_tiny(<span class="stringliteral">&quot;ADC Value (P1.1): %u\r\n&quot;</span>, adc_val);</div>
-<div class="line">        <a class="code hl_define" href="group__delays.html#ga389926e6490f1d3db0f0896e8b0f5f2e">delay_ms</a>(250);</div>
-<div class="line">    }</div>
-<div class="line">}</div>
-<div class="ttc" id="aadc_8h_html"><div class="ttname"><a href="adc_8h.html">adc.h</a></div></div>
-<div class="ttc" id="agroup__adc_html_ga2857b9efd36f8d5f11de3523c3fd74d8"><div class="ttname"><a href="group__adc.html#ga2857b9efd36f8d5f11de3523c3fd74d8">adc_read_sync</a></div><div class="ttdeci">#define adc_read_sync(value)</div><div class="ttdoc">ADC read routine.</div><div class="ttdef"><b>Definition</b> adc.h:169</div></div>
-<div class="ttc" id="agroup__adc_html_ga67fe8b4aa9aaa52892d1bd5ab1b6bef9"><div class="ttname"><a href="group__adc.html#ga67fe8b4aa9aaa52892d1bd5ab1b6bef9">adc_init_input_only</a></div><div class="ttdeci">#define adc_init_input_only(p1_pin, adrj_flag, speed)</div><div class="ttdoc">ADC initialization in pin input only mode.</div><div class="ttdef"><b>Definition</b> adc.h:78</div></div>
-<div class="ttc" id="agroup__adc_html_ggaa63b42a360b882a87434ae898707d473adf2851e0d4945fff972f045ae062daf0"><div class="ttname"><a href="group__adc.html#ggaa63b42a360b882a87434ae898707d473adf2851e0d4945fff972f045ae062daf0">ADC_SPEED_90</a></div><div class="ttdeci">@ ADC_SPEED_90</div><div class="ttdef"><b>Definition</b> adc.h:58</div></div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md19"></a>
-4. Timers &amp; Interrupts</h3>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="timer0__mode0_8h.html">timer0_mode0.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="interrupt_8h.html">interrupt.h</a>&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// Timer0 overflow interrupt service routine (Interrupt Vector 1)</span></div>
-<div class="line"><span class="keywordtype">void</span> timer0_isr(<span class="keywordtype">void</span>) __interrupt(1) {</div>
-<div class="line">    P10 = !P10; <span class="comment">// Toggle P1.0</span></div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> main(<span class="keywordtype">void</span>) {</div>
-<div class="line">    <span class="comment">// Configure Timer0 in Mode 0 (16-bit auto-reload), 12T mode, starting with 1000 ticks</span></div>
-<div class="line">    <a class="code hl_define" href="group__timer0__mode0.html#ga34caaadba5e538e023c05217fcc8e062">timer0_mode0_12T_init</a>();</div>
-<div class="line">    <a class="code hl_define" href="group__timer0__mode0.html#ga7574c9933d116e0d9de0bf3c00f8c088">timer0_mode0_start</a>(1000);</div>
-<div class="line"> </div>
-<div class="line">    <span class="comment">// Enable Timer0 interrupt and global interrupts</span></div>
-<div class="line">    timer0_mode0_enable_interrupt();</div>
-<div class="line">    <a class="code hl_define" href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c">enable_mcu_interrupts</a>();</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">while</span> (1) {</div>
-<div class="line">        <span class="comment">// Main loop</span></div>
-<div class="line">    }</div>
-<div class="line">}</div>
-<div class="ttc" id="agroup__interrupts_html_ga45385330048db93cc8070cac1819be5c"><div class="ttname"><a href="group__interrupts.html#ga45385330048db93cc8070cac1819be5c">enable_mcu_interrupts</a></div><div class="ttdeci">#define enable_mcu_interrupts()</div><div class="ttdoc">Enable interrupts support of MCU.</div><div class="ttdef"><b>Definition</b> interrupt.h:315</div></div>
-<div class="ttc" id="agroup__timer0__mode0_html_ga34caaadba5e538e023c05217fcc8e062"><div class="ttname"><a href="group__timer0__mode0.html#ga34caaadba5e538e023c05217fcc8e062">timer0_mode0_12T_init</a></div><div class="ttdeci">#define timer0_mode0_12T_init()</div><div class="ttdoc">Initialize mode0 12T for timer0.</div><div class="ttdef"><b>Definition</b> timer0_mode0.h:53</div></div>
-<div class="ttc" id="agroup__timer0__mode0_html_ga7574c9933d116e0d9de0bf3c00f8c088"><div class="ttname"><a href="group__timer0__mode0.html#ga7574c9933d116e0d9de0bf3c00f8c088">timer0_mode0_start</a></div><div class="ttdeci">#define timer0_mode0_start(ticks)</div><div class="ttdoc">Run timer0.</div><div class="ttdef"><b>Definition</b> timer0_mode0.h:194</div></div>
-<div class="ttc" id="ainterrupt_8h_html"><div class="ttname"><a href="interrupt_8h.html">interrupt.h</a></div></div>
-<div class="ttc" id="atimer0__mode0_8h_html"><div class="ttname"><a href="timer0__mode0_8h.html">timer0_mode0.h</a></div></div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md20"></a>
-5. On-Chip EEPROM (IAP) Read / Write / Erase</h3>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="eeprom_8h.html">eeprom.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="uart_8h.html">uart.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> main(<span class="keywordtype">void</span>) {</div>
-<div class="line">    <a class="code hl_define" href="group__uart.html#gaaf582a05f613b72c7255c5cd838879fd">uart1_init</a>(115200);</div>
-<div class="line"> </div>
-<div class="line">    uint16_t sector_addr = 0x0000;</div>
-<div class="line">    </div>
-<div class="line">    <span class="comment">// 1. Sector erase (required before writing new data)</span></div>
-<div class="line">    <a class="code hl_define" href="group__eeprom.html#gaff91b418fe7e6f7c8c03905d8b82123f">eeprom_erase_page</a>(sector_addr);</div>
-<div class="line"> </div>
-<div class="line">    <span class="comment">// 2. Write a single byte</span></div>
-<div class="line">    <a class="code hl_define" href="group__eeprom.html#ga8e2e7cf95cd1dccc30ce7fedc7f3c1ab">eeprom_write_byte</a>(sector_addr, 0x42);</div>
-<div class="line"> </div>
-<div class="line">    <span class="comment">// 3. Read back written byte</span></div>
-<div class="line">    uint8_t val = <a class="code hl_define" href="group__eeprom.html#ga0ba0e98241d4b70f05295f997c7d0344">eeprom_read_byte</a>(sector_addr);</div>
-<div class="line">    printf_tiny(<span class="stringliteral">&quot;Read EEPROM: 0x%x\r\n&quot;</span>, val);</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">while</span> (1);</div>
-<div class="line">}</div>
-<div class="ttc" id="aeeprom_8h_html"><div class="ttname"><a href="eeprom_8h.html">eeprom.h</a></div></div>
-<div class="ttc" id="agroup__eeprom_html_ga0ba0e98241d4b70f05295f997c7d0344"><div class="ttname"><a href="group__eeprom.html#ga0ba0e98241d4b70f05295f997c7d0344">eeprom_read_byte</a></div><div class="ttdeci">#define eeprom_read_byte(addr_high, addr_low, value_ptr, error_ptr)</div><div class="ttdoc">Reads single byte from the EEPROM at the given address.</div><div class="ttdef"><b>Definition</b> eeprom.h:128</div></div>
-<div class="ttc" id="agroup__eeprom_html_ga8e2e7cf95cd1dccc30ce7fedc7f3c1ab"><div class="ttname"><a href="group__eeprom.html#ga8e2e7cf95cd1dccc30ce7fedc7f3c1ab">eeprom_write_byte</a></div><div class="ttdeci">#define eeprom_write_byte(addr_high, addr_low, value, error_ptr)</div><div class="ttdoc">Writes a single byte to the EEPROM at the specified address.</div><div class="ttdef"><b>Definition</b> eeprom.h:252</div></div>
-<div class="ttc" id="agroup__eeprom_html_gaff91b418fe7e6f7c8c03905d8b82123f"><div class="ttname"><a href="group__eeprom.html#gaff91b418fe7e6f7c8c03905d8b82123f">eeprom_erase_page</a></div><div class="ttdeci">#define eeprom_erase_page(sector_start_addr, error_ptr)</div><div class="ttdoc">Erases a sector in the EEPROM starting from a specified address.</div><div class="ttdef"><b>Definition</b> eeprom.h:189</div></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md21"></a>
+<h2><a class="anchor" id="autotoc_md16"></a>
 Flashing Firmware</h2>
 <p>Flashing can be done using <a href="https://github.com/grigorig/stcgal"><code>stcgal</code></a>:</p>
 <div class="fragment"><div class="line">stcgal -P stc15 your_firmware.hex</div>
 </div><!-- fragment --><p>When prompted by <code>stcgal</code>, power-cycle the target MCU board to initiate ISP flashing.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md23"></a>
+<h1><a class="anchor" id="autotoc_md18"></a>
 For Contributors &amp; Library Developers</h1>
-<h2><a class="anchor" id="autotoc_md24"></a>
+<h2><a class="anchor" id="autotoc_md19"></a>
 Prerequisites</h2>
 <p>Ensure the following tools are installed:</p><ul>
 <li><b>SDCC</b> (Small Device C Compiler): version 4.1, 4.5, or 4.6 (default configured: 4.5)</li>
@@ -301,7 +189,7 @@ Prerequisites</h2>
 <li><b>PlatformIO Core (CLI)</b> (for PlatformIO builds)</li>
 <li><b>stcgal</b> (for hardware flashing)</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md25"></a>
+<h2><a class="anchor" id="autotoc_md20"></a>
 Building with CMake</h2>
 <ol type="1">
 <li><p class="startli"><b>Configure the build</b> using the SDCC toolchain file:</p>
@@ -322,7 +210,7 @@ Building with CMake</h2>
 <div class="line">cmake --build build --target flash_adc_read</div>
 </div><!-- fragment --></li>
 </ol>
-<h2><a class="anchor" id="autotoc_md26"></a>
+<h2><a class="anchor" id="autotoc_md21"></a>
 Building with PlatformIO</h2>
 <p>The project includes custom build scripts located in <code>platformio_build/</code>:</p><ul>
 <li><code>compile_lib.py</code>: Compiles the core STC15 HAL library.</li>
@@ -332,10 +220,10 @@ Building with PlatformIO</h2>
 </ul>
 <p>To run the full PlatformIO build pipeline:</p>
 <div class="fragment"><div class="line">pio run</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md27"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md22"></a>
 Utilities</h2>
 <p>The repository includes utilities located in <code>utils/</code>:</p>
-<h3><a class="anchor" id="autotoc_md28"></a>
+<h3><a class="anchor" id="autotoc_md23"></a>
 Memory Dumper</h3>
 <ul>
 <li><b>Location:</b> <code>utils/memory_dumper</code></li>
@@ -343,13 +231,13 @@ Memory Dumper</h3>
 <li><b>Build:</b> <code>cmake --build build --target mem_dump</code></li>
 <li><b>Flash:</b> <code>cmake --build build --target flash_mem_dump</code></li>
 </ul>
-<h3><a class="anchor" id="autotoc_md29"></a>
+<h3><a class="anchor" id="autotoc_md24"></a>
 CSV to HEX Converter (csv2hex)</h3>
 <ul>
 <li><b>Location:</b> <code>utils/csv2hex</code></li>
 <li><b>Purpose:</b> A Python-based CLI tool (managed with Poetry) that transforms CSV data tables into standard Intel HEX files suitable for flashing directly into EEPROM/Flash data sectors.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md30"></a>
+<h2><a class="anchor" id="autotoc_md25"></a>
 Project Layout</h2>
 <div class="fragment"><div class="line">STC15/</div>
 <div class="line">├── cmake/               # CMake toolchains (SDCC), memory size scripts, build helpers</div>
@@ -364,9 +252,12 @@ Project Layout</h2>
 <div class="line">│   ├── eeprom/          # EEPROM read, write byte/page, erase examples</div>
 <div class="line">│   ├── gpio/            # GPIO pin modes and values examples</div>
 <div class="line">│   ├── interrupt/       # External interrupt &amp; priority examples</div>
+<div class="line">│   ├── pca/             # PCA/CCP: PWM, 16-bit timer, and capture examples</div>
 <div class="line">│   ├── power_management/# Idle, Power-Down, and Wake-up timer examples</div>
+<div class="line">│   ├── spi/             # SPI master &amp; slave examples</div>
 <div class="line">│   ├── timer/           # Timer0 &amp; Timer2 mode examples (sync &amp; async)</div>
 <div class="line">│   └── uart/            # UART1 modes 0, 1, 2, 3 examples</div>
+<div class="line">├── test/                # Host tests for the library headers (ctest)</div>
 <div class="line">├── utils/               # Diagnostic and data conversion tools (mem_dump, csv2hex)</div>
 <div class="line">├── docs/                # Generated Doxygen documentation</div>
 <div class="line">├── doxygen.conf         # Doxygen documentation configuration</div>
@@ -375,14 +266,14 @@ Project Layout</h2>
 <div class="line">├── CMakeLists.txt       # Root CMake build configuration</div>
 <div class="line">└── CHANGELOG.md         # Release history and roadmap</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md32"></a>
+<h1><a class="anchor" id="autotoc_md27"></a>
 Documentation &amp; Changelog</h1>
 <ul>
 <li><b>API Documentation:</b> <a href="https://mgoblin.github.io/STC15lib/index.html">https://mgoblin.github.io/STC15lib/index.html</a></li>
 <li><b>Change Log:</b> <a class="el" href="md_CHANGELOG.html">CHANGELOG.md</a> or <a href="https://mgoblin.github.io/STC15lib/md_CHANGELOG.html">Online Changelog</a></li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md34"></a>
+<h1><a class="anchor" id="autotoc_md29"></a>
 References</h1>
 <ul>
 <li><b>STC Microcontroller Datasheets:</b> <a href="http://stcmicro.com/sjsc.html">http://stcmicro.com/sjsc.html</a></li>
@@ -391,7 +282,7 @@ References</h1>
 <li><b>STC-programmator:</b> <a href="https://github.com/mgoblin/STC-programmator">https://github.com/mgoblin/STC-programmator</a></li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md36"></a>
+<h1><a class="anchor" id="autotoc_md31"></a>
 License</h1>
 <p>This project is licensed under the [Apache License 2.0](LICENSE). </p>
 </div></div><!-- PageDoc -->
