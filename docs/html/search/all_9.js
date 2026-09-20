@@ -21,11 +21,12 @@ var searchData=
   ['adc_5fspeed_5f540_18',['ADC_SPEED_540',['../group__adc.html#ggaa63b42a360b882a87434ae898707d473a841a03319c2efabe4127944ba8658984',1,'adc.h']]],
   ['adc_5fspeed_5f90_19',['ADC_SPEED_90',['../group__adc.html#ggaa63b42a360b882a87434ae898707d473adf2851e0d4945fff972f045ae062daf0',1,'adc.h']]],
   ['adc_5fspeed_5ft_20',['adc_speed_t',['../group__adc.html#gaa63b42a360b882a87434ae898707d473',1,'adc.h']]],
-  ['adc_5fstart_5fbit_21',['ADC_START_BIT',['../adc_8h.html#a84aeff7f7cb774816c29ed00c0ad6551',1,'adc.h']]],
-  ['adrj_5fbit_22',['ADRJ_BIT',['../adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35',1,'adc.h']]],
-  ['analog_20to_20digital_20converter_23',['3. 10-bit ADC (Analog-to-Digital Converter)',['../index.html#autotoc_md18',1,'']]],
-  ['and_20vise_20versa_20conversions_24',['Timer ticks to duration/frequency and vise versa conversions',['../group__timer__to__ms.html',1,'']]],
-  ['any_5fedge_25',['ANY_EDGE',['../group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d',1,'interrupt.h']]],
-  ['architecture_3a_20direct_20sfr_20vs_20hal_20macros_26',['Architecture: Direct SFR vs. HAL Macros',['../index.html#autotoc_md11',1,'']]],
-  ['as_20a_20cmake_20or_20platformio_20project_27',['Import STC15 lib as a CMake or PlatformIO Project',['../md_clion_2README.html#autotoc_md2',1,'']]]
+  ['adc_5fstart_5fbit_5fmask_21',['ADC_START_BIT_MASK',['../adc_8h.html#a9d5107e67df905ad1f676d2dd7f422da',1,'adc.h']]],
+  ['adc_5fstart_5fbit_5fpos_22',['ADC_START_BIT_POS',['../adc_8h.html#af6509e7b70d081933c475c2b2d5d4e9f',1,'adc.h']]],
+  ['adrj_5fbit_23',['ADRJ_BIT',['../adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35',1,'adc.h']]],
+  ['analog_20to_20digital_20converter_24',['3. 10-bit ADC (Analog-to-Digital Converter)',['../index.html#autotoc_md18',1,'']]],
+  ['and_20vise_20versa_20conversions_25',['Timer ticks to duration/frequency and vise versa conversions',['../group__timer__to__ms.html',1,'']]],
+  ['any_5fedge_26',['ANY_EDGE',['../group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d',1,'interrupt.h']]],
+  ['architecture_3a_20direct_20sfr_20vs_20hal_20macros_27',['Architecture: Direct SFR vs. HAL Macros',['../index.html#autotoc_md11',1,'']]],
+  ['as_20a_20cmake_20or_20platformio_20project_28',['Import STC15 lib as a CMake or PlatformIO Project',['../md_clion_2README.html#autotoc_md2',1,'']]]
 ];

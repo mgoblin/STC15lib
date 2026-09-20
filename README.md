@@ -26,7 +26,7 @@ Add the library to your `platformio.ini` configuration file:
 [env:STC15W408AS]
 platform = intel_mcs51
 board = STC15W408AS
-lib_deps = mgoblin/STC15 hardware@^0.17.0
+lib_deps = mgoblin/STC15 hardware@^0.18.0
 ```
 
 Alternatively, you can depend directly on a GitHub release tag or branch:
@@ -35,7 +35,7 @@ Alternatively, you can depend directly on a GitHub release tag or branch:
 [env:STC15W408AS]
 platform = intel_mcs51
 board = STC15W408AS
-lib_deps = https://github.com/mgoblin/STC15lib.git#0.17.0
+lib_deps = https://github.com/mgoblin/STC15lib.git#0.18.0
 ```
 
 #### CMake / Standalone SDCC
@@ -337,8 +337,8 @@ STC15/
 
 ## Documentation & Changelog
 
-- **API Documentation:** [https://mgoblin.github.io/STC15lib/docs/html/index.html](https://mgoblin.github.io/STC15lib/docs/html/index.html)
-- **Change Log:** [CHANGELOG.md](CHANGELOG.md) or [Online Changelog](https://mgoblin.github.io/STC15lib/CHANGELOG.html)
+- **API Documentation:** [https://mgoblin.github.io/STC15lib/index.html](https://mgoblin.github.io/STC15lib/index.html)
+- **Change Log:** [CHANGELOG.md](CHANGELOG.md) or [Online Changelog](https://mgoblin.github.io/STC15lib/md_CHANGELOG.html)
 
 ---
 

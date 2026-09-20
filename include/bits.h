@@ -10,8 +10,8 @@
 
 #define bit_set(val, bit_mask_val)                          (val |= bit_mask_val)
 #define bit_clr(val, bit_mask_val)                          (val &= bit_mask_val)
-#define bit_tgl(val, bit_val)                               (val ^= bit_mask(bit_val))
-#define get_bit(val, bit_val)                               (val & bit_mask(bit_val))
+#define bit_tgl(val, bit_pos)                               (val ^= bit_mask(bit_pos))
+#define get_bit(val, bit_pos)                               (val & bit_mask(bit_pos))
 #define get_reg(val, bit_mask_val)                          (val & bit_mask_val)
 
 #define set_bits(reg, val, pos)                             (reg |= bit_shift_left(val, pos))    

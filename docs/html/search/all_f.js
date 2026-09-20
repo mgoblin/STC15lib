@@ -1,7 +1,7 @@
 var searchData=
 [
   ['get_5fadc_5finterrupt_5fpriority_0',['get_adc_interrupt_priority',['../group__interrupts.html#gad657770c0ca0c4561bbe0370c219020d',1,'interrupt.h']]],
-  ['get_5fchipid_1',['get_chipid',['../group__chip__id.html#ga73068c6cf5d5b5fd06172a8e60a066a1',1,'chip_id.h']]],
+  ['get_5fchip_5fid_1',['get_chip_id',['../group__chip__id.html#gaea98580bd579166b66c25f7045a13212',1,'chip_id.h']]],
   ['get_5feeprom_5flast_5foperation_5fresult_2',['get_eeprom_last_operation_result',['../group__eeprom.html#gad66214463ff06635ed0ffbddeb1928aa',1,'eeprom.h']]],
   ['get_5ffrequency_5fdivider_3',['get_frequency_divider',['../group__freq.html#gabec6924a99fc0c136d0d1d6de5f8bf52',1,'frequency.h']]],
   ['get_5ffrequency_5fdivider_5fscale_4',['get_frequency_divider_scale',['../group__freq.html#ga2282854ce7886421e523f6d8f8467fae',1,'frequency.h']]],

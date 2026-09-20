@@ -1,0 +1,37 @@
+cmake_minimum_required(VERSION 3.31) # Specify minimum CMake version
+
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+
+file(REAL_PATH "cmake/toolchain-SDCC.cmake" CMAKE_TOOLCHAIN_FILE EXPAND_TILDE)
+
+project(
+    stc15hal
+    VERSION 0.18.0
+    LANGUAGES C ASM
+) # Define project name and language
+
+set(CMAKE_C_STANDARD 23)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+
+# add headers to stc15hal
+include_directories(
+  ${CMAKE_SOURCE_DIR}/include # For public headers during build
+)
+
+add_subdirectory("src")
+add_subdirectory("examples")
+add_subdirectory("utils")
+
+find_package(Doxygen REQUIRED dot)
+if(Doxygen_FOUND)
+  message(STATUS "Found Doxygen Version "
+    "${DOXYGEN_VERSION} at ${DOXYGEN_EXECUTABLE}")
+  
+  add_custom_target(docs ALL
+    COMMAND doxygen ${CMAKE_CURRENT_SOURCE_DIR}/doxygen.conf
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+    COMMENT "Generating project documentation"
+  )
+else()
+  message(STATUS "Doxygen not found. Docs generation disabled")
+endif()
