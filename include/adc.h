@@ -19,14 +19,14 @@
  * @author Michael Golovanov
  */
 
-#include <sys.h>
 #include <bits.h>
-#include <stdint.h>
-#include <stdbool.h>
 #include <gpio.h>
 
 /** @brief ADC CONTR register ADC_START bit position */
-#define ADC_START_BIT 3
+#define ADC_START_BIT_POS 3
+/** @brief ADC_START bit mask */
+#define ADC_START_BIT_MASK bit_mask(ADC_START_BIT_POS)
+
 /** @brief ADC CONTR register ADC_FLAG bit position */
 #define ADC_FLAG_BIT 4
 /** @brief CLKDIV register ADRJ bit position */
@@ -135,7 +135,7 @@ do {                                                    \
 #define adc_destroy(void)                               \
 do {                                                    \
     /* Stop ADC */                                      \
-    bit_clr(ADC_CONTR, ~(1 << ADC_START_BIT));          \
+    bit_clr(ADC_CONTR, ~(1 << ADC_START_BIT_POS));          \
     /* Clear ADC result ready flag */                   \
     bit_clr(ADC_CONTR, ~(1 << ADC_FLAG_BIT));           \
                                                         \
@@ -171,7 +171,7 @@ do {                                                    \
     /* Clear ADC result ready flag */                   \
     bit_clr(ADC_CONTR, ~(1 << ADC_FLAG_BIT));           \
     /* Set ADC power on */                              \
-    bit_set(ADC_CONTR, 1 << ADC_START_BIT);             \
+    bit_set(ADC_CONTR, 1 << ADC_START_BIT_POS);             \
                                                         \
     /* Waiting for ADC result is ready */               \
     while (test_if_bit_cleared(ADC_CONTR, 1 << ADC_FLAG_BIT));  \
@@ -206,7 +206,7 @@ do {                                                    \
 do {                                                    \
     if (!is_adc_async_read_started())                   \
     {                                                   \
-        bit_set(ADC_CONTR, 1 << ADC_START_BIT);         \
+        bit_set(ADC_CONTR, 1 << ADC_START_BIT_POS);         \
     }                                                   \
 } while(0);
 
@@ -217,7 +217,7 @@ do {                                                    \
  * 
  * @ingroup adc
  */
-#define is_adc_async_read_started() (test_if_bit_set(ADC_CONTR, 1 << ADC_START_BIT) && (ADC_CONTR & ADC_POWER_ON_MSK))
+#define is_adc_async_read_started() (test_if_bit_set(ADC_CONTR, 1 << ADC_START_BIT_POS) && (ADC_CONTR & ADC_POWER_ON_MSK))
 
 /**
  * @brief Clear ADC result ready flag

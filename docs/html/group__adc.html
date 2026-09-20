@@ -111,7 +111,7 @@ Enumerations</h2></td></tr>
 <tr class="memitem:ga1ed306842c5d0e89d6a8100032a69aa0" id="r_ga1ed306842c5d0e89d6a8100032a69aa0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#ga1ed306842c5d0e89d6a8100032a69aa0">adc_async_read_start</a>()</td></tr>
 <tr class="memdesc:ga1ed306842c5d0e89d6a8100032a69aa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start async ADC read operation if not started.  <br /></td></tr>
 <tr class="separator:ga1ed306842c5d0e89d6a8100032a69aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaea9694f2a258f3234635db0ba42d95e6" id="r_gaea9694f2a258f3234635db0ba42d95e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#gaea9694f2a258f3234635db0ba42d95e6">is_adc_async_read_started</a>()&#160;&#160;&#160;(test_if_bit_set(ADC_CONTR, 1 &lt;&lt; <a class="el" href="adc_8h.html#a84aeff7f7cb774816c29ed00c0ad6551">ADC_START_BIT</a>) &amp;&amp; (ADC_CONTR &amp; <a class="el" href="adc_8h.html#abf22e993bdb562f89f9d9cc343615b8b">ADC_POWER_ON_MSK</a>))</td></tr>
+<tr class="memitem:gaea9694f2a258f3234635db0ba42d95e6" id="r_gaea9694f2a258f3234635db0ba42d95e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#gaea9694f2a258f3234635db0ba42d95e6">is_adc_async_read_started</a>()&#160;&#160;&#160;(test_if_bit_set(ADC_CONTR, 1 &lt;&lt; <a class="el" href="adc_8h.html#af6509e7b70d081933c475c2b2d5d4e9f">ADC_START_BIT_POS</a>) &amp;&amp; (ADC_CONTR &amp; <a class="el" href="adc_8h.html#abf22e993bdb562f89f9d9cc343615b8b">ADC_POWER_ON_MSK</a>))</td></tr>
 <tr class="memdesc:gaea9694f2a258f3234635db0ba42d95e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">get ADC start and power flags  <br /></td></tr>
 <tr class="separator:gaea9694f2a258f3234635db0ba42d95e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf115fda1f311d9577cee589134d1f02c" id="r_gaf115fda1f311d9577cee589134d1f02c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#gaf115fda1f311d9577cee589134d1f02c">adc_async_read_finish</a>()&#160;&#160;&#160;(bit_clr(ADC_CONTR, ~(1 &lt;&lt; <a class="el" href="adc_8h.html#ada1c239a8dc03fed4b4c1f4d6fe2df13">ADC_FLAG_BIT</a>)))</td></tr>
@@ -187,10 +187,10 @@ Enumerations</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                    \</div>
 <div class="line">    if (!<a class="code hl_define" href="group__adc.html#gaea9694f2a258f3234635db0ba42d95e6">is_adc_async_read_started</a>())                   \</div>
 <div class="line">    {                                                   \</div>
-<div class="line">        bit_set(ADC_CONTR, 1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#a84aeff7f7cb774816c29ed00c0ad6551">ADC_START_BIT</a>);         \</div>
+<div class="line">        bit_set(ADC_CONTR, 1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#af6509e7b70d081933c475c2b2d5d4e9f">ADC_START_BIT_POS</a>);         \</div>
 <div class="line">    }                                                   \</div>
 <div class="line">} <span class="keywordflow">while</span>(0);</div>
-<div class="ttc" id="aadc_8h_html_a84aeff7f7cb774816c29ed00c0ad6551"><div class="ttname"><a href="adc_8h.html#a84aeff7f7cb774816c29ed00c0ad6551">ADC_START_BIT</a></div><div class="ttdeci">#define ADC_START_BIT</div><div class="ttdoc">ADC CONTR register ADC_START bit position.</div><div class="ttdef"><b>Definition</b> adc.h:29</div></div>
+<div class="ttc" id="aadc_8h_html_af6509e7b70d081933c475c2b2d5d4e9f"><div class="ttname"><a href="adc_8h.html#af6509e7b70d081933c475c2b2d5d4e9f">ADC_START_BIT_POS</a></div><div class="ttdeci">#define ADC_START_BIT_POS</div><div class="ttdoc">ADC CONTR register ADC_START bit position.</div><div class="ttdef"><b>Definition</b> adc.h:26</div></div>
 <div class="ttc" id="agroup__adc_html_gaea9694f2a258f3234635db0ba42d95e6"><div class="ttname"><a href="group__adc.html#gaea9694f2a258f3234635db0ba42d95e6">is_adc_async_read_started</a></div><div class="ttdeci">#define is_adc_async_read_started()</div><div class="ttdoc">get ADC start and power flags</div><div class="ttdef"><b>Definition</b> adc.h:220</div></div>
 </div><!-- fragment -->
 <p>Start async ADC read operation if not started. </p>
@@ -217,7 +217,7 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                    \</div>
 <div class="line">    <span class="comment">/* Stop ADC */</span>                                      \</div>
-<div class="line">    bit_clr(ADC_CONTR, ~(1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#a84aeff7f7cb774816c29ed00c0ad6551">ADC_START_BIT</a>));          \</div>
+<div class="line">    bit_clr(ADC_CONTR, ~(1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#af6509e7b70d081933c475c2b2d5d4e9f">ADC_START_BIT_POS</a>));          \</div>
 <div class="line">    <span class="comment">/* Clear ADC result ready flag */</span>                   \</div>
 <div class="line">    bit_clr(ADC_CONTR, ~(1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#ada1c239a8dc03fed4b4c1f4d6fe2df13">ADC_FLAG_BIT</a>));           \</div>
 <div class="line">                                                        \</div>
@@ -378,7 +378,7 @@ Enumerations</h2></td></tr>
 <div class="line">    <span class="comment">/* Clear ADC result ready flag */</span>                   \</div>
 <div class="line">    bit_clr(ADC_CONTR, ~(1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#ada1c239a8dc03fed4b4c1f4d6fe2df13">ADC_FLAG_BIT</a>));           \</div>
 <div class="line">    <span class="comment">/* Set ADC power on */</span>                              \</div>
-<div class="line">    bit_set(ADC_CONTR, 1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#a84aeff7f7cb774816c29ed00c0ad6551">ADC_START_BIT</a>);             \</div>
+<div class="line">    bit_set(ADC_CONTR, 1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#af6509e7b70d081933c475c2b2d5d4e9f">ADC_START_BIT_POS</a>);             \</div>
 <div class="line">                                                        \</div>
 <div class="line">    <span class="comment">/* Waiting for ADC result is ready */</span>               \</div>
 <div class="line">    while (test_if_bit_cleared(ADC_CONTR, 1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#ada1c239a8dc03fed4b4c1f4d6fe2df13">ADC_FLAG_BIT</a>));  \</div>
@@ -414,7 +414,7 @@ Enumerations</h2></td></tr>
           <td class="memname">#define is_adc_async_read_started</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(test_if_bit_set(ADC_CONTR, 1 &lt;&lt; <a class="el" href="adc_8h.html#a84aeff7f7cb774816c29ed00c0ad6551">ADC_START_BIT</a>) &amp;&amp; (ADC_CONTR &amp; <a class="el" href="adc_8h.html#abf22e993bdb562f89f9d9cc343615b8b">ADC_POWER_ON_MSK</a>))</td>
+          <td>&#160;&#160;&#160;(test_if_bit_set(ADC_CONTR, 1 &lt;&lt; <a class="el" href="adc_8h.html#af6509e7b70d081933c475c2b2d5d4e9f">ADC_START_BIT_POS</a>) &amp;&amp; (ADC_CONTR &amp; <a class="el" href="adc_8h.html#abf22e993bdb562f89f9d9cc343615b8b">ADC_POWER_ON_MSK</a>))</td>
         </tr>
       </table>
 </div><div class="memdoc">
