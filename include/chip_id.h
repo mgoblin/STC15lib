@@ -10,7 +10,6 @@
  */
 
 #include <stdint.h>
-#include <sys.h>
 
 /**
  * @brief Size of chip id array
@@ -33,7 +32,7 @@
  * 
  * @ingroup chip_id
  */
-__code __at(CHIP_ID_ADDR_ROM) const uint8_t chip_id;
+__code __at(CHIP_ID_ADDR_ROM) const uint8_t CHIP_ID;
 
 /**
  * @brief Get chip id as array. Array size is ID_SIZE
@@ -43,8 +42,8 @@ __code __at(CHIP_ID_ADDR_ROM) const uint8_t chip_id;
  * 
  * @ingroup chip_id
  */
-#define get_chipid(cid) do {                    \
-    const uint8_t *id = &chip_id;               \
+#define get_chip_id(cid) do {                    \
+    const uint8_t *id = &CHIP_ID;               \
     for(uint8_t i = 0; i < CHIP_ID_SIZE; i++)   \
     {                                           \
         cid[i] = id[i];                         \

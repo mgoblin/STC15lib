@@ -1,15 +1,15 @@
 /** 
- * How to get chip id using chip_id reference
+ * How to get chip id using CHIP_ID reference
  */
 #include <chip_id.h>
 
 #include <stdio.h>
 #include <uart.h>
 
-const uint8_t *cid2 = &chip_id;
-uint8_t cid[CHIP_ID_SIZE];
+static const uint8_t *cid2 = &CHIP_ID;
+static uint8_t cid[CHIP_ID_SIZE];
 
-void print_chip_id(const uint8_t *chip_id)
+static void print_chip_id(const uint8_t *chip_id)
 {
     for(uint8_t i = 0; i < CHIP_ID_SIZE; i++)
     {
@@ -22,14 +22,14 @@ void main()
 {
     uart1_init(9600);
 
-    get_chipid(cid);
+    get_chip_id(cid);
 
     while (1)
     {
-        printf_tiny("   chip_id bytes: ");
+        printf_tiny("   CHIP_ID bytes: ");
         print_chip_id(cid2);
 
-        printf_tiny("get_chipid bytes: ");
+        printf_tiny("get_chip id bytes: ");
         print_chip_id(cid);
     }
     
