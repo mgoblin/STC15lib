@@ -106,10 +106,30 @@ Include dependency graph for comparator.h:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a04f8467e14c242cad664244d01241237" id="r_a04f8467e14c242cad664244d01241237"><td class="memItemLeft" align="right" valign="top"><a id="a04f8467e14c242cad664244d01241237" name="a04f8467e14c242cad664244d01241237"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CMP_ENABLE_BIT_POS</b>&#160;&#160;&#160;7</td></tr>
+<tr class="memdesc:a04f8467e14c242cad664244d01241237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator enable bit position. <br /></td></tr>
+<tr class="separator:a04f8467e14c242cad664244d01241237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8162fb035fad976c5611f674e05761bc" id="r_a8162fb035fad976c5611f674e05761bc"><td class="memItemLeft" align="right" valign="top"><a id="a8162fb035fad976c5611f674e05761bc" name="a8162fb035fad976c5611f674e05761bc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CMP_ENABLE_BIT_MASK</b>&#160;&#160;&#160;bit_mask(<a class="el" href="comparator_8h.html#a04f8467e14c242cad664244d01241237">CMP_ENABLE_BIT_POS</a>)</td></tr>
+<tr class="memdesc:a8162fb035fad976c5611f674e05761bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator enable bit mask. <br /></td></tr>
+<tr class="separator:a8162fb035fad976c5611f674e05761bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a6fb5495dd5bbd7386763cef959374c" id="r_a8a6fb5495dd5bbd7386763cef959374c"><td class="memItemLeft" align="right" valign="top"><a id="a8a6fb5495dd5bbd7386763cef959374c" name="a8a6fb5495dd5bbd7386763cef959374c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CMP_ENABLE_BIT</b>&#160;&#160;&#160;(<a class="el" href="comparator_8h.html#a8162fb035fad976c5611f674e05761bc">CMP_ENABLE_BIT_MASK</a>)</td></tr>
+<tr class="memdesc:a8a6fb5495dd5bbd7386763cef959374c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator enable bit. <br /></td></tr>
+<tr class="separator:a8a6fb5495dd5bbd7386763cef959374c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57469c8842d6e274d59e06a1b54ae948" id="r_a57469c8842d6e274d59e06a1b54ae948"><td class="memItemLeft" align="right" valign="top"><a id="a57469c8842d6e274d59e06a1b54ae948" name="a57469c8842d6e274d59e06a1b54ae948"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CMPCR1_DEFAULT_VALUE</b>&#160;&#160;&#160;0x00</td></tr>
+<tr class="memdesc:a57469c8842d6e274d59e06a1b54ae948"><td class="mdescLeft">&#160;</td><td class="mdescRight">CMPCR1 register value after reset. <br /></td></tr>
+<tr class="separator:a57469c8842d6e274d59e06a1b54ae948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49cdefc284449124dde8e442d8251505" id="r_a49cdefc284449124dde8e442d8251505"><td class="memItemLeft" align="right" valign="top"><a id="a49cdefc284449124dde8e442d8251505" name="a49cdefc284449124dde8e442d8251505"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CMPCR2_DEFAULT_VALUE</b>&#160;&#160;&#160;0x09</td></tr>
+<tr class="memdesc:a49cdefc284449124dde8e442d8251505"><td class="mdescLeft">&#160;</td><td class="mdescRight">CMPCR2 register value after reset. <br /></td></tr>
+<tr class="separator:a49cdefc284449124dde8e442d8251505"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf37a8521684f48e916b727ab02e1a707" id="r_gaf37a8521684f48e916b727ab02e1a707"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__comparator.html#gaf37a8521684f48e916b727ab02e1a707">comparator_init_async</a>()</td></tr>
 <tr class="memdesc:gaf37a8521684f48e916b727ab02e1a707"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator init for using interrupts routine.  <br /></td></tr>
 <tr class="separator:gaf37a8521684f48e916b727ab02e1a707"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaabc6bf5a3629a179e3f7e124617ecaa9" id="r_gaabc6bf5a3629a179e3f7e124617ecaa9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__comparator.html#gaabc6bf5a3629a179e3f7e124617ecaa9">comparator_start</a>()&#160;&#160;&#160;(bit_set(CMPCR1, SBIT7))</td></tr>
+<tr class="memitem:gaabc6bf5a3629a179e3f7e124617ecaa9" id="r_gaabc6bf5a3629a179e3f7e124617ecaa9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__comparator.html#gaabc6bf5a3629a179e3f7e124617ecaa9">comparator_start</a>()&#160;&#160;&#160;(bit_set(CMPCR1, <a class="el" href="comparator_8h.html#a8a6fb5495dd5bbd7386763cef959374c">CMP_ENABLE_BIT</a>))</td></tr>
 <tr class="memdesc:gaabc6bf5a3629a179e3f7e124617ecaa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator start routine.  <br /></td></tr>
 <tr class="separator:gaabc6bf5a3629a179e3f7e124617ecaa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad17f94a97843fdebfd934f3f9b7bd50f" id="r_gad17f94a97843fdebfd934f3f9b7bd50f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__comparator.html#gad17f94a97843fdebfd934f3f9b7bd50f">comparator_stop</a>()&#160;&#160;&#160;(bit_clr(CMPCR1, CBIT7))</td></tr>

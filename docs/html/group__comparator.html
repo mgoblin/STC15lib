@@ -80,7 +80,7 @@ Macros</h2></td></tr>
 <tr class="memitem:gaf37a8521684f48e916b727ab02e1a707" id="r_gaf37a8521684f48e916b727ab02e1a707"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__comparator.html#gaf37a8521684f48e916b727ab02e1a707">comparator_init_async</a>()</td></tr>
 <tr class="memdesc:gaf37a8521684f48e916b727ab02e1a707"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator init for using interrupts routine.  <br /></td></tr>
 <tr class="separator:gaf37a8521684f48e916b727ab02e1a707"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaabc6bf5a3629a179e3f7e124617ecaa9" id="r_gaabc6bf5a3629a179e3f7e124617ecaa9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__comparator.html#gaabc6bf5a3629a179e3f7e124617ecaa9">comparator_start</a>()&#160;&#160;&#160;(bit_set(CMPCR1, SBIT7))</td></tr>
+<tr class="memitem:gaabc6bf5a3629a179e3f7e124617ecaa9" id="r_gaabc6bf5a3629a179e3f7e124617ecaa9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__comparator.html#gaabc6bf5a3629a179e3f7e124617ecaa9">comparator_start</a>()&#160;&#160;&#160;(bit_set(CMPCR1, <a class="el" href="comparator_8h.html#a8a6fb5495dd5bbd7386763cef959374c">CMP_ENABLE_BIT</a>))</td></tr>
 <tr class="memdesc:gaabc6bf5a3629a179e3f7e124617ecaa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator start routine.  <br /></td></tr>
 <tr class="separator:gaabc6bf5a3629a179e3f7e124617ecaa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad17f94a97843fdebfd934f3f9b7bd50f" id="r_gad17f94a97843fdebfd934f3f9b7bd50f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__comparator.html#gad17f94a97843fdebfd934f3f9b7bd50f">comparator_stop</a>()&#160;&#160;&#160;(bit_clr(CMPCR1, CBIT7))</td></tr>
@@ -89,7 +89,7 @@ Macros</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions and data structures related to comparator</p>
-<p>Comparator is used for analog comparation of positive and negative inputs.</p>
+<p>Comparator is used for analog compare of positive and negative inputs.</p>
 <p>Comparator could work in async (using interrupts) or sync modes.</p>
 <dl class="section author"><dt>Author</dt><dd>Michael Golovanov </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -108,12 +108,14 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                        \</div>
-<div class="line">    CMPCR1 = 0x00;                          \</div>
-<div class="line">    CMPCR2 = 0x09;                          \</div>
+<div class="line">    CMPCR1 = <a class="code hl_define" href="comparator_8h.html#a57469c8842d6e274d59e06a1b54ae948">CMPCR1_DEFAULT_VALUE</a>;          \</div>
+<div class="line">    CMPCR2 = <a class="code hl_define" href="comparator_8h.html#a49cdefc284449124dde8e442d8251505">CMPCR2_DEFAULT_VALUE</a>;          \</div>
 <div class="line">                                            \</div>
 <div class="line">    enable_mcu_interrupts();                \</div>
 <div class="line">    enable_comparator_interrupt(<a class="code hl_enumvalue" href="group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d">ANY_EDGE</a>);  \</div>
 <div class="line">} <span class="keywordflow">while</span>(0)</div>
+<div class="ttc" id="acomparator_8h_html_a49cdefc284449124dde8e442d8251505"><div class="ttname"><a href="comparator_8h.html#a49cdefc284449124dde8e442d8251505">CMPCR2_DEFAULT_VALUE</a></div><div class="ttdeci">#define CMPCR2_DEFAULT_VALUE</div><div class="ttdoc">CMPCR2 register value after reset.</div><div class="ttdef"><b>Definition</b> comparator.h:35</div></div>
+<div class="ttc" id="acomparator_8h_html_a57469c8842d6e274d59e06a1b54ae948"><div class="ttname"><a href="comparator_8h.html#a57469c8842d6e274d59e06a1b54ae948">CMPCR1_DEFAULT_VALUE</a></div><div class="ttdeci">#define CMPCR1_DEFAULT_VALUE</div><div class="ttdoc">CMPCR1 register value after reset.</div><div class="ttdef"><b>Definition</b> comparator.h:33</div></div>
 <div class="ttc" id="agroup__interrupts_html_ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d"><div class="ttname"><a href="group__interrupts.html#ggab11255d882506a529e8ed1cc6403f6a4a6de27423b1c9bcebe0730d628a9fcc8d">ANY_EDGE</a></div><div class="ttdeci">@ ANY_EDGE</div><div class="ttdoc">Any edge trigger.</div><div class="ttdef"><b>Definition</b> interrupt.h:296</div></div>
 </div><!-- fragment -->
 <p>Comparator init for using interrupts routine. </p>
@@ -130,7 +132,7 @@ Macros</h2></td></tr>
           <td class="memname">#define comparator_start</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_set(CMPCR1, SBIT7))</td>
+          <td>&#160;&#160;&#160;(bit_set(CMPCR1, <a class="el" href="comparator_8h.html#a8a6fb5495dd5bbd7386763cef959374c">CMP_ENABLE_BIT</a>))</td>
         </tr>
       </table>
 </div><div class="memdoc">

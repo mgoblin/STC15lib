@@ -87,22 +87,29 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;<a class="code" href="sys_8h.html">sys.h</a>&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;<a class="code" href="interrupt_8h.html">interrupt.h</a>&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="foldopen" id="foldopen00024" data-start="" data-end="">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="group__comparator.html#gaf37a8521684f48e916b727ab02e1a707">   24</a></span><span class="preprocessor">#define comparator_init_async()             \</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">do {                                        \</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">    CMPCR1 = 0x00;                          \</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">    CMPCR2 = 0x09;                          \</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">                                            \</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">    enable_mcu_interrupts();                \</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">    enable_comparator_interrupt(ANY_EDGE);  \</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">} while(0)    </span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="comparator_8h.html#a04f8467e14c242cad664244d01241237">   22</a></span><span class="preprocessor">#define CMP_ENABLE_BIT_POS 7</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="comparator_8h.html#a8162fb035fad976c5611f674e05761bc">   26</a></span><span class="preprocessor">#define CMP_ENABLE_BIT_MASK bit_mask(CMP_ENABLE_BIT_POS)</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="comparator_8h.html#a8a6fb5495dd5bbd7386763cef959374c">   30</a></span><span class="preprocessor">#define CMP_ENABLE_BIT (CMP_ENABLE_BIT_MASK)</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="comparator_8h.html#a57469c8842d6e274d59e06a1b54ae948">   33</a></span><span class="preprocessor">#define CMPCR1_DEFAULT_VALUE 0x00</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="comparator_8h.html#a49cdefc284449124dde8e442d8251505">   35</a></span><span class="preprocessor">#define CMPCR2_DEFAULT_VALUE 0x09</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="" data-end="">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="group__comparator.html#gaf37a8521684f48e916b727ab02e1a707">   42</a></span><span class="preprocessor">#define comparator_init_async()             \</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">do {                                        \</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">    CMPCR1 = CMPCR1_DEFAULT_VALUE;          \</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">    CMPCR2 = CMPCR2_DEFAULT_VALUE;          \</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">                                            \</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">    enable_mcu_interrupts();                \</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">    enable_comparator_interrupt(ANY_EDGE);  \</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">} while(0)    </span></div>
 </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="group__comparator.html#gaabc6bf5a3629a179e3f7e124617ecaa9">   40</a></span><span class="preprocessor">#define comparator_start() (bit_set(CMPCR1, SBIT7))</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="group__comparator.html#gad17f94a97843fdebfd934f3f9b7bd50f">   49</a></span><span class="preprocessor">#define comparator_stop() (bit_clr(CMPCR1, CBIT7))</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="group__comparator.html#gaabc6bf5a3629a179e3f7e124617ecaa9">   58</a></span><span class="preprocessor">#define comparator_start() (bit_set(CMPCR1, CMP_ENABLE_BIT))</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="group__comparator.html#gad17f94a97843fdebfd934f3f9b7bd50f">   67</a></span><span class="preprocessor">#define comparator_stop() (bit_clr(CMPCR1, CBIT7))</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="ainterrupt_8h_html"><div class="ttname"><a href="interrupt_8h.html">interrupt.h</a></div></div>
 <div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

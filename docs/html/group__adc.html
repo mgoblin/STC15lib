@@ -86,7 +86,7 @@ Enumerations</h2></td></tr>
 <tr class="separator:gaa63b42a360b882a87434ae898707d473"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">init</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p>ADC initializaion and destroy routines </p>
+<tr><td class="ititle" colspan="2"><p>ADC initialization and destroy routines </p>
 </td></tr>
 <tr class="memitem:ga67fe8b4aa9aaa52892d1bd5ab1b6bef9" id="r_ga67fe8b4aa9aaa52892d1bd5ab1b6bef9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#ga67fe8b4aa9aaa52892d1bd5ab1b6bef9">adc_init_input_only</a>(p1_pin,  adrj_flag,  speed)</td></tr>
 <tr class="memdesc:ga67fe8b4aa9aaa52892d1bd5ab1b6bef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC initialization in pin input only mode.  <br /></td></tr>
@@ -194,7 +194,7 @@ Enumerations</h2></td></tr>
 <div class="ttc" id="agroup__adc_html_gaea9694f2a258f3234635db0ba42d95e6"><div class="ttname"><a href="group__adc.html#gaea9694f2a258f3234635db0ba42d95e6">is_adc_async_read_started</a></div><div class="ttdeci">#define is_adc_async_read_started()</div><div class="ttdoc">get ADC start and power flags</div><div class="ttdef"><b>Definition</b> adc.h:232</div></div>
 </div><!-- fragment -->
 <p>Start async ADC read operation if not started. </p>
-<p>Set ADC start flag if it does not set After that program is not bloked. When result is ready MCU generate ADC interrupt. <br  />
+<p>Set ADC start flag if it does not set After that program is not blocked. When result is ready MCU generate ADC interrupt. <br  />
 </p>
 <dl class="section note"><dt>Note</dt><dd>ADC interrupt should be enabled </dd></dl>
 
@@ -293,7 +293,7 @@ Enumerations</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">p1_pin</td><td>uint8_t P1 pin number. Values from 0 to 7. </td></tr>
     <tr><td class="paramname">adrj_flag</td><td>bool ADC_RES-ADC_RESL or ADC_RESL-ADC_RES result bits order </td></tr>
-    <tr><td class="paramname">speed</td><td>adc_speed_t ADC convertion speed </td></tr>
+    <tr><td class="paramname">speed</td><td>adc_speed_t ADC conversion speed </td></tr>
   </table>
   </dd>
 </dl>
@@ -354,7 +354,7 @@ Enumerations</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">p1_pin</td><td>uint8_t P1 pin number. Values from 0 to 7. </td></tr>
     <tr><td class="paramname">adrj_flag</td><td>bool ADC_RES-ADC_RESL or ADC_RESL-ADC_RES result bits order </td></tr>
-    <tr><td class="paramname">speed</td><td>adc_speed_t ADC convertion speed </td></tr>
+    <tr><td class="paramname">speed</td><td>adc_speed_t ADC conversion speed </td></tr>
   </table>
   </dd>
 </dl>
@@ -441,7 +441,7 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p>ADC speed enum. </p>
-<p>describes possible convertion speeds </p>
+<p>describes possible conversion speeds </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaa63b42a360b882a87434ae898707d473a841a03319c2efabe4127944ba8658984" name="ggaa63b42a360b882a87434ae898707d473a841a03319c2efabe4127944ba8658984"></a>ADC_SPEED_540&#160;</td><td class="fielddoc"><p>540 mcu cycles </p>
 </td></tr>

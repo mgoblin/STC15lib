@@ -27,7 +27,7 @@
 /**
  * @brief Comparator enable bit
  */
-#define CMP_ENABLE_BIT ()CMP_ENABLE_BIT_MASK)
+#define CMP_ENABLE_BIT (CMP_ENABLE_BIT_MASK)
 
 /** @brief CMPCR1 register value after reset */
 #define CMPCR1_DEFAULT_VALUE 0x00
