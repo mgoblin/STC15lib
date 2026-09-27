@@ -54,7 +54,7 @@
 /**
  * @brief ADC speed enum
  * 
- * @details describes possible convertion speeds
+ * @details describes possible conversion speeds
  * 
  * @ingroup adc
  */
@@ -71,7 +71,7 @@ typedef enum
 } adc_speed_t;
 
 /** @name init
- *  ADC initializaion and destroy routines 
+ *  ADC initialization and destroy routines
  */
 ///@{
 /**
@@ -83,7 +83,7 @@ typedef enum
  * 
  * @param p1_pin uint8_t P1 pin number. Values from 0 to 7.
  * @param adrj_flag bool ADC_RES-ADC_RESL or ADC_RESL-ADC_RES result bits order
- * @param speed adc_speed_t ADC convertion speed
+ * @param speed adc_speed_t ADC conversion speed
  * 
  * @ingroup adc
  */
@@ -114,7 +114,7 @@ do {                                                    \
  * 
  * @param p1_pin uint8_t P1 pin number. Values from 0 to 7.
  * @param adrj_flag bool ADC_RES-ADC_RESL or ADC_RESL-ADC_RES result bits order
- * @param speed adc_speed_t ADC convertion speed
+ * @param speed adc_speed_t ADC conversion speed
  * 
  * @ingroup adc
  */
@@ -207,7 +207,7 @@ do {                                                    \
  * @brief Start async ADC read operation if not started
  * 
  * @details Set ADC start flag if it does not set
- * After that program is not bloked. When result 
+ * After that program is not blocked. When result
  * is ready MCU generate ADC interrupt.    
  * 
  * @note ADC interrupt should be enabled
