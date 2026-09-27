@@ -111,13 +111,13 @@ Enumerations</h2></td></tr>
 <tr class="memitem:ga1ed306842c5d0e89d6a8100032a69aa0" id="r_ga1ed306842c5d0e89d6a8100032a69aa0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#ga1ed306842c5d0e89d6a8100032a69aa0">adc_async_read_start</a>()</td></tr>
 <tr class="memdesc:ga1ed306842c5d0e89d6a8100032a69aa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start async ADC read operation if not started.  <br /></td></tr>
 <tr class="separator:ga1ed306842c5d0e89d6a8100032a69aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaea9694f2a258f3234635db0ba42d95e6" id="r_gaea9694f2a258f3234635db0ba42d95e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#gaea9694f2a258f3234635db0ba42d95e6">is_adc_async_read_started</a>()&#160;&#160;&#160;(test_if_bit_set(ADC_CONTR, 1 &lt;&lt; <a class="el" href="adc_8h.html#af6509e7b70d081933c475c2b2d5d4e9f">ADC_START_BIT_POS</a>) &amp;&amp; (ADC_CONTR &amp; <a class="el" href="adc_8h.html#abf22e993bdb562f89f9d9cc343615b8b">ADC_POWER_ON_MSK</a>))</td></tr>
+<tr class="memitem:gaea9694f2a258f3234635db0ba42d95e6" id="r_gaea9694f2a258f3234635db0ba42d95e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#gaea9694f2a258f3234635db0ba42d95e6">is_adc_async_read_started</a>()&#160;&#160;&#160;(test_if_bit_set(ADC_CONTR, <a class="el" href="adc_8h.html#a84aeff7f7cb774816c29ed00c0ad6551">ADC_START_BIT</a>) &amp;&amp; (ADC_CONTR &amp; <a class="el" href="adc_8h.html#aefcbe3964af64454e1d438392075bbe0">ADC_POWER_ON_MASK</a>))</td></tr>
 <tr class="memdesc:gaea9694f2a258f3234635db0ba42d95e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">get ADC start and power flags  <br /></td></tr>
 <tr class="separator:gaea9694f2a258f3234635db0ba42d95e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf115fda1f311d9577cee589134d1f02c" id="r_gaf115fda1f311d9577cee589134d1f02c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#gaf115fda1f311d9577cee589134d1f02c">adc_async_read_finish</a>()&#160;&#160;&#160;(bit_clr(ADC_CONTR, ~(1 &lt;&lt; <a class="el" href="adc_8h.html#ada1c239a8dc03fed4b4c1f4d6fe2df13">ADC_FLAG_BIT</a>)))</td></tr>
+<tr class="memitem:gaf115fda1f311d9577cee589134d1f02c" id="r_gaf115fda1f311d9577cee589134d1f02c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#gaf115fda1f311d9577cee589134d1f02c">adc_async_read_finish</a>()&#160;&#160;&#160;(bit_clr(ADC_CONTR, ~(1 &lt;&lt; <a class="el" href="adc_8h.html#ae6cab68d414a60c67d1af8941ef2e429">ADC_FLAG_BIT_POS</a>)))</td></tr>
 <tr class="memdesc:gaf115fda1f311d9577cee589134d1f02c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear ADC result ready flag.  <br /></td></tr>
 <tr class="separator:gaf115fda1f311d9577cee589134d1f02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae7954164fa7cbba6947dbe04221c618c" id="r_gae7954164fa7cbba6947dbe04221c618c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#gae7954164fa7cbba6947dbe04221c618c">adc_async_get_result</a>()&#160;&#160;&#160;(test_if_bit_set(CLK_DIV, 1 &lt;&lt; <a class="el" href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">ADRJ_BIT</a>) ? (ADC_RESL &lt;&lt; <a class="el" href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a>) | (ADC_RES &amp; <a class="el" href="adc_8h.html#a73368454ae30fae5a5b7bb9ac95013a4">ADC_LOW_BITS_MSK</a>) : (ADC_RES &lt;&lt; <a class="el" href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a>)  | (ADC_RESL &amp; <a class="el" href="adc_8h.html#a73368454ae30fae5a5b7bb9ac95013a4">ADC_LOW_BITS_MSK</a>))</td></tr>
+<tr class="memitem:gae7954164fa7cbba6947dbe04221c618c" id="r_gae7954164fa7cbba6947dbe04221c618c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__adc.html#gae7954164fa7cbba6947dbe04221c618c">adc_async_get_result</a>()&#160;&#160;&#160;(test_if_bit_set(CLK_DIV, <a class="el" href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">ADRJ_BIT</a>) ? (ADC_RESL &lt;&lt; <a class="el" href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a>) | (ADC_RES &amp; <a class="el" href="adc_8h.html#ad5aeb44f56a7ce1f477a98bb1e49ce2f">ADC_LOW_BITS_MASK</a>) : (ADC_RES &lt;&lt; <a class="el" href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a>)  | (ADC_RESL &amp; <a class="el" href="adc_8h.html#ad5aeb44f56a7ce1f477a98bb1e49ce2f">ADC_LOW_BITS_MASK</a>))</td></tr>
 <tr class="memdesc:gae7954164fa7cbba6947dbe04221c618c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Async get ADC result.  <br /></td></tr>
 <tr class="separator:gae7954164fa7cbba6947dbe04221c618c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -138,7 +138,7 @@ Enumerations</h2></td></tr>
           <td class="memname">#define adc_async_get_result</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(test_if_bit_set(CLK_DIV, 1 &lt;&lt; <a class="el" href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">ADRJ_BIT</a>) ? (ADC_RESL &lt;&lt; <a class="el" href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a>) | (ADC_RES &amp; <a class="el" href="adc_8h.html#a73368454ae30fae5a5b7bb9ac95013a4">ADC_LOW_BITS_MSK</a>) : (ADC_RES &lt;&lt; <a class="el" href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a>)  | (ADC_RESL &amp; <a class="el" href="adc_8h.html#a73368454ae30fae5a5b7bb9ac95013a4">ADC_LOW_BITS_MSK</a>))</td>
+          <td>&#160;&#160;&#160;(test_if_bit_set(CLK_DIV, <a class="el" href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">ADRJ_BIT</a>) ? (ADC_RESL &lt;&lt; <a class="el" href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a>) | (ADC_RES &amp; <a class="el" href="adc_8h.html#ad5aeb44f56a7ce1f477a98bb1e49ce2f">ADC_LOW_BITS_MASK</a>) : (ADC_RES &lt;&lt; <a class="el" href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a>)  | (ADC_RESL &amp; <a class="el" href="adc_8h.html#ad5aeb44f56a7ce1f477a98bb1e49ce2f">ADC_LOW_BITS_MASK</a>))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -160,7 +160,7 @@ Enumerations</h2></td></tr>
           <td class="memname">#define adc_async_read_finish</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_clr(ADC_CONTR, ~(1 &lt;&lt; <a class="el" href="adc_8h.html#ada1c239a8dc03fed4b4c1f4d6fe2df13">ADC_FLAG_BIT</a>)))</td>
+          <td>&#160;&#160;&#160;(bit_clr(ADC_CONTR, ~(1 &lt;&lt; <a class="el" href="adc_8h.html#ae6cab68d414a60c67d1af8941ef2e429">ADC_FLAG_BIT_POS</a>)))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -187,11 +187,11 @@ Enumerations</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                    \</div>
 <div class="line">    if (!<a class="code hl_define" href="group__adc.html#gaea9694f2a258f3234635db0ba42d95e6">is_adc_async_read_started</a>())                   \</div>
 <div class="line">    {                                                   \</div>
-<div class="line">        bit_set(ADC_CONTR, 1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#af6509e7b70d081933c475c2b2d5d4e9f">ADC_START_BIT_POS</a>);         \</div>
+<div class="line">        bit_set(ADC_CONTR, <a class="code hl_define" href="adc_8h.html#a84aeff7f7cb774816c29ed00c0ad6551">ADC_START_BIT</a>);              \</div>
 <div class="line">    }                                                   \</div>
 <div class="line">} <span class="keywordflow">while</span>(0);</div>
-<div class="ttc" id="aadc_8h_html_af6509e7b70d081933c475c2b2d5d4e9f"><div class="ttname"><a href="adc_8h.html#af6509e7b70d081933c475c2b2d5d4e9f">ADC_START_BIT_POS</a></div><div class="ttdeci">#define ADC_START_BIT_POS</div><div class="ttdoc">ADC CONTR register ADC_START bit position.</div><div class="ttdef"><b>Definition</b> adc.h:26</div></div>
-<div class="ttc" id="agroup__adc_html_gaea9694f2a258f3234635db0ba42d95e6"><div class="ttname"><a href="group__adc.html#gaea9694f2a258f3234635db0ba42d95e6">is_adc_async_read_started</a></div><div class="ttdeci">#define is_adc_async_read_started()</div><div class="ttdoc">get ADC start and power flags</div><div class="ttdef"><b>Definition</b> adc.h:220</div></div>
+<div class="ttc" id="aadc_8h_html_a84aeff7f7cb774816c29ed00c0ad6551"><div class="ttname"><a href="adc_8h.html#a84aeff7f7cb774816c29ed00c0ad6551">ADC_START_BIT</a></div><div class="ttdeci">#define ADC_START_BIT</div><div class="ttdef"><b>Definition</b> adc.h:30</div></div>
+<div class="ttc" id="agroup__adc_html_gaea9694f2a258f3234635db0ba42d95e6"><div class="ttname"><a href="group__adc.html#gaea9694f2a258f3234635db0ba42d95e6">is_adc_async_read_started</a></div><div class="ttdeci">#define is_adc_async_read_started()</div><div class="ttdoc">get ADC start and power flags</div><div class="ttdef"><b>Definition</b> adc.h:232</div></div>
 </div><!-- fragment -->
 <p>Start async ADC read operation if not started. </p>
 <p>Set ADC start flag if it does not set After that program is not bloked. When result is ready MCU generate ADC interrupt. <br  />
@@ -217,19 +217,20 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                    \</div>
 <div class="line">    <span class="comment">/* Stop ADC */</span>                                      \</div>
-<div class="line">    bit_clr(ADC_CONTR, ~(1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#af6509e7b70d081933c475c2b2d5d4e9f">ADC_START_BIT_POS</a>));          \</div>
+<div class="line">    bit_clr(ADC_CONTR, ~(1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#af6509e7b70d081933c475c2b2d5d4e9f">ADC_START_BIT_POS</a>));      \</div>
 <div class="line">    <span class="comment">/* Clear ADC result ready flag */</span>                   \</div>
-<div class="line">    bit_clr(ADC_CONTR, ~(1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#ada1c239a8dc03fed4b4c1f4d6fe2df13">ADC_FLAG_BIT</a>));           \</div>
+<div class="line">    bit_clr(ADC_CONTR, ~(1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#ae6cab68d414a60c67d1af8941ef2e429">ADC_FLAG_BIT_POS</a>));       \</div>
 <div class="line">                                                        \</div>
 <div class="line">    <span class="comment">/* Set all gpio P1 port pins */</span>                     \</div>
 <div class="line">    <span class="comment">/* as general purpose pins mode */</span>                  \</div>
 <div class="line">    P1ASF = 0;                                          \</div>
 <div class="line">                                                        \</div>
 <div class="line">    <span class="comment">/* ADC power off*/</span>                                  \</div>
-<div class="line">    bit_clr(ADC_CONTR, ~<a class="code hl_define" href="adc_8h.html#abf22e993bdb562f89f9d9cc343615b8b">ADC_POWER_ON_MSK</a>);              \</div>
+<div class="line">    bit_clr(ADC_CONTR, ~<a class="code hl_define" href="adc_8h.html#aefcbe3964af64454e1d438392075bbe0">ADC_POWER_ON_MASK</a>);             \</div>
 <div class="line">} <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="aadc_8h_html_abf22e993bdb562f89f9d9cc343615b8b"><div class="ttname"><a href="adc_8h.html#abf22e993bdb562f89f9d9cc343615b8b">ADC_POWER_ON_MSK</a></div><div class="ttdeci">#define ADC_POWER_ON_MSK</div><div class="ttdef"><b>Definition</b> adc.h:35</div></div>
-<div class="ttc" id="aadc_8h_html_ada1c239a8dc03fed4b4c1f4d6fe2df13"><div class="ttname"><a href="adc_8h.html#ada1c239a8dc03fed4b4c1f4d6fe2df13">ADC_FLAG_BIT</a></div><div class="ttdeci">#define ADC_FLAG_BIT</div><div class="ttdoc">ADC CONTR register ADC_FLAG bit position.</div><div class="ttdef"><b>Definition</b> adc.h:31</div></div>
+<div class="ttc" id="aadc_8h_html_ae6cab68d414a60c67d1af8941ef2e429"><div class="ttname"><a href="adc_8h.html#ae6cab68d414a60c67d1af8941ef2e429">ADC_FLAG_BIT_POS</a></div><div class="ttdeci">#define ADC_FLAG_BIT_POS</div><div class="ttdoc">ADC CONTR register ADC_FLAG bit position.</div><div class="ttdef"><b>Definition</b> adc.h:33</div></div>
+<div class="ttc" id="aadc_8h_html_aefcbe3964af64454e1d438392075bbe0"><div class="ttname"><a href="adc_8h.html#aefcbe3964af64454e1d438392075bbe0">ADC_POWER_ON_MASK</a></div><div class="ttdeci">#define ADC_POWER_ON_MASK</div><div class="ttdef"><b>Definition</b> adc.h:47</div></div>
+<div class="ttc" id="aadc_8h_html_af6509e7b70d081933c475c2b2d5d4e9f"><div class="ttname"><a href="adc_8h.html#af6509e7b70d081933c475c2b2d5d4e9f">ADC_START_BIT_POS</a></div><div class="ttdeci">#define ADC_START_BIT_POS</div><div class="ttdoc">ADC CONTR register ADC_START bit position.</div><div class="ttdef"><b>Definition</b> adc.h:26</div></div>
 </div><!-- fragment -->
 <p>Deinitialize ADC module. </p>
 <p>Stops ongoing conversion, clears status flag, and disables analog function on all P1 pins. </p>
@@ -275,15 +276,16 @@ Enumerations</h2></td></tr>
 <div class="line">    bit_set(P1ASF, 1 &lt;&lt; p1_pin);                        \</div>
 <div class="line">                                                        \</div>
 <div class="line">    <span class="comment">/* Set ADC power on, speed and source channel pin */</span>\</div>
-<div class="line">    ADC_CONTR = <a class="code hl_define" href="adc_8h.html#abf22e993bdb562f89f9d9cc343615b8b">ADC_POWER_ON_MSK</a> | p1_pin | speed;      \</div>
+<div class="line">    ADC_CONTR = <a class="code hl_define" href="adc_8h.html#aefcbe3964af64454e1d438392075bbe0">ADC_POWER_ON_MASK</a> | p1_pin | speed;     \</div>
 <div class="line">                                                        \</div>
 <div class="line">    <span class="comment">/* Set ADC_RES-ADC_RESL or ADC_RESL-ADC_RES */</span>      \</div>
 <div class="line">    <span class="comment">/* result bits order */</span>                             \</div>
 <div class="line">    adrj_flag ?                                         \</div>
-<div class="line">        bit_set(CLK_DIV, 1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">ADRJ_BIT</a>) :               \</div>
-<div class="line">        bit_clr(CLK_DIV, ~(1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">ADRJ_BIT</a>));             \</div>
+<div class="line">        bit_set(CLK_DIV, <a class="code hl_define" href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">ADRJ_BIT</a>) :                    \</div>
+<div class="line">        bit_clr(CLK_DIV, ~(1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#a0c3c3986a5114f66ee908841f01b3b6e">ADRJ_BIT_POS</a>));         \</div>
 <div class="line">} <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="aadc_8h_html_ae993a3a1347aa383067f3c7bc6cfce35"><div class="ttname"><a href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">ADRJ_BIT</a></div><div class="ttdeci">#define ADRJ_BIT</div><div class="ttdoc">CLKDIV register ADRJ bit position.</div><div class="ttdef"><b>Definition</b> adc.h:33</div></div>
+<div class="ttc" id="aadc_8h_html_a0c3c3986a5114f66ee908841f01b3b6e"><div class="ttname"><a href="adc_8h.html#a0c3c3986a5114f66ee908841f01b3b6e">ADRJ_BIT_POS</a></div><div class="ttdeci">#define ADRJ_BIT_POS</div><div class="ttdoc">CLKDIV register ADRJ bit position.</div><div class="ttdef"><b>Definition</b> adc.h:40</div></div>
+<div class="ttc" id="aadc_8h_html_ae993a3a1347aa383067f3c7bc6cfce35"><div class="ttname"><a href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">ADRJ_BIT</a></div><div class="ttdeci">#define ADRJ_BIT</div><div class="ttdoc">ADRJ declaration.</div><div class="ttdef"><b>Definition</b> adc.h:44</div></div>
 </div><!-- fragment -->
 <p>ADC initialization in pin input only mode. </p>
 <p>Configures the ADC for 10-bit resolution, uses the internal voltage reference.</p>
@@ -337,13 +339,13 @@ Enumerations</h2></td></tr>
 <div class="line">    bit_set(P1ASF, 1 &lt;&lt; p1_pin);                        \</div>
 <div class="line">                                                        \</div>
 <div class="line">    <span class="comment">/* Set ADC power on, speed and source channel pin */</span>\</div>
-<div class="line">    ADC_CONTR = <a class="code hl_define" href="adc_8h.html#abf22e993bdb562f89f9d9cc343615b8b">ADC_POWER_ON_MSK</a> | p1_pin | speed;      \</div>
+<div class="line">    ADC_CONTR = <a class="code hl_define" href="adc_8h.html#aefcbe3964af64454e1d438392075bbe0">ADC_POWER_ON_MASK</a> | p1_pin | speed;     \</div>
 <div class="line">                                                        \</div>
 <div class="line">    <span class="comment">/* Set ADC_RES-ADC_RESL or ADC_RESL-ADC_RES */</span>      \</div>
 <div class="line">    <span class="comment">/* result bits order */</span>                             \</div>
 <div class="line">    adrj_flag ?                                         \</div>
-<div class="line">        bit_set(CLK_DIV, 1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">ADRJ_BIT</a>) :               \</div>
-<div class="line">        bit_clr(CLK_DIV, ~(1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">ADRJ_BIT</a>));             \</div>
+<div class="line">        bit_set(CLK_DIV, <a class="code hl_define" href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">ADRJ_BIT</a>) :                        \</div>
+<div class="line">        bit_clr(CLK_DIV, ~(1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#a0c3c3986a5114f66ee908841f01b3b6e">ADRJ_BIT_POS</a>));         \</div>
 <div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>ADC initialization in pin open drain mode. </p>
@@ -376,21 +378,22 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                    \</div>
 <div class="line">    <span class="comment">/* Clear ADC result ready flag */</span>                   \</div>
-<div class="line">    bit_clr(ADC_CONTR, ~(1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#ada1c239a8dc03fed4b4c1f4d6fe2df13">ADC_FLAG_BIT</a>));           \</div>
+<div class="line">    bit_clr(ADC_CONTR, ~(1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#ae6cab68d414a60c67d1af8941ef2e429">ADC_FLAG_BIT_POS</a>));       \</div>
 <div class="line">    <span class="comment">/* Set ADC power on */</span>                              \</div>
-<div class="line">    bit_set(ADC_CONTR, 1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#af6509e7b70d081933c475c2b2d5d4e9f">ADC_START_BIT_POS</a>);             \</div>
+<div class="line">    bit_set(ADC_CONTR, <a class="code hl_define" href="adc_8h.html#a84aeff7f7cb774816c29ed00c0ad6551">ADC_START_BIT</a>);                  \</div>
 <div class="line">                                                        \</div>
 <div class="line">    <span class="comment">/* Waiting for ADC result is ready */</span>               \</div>
-<div class="line">    while (test_if_bit_cleared(ADC_CONTR, 1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#ada1c239a8dc03fed4b4c1f4d6fe2df13">ADC_FLAG_BIT</a>));  \</div>
+<div class="line">    while (test_if_bit_cleared(ADC_CONTR, <a class="code hl_define" href="adc_8h.html#ada1c239a8dc03fed4b4c1f4d6fe2df13">ADC_FLAG_BIT</a>));  \</div>
 <div class="line">                                                        \</div>
 <div class="line">    <span class="comment">/* Return ADC result value */</span>                       \</div>
-<div class="line">    *value = test_if_bit_set(CLK_DIV, 1 &lt;&lt; <a class="code hl_define" href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">ADRJ_BIT</a>) ?  \</div>
-<div class="line">        (ADC_RESL &lt;&lt; <a class="code hl_define" href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a>) | (ADC_RES &amp; <a class="code hl_define" href="adc_8h.html#a73368454ae30fae5a5b7bb9ac95013a4">ADC_LOW_BITS_MSK</a>)  \</div>
+<div class="line">    *value = test_if_bit_set(CLK_DIV, <a class="code hl_define" href="adc_8h.html#ae993a3a1347aa383067f3c7bc6cfce35">ADRJ_BIT</a>) ?       \</div>
+<div class="line">        (ADC_RESL &lt;&lt; <a class="code hl_define" href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a>) | (ADC_RES &amp; <a class="code hl_define" href="adc_8h.html#ad5aeb44f56a7ce1f477a98bb1e49ce2f">ADC_LOW_BITS_MASK</a>)  \</div>
 <div class="line">        :                                               \</div>
-<div class="line">        (ADC_RES &lt;&lt; <a class="code hl_define" href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a>)  | (ADC_RESL &amp; <a class="code hl_define" href="adc_8h.html#a73368454ae30fae5a5b7bb9ac95013a4">ADC_LOW_BITS_MSK</a>);\</div>
+<div class="line">        (ADC_RES &lt;&lt; <a class="code hl_define" href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a>)  | (ADC_RESL &amp; <a class="code hl_define" href="adc_8h.html#ad5aeb44f56a7ce1f477a98bb1e49ce2f">ADC_LOW_BITS_MASK</a>);\</div>
 <div class="line">} <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="aadc_8h_html_a1a044b4ab4fe915cb6d9deb2ff38afe7"><div class="ttname"><a href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a></div><div class="ttdeci">#define ADC_LOW_BITS_COUNT</div><div class="ttdoc">ADC result shift offset.</div><div class="ttdef"><b>Definition</b> adc.h:38</div></div>
-<div class="ttc" id="aadc_8h_html_a73368454ae30fae5a5b7bb9ac95013a4"><div class="ttname"><a href="adc_8h.html#a73368454ae30fae5a5b7bb9ac95013a4">ADC_LOW_BITS_MSK</a></div><div class="ttdeci">#define ADC_LOW_BITS_MSK</div><div class="ttdoc">ADC result low bits mask.</div><div class="ttdef"><b>Definition</b> adc.h:40</div></div>
+<div class="ttc" id="aadc_8h_html_a1a044b4ab4fe915cb6d9deb2ff38afe7"><div class="ttname"><a href="adc_8h.html#a1a044b4ab4fe915cb6d9deb2ff38afe7">ADC_LOW_BITS_COUNT</a></div><div class="ttdeci">#define ADC_LOW_BITS_COUNT</div><div class="ttdoc">ADC result shift offset.</div><div class="ttdef"><b>Definition</b> adc.h:50</div></div>
+<div class="ttc" id="aadc_8h_html_ad5aeb44f56a7ce1f477a98bb1e49ce2f"><div class="ttname"><a href="adc_8h.html#ad5aeb44f56a7ce1f477a98bb1e49ce2f">ADC_LOW_BITS_MASK</a></div><div class="ttdeci">#define ADC_LOW_BITS_MASK</div><div class="ttdoc">ADC result low bits mask.</div><div class="ttdef"><b>Definition</b> adc.h:52</div></div>
+<div class="ttc" id="aadc_8h_html_ada1c239a8dc03fed4b4c1f4d6fe2df13"><div class="ttname"><a href="adc_8h.html#ada1c239a8dc03fed4b4c1f4d6fe2df13">ADC_FLAG_BIT</a></div><div class="ttdeci">#define ADC_FLAG_BIT</div><div class="ttdoc">ADC_FLAG declaration.</div><div class="ttdef"><b>Definition</b> adc.h:37</div></div>
 </div><!-- fragment -->
 <p>ADC read routine. </p>
 <p>Clear result ready ADC flag and start ADC. Waiting for result is ready (flag up). After ADC flag is up by hardware store result to value reference</p>
@@ -414,7 +417,7 @@ Enumerations</h2></td></tr>
           <td class="memname">#define is_adc_async_read_started</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(test_if_bit_set(ADC_CONTR, 1 &lt;&lt; <a class="el" href="adc_8h.html#af6509e7b70d081933c475c2b2d5d4e9f">ADC_START_BIT_POS</a>) &amp;&amp; (ADC_CONTR &amp; <a class="el" href="adc_8h.html#abf22e993bdb562f89f9d9cc343615b8b">ADC_POWER_ON_MSK</a>))</td>
+          <td>&#160;&#160;&#160;(test_if_bit_set(ADC_CONTR, <a class="el" href="adc_8h.html#a84aeff7f7cb774816c29ed00c0ad6551">ADC_START_BIT</a>) &amp;&amp; (ADC_CONTR &amp; <a class="el" href="adc_8h.html#aefcbe3964af64454e1d438392075bbe0">ADC_POWER_ON_MASK</a>))</td>
         </tr>
       </table>
 </div><div class="memdoc">

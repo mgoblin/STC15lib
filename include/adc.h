@@ -26,18 +26,30 @@
 #define ADC_START_BIT_POS 3
 /** @brief ADC_START bit mask */
 #define ADC_START_BIT_MASK bit_mask(ADC_START_BIT_POS)
+/** brief ADC_START_BIT declaration */
+#define ADC_START_BIT (ADC_START_BIT_MASK)
 
 /** @brief ADC CONTR register ADC_FLAG bit position */
-#define ADC_FLAG_BIT 4
+#define ADC_FLAG_BIT_POS 4
+/** @brief ADC CONTR bit mask */
+#define ADC_FLAG_BIT_MASK bit_mask(ADC_FLAG_BIT_POS)
+/** @brief ADC_FLAG declaration */
+#define ADC_FLAG_BIT (ADC_FLAG_BIT_MASK)
+
 /** @brief CLKDIV register ADRJ bit position */
-#define ADRJ_BIT 5
+#define ADRJ_BIT_POS 5
+/** @brief  ADRJ_BIT bit mask */
+#define ADRJ_BIT_MASK bit_mask(ADRJ_BIT_POS)
+/** @brief ADRJ declaration */
+#define ADRJ_BIT (ADRJ_BIT_MASK)
+
 /** ADC CONTR register ADC_POWER_ON bit mask */
-#define ADC_POWER_ON_MSK 0x80
+#define ADC_POWER_ON_MASK 0x80
 
 /** @brief ADC result shift offset */
 #define ADC_LOW_BITS_COUNT 2
 /** @brief ADC result low bits mask */
-#define ADC_LOW_BITS_MSK 0x03
+#define ADC_LOW_BITS_MASK 0x03
 
 /**
  * @brief ADC speed enum
@@ -84,13 +96,13 @@ do {                                                    \
     bit_set(P1ASF, 1 << p1_pin);                        \
                                                         \
     /* Set ADC power on, speed and source channel pin */\
-    ADC_CONTR = ADC_POWER_ON_MSK | p1_pin | speed;      \
+    ADC_CONTR = ADC_POWER_ON_MASK | p1_pin | speed;     \
                                                         \
     /* Set ADC_RES-ADC_RESL or ADC_RESL-ADC_RES */      \
     /* result bits order */                             \
     adrj_flag ?                                         \
-        bit_set(CLK_DIV, 1 << ADRJ_BIT) :               \
-        bit_clr(CLK_DIV, ~(1 << ADRJ_BIT));             \
+        bit_set(CLK_DIV, ADRJ_BIT) :                    \
+        bit_clr(CLK_DIV, ~(1 << ADRJ_BIT_POS));         \
 } while(0)
 
 /**
@@ -115,13 +127,13 @@ do {                                                    \
     bit_set(P1ASF, 1 << p1_pin);                        \
                                                         \
     /* Set ADC power on, speed and source channel pin */\
-    ADC_CONTR = ADC_POWER_ON_MSK | p1_pin | speed;      \
+    ADC_CONTR = ADC_POWER_ON_MASK | p1_pin | speed;     \
                                                         \
     /* Set ADC_RES-ADC_RESL or ADC_RESL-ADC_RES */      \
     /* result bits order */                             \
     adrj_flag ?                                         \
-        bit_set(CLK_DIV, 1 << ADRJ_BIT) :               \
-        bit_clr(CLK_DIV, ~(1 << ADRJ_BIT));             \
+        bit_set(CLK_DIV, ADRJ_BIT) :                        \
+        bit_clr(CLK_DIV, ~(1 << ADRJ_BIT_POS));         \
 } while(0)
 
 /**
@@ -135,16 +147,16 @@ do {                                                    \
 #define adc_destroy(void)                               \
 do {                                                    \
     /* Stop ADC */                                      \
-    bit_clr(ADC_CONTR, ~(1 << ADC_START_BIT_POS));          \
+    bit_clr(ADC_CONTR, ~(1 << ADC_START_BIT_POS));      \
     /* Clear ADC result ready flag */                   \
-    bit_clr(ADC_CONTR, ~(1 << ADC_FLAG_BIT));           \
+    bit_clr(ADC_CONTR, ~(1 << ADC_FLAG_BIT_POS));       \
                                                         \
     /* Set all gpio P1 port pins */                     \
     /* as general purpose pins mode */                  \
     P1ASF = 0;                                          \
                                                         \
     /* ADC power off*/                                  \
-    bit_clr(ADC_CONTR, ~ADC_POWER_ON_MSK);              \
+    bit_clr(ADC_CONTR, ~ADC_POWER_ON_MASK);             \
 } while(0)
 
 ///@}
@@ -169,18 +181,18 @@ do {                                                    \
 #define adc_read_sync(value)                            \
 do {                                                    \
     /* Clear ADC result ready flag */                   \
-    bit_clr(ADC_CONTR, ~(1 << ADC_FLAG_BIT));           \
+    bit_clr(ADC_CONTR, ~(1 << ADC_FLAG_BIT_POS));       \
     /* Set ADC power on */                              \
-    bit_set(ADC_CONTR, 1 << ADC_START_BIT_POS);             \
+    bit_set(ADC_CONTR, ADC_START_BIT);                  \
                                                         \
     /* Waiting for ADC result is ready */               \
-    while (test_if_bit_cleared(ADC_CONTR, 1 << ADC_FLAG_BIT));  \
+    while (test_if_bit_cleared(ADC_CONTR, ADC_FLAG_BIT));  \
                                                         \
     /* Return ADC result value */                       \
-    *value = test_if_bit_set(CLK_DIV, 1 << ADRJ_BIT) ?  \
-        (ADC_RESL << ADC_LOW_BITS_COUNT) | (ADC_RES & ADC_LOW_BITS_MSK)  \
+    *value = test_if_bit_set(CLK_DIV, ADRJ_BIT) ?       \
+        (ADC_RESL << ADC_LOW_BITS_COUNT) | (ADC_RES & ADC_LOW_BITS_MASK)  \
         :                                               \
-        (ADC_RES << ADC_LOW_BITS_COUNT)  | (ADC_RESL & ADC_LOW_BITS_MSK);\
+        (ADC_RES << ADC_LOW_BITS_COUNT)  | (ADC_RESL & ADC_LOW_BITS_MASK);\
 } while(0)
 
 ///@}
@@ -206,7 +218,7 @@ do {                                                    \
 do {                                                    \
     if (!is_adc_async_read_started())                   \
     {                                                   \
-        bit_set(ADC_CONTR, 1 << ADC_START_BIT_POS);         \
+        bit_set(ADC_CONTR, ADC_START_BIT);              \
     }                                                   \
 } while(0);
 
@@ -217,7 +229,7 @@ do {                                                    \
  * 
  * @ingroup adc
  */
-#define is_adc_async_read_started() (test_if_bit_set(ADC_CONTR, 1 << ADC_START_BIT_POS) && (ADC_CONTR & ADC_POWER_ON_MSK))
+#define is_adc_async_read_started() (test_if_bit_set(ADC_CONTR, ADC_START_BIT) && (ADC_CONTR & ADC_POWER_ON_MASK))
 
 /**
  * @brief Clear ADC result ready flag
@@ -226,7 +238,7 @@ do {                                                    \
  * 
  * @ingroup adc
  */
-#define adc_async_read_finish() (bit_clr(ADC_CONTR, ~(1 << ADC_FLAG_BIT)))
+#define adc_async_read_finish() (bit_clr(ADC_CONTR, ~(1 << ADC_FLAG_BIT_POS)))
 
 /**
  * @brief Async get ADC result
@@ -241,7 +253,7 @@ do {                                                    \
  * 
  * @ingroup adc
  */
-#define adc_async_get_result() (test_if_bit_set(CLK_DIV, 1 << ADRJ_BIT) ? (ADC_RESL << ADC_LOW_BITS_COUNT) | (ADC_RES & ADC_LOW_BITS_MSK) : (ADC_RES << ADC_LOW_BITS_COUNT)  | (ADC_RESL & ADC_LOW_BITS_MSK))
+#define adc_async_get_result() (test_if_bit_set(CLK_DIV, ADRJ_BIT) ? (ADC_RESL << ADC_LOW_BITS_COUNT) | (ADC_RES & ADC_LOW_BITS_MASK) : (ADC_RES << ADC_LOW_BITS_COUNT)  | (ADC_RESL & ADC_LOW_BITS_MASK))
 ///@}
 
 #endif
