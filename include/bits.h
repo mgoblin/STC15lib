@@ -41,15 +41,5 @@
 #define SBIT6            0x40
 #define SBIT7            0x80
 
-#define CBIT0            0xfe
-#define CBIT1            0xfd
-#define CBIT2            0xfb
-#define CBIT3            0xf7
-#define CBIT4            0xef
-#define CBIT5            0xdf
-#define CBIT6            0xbf
-#define CBIT7            0x7f
-
-
 /**************************************************************************************************/
 #endif
