@@ -1,6 +1,6 @@
 # STC15 Hardware Abstraction Layer (STC15 HAL)
 
-[![PlatformIO Registry](https://badges.registry.platformio.org/packages/mgoblin/library/STC15%20hardware.svg)](https://registry.platformio.org/libraries/mgoblin/STC15%20hardware)
+
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 A lightweight C Hardware Abstraction Layer (HAL) and register definition library for **STC15 series** microcontrollers (specifically optimized for **STC15W408AS** and MCS51/8051-compatible devices) using the **SDCC (Small Device C Compiler)** toolchain.
