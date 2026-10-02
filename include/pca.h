@@ -46,19 +46,16 @@
  * @author Michael Golovanov
  */
 
-#include <sys.h>
 #include <bits.h>
-#include <stdint.h>
-#include <stdbool.h>
 
 /** @brief CMOD register CPS0 (counter pulse select) bit position */
 #define PCA_CPS0_BIT 1
 /** @brief CMOD register CPS (counter pulse select) bits mask */
-#define PCA_CPS_MSK 0x0E
+#define PCA_CPS_MASK 0x0E
 /** @brief PCA_PWMn register EBS0 (PWM resolution select) bit position */
 #define PCA_PWM_EBS0_BIT 6
 /** @brief PCA_PWMn register EBS (PWM resolution select) bits mask */
-#define PCA_PWM_EBS_MSK 0xC0
+#define PCA_PWM_EBS_MASK 0xC0
 
 /** @brief P_SW1 register CCP_S0 (CCP pin group select) bit position */
 #define PCA_CCP_S0_BIT 4
@@ -67,7 +64,7 @@
 /** @brief P_SW1 register CCP_S1 (CCP pin group select) bit mask */
 #define PCA_CCP_S1_MSK 0x20
 /** @brief P_SW1 register CCP pin group select bits mask */
-#define PCA_CCP_SW_MSK (uint8_t)(~(PCA_CCP_S0_MSK | PCA_CCP_S1_MSK))
+#define PCA_CCP_SW_MASK (uint8_t)(PCA_CCP_S0_MSK | PCA_CCP_S1_MSK)
 
 /**
  * @brief PCA pin group
@@ -156,7 +153,7 @@ typedef enum
  */
 #define pca_set_pin_group(group)                                       \
 do {                                                                   \
-    bit_clr(P_SW1, PCA_CCP_SW_MSK);                                    \
+    bit_clr(P_SW1, PCA_CCP_SW_MASK);                                    \
     bit_set(P_SW1, (uint8_t)((group) << PCA_CCP_S0_BIT));              \
 } while(0)
 
@@ -187,7 +184,7 @@ do {                                                                   \
  */
 #define pca_set_clock_source(src)                                      \
 do {                                                                   \
-    bit_clr(CMOD, (uint8_t)(~PCA_CPS_MSK));                            \
+    bit_clr(CMOD, PCA_CPS_MASK);                                        \
     bit_set(CMOD, (uint8_t)((src) << PCA_CPS0_BIT));                   \
 } while(0)
 
@@ -198,7 +195,7 @@ do {                                                                   \
  *
  * @ingroup pca
  */
-#define pca_get_clock_source() ((pca_clock_source_t)(bit_shift_right(get_reg(CMOD, PCA_CPS_MSK), PCA_CPS0_BIT)))
+#define pca_get_clock_source() ((pca_clock_source_t)(bit_shift_right(get_reg(CMOD, PCA_CPS_MASK), PCA_CPS0_BIT)))
 
 /**
  * @brief Set PCA counter value
@@ -256,7 +253,7 @@ do {                                                                   \
  *
  * @ingroup pca
  */
-#define pca_counter_run_in_idle() (bit_clr(CMOD, CBIT7))
+#define pca_counter_run_in_idle() (bit_clr(CMOD,SBIT7))
 
 /**
  * @brief Gate off PCA counter in MCU idle mode
@@ -315,7 +312,7 @@ do {                                                                   \
  *
  * @ingroup pca
  */
-#define pca_disable_overflow_interrupt() (bit_clr(CMOD, CBIT0))
+#define pca_disable_overflow_interrupt() (bit_clr(CMOD, SBIT0))
 
 /**
  * @brief Get PCA counter overflow interrupt enable status
@@ -376,7 +373,7 @@ do {                                                                   \
  *
  * @ingroup pca
  */
-#define pca_module_disable_interrupt(module) (bit_clr(CCAPM ## module, CBIT0))
+#define pca_module_disable_interrupt(module) (bit_clr(CCAPM ## module, SBIT0))
 
 /**
  * @brief Get PCA module compare/capture interrupt enable status
@@ -415,7 +412,7 @@ do {                                                                   \
  *
  * @ingroup pca
  */
-#define pca_module_disable_comparator(module) (bit_clr(CCAPM ## module, CBIT6))
+#define pca_module_disable_comparator(module) (bit_clr(CCAPM ## module, SBIT6))
 
 /**
  * @brief Enable capture on positive edge
@@ -436,7 +433,7 @@ do {                                                                   \
  *
  * @ingroup pca
  */
-#define pca_module_disable_capture_positive(module) (bit_clr(CCAPM ## module, CBIT5))
+#define pca_module_disable_capture_positive(module) (bit_clr(CCAPM ## module, SBIT5))
 
 /**
  * @brief Enable capture on negative edge
@@ -457,7 +454,7 @@ do {                                                                   \
  *
  * @ingroup pca
  */
-#define pca_module_disable_capture_negative(module) (bit_clr(CCAPM ## module, CBIT4))
+#define pca_module_disable_capture_negative(module) (bit_clr(CCAPM ## module, SBIT4))
 
 /**
  * @brief Enable PCA module match
@@ -478,7 +475,7 @@ do {                                                                   \
  *
  * @ingroup pca
  */
-#define pca_module_disable_match(module) (bit_clr(CCAPM ## module, CBIT3))
+#define pca_module_disable_match(module) (bit_clr(CCAPM ## module, SBIT3))
 
 /**
  * @brief Enable PCA module toggle output
@@ -499,7 +496,7 @@ do {                                                                   \
  *
  * @ingroup pca
  */
-#define pca_module_disable_toggle(module) (bit_clr(CCAPM ## module, CBIT2))
+#define pca_module_disable_toggle(module) (bit_clr(CCAPM ## module, SBIT2))
 
 /**
  * @brief Set PCA module compare/capture value
@@ -563,7 +560,7 @@ do {                                                                   \
  */
 #define pca_module_pwm_init(module, resolution)                        \
 do {                                                                   \
-    bit_clr(PCA_PWM ## module, (uint8_t)(~PCA_PWM_EBS_MSK));           \
+    bit_clr(PCA_PWM ## module, PCA_PWM_EBS_MASK);                       \
     bit_set(PCA_PWM ## module, (uint8_t)((resolution) << PCA_PWM_EBS0_BIT)); \
     bit_set(CCAPM ## module, SBIT1);                                   \
 } while(0)
@@ -576,7 +573,7 @@ do {                                                                   \
  *
  * @ingroup pca
  */
-#define pca_module_pwm_disable(module) (bit_clr(CCAPM ## module, CBIT1))
+#define pca_module_pwm_disable(module) (bit_clr(CCAPM ## module, SBIT1))
 
 /**
  * @brief Get PCA module PWM output enable status

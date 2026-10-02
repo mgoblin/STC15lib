@@ -89,26 +89,26 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="foldopen" id="foldopen00031" data-start="" data-end="">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="group__gpio.html#ga76365dbd738481635f5d73183e2059d3">   31</a></span><span class="preprocessor">#define pin_quasi_bidiretional_init(port, port_pin)             \</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="group__gpio.html#ga7c6d2a42e38a4feb3d08a5afa6586838">   31</a></span><span class="preprocessor">#define pin_quasi_bidirectional_init(port, port_pin)             \</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">do {                                                            \</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">    bit_clr(port ## M1, ~(1 &lt;&lt; port_pin));                      \</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">    bit_clr(port ## M0, ~(1 &lt;&lt; port_pin));                      \</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">    bit_clr(port ## M1, bit_mask(port_pin));                    \</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">    bit_clr(port ## M0, bit_mask(port_pin));                    \</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">} while(0)</span></div>
 </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="foldopen" id="foldopen00051" data-start="" data-end="">
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="group__gpio.html#ga2c7e5cb2a19518afffd55e46270f2e41">   51</a></span><span class="preprocessor">#define pin_push_pull_init(port, port_pin)                      \</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">do {                                                            \</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">    bit_clr(port ## M1, ~(1 &lt;&lt; port_pin));                      \</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">    bit_set(port ## M0, 1 &lt;&lt; port_pin);                         \</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">    bit_clr(port ## M1, bit_mask(port_pin));                    \</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">    bit_set(port ## M0, bit_mask(port_pin));                    \</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">} while(0)</span></div>
 </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="foldopen" id="foldopen00069" data-start="" data-end="">
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="group__gpio.html#gaa9bc772c77d463f878e1292351883126">   69</a></span><span class="preprocessor">#define pin_input_only_init(port, port_pin)                     \</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">do {                                                            \</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">    bit_set(port ## M1, 1 &lt;&lt; port_pin);                         \</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">    bit_clr(port ## M0, ~(1 &lt;&lt; port_pin));                      \</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">    bit_set(port ## M1, bit_mask(port_pin));                    \</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">    bit_clr(port ## M0, bit_mask(port_pin));                    \</span></div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">} while(0)</span></div>
 </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
@@ -120,7 +120,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">} while(0)</span></div>
 </div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="group__gpio.html#ga1ce65960da81e2096cef7951b22e3f92">  101</a></span><span class="preprocessor">#define is_pin_mode_quasi_bidiretional(port, port_pin)  ( ((port ## M1 &amp; (1 &lt;&lt; port_pin)) == 0) &amp;&amp; ((port ## M0 &amp; (1 &lt;&lt; port_pin)) == 0 ) )</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="group__gpio.html#ga1e2389d942f386ec2a0f9408343e3f69">  101</a></span><span class="preprocessor">#define is_pin_mode_quasi_bidirectional(port, port_pin)  ( ((port ## M1 &amp; (1 &lt;&lt; port_pin)) == 0) &amp;&amp; ((port ## M0 &amp; (1 &lt;&lt; port_pin)) == 0 ) )</span></div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="group__gpio.html#ga5393080f6642943ff3dad636e34ba999">  110</a></span><span class="preprocessor">#define is_pin_mode_push_pull(port, port_pin)           ( ((port ## M1 &amp; (1 &lt;&lt; port_pin)) == 0) &amp;&amp; ((port ## M0 &amp; (1 &lt;&lt; port_pin)) != 0) )</span></div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
@@ -129,7 +129,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="group__gpio.html#gae99dd668582e93526f0305c36bf58bcc">  128</a></span><span class="preprocessor">#define is_pin_mode_open_drain(port, port_pin)          ( ((port ## M1 &amp; (1 &lt;&lt; port_pin)) != 0) &amp;&amp; ((port ## M0 &amp; (1 &lt;&lt; port_pin)) != 0) )</span></div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
 <div class="foldopen" id="foldopen00137" data-start="" data-end="">
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="group__gpio.html#ga1912fc80210debb7f9de25b454320b51">  137</a></span><span class="preprocessor">#define pin_port_quasi_bidiretional_init(port)      \</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="group__gpio.html#ga264ef9c710cc3a153d2e4dc698b26565">  137</a></span><span class="preprocessor">#define pin_port_quasi_bidirectional_init(port)      \</span></div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="preprocessor">do {                                                \</span></div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="preprocessor">    port ## M1 = 0x00;                              \</span></div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="preprocessor">    port ## M0 = 0x00;                              \</span></div>

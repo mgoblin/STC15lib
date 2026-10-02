@@ -32,7 +32,7 @@ void main()
     counter0_mode2_init();
     counter0_mode2_start(INITIAL_COUNTER_VALUE);
     
-    pin_quasi_bidiretional_init(P3, 4);
+    pin_quasi_bidirectional_init(P3, 4);
 
     while (1) {
         // Change pin state. Counter should increments

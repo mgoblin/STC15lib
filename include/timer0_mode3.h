@@ -56,7 +56,7 @@ do {                                            \
     enable_timer0_interrupt();                  \
     TMOD &= 0xf0;                               \
     TMOD |= 0x03;                               \
-    bit_clr(AUXR, CBIT7);                       \
+    bit_clr(AUXR, SBIT7);                       \
 } while(0)
 
 /**
@@ -92,7 +92,7 @@ do {                                            \
  * 
  * @ingroup timer0_mode3
  */
-#define timer0_mode3_disable_P35_output() (bit_clr(INT_CLKO, CBIT0))
+#define timer0_mode3_disable_P35_output() (bit_clr(INT_CLKO, SBIT0))
 
 /**
  * @brief Get output to pin P3.5 output flag enabled value
@@ -117,7 +117,7 @@ do {                                            \
  * 
  * @ingroup timer0_mode3
 */
-#define timer0_mode3_open_gate() (bit_clr(TMOD, CBIT3))
+#define timer0_mode3_open_gate() (bit_clr(TMOD, SBIT3))
 
 /**
  * @brief Get timer starting gate state

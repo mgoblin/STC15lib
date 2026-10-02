@@ -81,32 +81,28 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="sys_8h_source.html">sys.h</a>&gt;</code><br />
 <code>#include &lt;bits.h&gt;</code><br />
-<code>#include &lt;stdint.h&gt;</code><br />
-<code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="gpio_8h_source.html">gpio.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for spi.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="spi_8h__incl.png" border="0" usemap="#ainclude_2spi_8h" alt=""/></div>
 <map name="ainclude_2spi_8h" id="ainclude_2spi_8h">
-<area shape="rect" title=" " alt="" coords="145,5,249,31"/>
+<area shape="rect" title=" " alt="" coords="76,5,180,31"/>
 <area shape="rect" href="sys_8h.html" title=" " alt="" coords="27,152,83,177"/>
-<area shape="poly" title=" " alt="" coords="188,33,78,144,74,140,184,29"/>
+<area shape="poly" title=" " alt="" coords="124,32,69,141,64,138,120,30"/>
 <area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="107,152,165,177"/>
-<area shape="poly" title=" " alt="" coords="188,33,171,54,156,80,146,110,141,139,136,138,141,109,151,78,167,51,184,29"/>
-<area shape="rect" title=" " alt="" coords="190,152,261,177"/>
-<area shape="poly" title=" " alt="" coords="211,29,228,50,243,78,245,110,238,139,233,138,240,110,237,79,224,53,207,32"/>
-<area shape="rect" title=" " alt="" coords="285,152,368,177"/>
-<area shape="poly" title=" " alt="" coords="213,29,263,77,313,139,309,142,259,80,209,33"/>
+<area shape="poly" title=" " alt="" coords="131,31,137,138,132,138,126,31"/>
 <area shape="rect" href="gpio_8h.html" title=" " alt="" coords="166,79,229,104"/>
-<area shape="poly" title=" " alt="" coords="200,31,200,65,195,65,195,31"/>
+<area shape="poly" title=" " alt="" coords="141,29,179,67,175,71,138,33"/>
 <area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="5,225,104,251"/>
 <area shape="poly" title=" " alt="" coords="57,178,57,212,52,212,52,178"/>
 <area shape="rect" title=" " alt="" coords="9,299,100,324"/>
 <area shape="poly" title=" " alt="" coords="57,251,57,285,52,285,52,251"/>
 <area shape="poly" title=" " alt="" coords="176,106,91,148,89,143,173,102"/>
 <area shape="poly" title=" " alt="" coords="189,106,157,143,153,140,185,103"/>
+<area shape="rect" title=" " alt="" coords="190,152,261,177"/>
 <area shape="poly" title=" " alt="" coords="204,103,218,138,213,140,199,105"/>
+<area shape="rect" title=" " alt="" coords="285,152,368,177"/>
 <area shape="poly" title=" " alt="" coords="219,102,294,143,292,147,217,106"/>
 </map>
 </div>
@@ -198,18 +194,18 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SPI_S0_BIT</b>&#160;&#160;&#160;2</td></tr>
 <tr class="memdesc:a26f8e2aba912b77c16c61c1f66f04a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">P_SW1 register SPI_S0 (SPI pin group select) bit position. <br /></td></tr>
 <tr class="separator:a26f8e2aba912b77c16c61c1f66f04a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53df3a8278b9f115b8250ac804faa1b4" id="r_a53df3a8278b9f115b8250ac804faa1b4"><td class="memItemLeft" align="right" valign="top"><a id="a53df3a8278b9f115b8250ac804faa1b4" name="a53df3a8278b9f115b8250ac804faa1b4"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SPI_S0_MSK</b>&#160;&#160;&#160;0x04</td></tr>
-<tr class="memdesc:a53df3a8278b9f115b8250ac804faa1b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">P_SW1 register SPI_S0 (SPI pin group select) bit mask. <br /></td></tr>
-<tr class="separator:a53df3a8278b9f115b8250ac804faa1b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae259eef4bc22f3f73127f20630ad557d" id="r_ae259eef4bc22f3f73127f20630ad557d"><td class="memItemLeft" align="right" valign="top"><a id="ae259eef4bc22f3f73127f20630ad557d" name="ae259eef4bc22f3f73127f20630ad557d"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SPI_S1_MSK</b>&#160;&#160;&#160;0x08</td></tr>
-<tr class="memdesc:ae259eef4bc22f3f73127f20630ad557d"><td class="mdescLeft">&#160;</td><td class="mdescRight">P_SW1 register SPI_S1 (SPI pin group select) bit mask. <br /></td></tr>
-<tr class="separator:ae259eef4bc22f3f73127f20630ad557d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af403cdbb7d0f5a68893b3516b443cf7b" id="r_af403cdbb7d0f5a68893b3516b443cf7b"><td class="memItemLeft" align="right" valign="top"><a id="af403cdbb7d0f5a68893b3516b443cf7b" name="af403cdbb7d0f5a68893b3516b443cf7b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SPI_SW_MSK</b>&#160;&#160;&#160;(uint8_t)(~(<a class="el" href="spi_8h.html#a53df3a8278b9f115b8250ac804faa1b4">SPI_S0_MSK</a> | <a class="el" href="spi_8h.html#ae259eef4bc22f3f73127f20630ad557d">SPI_S1_MSK</a>))</td></tr>
-<tr class="memdesc:af403cdbb7d0f5a68893b3516b443cf7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">P_SW1 register SPI pin group select bits mask. <br /></td></tr>
-<tr class="separator:af403cdbb7d0f5a68893b3516b443cf7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac59455359179f940d8638b6d2abd39ad" id="r_ac59455359179f940d8638b6d2abd39ad"><td class="memItemLeft" align="right" valign="top"><a id="ac59455359179f940d8638b6d2abd39ad" name="ac59455359179f940d8638b6d2abd39ad"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SPI_S0_MASK</b>&#160;&#160;&#160;0x04</td></tr>
+<tr class="memdesc:ac59455359179f940d8638b6d2abd39ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">P_SW1 register SPI_S0 (SPI pin group select) bit mask. <br /></td></tr>
+<tr class="separator:ac59455359179f940d8638b6d2abd39ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accf3d730e960f59981666d925f577c73" id="r_accf3d730e960f59981666d925f577c73"><td class="memItemLeft" align="right" valign="top"><a id="accf3d730e960f59981666d925f577c73" name="accf3d730e960f59981666d925f577c73"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SPI_S1_MASK</b>&#160;&#160;&#160;0x08</td></tr>
+<tr class="memdesc:accf3d730e960f59981666d925f577c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">P_SW1 register SPI_S1 (SPI pin group select) bit mask. <br /></td></tr>
+<tr class="separator:accf3d730e960f59981666d925f577c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fee8d0af37392d99d3fa580bd602702" id="r_a9fee8d0af37392d99d3fa580bd602702"><td class="memItemLeft" align="right" valign="top"><a id="a9fee8d0af37392d99d3fa580bd602702" name="a9fee8d0af37392d99d3fa580bd602702"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SPI_SW_MASK</b>&#160;&#160;&#160;(<a class="el" href="spi_8h.html#ac59455359179f940d8638b6d2abd39ad">SPI_S0_MASK</a> | <a class="el" href="spi_8h.html#accf3d730e960f59981666d925f577c73">SPI_S1_MASK</a>)</td></tr>
+<tr class="memdesc:a9fee8d0af37392d99d3fa580bd602702"><td class="mdescLeft">&#160;</td><td class="mdescRight">P_SW1 register SPI pin group select bits mask. <br /></td></tr>
+<tr class="separator:a9fee8d0af37392d99d3fa580bd602702"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafbf79f53632a8300e40c090374a6c6b8" id="r_gafbf79f53632a8300e40c090374a6c6b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__spi.html#gafbf79f53632a8300e40c090374a6c6b8">spi_init_master_pins_SPI_PIN_GROUP_1</a>()</td></tr>
 <tr class="memdesc:gafbf79f53632a8300e40c090374a6c6b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the SPI pins of pin group 1 for master mode.  <br /></td></tr>
 <tr class="separator:gafbf79f53632a8300e40c090374a6c6b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -228,21 +224,21 @@ Macros</h2></td></tr>
 <tr class="memitem:ga3c3d1b1d2bfdda2d66febb5bcf1df088" id="r_ga3c3d1b1d2bfdda2d66febb5bcf1df088"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__spi.html#ga3c3d1b1d2bfdda2d66febb5bcf1df088">spi_init_slave_pins_SPI_PIN_GROUP_3</a>()</td></tr>
 <tr class="memdesc:ga3c3d1b1d2bfdda2d66febb5bcf1df088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the SPI pins of pin group 3 for slave mode.  <br /></td></tr>
 <tr class="separator:ga3c3d1b1d2bfdda2d66febb5bcf1df088"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga23cd5fca8058fb557324eec03fe98837" id="r_ga23cd5fca8058fb557324eec03fe98837"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__spi.html#ga23cd5fca8058fb557324eec03fe98837">spi_ss_clr_SPI_PIN_GROUP_1</a>()&#160;&#160;&#160;(bit_clr(P1, CBIT2))</td></tr>
+<tr class="memitem:ga23cd5fca8058fb557324eec03fe98837" id="r_ga23cd5fca8058fb557324eec03fe98837"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__spi.html#ga23cd5fca8058fb557324eec03fe98837">spi_ss_clr_SPI_PIN_GROUP_1</a>()&#160;&#160;&#160;(bit_clr(P1, SBIT2))</td></tr>
 <tr class="memdesc:ga23cd5fca8058fb557324eec03fe98837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pull the SS pin of pin group 1 low.  <br /></td></tr>
 <tr class="separator:ga23cd5fca8058fb557324eec03fe98837"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5bc67d390e52313cbe53db494cf8ed95" id="r_ga5bc67d390e52313cbe53db494cf8ed95"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>spi_ss_set_SPI_PIN_GROUP_1</b>()&#160;&#160;&#160;(bit_set(P1, SBIT2))</td></tr>
 <tr class="memdesc:ga5bc67d390e52313cbe53db494cf8ed95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pull the SS pin of pin group 1 high. <br /></td></tr>
 <tr class="separator:ga5bc67d390e52313cbe53db494cf8ed95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad55ee216960e0b4bd38d9442c4a1e591" id="r_gad55ee216960e0b4bd38d9442c4a1e591"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__spi.html#gad55ee216960e0b4bd38d9442c4a1e591">spi_ss_clr_SPI_PIN_GROUP_2</a>()&#160;&#160;&#160;(bit_clr(P2, CBIT4))</td></tr>
+<tr class="memitem:gad55ee216960e0b4bd38d9442c4a1e591" id="r_gad55ee216960e0b4bd38d9442c4a1e591"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__spi.html#gad55ee216960e0b4bd38d9442c4a1e591">spi_ss_clr_SPI_PIN_GROUP_2</a>()&#160;&#160;&#160;(bit_clr(P2, SBIT4))</td></tr>
 <tr class="memdesc:gad55ee216960e0b4bd38d9442c4a1e591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pull the SS pin of pin group 2 low.  <br /></td></tr>
 <tr class="separator:gad55ee216960e0b4bd38d9442c4a1e591"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7a561b8d9b3d6b9621cea35529b6261b" id="r_ga7a561b8d9b3d6b9621cea35529b6261b"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>spi_ss_set_SPI_PIN_GROUP_2</b>()&#160;&#160;&#160;(bit_set(P2, SBIT4))</td></tr>
 <tr class="memdesc:ga7a561b8d9b3d6b9621cea35529b6261b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pull the SS pin of pin group 2 high. <br /></td></tr>
 <tr class="separator:ga7a561b8d9b3d6b9621cea35529b6261b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga54efd249844a6d84896c284bba7045ae" id="r_ga54efd249844a6d84896c284bba7045ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__spi.html#ga54efd249844a6d84896c284bba7045ae">spi_ss_clr_SPI_PIN_GROUP_3</a>()&#160;&#160;&#160;(bit_clr(P5, CBIT4))</td></tr>
+<tr class="memitem:ga54efd249844a6d84896c284bba7045ae" id="r_ga54efd249844a6d84896c284bba7045ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__spi.html#ga54efd249844a6d84896c284bba7045ae">spi_ss_clr_SPI_PIN_GROUP_3</a>()&#160;&#160;&#160;(bit_clr(P5, SBIT4))</td></tr>
 <tr class="memdesc:ga54efd249844a6d84896c284bba7045ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pull the SS pin of pin group 3 low.  <br /></td></tr>
 <tr class="separator:ga54efd249844a6d84896c284bba7045ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga003ccefcbb09b83feaf1843867ea8ffa" id="r_ga003ccefcbb09b83feaf1843867ea8ffa"><td class="memItemLeft" align="right" valign="top">
@@ -273,7 +269,7 @@ Macros</h2></td></tr>
 <tr class="memitem:ga8c1fc844cf7f790e7536c4377c8551d4" id="r_ga8c1fc844cf7f790e7536c4377c8551d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__spi.html#ga8c1fc844cf7f790e7536c4377c8551d4">spi_set_pin_group</a>(group)</td></tr>
 <tr class="memdesc:ga8c1fc844cf7f790e7536c4377c8551d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the SS/MOSI/MISO/SCLK pin group.  <br /></td></tr>
 <tr class="separator:ga8c1fc844cf7f790e7536c4377c8551d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga18730a13e23398f050cdf2ae8b8a88c4" id="r_ga18730a13e23398f050cdf2ae8b8a88c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__spi.html#ga18730a13e23398f050cdf2ae8b8a88c4">spi_get_pin_group</a>()&#160;&#160;&#160;((<a class="el" href="group__spi.html#ga3b0210451f294becb0712d258cd10f98">spi_pin_group_t</a>)(bit_shift_right(get_reg(P_SW1, (<a class="el" href="spi_8h.html#a53df3a8278b9f115b8250ac804faa1b4">SPI_S0_MSK</a> | <a class="el" href="spi_8h.html#ae259eef4bc22f3f73127f20630ad557d">SPI_S1_MSK</a>)), <a class="el" href="spi_8h.html#a26f8e2aba912b77c16c61c1f66f04a6b">SPI_S0_BIT</a>)))</td></tr>
+<tr class="memitem:ga18730a13e23398f050cdf2ae8b8a88c4" id="r_ga18730a13e23398f050cdf2ae8b8a88c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__spi.html#ga18730a13e23398f050cdf2ae8b8a88c4">spi_get_pin_group</a>()&#160;&#160;&#160;((<a class="el" href="group__spi.html#ga3b0210451f294becb0712d258cd10f98">spi_pin_group_t</a>)(bit_shift_right(get_reg(P_SW1, (<a class="el" href="spi_8h.html#ac59455359179f940d8638b6d2abd39ad">SPI_S0_MASK</a> | <a class="el" href="spi_8h.html#accf3d730e960f59981666d925f577c73">SPI_S1_MASK</a>)), <a class="el" href="spi_8h.html#a26f8e2aba912b77c16c61c1f66f04a6b">SPI_S0_BIT</a>)))</td></tr>
 <tr class="memdesc:ga18730a13e23398f050cdf2ae8b8a88c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the SS/MOSI/MISO/SCLK pin group.  <br /></td></tr>
 <tr class="separator:ga18730a13e23398f050cdf2ae8b8a88c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">slave select</div></td></tr>

@@ -84,200 +84,196 @@ $(document).ready(function() { init_codefold(0); });
 <a href="pca_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef STC15_PCAH</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define STC15_PCAH</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#include &lt;<a class="code" href="sys_8h.html">sys.h</a>&gt;</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#include &lt;bits.h&gt;</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="pca_8h.html#a2b02c6756d06fa4f6d1a734062ad96ac">   55</a></span><span class="preprocessor">#define PCA_CPS0_BIT 1</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="pca_8h.html#a51cc558158152bded183661d11c67f9f">   57</a></span><span class="preprocessor">#define PCA_CPS_MSK 0x0E</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="pca_8h.html#a61dbd7a7ebb77bd9029a9176e3df519f">   59</a></span><span class="preprocessor">#define PCA_PWM_EBS0_BIT 6</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="pca_8h.html#a452e2c87e18959c98fab2824f0adb89a">   61</a></span><span class="preprocessor">#define PCA_PWM_EBS_MSK 0xC0</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="pca_8h.html#ab35c78de7878dc5f6bb0413ab161438d">   64</a></span><span class="preprocessor">#define PCA_CCP_S0_BIT 4</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="pca_8h.html#a7b6fc25b0d13696e3730f188cd1f49e1">   66</a></span><span class="preprocessor">#define PCA_CCP_S0_MSK 0x10</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="pca_8h.html#a9aa54f37bbed72916143a9c4e7ca4de1">   68</a></span><span class="preprocessor">#define PCA_CCP_S1_MSK 0x20</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="pca_8h.html#aa525af5c8a2327c61bf15f85d4155cb1">   70</a></span><span class="preprocessor">#define PCA_CCP_SW_MSK (uint8_t)(~(PCA_CCP_S0_MSK | PCA_CCP_S1_MSK))</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="foldopen" id="foldopen00080" data-start="{" data-end="};">
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="group__pca.html#ga84c22d1dae3bc179af9070eb52382c95">   80</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>{</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a098b2eadf460bb52fcae8e32d7fd82a2">   83</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a098b2eadf460bb52fcae8e32d7fd82a2">PCA_PIN_GROUP_1</a> = 0,</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a2c1db768e11447a6a580fcfd5512325c">   85</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a2c1db768e11447a6a580fcfd5512325c">PCA_PIN_GROUP_2</a> = 1,</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_enumvalue" href="group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a5b6307074916e94fae9a231101a2e802">PCA_PIN_GROUP_3</a> = 2</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a5b6307074916e94fae9a231101a2e802">   88</a></span>} <a class="code hl_enumeration" href="group__pca.html#ga84c22d1dae3bc179af9070eb52382c95">pca_pin_group_t</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#include &lt;bits.h&gt;</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="pca_8h.html#a2b02c6756d06fa4f6d1a734062ad96ac">   52</a></span><span class="preprocessor">#define PCA_CPS0_BIT 1</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="pca_8h.html#abefcfdd13a7bad8533363c17a35fda55">   54</a></span><span class="preprocessor">#define PCA_CPS_MASK 0x0E</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="pca_8h.html#a61dbd7a7ebb77bd9029a9176e3df519f">   56</a></span><span class="preprocessor">#define PCA_PWM_EBS0_BIT 6</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="pca_8h.html#aa8a7d30738e63c39b66759219a1736c7">   58</a></span><span class="preprocessor">#define PCA_PWM_EBS_MASK 0xC0</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="pca_8h.html#ab35c78de7878dc5f6bb0413ab161438d">   61</a></span><span class="preprocessor">#define PCA_CCP_S0_BIT 4</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="pca_8h.html#a7b6fc25b0d13696e3730f188cd1f49e1">   63</a></span><span class="preprocessor">#define PCA_CCP_S0_MSK 0x10</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="pca_8h.html#a9aa54f37bbed72916143a9c4e7ca4de1">   65</a></span><span class="preprocessor">#define PCA_CCP_S1_MSK 0x20</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="pca_8h.html#a524eecdbeeee46a1eba4db8497196270">   67</a></span><span class="preprocessor">#define PCA_CCP_SW_MASK (uint8_t)(PCA_CCP_S0_MSK | PCA_CCP_S1_MSK)</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="};">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="group__pca.html#ga84c22d1dae3bc179af9070eb52382c95">   77</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>{</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a098b2eadf460bb52fcae8e32d7fd82a2">   80</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a098b2eadf460bb52fcae8e32d7fd82a2">PCA_PIN_GROUP_1</a> = 0,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a2c1db768e11447a6a580fcfd5512325c">   82</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a2c1db768e11447a6a580fcfd5512325c">PCA_PIN_GROUP_2</a> = 1,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_enumvalue" href="group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a5b6307074916e94fae9a231101a2e802">PCA_PIN_GROUP_3</a> = 2</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a5b6307074916e94fae9a231101a2e802">   85</a></span>} <a class="code hl_enumeration" href="group__pca.html#ga84c22d1dae3bc179af9070eb52382c95">pca_pin_group_t</a>;</div>
 </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="foldopen" id="foldopen00098" data-start="{" data-end="};">
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="group__pca.html#ga4da2c7294eed6b7c52126059f7ced722">   98</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>{</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a5ff24da099623298b9c81be2774fa1a8">  101</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a5ff24da099623298b9c81be2774fa1a8">PCA_CLOCK_SYS_12</a> = 0,</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722af3dd1fd7743a65bd6e3c13586068fe05">  103</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722af3dd1fd7743a65bd6e3c13586068fe05">PCA_CLOCK_SYS_2</a> = 1,</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a39473d4f53e30f8e807f80fe604a4cd5">  105</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a39473d4f53e30f8e807f80fe604a4cd5">PCA_CLOCK_TIMER0</a> = 2,</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722aa2490e7980ded6f2eef2d6e83fdf1b73">  107</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722aa2490e7980ded6f2eef2d6e83fdf1b73">PCA_CLOCK_ECI</a> = 3,</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a1d935cea5c220f4d1ff2f7d4ab4e7ba0">  109</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a1d935cea5c220f4d1ff2f7d4ab4e7ba0">PCA_CLOCK_SYS</a> = 4,</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722abaaed42b306033cc71c3ec34a09e27e6">  111</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722abaaed42b306033cc71c3ec34a09e27e6">PCA_CLOCK_SYS_4</a> = 5,</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a0054641919b53c1dcb5b02203b00fb49">  113</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a0054641919b53c1dcb5b02203b00fb49">PCA_CLOCK_SYS_6</a> = 6,</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_enumvalue" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722af1e15887708060c617819bbbbbd526a0">PCA_CLOCK_SYS_8</a> = 7</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722af1e15887708060c617819bbbbbd526a0">  116</a></span>} <a class="code hl_enumeration" href="group__pca.html#ga4da2c7294eed6b7c52126059f7ced722">pca_clock_source_t</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="foldopen" id="foldopen00095" data-start="{" data-end="};">
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="group__pca.html#ga4da2c7294eed6b7c52126059f7ced722">   95</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>{</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a5ff24da099623298b9c81be2774fa1a8">   98</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a5ff24da099623298b9c81be2774fa1a8">PCA_CLOCK_SYS_12</a> = 0,</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722af3dd1fd7743a65bd6e3c13586068fe05">  100</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722af3dd1fd7743a65bd6e3c13586068fe05">PCA_CLOCK_SYS_2</a> = 1,</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a39473d4f53e30f8e807f80fe604a4cd5">  102</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a39473d4f53e30f8e807f80fe604a4cd5">PCA_CLOCK_TIMER0</a> = 2,</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722aa2490e7980ded6f2eef2d6e83fdf1b73">  104</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722aa2490e7980ded6f2eef2d6e83fdf1b73">PCA_CLOCK_ECI</a> = 3,</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a1d935cea5c220f4d1ff2f7d4ab4e7ba0">  106</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a1d935cea5c220f4d1ff2f7d4ab4e7ba0">PCA_CLOCK_SYS</a> = 4,</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722abaaed42b306033cc71c3ec34a09e27e6">  108</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722abaaed42b306033cc71c3ec34a09e27e6">PCA_CLOCK_SYS_4</a> = 5,</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a0054641919b53c1dcb5b02203b00fb49">  110</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a0054641919b53c1dcb5b02203b00fb49">PCA_CLOCK_SYS_6</a> = 6,</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <a class="code hl_enumvalue" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722af1e15887708060c617819bbbbbd526a0">PCA_CLOCK_SYS_8</a> = 7</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722af1e15887708060c617819bbbbbd526a0">  113</a></span>} <a class="code hl_enumeration" href="group__pca.html#ga4da2c7294eed6b7c52126059f7ced722">pca_clock_source_t</a>;</div>
 </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="foldopen" id="foldopen00130" data-start="{" data-end="};">
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="group__pca.html#ga2d4771555e692fb16401c24cf363f181">  130</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>{</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="group__pca.html#gga2d4771555e692fb16401c24cf363f181a770cf2bdbedf37fc1213eb9122b29bfd">  133</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga2d4771555e692fb16401c24cf363f181a770cf2bdbedf37fc1213eb9122b29bfd">PCA_PWM_8BIT</a> = 0,</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="group__pca.html#gga2d4771555e692fb16401c24cf363f181a412bc747ee56c3c62f018549947ef83f">  135</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga2d4771555e692fb16401c24cf363f181a412bc747ee56c3c62f018549947ef83f">PCA_PWM_7BIT</a> = 1,</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <a class="code hl_enumvalue" href="group__pca.html#gga2d4771555e692fb16401c24cf363f181a448d94a0f2971b59cd9b06e2491bbdfc">PCA_PWM_6BIT</a> = 2</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="group__pca.html#gga2d4771555e692fb16401c24cf363f181a448d94a0f2971b59cd9b06e2491bbdfc">  138</a></span>} <a class="code hl_enumeration" href="group__pca.html#ga2d4771555e692fb16401c24cf363f181">pca_pwm_resolution_t</a>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="foldopen" id="foldopen00127" data-start="{" data-end="};">
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="group__pca.html#ga2d4771555e692fb16401c24cf363f181">  127</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>{</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="group__pca.html#gga2d4771555e692fb16401c24cf363f181a770cf2bdbedf37fc1213eb9122b29bfd">  130</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga2d4771555e692fb16401c24cf363f181a770cf2bdbedf37fc1213eb9122b29bfd">PCA_PWM_8BIT</a> = 0,</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="group__pca.html#gga2d4771555e692fb16401c24cf363f181a412bc747ee56c3c62f018549947ef83f">  132</a></span>    <a class="code hl_enumvalue" href="group__pca.html#gga2d4771555e692fb16401c24cf363f181a412bc747ee56c3c62f018549947ef83f">PCA_PWM_7BIT</a> = 1,</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <a class="code hl_enumvalue" href="group__pca.html#gga2d4771555e692fb16401c24cf363f181a448d94a0f2971b59cd9b06e2491bbdfc">PCA_PWM_6BIT</a> = 2</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="group__pca.html#gga2d4771555e692fb16401c24cf363f181a448d94a0f2971b59cd9b06e2491bbdfc">  135</a></span>} <a class="code hl_enumeration" href="group__pca.html#ga2d4771555e692fb16401c24cf363f181">pca_pwm_resolution_t</a>;</div>
 </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
-<div class="foldopen" id="foldopen00157" data-start="" data-end="">
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="group__pca.html#ga6039cd93ee20747e25c9f0d061412102">  157</a></span><span class="preprocessor">#define pca_set_pin_group(group)                                       \</span></div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="preprocessor">do {                                                                   \</span></div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="preprocessor">    bit_clr(P_SW1, PCA_CCP_SW_MSK);                                    \</span></div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="preprocessor">    bit_set(P_SW1, (uint8_t)((group) &lt;&lt; PCA_CCP_S0_BIT));              \</span></div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="preprocessor">} while(0)</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="foldopen" id="foldopen00154" data-start="" data-end="">
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="group__pca.html#ga6039cd93ee20747e25c9f0d061412102">  154</a></span><span class="preprocessor">#define pca_set_pin_group(group)                                       \</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="preprocessor">do {                                                                   \</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="preprocessor">    bit_clr(P_SW1, PCA_CCP_SW_MASK);                                    \</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="preprocessor">    bit_set(P_SW1, (uint8_t)((group) &lt;&lt; PCA_CCP_S0_BIT));              \</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="preprocessor">} while(0)</span></div>
 </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="group__pca.html#gad704b1a12c0c88e8e301df637764a822">  170</a></span><span class="preprocessor">#define pca_get_pin_group() ((pca_pin_group_t)(bit_shift_right(get_reg(P_SW1, (PCA_CCP_S0_MSK | PCA_CCP_S1_MSK)), PCA_CCP_S0_BIT)))</span></div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
-<div class="foldopen" id="foldopen00188" data-start="" data-end="">
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="group__pca.html#gaa9622d8aa661fbfd7ff583cc5995caa3">  188</a></span><span class="preprocessor">#define pca_set_clock_source(src)                                      \</span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="preprocessor">do {                                                                   \</span></div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="preprocessor">    bit_clr(CMOD, (uint8_t)(~PCA_CPS_MSK));                            \</span></div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="preprocessor">    bit_set(CMOD, (uint8_t)((src) &lt;&lt; PCA_CPS0_BIT));                   \</span></div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="preprocessor">} while(0)</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="group__pca.html#gad704b1a12c0c88e8e301df637764a822">  167</a></span><span class="preprocessor">#define pca_get_pin_group() ((pca_pin_group_t)(bit_shift_right(get_reg(P_SW1, (PCA_CCP_S0_MSK | PCA_CCP_S1_MSK)), PCA_CCP_S0_BIT)))</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="foldopen" id="foldopen00185" data-start="" data-end="">
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="group__pca.html#gaa9622d8aa661fbfd7ff583cc5995caa3">  185</a></span><span class="preprocessor">#define pca_set_clock_source(src)                                      \</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="preprocessor">do {                                                                   \</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="preprocessor">    bit_clr(CMOD, PCA_CPS_MASK);                                        \</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="preprocessor">    bit_set(CMOD, (uint8_t)((src) &lt;&lt; PCA_CPS0_BIT));                   \</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="preprocessor">} while(0)</span></div>
 </div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="group__pca.html#gae7fb2a9436153d8f684b3f3fad3deeec">  201</a></span><span class="preprocessor">#define pca_get_clock_source() ((pca_clock_source_t)(bit_shift_right(get_reg(CMOD, PCA_CPS_MSK), PCA_CPS0_BIT)))</span></div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
-<div class="foldopen" id="foldopen00211" data-start="" data-end="">
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="group__pca.html#gaacf42af24e1e5a7fe2e0fcebf8887f1a">  211</a></span><span class="preprocessor">#define pca_set_counter(value)                                         \</span></div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="preprocessor">do {                                                                   \</span></div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="preprocessor">    CH = (uint8_t)bit_shift_right((uint16_t)(value), 8);               \</span></div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="preprocessor">    CL = (uint8_t)(value);                                             \</span></div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="preprocessor">} while(0)</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="group__pca.html#gae7fb2a9436153d8f684b3f3fad3deeec">  198</a></span><span class="preprocessor">#define pca_get_clock_source() ((pca_clock_source_t)(bit_shift_right(get_reg(CMOD, PCA_CPS_MASK), PCA_CPS0_BIT)))</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="foldopen" id="foldopen00208" data-start="" data-end="">
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="group__pca.html#gaacf42af24e1e5a7fe2e0fcebf8887f1a">  208</a></span><span class="preprocessor">#define pca_set_counter(value)                                         \</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="preprocessor">do {                                                                   \</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="preprocessor">    CH = (uint8_t)bit_shift_right((uint16_t)(value), 8);               \</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="preprocessor">    CL = (uint8_t)(value);                                             \</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="preprocessor">} while(0)</span></div>
 </div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno"><a class="line" href="group__pca.html#ga66251fd656bad1c2aff8203fe96e1e66">  224</a></span><span class="preprocessor">#define pca_get_counter() ((uint16_t)(bit_shift_left((uint16_t)CH, 8) | (uint16_t)CL))</span></div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno"><a class="line" href="group__pca.html#ga87d710bad873fd36e3764a6faeb713c0">  233</a></span><span class="preprocessor">#define pca_start() (CR = 1)</span></div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno"><a class="line" href="group__pca.html#ga358e08c68e090eebbbd7e09de922a134">  241</a></span><span class="preprocessor">#define pca_stop() (CR = 0)</span></div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="group__pca.html#gaf4c4db056cc0b9103da72d0601f710a6">  250</a></span><span class="preprocessor">#define is_pca_running() (CR)</span></div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="group__pca.html#gaa4e51d16dac177ed5807a2832d3e8ce5">  259</a></span><span class="preprocessor">#define pca_counter_run_in_idle() (bit_clr(CMOD, CBIT7))</span></div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="group__pca.html#gaa5024ebf824c3d288cddfa89c9191f5d">  267</a></span><span class="preprocessor">#define pca_counter_gate_off_in_idle() (bit_set(CMOD, SBIT7))</span></div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno"><a class="line" href="group__pca.html#ga671fa22bd16e4633123b0dddafed66b7">  276</a></span><span class="preprocessor">#define is_pca_counter_gated_off_in_idle() (test_if_bit_set(CMOD, SBIT7))</span></div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span> </div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno"><a class="line" href="group__pca.html#ga7ec45d3b919ea57cbae89da447739e03">  291</a></span><span class="preprocessor">#define pca_clear_overflow_flag() (CF = 0)</span></div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno"><a class="line" href="group__pca.html#ga94425d29b99d49383c0dd21af0950805">  300</a></span><span class="preprocessor">#define is_pca_overflow() (CF)</span></div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno"><a class="line" href="group__pca.html#ga991d2019b99d1160f922f452bb68a211">  310</a></span><span class="preprocessor">#define pca_enable_overflow_interrupt() (bit_set(CMOD, SBIT0))</span></div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno"><a class="line" href="group__pca.html#ga8e54278b3a59d21d2ef312ff4efa06da">  318</a></span><span class="preprocessor">#define pca_disable_overflow_interrupt() (bit_clr(CMOD, CBIT0))</span></div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno"><a class="line" href="group__pca.html#ga415ea9e8c246b04294fbd0ebb6d47f94">  327</a></span><span class="preprocessor">#define is_pca_overflow_interrupt_enabled() (test_if_bit_set(CMOD, SBIT0))</span></div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno"><a class="line" href="group__pca.html#gaa858ed2a456ab6e0b750705f81817d34">  345</a></span><span class="preprocessor">#define pca_clear_module_flag(module) (CCF ## module = 0)</span></div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno"><a class="line" href="group__pca.html#gaaf3c1392de14c66755203d7930343397">  357</a></span><span class="preprocessor">#define is_pca_module_flag_set(module) (CCF ## module)</span></div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span> </div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno"><a class="line" href="group__pca.html#ga294f4b079ed0f079eb35d90bc21d9cc5">  369</a></span><span class="preprocessor">#define pca_module_enable_interrupt(module) (bit_set(CCAPM ## module, SBIT0))</span></div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span> </div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno"><a class="line" href="group__pca.html#gad0a73990b08f2412d97a6720980c4b6b">  379</a></span><span class="preprocessor">#define pca_module_disable_interrupt(module) (bit_clr(CCAPM ## module, CBIT0))</span></div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span> </div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno"><a class="line" href="group__pca.html#gacd825c22603e0d779e48d8ba9d36b153">  390</a></span><span class="preprocessor">#define is_pca_module_interrupt_enabled(module) (test_if_bit_set(CCAPM ## module, SBIT0))</span></div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span> </div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span> </div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span> </div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno"><a class="line" href="group__pca.html#ga1b127ff7b37078e68c28b1bd4de2e68c">  408</a></span><span class="preprocessor">#define pca_module_enable_comparator(module) (bit_set(CCAPM ## module, SBIT6))</span></div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span> </div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno"><a class="line" href="group__pca.html#gaf20ccfe9826219c6a184df48e4fcdee4">  418</a></span><span class="preprocessor">#define pca_module_disable_comparator(module) (bit_clr(CCAPM ## module, CBIT6))</span></div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span> </div>
-<div class="line"><a id="l00429" name="l00429"></a><span class="lineno"><a class="line" href="group__pca.html#gab9ddd87334d3688567266d53b420aed1">  429</a></span><span class="preprocessor">#define pca_module_enable_capture_positive(module) (bit_set(CCAPM ## module, SBIT5))</span></div>
-<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span> </div>
-<div class="line"><a id="l00439" name="l00439"></a><span class="lineno"><a class="line" href="group__pca.html#gab3cdc85cbca173bf4565a5945960f4e3">  439</a></span><span class="preprocessor">#define pca_module_disable_capture_positive(module) (bit_clr(CCAPM ## module, CBIT5))</span></div>
-<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span> </div>
-<div class="line"><a id="l00450" name="l00450"></a><span class="lineno"><a class="line" href="group__pca.html#gaf19bbf7499a48ff56404ce51a5db3fa9">  450</a></span><span class="preprocessor">#define pca_module_enable_capture_negative(module) (bit_set(CCAPM ## module, SBIT4))</span></div>
-<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span> </div>
-<div class="line"><a id="l00460" name="l00460"></a><span class="lineno"><a class="line" href="group__pca.html#gafb2c3852053b736e9c73d6de6b7b6d54">  460</a></span><span class="preprocessor">#define pca_module_disable_capture_negative(module) (bit_clr(CCAPM ## module, CBIT4))</span></div>
-<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span> </div>
-<div class="line"><a id="l00471" name="l00471"></a><span class="lineno"><a class="line" href="group__pca.html#ga63460eecba80ddf00e2f85768dd74198">  471</a></span><span class="preprocessor">#define pca_module_enable_match(module) (bit_set(CCAPM ## module, SBIT3))</span></div>
-<div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span> </div>
-<div class="line"><a id="l00481" name="l00481"></a><span class="lineno"><a class="line" href="group__pca.html#ga1e871009751b63314c49198e6a0d0e53">  481</a></span><span class="preprocessor">#define pca_module_disable_match(module) (bit_clr(CCAPM ## module, CBIT3))</span></div>
-<div class="line"><a id="l00482" name="l00482"></a><span class="lineno">  482</span> </div>
-<div class="line"><a id="l00492" name="l00492"></a><span class="lineno"><a class="line" href="group__pca.html#gad53608651b6994ea3c17d51d692fdad8">  492</a></span><span class="preprocessor">#define pca_module_enable_toggle(module) (bit_set(CCAPM ## module, SBIT2))</span></div>
-<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span> </div>
-<div class="line"><a id="l00502" name="l00502"></a><span class="lineno"><a class="line" href="group__pca.html#ga8cf297c0eac0d6633503361876a4437f">  502</a></span><span class="preprocessor">#define pca_module_disable_toggle(module) (bit_clr(CCAPM ## module, CBIT2))</span></div>
-<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span> </div>
-<div class="foldopen" id="foldopen00514" data-start="" data-end="">
-<div class="line"><a id="l00514" name="l00514"></a><span class="lineno"><a class="line" href="group__pca.html#ga73f0ad822656a5ce934dfca02e9ced29">  514</a></span><span class="preprocessor">#define pca_module_set_compare(module, value)                          \</span></div>
-<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span><span class="preprocessor">do {                                                                   \</span></div>
-<div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span><span class="preprocessor">    CCAP ## module ## H = (uint8_t)bit_shift_right((uint16_t)(value), 8); \</span></div>
-<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span><span class="preprocessor">    CCAP ## module ## L = (uint8_t)(value);                            \</span></div>
-<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span><span class="preprocessor">} while(0)</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="group__pca.html#ga66251fd656bad1c2aff8203fe96e1e66">  221</a></span><span class="preprocessor">#define pca_get_counter() ((uint16_t)(bit_shift_left((uint16_t)CH, 8) | (uint16_t)CL))</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="group__pca.html#ga87d710bad873fd36e3764a6faeb713c0">  230</a></span><span class="preprocessor">#define pca_start() (CR = 1)</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="group__pca.html#ga358e08c68e090eebbbd7e09de922a134">  238</a></span><span class="preprocessor">#define pca_stop() (CR = 0)</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno"><a class="line" href="group__pca.html#gaf4c4db056cc0b9103da72d0601f710a6">  247</a></span><span class="preprocessor">#define is_pca_running() (CR)</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno"><a class="line" href="group__pca.html#gaa4e51d16dac177ed5807a2832d3e8ce5">  256</a></span><span class="preprocessor">#define pca_counter_run_in_idle() (bit_clr(CMOD,SBIT7))</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno"><a class="line" href="group__pca.html#gaa5024ebf824c3d288cddfa89c9191f5d">  264</a></span><span class="preprocessor">#define pca_counter_gate_off_in_idle() (bit_set(CMOD, SBIT7))</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno"><a class="line" href="group__pca.html#ga671fa22bd16e4633123b0dddafed66b7">  273</a></span><span class="preprocessor">#define is_pca_counter_gated_off_in_idle() (test_if_bit_set(CMOD, SBIT7))</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno"><a class="line" href="group__pca.html#ga7ec45d3b919ea57cbae89da447739e03">  288</a></span><span class="preprocessor">#define pca_clear_overflow_flag() (CF = 0)</span></div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno"><a class="line" href="group__pca.html#ga94425d29b99d49383c0dd21af0950805">  297</a></span><span class="preprocessor">#define is_pca_overflow() (CF)</span></div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno"><a class="line" href="group__pca.html#ga991d2019b99d1160f922f452bb68a211">  307</a></span><span class="preprocessor">#define pca_enable_overflow_interrupt() (bit_set(CMOD, SBIT0))</span></div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno"><a class="line" href="group__pca.html#ga8e54278b3a59d21d2ef312ff4efa06da">  315</a></span><span class="preprocessor">#define pca_disable_overflow_interrupt() (bit_clr(CMOD, SBIT0))</span></div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno"><a class="line" href="group__pca.html#ga415ea9e8c246b04294fbd0ebb6d47f94">  324</a></span><span class="preprocessor">#define is_pca_overflow_interrupt_enabled() (test_if_bit_set(CMOD, SBIT0))</span></div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno"><a class="line" href="group__pca.html#gaa858ed2a456ab6e0b750705f81817d34">  342</a></span><span class="preprocessor">#define pca_clear_module_flag(module) (CCF ## module = 0)</span></div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span> </div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno"><a class="line" href="group__pca.html#gaaf3c1392de14c66755203d7930343397">  354</a></span><span class="preprocessor">#define is_pca_module_flag_set(module) (CCF ## module)</span></div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno"><a class="line" href="group__pca.html#ga294f4b079ed0f079eb35d90bc21d9cc5">  366</a></span><span class="preprocessor">#define pca_module_enable_interrupt(module) (bit_set(CCAPM ## module, SBIT0))</span></div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span> </div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno"><a class="line" href="group__pca.html#gad0a73990b08f2412d97a6720980c4b6b">  376</a></span><span class="preprocessor">#define pca_module_disable_interrupt(module) (bit_clr(CCAPM ## module, SBIT0))</span></div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno"><a class="line" href="group__pca.html#gacd825c22603e0d779e48d8ba9d36b153">  387</a></span><span class="preprocessor">#define is_pca_module_interrupt_enabled(module) (test_if_bit_set(CCAPM ## module, SBIT0))</span></div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span> </div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span> </div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span> </div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno"><a class="line" href="group__pca.html#ga1b127ff7b37078e68c28b1bd4de2e68c">  405</a></span><span class="preprocessor">#define pca_module_enable_comparator(module) (bit_set(CCAPM ## module, SBIT6))</span></div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span> </div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno"><a class="line" href="group__pca.html#gaf20ccfe9826219c6a184df48e4fcdee4">  415</a></span><span class="preprocessor">#define pca_module_disable_comparator(module) (bit_clr(CCAPM ## module, SBIT6))</span></div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span> </div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno"><a class="line" href="group__pca.html#gab9ddd87334d3688567266d53b420aed1">  426</a></span><span class="preprocessor">#define pca_module_enable_capture_positive(module) (bit_set(CCAPM ## module, SBIT5))</span></div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span> </div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno"><a class="line" href="group__pca.html#gab3cdc85cbca173bf4565a5945960f4e3">  436</a></span><span class="preprocessor">#define pca_module_disable_capture_positive(module) (bit_clr(CCAPM ## module, SBIT5))</span></div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span> </div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno"><a class="line" href="group__pca.html#gaf19bbf7499a48ff56404ce51a5db3fa9">  447</a></span><span class="preprocessor">#define pca_module_enable_capture_negative(module) (bit_set(CCAPM ## module, SBIT4))</span></div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span> </div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno"><a class="line" href="group__pca.html#gafb2c3852053b736e9c73d6de6b7b6d54">  457</a></span><span class="preprocessor">#define pca_module_disable_capture_negative(module) (bit_clr(CCAPM ## module, SBIT4))</span></div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span> </div>
+<div class="line"><a id="l00468" name="l00468"></a><span class="lineno"><a class="line" href="group__pca.html#ga63460eecba80ddf00e2f85768dd74198">  468</a></span><span class="preprocessor">#define pca_module_enable_match(module) (bit_set(CCAPM ## module, SBIT3))</span></div>
+<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span> </div>
+<div class="line"><a id="l00478" name="l00478"></a><span class="lineno"><a class="line" href="group__pca.html#ga1e871009751b63314c49198e6a0d0e53">  478</a></span><span class="preprocessor">#define pca_module_disable_match(module) (bit_clr(CCAPM ## module, SBIT3))</span></div>
+<div class="line"><a id="l00479" name="l00479"></a><span class="lineno">  479</span> </div>
+<div class="line"><a id="l00489" name="l00489"></a><span class="lineno"><a class="line" href="group__pca.html#gad53608651b6994ea3c17d51d692fdad8">  489</a></span><span class="preprocessor">#define pca_module_enable_toggle(module) (bit_set(CCAPM ## module, SBIT2))</span></div>
+<div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span> </div>
+<div class="line"><a id="l00499" name="l00499"></a><span class="lineno"><a class="line" href="group__pca.html#ga8cf297c0eac0d6633503361876a4437f">  499</a></span><span class="preprocessor">#define pca_module_disable_toggle(module) (bit_clr(CCAPM ## module, SBIT2))</span></div>
+<div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span> </div>
+<div class="foldopen" id="foldopen00511" data-start="" data-end="">
+<div class="line"><a id="l00511" name="l00511"></a><span class="lineno"><a class="line" href="group__pca.html#ga73f0ad822656a5ce934dfca02e9ced29">  511</a></span><span class="preprocessor">#define pca_module_set_compare(module, value)                          \</span></div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span><span class="preprocessor">do {                                                                   \</span></div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span><span class="preprocessor">    CCAP ## module ## H = (uint8_t)bit_shift_right((uint16_t)(value), 8); \</span></div>
+<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span><span class="preprocessor">    CCAP ## module ## L = (uint8_t)(value);                            \</span></div>
+<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span><span class="preprocessor">} while(0)</span></div>
 </div>
-<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span> </div>
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno"><a class="line" href="group__pca.html#ga7e97ab8c7929e5c99cf8dba213595133">  538</a></span><span class="preprocessor">#define pca_module_get_capture(module) ((uint16_t)(bit_shift_left((uint16_t)CCAP ## module ## H, 8) | (uint16_t)CCAP ## module ## L))</span></div>
-<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span> </div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span> </div>
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span> </div>
-<div class="foldopen" id="foldopen00564" data-start="" data-end="">
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno"><a class="line" href="group__pca.html#gaf95da58d82e058f56b6e47def1403c91">  564</a></span><span class="preprocessor">#define pca_module_pwm_init(module, resolution)                        \</span></div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span><span class="preprocessor">do {                                                                   \</span></div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span><span class="preprocessor">    bit_clr(PCA_PWM ## module, (uint8_t)(~PCA_PWM_EBS_MSK));           \</span></div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span><span class="preprocessor">    bit_set(PCA_PWM ## module, (uint8_t)((resolution) &lt;&lt; PCA_PWM_EBS0_BIT)); \</span></div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span><span class="preprocessor">    bit_set(CCAPM ## module, SBIT1);                                   \</span></div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span><span class="preprocessor">} while(0)</span></div>
+<div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span> </div>
+<div class="line"><a id="l00535" name="l00535"></a><span class="lineno"><a class="line" href="group__pca.html#ga7e97ab8c7929e5c99cf8dba213595133">  535</a></span><span class="preprocessor">#define pca_module_get_capture(module) ((uint16_t)(bit_shift_left((uint16_t)CCAP ## module ## H, 8) | (uint16_t)CCAP ## module ## L))</span></div>
+<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span> </div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span> </div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span> </div>
+<div class="foldopen" id="foldopen00561" data-start="" data-end="">
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno"><a class="line" href="group__pca.html#gaf95da58d82e058f56b6e47def1403c91">  561</a></span><span class="preprocessor">#define pca_module_pwm_init(module, resolution)                        \</span></div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span><span class="preprocessor">do {                                                                   \</span></div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span><span class="preprocessor">    bit_clr(PCA_PWM ## module, PCA_PWM_EBS_MASK);                       \</span></div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span><span class="preprocessor">    bit_set(PCA_PWM ## module, (uint8_t)((resolution) &lt;&lt; PCA_PWM_EBS0_BIT)); \</span></div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span><span class="preprocessor">    bit_set(CCAPM ## module, SBIT1);                                   \</span></div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span><span class="preprocessor">} while(0)</span></div>
 </div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span> </div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno"><a class="line" href="group__pca.html#ga553540e75350729842a68fa875d9fd02">  579</a></span><span class="preprocessor">#define pca_module_pwm_disable(module) (bit_clr(CCAPM ## module, CBIT1))</span></div>
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span> </div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno"><a class="line" href="group__pca.html#ga4265b7ed7db1e58b3024dcd5e99a3e23">  590</a></span><span class="preprocessor">#define is_pca_module_pwm_enabled(module) (test_if_bit_set(CCAPM ## module, SBIT1))</span></div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span> </div>
-<div class="foldopen" id="foldopen00606" data-start="" data-end="">
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno"><a class="line" href="group__pca.html#ga730fc2458811de7558079fc34fc9de76">  606</a></span><span class="preprocessor">#define pca_module_pwm_set_duty(module, duty)                          \</span></div>
-<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span><span class="preprocessor">do {                                                                   \</span></div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span><span class="preprocessor">    CCAP ## module ## H = (uint8_t)(duty);                             \</span></div>
-<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span><span class="preprocessor">    CCAP ## module ## L = (uint8_t)(duty);                             \</span></div>
-<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span><span class="preprocessor">} while(0)</span></div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span> </div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno"><a class="line" href="group__pca.html#ga553540e75350729842a68fa875d9fd02">  576</a></span><span class="preprocessor">#define pca_module_pwm_disable(module) (bit_clr(CCAPM ## module, SBIT1))</span></div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span> </div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno"><a class="line" href="group__pca.html#ga4265b7ed7db1e58b3024dcd5e99a3e23">  587</a></span><span class="preprocessor">#define is_pca_module_pwm_enabled(module) (test_if_bit_set(CCAPM ## module, SBIT1))</span></div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span> </div>
+<div class="foldopen" id="foldopen00603" data-start="" data-end="">
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno"><a class="line" href="group__pca.html#ga730fc2458811de7558079fc34fc9de76">  603</a></span><span class="preprocessor">#define pca_module_pwm_set_duty(module, duty)                          \</span></div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span><span class="preprocessor">do {                                                                   \</span></div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span><span class="preprocessor">    CCAP ## module ## H = (uint8_t)(duty);                             \</span></div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span><span class="preprocessor">    CCAP ## module ## L = (uint8_t)(duty);                             \</span></div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span><span class="preprocessor">} while(0)</span></div>
 </div>
-<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span> </div>
-<div class="line"><a id="l00623" name="l00623"></a><span class="lineno"><a class="line" href="group__pca.html#gaaebc97f5ff0c978c9d8b8eab1e8dbc3b">  623</a></span><span class="preprocessor">#define pca_module_pwm_set_duty_on_overflow(module, duty) (CCAP ## module ## H = (uint8_t)(duty))</span></div>
-<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span> </div>
-<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span> </div>
-<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="agroup__pca_html_ga2d4771555e692fb16401c24cf363f181"><div class="ttname"><a href="group__pca.html#ga2d4771555e692fb16401c24cf363f181">pca_pwm_resolution_t</a></div><div class="ttdeci">pca_pwm_resolution_t</div><div class="ttdoc">PCA module PWM output resolution.</div><div class="ttdef"><b>Definition</b> pca.h:131</div></div>
-<div class="ttc" id="agroup__pca_html_ga4da2c7294eed6b7c52126059f7ced722"><div class="ttname"><a href="group__pca.html#ga4da2c7294eed6b7c52126059f7ced722">pca_clock_source_t</a></div><div class="ttdeci">pca_clock_source_t</div><div class="ttdoc">PCA counter clock source.</div><div class="ttdef"><b>Definition</b> pca.h:99</div></div>
-<div class="ttc" id="agroup__pca_html_ga84c22d1dae3bc179af9070eb52382c95"><div class="ttname"><a href="group__pca.html#ga84c22d1dae3bc179af9070eb52382c95">pca_pin_group_t</a></div><div class="ttdeci">pca_pin_group_t</div><div class="ttdoc">PCA pin group.</div><div class="ttdef"><b>Definition</b> pca.h:81</div></div>
-<div class="ttc" id="agroup__pca_html_gga2d4771555e692fb16401c24cf363f181a412bc747ee56c3c62f018549947ef83f"><div class="ttname"><a href="group__pca.html#gga2d4771555e692fb16401c24cf363f181a412bc747ee56c3c62f018549947ef83f">PCA_PWM_7BIT</a></div><div class="ttdeci">@ PCA_PWM_7BIT</div><div class="ttdef"><b>Definition</b> pca.h:135</div></div>
-<div class="ttc" id="agroup__pca_html_gga2d4771555e692fb16401c24cf363f181a448d94a0f2971b59cd9b06e2491bbdfc"><div class="ttname"><a href="group__pca.html#gga2d4771555e692fb16401c24cf363f181a448d94a0f2971b59cd9b06e2491bbdfc">PCA_PWM_6BIT</a></div><div class="ttdeci">@ PCA_PWM_6BIT</div><div class="ttdef"><b>Definition</b> pca.h:137</div></div>
-<div class="ttc" id="agroup__pca_html_gga2d4771555e692fb16401c24cf363f181a770cf2bdbedf37fc1213eb9122b29bfd"><div class="ttname"><a href="group__pca.html#gga2d4771555e692fb16401c24cf363f181a770cf2bdbedf37fc1213eb9122b29bfd">PCA_PWM_8BIT</a></div><div class="ttdeci">@ PCA_PWM_8BIT</div><div class="ttdef"><b>Definition</b> pca.h:133</div></div>
-<div class="ttc" id="agroup__pca_html_gga4da2c7294eed6b7c52126059f7ced722a0054641919b53c1dcb5b02203b00fb49"><div class="ttname"><a href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a0054641919b53c1dcb5b02203b00fb49">PCA_CLOCK_SYS_6</a></div><div class="ttdeci">@ PCA_CLOCK_SYS_6</div><div class="ttdef"><b>Definition</b> pca.h:113</div></div>
-<div class="ttc" id="agroup__pca_html_gga4da2c7294eed6b7c52126059f7ced722a1d935cea5c220f4d1ff2f7d4ab4e7ba0"><div class="ttname"><a href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a1d935cea5c220f4d1ff2f7d4ab4e7ba0">PCA_CLOCK_SYS</a></div><div class="ttdeci">@ PCA_CLOCK_SYS</div><div class="ttdef"><b>Definition</b> pca.h:109</div></div>
-<div class="ttc" id="agroup__pca_html_gga4da2c7294eed6b7c52126059f7ced722a39473d4f53e30f8e807f80fe604a4cd5"><div class="ttname"><a href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a39473d4f53e30f8e807f80fe604a4cd5">PCA_CLOCK_TIMER0</a></div><div class="ttdeci">@ PCA_CLOCK_TIMER0</div><div class="ttdef"><b>Definition</b> pca.h:105</div></div>
-<div class="ttc" id="agroup__pca_html_gga4da2c7294eed6b7c52126059f7ced722a5ff24da099623298b9c81be2774fa1a8"><div class="ttname"><a href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a5ff24da099623298b9c81be2774fa1a8">PCA_CLOCK_SYS_12</a></div><div class="ttdeci">@ PCA_CLOCK_SYS_12</div><div class="ttdef"><b>Definition</b> pca.h:101</div></div>
-<div class="ttc" id="agroup__pca_html_gga4da2c7294eed6b7c52126059f7ced722aa2490e7980ded6f2eef2d6e83fdf1b73"><div class="ttname"><a href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722aa2490e7980ded6f2eef2d6e83fdf1b73">PCA_CLOCK_ECI</a></div><div class="ttdeci">@ PCA_CLOCK_ECI</div><div class="ttdef"><b>Definition</b> pca.h:107</div></div>
-<div class="ttc" id="agroup__pca_html_gga4da2c7294eed6b7c52126059f7ced722abaaed42b306033cc71c3ec34a09e27e6"><div class="ttname"><a href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722abaaed42b306033cc71c3ec34a09e27e6">PCA_CLOCK_SYS_4</a></div><div class="ttdeci">@ PCA_CLOCK_SYS_4</div><div class="ttdef"><b>Definition</b> pca.h:111</div></div>
-<div class="ttc" id="agroup__pca_html_gga4da2c7294eed6b7c52126059f7ced722af1e15887708060c617819bbbbbd526a0"><div class="ttname"><a href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722af1e15887708060c617819bbbbbd526a0">PCA_CLOCK_SYS_8</a></div><div class="ttdeci">@ PCA_CLOCK_SYS_8</div><div class="ttdef"><b>Definition</b> pca.h:115</div></div>
-<div class="ttc" id="agroup__pca_html_gga4da2c7294eed6b7c52126059f7ced722af3dd1fd7743a65bd6e3c13586068fe05"><div class="ttname"><a href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722af3dd1fd7743a65bd6e3c13586068fe05">PCA_CLOCK_SYS_2</a></div><div class="ttdeci">@ PCA_CLOCK_SYS_2</div><div class="ttdef"><b>Definition</b> pca.h:103</div></div>
-<div class="ttc" id="agroup__pca_html_gga84c22d1dae3bc179af9070eb52382c95a098b2eadf460bb52fcae8e32d7fd82a2"><div class="ttname"><a href="group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a098b2eadf460bb52fcae8e32d7fd82a2">PCA_PIN_GROUP_1</a></div><div class="ttdeci">@ PCA_PIN_GROUP_1</div><div class="ttdef"><b>Definition</b> pca.h:83</div></div>
-<div class="ttc" id="agroup__pca_html_gga84c22d1dae3bc179af9070eb52382c95a2c1db768e11447a6a580fcfd5512325c"><div class="ttname"><a href="group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a2c1db768e11447a6a580fcfd5512325c">PCA_PIN_GROUP_2</a></div><div class="ttdeci">@ PCA_PIN_GROUP_2</div><div class="ttdef"><b>Definition</b> pca.h:85</div></div>
-<div class="ttc" id="agroup__pca_html_gga84c22d1dae3bc179af9070eb52382c95a5b6307074916e94fae9a231101a2e802"><div class="ttname"><a href="group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a5b6307074916e94fae9a231101a2e802">PCA_PIN_GROUP_3</a></div><div class="ttdeci">@ PCA_PIN_GROUP_3</div><div class="ttdef"><b>Definition</b> pca.h:87</div></div>
-<div class="ttc" id="asys_8h_html"><div class="ttname"><a href="sys_8h.html">sys.h</a></div></div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span> </div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno"><a class="line" href="group__pca.html#gaaebc97f5ff0c978c9d8b8eab1e8dbc3b">  620</a></span><span class="preprocessor">#define pca_module_pwm_set_duty_on_overflow(module, duty) (CCAP ## module ## H = (uint8_t)(duty))</span></div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span> </div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span> </div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__pca_html_ga2d4771555e692fb16401c24cf363f181"><div class="ttname"><a href="group__pca.html#ga2d4771555e692fb16401c24cf363f181">pca_pwm_resolution_t</a></div><div class="ttdeci">pca_pwm_resolution_t</div><div class="ttdoc">PCA module PWM output resolution.</div><div class="ttdef"><b>Definition</b> pca.h:128</div></div>
+<div class="ttc" id="agroup__pca_html_ga4da2c7294eed6b7c52126059f7ced722"><div class="ttname"><a href="group__pca.html#ga4da2c7294eed6b7c52126059f7ced722">pca_clock_source_t</a></div><div class="ttdeci">pca_clock_source_t</div><div class="ttdoc">PCA counter clock source.</div><div class="ttdef"><b>Definition</b> pca.h:96</div></div>
+<div class="ttc" id="agroup__pca_html_ga84c22d1dae3bc179af9070eb52382c95"><div class="ttname"><a href="group__pca.html#ga84c22d1dae3bc179af9070eb52382c95">pca_pin_group_t</a></div><div class="ttdeci">pca_pin_group_t</div><div class="ttdoc">PCA pin group.</div><div class="ttdef"><b>Definition</b> pca.h:78</div></div>
+<div class="ttc" id="agroup__pca_html_gga2d4771555e692fb16401c24cf363f181a412bc747ee56c3c62f018549947ef83f"><div class="ttname"><a href="group__pca.html#gga2d4771555e692fb16401c24cf363f181a412bc747ee56c3c62f018549947ef83f">PCA_PWM_7BIT</a></div><div class="ttdeci">@ PCA_PWM_7BIT</div><div class="ttdef"><b>Definition</b> pca.h:132</div></div>
+<div class="ttc" id="agroup__pca_html_gga2d4771555e692fb16401c24cf363f181a448d94a0f2971b59cd9b06e2491bbdfc"><div class="ttname"><a href="group__pca.html#gga2d4771555e692fb16401c24cf363f181a448d94a0f2971b59cd9b06e2491bbdfc">PCA_PWM_6BIT</a></div><div class="ttdeci">@ PCA_PWM_6BIT</div><div class="ttdef"><b>Definition</b> pca.h:134</div></div>
+<div class="ttc" id="agroup__pca_html_gga2d4771555e692fb16401c24cf363f181a770cf2bdbedf37fc1213eb9122b29bfd"><div class="ttname"><a href="group__pca.html#gga2d4771555e692fb16401c24cf363f181a770cf2bdbedf37fc1213eb9122b29bfd">PCA_PWM_8BIT</a></div><div class="ttdeci">@ PCA_PWM_8BIT</div><div class="ttdef"><b>Definition</b> pca.h:130</div></div>
+<div class="ttc" id="agroup__pca_html_gga4da2c7294eed6b7c52126059f7ced722a0054641919b53c1dcb5b02203b00fb49"><div class="ttname"><a href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a0054641919b53c1dcb5b02203b00fb49">PCA_CLOCK_SYS_6</a></div><div class="ttdeci">@ PCA_CLOCK_SYS_6</div><div class="ttdef"><b>Definition</b> pca.h:110</div></div>
+<div class="ttc" id="agroup__pca_html_gga4da2c7294eed6b7c52126059f7ced722a1d935cea5c220f4d1ff2f7d4ab4e7ba0"><div class="ttname"><a href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a1d935cea5c220f4d1ff2f7d4ab4e7ba0">PCA_CLOCK_SYS</a></div><div class="ttdeci">@ PCA_CLOCK_SYS</div><div class="ttdef"><b>Definition</b> pca.h:106</div></div>
+<div class="ttc" id="agroup__pca_html_gga4da2c7294eed6b7c52126059f7ced722a39473d4f53e30f8e807f80fe604a4cd5"><div class="ttname"><a href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a39473d4f53e30f8e807f80fe604a4cd5">PCA_CLOCK_TIMER0</a></div><div class="ttdeci">@ PCA_CLOCK_TIMER0</div><div class="ttdef"><b>Definition</b> pca.h:102</div></div>
+<div class="ttc" id="agroup__pca_html_gga4da2c7294eed6b7c52126059f7ced722a5ff24da099623298b9c81be2774fa1a8"><div class="ttname"><a href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722a5ff24da099623298b9c81be2774fa1a8">PCA_CLOCK_SYS_12</a></div><div class="ttdeci">@ PCA_CLOCK_SYS_12</div><div class="ttdef"><b>Definition</b> pca.h:98</div></div>
+<div class="ttc" id="agroup__pca_html_gga4da2c7294eed6b7c52126059f7ced722aa2490e7980ded6f2eef2d6e83fdf1b73"><div class="ttname"><a href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722aa2490e7980ded6f2eef2d6e83fdf1b73">PCA_CLOCK_ECI</a></div><div class="ttdeci">@ PCA_CLOCK_ECI</div><div class="ttdef"><b>Definition</b> pca.h:104</div></div>
+<div class="ttc" id="agroup__pca_html_gga4da2c7294eed6b7c52126059f7ced722abaaed42b306033cc71c3ec34a09e27e6"><div class="ttname"><a href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722abaaed42b306033cc71c3ec34a09e27e6">PCA_CLOCK_SYS_4</a></div><div class="ttdeci">@ PCA_CLOCK_SYS_4</div><div class="ttdef"><b>Definition</b> pca.h:108</div></div>
+<div class="ttc" id="agroup__pca_html_gga4da2c7294eed6b7c52126059f7ced722af1e15887708060c617819bbbbbd526a0"><div class="ttname"><a href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722af1e15887708060c617819bbbbbd526a0">PCA_CLOCK_SYS_8</a></div><div class="ttdeci">@ PCA_CLOCK_SYS_8</div><div class="ttdef"><b>Definition</b> pca.h:112</div></div>
+<div class="ttc" id="agroup__pca_html_gga4da2c7294eed6b7c52126059f7ced722af3dd1fd7743a65bd6e3c13586068fe05"><div class="ttname"><a href="group__pca.html#gga4da2c7294eed6b7c52126059f7ced722af3dd1fd7743a65bd6e3c13586068fe05">PCA_CLOCK_SYS_2</a></div><div class="ttdeci">@ PCA_CLOCK_SYS_2</div><div class="ttdef"><b>Definition</b> pca.h:100</div></div>
+<div class="ttc" id="agroup__pca_html_gga84c22d1dae3bc179af9070eb52382c95a098b2eadf460bb52fcae8e32d7fd82a2"><div class="ttname"><a href="group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a098b2eadf460bb52fcae8e32d7fd82a2">PCA_PIN_GROUP_1</a></div><div class="ttdeci">@ PCA_PIN_GROUP_1</div><div class="ttdef"><b>Definition</b> pca.h:80</div></div>
+<div class="ttc" id="agroup__pca_html_gga84c22d1dae3bc179af9070eb52382c95a2c1db768e11447a6a580fcfd5512325c"><div class="ttname"><a href="group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a2c1db768e11447a6a580fcfd5512325c">PCA_PIN_GROUP_2</a></div><div class="ttdeci">@ PCA_PIN_GROUP_2</div><div class="ttdef"><b>Definition</b> pca.h:82</div></div>
+<div class="ttc" id="agroup__pca_html_gga84c22d1dae3bc179af9070eb52382c95a5b6307074916e94fae9a231101a2e802"><div class="ttname"><a href="group__pca.html#gga84c22d1dae3bc179af9070eb52382c95a5b6307074916e94fae9a231101a2e802">PCA_PIN_GROUP_3</a></div><div class="ttdeci">@ PCA_PIN_GROUP_3</div><div class="ttdef"><b>Definition</b> pca.h:84</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -15,6 +15,8 @@
 
 #include <pca.h>
 #include <interrupt.h>
+#include <stdint.h>
+#include <sys.h>
 
 // LED pin
 #define LED_PIN P10

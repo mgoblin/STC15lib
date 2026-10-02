@@ -12,7 +12,6 @@
 #include <sys.h>
 #include <bits.h>
 #include <stdint.h>
-#include <stdbool.h>
 
 /**
  * @brief Wakeup timer internal clock frequency value high byte address
@@ -128,7 +127,7 @@ static volatile __idata uint8_t * const wirc_l_ptr = (__idata uint8_t *) WIRC_L_
  * @brief Get wakeup timer internal clock frequency
  * 
  * @details wakeup timer internal clock frequency after MCU powerup is placed
- * in RAM __idata 0xf8-0xf9 adresses. 
+ * in RAM __idata 0xf8-0xf9 addresses.
  * 
  * By default SDCC compiler generate firmware part that before main() call
  * clear RAM and 0xf8-0xf9 contains 0x00 values.
@@ -163,12 +162,12 @@ static volatile __idata uint8_t * const wirc_l_ptr = (__idata uint8_t *) WIRC_L_
 /**
  * @brief Clears the low voltage detection flag in the PCON register.
  *
- * This macro clears the low voltage detection flag by resetting bit 5 (CBIT5) 
+ * This macro clears the low voltage detection flag by resetting bit 5
  * of the PCON (Power Control) register. This flag is set when a 
  * low voltage condition is detected, and must be manually cleared by software.
  * 
  * @ingroup power_management
  */
-#define clear_power_low_voltage_flag() (bit_clr(PCON, CBIT5))
+#define clear_power_low_voltage_flag() (bit_clr(PCON, SBIT5))
 
 #endif

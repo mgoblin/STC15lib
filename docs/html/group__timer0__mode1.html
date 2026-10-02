@@ -106,7 +106,7 @@ Macros</h2></td></tr>
 <tr class="memitem:gaeb88246b375114bb0c1dde84746f93c4" id="r_gaeb88246b375114bb0c1dde84746f93c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode1.html#gaeb88246b375114bb0c1dde84746f93c4">timer0_mode1_close_gate</a>()&#160;&#160;&#160;(bit_set(TMOD, SBIT3))</td></tr>
 <tr class="memdesc:gaeb88246b375114bb0c1dde84746f93c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close timer starting gate.  <br /></td></tr>
 <tr class="separator:gaeb88246b375114bb0c1dde84746f93c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga180f0e2bdd045f15b9033937d3d81f7a" id="r_ga180f0e2bdd045f15b9033937d3d81f7a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode1.html#ga180f0e2bdd045f15b9033937d3d81f7a">timer0_mode1_open_gate</a>()&#160;&#160;&#160;(bit_clr(TMOD, CBIT3))</td></tr>
+<tr class="memitem:ga180f0e2bdd045f15b9033937d3d81f7a" id="r_ga180f0e2bdd045f15b9033937d3d81f7a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode1.html#ga180f0e2bdd045f15b9033937d3d81f7a">timer0_mode1_open_gate</a>()&#160;&#160;&#160;(bit_clr(TMOD, SBIT3))</td></tr>
 <tr class="memdesc:ga180f0e2bdd045f15b9033937d3d81f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open timer starting gate.  <br /></td></tr>
 <tr class="separator:ga180f0e2bdd045f15b9033937d3d81f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7f6cceb0066689cb9d212b43417719df" id="r_ga7f6cceb0066689cb9d212b43417719df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode1.html#ga7f6cceb0066689cb9d212b43417719df">is_timer0_mode1_gate_opened</a>()&#160;&#160;&#160;(test_if_bit_cleared(TMOD, SBIT3))</td></tr>
@@ -208,7 +208,7 @@ Macros</h2></td></tr>
 <div class="line">    enable_timer0_interrupt();                          \</div>
 <div class="line">    TMOD &amp;= 0xf0;                                       \</div>
 <div class="line">    bit_set(TMOD, SBIT0);                               \</div>
-<div class="line">    bit_clr(AUXR, CBIT7);                               \</div>
+<div class="line">    bit_clr(AUXR, SBIT7);                               \</div>
 <div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Initialize mode1 12T for timer0. </p>
@@ -358,7 +358,7 @@ Macros</h2></td></tr>
           <td class="memname">#define timer0_mode1_open_gate</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_clr(TMOD, CBIT3))</td>
+          <td>&#160;&#160;&#160;(bit_clr(TMOD, SBIT3))</td>
         </tr>
       </table>
 </div><div class="memdoc">

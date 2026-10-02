@@ -158,7 +158,7 @@ do {                                            \
  * 
  * @ingroup counter0_mode3
  */
-#define counter0_mode3_disable_P35_output()   (bit_clr(INT_CLKO, CBIT0))
+#define counter0_mode3_disable_P35_output()   (bit_clr(INT_CLKO, SBIT0))
 
 /**
  * @brief get pin P3.5 output state to P3.5
@@ -178,7 +178,7 @@ do {                                            \
  * 
  * @ingroup counter0_mode3
  */
-#define counter0_mode3_open_gate() (bit_clr(TMOD, CBIT3))
+#define counter0_mode3_open_gate() (bit_clr(TMOD, SBIT3))
 
 /**
  * @brief Close counter0 gate.

@@ -70,7 +70,7 @@ var searchData=
   ['is_5fpin_5fmode_5finput_5fonly_67',['is_pin_mode_input_only',['../group__gpio.html#ga3c965893e34bbd35c674a74c16fcbbee',1,'gpio.h']]],
   ['is_5fpin_5fmode_5fopen_5fdrain_68',['is_pin_mode_open_drain',['../group__gpio.html#gae99dd668582e93526f0305c36bf58bcc',1,'gpio.h']]],
   ['is_5fpin_5fmode_5fpush_5fpull_69',['is_pin_mode_push_pull',['../group__gpio.html#ga5393080f6642943ff3dad636e34ba999',1,'gpio.h']]],
-  ['is_5fpin_5fmode_5fquasi_5fbidiretional_70',['is_pin_mode_quasi_bidiretional',['../group__gpio.html#ga1ce65960da81e2096cef7951b22e3f92',1,'gpio.h']]],
+  ['is_5fpin_5fmode_5fquasi_5fbidirectional_70',['is_pin_mode_quasi_bidirectional',['../group__gpio.html#ga1e2389d942f386ec2a0f9408343e3f69',1,'gpio.h']]],
   ['is_5fspi_5fasync_5ftransfer_5fcomplete_71',['is_spi_async_transfer_complete',['../group__spi.html#gaeec9f46975801c15fc3dd3a455f590b1',1,'spi.h']]],
   ['is_5fspi_5fenabled_72',['is_spi_enabled',['../group__spi.html#ga8d0730d1f32e5818a14d1831a9747447',1,'spi.h']]],
   ['is_5fspi_5finterrupt_5fenabled_73',['is_spi_interrupt_enabled',['../group__interrupts.html#ga749a47d315950a06ecd28e89cacec83d',1,'interrupt.h']]],

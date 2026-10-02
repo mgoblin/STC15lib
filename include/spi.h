@@ -45,8 +45,6 @@
 
 #include <sys.h>
 #include <bits.h>
-#include <stdint.h>
-#include <stdbool.h>
 #include <gpio.h>
 
 /**
@@ -101,11 +99,11 @@
 /** @brief P_SW1 register SPI_S0 (SPI pin group select) bit position */
 #define SPI_S0_BIT 2
 /** @brief P_SW1 register SPI_S0 (SPI pin group select) bit mask */
-#define SPI_S0_MSK 0x04
+#define SPI_S0_MASK 0x04
 /** @brief P_SW1 register SPI_S1 (SPI pin group select) bit mask */
-#define SPI_S1_MSK 0x08
+#define SPI_S1_MASK 0x08
 /** @brief P_SW1 register SPI pin group select bits mask */
-#define SPI_SW_MSK (uint8_t)(~(SPI_S0_MSK | SPI_S1_MSK))
+#define SPI_SW_MASK (SPI_S0_MASK | SPI_S1_MASK)
 
 /**
  * @brief SPI clock rate
@@ -333,7 +331,7 @@ do {                                                                         \
  *
  * @ingroup spi
  */
-#define spi_ss_clr_SPI_PIN_GROUP_1() (bit_clr(P1, CBIT2))
+#define spi_ss_clr_SPI_PIN_GROUP_1() (bit_clr(P1, SBIT2))
 
 /**
  * @brief Pull the SS pin of pin group 1 high
@@ -350,7 +348,7 @@ do {                                                                         \
  *
  * @ingroup spi
  */
-#define spi_ss_clr_SPI_PIN_GROUP_2() (bit_clr(P2, CBIT4))
+#define spi_ss_clr_SPI_PIN_GROUP_2() (bit_clr(P2, SBIT4))
 
 /**
  * @brief Pull the SS pin of pin group 2 high
@@ -369,7 +367,7 @@ do {                                                                         \
  *
  * @ingroup spi
  */
-#define spi_ss_clr_SPI_PIN_GROUP_3() (bit_clr(P5, CBIT4))
+#define spi_ss_clr_SPI_PIN_GROUP_3() (bit_clr(P5, SBIT4))
 
 /**
  * @brief Pull the SS pin of pin group 3 high
@@ -508,7 +506,7 @@ do {                                                                         \
  */
 #define spi_set_pin_group(group)                                             \
 do {                                                                         \
-    bit_clr(P_SW1, SPI_SW_MSK);                                              \
+    bit_clr(P_SW1, SPI_SW_MASK);                                              \
     bit_set(P_SW1, (uint8_t)((group) << SPI_S0_BIT));                        \
 } while(0)
 
@@ -519,7 +517,7 @@ do {                                                                         \
  *
  * @ingroup spi
  */
-#define spi_get_pin_group() ((spi_pin_group_t)(bit_shift_right(get_reg(P_SW1, (SPI_S0_MSK | SPI_S1_MSK)), SPI_S0_BIT)))
+#define spi_get_pin_group() ((spi_pin_group_t)(bit_shift_right(get_reg(P_SW1, (SPI_S0_MASK | SPI_S1_MASK)), SPI_S0_BIT)))
 
 ///@}
 

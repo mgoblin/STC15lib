@@ -100,7 +100,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">    enable_mcu_interrupts();                    \</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">    enable_timer2_interrupt();                  \</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">                                                \</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">    bit_clr(AUXR, CBIT4);                       \</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">    bit_clr(AUXR, SBIT4);                       \</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">    bit_set(AUXR, SBIT3); </span><span class="comment">/* init Counter2 */</span><span class="preprocessor">   \</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">} while(0)</span></div>
 </div>
@@ -118,7 +118,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="foldopen" id="foldopen00088" data-start="" data-end="">
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#gab6d6c1c5304526bf5abe5ff2931b0c2b">   88</a></span><span class="preprocessor">#define counter2_mode0_stop()                   \</span></div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">do {                                            \</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">    bit_clr(AUXR, CBIT4);                       \</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">    bit_clr(AUXR, SBIT4);                       \</span></div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">} while (0)</span></div>
 </div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
@@ -141,7 +141,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#ga6228c30868b5729072c444e93bd72877">  148</a></span><span class="preprocessor">#define counter2_mode0_enable_P30_output()   (bit_set(INT_CLKO, SBIT2))</span></div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#ga5c357d609580d05b38949c515167f0b9">  158</a></span><span class="preprocessor">#define counter2_mode0_disable_P30_output()   (bit_clr(INT_CLKO, CBIT2))</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#ga5c357d609580d05b38949c515167f0b9">  158</a></span><span class="preprocessor">#define counter2_mode0_disable_P30_output()   (bit_clr(INT_CLKO, SBIT2))</span></div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="group__counter2__mode0.html#ga6fcf54ce1a73faadacf2ee87a0c83539">  167</a></span><span class="preprocessor">#define is_counter2_mode0_P30_output_enabled()   (test_if_bit_set(INT_CLKO, SBIT2))</span></div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>

@@ -87,7 +87,7 @@ do {                                                                    \
  * 
  * @ingroup timer2_mode0
  */
-#define timer2_mode0_disable_P30_output() (bit_clr(INT_CLKO, CBIT2))
+#define timer2_mode0_disable_P30_output() (bit_clr(INT_CLKO, SBIT2))
 
 /**
  * Get output to pin P3.0 output flag enabled value
@@ -164,7 +164,7 @@ do {                                                        \
  * @ingroup timer2_mode0
  */
 #define timer2_mode0_stop() {                               \
-    bit_clr(AUXR, CBIT4); /* clear T2 run flag */           \
+    bit_clr(AUXR, SBIT4); /* clear T2 run flag */           \
 }
 
 /** 

@@ -93,7 +93,7 @@ do {                                                    \
     pin_input_only_init(P1, p1_pin);                    \
                                                         \
     /* Set P1ASF bit for using pin as ADC input */      \
-    bit_set(P1ASF, 1 << p1_pin);                        \
+    bit_set(P1ASF, bit_mask(p1_pin));                      \
                                                         \
     /* Set ADC power on, speed and source channel pin */\
     ADC_CONTR = ADC_POWER_ON_MASK | p1_pin | speed;     \
@@ -102,7 +102,7 @@ do {                                                    \
     /* result bits order */                             \
     adrj_flag ?                                         \
         bit_set(CLK_DIV, ADRJ_BIT) :                    \
-        bit_clr(CLK_DIV, ~(1 << ADRJ_BIT_POS));         \
+        bit_clr(CLK_DIV, ADRJ_BIT);                     \
 } while(0)
 
 /**
@@ -132,8 +132,8 @@ do {                                                    \
     /* Set ADC_RES-ADC_RESL or ADC_RESL-ADC_RES */      \
     /* result bits order */                             \
     adrj_flag ?                                         \
-        bit_set(CLK_DIV, ADRJ_BIT) :                        \
-        bit_clr(CLK_DIV, ~(1 << ADRJ_BIT_POS));         \
+        bit_set(CLK_DIV, ADRJ_BIT) :                    \
+        bit_clr(CLK_DIV, ADRJ_BIT);                     \
 } while(0)
 
 /**
@@ -146,17 +146,15 @@ do {                                                    \
  */
 #define adc_destroy(void)                               \
 do {                                                    \
-    /* Stop ADC */                                      \
-    bit_clr(ADC_CONTR, ~(1 << ADC_START_BIT_POS));      \
-    /* Clear ADC result ready flag */                   \
-    bit_clr(ADC_CONTR, ~(1 << ADC_FLAG_BIT_POS));       \
+    /* Stop ADC and Clear ADC result ready flag */      \
+    bit_clr(ADC_CONTR, ADC_START_BIT | ADC_FLAG_BIT);   \
                                                         \
     /* Set all gpio P1 port pins */                     \
     /* as general purpose pins mode */                  \
     P1ASF = 0;                                          \
                                                         \
     /* ADC power off*/                                  \
-    bit_clr(ADC_CONTR, ~ADC_POWER_ON_MASK);             \
+    bit_clr(ADC_CONTR, ADC_POWER_ON_MASK);              \
 } while(0)
 
 ///@}
@@ -181,7 +179,7 @@ do {                                                    \
 #define adc_read_sync(value)                            \
 do {                                                    \
     /* Clear ADC result ready flag */                   \
-    bit_clr(ADC_CONTR, ~(1 << ADC_FLAG_BIT_POS));       \
+    bit_clr(ADC_CONTR, ADC_FLAG_BIT);                   \
     /* Set ADC power on */                              \
     bit_set(ADC_CONTR, ADC_START_BIT);                  \
                                                         \
@@ -238,7 +236,7 @@ do {                                                    \
  * 
  * @ingroup adc
  */
-#define adc_async_read_finish() (bit_clr(ADC_CONTR, ~(1 << ADC_FLAG_BIT_POS)))
+#define adc_async_read_finish() (bit_clr(ADC_CONTR, ADC_FLAG_BIT))
 
 /**
  * @brief Async get ADC result

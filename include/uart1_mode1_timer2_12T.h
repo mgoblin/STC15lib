@@ -118,7 +118,7 @@ do {                                        \
     bit_set(AUXR, SBIT0);                   \
                                             \
     /* Point-to-point mode */               \
-    bit_clr(CLK_DIV, CBIT4);                \
+    bit_clr(CLK_DIV, SBIT4);                \
                                             \
     /* Set AUXR1 bits 6, 7 to select RxD/TxD pins */                 \
     AUXR1 &= 0x3F;                          \
@@ -194,7 +194,7 @@ do {                                                            \
  * 
  * @warning Calling this function will terminate any ongoing communication
  */
-#define uart1_mode1_timer2_12T_stop (bit_clr(AUXR, CBIT4))
+#define uart1_mode1_timer2_12T_stop (bit_clr(AUXR, SBIT4))
 
 /**
  * @brief Is UART1 started?

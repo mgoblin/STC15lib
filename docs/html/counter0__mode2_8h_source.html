@@ -147,11 +147,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="group__counter0__mode2.html#ga36e21a2294faf593b873cb9475d837b6">  170</a></span><span class="preprocessor">#define counter0_mode2_enable_P35_output()   (bit_set(INT_CLKO, SBIT0))</span></div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="group__counter0__mode2.html#ga3193180188b4c556b455749f3e30227a">  180</a></span><span class="preprocessor">#define counter0_mode2_disable_P35_output()   (bit_clr(INT_CLKO, CBIT0))</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="group__counter0__mode2.html#ga3193180188b4c556b455749f3e30227a">  180</a></span><span class="preprocessor">#define counter0_mode2_disable_P35_output()   (bit_clr(INT_CLKO, SBIT0))</span></div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="group__counter0__mode2.html#ga74f3b1292ad43a3c31b5373bda136229">  189</a></span><span class="preprocessor">#define is_counter0_mode2_P35_output_enabled()   (test_if_bit_set(INT_CLKO, SBIT0))</span></div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="group__counter0__mode2.html#ga9c6a7fdbdeee7be0f208465ce8a4bbbe">  200</a></span><span class="preprocessor">#define counter0_mode2_open_gate() (bit_clr(TMOD, CBIT3))</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="group__counter0__mode2.html#ga9c6a7fdbdeee7be0f208465ce8a4bbbe">  200</a></span><span class="preprocessor">#define counter0_mode2_open_gate() (bit_clr(TMOD, SBIT3))</span></div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="group__counter0__mode2.html#ga071ffc4e64408ac7dd838403a308a192">  209</a></span><span class="preprocessor">#define counter0_mode2_close_gate() (bit_set(TMOD, SBIT3))</span></div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>

@@ -71,7 +71,7 @@ do                                                  \
     PCON &= 0x3F;                                   \
     SCON = 0;                                       \
     baudRate == baudrate_921600 ?                   \
-        bit_clr(AUXR, CBIT5) : bit_set(AUXR, SBIT5);\
+        bit_clr(AUXR, SBIT5) : bit_set(AUXR, SBIT5);\
 } while (0)
 
 ///@}

@@ -91,7 +91,7 @@ $(function() {
 <tr class="memdesc:ga0cd6fafd982186c2f36292a7a7dfdfc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable P35 meander output. <br /></td></tr>
 <tr class="separator:ga0cd6fafd982186c2f36292a7a7dfdfc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga54103292724f19e71f23f0cb679456e8" id="r_ga54103292724f19e71f23f0cb679456e8"><td class="memItemLeft" align="right" valign="top"><a id="ga54103292724f19e71f23f0cb679456e8" name="ga54103292724f19e71f23f0cb679456e8"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>timer0_mode2_disable_P35_output</b>()&#160;&#160;&#160;(bit_clr(INT_CLKO, CBIT0))</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>timer0_mode2_disable_P35_output</b>()&#160;&#160;&#160;(bit_clr(INT_CLKO, SBIT0))</td></tr>
 <tr class="memdesc:ga54103292724f19e71f23f0cb679456e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable P35 meander output. <br /></td></tr>
 <tr class="separator:ga54103292724f19e71f23f0cb679456e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga85404a5d6de7a47f0e898f61cbedba9c" id="r_ga85404a5d6de7a47f0e898f61cbedba9c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2.html#ga85404a5d6de7a47f0e898f61cbedba9c">is_timer0_mode2_P35_output_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, SBIT0))</td></tr>
@@ -100,7 +100,7 @@ $(function() {
 <tr class="memitem:ga3a127f64ac148bcffc923590a769382d" id="r_ga3a127f64ac148bcffc923590a769382d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2.html#ga3a127f64ac148bcffc923590a769382d">timer0_mode2_close_gate</a>()&#160;&#160;&#160;(bit_set(TMOD, SBIT3))</td></tr>
 <tr class="memdesc:ga3a127f64ac148bcffc923590a769382d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close timer starting gate.  <br /></td></tr>
 <tr class="separator:ga3a127f64ac148bcffc923590a769382d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacb82ae8e621b0480ec3228c2041c4896" id="r_gacb82ae8e621b0480ec3228c2041c4896"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2.html#gacb82ae8e621b0480ec3228c2041c4896">timer0_mode2_open_gate</a>()&#160;&#160;&#160;(bit_clr(TMOD, CBIT3))</td></tr>
+<tr class="memitem:gacb82ae8e621b0480ec3228c2041c4896" id="r_gacb82ae8e621b0480ec3228c2041c4896"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2.html#gacb82ae8e621b0480ec3228c2041c4896">timer0_mode2_open_gate</a>()&#160;&#160;&#160;(bit_clr(TMOD, SBIT3))</td></tr>
 <tr class="memdesc:gacb82ae8e621b0480ec3228c2041c4896"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open timer starting gate.  <br /></td></tr>
 <tr class="separator:gacb82ae8e621b0480ec3228c2041c4896"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga139bd39f5b59c65b58f764a61a732b2d" id="r_ga139bd39f5b59c65b58f764a61a732b2d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode2.html#ga139bd39f5b59c65b58f764a61a732b2d">is_timer0_mode2_gate_opened</a>()&#160;&#160;&#160;(test_if_bit_cleared(TMOD, SBIT3))</td></tr>
@@ -228,7 +228,7 @@ $(function() {
 <div class="line">    enable_timer0_interrupt();                  \</div>
 <div class="line">    TMOD &amp;= 0xf0;                               \</div>
 <div class="line">    TMOD |= 0x02;                               \</div>
-<div class="line">    bit_clr(AUXR, CBIT7);                       \</div>
+<div class="line">    bit_clr(AUXR, SBIT7);                       \</div>
 <div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Initialize mode2 12T for timer0. </p>
@@ -394,7 +394,7 @@ $(function() {
           <td class="memname">#define timer0_mode2_open_gate</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_clr(TMOD, CBIT3))</td>
+          <td>&#160;&#160;&#160;(bit_clr(TMOD, SBIT3))</td>
         </tr>
       </table>
 </div><div class="memdoc">

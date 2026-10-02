@@ -24,14 +24,14 @@
  * P1, 0 arguments 
  * 
  * @param port pin port for example P1, P3 and etc
- * @param port_pin uint8_t pin mumber in port 0..7 
+ * @param port_pin uint8_t pin number in port 0..7
  * 
  * @ingroup gpio
  */
-#define pin_quasi_bidiretional_init(port, port_pin)             \
+#define pin_quasi_bidirectional_init(port, port_pin)             \
 do {                                                            \
-    bit_clr(port ## M1, ~(1 << port_pin));                      \
-    bit_clr(port ## M0, ~(1 << port_pin));                      \
+    bit_clr(port ## M1, bit_mask(port_pin));                    \
+    bit_clr(port ## M0, bit_mask(port_pin));                    \
 } while(0)
 
 /**
@@ -44,14 +44,14 @@ do {                                                            \
  * P1, 0 arguments 
  * 
  * @param port pin port for example P1, P3 and etc
- * @param port_pin uint8_t pin mumber in port 0..7 
+ * @param port_pin uint8_t pin number in port 0..7
  * 
  * @ingroup gpio
  */
 #define pin_push_pull_init(port, port_pin)                      \
 do {                                                            \
-    bit_clr(port ## M1, ~(1 << port_pin));                      \
-    bit_set(port ## M0, 1 << port_pin);                         \
+    bit_clr(port ## M1, bit_mask(port_pin));                    \
+    bit_set(port ## M0, bit_mask(port_pin));                    \
 } while(0)
 
 /**
@@ -62,14 +62,14 @@ do {                                                            \
  * P1, 0 arguments 
  * 
  * @param port pin port for example P1, P3 and etc
- * @param port_pin uint8_t pin mumber in port 0..7 
+ * @param port_pin uint8_t pin number in port 0..7
  * 
  * @ingroup gpio
  */
 #define pin_input_only_init(port, port_pin)                     \
 do {                                                            \
-    bit_set(port ## M1, 1 << port_pin);                         \
-    bit_clr(port ## M0, ~(1 << port_pin));                      \
+    bit_set(port ## M1, bit_mask(port_pin));                    \
+    bit_clr(port ## M0, bit_mask(port_pin));                    \
 } while(0)
 
 /**
@@ -81,7 +81,7 @@ do {                                                            \
  * P1, 0 arguments 
  * 
  * @param port pin port for example P1, P3 and etc
- * @param port_pin uint8_t pin mumber in port 0..7 
+ * @param port_pin uint8_t pin number in port 0..7
  * 
  * @ingroup gpio
  */
@@ -92,13 +92,13 @@ do {                                                            \
 } while(0)
 
 /**
- * @brief Assert pin in quasy-bidirectional mode
+ * @brief Assert pin in quasi-bidirectional mode
  * 
- * @return true if pin in quasy-bidirectional mode, otherwise false
+ * @return true if pin in quasi-bidirectional mode, otherwise false
  * 
  * @ingroup gpio
  */
-#define is_pin_mode_quasi_bidiretional(port, port_pin)  ( ((port ## M1 & (1 << port_pin)) == 0) && ((port ## M0 & (1 << port_pin)) == 0 ) )
+#define is_pin_mode_quasi_bidirectional(port, port_pin)  ( ((port ## M1 & (1 << port_pin)) == 0) && ((port ## M0 & (1 << port_pin)) == 0 ) )
 
 /**
  * @brief Assert pin in push-pull mode
@@ -128,13 +128,13 @@ do {                                                            \
 #define is_pin_mode_open_drain(port, port_pin)          ( ((port ## M1 & (1 << port_pin)) != 0) && ((port ## M0 & (1 << port_pin)) != 0) )
 
 /**
- * @brief Set quasy-bidirectional mode for all port pins
+ * @brief Set quasi-bidirectional mode for all port pins
  * 
  * @param port pin port for example P1, P3 and etc
  * 
  * @ingroup gpio
  */
-#define pin_port_quasi_bidiretional_init(port)      \
+#define pin_port_quasi_bidirectional_init(port)      \
 do {                                                \
     port ## M1 = 0x00;                              \
     port ## M0 = 0x00;                              \

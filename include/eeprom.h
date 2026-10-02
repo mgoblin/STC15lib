@@ -9,8 +9,6 @@
  * @author Michael Golovanov
  */
 
-#include <stdint.h>
-
 #include <sys.h>
 #include <bits.h>
 #include <power_management.h>
@@ -85,7 +83,7 @@ typedef enum
 #define eeprom_disable_iap()                    \
 do {                                            \
         /* Disable IAP */                       \
-        bit_clr(IAP_CONTR, CBIT7);              \
+        bit_clr(IAP_CONTR, SBIT7);              \
         IAP_CMD = 0x00;                         \
         IAP_TRIG = 0x00;                        \
         IAP_ADDRH = 0xFF;                       \

@@ -64,6 +64,6 @@ do {                                        \
  * 
  * @ingroup comparator
  */
-#define comparator_stop() (bit_clr(CMPCR1, CBIT7))
+#define comparator_stop() (bit_clr(CMPCR1, CMP_ENABLE_BIT))
 
 #endif

@@ -11,7 +11,7 @@ void main()
     P3M1 = 0xff;
     P3M0 = 0xff;
 
-    pin_quasi_bidiretional_init(P3, 1);
+    pin_quasi_bidirectional_init(P3, 1);
 
     uart1_init(9600);
 

@@ -79,28 +79,15 @@ $(function() {
   <div class="headertitle"><div class="title">pca.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="sys_8h_source.html">sys.h</a>&gt;</code><br />
-<code>#include &lt;bits.h&gt;</code><br />
-<code>#include &lt;stdint.h&gt;</code><br />
-<code>#include &lt;stdbool.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;bits.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for pca.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="pca_8h__incl.png" border="0" usemap="#ainclude_2pca_8h" alt=""/></div>
 <map name="ainclude_2pca_8h" id="ainclude_2pca_8h">
-<area shape="rect" title=" " alt="" coords="126,5,234,31"/>
-<area shape="rect" href="sys_8h.html" title=" " alt="" coords="27,79,83,104"/>
-<area shape="poly" title=" " alt="" coords="161,33,88,74,86,69,159,28"/>
-<area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="107,79,165,104"/>
-<area shape="poly" title=" " alt="" coords="175,32,153,68,148,66,170,30"/>
-<area shape="rect" title=" " alt="" coords="190,79,261,104"/>
-<area shape="poly" title=" " alt="" coords="190,30,213,66,208,69,185,32"/>
-<area shape="rect" title=" " alt="" coords="285,79,368,104"/>
-<area shape="poly" title=" " alt="" coords="205,28,292,70,289,75,202,33"/>
-<area shape="rect" href="STC15Fxx_8h_source.html" title=" " alt="" coords="5,152,104,177"/>
-<area shape="poly" title=" " alt="" coords="57,104,57,138,52,138,52,104"/>
-<area shape="rect" title=" " alt="" coords="9,225,100,251"/>
-<area shape="poly" title=" " alt="" coords="57,178,57,212,52,212,52,178"/>
+<area shape="rect" title=" " alt="" coords="5,5,113,31"/>
+<area shape="rect" href="bits_8h_source.html" title=" " alt="" coords="30,79,89,104"/>
+<area shape="poly" title=" " alt="" coords="62,31,62,65,57,65,57,31"/>
 </map>
 </div>
 </div>
@@ -112,18 +99,18 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>PCA_CPS0_BIT</b>&#160;&#160;&#160;1</td></tr>
 <tr class="memdesc:a2b02c6756d06fa4f6d1a734062ad96ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">CMOD register CPS0 (counter pulse select) bit position. <br /></td></tr>
 <tr class="separator:a2b02c6756d06fa4f6d1a734062ad96ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51cc558158152bded183661d11c67f9f" id="r_a51cc558158152bded183661d11c67f9f"><td class="memItemLeft" align="right" valign="top"><a id="a51cc558158152bded183661d11c67f9f" name="a51cc558158152bded183661d11c67f9f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>PCA_CPS_MSK</b>&#160;&#160;&#160;0x0E</td></tr>
-<tr class="memdesc:a51cc558158152bded183661d11c67f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">CMOD register CPS (counter pulse select) bits mask. <br /></td></tr>
-<tr class="separator:a51cc558158152bded183661d11c67f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abefcfdd13a7bad8533363c17a35fda55" id="r_abefcfdd13a7bad8533363c17a35fda55"><td class="memItemLeft" align="right" valign="top"><a id="abefcfdd13a7bad8533363c17a35fda55" name="abefcfdd13a7bad8533363c17a35fda55"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PCA_CPS_MASK</b>&#160;&#160;&#160;0x0E</td></tr>
+<tr class="memdesc:abefcfdd13a7bad8533363c17a35fda55"><td class="mdescLeft">&#160;</td><td class="mdescRight">CMOD register CPS (counter pulse select) bits mask. <br /></td></tr>
+<tr class="separator:abefcfdd13a7bad8533363c17a35fda55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61dbd7a7ebb77bd9029a9176e3df519f" id="r_a61dbd7a7ebb77bd9029a9176e3df519f"><td class="memItemLeft" align="right" valign="top"><a id="a61dbd7a7ebb77bd9029a9176e3df519f" name="a61dbd7a7ebb77bd9029a9176e3df519f"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>PCA_PWM_EBS0_BIT</b>&#160;&#160;&#160;6</td></tr>
 <tr class="memdesc:a61dbd7a7ebb77bd9029a9176e3df519f"><td class="mdescLeft">&#160;</td><td class="mdescRight">PCA_PWMn register EBS0 (PWM resolution select) bit position. <br /></td></tr>
 <tr class="separator:a61dbd7a7ebb77bd9029a9176e3df519f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a452e2c87e18959c98fab2824f0adb89a" id="r_a452e2c87e18959c98fab2824f0adb89a"><td class="memItemLeft" align="right" valign="top"><a id="a452e2c87e18959c98fab2824f0adb89a" name="a452e2c87e18959c98fab2824f0adb89a"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>PCA_PWM_EBS_MSK</b>&#160;&#160;&#160;0xC0</td></tr>
-<tr class="memdesc:a452e2c87e18959c98fab2824f0adb89a"><td class="mdescLeft">&#160;</td><td class="mdescRight">PCA_PWMn register EBS (PWM resolution select) bits mask. <br /></td></tr>
-<tr class="separator:a452e2c87e18959c98fab2824f0adb89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8a7d30738e63c39b66759219a1736c7" id="r_aa8a7d30738e63c39b66759219a1736c7"><td class="memItemLeft" align="right" valign="top"><a id="aa8a7d30738e63c39b66759219a1736c7" name="aa8a7d30738e63c39b66759219a1736c7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PCA_PWM_EBS_MASK</b>&#160;&#160;&#160;0xC0</td></tr>
+<tr class="memdesc:aa8a7d30738e63c39b66759219a1736c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">PCA_PWMn register EBS (PWM resolution select) bits mask. <br /></td></tr>
+<tr class="separator:aa8a7d30738e63c39b66759219a1736c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab35c78de7878dc5f6bb0413ab161438d" id="r_ab35c78de7878dc5f6bb0413ab161438d"><td class="memItemLeft" align="right" valign="top"><a id="ab35c78de7878dc5f6bb0413ab161438d" name="ab35c78de7878dc5f6bb0413ab161438d"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>PCA_CCP_S0_BIT</b>&#160;&#160;&#160;4</td></tr>
 <tr class="memdesc:ab35c78de7878dc5f6bb0413ab161438d"><td class="mdescLeft">&#160;</td><td class="mdescRight">P_SW1 register CCP_S0 (CCP pin group select) bit position. <br /></td></tr>
@@ -136,10 +123,10 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>PCA_CCP_S1_MSK</b>&#160;&#160;&#160;0x20</td></tr>
 <tr class="memdesc:a9aa54f37bbed72916143a9c4e7ca4de1"><td class="mdescLeft">&#160;</td><td class="mdescRight">P_SW1 register CCP_S1 (CCP pin group select) bit mask. <br /></td></tr>
 <tr class="separator:a9aa54f37bbed72916143a9c4e7ca4de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa525af5c8a2327c61bf15f85d4155cb1" id="r_aa525af5c8a2327c61bf15f85d4155cb1"><td class="memItemLeft" align="right" valign="top"><a id="aa525af5c8a2327c61bf15f85d4155cb1" name="aa525af5c8a2327c61bf15f85d4155cb1"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>PCA_CCP_SW_MSK</b>&#160;&#160;&#160;(uint8_t)(~(<a class="el" href="pca_8h.html#a7b6fc25b0d13696e3730f188cd1f49e1">PCA_CCP_S0_MSK</a> | <a class="el" href="pca_8h.html#a9aa54f37bbed72916143a9c4e7ca4de1">PCA_CCP_S1_MSK</a>))</td></tr>
-<tr class="memdesc:aa525af5c8a2327c61bf15f85d4155cb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">P_SW1 register CCP pin group select bits mask. <br /></td></tr>
-<tr class="separator:aa525af5c8a2327c61bf15f85d4155cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a524eecdbeeee46a1eba4db8497196270" id="r_a524eecdbeeee46a1eba4db8497196270"><td class="memItemLeft" align="right" valign="top"><a id="a524eecdbeeee46a1eba4db8497196270" name="a524eecdbeeee46a1eba4db8497196270"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PCA_CCP_SW_MASK</b>&#160;&#160;&#160;(uint8_t)(<a class="el" href="pca_8h.html#a7b6fc25b0d13696e3730f188cd1f49e1">PCA_CCP_S0_MSK</a> | <a class="el" href="pca_8h.html#a9aa54f37bbed72916143a9c4e7ca4de1">PCA_CCP_S1_MSK</a>)</td></tr>
+<tr class="memdesc:a524eecdbeeee46a1eba4db8497196270"><td class="mdescLeft">&#160;</td><td class="mdescRight">P_SW1 register CCP pin group select bits mask. <br /></td></tr>
+<tr class="separator:a524eecdbeeee46a1eba4db8497196270"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">pin group</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>PCA pin mapping functions </p>
 </div></td></tr>
@@ -155,7 +142,7 @@ Macros</h2></td></tr>
 <tr class="memitem:gaa9622d8aa661fbfd7ff583cc5995caa3" id="r_gaa9622d8aa661fbfd7ff583cc5995caa3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gaa9622d8aa661fbfd7ff583cc5995caa3">pca_set_clock_source</a>(src)</td></tr>
 <tr class="memdesc:gaa9622d8aa661fbfd7ff583cc5995caa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set PCA counter clock source.  <br /></td></tr>
 <tr class="separator:gaa9622d8aa661fbfd7ff583cc5995caa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae7fb2a9436153d8f684b3f3fad3deeec" id="r_gae7fb2a9436153d8f684b3f3fad3deeec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gae7fb2a9436153d8f684b3f3fad3deeec">pca_get_clock_source</a>()&#160;&#160;&#160;((<a class="el" href="group__pca.html#ga4da2c7294eed6b7c52126059f7ced722">pca_clock_source_t</a>)(bit_shift_right(get_reg(CMOD, <a class="el" href="pca_8h.html#a51cc558158152bded183661d11c67f9f">PCA_CPS_MSK</a>), <a class="el" href="pca_8h.html#a2b02c6756d06fa4f6d1a734062ad96ac">PCA_CPS0_BIT</a>)))</td></tr>
+<tr class="memitem:gae7fb2a9436153d8f684b3f3fad3deeec" id="r_gae7fb2a9436153d8f684b3f3fad3deeec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gae7fb2a9436153d8f684b3f3fad3deeec">pca_get_clock_source</a>()&#160;&#160;&#160;((<a class="el" href="group__pca.html#ga4da2c7294eed6b7c52126059f7ced722">pca_clock_source_t</a>)(bit_shift_right(get_reg(CMOD, <a class="el" href="pca_8h.html#abefcfdd13a7bad8533363c17a35fda55">PCA_CPS_MASK</a>), <a class="el" href="pca_8h.html#a2b02c6756d06fa4f6d1a734062ad96ac">PCA_CPS0_BIT</a>)))</td></tr>
 <tr class="memdesc:gae7fb2a9436153d8f684b3f3fad3deeec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get PCA counter clock source.  <br /></td></tr>
 <tr class="separator:gae7fb2a9436153d8f684b3f3fad3deeec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaacf42af24e1e5a7fe2e0fcebf8887f1a" id="r_gaacf42af24e1e5a7fe2e0fcebf8887f1a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gaacf42af24e1e5a7fe2e0fcebf8887f1a">pca_set_counter</a>(value)</td></tr>
@@ -173,7 +160,7 @@ Macros</h2></td></tr>
 <tr class="memitem:gaf4c4db056cc0b9103da72d0601f710a6" id="r_gaf4c4db056cc0b9103da72d0601f710a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gaf4c4db056cc0b9103da72d0601f710a6">is_pca_running</a>()&#160;&#160;&#160;(CR)</td></tr>
 <tr class="memdesc:gaf4c4db056cc0b9103da72d0601f710a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get PCA counter run status.  <br /></td></tr>
 <tr class="separator:gaf4c4db056cc0b9103da72d0601f710a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa4e51d16dac177ed5807a2832d3e8ce5" id="r_gaa4e51d16dac177ed5807a2832d3e8ce5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gaa4e51d16dac177ed5807a2832d3e8ce5">pca_counter_run_in_idle</a>()&#160;&#160;&#160;(bit_clr(CMOD, CBIT7))</td></tr>
+<tr class="memitem:gaa4e51d16dac177ed5807a2832d3e8ce5" id="r_gaa4e51d16dac177ed5807a2832d3e8ce5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gaa4e51d16dac177ed5807a2832d3e8ce5">pca_counter_run_in_idle</a>()&#160;&#160;&#160;(bit_clr(CMOD,SBIT7))</td></tr>
 <tr class="memdesc:gaa4e51d16dac177ed5807a2832d3e8ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Let PCA counter run in MCU idle mode.  <br /></td></tr>
 <tr class="separator:gaa4e51d16dac177ed5807a2832d3e8ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa5024ebf824c3d288cddfa89c9191f5d" id="r_gaa5024ebf824c3d288cddfa89c9191f5d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gaa5024ebf824c3d288cddfa89c9191f5d">pca_counter_gate_off_in_idle</a>()&#160;&#160;&#160;(bit_set(CMOD, SBIT7))</td></tr>
@@ -194,7 +181,7 @@ Macros</h2></td></tr>
 <tr class="memitem:ga991d2019b99d1160f922f452bb68a211" id="r_ga991d2019b99d1160f922f452bb68a211"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#ga991d2019b99d1160f922f452bb68a211">pca_enable_overflow_interrupt</a>()&#160;&#160;&#160;(bit_set(CMOD, SBIT0))</td></tr>
 <tr class="memdesc:ga991d2019b99d1160f922f452bb68a211"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable PCA counter overflow interrupt.  <br /></td></tr>
 <tr class="separator:ga991d2019b99d1160f922f452bb68a211"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8e54278b3a59d21d2ef312ff4efa06da" id="r_ga8e54278b3a59d21d2ef312ff4efa06da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#ga8e54278b3a59d21d2ef312ff4efa06da">pca_disable_overflow_interrupt</a>()&#160;&#160;&#160;(bit_clr(CMOD, CBIT0))</td></tr>
+<tr class="memitem:ga8e54278b3a59d21d2ef312ff4efa06da" id="r_ga8e54278b3a59d21d2ef312ff4efa06da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#ga8e54278b3a59d21d2ef312ff4efa06da">pca_disable_overflow_interrupt</a>()&#160;&#160;&#160;(bit_clr(CMOD, SBIT0))</td></tr>
 <tr class="memdesc:ga8e54278b3a59d21d2ef312ff4efa06da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable PCA counter overflow interrupt.  <br /></td></tr>
 <tr class="separator:ga8e54278b3a59d21d2ef312ff4efa06da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga415ea9e8c246b04294fbd0ebb6d47f94" id="r_ga415ea9e8c246b04294fbd0ebb6d47f94"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#ga415ea9e8c246b04294fbd0ebb6d47f94">is_pca_overflow_interrupt_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(CMOD, SBIT0))</td></tr>
@@ -212,7 +199,7 @@ Macros</h2></td></tr>
 <tr class="memitem:ga294f4b079ed0f079eb35d90bc21d9cc5" id="r_ga294f4b079ed0f079eb35d90bc21d9cc5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#ga294f4b079ed0f079eb35d90bc21d9cc5">pca_module_enable_interrupt</a>(module)&#160;&#160;&#160;(bit_set(CCAPM ## module, SBIT0))</td></tr>
 <tr class="memdesc:ga294f4b079ed0f079eb35d90bc21d9cc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable PCA module compare/capture interrupt.  <br /></td></tr>
 <tr class="separator:ga294f4b079ed0f079eb35d90bc21d9cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad0a73990b08f2412d97a6720980c4b6b" id="r_gad0a73990b08f2412d97a6720980c4b6b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gad0a73990b08f2412d97a6720980c4b6b">pca_module_disable_interrupt</a>(module)&#160;&#160;&#160;(bit_clr(CCAPM ## module, CBIT0))</td></tr>
+<tr class="memitem:gad0a73990b08f2412d97a6720980c4b6b" id="r_gad0a73990b08f2412d97a6720980c4b6b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gad0a73990b08f2412d97a6720980c4b6b">pca_module_disable_interrupt</a>(module)&#160;&#160;&#160;(bit_clr(CCAPM ## module, SBIT0))</td></tr>
 <tr class="memdesc:gad0a73990b08f2412d97a6720980c4b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable PCA module compare/capture interrupt.  <br /></td></tr>
 <tr class="separator:gad0a73990b08f2412d97a6720980c4b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacd825c22603e0d779e48d8ba9d36b153" id="r_gacd825c22603e0d779e48d8ba9d36b153"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gacd825c22603e0d779e48d8ba9d36b153">is_pca_module_interrupt_enabled</a>(module)&#160;&#160;&#160;(test_if_bit_set(CCAPM ## module, SBIT0))</td></tr>
@@ -224,31 +211,31 @@ Macros</h2></td></tr>
 <tr class="memitem:ga1b127ff7b37078e68c28b1bd4de2e68c" id="r_ga1b127ff7b37078e68c28b1bd4de2e68c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#ga1b127ff7b37078e68c28b1bd4de2e68c">pca_module_enable_comparator</a>(module)&#160;&#160;&#160;(bit_set(CCAPM ## module, SBIT6))</td></tr>
 <tr class="memdesc:ga1b127ff7b37078e68c28b1bd4de2e68c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable PCA module comparator.  <br /></td></tr>
 <tr class="separator:ga1b127ff7b37078e68c28b1bd4de2e68c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf20ccfe9826219c6a184df48e4fcdee4" id="r_gaf20ccfe9826219c6a184df48e4fcdee4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gaf20ccfe9826219c6a184df48e4fcdee4">pca_module_disable_comparator</a>(module)&#160;&#160;&#160;(bit_clr(CCAPM ## module, CBIT6))</td></tr>
+<tr class="memitem:gaf20ccfe9826219c6a184df48e4fcdee4" id="r_gaf20ccfe9826219c6a184df48e4fcdee4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gaf20ccfe9826219c6a184df48e4fcdee4">pca_module_disable_comparator</a>(module)&#160;&#160;&#160;(bit_clr(CCAPM ## module, SBIT6))</td></tr>
 <tr class="memdesc:gaf20ccfe9826219c6a184df48e4fcdee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable PCA module comparator.  <br /></td></tr>
 <tr class="separator:gaf20ccfe9826219c6a184df48e4fcdee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab9ddd87334d3688567266d53b420aed1" id="r_gab9ddd87334d3688567266d53b420aed1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gab9ddd87334d3688567266d53b420aed1">pca_module_enable_capture_positive</a>(module)&#160;&#160;&#160;(bit_set(CCAPM ## module, SBIT5))</td></tr>
 <tr class="memdesc:gab9ddd87334d3688567266d53b420aed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable capture on positive edge.  <br /></td></tr>
 <tr class="separator:gab9ddd87334d3688567266d53b420aed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab3cdc85cbca173bf4565a5945960f4e3" id="r_gab3cdc85cbca173bf4565a5945960f4e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gab3cdc85cbca173bf4565a5945960f4e3">pca_module_disable_capture_positive</a>(module)&#160;&#160;&#160;(bit_clr(CCAPM ## module, CBIT5))</td></tr>
+<tr class="memitem:gab3cdc85cbca173bf4565a5945960f4e3" id="r_gab3cdc85cbca173bf4565a5945960f4e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gab3cdc85cbca173bf4565a5945960f4e3">pca_module_disable_capture_positive</a>(module)&#160;&#160;&#160;(bit_clr(CCAPM ## module, SBIT5))</td></tr>
 <tr class="memdesc:gab3cdc85cbca173bf4565a5945960f4e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable capture on positive edge.  <br /></td></tr>
 <tr class="separator:gab3cdc85cbca173bf4565a5945960f4e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf19bbf7499a48ff56404ce51a5db3fa9" id="r_gaf19bbf7499a48ff56404ce51a5db3fa9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gaf19bbf7499a48ff56404ce51a5db3fa9">pca_module_enable_capture_negative</a>(module)&#160;&#160;&#160;(bit_set(CCAPM ## module, SBIT4))</td></tr>
 <tr class="memdesc:gaf19bbf7499a48ff56404ce51a5db3fa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable capture on negative edge.  <br /></td></tr>
 <tr class="separator:gaf19bbf7499a48ff56404ce51a5db3fa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafb2c3852053b736e9c73d6de6b7b6d54" id="r_gafb2c3852053b736e9c73d6de6b7b6d54"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gafb2c3852053b736e9c73d6de6b7b6d54">pca_module_disable_capture_negative</a>(module)&#160;&#160;&#160;(bit_clr(CCAPM ## module, CBIT4))</td></tr>
+<tr class="memitem:gafb2c3852053b736e9c73d6de6b7b6d54" id="r_gafb2c3852053b736e9c73d6de6b7b6d54"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gafb2c3852053b736e9c73d6de6b7b6d54">pca_module_disable_capture_negative</a>(module)&#160;&#160;&#160;(bit_clr(CCAPM ## module, SBIT4))</td></tr>
 <tr class="memdesc:gafb2c3852053b736e9c73d6de6b7b6d54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable capture on negative edge.  <br /></td></tr>
 <tr class="separator:gafb2c3852053b736e9c73d6de6b7b6d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga63460eecba80ddf00e2f85768dd74198" id="r_ga63460eecba80ddf00e2f85768dd74198"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#ga63460eecba80ddf00e2f85768dd74198">pca_module_enable_match</a>(module)&#160;&#160;&#160;(bit_set(CCAPM ## module, SBIT3))</td></tr>
 <tr class="memdesc:ga63460eecba80ddf00e2f85768dd74198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable PCA module match.  <br /></td></tr>
 <tr class="separator:ga63460eecba80ddf00e2f85768dd74198"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1e871009751b63314c49198e6a0d0e53" id="r_ga1e871009751b63314c49198e6a0d0e53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#ga1e871009751b63314c49198e6a0d0e53">pca_module_disable_match</a>(module)&#160;&#160;&#160;(bit_clr(CCAPM ## module, CBIT3))</td></tr>
+<tr class="memitem:ga1e871009751b63314c49198e6a0d0e53" id="r_ga1e871009751b63314c49198e6a0d0e53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#ga1e871009751b63314c49198e6a0d0e53">pca_module_disable_match</a>(module)&#160;&#160;&#160;(bit_clr(CCAPM ## module, SBIT3))</td></tr>
 <tr class="memdesc:ga1e871009751b63314c49198e6a0d0e53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable PCA module match.  <br /></td></tr>
 <tr class="separator:ga1e871009751b63314c49198e6a0d0e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad53608651b6994ea3c17d51d692fdad8" id="r_gad53608651b6994ea3c17d51d692fdad8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gad53608651b6994ea3c17d51d692fdad8">pca_module_enable_toggle</a>(module)&#160;&#160;&#160;(bit_set(CCAPM ## module, SBIT2))</td></tr>
 <tr class="memdesc:gad53608651b6994ea3c17d51d692fdad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable PCA module toggle output.  <br /></td></tr>
 <tr class="separator:gad53608651b6994ea3c17d51d692fdad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8cf297c0eac0d6633503361876a4437f" id="r_ga8cf297c0eac0d6633503361876a4437f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#ga8cf297c0eac0d6633503361876a4437f">pca_module_disable_toggle</a>(module)&#160;&#160;&#160;(bit_clr(CCAPM ## module, CBIT2))</td></tr>
+<tr class="memitem:ga8cf297c0eac0d6633503361876a4437f" id="r_ga8cf297c0eac0d6633503361876a4437f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#ga8cf297c0eac0d6633503361876a4437f">pca_module_disable_toggle</a>(module)&#160;&#160;&#160;(bit_clr(CCAPM ## module, SBIT2))</td></tr>
 <tr class="memdesc:ga8cf297c0eac0d6633503361876a4437f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable PCA module toggle output.  <br /></td></tr>
 <tr class="separator:ga8cf297c0eac0d6633503361876a4437f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga73f0ad822656a5ce934dfca02e9ced29" id="r_ga73f0ad822656a5ce934dfca02e9ced29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#ga73f0ad822656a5ce934dfca02e9ced29">pca_module_set_compare</a>(module,  value)</td></tr>
@@ -263,7 +250,7 @@ Macros</h2></td></tr>
 <tr class="memitem:gaf95da58d82e058f56b6e47def1403c91" id="r_gaf95da58d82e058f56b6e47def1403c91"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#gaf95da58d82e058f56b6e47def1403c91">pca_module_pwm_init</a>(module,  resolution)</td></tr>
 <tr class="memdesc:gaf95da58d82e058f56b6e47def1403c91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init PCA module in PWM mode.  <br /></td></tr>
 <tr class="separator:gaf95da58d82e058f56b6e47def1403c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga553540e75350729842a68fa875d9fd02" id="r_ga553540e75350729842a68fa875d9fd02"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#ga553540e75350729842a68fa875d9fd02">pca_module_pwm_disable</a>(module)&#160;&#160;&#160;(bit_clr(CCAPM ## module, CBIT1))</td></tr>
+<tr class="memitem:ga553540e75350729842a68fa875d9fd02" id="r_ga553540e75350729842a68fa875d9fd02"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#ga553540e75350729842a68fa875d9fd02">pca_module_pwm_disable</a>(module)&#160;&#160;&#160;(bit_clr(CCAPM ## module, SBIT1))</td></tr>
 <tr class="memdesc:ga553540e75350729842a68fa875d9fd02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable PCA module PWM output.  <br /></td></tr>
 <tr class="separator:ga553540e75350729842a68fa875d9fd02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4265b7ed7db1e58b3024dcd5e99a3e23" id="r_ga4265b7ed7db1e58b3024dcd5e99a3e23"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pca.html#ga4265b7ed7db1e58b3024dcd5e99a3e23">is_pca_module_pwm_enabled</a>(module)&#160;&#160;&#160;(test_if_bit_set(CCAPM ## module, SBIT1))</td></tr>

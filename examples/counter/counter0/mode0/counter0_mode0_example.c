@@ -33,7 +33,7 @@ void main()
     counter0_mode0_init();
     counter0_mode0_start(COUNTER_INIT_VALUE);
     
-    pin_quasi_bidiretional_init(P3, 4);
+    pin_quasi_bidirectional_init(P3, 4);
 
     while (1) {
         T0 = !T0;

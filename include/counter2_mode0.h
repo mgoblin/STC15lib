@@ -46,7 +46,7 @@ do {                                            \
     enable_mcu_interrupts();                    \
     enable_timer2_interrupt();                  \
                                                 \
-    bit_clr(AUXR, CBIT4);                       \
+    bit_clr(AUXR, SBIT4);                       \
     bit_set(AUXR, SBIT3); /* init Counter2 */   \
 } while(0)
 ///@}
@@ -87,7 +87,7 @@ do {                                            \
  */
 #define counter2_mode0_stop()                   \
 do {                                            \
-    bit_clr(AUXR, CBIT4);                       \
+    bit_clr(AUXR, SBIT4);                       \
 } while (0)
 
 
@@ -155,7 +155,7 @@ do {                                            \
  * 
  * @ingroup counter2_mode0
  */
-#define counter2_mode0_disable_P30_output()   (bit_clr(INT_CLKO, CBIT2))
+#define counter2_mode0_disable_P30_output()   (bit_clr(INT_CLKO, SBIT2))
 
 /**
  * @brief get pin P3.0 output state to P3.0

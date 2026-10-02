@@ -77,7 +77,7 @@ do {                                            \
  * 
  * @ingroup wdt
  */
-#define wdt_stop() (bit_clr(WDT_CONTR, CBIT5)) 
+#define wdt_stop() (bit_clr(WDT_CONTR, SBIT5))
 
 /**
  * @brief Get WDT start status
@@ -113,7 +113,7 @@ do {                                            \
  * 
  * @ingroup wdt
  */
-#define wdt_flag_reset() (bit_clr(WDT_CONTR, CBIT7))
+#define wdt_flag_reset() (bit_clr(WDT_CONTR, SBIT7))
 
 /**
  * @brief Enable WDT in MCU idle mode
@@ -129,7 +129,7 @@ do {                                            \
  * 
  * @ingroup wdt
  */
-#define wdt_disable_in_idle() (bit_clr(WDT_CONTR, CBIT3))
+#define wdt_disable_in_idle() (bit_clr(WDT_CONTR, SBIT3))
 
 ///@}
 

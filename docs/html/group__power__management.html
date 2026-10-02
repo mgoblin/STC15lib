@@ -106,7 +106,7 @@ Macros</h2></td></tr>
 <tr class="memitem:gad53d0b54b4f24293b47e3b2bd4eb1b25" id="r_gad53d0b54b4f24293b47e3b2bd4eb1b25"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#gad53d0b54b4f24293b47e3b2bd4eb1b25">get_power_low_voltage_flag</a>()&#160;&#160;&#160;(get_bit(PCON, 5))</td></tr>
 <tr class="memdesc:gad53d0b54b4f24293b47e3b2bd4eb1b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the status of the low voltage detection flag.  <br /></td></tr>
 <tr class="separator:gad53d0b54b4f24293b47e3b2bd4eb1b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8a75ab1569be95903cb1355c553a24ad" id="r_ga8a75ab1569be95903cb1355c553a24ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#ga8a75ab1569be95903cb1355c553a24ad">clear_power_low_voltage_flag</a>()&#160;&#160;&#160;(bit_clr(PCON, CBIT5))</td></tr>
+<tr class="memitem:ga8a75ab1569be95903cb1355c553a24ad" id="r_ga8a75ab1569be95903cb1355c553a24ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__power__management.html#ga8a75ab1569be95903cb1355c553a24ad">clear_power_low_voltage_flag</a>()&#160;&#160;&#160;(bit_clr(PCON, SBIT5))</td></tr>
 <tr class="memdesc:ga8a75ab1569be95903cb1355c553a24ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the low voltage detection flag in the PCON register.  <br /></td></tr>
 <tr class="separator:ga8a75ab1569be95903cb1355c553a24ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -123,13 +123,13 @@ Macros</h2></td></tr>
           <td class="memname">#define clear_power_low_voltage_flag</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_clr(PCON, CBIT5))</td>
+          <td>&#160;&#160;&#160;(bit_clr(PCON, SBIT5))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Clears the low voltage detection flag in the PCON register. </p>
-<p>This macro clears the low voltage detection flag by resetting bit 5 (CBIT5) of the PCON (Power Control) register. This flag is set when a low voltage condition is detected, and must be manually cleared by software. </p>
+<p>This macro clears the low voltage detection flag by resetting bit 5 of the PCON (Power Control) register. This flag is set when a low voltage condition is detected, and must be manually cleared by software. </p>
 
 </div>
 </div>
@@ -277,8 +277,8 @@ Macros</h2></td></tr>
 <div class="line">    uint16_t timer_ticks = seconds * (wakeup_freq &gt;&gt; 4);            \</div>
 <div class="line">    wakeup_timer_init(timer_ticks);                                 \</div>
 <div class="line">} <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="agroup__power__management_html_ga108303f1628d9af8ece636b31a581586"><div class="ttname"><a href="group__power__management.html#ga108303f1628d9af8ece636b31a581586">WAKEUP_DEFAULT_FREQ</a></div><div class="ttdeci">#define WAKEUP_DEFAULT_FREQ</div><div class="ttdoc">Default internal wakeup generator frequency in Hz.</div><div class="ttdef"><b>Definition</b> power_management.h:42</div></div>
-<div class="ttc" id="agroup__power__management_html_ga91ea0552ad4f4846e01e2ae59adce627"><div class="ttname"><a href="group__power__management.html#ga91ea0552ad4f4846e01e2ae59adce627">wakeup_timer_internal_clk_freq</a></div><div class="ttdeci">#define wakeup_timer_internal_clk_freq()</div><div class="ttdoc">Get wakeup timer internal clock frequency.</div><div class="ttdef"><b>Definition</b> power_management.h:145</div></div>
+<div class="ttc" id="agroup__power__management_html_ga108303f1628d9af8ece636b31a581586"><div class="ttname"><a href="group__power__management.html#ga108303f1628d9af8ece636b31a581586">WAKEUP_DEFAULT_FREQ</a></div><div class="ttdeci">#define WAKEUP_DEFAULT_FREQ</div><div class="ttdoc">Default internal wakeup generator frequency in Hz.</div><div class="ttdef"><b>Definition</b> power_management.h:41</div></div>
+<div class="ttc" id="agroup__power__management_html_ga91ea0552ad4f4846e01e2ae59adce627"><div class="ttname"><a href="group__power__management.html#ga91ea0552ad4f4846e01e2ae59adce627">wakeup_timer_internal_clk_freq</a></div><div class="ttdeci">#define wakeup_timer_internal_clk_freq()</div><div class="ttdoc">Get wakeup timer internal clock frequency.</div><div class="ttdef"><b>Definition</b> power_management.h:144</div></div>
 </div><!-- fragment -->
 <p>Initialize wakeup timer with a specified duration in seconds. </p>
 <p>This routine configures the wakeup timer to wake up the MCU after a specified number of seconds. It calculates the appropriate timer ticks based on the internal wakeup clock frequency.</p>
@@ -314,7 +314,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get wakeup timer internal clock frequency. </p>
-<p>wakeup timer internal clock frequency after MCU powerup is placed in RAM __idata 0xf8-0xf9 adresses.</p>
+<p>wakeup timer internal clock frequency after MCU powerup is placed in RAM __idata 0xf8-0xf9 addresses.</p>
 <p>By default SDCC compiler generate firmware part that before main() call clear RAM and 0xf8-0xf9 contains 0x00 values.</p>
 <p>To avoid memory clearing implement empty <br  />
  void _mcs51_genRAMCLEAR() {} routine. Otherwise routine call return result 0x00.</p>

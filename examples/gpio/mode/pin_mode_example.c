@@ -10,7 +10,7 @@
 
 void print_pin_mode()
 {
-    bool is_quasi_bidiretional = is_pin_mode_quasi_bidiretional(P1, 0);
+    bool is_quasi_bidiretional = is_pin_mode_quasi_bidirectional(P1, 0);
     bool is_push_pull = is_pin_mode_push_pull(P1, 0);
     bool is_input_only = is_pin_mode_input_only(P1, 0);
     bool is_open_drain = is_pin_mode_open_drain(P1, 0);
@@ -31,7 +31,7 @@ void main()
     uart1_init(9600);
     while (1)
     {
-        pin_quasi_bidiretional_init(P1, 0);
+        pin_quasi_bidirectional_init(P1, 0);
         printf_tiny("Set q-bi mode\r\n");
         print_pin_mode();
         f_delay_ms(200);

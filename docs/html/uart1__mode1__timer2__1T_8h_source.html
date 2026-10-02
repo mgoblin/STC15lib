@@ -134,7 +134,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">    bit_set(AUXR, SBIT2);                   \</span></div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">                                            \</span></div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="preprocessor">    </span><span class="comment">/* Point-to-point mode */</span><span class="preprocessor">               \</span></div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">    bit_clr(CLK_DIV, CBIT4);                \</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">    bit_clr(CLK_DIV, SBIT4);                \</span></div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">                                            \</span></div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="preprocessor">    </span><span class="comment">/* Set AUXR1 bits 6, 7 to select RxD/TxD pins */</span><span class="preprocessor">                 \</span></div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="preprocessor">    AUXR1 &amp;= 0x3F;                          \</span></div>
@@ -171,7 +171,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="group__uart1__mode1__timer2__1T.html#ga7ddc3d5b3ec282c794ce615c738414ea">  209</a></span><span class="preprocessor">#define uart1_mode1_timer2_1T_stop (bit_clr(AUXR, CBIT4))</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="group__uart1__mode1__timer2__1T.html#ga7ddc3d5b3ec282c794ce615c738414ea">  209</a></span><span class="preprocessor">#define uart1_mode1_timer2_1T_stop (bit_clr(AUXR, SBIT4))</span></div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="group__uart1__mode1__timer2__1T.html#ga73f223b86f254d562e09a004b379e586">  217</a></span><span class="preprocessor">#define is_uart1_mode1_timer2_1T_started() (test_if_bit_set(AUXR, SBIT4))</span></div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>

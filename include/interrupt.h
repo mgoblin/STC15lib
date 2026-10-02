@@ -1,8 +1,6 @@
 #ifndef STC15_INTERRUPTSH
 #define STC15_INTERRUPTSH
 
-#include<stdbool.h>
-#include<sys.h>
 #include<bits.h>
 
 /**
@@ -12,7 +10,7 @@
  * @details Functions and data structures for interrupts.
  * Interrupts are controlled by registers IE and IE2 bits.
  * 
- * Interrupts at all can be enabled, disabled and readed by 
+ * Interrupts at all can be enabled, disabled and read by
  * enable_mcu_interrupts(), disable_mcu_interrupts and 
  * is_mcu_interrupts_enabled() routines.
  * 
@@ -28,13 +26,13 @@
  * void interruptHandler() __interrupt(0)
  * @endcode
  * The name of handler routine can be any correct C function name.
- * Hanlder should have empty parameter list. Keyword __interrupt and interrupt number 
+ * Handler should have empty parameter list. Keyword __interrupt and interrupt number
  * assign handler to specified interrupt. See STC15series MCU Data Sheet Section 6.4.
  *  
  * \# | Description
  * ---|-----------------------------------------
  * 0  | INT0
- * 1  | Timer0 interrrupt
+ * 1  | Timer0 interrupt
  * 2  | INT1
  * 3  | Timer1 interrupt (STC15W408AS has no this timer)
  * 4  | UART1 interrupt
@@ -277,7 +275,7 @@ typedef enum
 {
     /// @brief Generate interrupt on both raise and falling edges
     RAISING_OR_FALLING_EDGE = 0,
-    /// @brief Generate interrupt only on fallign edge
+    /// @brief Generate interrupt only on falling edge
     ONLY_FALLING_EDGE = 1
 } external_interrupt_trigger_t;
 
@@ -490,7 +488,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define disable_int2_interrupt() (bit_clr(INT_CLKO, CBIT4))
+#define disable_int2_interrupt() (bit_clr(INT_CLKO, SBIT4))
 
 /**
  * @brief Get INT2 interrupt enable status
@@ -518,7 +516,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define disable_int3_interrupt() (bit_clr(INT_CLKO, CBIT5))
+#define disable_int3_interrupt() (bit_clr(INT_CLKO, SBIT5))
 
 /**
  * @brief Get INT3 interrupt enable status
@@ -546,7 +544,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define disable_int4_interrupt() (bit_clr(INT_CLKO, CBIT6))
+#define disable_int4_interrupt() (bit_clr(INT_CLKO, SBIT6))
 
 /**
  * @brief Get INT4 interrupt enable status
@@ -602,7 +600,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define disable_timer2_interrupt() (bit_clr(IE2, CBIT2))
+#define disable_timer2_interrupt() (bit_clr(IE2, SBIT2))
 
 /**
  * @brief Get timer2 interrupt enable status
@@ -630,7 +628,7 @@ typedef enum
  * 
  * @ingroup interrupts
  */
-#define disable_spi_interrupt() (bit_clr(IE2, CBIT1))
+#define disable_spi_interrupt() (bit_clr(IE2, SBIT1))
 
 /**
  * @brief Get SPI interrupt enable status
@@ -673,8 +671,8 @@ do {                                                                   \
  */
 #define disable_comparator_interrupt()                                 \
 do {                                                                   \
-    bit_clr(CMPCR1, CBIT5);                                            \
-    bit_clr(CMPCR1, CBIT4);                                            \
+    bit_clr(CMPCR1, SBIT5);                                            \
+    bit_clr(CMPCR1, SBIT4);                                            \
 } while(0)  
 
 /**
@@ -697,7 +695,7 @@ do {                                                                   \
 
 
 /**
- * @brief Set programmable counter arrya (PCA) interrupt priority
+ * @brief Set programmable counter array (PCA) interrupt priority
  * 
  * @param priority interrupt priority
  * 
@@ -706,7 +704,7 @@ do {                                                                   \
 #define set_pca_interrupt_priority(priority) (PPCA = priority)
 
 /**
- * @brief Get programmable counter arrya (PCA) interrupt priority
+ * @brief Get programmable counter array (PCA) interrupt priority
  * 
  * @return PCA interrupt priority
  * 
@@ -827,7 +825,7 @@ do {                                                                   \
  * 
  * @ingroup interrupts
  */
-#define set_spi_interrupt_priority(priority) (priority == HIGH ? bit_set(IP2, SBIT1) : bit_clr(IP2, CBIT1))
+#define set_spi_interrupt_priority(priority) (priority == HIGH ? bit_set(IP2, SBIT1) : bit_clr(IP2, SBIT1))
 
 /**
  * @brief Get SPI interrupt priority

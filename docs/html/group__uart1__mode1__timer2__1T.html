@@ -90,7 +90,7 @@ Macros</h2></td></tr>
 <tr class="memitem:ga80cdb4b511de8da89f655b19d45f022f" id="r_ga80cdb4b511de8da89f655b19d45f022f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode1__timer2__1T.html#ga80cdb4b511de8da89f655b19d45f022f">uart1_mode1_timer2_1T_start_ext</a>(baudrate)</td></tr>
 <tr class="memdesc:ga80cdb4b511de8da89f655b19d45f022f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start UART1 communication with baudrate value.  <br /></td></tr>
 <tr class="separator:ga80cdb4b511de8da89f655b19d45f022f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7ddc3d5b3ec282c794ce615c738414ea" id="r_ga7ddc3d5b3ec282c794ce615c738414ea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode1__timer2__1T.html#ga7ddc3d5b3ec282c794ce615c738414ea">uart1_mode1_timer2_1T_stop</a>&#160;&#160;&#160;(bit_clr(AUXR, CBIT4))</td></tr>
+<tr class="memitem:ga7ddc3d5b3ec282c794ce615c738414ea" id="r_ga7ddc3d5b3ec282c794ce615c738414ea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode1__timer2__1T.html#ga7ddc3d5b3ec282c794ce615c738414ea">uart1_mode1_timer2_1T_stop</a>&#160;&#160;&#160;(bit_clr(AUXR, SBIT4))</td></tr>
 <tr class="memdesc:ga7ddc3d5b3ec282c794ce615c738414ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop UART1 communication and disable Timer2.  <br /></td></tr>
 <tr class="separator:ga7ddc3d5b3ec282c794ce615c738414ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga73f223b86f254d562e09a004b379e586" id="r_ga73f223b86f254d562e09a004b379e586"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__uart1__mode1__timer2__1T.html#ga73f223b86f254d562e09a004b379e586">is_uart1_mode1_timer2_1T_started</a>()&#160;&#160;&#160;(test_if_bit_set(AUXR, SBIT4))</td></tr>
@@ -198,7 +198,7 @@ Enumerations</h2></td></tr>
 <div class="line">    bit_set(AUXR, SBIT2);                   \</div>
 <div class="line">                                            \</div>
 <div class="line">    <span class="comment">/* Point-to-point mode */</span>               \</div>
-<div class="line">    bit_clr(CLK_DIV, CBIT4);                \</div>
+<div class="line">    bit_clr(CLK_DIV, SBIT4);                \</div>
 <div class="line">                                            \</div>
 <div class="line">    <span class="comment">/* Set AUXR1 bits 6, 7 to select RxD/TxD pins */</span>                 \</div>
 <div class="line">    AUXR1 &amp;= 0x3F;                          \</div>
@@ -303,7 +303,7 @@ Enum contains standard baudrates with precalculated THTL values for 1T mode</dd>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define uart1_mode1_timer2_1T_stop&#160;&#160;&#160;(bit_clr(AUXR, CBIT4))</td>
+          <td class="memname">#define uart1_mode1_timer2_1T_stop&#160;&#160;&#160;(bit_clr(AUXR, SBIT4))</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -116,7 +116,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#gafeeb051dec643d0a4464086d60a6f669">   83</a></span><span class="preprocessor">#define timer2_mode0_enable_P30_output() (bit_set(INT_CLKO, SBIT2))</span></div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#gae334c0d44bbb4efd6efa99f04085f675">   90</a></span><span class="preprocessor">#define timer2_mode0_disable_P30_output() (bit_clr(INT_CLKO, CBIT2))</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#gae334c0d44bbb4efd6efa99f04085f675">   90</a></span><span class="preprocessor">#define timer2_mode0_disable_P30_output() (bit_clr(INT_CLKO, SBIT2))</span></div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga25d6eb799c19b1f8a5a95202256f4129">   99</a></span><span class="preprocessor">#define is_timer2_mode0_P30_output_enabled() (test_if_bit_set(INT_CLKO, SBIT2))</span></div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
@@ -142,7 +142,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
 <div class="foldopen" id="foldopen00166" data-start="" data-end="">
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="group__timer2__mode0.html#ga86d1f3d5c229e55f341ed316b21e71ab">  166</a></span><span class="preprocessor">#define timer2_mode0_stop() {                               \</span></div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="preprocessor">    bit_clr(AUXR, CBIT4); </span><span class="comment">/* clear T2 run flag */</span><span class="preprocessor">           \</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="preprocessor">    bit_clr(AUXR, SBIT4); </span><span class="comment">/* clear T2 run flag */</span><span class="preprocessor">           \</span></div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="preprocessor">}</span></div>
 </div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>

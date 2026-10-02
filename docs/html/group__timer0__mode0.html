@@ -100,7 +100,7 @@ Macros</h2></td></tr>
 <tr class="memdesc:gab7055c569495505b534447e4373fc235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable P35 meander output. <br /></td></tr>
 <tr class="separator:gab7055c569495505b534447e4373fc235"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3cf89bffa4f3a519f079a02c3da2fce0" id="r_ga3cf89bffa4f3a519f079a02c3da2fce0"><td class="memItemLeft" align="right" valign="top"><a id="ga3cf89bffa4f3a519f079a02c3da2fce0" name="ga3cf89bffa4f3a519f079a02c3da2fce0"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>timer0_mode0_disable_P35_output</b>()&#160;&#160;&#160;(bit_clr(INT_CLKO, CBIT0))</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>timer0_mode0_disable_P35_output</b>()&#160;&#160;&#160;(bit_clr(INT_CLKO, SBIT0))</td></tr>
 <tr class="memdesc:ga3cf89bffa4f3a519f079a02c3da2fce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable P35 meander output. <br /></td></tr>
 <tr class="separator:ga3cf89bffa4f3a519f079a02c3da2fce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabca5c0f95450276da6bfdc9e2d95b30d" id="r_gabca5c0f95450276da6bfdc9e2d95b30d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode0.html#gabca5c0f95450276da6bfdc9e2d95b30d">is_timer0_mode0_P35_output_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, SBIT0))</td></tr>
@@ -109,7 +109,7 @@ Macros</h2></td></tr>
 <tr class="memitem:gacfd1f4baac73ad9ae28048dc7b8ce401" id="r_gacfd1f4baac73ad9ae28048dc7b8ce401"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode0.html#gacfd1f4baac73ad9ae28048dc7b8ce401">timer0_mode0_close_gate</a>()&#160;&#160;&#160;(bit_set(TMOD, SBIT3))</td></tr>
 <tr class="memdesc:gacfd1f4baac73ad9ae28048dc7b8ce401"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close timer starting gate.  <br /></td></tr>
 <tr class="separator:gacfd1f4baac73ad9ae28048dc7b8ce401"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac46b16166e317f423687b0b744310035" id="r_gac46b16166e317f423687b0b744310035"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode0.html#gac46b16166e317f423687b0b744310035">timer0_mode0_open_gate</a>()&#160;&#160;&#160;(bit_clr(TMOD, CBIT3))</td></tr>
+<tr class="memitem:gac46b16166e317f423687b0b744310035" id="r_gac46b16166e317f423687b0b744310035"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode0.html#gac46b16166e317f423687b0b744310035">timer0_mode0_open_gate</a>()&#160;&#160;&#160;(bit_clr(TMOD, SBIT3))</td></tr>
 <tr class="memdesc:gac46b16166e317f423687b0b744310035"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open timer starting gate.  <br /></td></tr>
 <tr class="separator:gac46b16166e317f423687b0b744310035"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2a99233df8668e561f71da8db499f4b0" id="r_ga2a99233df8668e561f71da8db499f4b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer0__mode0.html#ga2a99233df8668e561f71da8db499f4b0">is_timer0_mode0_gate_opened</a>()&#160;&#160;&#160;(test_if_bit_cleared(TMOD, SBIT3))</td></tr>
@@ -235,7 +235,7 @@ Macros</h2></td></tr>
 <div class="line">    enable_mcu_interrupts();                    \</div>
 <div class="line">    enable_timer0_interrupt();                  \</div>
 <div class="line">    TMOD &amp;= 0xf0;                               \</div>
-<div class="line">    bit_clr(AUXR, CBIT7);                       \</div>
+<div class="line">    bit_clr(AUXR, SBIT7);                       \</div>
 <div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 <p>Initialize mode0 12T for timer0. </p>
@@ -426,7 +426,7 @@ Macros</h2></td></tr>
           <td class="memname">#define timer0_mode0_open_gate</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_clr(TMOD, CBIT3))</td>
+          <td>&#160;&#160;&#160;(bit_clr(TMOD, SBIT3))</td>
         </tr>
       </table>
 </div><div class="memdoc">

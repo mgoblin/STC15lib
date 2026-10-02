@@ -103,7 +103,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">    enable_mcu_interrupts();                    \</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">    enable_timer0_interrupt();                  \</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">    TMOD &amp;= 0xf0;                               \</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">    bit_clr(AUXR, CBIT7);                       \</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">    bit_clr(AUXR, SBIT7);                       \</span></div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">} while(0)</span></div>
 </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
@@ -122,13 +122,13 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#gab7055c569495505b534447e4373fc235">   89</a></span><span class="preprocessor">#define timer0_mode0_enable_P35_output() (bit_set(INT_CLKO, SBIT0))</span></div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#ga3cf89bffa4f3a519f079a02c3da2fce0">   96</a></span><span class="preprocessor">#define timer0_mode0_disable_P35_output() (bit_clr(INT_CLKO, CBIT0))</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#ga3cf89bffa4f3a519f079a02c3da2fce0">   96</a></span><span class="preprocessor">#define timer0_mode0_disable_P35_output() (bit_clr(INT_CLKO, SBIT0))</span></div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#gabca5c0f95450276da6bfdc9e2d95b30d">  105</a></span><span class="preprocessor">#define is_timer0_mode0_P35_output_enabled() (test_if_bit_set(INT_CLKO, SBIT0))</span></div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#gacfd1f4baac73ad9ae28048dc7b8ce401">  113</a></span><span class="preprocessor">#define timer0_mode0_close_gate() (bit_set(TMOD, SBIT3))</span></div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#gac46b16166e317f423687b0b744310035">  121</a></span><span class="preprocessor">#define timer0_mode0_open_gate() (bit_clr(TMOD, CBIT3))</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#gac46b16166e317f423687b0b744310035">  121</a></span><span class="preprocessor">#define timer0_mode0_open_gate() (bit_clr(TMOD, SBIT3))</span></div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="group__timer0__mode0.html#ga2a99233df8668e561f71da8db499f4b0">  130</a></span><span class="preprocessor">#define is_timer0_mode0_gate_opened() (test_if_bit_cleared(TMOD, SBIT3))</span></div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>

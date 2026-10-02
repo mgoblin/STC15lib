@@ -122,13 +122,13 @@ Macros</h2></td></tr>
 <tr class="memitem:ga36e21a2294faf593b873cb9475d837b6" id="r_ga36e21a2294faf593b873cb9475d837b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#ga36e21a2294faf593b873cb9475d837b6">counter0_mode2_enable_P35_output</a>()&#160;&#160;&#160;(bit_set(INT_CLKO, SBIT0))</td></tr>
 <tr class="memdesc:ga36e21a2294faf593b873cb9475d837b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable output to P3.5  <br /></td></tr>
 <tr class="separator:ga36e21a2294faf593b873cb9475d837b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3193180188b4c556b455749f3e30227a" id="r_ga3193180188b4c556b455749f3e30227a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#ga3193180188b4c556b455749f3e30227a">counter0_mode2_disable_P35_output</a>()&#160;&#160;&#160;(bit_clr(INT_CLKO, CBIT0))</td></tr>
+<tr class="memitem:ga3193180188b4c556b455749f3e30227a" id="r_ga3193180188b4c556b455749f3e30227a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#ga3193180188b4c556b455749f3e30227a">counter0_mode2_disable_P35_output</a>()&#160;&#160;&#160;(bit_clr(INT_CLKO, SBIT0))</td></tr>
 <tr class="memdesc:ga3193180188b4c556b455749f3e30227a"><td class="mdescLeft">&#160;</td><td class="mdescRight">disable output to P3.5  <br /></td></tr>
 <tr class="separator:ga3193180188b4c556b455749f3e30227a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga74f3b1292ad43a3c31b5373bda136229" id="r_ga74f3b1292ad43a3c31b5373bda136229"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#ga74f3b1292ad43a3c31b5373bda136229">is_counter0_mode2_P35_output_enabled</a>()&#160;&#160;&#160;(test_if_bit_set(INT_CLKO, SBIT0))</td></tr>
 <tr class="memdesc:ga74f3b1292ad43a3c31b5373bda136229"><td class="mdescLeft">&#160;</td><td class="mdescRight">get pin P3.5 output state to P3.5  <br /></td></tr>
 <tr class="separator:ga74f3b1292ad43a3c31b5373bda136229"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9c6a7fdbdeee7be0f208465ce8a4bbbe" id="r_ga9c6a7fdbdeee7be0f208465ce8a4bbbe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#ga9c6a7fdbdeee7be0f208465ce8a4bbbe">counter0_mode2_open_gate</a>()&#160;&#160;&#160;(bit_clr(TMOD, CBIT3))</td></tr>
+<tr class="memitem:ga9c6a7fdbdeee7be0f208465ce8a4bbbe" id="r_ga9c6a7fdbdeee7be0f208465ce8a4bbbe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#ga9c6a7fdbdeee7be0f208465ce8a4bbbe">counter0_mode2_open_gate</a>()&#160;&#160;&#160;(bit_clr(TMOD, SBIT3))</td></tr>
 <tr class="memdesc:ga9c6a7fdbdeee7be0f208465ce8a4bbbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open counter0 gate.  <br /></td></tr>
 <tr class="separator:ga9c6a7fdbdeee7be0f208465ce8a4bbbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga071ffc4e64408ac7dd838403a308a192" id="r_ga071ffc4e64408ac7dd838403a308a192"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__counter0__mode2.html#ga071ffc4e64408ac7dd838403a308a192">counter0_mode2_close_gate</a>()&#160;&#160;&#160;(bit_set(TMOD, SBIT3))</td></tr>
@@ -174,7 +174,7 @@ Macros</h2></td></tr>
           <td class="memname">#define counter0_mode2_disable_P35_output</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_clr(INT_CLKO, CBIT0))</td>
+          <td>&#160;&#160;&#160;(bit_clr(INT_CLKO, SBIT0))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -271,7 +271,7 @@ Macros</h2></td></tr>
           <td class="memname">#define counter0_mode2_open_gate</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;(bit_clr(TMOD, CBIT3))</td>
+          <td>&#160;&#160;&#160;(bit_clr(TMOD, SBIT3))</td>
         </tr>
       </table>
 </div><div class="memdoc">

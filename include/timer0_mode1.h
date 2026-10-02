@@ -55,7 +55,7 @@ do {                                                    \
     enable_timer0_interrupt();                          \
     TMOD &= 0xf0;                                       \
     bit_set(TMOD, SBIT0);                               \
-    bit_clr(AUXR, CBIT7);                               \
+    bit_clr(AUXR, SBIT7);                               \
 } while(0)
 
 /**
@@ -91,7 +91,7 @@ do {                                                    \
  * 
  * @ingroup timer0_mode1
 */
-#define timer0_mode1_open_gate() (bit_clr(TMOD, CBIT3))
+#define timer0_mode1_open_gate() (bit_clr(TMOD, SBIT3))
 
 /**
  * @brief Get timer starting gate state

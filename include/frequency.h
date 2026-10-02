@@ -10,7 +10,6 @@
  * @author Michael Golovanov
  */
 
-#include <stdint.h>
 #include <sys.h>
 #include <bits.h>
 
@@ -195,7 +194,7 @@ do {                                                \
     }                                               \
     else if (pin == P5_4)                           \
     {                                               \
-        bit_clr(CLK_DIV, CBIT3);                    \
+        bit_clr(CLK_DIV, SBIT3);                    \
     }                                               \
     else if (pin == P1_6)                           \
     {                                               \
