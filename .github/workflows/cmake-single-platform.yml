@@ -45,7 +45,7 @@ jobs:
           mkdir -p ${{github.workspace}}/dist/examples
           find build/src -name '*.lib' -exec cp {} dist/lib \;
           cp include/*.h dist/include
-          cp examples/*.* dist/examples
+          cp -R examples/*.c dist/examples
           cp build/examples/build_summary.txt dist
           cd dist && zip -r ../STC15lib-${{ github.ref_name }}.zip .
 
