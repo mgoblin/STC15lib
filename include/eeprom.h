@@ -98,7 +98,7 @@ do {                                            \
  * 
  * @ingroup eeprom
  */
-#define get_eeprom_last_operation_result() (get_bit(IAP_CONTR, CMD_FAIL_BIT) ? CMD_FAIL_ERROR : CMD_SUCCESS)    
+#define get_eeprom_last_operation_result() (test_if_bit_set(IAP_CONTR, CMD_FAIL_BIT) ? CMD_FAIL_ERROR : CMD_SUCCESS)
 
 /**
  * @brief Reads single byte from the EEPROM at the given address

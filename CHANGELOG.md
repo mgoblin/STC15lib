@@ -210,7 +210,7 @@
 * Host tests for library headers added to test/ and wired to ctest
 * SPI module implemented (spi.h): master and slave mode, 4 clock dividers, all 4 CPOL/CPHA modes, MSB/LSB first, 3 pin groups, sync and async transfer, write collision detection
 * SPI example added to examples/spi (master loopback)
-* Rework bits module. Refactor bit_clr to invert bitmask inside a macro
+* Rework bits module.
 * TODO GitHub CI: add build summary and examples to release
 
 Next releases todo

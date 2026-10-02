@@ -10,20 +10,12 @@
 
 #define bit_set(val, bit_mask_val)                          (val |= bit_mask_val)
 #define bit_clr(val, bit_mask_val)                          (val &= ~bit_mask_val)
+#define bit_tgl(val, bit_mask_val)                          (val ^= bit_mask_val)
 
-#define bit_tgl(val, bit_pos)                               (val ^= bit_mask(bit_pos))
-
-#define get_bit(val, bit_pos)                               (val & bit_mask(bit_pos))
 #define get_reg(val, bit_mask_val)                          (val & bit_mask_val)
 
-#define set_bits(reg, val, pos)                             (reg |= bit_shift_left(val, pos))    
-#define clr_bits(reg, val, pos)                             (reg &= ~bit_shift_left(val, pos)) 
-
-#define test_if_bit_set(val, bit_mask_val)                  ((val & bit_mask_val) != 0)
-#define test_if_bit_cleared(val, bit_mask_val)              ((val & bit_mask_val) == 0)
-
-#define test_if_all_bits_set(val, bit_mask_val)             (get_reg(val, bit_mask_val) == bit_mask_val)
-#define test_if_any_bit_set(val, bit_mask_val)              (get_reg(val, bit_mask_val) != 0)
+#define test_if_bit_set(val, bit_mask_val)                  (((val) & (bit_mask_val)) == bit_mask_val)
+#define test_if_bit_cleared(val, bit_mask_val)              (((val) & (bit_mask_val)) == 0)
 
 /**************************************************************************************************/
 

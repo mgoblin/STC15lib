@@ -127,7 +127,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">} while(0)</span></div>
 </div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="group__eeprom.html#gad66214463ff06635ed0ffbddeb1928aa">  101</a></span><span class="preprocessor">#define get_eeprom_last_operation_result() (get_bit(IAP_CONTR, CMD_FAIL_BIT) ? CMD_FAIL_ERROR : CMD_SUCCESS)    </span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="group__eeprom.html#gad66214463ff06635ed0ffbddeb1928aa">  101</a></span><span class="preprocessor">#define get_eeprom_last_operation_result() (test_if_bit_set(IAP_CONTR, CMD_FAIL_BIT) ? CMD_FAIL_ERROR : CMD_SUCCESS)</span></div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
 <div class="foldopen" id="foldopen00126" data-start="" data-end="">
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="group__eeprom.html#ga0ba0e98241d4b70f05295f997c7d0344">  126</a></span><span class="preprocessor">#define eeprom_read_byte(addr_high, addr_low, value_ptr, error_ptr)     \</span></div>
