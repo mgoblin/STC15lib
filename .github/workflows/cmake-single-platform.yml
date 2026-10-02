@@ -42,6 +42,7 @@ jobs:
         run: |  
           mkdir -p ${{github.workspace}}/dist/include
           mkdir -p ${{github.workspace}}/dist/lib
+          mkdir -p ${{github.workspace}}/dist/examples
           find build/src -name '*.lib' -exec cp {} dist/lib \;
           cp include/*.h dist/include
           cp examples/*.* dist/examples
