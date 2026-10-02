@@ -75,11 +75,11 @@ $(function() {
 <div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> 0.1.0</p><ul>
 <li>first version</li>
 <li>system sfr headers support</li>
-<li>bits manipulations</li>
+<li>bit manipulations</li>
 <li>uart support</li>
 </ul>
 <p>0.2.0</p><ul>
-<li>headers flat structure</li>
+<li>header flat structure</li>
 <li>Doxygen documentation</li>
 <li>add get chip id function (value F51FC47E1D0B52 for STC15W408AS)</li>
 <li>add master clock and divider frequency functions</li>
@@ -89,7 +89,7 @@ $(function() {
 <li>add master clock output to pin P5.4 or P1.6 with dividers 1, 2, 4</li>
 <li>get mode functions for timer0 and timer2</li>
 <li>get clock divider functions for timer0 and timer2</li>
-<li>timer0 mode0/12T and mode0/1T implementation with sync and interrupt (async) support. No GATE and INT0 support for timer0 running, only TR0 used for start and stop timer . No P3.5 output. <br  />
+<li>timer0 mode0/12T and mode0/1T implementation with sync and interrupt (async) support. No GATE and INT0 support for timer0 running, only TR0 used for start and stop timer. No P3.5 output. <br  />
 </li>
 <li>timer2 mode0/12T and mode0/1T implementation with interrupt (async) support. No P3.0 output.</li>
 </ul>
@@ -103,12 +103,12 @@ $(function() {
 <p>0.4.1</p><ul>
 <li>frequency module use defines instead of function decl for output hex code decreasing</li>
 <li>interrupts module use defines instead of function decl for firmware size decreasing</li>
-<li>timer module use defines on commons functionality instead of function decl for firmware size decreasing</li>
+<li>timer module use defines on common functionality instead of function decl for firmware size decreasing</li>
 </ul>
 <p>0.5.0</p><ul>
-<li>delay module now use defines instead of func decls</li>
-<li>timer modules now use defines instead of func decl</li>
-<li>timer0_modeX_run_once_and_wait now have only one parameter uint_16 - timer ticks count</li>
+<li>delay module now uses <code>#define</code> instead of func decls</li>
+<li>timer module now uses <code>#define</code> instead of func decl</li>
+<li>timer0_modeX_run_once_and_wait now has only one parameter uint_16 - timer ticks count</li>
 <li>timer0_start and timer2_mode0_start now have only one parameter uint_16 - timer ticks count</li>
 <li>timer0 and timer2 are modules now</li>
 <li>timer0 and timer2 mode0 reload timer routines implemented</li>
@@ -121,7 +121,7 @@ $(function() {
 <li>Aux module convert ticks to frequency implemented</li>
 <li>Aux module unsafe convert frequency to ticks</li>
 <li>timer_all.h to <a class="el" href="timer__common_8h.html">timer_common.h</a> renamed</li>
-<li>delay_ms partially rewrote to asm to decrease size</li>
+<li>delay_ms partially rewrote to asm to decrease the size</li>
 <li>UART to UART1 renamed</li>
 <li>Fix: UART bias timer0 1T by setting AUXR.7 value to 1.</li>
 <li>timer2 baud rate ticks calculation implemented</li>
@@ -129,7 +129,7 @@ $(function() {
 <li>Implement ticks to times part of aux module for timer0, timer2</li>
 </ul>
 <p>0.7</p><ul>
-<li>Fix: remove variables from delay module</li>
+<li>Fix: remove variables from the delay module</li>
 <li>Reset routine implemented</li>
 <li>Watchdog timer routines implemented</li>
 <li>delay_ms now is defined again</li>
@@ -139,12 +139,12 @@ $(function() {
 <li>Use bitmask as a constant in <a class="el" href="bits_8h_source.html">bits.h</a> to avoid unnecessary bit operations in test_if_bit_set and test_if_bit_cleared</li>
 </ul>
 <p>0.8</p><ul>
-<li>Add memory dump example</li>
+<li>Add a memory dump example</li>
 <li>WakeUp timer implemented</li>
-<li>Times to ticks part of aux module implemented</li>
-<li>Docs are included to platformio package</li>
+<li>Convert time to ticks part of aux module implemented</li>
+<li>Docs are included in to platformio package</li>
 <li>Examples compilation is a step of build</li>
-<li>Enhanced description of project for indexing in google/yandex and so on search engines</li>
+<li>Enhanced description of the project for indexing in google/yandex and so on search engines</li>
 <li>Pin module implemented</li>
 </ul>
 <p>0.9</p><ul>
@@ -204,7 +204,7 @@ $(function() {
 </li>
 </ul>
 </li>
-<li>Wrap multiline macro with do .. while(0)<ul>
+<li>Wrap a multiline macro with do {} while(0)<ul>
 <li><a class="el" href="chip__id_8h.html">chip_id.h</a></li>
 <li><a class="el" href="delay_8h.html">delay.h</a></li>
 <li><a class="el" href="frequency_8h.html">frequency.h</a></li>
@@ -220,7 +220,7 @@ $(function() {
 </ul>
 </li>
 <li>Fix timer0 mode2 <a class="el" href="group__timer0__mode2.html#ga767ca4656b99b694a6d5a6a7abde2b22" title="Run timer0 mode2 once and wait with program flow blocking timer not finished.">timer0_mode2_delay(ticks)</a>. <a class="el" href="group__timer0__mode2.html#ga767ca4656b99b694a6d5a6a7abde2b22" title="Run timer0 mode2 once and wait with program flow blocking timer not finished.">timer0_mode2_delay(ticks)</a> disable timer0 interrupts.</li>
-<li>Fix examples/timer/auxiliary/timer0/timer0_12T_freq_uint16_example.c. Its was print garbage.</li>
+<li>Fix examples/timer/auxiliary/timer0/timer0_12T_freq_uint16_example.c. It was print garbage.</li>
 <li>Update lib version in README.md <br  />
 </li>
 </ul>
@@ -237,17 +237,17 @@ $(function() {
 </ul>
 <p>0.12.0</p><ul>
 <li>Fix UART1 mode 0 docs and examples. UART1 interrupt is supported</li>
-<li>Fix UART1 mode 0 docs. Baud rate is biased by frequency divider.</li>
+<li>Fix UART1 mode 0 docs. Baud rate is biased by a frequency divider.</li>
 <li>Fix README content in subfolders</li>
 <li>UART1 mode2 routines implemented</li>
 <li>UART1 mode3 timer2 (1T and 12T) routines implemented</li>
-<li>UART1 support 2 stop bits on tx/rx in mode 2, 3 (8-N-2)</li>
+<li>UART1 supports 2 stop bits on tx/rx in mode 2, 3 (8-N-2)</li>
 </ul>
 <p>0.13.0</p><ul>
-<li>Build library with cmake (but not examples)</li>
-<li>Fix delay_ms. On small ms delays it works correctly, but on seconds delay it doubled.</li>
+<li>Build a library with cmake (but not examples)</li>
+<li>Fix delay_ms. On small ms delays it works correctly, but on seconds’ delay it doubled.</li>
 <li>Rename pin.h to <a class="el" href="gpio_8h.html">gpio.h</a></li>
-<li>Power management low voltage flag routines implemented</li>
+<li>Power management low-voltage flag routines implemented</li>
 <li>Read byte from EEPROM via IAP registers implemented</li>
 <li>Erase EEPROM page routine implemented</li>
 <li>Write byte to EEPROM routine implemented</li>
@@ -264,21 +264,21 @@ $(function() {
 </ul>
 <p>0.15.0</p><ul>
 <li>Add utility to dump idata RAM (first 256 RAM)</li>
-<li>Write utility to make hex file from csv</li>
+<li>Write utility to make a hex file from csv</li>
 <li>Fix: copy eerprom_data.hex on cmake build eeprom examples</li>
-<li>Fix: Cmake firmware size is not equals to PlatformIO build size</li>
-<li>Fix: Firmware built by SDCC 4.5 work correctly</li>
+<li>Fix: Cmake firmware size is not equal to PlatformIO build size</li>
+<li>Fix: Firmware built by SDCC 4.5 works correctly</li>
 <li>Comparator module initial implementation</li>
 <li>EEPROM write array implemented</li>
 </ul>
 <p>0.16.0</p><ul>
-<li>Wakeup timer init for given duration routine implemented</li>
+<li>Wakeup timer init for a given duration routine implemented</li>
 <li>Timer conversions between ticks and ms/frequency routines refactored</li>
 <li>timer0_modeX_delay() simplified</li>
 <li>pin examples folder renamed to gpio</li>
 <li>Timer0 start on ms/mcs routines implemented</li>
 <li>Timer2 mode0 start on ms/mcs routines implemented</li>
-<li>Timer0 start on freq routines implemented</li>
+<li>Timer0 starts on freq routines implemented</li>
 <li>Timer2 mode0 start on freq routines implemented</li>
 </ul>
 <p>0.17.0</p><ul>
@@ -286,10 +286,10 @@ $(function() {
 <li>CMake examples flash_* targets are fixed</li>
 <li>Memory dump not only idata but xdata memory too</li>
 <li>Memory dumper is documented</li>
-<li>CMake and PlatformIO generates build summary with firmware sizes table</li>
+<li>CMake and PlatformIO generate a build summary with firmware sizes table</li>
 <li>SCons make STC15 library for examples and utilities build</li>
-<li>Now CMake build can use SDCC 4.1 (PlatformIO), 4.5 (Default for Debian Trixie), and 4.6 (lastest on current time sdcc version). 4.5 usedd by default</li>
-<li>GitHub build. On new tag GitHub CI builds release with artifacts and draft release.</li>
+<li>Now CMake build can use SDCC 4.1 (PlatformIO), 4.5 (Default for Debian Trixie), and 4.6 (lastest on a current time sdcc version). 4.5 usedd by default</li>
+<li>GitHub build. On the new tag GitHub CI builds release with artifacts and draft release.</li>
 </ul>
 <p>0.18.0</p><ul>
 <li>Group PlatformIO and CMake build files in separate folders</li>
@@ -300,7 +300,7 @@ $(function() {
 <li>Host tests for library headers added to test/ and wired to ctest</li>
 <li>SPI module implemented (<a class="el" href="spi_8h.html">spi.h</a>): master and slave mode, 4 clock dividers, all 4 CPOL/CPHA modes, MSB/LSB first, 3 pin groups, sync and async transfer, write collision detection</li>
 <li>SPI example added to examples/spi (master loopback)</li>
-<li>Rework bits module. Refactor bit_clr to invert bitmask inside macro</li>
+<li>Rework bits module. Refactor bit_clr to invert bitmask inside a macro</li>
 <li>TODO GitHub CI: add build summary and examples to release</li>
 </ul>
 <p>Next releases todo</p>

@@ -3,11 +3,11 @@
 0.1.0 
 * first version
 * system sfr headers support
-* bits manipulations
+* bit manipulations
 * uart support
 
 0.2.0
-* headers flat structure
+* header flat structure
 * Doxygen documentation
 * add get chip id function (value F51FC47E1D0B52 for STC15W408AS)
 * add master clock and divider frequency functions
@@ -17,7 +17,7 @@
 * add master clock output to pin P5.4 or P1.6 with dividers 1, 2, 4
 * get mode functions for timer0 and timer2
 * get clock divider functions for timer0 and timer2
-* timer0 mode0/12T and mode0/1T implementation with sync and interrupt (async) support. No GATE and INT0 support for timer0 running, only TR0 used for start and stop timer . No P3.5 output.  
+* timer0 mode0/12T and mode0/1T implementation with sync and interrupt (async) support. No GATE and INT0 support for timer0 running, only TR0 used for start and stop timer. No P3.5 output.  
 * timer2 mode0/12T and mode0/1T implementation with interrupt (async) support. No P3.0 output.
 
 0.4.0
@@ -30,12 +30,12 @@
 0.4.1
 * frequency module use defines instead of function decl for output hex code decreasing 
 * interrupts module use defines instead of function decl for firmware size decreasing
-* timer module use defines on commons functionality instead of function decl for firmware size decreasing
+* timer module use defines on common functionality instead of function decl for firmware size decreasing
 
 0.5.0
-* delay module now use defines instead of func decls
-* timer modules now use defines instead of func decl 
-* timer0_modeX_run_once_and_wait now have only one parameter uint_16 - timer ticks count
+* delay module now uses `#define` instead of func decls
+* timer module now uses `#define` instead of func decl 
+* timer0_modeX_run_once_and_wait now has only one parameter uint_16 - timer ticks count
 * timer0_start and timer2_mode0_start now have only one parameter uint_16 - timer ticks count
 * timer0 and timer2 are modules now
 * timer0 and timer2 mode0 reload timer routines implemented
@@ -48,7 +48,7 @@
 * Aux module convert ticks to frequency implemented 
 * Aux module unsafe convert frequency to ticks
 * timer_all.h to timer_common.h renamed
-* delay_ms partially rewrote to asm to decrease size 
+* delay_ms partially rewrote to asm to decrease the size 
 * UART to UART1 renamed
 * Fix: UART bias timer0 1T by setting AUXR.7 value to 1.
 * timer2 baud rate ticks calculation implemented
@@ -56,7 +56,7 @@
 * Implement ticks to times part of aux module for timer0, timer2 
 
 0.7
-* Fix: remove variables from delay module
+* Fix: remove variables from the delay module
 * Reset routine implemented
 * Watchdog timer routines implemented
 * delay_ms now is defined again
@@ -66,12 +66,12 @@
 * Use bitmask as a constant in bits.h to avoid unnecessary bit operations in test_if_bit_set and test_if_bit_cleared
 
 0.8
-* Add memory dump example
+* Add a memory dump example
 * WakeUp timer implemented
-* Times to ticks part of aux module implemented
-* Docs are included to platformio package
+* Convert time to ticks part of aux module implemented
+* Docs are included in to platformio package
 * Examples compilation is a step of build
-* Enhanced description of project for indexing in google/yandex and so on search engines
+* Enhanced description of the project for indexing in google/yandex and so on search engines
 * Pin module implemented
 
 0.9
@@ -116,7 +116,7 @@
             * sync
     * uart
     * wdt               
-* Wrap multiline macro with do .. while(0)
+* Wrap a multiline macro with do {} while(0)
     * chip_id.h
     * delay.h
     * frequency.h
@@ -130,7 +130,7 @@
     * uart.h
     * wdt.h
 * Fix timer0 mode2 timer0_mode2_delay(ticks). timer0_mode2_delay(ticks) disable timer0 interrupts. 
-* Fix examples/timer/auxiliary/timer0/timer0_12T_freq_uint16_example.c. Its was print garbage. 
+* Fix examples/timer/auxiliary/timer0/timer0_12T_freq_uint16_example.c. It was print garbage. 
 * Update lib version in README.md  
 
 
@@ -147,17 +147,17 @@
 
 0.12.0
 * Fix UART1 mode 0 docs and examples. UART1 interrupt is supported
-* Fix UART1 mode 0 docs. Baud rate is biased by frequency divider.
+* Fix UART1 mode 0 docs. Baud rate is biased by a frequency divider.
 * Fix README content in subfolders
 * UART1 mode2 routines implemented
 * UART1 mode3 timer2 (1T and 12T) routines implemented
-* UART1 support 2 stop bits on tx/rx in mode 2, 3 (8-N-2)
+* UART1 supports 2 stop bits on tx/rx in mode 2, 3 (8-N-2)
 
 0.13.0
-* Build library with cmake (but not examples)
-* Fix delay_ms. On small ms delays it works correctly, but on seconds delay it doubled.
+* Build a library with cmake (but not examples)
+* Fix delay_ms. On small ms delays it works correctly, but on seconds’ delay it doubled.
 * Rename pin.h to gpio.h
-* Power management low voltage flag routines implemented
+* Power management low-voltage flag routines implemented
 * Read byte from EEPROM via IAP registers implemented
 * Erase EEPROM page routine implemented
 * Write byte to EEPROM routine implemented
@@ -174,21 +174,21 @@
 
 0.15.0
 * Add utility to dump idata RAM (first 256 RAM)
-* Write utility to make hex file from csv
+* Write utility to make a hex file from csv
 * Fix: copy eerprom_data.hex on cmake build eeprom examples
-* Fix: Cmake firmware size is not equals to PlatformIO build size
-* Fix: Firmware built by SDCC 4.5 work correctly
+* Fix: Cmake firmware size is not equal to PlatformIO build size
+* Fix: Firmware built by SDCC 4.5 works correctly
 * Comparator module initial implementation
 * EEPROM write array implemented
 
 0.16.0
-* Wakeup timer init for given duration routine implemented
+* Wakeup timer init for a given duration routine implemented
 * Timer conversions between ticks and ms/frequency routines refactored
 * timer0_modeX_delay() simplified
 * pin examples folder renamed to gpio
 * Timer0 start on ms/mcs routines implemented
 * Timer2 mode0 start on ms/mcs routines implemented
-* Timer0 start on freq routines implemented
+* Timer0 starts on freq routines implemented
 * Timer2 mode0 start on freq routines implemented
 
 0.17.0
@@ -196,10 +196,10 @@
 * CMake examples flash_* targets are fixed
 * Memory dump not only idata but xdata memory too
 * Memory dumper is documented 
-* CMake and PlatformIO generates build summary with firmware sizes table
+* CMake and PlatformIO generate a build summary with firmware sizes table
 * SCons make STC15 library for examples and utilities build
-* Now CMake build can use SDCC 4.1 (PlatformIO), 4.5 (Default for Debian Trixie), and 4.6 (lastest on current time sdcc version). 4.5 usedd by default 
-* GitHub build. On new tag GitHub CI builds release with artifacts and draft release. 
+* Now CMake build can use SDCC 4.1 (PlatformIO), 4.5 (Default for Debian Trixie), and 4.6 (lastest on a current time sdcc version). 4.5 usedd by default 
+* GitHub build. On the new tag GitHub CI builds release with artifacts and draft release. 
 
 0.18.0
 * Group PlatformIO and CMake build files in separate folders
@@ -210,7 +210,7 @@
 * Host tests for library headers added to test/ and wired to ctest
 * SPI module implemented (spi.h): master and slave mode, 4 clock dividers, all 4 CPOL/CPHA modes, MSB/LSB first, 3 pin groups, sync and async transfer, write collision detection
 * SPI example added to examples/spi (master loopback)
-* Rework bits module. Refactor bit_clr to invert bitmask inside macro
+* Rework bits module. Refactor bit_clr to invert bitmask inside a macro
 * TODO GitHub CI: add build summary and examples to release
 
 Next releases todo
